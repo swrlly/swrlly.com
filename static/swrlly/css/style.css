@@ -42,7 +42,7 @@ a:hover {
     color: var(--darklavender);
 }
 
-.nav-link:hover, .github-hover:hover { color:var(--lavender); cursor:pointer;}
+.nav-link:hover, .github-hover:hover { color:var(--lavender) !important; cursor:pointer;}
 
 .sc-hover:hover {color:rgb(254, 109, 53); cursor:pointer;}
 
@@ -56,8 +56,8 @@ a:hover {
 
 .sc-color {color:rgb(254, 109, 53) !important;}
 
-.nav-link, .fa-brands {
-    color: var(--text-color);
+.nav-link{
+    color: var(--text-color) !important;
     text-align: center;
     font-size: 1.25rem;
     /* First we need to help some browsers along for this to work.
@@ -70,6 +70,22 @@ a:hover {
     -webkit-transition:.4s;
     /* ...and now for the proper property */
     transition:.4s;
+}
+
+.fa-brands {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.25rem;
+    /* First we need to help some browsers along for this to work.
+       Just because a vendor prefix is there, doesn't mean it will
+       work in a browser made by that vendor either, it's just for
+       future-proofing purposes I guess. */
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    /* ...and now for the proper property */
+    transition:.4s;    
 }
 
 .fade-in-text {

@@ -4,6 +4,13 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
     <head>
         {% block title %}<title>swrlly - blog</title>{% endblock %}
+        {% block discord %}
+        <meta property="og:title" content="blog"/>
+        <meta name = "theme-color" content="#b39af0">
+        <meta property="og:description" content="reverse engineering, data science and mathematics"/>
+        <meta property="og:url" content="https://swrlly.com/blog"/>
+        <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png" />
+        {% endblock %}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
