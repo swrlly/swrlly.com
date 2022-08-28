@@ -77,15 +77,12 @@ def dplayercount():
 def dindex():
     return render_template("darzacharts/index.html")
 
-#@darzacharts.route("/<path:path>")
-#def derror(path):
-#    return render_template("darzacharts/errors/404.html")
-
 @darzacharts.errorhandler(404)
 def dpage_not_found(e):
     return render_template("darzacharts/errors/404.html")
 
 
 app.register_blueprint(darzacharts)
-
+app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
+#app.config["SERVER_NAME"] = "swrlly.com"
 

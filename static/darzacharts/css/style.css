@@ -35,7 +35,7 @@ body {
 }
 
 .bottoml {
-    margin-top: none;
+    margin-top: revert;
 }
 
 .navbar-brand:hover > .m-icon {
