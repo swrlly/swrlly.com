@@ -83,6 +83,6 @@ def dpage_not_found(e):
 
 
 app.register_blueprint(darzacharts)
-#app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
-app.config["SERVER_NAME"] = "swrlly.com"
+app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
+#app.config["SERVER_NAME"] = "swrlly.com"
 

@@ -6,6 +6,7 @@
     <head>
 
         <meta property="og:title" content="swrlly"/>
+        <meta name = "theme-color" content="#b39af0">
         <meta property="og:description" content="hello :)"/>
         <meta property="og:url" content="https://swrlly.com"/>
         <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png" />
@@ -21,8 +22,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <script src="static/swrlly/js/starfield.js"></script>
-        <link href="static/swrlly/css/style.css" rel="stylesheet">
+        <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
+        <link href="{{url_for('static', filename='swrlly/css/style.css')}}" rel="stylesheet">
     </head>
     {% endblock %}
 
@@ -34,14 +35,14 @@
 
         <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
 
-        <nav class="navbar fade-in-text-short navbar-expand-sm bg-transparent">
+        <nav class="navbar fade-in-text-short navbar-expand bg-transparent">
             <div class="container">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
                     <svg version="1.1" width="24" height="24" viewBox="0 0 16 16"><path fill="#C9D1D9" fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
-                </button>
+                </button>-->
 
-                <div class="collapse navbar-collapse" id="navbarLinks">
+                <div id="navbarLinks">
                     <ul class="nav navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/">home</a>

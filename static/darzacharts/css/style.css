@@ -20,7 +20,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
 .footer {
     display: flex;
     /*position: absolute; see if you can absolute position a flex box properly later 
@@ -32,10 +31,14 @@ body {
 .bottomr {
     margin-left: auto;
     flex-shrink: 0;
+    align-items: flex-end;
+    font-size: 18px;
 }
 
 .bottoml {
     margin-top: revert;
+    align-items: flex-end;
+    font-size: 12px;
 }
 
 .navbar-brand:hover > .m-icon {
@@ -55,7 +58,7 @@ a {
     text-decoration: none;
 }
 
-.nav-link, .navbar-brand, .fa-github, .homeicon {
+.nav-link, .navbar-brand, .githubicon, .homeicon {
     color: var(--text-color) !important; 
     text-align: center;
     -o-transition:.4s;
@@ -76,6 +79,8 @@ a {
 }
 
 .nav-link:hover, .navbar-brand:hover, .fa-github:hover { color:var(--lavender) !important; }
+
+.githubicon:hover {fill: var(--lavender);}
 
 .navbar {
     border-bottom: 0px solid var(--lavender);
