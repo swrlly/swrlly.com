@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
+    <head>
+        {% block title %}<title>swrlly - blog</title>{% endblock %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="static/swrlly/js/starfield.js"></script>
+        <link href="static/swrlly/css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <div class="fullScreen" id="background">
+            <canvas id="canvas2d"></canvas>
+        </div>
+
+        <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
+
+        <nav class="navbar fade-in-text-short navbar-expand-lg bg-transparent">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+                    <svg version="1.1" width="24" height="24" viewBox="0 0 16 16"><path fill="#C9D1D9" fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarLinks">
+
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="music">music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog">blog</a>
+                        </li>
+                    </ul>
+                
+                    <ul class="dropdownicon nav navbar-nav ml-auto">
+                        <li class="navbar-icon">
+                            <a href="https://github.com/swrlly/" target="_blank" rel="noopener noreferrer" aria-hidden="true"> 
+                                <a class="fa-brands fa-github github-hover"></a>
+                            </a>
+                        </li>
+                        <li class="navbar-icon">
+                            <a href="https://soundcloud.com/swrlly/" target="_blank" rel="noopener noreferrer" aria-hidden="true">
+                                <a class="fa-brands fa-soundcloud sc-hover"></a>
+                            </a>
+                        </li>
+                        <li class="navbar-icon">
+                            <a href="https://www.youtube.com/channel/UCj4C0AeAZCwiWWntBrFVSqA" target="_blank" rel="noopener noreferrer" aria-hidden="true">
+                                <a class="fa-brands fa-youtube yt-hover"></a>
+                            </a>
+                        </li>
+                        <li class="navbar-icon">
+                            <a href="https://open.spotify.com/artist/4QCigBPj4bUoMFsow7KQ9k?si=Pww4h3CXQheOxwopf-EeTA" target="_blank" rel="noopener noreferrer" aria-hidden="true">
+                                <a class="fa-brands fa-spotify spotify-hover"></a>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>     
+        {% block content %}
+        <div class = "container fade-in-text text-padding">
+
+            <p>
+                soon :)
+            </p>
+        </div>
+        {% endblock %}
+
+    </body>
+
+</html>

@@ -1,0 +1,149 @@
+{% extends "swrlly/blog.html" %}
+
+{% block title %}<title>swrlly - music</title>{% endblock %}
+
+{% block content %}
+
+
+<div class = "container fade-in-text">
+    <div class = "row row-cols-2 row-cols-lg-4 align-items-stretch g-4 py-5">
+        <div class="col dropdown">
+            <button class="btn bg-image dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown" >
+                <img class="albumicon" src="static/swrlly/images/dreaming.png"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownmenu" data-boundary="window" data-display="static">
+                <a class="dropdown-item" href="https://open.spotify.com/album/37oL15gnDz2a0B6OGzetmH" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-spotify spotify-color"></span>&nbsp;&nbsp;Spotify</a>
+                <a class="dropdown-item" href="https://soundcloud.com/swrlly/sets/dreaming" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-soundcloud sc-color" style="font-size:1em;"></span>&nbsp;&nbsp;SoundCloud</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=m1_IhFyMfTs&list=PLGbYVSRWrmxrv1KvkAujyI-2lUINjUxZL" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-youtube yt-color"></span>&nbsp;&nbsp;YouTube</a>
+                <a class="dropdown-item" href="https://music.apple.com/us/album/dreaming/1584134232" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32">
+                        <defs>
+                          <path id="favicon-ff2d15-a" d="M10.6542969,21.3271484 L10.6542969,7.35253906 C10.6542969,6.63476563 11.1669922,6.32714844 11.7529297,6.20996094 L22.8271484,3.96875 C23.8378906,3.76367188 24.453125,3.88085938 24.453125,5.05273438 L24.453125,22.1914063 C24.453125,25.4140625 21.8896484,26.1025391 20.2783203,26.1025391 C18.6816406,26.1025391 17.3632812,24.8720703 17.3632812,23.3046875 C17.3632812,21.4150391 18.7841797,20.6240234 20.5859375,20.2578125 L22.2119141,19.8916016 C22.8710938,19.7597656 23.0761719,19.2763672 23.0761719,18.7636719 L23.0908203,10.5605469 C23.0908203,9.98925781 22.8271484,9.78417969 22.1826172,9.93066406 L12.7929688,11.8349609 C12.2509766,11.9228516 12.0898438,12.0839844 12.0898438,12.7285156 L12.0898438,24.6523438 C12.0898438,27.8896484 9.48242188,28.6367188 7.87109375,28.6367188 C6.24511719,28.6367188 5,27.3916016 5,25.8388672 C5,23.9199219 6.43554688,23.1289063 8.14941406,22.71875 L9.89257812,22.3671875 C10.4345703,22.2353516 10.6542969,21.8105469 10.6542969,21.3271484 Z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <use fill="#000" fill-rule="nonzero" xlink:href="#favicon-ff2d15-a"/>
+                        </g>
+                      </svg>&nbsp;Apple Music
+                </a>
+            </div>
+        </div>
+
+        <div class="col dropdown">
+            <button class="btn bg-image dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown" >
+                <img class="albumicon" src="static/swrlly/images/threesixtyfeeling.png"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownmenu" data-boundary="window" data-display="static">
+                <a class="dropdown-item" href="https://open.spotify.com/album/7rcPmfhdxzJ8HjAPmKn5I3" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-spotify spotify-color"></span>&nbsp;&nbsp;Spotify</a>
+                <a class="dropdown-item" href="https://soundcloud.com/swrlly/three-sixty-feeling" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-soundcloud sc-color" style="font-size:1em;"></span>&nbsp;&nbsp;SoundCloud</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=rY5uG_VFXHo&list=OLAK5uy_lMA69RQNPMCAgo0xz31sQTBCYWR50JACA" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-youtube yt-color"></span>&nbsp;&nbsp;YouTube</a>
+                <a class="dropdown-item" href="https://music.apple.com/us/album/three-sixty-feeling-single/1584121475" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32">
+                        <defs>
+                          <path id="favicon-ff2d15-a" d="M10.6542969,21.3271484 L10.6542969,7.35253906 C10.6542969,6.63476563 11.1669922,6.32714844 11.7529297,6.20996094 L22.8271484,3.96875 C23.8378906,3.76367188 24.453125,3.88085938 24.453125,5.05273438 L24.453125,22.1914063 C24.453125,25.4140625 21.8896484,26.1025391 20.2783203,26.1025391 C18.6816406,26.1025391 17.3632812,24.8720703 17.3632812,23.3046875 C17.3632812,21.4150391 18.7841797,20.6240234 20.5859375,20.2578125 L22.2119141,19.8916016 C22.8710938,19.7597656 23.0761719,19.2763672 23.0761719,18.7636719 L23.0908203,10.5605469 C23.0908203,9.98925781 22.8271484,9.78417969 22.1826172,9.93066406 L12.7929688,11.8349609 C12.2509766,11.9228516 12.0898438,12.0839844 12.0898438,12.7285156 L12.0898438,24.6523438 C12.0898438,27.8896484 9.48242188,28.6367188 7.87109375,28.6367188 C6.24511719,28.6367188 5,27.3916016 5,25.8388672 C5,23.9199219 6.43554688,23.1289063 8.14941406,22.71875 L9.89257812,22.3671875 C10.4345703,22.2353516 10.6542969,21.8105469 10.6542969,21.3271484 Z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <use fill="#000" fill-rule="nonzero" xlink:href="#favicon-ff2d15-a"/>
+                        </g>
+                      </svg>&nbsp;Apple Music
+                </a>
+            </div>
+        </div>
+
+        <div class="col dropdown">
+            <button class="btn bg-image dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown" >
+                <img class="albumicon" src="static/swrlly/images/drift.png"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownmenu" data-boundary="window" data-display="static">
+                <a class="dropdown-item" href="https://open.spotify.com/album/2kh5uUSvzAMLuXg7tMT0nM" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-spotify spotify-color"></span>&nbsp;&nbsp;Spotify</a>
+                <a class="dropdown-item" href="https://soundcloud.com/swrlly/drift" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-soundcloud sc-color" style="font-size:1em;"></span>&nbsp;&nbsp;SoundCloud</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=HkdVND6N9NM" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-youtube yt-color"></span>&nbsp;&nbsp;YouTube</a>
+                <a class="dropdown-item" href="https://music.apple.com/us/album/drift-single/1584121550" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32">
+                        <defs>
+                          <path id="favicon-ff2d15-a" d="M10.6542969,21.3271484 L10.6542969,7.35253906 C10.6542969,6.63476563 11.1669922,6.32714844 11.7529297,6.20996094 L22.8271484,3.96875 C23.8378906,3.76367188 24.453125,3.88085938 24.453125,5.05273438 L24.453125,22.1914063 C24.453125,25.4140625 21.8896484,26.1025391 20.2783203,26.1025391 C18.6816406,26.1025391 17.3632812,24.8720703 17.3632812,23.3046875 C17.3632812,21.4150391 18.7841797,20.6240234 20.5859375,20.2578125 L22.2119141,19.8916016 C22.8710938,19.7597656 23.0761719,19.2763672 23.0761719,18.7636719 L23.0908203,10.5605469 C23.0908203,9.98925781 22.8271484,9.78417969 22.1826172,9.93066406 L12.7929688,11.8349609 C12.2509766,11.9228516 12.0898438,12.0839844 12.0898438,12.7285156 L12.0898438,24.6523438 C12.0898438,27.8896484 9.48242188,28.6367188 7.87109375,28.6367188 C6.24511719,28.6367188 5,27.3916016 5,25.8388672 C5,23.9199219 6.43554688,23.1289063 8.14941406,22.71875 L9.89257812,22.3671875 C10.4345703,22.2353516 10.6542969,21.8105469 10.6542969,21.3271484 Z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <use fill="#000" fill-rule="nonzero" xlink:href="#favicon-ff2d15-a"/>
+                        </g>
+                      </svg>&nbsp;Apple Music
+                </a>
+            </div>
+        </div>
+
+        <div class="col dropdown">
+            <button class="btn bg-image dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown" >
+                <img class="albumicon" src="static/swrlly/images/flight.png"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownmenu" data-boundary="window" data-display="static">
+                <a class="dropdown-item" href="https://open.spotify.com/album/3Z7fdaey593zva4jcYG1mE" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-spotify spotify-color"></span>&nbsp;&nbsp;Spotify</a>
+                <a class="dropdown-item" href="https://soundcloud.com/swrlly/flight" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-soundcloud sc-color" style="font-size:1em;"></span>&nbsp;&nbsp;SoundCloud</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=7T1F8vuLBRo&list=OLAK5uy_mLbhS3GO73LnRwq72qQWmmVz1UXXf4Dj8" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-youtube yt-color"></span>&nbsp;&nbsp;YouTube</a>
+                <a class="dropdown-item" href="https://music.apple.com/us/album/flight-single/1584113088" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32">
+                        <defs>
+                          <path id="favicon-ff2d15-a" d="M10.6542969,21.3271484 L10.6542969,7.35253906 C10.6542969,6.63476563 11.1669922,6.32714844 11.7529297,6.20996094 L22.8271484,3.96875 C23.8378906,3.76367188 24.453125,3.88085938 24.453125,5.05273438 L24.453125,22.1914063 C24.453125,25.4140625 21.8896484,26.1025391 20.2783203,26.1025391 C18.6816406,26.1025391 17.3632812,24.8720703 17.3632812,23.3046875 C17.3632812,21.4150391 18.7841797,20.6240234 20.5859375,20.2578125 L22.2119141,19.8916016 C22.8710938,19.7597656 23.0761719,19.2763672 23.0761719,18.7636719 L23.0908203,10.5605469 C23.0908203,9.98925781 22.8271484,9.78417969 22.1826172,9.93066406 L12.7929688,11.8349609 C12.2509766,11.9228516 12.0898438,12.0839844 12.0898438,12.7285156 L12.0898438,24.6523438 C12.0898438,27.8896484 9.48242188,28.6367188 7.87109375,28.6367188 C6.24511719,28.6367188 5,27.3916016 5,25.8388672 C5,23.9199219 6.43554688,23.1289063 8.14941406,22.71875 L9.89257812,22.3671875 C10.4345703,22.2353516 10.6542969,21.8105469 10.6542969,21.3271484 Z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <use fill="#000" fill-rule="nonzero" xlink:href="#favicon-ff2d15-a"/>
+                        </g>
+                      </svg>&nbsp;Apple Music
+                </a>
+            </div>
+        </div>
+
+        <div class="col dropdown">
+            <button class="btn bg-image dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown" >
+                <img class="albumicon" src="static/swrlly/images/reflection.png"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownmenu" data-boundary="window" data-display="static">
+                <a class="dropdown-item" href="https://open.spotify.com/album/4dN0aX954xWhKK8MxvTrma" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-spotify spotify-color"></span>&nbsp;&nbsp;Spotify</a>
+                <a class="dropdown-item" href="https://soundcloud.com/swrlly/reflection" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-soundcloud sc-color" style="font-size:1em;"></span>&nbsp;&nbsp;SoundCloud</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=lrfYPaqr08g" target="_blank" rel="noopener noreferrer"><span class="fa-brands fa-youtube yt-color"></span>&nbsp;&nbsp;YouTube</a>
+                <a class="dropdown-item" href="https://music.apple.com/us/album/reflection-single/1583657259" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32">
+                        <defs>
+                          <path id="favicon-ff2d15-a" d="M10.6542969,21.3271484 L10.6542969,7.35253906 C10.6542969,6.63476563 11.1669922,6.32714844 11.7529297,6.20996094 L22.8271484,3.96875 C23.8378906,3.76367188 24.453125,3.88085938 24.453125,5.05273438 L24.453125,22.1914063 C24.453125,25.4140625 21.8896484,26.1025391 20.2783203,26.1025391 C18.6816406,26.1025391 17.3632812,24.8720703 17.3632812,23.3046875 C17.3632812,21.4150391 18.7841797,20.6240234 20.5859375,20.2578125 L22.2119141,19.8916016 C22.8710938,19.7597656 23.0761719,19.2763672 23.0761719,18.7636719 L23.0908203,10.5605469 C23.0908203,9.98925781 22.8271484,9.78417969 22.1826172,9.93066406 L12.7929688,11.8349609 C12.2509766,11.9228516 12.0898438,12.0839844 12.0898438,12.7285156 L12.0898438,24.6523438 C12.0898438,27.8896484 9.48242188,28.6367188 7.87109375,28.6367188 C6.24511719,28.6367188 5,27.3916016 5,25.8388672 C5,23.9199219 6.43554688,23.1289063 8.14941406,22.71875 L9.89257812,22.3671875 C10.4345703,22.2353516 10.6542969,21.8105469 10.6542969,21.3271484 Z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <use fill="#000" fill-rule="nonzero" xlink:href="#favicon-ff2d15-a"/>
+                        </g>
+                      </svg>&nbsp;Apple Music
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function setposition(e) {
+        console.log(e.target);
+        console.log(e.target.className.indexOf("btn"));
+        console.log(e.target.parentElement.nextElementSibling)
+        // two possibilities: you clicked button or image
+        var offset;
+        if (e.target.className.indexOf("btn") != -1) {
+            offset = e.target.getBoundingClientRect();
+        }
+        else {
+            offset = e.originalTarget.parentElement.getBoundingClientRect();
+        }
+        tempX = e.pageX - (offset.left + window.pageXOffset);
+        tempY = e.pageY - (offset.top + window.pageYOffset);
+        // make sure to set +px or will break on doctype html
+        if (e.target.className.indexOf("btn") != -1) {
+            e.target.nextElementSibling.style.top = tempY + "px";
+            e.target.nextElementSibling.style.left = tempX + "px";
+        }
+        else {
+            e.target.parentElement.nextElementSibling.style.top = tempY + "px";
+            e.target.parentElement.nextElementSibling.style.left = tempX + "px";
+        }
+    }
+    
+    let menus = document.querySelectorAll(".dropdown-toggle");
+    for (let i = 0; i < menus.length; i++) {
+        menus[i].onclick = (event) => {setposition(event)};
+    }
+</script>
+{% endblock %}

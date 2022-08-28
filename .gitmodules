@@ -1,0 +1,3 @@
+[submodule "darzadata"]
+	path = darzadata
+	url = https://github.com/swrlly/darzadata.git
