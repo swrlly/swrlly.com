@@ -27,7 +27,7 @@ def music():
 
 @app.route("/robots.txt")
 def robots():
-    return app.send_static_file("robots.txt")
+    return app.send_static_file("swrlly/robots.txt")
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -77,12 +77,25 @@ def dplayercount():
 def dindex():
     return render_template("darzacharts/index.html")
 
+@darzacharts.route("/robots.txt")
+def drobots():
+    return app.send_static_file("darzacharts/robots.txt")
+
 @darzacharts.errorhandler(404)
 def dpage_not_found(e):
     return render_template("darzacharts/errors/404.html")
 
 
+
+blog = Blueprint(name="blog", import_name=__name__, static_folder="static", subdomain="blog")
+
+@blog.route("/")
+def bindex():
+    return "test"
+
+
 app.register_blueprint(darzacharts)
+app.register_blueprint(blog)
 #app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
 app.config["SERVER_NAME"] = "swrlly.com"
 

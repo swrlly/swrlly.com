@@ -33,9 +33,12 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: var(--lavender);
     cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none;
 }
 
 a:hover {
