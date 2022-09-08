@@ -25,6 +25,18 @@ def blog():
 def music():
     return render_template("swrlly/music.html")
 
+@app.route("/teaching")
+def teaching():
+    return render_template("swrlly/teaching.html")
+
+@app.route("/teaching/math-119")
+def math119():
+    return render_template("swrlly/teaching/math-118.html")
+
+@app.route("/teaching/math-118")
+def math118():
+    return render_template("swrlly/teaching/math-118.html")
+
 @app.route("/robots.txt")
 def robots():
     return app.send_static_file("swrlly/robots.txt")
@@ -85,8 +97,6 @@ def drobots():
 def dpage_not_found(e):
     return render_template("darzacharts/errors/404.html")
 
-
-
 blog = Blueprint(name="blog", import_name=__name__, static_folder="static", subdomain="blog")
 
 @blog.route("/")
@@ -96,6 +106,6 @@ def bindex():
 
 app.register_blueprint(darzacharts)
 app.register_blueprint(blog)
-#app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
-app.config["SERVER_NAME"] = "swrlly.com"
+app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"
+#app.config["SERVER_NAME"] = "swrlly.com"
 

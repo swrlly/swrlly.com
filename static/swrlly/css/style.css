@@ -17,6 +17,11 @@ html {
     /* --lavender: rgb(188, 167, 238); */
 }
 
+
+img {
+    width: 100%;
+}
+
 body {
     background-color: var(--background-col) !important;
     color: var(--text-color) !important;
@@ -209,4 +214,41 @@ a:hover {
 #pagenotfound {
     font-size: 120px;
     text-align: center;
+}
+
+
+/* teaching */
+
+
+.teachingicons {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 5vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.iconcontainer {
+    position: relative;
+}
+
+.centertextoverimage {
+    position: absolute;
+    color: black;
+    pointer-events: none;
+}
+
+.bottomicontext {
+    justify-content: center;
+    margin-top: 1vh;
+    display: flex;
+}
+
+.teachingicon {
+    border-radius: 5px;
+}
+
+.teachingicon:hover {
+    transition: transform 0.3s;
+    transform: scale(1.03);
 }

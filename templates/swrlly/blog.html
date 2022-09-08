@@ -24,6 +24,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
         <link href="{{url_for('static', filename='swrlly/css/style.css')}}" rel="stylesheet">
+        {% block extraimports %} {% endblock %}
     </head>
     
     <body>
@@ -51,6 +52,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="teaching">teaching</a>
                         </li>
                     </ul>
                 </div>

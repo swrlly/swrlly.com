@@ -1,0 +1,69 @@
+{% extends "swrlly/blog.html" %}
+
+{% block title %}<title>swrlly - teaching</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="teaching"/>
+<meta name = "theme-color" content="#b39af0">
+<meta property="og:url" content="https://swrlly.com/teaching"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png" />
+{% endblock %}
+
+{% block extraimports %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container fade-in-text text-padding">
+    <h1>Teaching</h1>
+    Welcome! Here you can find class materials for classes I've taught before.
+    <div class="teachingicons">
+        <div class="iconcontainer">
+            <a href="teaching/math-119">
+                <img class="teachingicon" src="static/swrlly/images/greybox.png"></img>
+                <div class="centertextoverimage">\(\sin(x)\)</div>
+            </a>
+            <div class="bottomicontext">Math 119</div>
+        </div>
+        <div class="iconcontainer">
+            <a href="teaching/math-118">
+                <img class="teachingicon" src="static/swrlly/images/greybox.png"></img>
+                <div class="centertextoverimage">\(f(x)\)</div>
+            </a>
+            <div class="bottomicontext">Math 118</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // does not account for zooming out
+    function ModifyIconFont() {
+        let icons = document.querySelectorAll(".centertextoverimage");
+        for (let i = 0; i < icons.length; i++) {
+            if (window.innerWidth >= 1200) {
+                icons[i].style["font-size"] = "60px";
+            }
+            else {
+                icons[i].style["font-size"] = "5vw";
+            }
+        }
+        icons = document.querySelectorAll(".centertextoverimage");
+        for (let i = 0; i< icons.length; i++) {
+            let boxHeight = icons[i].offsetHeight;
+            let boxWidth = icons[i].offsetWidth;
+            let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
+            let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
+            icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
+            icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
+        }
+    }
+
+    window.onresize = ModifyIconFont;
+    window.onload = ModifyIconFont;
+</script>
+
+{% endblock %}
+
