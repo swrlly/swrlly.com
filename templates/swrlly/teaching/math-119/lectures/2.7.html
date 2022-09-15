@@ -1,0 +1,86 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="lectures for math 119"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block centerimport %}{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.7: Combining Functions</h1>
+    <h2>$+, -, \times$ and $\div$</h2>
+    <div class="math-def">
+    Suppose $f$ and $g$ are functions with domains $A$ and $B$, respectively. Then the new functions $f+g, f-g, f\cdot g$ and $\frac{f}{g}$ are defined as follows:
+    \begin{align}
+    (f+g)(x) &= f(x) + g(x) && \text{Domain } A \cap B \\
+    (f-g)(x) &= f(x) - g(x) && \text{Domain } A \cap B\\
+    (f\cdot g)(x) &= f(x)\cdot g(x) && \text{Domain } A \cap B\\
+    \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)} && \text{Domain } \{x \in A 
+        \cap B : g(x) \neq 0\}
+    \end{align}
+    </div>
+    <p class="lecturep">Simply put, $+, -, \times, \div$ functions together is done by performing the specified operation on the function output. Let's look at some examples.</p>
+    <div class="math-example">
+    Let $f(x) = \frac{1}{x-2}$ and $g(x) = \sqrt{x}$. Find the following:
+    <ol>
+        <li> $f+g, f-g, fg, \frac{f}{g}$ and their domains</li>
+        <li>$(f+g)(4), \left(\frac{f}{g}\right)(4)$, and $\left(\frac{f}{g}\right)(0)$</li>
+    </ol>
+    Solution:
+    <ol>
+        <li>Let's first find the domains and intersect them. $f(x)$ has domain $ A = \{x : x \neq 2\}$ and $g(x)$ has domain $B = \{x : x \geq 0\}$. Thus \[A \cap B = \{x : x \geq 0 \text{ and } x \neq 2\} = [0, 2) \cup (2, \infty)\]
+            Following the above table, we see that
+            \begin{align}
+            (f+g)(x) &= f(x) + g(x)                             &&= \frac{1}{x-2} + \sqrt{x}  \\
+            (f-g)(x) &= f(x) - g(x)                             &&= \frac{1}{x-2} - \sqrt{x}  \\
+            (f\cdot g)(x) &= f(x)\cdot g(x)                     &&= \frac{\sqrt{x}}{x-2}      \\
+            \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)}    &&= \frac{1}{(x-2)\sqrt{x}}   \\         
+            \end{align}
+        </li>
+        The first three functions have the domain $[0, 2) \cup (2, \infty)$ while the last one has domain $(0, 2) \cup (2, \infty)$ because plugging in zero results in division by zero.
+        <li>
+            From part 1, the definitions of $f+g$ and $f/g$ give
+            \begin{align}
+            (f+g)(4) &= f(4) + g(4)                             &&= \frac{1}{4-2} + \sqrt{4} & = \frac{5}{2} \\
+            \left(\frac{f}{g}\right)(4) &= \frac{f(4)}{g(4)}    &&= \frac{1}{(4-2)\sqrt{4}} &= \frac{1}{4}   \\
+            \end{align}
+            Since we cannot divide by zero, $\left(\frac{f}{g}\right)(0)$ is undefined.
+        </li>
+    </ol>
+    </div>
+    <h2>Function Composition</h2>
+        <p class="lecturep">Function evaluation on a number is straightforward: the preceding example utilized this concept. What if we evaluate a function on another function? This idea is called <b>function composition.</b></p>
+        <div class="math-def">
+            Given two functions $f$ and $g$, the composite function $f \circ g$ (also called the composition of $f$ and $g$) is defined by \[(f\circ g)(x) = f(g(x))\]
+        </div>
+        <p class="lecturep">To evaluate a function composition, you first plug in $g(x)$ into $f(x)$, and wherever there is an $x$ in $f(x)$, substitute the definition of $g(x)$ there. </p>
+        <div class="math-example">
+            Suppose $f(x) = x^2$ and $g(x) = x-3$. Find $f\circ g, g \circ f, (f\circ g)(5), (g\circ f)(5)$</br>
+
+            Solution: We see that \[(f\circ g)(x) = f(g(x)) = f(x-3) = (x-3)^2\] and \[(g\circ f)(x) = g(f(x)) = g(x^2) = x^2 - 3\] Thus $(f\circ g)(5) = (5-3)^2 = 4$ and $(g\circ f)(5) = 5^2 - 3 = 22$.
+        </div>
+        <div class="lecturep"> Ideas:
+            <ul>
+                <li>This shows that the operation $\circ$ is not commutative, i.e. $f\circ g \neq g \circ f$. Do not mistake $f\circ g$ to mean function multiplication!</li>
+                <li>We can also take compositions of three or more functions. For example, $f\circ g \circ h = f(g(h(x)))$.</li>
+            </ul>
+        </div>
+        <div class="math-example">
+            Find $f\circ g \circ h$ where $f(x) = \frac{x}{x+1}, g(x) = x^{10}, h(x) = x+3$.
+        </br>Solution: \begin{align}
+        (f\circ g \circ h)(x) &= f(g(h(x)))\\
+        &= f(g(x+3))
+        &= f((x+3)^{10})
+        &= \frac{(x+3)^{10}}{(x+3)^{10}+1}
+        \end{align}
+        </div>
+    
+</div>
+{% endblock %}

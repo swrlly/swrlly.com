@@ -5,41 +5,39 @@ from werkzeug.exceptions import NotFound
 import sqlite3
 import json
 import re
+import os
 
 app = Flask(__name__)
 DATABASE = 'darzadata/data/playerdata.db'
+cssVersion = "2"
 
 @app.route("/")
-def index():
-    return render_template("swrlly/index.html")
+def Index():
+    return render_template("swrlly/index.html", cssVersion=cssVersion)
 
 @app.route("/projects")
-def about():
+def About():
     return render_template("swrlly/projects.html")
 
 @app.route("/blog")
-def blog():
-    return render_template("swrlly/blog.html")
+def Blog():
+    return render_template("swrlly/blog.html", cssVersion=cssVersion)
 
 @app.route("/music")
-def music():
+def Music():
     return render_template("swrlly/music.html")
 
-@app.route("/teaching")
-def teaching():
-    return render_template("swrlly/teaching.html")
-
-@app.route("/teaching/math-119")
-def math119():
-    return render_template("swrlly/teaching/math-118.html")
-
-@app.route("/teaching/math-118")
-def math118():
-    return render_template("swrlly/teaching/math-118.html")
-
 @app.route("/robots.txt")
-def robots():
+def Robots():
     return app.send_static_file("swrlly/robots.txt")
+
+@app.route("/<path:path>")
+def CatchAll(path):
+    # render_template escapes strings
+    try:
+        return render_template("swrlly/" + path + ".html", cssVersion=cssVersion)
+    except:
+        return render_template("swrlly/errors/404.html")
 
 @app.errorhandler(404)
 def page_not_found(e):

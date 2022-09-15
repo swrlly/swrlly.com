@@ -9,14 +9,19 @@
     margin: 0 auto;
 }
 
+.smallcontainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 html {
     font-size: 100%;
     --lavender: rgb(179, 154, 240);
     --darklavender: rgb(156, 125, 234);
+    --examplecolor: rgb(232, 162, 212);
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
-
 
 img {
     width: 100%;
@@ -40,6 +45,23 @@ body {
 a {
     color: var(--lavender);
     cursor: pointer;
+}
+
+b {
+    color: var(--darklavender)
+}
+
+h2 {
+    padding-top: 0.75em;
+    color: #8eb5e3;
+}
+
+th, td {
+    color: var(--text-color);
+}
+
+.teachingheader {
+    font-size: 3rem;
 }
 
 .no-underline {
@@ -219,13 +241,16 @@ a:hover {
 
 /* teaching */
 
-
 .teachingicons {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     column-gap: 5vw;
+    row-gap: 4vh;
     margin: 0 auto;
-    margin-top: 5vh;
+}
+
+.padding-top {
+    padding-top: 2vh;
 }
 
 .iconcontainer {
@@ -240,6 +265,7 @@ a:hover {
 
 .bottomicontext {
     justify-content: center;
+    text-align: center;
     margin-top: 1vh;
     display: flex;
 }
@@ -251,4 +277,37 @@ a:hover {
 .teachingicon:hover {
     transition: transform 0.3s;
     transform: scale(1.03);
+}
+
+.math-def {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--lavender);
+    padding-left: 10px;
+    
+}
+
+.math-def:before {
+    content: "Definition:";
+    color: var(--lavender);
+    font-weight: bold;
+}
+
+.math-example {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--examplecolor);
+    padding-left: 10px;
+    
+}
+
+.math-example:before {
+    content: "Example:";
+    color: var(--examplecolor);
+    font-weight: bold;
+}
+
+.lecturep {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }

@@ -1,69 +1,107 @@
-{% extends "swrlly/blog.html" %}
+<!DOCTYPE html>
 
-{% block title %}<title>swrlly - teaching</title>{% endblock %}
+<html lang="en">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
+    <head>
+        {% block title %}<title>swrlly - teaching</title>{% endblock %}
+        {% block discord %}
+        <meta property="og:title" content="teaching"/>
+        <meta name = "theme-color" content="#b39af0"/>
+        <meta property="og:description" content="course materials!"/>
+        <meta property="og:url" content="https://swrlly.com/teaching"/>
+        <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+        {% endblock %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-{% block discord %}
-<meta property="og:title" content="teaching"/>
-<meta name = "theme-color" content="#b39af0">
-<meta property="og:url" content="https://swrlly.com/teaching"/>
-<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png" />
-{% endblock %}
-
-{% block extraimports %}
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-{% endblock %}
-
-{% block content %}
-
-
-<div class="container fade-in-text text-padding">
-    <h1>Teaching</h1>
-    Welcome! Here you can find class materials for classes I've taught before.
-    <div class="teachingicons">
-        <div class="iconcontainer">
-            <a href="teaching/math-119">
-                <img class="teachingicon" src="static/swrlly/images/greybox.png"></img>
-                <div class="centertextoverimage">\(\sin(x)\)</div>
-            </a>
-            <div class="bottomicontext">Math 119</div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
+        <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
+        <script>
+            MathJax = {
+                tex: {
+                  inlineMath: [['$', '$'], ['\\(', '\\)']]
+                },
+                svg: {
+                  fontCache: 'global'
+                }
+              };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        {% block centerimport %}
+        <script async src="/static/swrlly/js/centertext.js"></script>
+        {% endblock %}
+    </head>
+    
+    <body>
+        
+        <div class="fullScreen" id="background">
+            <canvas id="canvas2d"></canvas>
         </div>
-        <div class="iconcontainer">
-            <a href="teaching/math-118">
-                <img class="teachingicon" src="static/swrlly/images/greybox.png"></img>
-                <div class="centertextoverimage">\(f(x)\)</div>
-            </a>
-            <div class="bottomicontext">Math 118</div>
+
+        <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
+
+        <nav class="navbar fade-in-text-short navbar-expand bg-transparent">
+            <div class="container">
+
+                <div id="navbarLinks">
+
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projects">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/music">music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/teaching">teaching</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>     
+        {% block content %}
+        <div class="container fade-in-text text-padding">
+            <h1>Teaching</h1>
+            Welcome! Here you can find class materials for classes I've taught before.
+            <div class="padding-top teachingicons">
+                <div class="iconcontainer">
+                    <a href="teaching/math-119">
+                        <img class="teachingicon" src="/static/swrlly/images/greybox.png"></img>
+                        <div class="centertextoverimage">\(\sin(x)\)</div>
+                    </a>
+                    <div class="bottomicontext">Math 119</div>
+                </div>
+                <div class="iconcontainer">
+                    <a href="teaching/math-118">
+                        <img class="teachingicon" src="/static/swrlly/images/greybox.png"></img>
+                        <div class="centertextoverimage">\(f(x)\)</div>
+                    </a>
+                    <div class="bottomicontext">Math 118</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        {% endblock %}
 
-<script>
-    // does not account for zooming out
-    function ModifyIconFont() {
-        let icons = document.querySelectorAll(".centertextoverimage");
-        for (let i = 0; i < icons.length; i++) {
-            if (window.innerWidth >= 1200) {
-                icons[i].style["font-size"] = "60px";
-            }
-            else {
-                icons[i].style["font-size"] = "5vw";
-            }
-        }
-        icons = document.querySelectorAll(".centertextoverimage");
-        for (let i = 0; i< icons.length; i++) {
-            let boxHeight = icons[i].offsetHeight;
-            let boxWidth = icons[i].offsetWidth;
-            let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-            let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-            icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-            icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
-        }
-    }
 
-    window.onresize = ModifyIconFont;
-    window.onload = ModifyIconFont;
-</script>
+    </body>
+</html>
 
-{% endblock %}
+
+
+
+
 
