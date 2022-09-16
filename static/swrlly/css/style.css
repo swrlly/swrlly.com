@@ -267,7 +267,7 @@ a:hover {
     position: relative;
 }
 
-.centertextoverimage {
+.center-text-over-image, .large-center-text-over-image, .small-center-text-over-image {
     position: absolute;
     color: black;
     pointer-events: none;
