@@ -1,0 +1,152 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.8: One-to-One Functions and Inverses"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/2.8"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.8: One-to-One Functions and Inverses</h1>
+    <h2>One-to-One Functions</h2>
+    <p>
+        Consider the function $f(x) = x^2$. Note that $f(-4) = (-4)^2 = 16 = 4^2 = f(4)$. In this case, we see that the input values $-4$ and $4$ are different, but the outputs $f(-4) = f(4)$ are the same.
+        <br/>In other words, two different input values are sent to the same output value. If a function always sends two different input values to two different output values, we call this phenomena <b>one-to-one.</b>
+    </p>
+    <div class="math-def">
+        A function $f(x)$ with domain $A$ is called one-to-one if no two elements of $A$ are sent to the same value. <br/>In other words, if $x_1\neq x_2$, then it is always the case that $f(x_1) \neq f(x_2)$.
+    </div>
+    <p class="lecturep">
+        In this class, there are two ways of determining whether a function is one-to-one: algebraically and by using the graph. We will focus on the graphical method.
+    </p>
+    <div class="math-fact">
+        Horizontal Line Test: A function is one-to-one if and only if no horizontal line intersects the graph of $f(x)$ more than once.
+    </div>
+    <p class="lecturep">
+        Let's look at a few examples on how to use the horizontal line test.
+    </p>
+    <div class="math-example">
+        Are the functions \[f(x) = \sqrt{x}\qquad g(x) = x^2 \qquad h(x) = \frac{1}{x}\] one-to-one?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Play around with the horizontal line and see which ones do not pass the horizontal line test.
+            <iframe id="desmos-example" src="https://www.desmos.com/calculator/ib9sxrirzq"></iframe>
+            We see that $f(x)$ and $h(x)$ are one-to-one while $g(x)$ is not.
+        </div>
+    </div>
+    <h2>The Inverse of a Function</h2>
+    <div class="math-def">
+        Let $f$ be a one-to-one function with domain $A$ and range $B$. Then the inverse function, denoted $f^{-1}$, has domain $B$ and range $A$ and is defined by \[f^{-1}(y) = x \text{ if and only if } f(x) = y\]
+    </div>
+    <p>
+        Notes:
+        <ul>
+            <li>Looking at the definition above, the inverse function $f^{-1}$ plugs in the $y$ value, and spits back out the original $x$ value. This is why $f^{-1}$ is called an inverse: it reverses the behavior of $f$.</li>
+            <li>This one-to-one property guarantees <b>$f^{-1}$ is a function</b>, meaning $f^{-1}$ must pass the vertical line test.</li>
+            <li>One-to-one functions are the only functions which possess an inverse.</li>
+            <li>$f^{-1}$ is not equivalent to $\frac{1}{f}$.</li>
+        </ul>
+
+    </p>
+    <div class="math-example">
+        If $f(1) = 5, f(3) = 7, f(8) = 10$, find $f^{-1}(5), f^{-1}(7), f^{-1}(10)$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            $f^{-1}$ must reverse the effect of $f$. Thus \[f^{-1}(5) = 1 \qquad f^{-1}(7) = 3 \qquad f^{-1}(10) = 8\]
+        </div>        
+    </div>
+    <div class="math-fact">
+        Inverse Function Property: Let $f$ be a one-to-one function with domain $A$ and range $B$. The inverse function $f^{-1}$ satisfies the following properties
+        \begin{align}
+        f^{-1}f(x))=x \qquad &\text{ for every } x \text{ in } A\\
+        f(f^{-1}(x))=x \qquad &\text{ for every } x \text{ in } B
+        \end{align}
+    </div>
+    <p>In other words, the composition $(f\circ f^-1)(x) = x$ and vice versa. This technique is handy to determine whether two functions $f(x)$ and $g(x)$ are inverses of each other.</p>
+    <div class="math-example">
+        Show $f(x) = x^3$ and $g(x) = x^{\frac{1}{3}}$ are inverses of each other.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            If they are inverses, they must satisfy the inverse function property. Indeed:
+            \begin{align}
+            f(g(x)) &= f(x^{\frac{1}{3}}) = (x^{\frac{1}{3}})^3 = x\\
+            g(f(x)) &= g(x^{3}) = (x^{3})^\frac{1}{3} = x
+            \end{align}
+            Finally, notice that both $f(x)$ and $g(x)$ have a domain of $\mathbb{R}$.
+        </div>
+    </div>
+    <h2>Algebraically Finding the Inverse of a Function</h2>
+    <div class="math-method">
+        Given a function $f$, here are the steps to find the inverse $f^{-1}$:
+        <ol>
+            <li>Check $f$ is an one-to-one function. If so, proceed. If not, $f$ does not have an inverse.</li>
+            <li>Write $y = f(x)$.</li>
+            <li>Solve this equation for $x$ in terms of $y$.</li>
+            <li>Interchange $x$ and $y$. The resulting equation is $y = f^{-1}(x).</li>
+        </ol>
+    </div>
+    <div class="math-example">
+        Find the inverse of $f(x) = 3x - 2$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>$f(x)$ is clearly one-to-one; it is a line sloping from the third quadrant to the first.</li>
+                <li>Write $y = 3x - 2$.</li>
+                <li>Solve for (isolate) x:
+                    \begin{align}
+                    y &= 3x - 2 \\
+                    y + 2 &= 3x \\
+                    x &= \frac{y+2}{3}
+                    \end{align}
+                </li>
+                <li>Interchange $x$ and $y$: \[y = \frac{x+2}{3}\]Thus $f^{-1}(x) = \frac{x+2}{3}$.</li>
+            </ol>
+        </div>        
+    </div>
+    <div class="math-example">
+        Find the inverse of $f(x) = \frac{x^5-3}{2}$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>$f(x)$ is one-to-one by the horizontal line test.</li>
+                <li>Write $y = \frac{x^5-3}{2}$.</li>
+                <li>Solve for x:
+                    \begin{align}
+                    y &= \frac{x^5-3}{2} \\
+                    2y &= x^5 - 3 \\
+                    2y + 3 &= x^5\\
+                    x &= \sqrt[5]{2y+3}
+                    \end{align}
+                </li>
+                <li>Interchange $x$ and $y$: \[y = \sqrt[5]{2x+3}\]Thus $f^{-1}(x) = \sqrt[5]{2x+3}$.</li>
+            </ol>
+        </div>        
+    </div>
+    <div class="math-example">
+        Find the inverse of $f(x) = \frac{2x + 3}{x - 1}$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>$f(x)$ is one-to-one by the horizontal line test.</li>
+                <li>Write $y = \frac{2x + 3}{x - 1}$.</li>
+                <li>Solve for x:
+                    \begin{align}
+                    y &= \frac{2x + 3}{x - 1} \\
+                    y(x-1) &= 2x+3 \\
+                    xy - y &= 2x + 3 \\
+                    xy - 2x &= y + 3 \\
+                    x(y - 2) &= y + 3\\
+                    x &= \frac{y+3}{y-2}
+                    \end{align}
+                </li>
+                <li>Interchange $x$ and $y$: \[y = \frac{x+3}{x-2}\]Thus $f^{-1}(x) = \frac{x+3}{x-2}$.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

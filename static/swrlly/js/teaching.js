@@ -21,4 +21,24 @@ function ModifyIconFont() {
 }
 
 window.onresize = ModifyIconFont;
-window.onload = ModifyIconFont;
+window.onload = () => {
+    ModifyIconFont();
+    let btns = document.querySelectorAll(".math-btn");
+    for (let i = 0; i < btns.length; i++){
+        btns[i].onclick = (event) => {ShowSolution(event)};
+    }
+}
+
+function ShowSolution(event) {
+    if (event.target.nextElementSibling.style.display != "block") {
+        event.target.nextElementSibling.style.display = "block";
+        event.target.innerHTML = "Hide Solution";
+    }
+    else {
+        event.target.nextElementSibling.style.display = "none";
+        event.target.innerHTML = "Show Solution";
+    }
+}
+
+
+

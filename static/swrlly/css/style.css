@@ -14,11 +14,18 @@
     margin: 0 auto;
 }
 
+::selection {
+    background-color: #352e7e;
+}
+
+
 html {
     font-size: 100%;
     --lavender: rgb(179, 154, 240);
     --darklavender: rgb(156, 125, 234);
     --examplecolor: rgb(232, 162, 212);
+    --factcolor: rgb(236, 231, 141);
+    --methodcolor: rgb(236, 231, 141);
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
@@ -53,11 +60,15 @@ b {
 
 h2 {
     padding-top: 0.75em;
-    color: #8eb5e3;
+    color: rgb(142, 181, 227);
 }
 
 th, td {
     color: var(--text-color);
+}
+
+ol {
+    margin-bottom: 0;
 }
 
 .teachingheader {
@@ -240,7 +251,6 @@ a:hover {
 
 
 /* teaching */
-
 .teachingicons {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -298,7 +308,7 @@ a:hover {
     border-left-width: 1px;
     border-left-color: var(--examplecolor);
     padding-left: 10px;
-    
+    margin-bottom: 1em;
 }
 
 .math-example:before {
@@ -310,4 +320,58 @@ a:hover {
 .lecturep {
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+#desmos-example {
+    width: 100%;
+    min-height: 600px;
+    padding-top: 1em;
+}
+
+.math-fact {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--factcolor);
+    padding-left: 10px;    
+}
+
+.math-fact:before {
+    content: "Fact:";
+    color: var(--factcolor);
+    font-weight: bold;
+}
+
+.math-method {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--factcolor);
+    padding-left: 10px;
+    margin-bottom: 1em;
+}
+
+.math-method:before {
+    content: "Method:";
+    color: var(--factcolor);
+    font-weight: bold;
+}
+
+.math-btn {
+    margin: 0 auto;
+    display: flex;
+    background: transparent;
+    border-width: 1px;
+    border-color: var(--examplecolor);
+    color: var(--examplecolor);
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.math-solution {
+    display: none;
+    animation: fadeIn linear 0.5s;
+    -webkit-animation: fadeIn linear 0.5s;
+    -moz-animation: fadeIn linear 0.5s;
+    -o-animation: fadeIn linear 0.5s;
+    -ms-animation: fadeIn linear 0.5s;
 }
