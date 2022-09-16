@@ -1,9 +1,9 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 119</title>{% endblock %}
+{% block title %}<title>Math 119 - Lecture 2</title>{% endblock %}
 
 {% block discord %}
-<meta property="og:title" content="Math 119 - lectures"/>
+<meta property="og:title" content="Math 119 - Lecture 2"/>
 <meta name = "theme-color" content="#b39af0"/>
 <meta property="og:description" content="2.8: One-to-One Functions and Inverses"/>
 <meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/2.8"/>
@@ -35,7 +35,9 @@
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
             Play around with the horizontal line and see which ones do not pass the horizontal line test.
-            <iframe id="desmos-example" src="https://www.desmos.com/calculator/ib9sxrirzq"></iframe>
+            <div id="hide-desmos">
+                <iframe id="desmos-example" src="https://www.desmos.com/calculator/xk7reqhmot"></iframe>
+            </div>
             We see that $f(x)$ and $h(x)$ are one-to-one while $g(x)$ is not.
         </div>
     </div>
@@ -87,7 +89,7 @@
             <li>Check $f$ is an one-to-one function. If so, proceed. If not, $f$ does not have an inverse.</li>
             <li>Write $y = f(x)$.</li>
             <li>Solve this equation for $x$ in terms of $y$.</li>
-            <li>Interchange $x$ and $y$. The resulting equation is $y = f^{-1}(x).</li>
+            <li>Interchange $x$ and $y$. The resulting equation is $y = f^{-1}(x)$.</li>
         </ol>
     </div>
     <div class="math-example">
@@ -97,7 +99,7 @@
             <ol>
                 <li>$f(x)$ is clearly one-to-one; it is a line sloping from the third quadrant to the first.</li>
                 <li>Write $y = 3x - 2$.</li>
-                <li>Solve for (isolate) x:
+                <li>Solve for (isolate) $x$:
                     \begin{align}
                     y &= 3x - 2 \\
                     y + 2 &= 3x \\
@@ -115,7 +117,7 @@
             <ol>
                 <li>$f(x)$ is one-to-one by the horizontal line test.</li>
                 <li>Write $y = \frac{x^5-3}{2}$.</li>
-                <li>Solve for x:
+                <li>Solve for $x$:
                     \begin{align}
                     y &= \frac{x^5-3}{2} \\
                     2y &= x^5 - 3 \\
@@ -134,7 +136,7 @@
             <ol>
                 <li>$f(x)$ is one-to-one by the horizontal line test.</li>
                 <li>Write $y = \frac{2x + 3}{x - 1}$.</li>
-                <li>Solve for x:
+                <li>Solve for $x$:
                     \begin{align}
                     y &= \frac{2x + 3}{x - 1} \\
                     y(x-1) &= 2x+3 \\

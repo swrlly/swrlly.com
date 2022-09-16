@@ -294,7 +294,8 @@ a:hover {
     border-left-width: 1px;
     border-left-color: var(--lavender);
     padding-left: 10px;
-    
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .math-def:before {
@@ -309,6 +310,7 @@ a:hover {
     border-left-color: var(--examplecolor);
     padding-left: 10px;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .math-example:before {
@@ -318,21 +320,28 @@ a:hover {
 }
 
 .lecturep {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    /*margin-top: 2em;
+    margin-bottom: 2em;*/
 }
 
 #desmos-example {
+    margin-top: -62px;
     width: 100%;
     min-height: 600px;
     padding-top: 1em;
+}
+
+#hide-desmos {
+    overflow-y: hidden;
 }
 
 .math-fact {
     border-left-style: solid;
     border-left-width: 1px;
     border-left-color: var(--factcolor);
-    padding-left: 10px;    
+    padding-left: 10px;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .math-fact:before {
@@ -347,6 +356,7 @@ a:hover {
     border-left-color: var(--factcolor);
     padding-left: 10px;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .math-method:before {

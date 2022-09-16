@@ -1,6 +1,6 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 119</title>{% endblock %}
+{% block title %}<title>Math 119 - Lecture 1</title>{% endblock %}
 
 {% block discord %}
 <meta property="og:title" content="Math 119 - Lecture 1"/>
@@ -60,7 +60,7 @@
         Adding functions together has a nice graphical interpretation. In this example, we see the graph $f(x) + g(x)$ is just the vertical heights of $f(x)$ and $g(x)$ added together.
         <br/><button class="math-btn">Show Solution</button>
             <div class="math-solution">
-            <iframe id="desmos-example" src="https://www.desmos.com/calculator/bgtbdfkq09"></iframe>
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/bgtbdfkq09"></iframe></div>
             </div>
     </div>
     <h2>Function Composition</h2>
@@ -100,7 +100,7 @@
         <div class="math-solution">
             We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
             Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
-            </div>
+        </div>
         </div>
     
 </div>

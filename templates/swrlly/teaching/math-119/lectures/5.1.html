@@ -1,6 +1,6 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 119</title>{% endblock %}
+{% block title %}<title>Math 119 - Lecture 3</title>{% endblock %}
 
 {% block discord %}
 <meta property="og:title" content="Math 119 - Lecture 3"/>
@@ -13,5 +13,94 @@
 {% block content %}
 <div class="container fade-in-text text-padding">
     <h1>5.1: The Unit Circle</h1>
+    <h2>The Unit Circle</h2>
+    <p>
+        Let's begin our foray into the world of trigonometric functions! Before we define the trigonometric functions, we need to discuss a tool to help us define them: the unit circle.
+    </p>
+    <div class="math-def">
+        The unit circle is the circle of radius 1 centered at the origin in the $xy$-plane. The equation is \[x^2 + y^2 = 1\]
+    </div>
+    <div class="math-example">
+        Is the point $P\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right)$ on the unit circle?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            A point is on the unit circle if it satisfies the unit circle equation $x^2 + y^2 = 1$. We have \[\left(\frac{\sqrt{3}}{3}\right)^2 + \left(\frac{\sqrt{6}}{3}\right)^2 = \frac{3}{9} + \frac{6}{9} = 1\]
+            so this point is on the unit circle.
+        </div>
+    </div>
+    <h2>Terminal Points and the Reference Number</h2>
+    <div class="math-def">
+        Let $t$ be a real number. If $t \geq 0$, travel $t$ units along the unit circle counterclockwise from $(1, 0)$ and mark the destination point $P$. If $t < 0 $, travel $\lvert t \rvert$ units along the unit circle clockwise from $(1, 0)$ and mark the destination point $P$.</br>
+        The point $P$ is called the terminal point.
+    </div>
+    <div class="math-example">
+        Here is an interactive example of a terminal point $P$ for positive $t$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/inw4vgxdtt"></iframe></div>
+        </div>
+        If $t$ were negative, we would travel clockwise.
+    </div>
+    <p>
+        <ul>
+            <li>The circumference of the unit circle is $C = 2\pi r = 2\pi$. This is why we saw $t = \pi$ when we traversed half of the circle above. </li>
+            <li>This means if $t = \frac{\pi}{2}$, we would have traveled a quarter counterclockwise.</li>
+        </ul>
+    </p>
+    <div class="math-example">
+        Find the terminal points for \[t = 3\pi\qquad t = -\pi \qquad t=-\frac{\pi}{2}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>Because $t = 3\pi = 2\pi + \pi$, we travel counterclockwise once around the unit circle, then halfway. The terminal point is $(-1, 0)$.</li>
+                <li>For $t=-\pi$, we travel clockwise halfway so the terminal point is $(-1, 0)$.</li>  
+                <li>For $t=-\frac{\pi}{2}$, we travel clockwise a quarter around the unit circle; the terminal point is $(0, -1)$.</li>
+            </ol>
+        </div>
+    </div>
+    <p>
+        Important! The terminal points associated with $t = \frac{\pi}{6}, \frac{\pi}{4}, \frac{\pi}{3}$ are common values you should commit to memory. Here they are:
+        <table class="table" style="max-width: 200px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">$t$</th>
+                <th scope="col">Terminal point</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>$0$</td>
+                <td>$(1, 0)$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{6}$</td>
+                <td>$(\frac{\sqrt{3}}{2}, \frac{1}{2})$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{4}$</td>
+                <td>$(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2})$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{3}$</td>
+                <td>$(\frac{1}{2}, \frac{\sqrt{3}}{2})$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{2}$</td>
+                <td>$(0, 1)$</td>
+            </tr>
+            </tbody>
+        </table>
+        Let's derive the terminal point $P$ for $t = \frac{\pi}{4}$. We know the terminal point lies halfway between $(0, 1)$ and $(1, 0)$. The unit circle is symmetric around the line $y = x$ so this line must cut through the terminal point $P$.
+    </br>We know $x^2 + y^2 = 1$, so substitute $y = x$ into the equation and solve for $x:$ 
+    \begin{align}
+    x^2 + y^2 &= 1\\
+    x^2 + x^2 &= 1\\
+    2x^2 &= 1\\
+    x^2 &= \frac{1}{2}\\
+    x &= \pm \frac{1}{\sqrt{2}}
+    \end{align}
+    When $t = \frac{\pi}{4}$, $P$ is in the first quadrant so $x$ must be $\frac{1}{\sqrt{2}}$. Since $y = x$ we know \[P\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\]
+    after rationalizing the denominator. Similar arguments can be used to derive the terminal points for $t = \frac{\pi}{6}, \frac{\pi}{3}$.
+    </p>
 </div>
 {% endblock %}
