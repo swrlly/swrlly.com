@@ -1,6 +1,6 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 119 - Lecture 3</title>{% endblock %}
+{% block title %}<title>Math 119 - 5.1</title>{% endblock %}
 
 {% block discord %}
 <meta property="og:title" content="Math 119 - Lecture 3"/>
@@ -33,13 +33,15 @@
         Let $t$ be a real number. If $t \geq 0$, travel $t$ units along the unit circle counterclockwise from $(1, 0)$ and mark the destination point $P$. If $t < 0 $, travel $\lvert t \rvert$ units along the unit circle clockwise from $(1, 0)$ and mark the destination point $P$.</br>
         The point $P$ is called the terminal point.
     </div>
+    <!--<p><b>In general:</b> rotating counterclockwise means $t$ is positive and rotating clockwise means $t$ is negative.</p>-->
     <div class="math-example">
         Here is an interactive example of a terminal point $P$ for positive $t$.
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
             <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/inw4vgxdtt"></iframe></div>
+            If $t$ were negative, we would travel clockwise.
         </div>
-        If $t$ were negative, we would travel clockwise.
+       
     </div>
     <p>
         <ul>
@@ -74,15 +76,15 @@
             </tr>
             <tr>
                 <td>$\frac{\pi}{6}$</td>
-                <td>$(\frac{\sqrt{3}}{2}, \frac{1}{2})$</td>
+                <td>$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</td>
             </tr>
             <tr>
                 <td>$\frac{\pi}{4}$</td>
-                <td>$(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2})$</td>
+                <td>$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$</td>
             </tr>
             <tr>
                 <td>$\frac{\pi}{3}$</td>
-                <td>$(\frac{1}{2}, \frac{\sqrt{3}}{2})$</td>
+                <td>$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$</td>
             </tr>
             <tr>
                 <td>$\frac{\pi}{2}$</td>
@@ -102,5 +104,118 @@
     When $t = \frac{\pi}{4}$, $P$ is in the first quadrant so $x$ must be $\frac{1}{\sqrt{2}}$. Since $y = x$ we know \[P\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\]
     after rationalizing the denominator. Similar arguments can be used to derive the terminal points for $t = \frac{\pi}{6}, \frac{\pi}{3}$.
     </p>
+    <div class="math-example">
+        Given $t = \frac{7\pi}{6}$ and its terminal point $P$, state two negative $t$ values that correspond to $P$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            One solution is $t = -\frac{5\pi}{6}$. Two ways to look at it:
+            <ol>
+                <li>$\frac{7\pi}{6}$ overshoots $(-1, 0)$ by $\frac{\pi}{6}$, and $-\frac{5\pi}{6}$ is missing a distance of $\frac{\pi}{6}$ to reach $(-1, 0)$.</li>
+                <li>$\pm 2\pi$ is a full rotation around the unit circle. Since $\frac{7\pi}{6} - 2\pi = -\frac{5\pi}{6}$, this means $-\frac{5\pi}{6}$ also shares $P$ as its terminal point.</li>
+            </ol> 
+        </br>In general, all solutions are $t = \frac{7\pi}{6} + 2k\pi$ where $k$ is an integer.
+        </div>        
+    </div>
+    <p>The terminal points in the first quadrant are <b>all you need</b> to derive the rest of the terminal points in the rest of the quadrants! See below for the first technique.</p>
+    <div class="math-example">
+        Find the terminal points associated with \[t = -\frac{\pi}{4} \qquad t = \frac{3\pi}{4} \qquad t = -\frac{5\pi}{6}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ul>
+                <li>
+                    From above we know that when $t = \frac{\pi}{4}, P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$ is the terminal point. Since $t = -\frac{\pi}{4}$ is rotating counterclockwise, the terminal point $Q$ will share the same $x$-coordinate, but have a negative $y$-value instead. Thus the terminal point is $Q\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$.
+                </li>
+                <li>
+                    Let $P$ be the terminal point for $t = \frac{\pi}{4}$ and $Q$ be our desired terminal point.
+                </br>Note that $t = \frac{3\pi}{4} = \frac{\pi}{2} + \frac{\pi}{4}$, meaning we first travel a quarter counterclockwise. Then by traveling a distance of $\frac{\pi}{4}$, we know that $Q$ has the same coordinates as $P$, except for sign due to being in a different quadrant. Clearly, the $y$-coordinate must be the same, but the $x$-coordinate is negative so $Q\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$.
+                </li>
+                <li>
+                    Let $Q$ be our desired terminal point. From the previous example, we know $t = \frac{7\pi}{6}$ also has $Q$ as its terminal point. Note that $\frac{7\pi}{6} = \pi + \frac{\pi}{6}$, meaning rotate counterclockwise halfway, then $\frac{\pi}{6}$. As a result, $Q$ must have the same terminal point as $t=\frac{\pi}{6}$, except for sign. Since both $x$ and $y$ are negative, we know $Q\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>The previous example is particularly insightful: if we can decompose $t$ into quarter/half rotations and perhaps some rotation $0 \leq q \leq \frac{\pi}{4}$, we can use symmetry arguments to find the terminal point. This is the exact reason why the table above is all you need to derive terminal points. Let's discuss how to do this.</p>
+    <div class="math-def">
+        Let $t$ be a real number and $P$ be the associated terminal point. The <b>reference number $\bar{t}$</b> associated with $t$ is the shortest distance from $P$ to the $x$-axis.
+    </div>
+    <div class="math-example">
+        Here is an interactive example of the reference number for $0 \leq t \leq 2\pi$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/tm0ptfc1fx"></iframe></div>
+            If $t$ were negative, we would travel clockwise.
+        </div>
+    </div>
+    <div class="math-example">
+        Find the reference numbers for 
+        <ol>
+            \[1. \ t = \frac{5\pi}{6} \qquad\qquad 2. \
+            t = \frac{7\pi}{4} \qquad\qquad 3. \ 
+            t = -\frac{2\pi}{3} \qquad\qquad 4.\
+            t = 5.80\]
+        </ol>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>$t$ is in the second quadrant. Therefore we drop down to the negative $x$-axis, or a half rotation $\pi$. Thus $\bar{t} = \pi  - \frac{5\pi}{6} = \frac{\pi}{6}$.</li>
+                <li>$t$ is in the fourth quadrant. Therefore we drop down to the positive $x$-axis, or a full rotation $2\pi$. Thus $\bar{t} = 2\pi  - \frac{7\pi}{4} = \frac{\pi}{4}$.</li>
+                <li>$t$ is in the third quadrant. Therefore we drop down to the negative $x$-axis, or a half rotation $\pi$. Thus $\bar{t} = \pi  - \frac{2\pi}{3} = \frac{\pi}{3}$.</li>
+                <ul>
+                    <li>Note: even though $t$ is negative, we are only interested in positive distance for $\bar{t}$. Make sure the $\bar{t}$ value lies between $0$ and $\frac{\pi}{2}$.</li>
+                </ul>
+                <li>$t$ is in the fourth quadrant. Therefore we drop down to the positive $x$-axis, or a full rotation $2\pi$.Thus $\bar{t} = 2\pi  - 5.80 \approx 0.48$. </li>
+            </ol>
+        </div>       
+    </div>
+    <p>The following method puts the technique we used three examples ago into a straightforward way to find the reference number for any terminal point.</p>
+    <div class="math-method">
+        To find the terminal point $P$ for any value of $t \in \mathbb{R}$, do
+        <ol>
+            <li>Find the reference number $\bar{t}$.</li>
+            <li>Find the terminal point $Q(a,b)$ for $\bar{t}$.</li>
+            <li>The terminal point for $t$ has form $P(\pm a, \pm b)$, depending on which quadrant you are in. Fix the sign according to the quadrant.</li>
+        </ol>
+    </div>
+    <div class="math-example">
+        Find the terminal point for             \[1. \ t = \frac{5\pi}{6} \qquad\qquad 2. \
+        t = \frac{7\pi}{4} \qquad\qquad 3. \ 
+        t = -\frac{2\pi}{3}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{6}$</li>
+                        <li>$Q$ is $\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</li>
+                        <li>$t$ lies in the second quadrant, with negative $x$, positive $y$. Thus $P$ is $\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{4}$</li>
+                        <li>$Q$ is $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$</li>
+                        <li>$t$ lies in the fourth quadrant, with positive $x$, negative $y$. Thus $P$ is $\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{3}$</li>
+                        <li>$Q$ is $\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$</li>
+                        <li>$t$ lies in the third quadrant, with negative $x$, negative $y$. Thus $P$ is $\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right))$</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="math-example">
+        Find the terminal point for $t = \frac{65\pi}{6}.$
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            If $t < -2\pi$ or $t > 2\pi$, bring $t$ closer to zero by subtracting or adding $2\pi$. This does not change the terminal point for $t$ because these are full rotations around the unit circle.
+        </br> For this case, the decomposition is \[t =  \frac{65\pi}{6} =  \frac{60 \pi}{6} + \frac{5 \pi}{6} = 10\pi + \frac{5 \pi}{6} = 5(2\pi) + \frac{5 \pi}{6}\]
+        The five initial rotations around the unit circle can be neglected. Thus $t$ has the same terminal point as #1 in the previous example: $\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$.
+        </div> 
+    </div>
 </div>
 {% endblock %}
