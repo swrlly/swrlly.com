@@ -3,7 +3,7 @@
 {% block title %}<title>Math 119 - 5.2</title>{% endblock %}
 
 {% block discord %}
-<meta property="og:title" content="Math 119 - Lecture 4"/>
+<meta property="og:title" content="Math 119 - lectures"/>
 <meta name = "theme-color" content="#b39af0"/>
 <meta property="og:description" content="5.2: Trigonometric Functions of Real Numbers"/>
 <meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/5.2"/>
@@ -13,5 +13,78 @@
 {% block content %}
 <div class="container fade-in-text text-padding">
     <h1>5.2: Trigonometric Functions of Real Numbers</h1>
+    <h2>The Trigonometric Functions</h2><hr>
+    <p>Given the unit circle, for $t \in \mathbb{R}$ and it's associated terminal point $P(x, y)$, we can now define the trigonometric functions.</p>
+    <div class="math-def">
+        Let $t \in \mathbb{R}$ and let $P(x, y)$ be the corresponding terminal point on the unit circle. We define
+        \begin{align}
+        \sin t &= y &  \cos t &= x & \tan t &= \frac{y}{x}, \ x \neq 0 \\
+        \csc t &= \frac{1}{y}, \ y \neq 0 & \sec t &= \frac{1}{x}, \ x \neq 0 & \cot t &= \frac{x}{y}, \ y \neq 0
+        \end{align}
+    </div>
+    <div class="math-example">
+        The $\sin(t)$ function extracts the $y$ coordinate from $P(x, y)$! Look:
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/4gg8j3ijt8"></iframe></div>
+        </div>
+    </div>
+    <p>We will see more graphs in the next section!</p>
+    <div class="math-example">
+        Find the six trigonometric of the following: \[1. \ t = \frac{\pi}{3} \qquad\qquad 2. \ t = \frac{\pi}{2}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>The corresponding terminal point is $P\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{3} &= \frac{\sqrt{3}}{2} & \cos\frac{\pi}{3} &= \frac{1}{2} & \tan\frac{\pi}{3} &= \frac{\frac{\sqrt{3}}{2}}{\frac{1}{2}} = \sqrt{3} \\
+                    \csc \frac{\pi}{3} = \frac{2}{\sqrt{3}} &= \frac{2\sqrt{3}}{3} & \sec\frac{\pi}{3} &= 2 & \cot\frac{\pi}{3} &= \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}
+                    \end{align}
+                </li>
+                <li>The corresponding terminal point is $P\left(0, 1\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{2} &= 1 & \cos\frac{\pi}{2} &= 0 & \tan\frac{\pi}{2} &= \frac{1}{0} = \text{DNE} \\
+                    \csc\frac{\pi}{2} &= \frac{1}{1} & \sec\frac{\pi}{2} = \frac{1}{0} &= \text{DNE} & \cot\frac{\pi}{2} &= \frac{0}{1} = 0
+                    \end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+    <p>Now that we know what the trigonometric functions are, let's see some properties and how to use them.</p>
+    <div class="math-fact">
+        The domains of the six trigonometric functions are
+        <table class="table" style="max-width: 200px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Function</th>
+                <th scope="col">Domain</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>$\sin, \cos$</td>
+                <td>$\mathbb{R}$</td>
+            </tr>
+            <tr>
+                <td>$\tan, \sec$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq \frac{\pi}{2} + n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            <tr>
+                <td>$\cot, \csc$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="math-example">
+        Why does $\tan(t)$ have a domain given above?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            The domain is all real numbers except $t = \frac{\pi}{2} + n\pi$ where $n$ is an integer. First, consider $n = 0$. Then $t = \frac{\pi}{2} + 0 \pi$, which is only a quarter rotation counterclockwise. Rotating a quarter gives $P(0, 1)$, which has $x = 0$. Since $\tan$ divides by $x$, you cannot divide by zero, implying $t = \frac{\pi}{2}$ is not in the domain.
+        </br> When $n = 1$, $t =  \frac{\pi}{2} + \pi$, which is our quarter rotation as before, but then another half circle rotation. This again forces the $x$ value to be zero. So we can see that <b>in general</b>, the points where $x = 0$ are where the domain are excluded!
+        </div>
+    </div>
+    <h2>Values of the Trigonometric Functions</h2><hr>
+    <div></div>
 </div>
 {% endblock %}
