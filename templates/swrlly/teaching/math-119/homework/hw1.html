@@ -1,0 +1,60 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - Prelimiaries</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - Homework 1"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 1"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/homework/hw1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 1</h1>
+    Answer the following:
+    <ol>
+        <li class="prelim-list-space">Suppose $f : \mathbb{R} \rightarrow \mathbb{R}$. Is the domain of $f(x) = \sqrt{x}$ all real numbers?</li>
+        <li class="prelim-list-space">In the expression $\dfrac{x}{x + 1}$, can we cancel out the $x$'s to get $\frac{0}{0 + 1} = 0$? If we cannot, explain why.</li>
+        <li class="prelim-list-space">For the expression $\dfrac{x + 1}{x}$, can we cancel out the $x$'s to get $\frac{0 + 1}{0}$ which is undefined? If we cannot, explain why.</li>
+        <li class="prelim-list-space">In the expression $\dfrac{x + 1}{x}$, can we rewrite this as $\dfrac{x}{x} + \dfrac{1}{x}$, which simplifies as $1 + \dfrac{1}{x}$? If we cannot, explain why.</li>
+        <li>Suppose I have an expression $f(x)$ and I find two different inputs that give the same evaluation. In particular, I find that $x = 2$ and $x = 3$ gives $f(2) = f(3)$. Is $f$ a function?</li>
+        <li>Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
+        <li>Suppose I have an expression $x(y^2 + y)$ and I am asked to expand it. I try $x\cdot y^2 + x \cdot y = xy^2 + xy$. What property did I use?</li>
+        <li>What factors do $4$ and $6$ have in common?</li>
+        <li>What factors do $(x+1)^2(x+3)$ and $(x+1)(x+2)(x+3)^3$ have in common?</li>
+        <li>What factors do $xy^2$ and $xy$ have in common?</li>
+        <li>Given the previous problem, what do we factor out of $xy^2 + xy$?</li>
+        <li>What is the reverse process of expanding an expression?</li>
+        <li>A student tries to simplify $x^2 + x^3$ by applying exponent laws. They write \[x^2 + x^3 = x^{2+3} = x^5\] Why is this incorrect?</li>
+        <li>A student tries to simplify $x^2 \cdot x^3$ by applying exponent laws. They write \[x^2 \cdot x^3 = x^{2\cdot3} = x^6\] Why is this incorrect?</li>
+        <li>A student tries to simplify $(a + b)^2$ by applying exponent laws. They write \[(a + b)^2 = a^2 + b^2\] Why is this incorrect?</li>
+        <li>A student tries to simplify $\frac{3x}{x^2 + 3x + 1}$ by cancelling common terms. Noticing the $3x$ is shared, they write \[\frac{3x}{x^2 + 3x + 1} =\frac{1}{x^2 + 1}\] Why is this incorrect?</li>
+        <li class="prelim-list-space" >Suppose I have a function $f(x)$ and $g(x) = A + Bf(Cx + D)$. State which parts of $g(x)$ correspond to the following transformations of $f(x)$:
+            <ul>
+                <li>Vertical shift</li>
+                <li>Horizontal shift</li>
+                <li>Vertical stretch/shrink</li>
+                <li>Horizontal stretch/shrink</li>
+                <li>Reflection around $x$-axis</li>
+                <li>Reflection around $y$-axis</li>
+            </ul>
+        </li>
+
+    </ol>    
+    <p>State the LCD and add.</p>
+    <ol start="18">
+        <li class="prelim-list-space">$\dfrac{1}{x+1} + \dfrac{1}{(x+1)^2}$</li>
+        <li class="prelim-list-space">$\dfrac{1}{(x+1)(x+2)} + \dfrac{1}{(x+1)^2}$</li>
+        <li class="prelim-list-space">$\dfrac{1}{x} + \dfrac{1}{x^2} + \dfrac{1}{x^3}$</li>
+    </ol>
+    <p>Simplify the following expressions. Hint: look at the common factors.</p>
+    <ol start="21">
+        <li class="prelim-list-space">$\dfrac{2}{4}$</li>
+        <li class="prelim-list-space">$\dfrac{(x + 2)}{2(x+2)}$</li>
+        <li class="prelim-list-space">$\dfrac{(x+1)(x + 2)}{2(x+3)(x+2)^2}$</li>
+    </ol>
+
+</div>
+{% endblock %}
