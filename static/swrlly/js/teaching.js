@@ -58,15 +58,6 @@ function ModifyIconFont() {
     }
 }
 
-window.onresize = ModifyIconFont;
-window.onload = () => {
-    ModifyIconFont();
-    let btns = document.querySelectorAll(".math-btn");
-    for (let i = 0; i < btns.length; i++){
-        btns[i].onclick = (event) => {ShowSolution(event)};
-    }
-}
-
 function ShowSolution(event) {
     if (event.target.nextElementSibling.style.display != "block") {
         event.target.nextElementSibling.style.display = "block";
@@ -77,6 +68,17 @@ function ShowSolution(event) {
         event.target.innerHTML = "Show Solution";
     }
 }
+
+window.onresize = ModifyIconFont;
+window.onload = () => {
+    ModifyIconFont();
+    let btns = document.querySelectorAll(".math-btn");
+    for (let i = 0; i < btns.length; i++){
+        btns[i].onclick = (event) => {ShowSolution(event)};
+    }
+}
+
+
 
 
 
