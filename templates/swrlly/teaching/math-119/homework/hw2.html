@@ -1,0 +1,69 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - Homework 2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - Homework 2"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 2"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/homework/hw2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 2</h1>
+    <p><b>Directions:</b> Turn in your answers in class on a physical piece of paper. Staple multiple sheets together. Feel free to use Desmos for graphing.</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">If $f(x) = \dfrac{x}{x+1}$, find $f(a + h)$.</li>
+        <li class="hw-space">Suppose $f(x) = x^2 + 3$. What is the physical meaning of $f(3)$ on the coordinate plane? </li>
+        <li class="hw-space">Suppose $f(x) = x^2$ and $g(x) = x^3$. In class we showed the range of $f(x)$ is $[0, \infty)$. 
+            <ol>
+                <li>What is the range of $g(x)$?</li>
+                <li>Why is the range of $g(x)$ different than $f(x)$?</li>
+            </ol></li>
+        <li class="hw-space">Which of the four curves below are actually functions? State their colors.
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/qcwd507qh7"></iframe></div>
+        </li>
+        <li class="hw-space">What is the domain and range of the following function?
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/ukufrytrz2"></iframe></div>
+        </li>
+        <li class="hw-space">If $f(x) = x$ and $g(x) = 2(x - 3)$, what two transformations need to be applied to $f(x)$ to end up at $g(x)$? Be sure to state the value of each transformation.</li>
+        <li class="hw-space">Suppose $f(x) = x^2$ and $g(x) = -2\left[\frac{1}{3}\left(x-2\right)\right]^2 + 3$. State the order of transformations that $f(x)$ needs to undergo to end up at $g(x)$.</li>
+        <li class="hw-space">Suppose $f(x) = \sqrt{x}$ and $g(x) = \sqrt{-\frac{2}{7}\left(x+3\right)} + 4$. State the order of transformations that $f(x)$ needs to undergo to end up at $g(x)$.</li>
+        <li class="hw-space">Given $f(x)$ and a new function $g(x) = -f(x) + 3$, do we perform the reflection around the $x$-axis first or the vertical shift? Why?</li>
+        <li class="hw-space">If $f(x)$ is an even function, does that mean all of the coefficients of $f(x)$ are even? For example, $f(x) = 2x^3 + 4$ would be even because $2$ and $4$ are even.</li>
+        <li class="hw-space">Suppose $f(x)$ is a function that takes $x$ to the fourth power, then adds $x$ to the second power.
+            <ol><li>Write down the algebraic form of $f(x)$.</li>
+            <li>Is $f(x)$ even, odd, or neither?</li></ol>
+        </li>
+        <li > Given the functions $f(x) = \sqrt{x - 2}$ and $g(x) = 5 - x^2$, find the following:</li>
+        <ol>
+            <li>$f(g(0))$</li>
+            <li>$f\circ g$</li>
+            <li class="hw-space">$f \circ f$</li>
+        </ol>
+        <li class="hw-space">Given the function $F(x) = \dfrac{1}{\sqrt{x  - 3}}$, write $F(x)$ as a composition of functions $f$ and $g$ (meaning determine $f$ and $g$ such that $F(x) = (f\circ g)(x)$).</li>
+        <li class="hw-space">For the curves that are actual functions in Problem 4 of this homework, which are one-to-one?</li>
+        <li class="hw-space">Suppose a function $f$ is defined as such: $f(1) = 2, f(2) = 1$.
+            <ol>
+                <li>State the domain and range of this function.</li>
+                <li>Is this function one-to-one?</li>
+                <li>If it is one-to-one, state the behavior of $f^{-1}$.</li>
+            </ol>
+        </li>
+        <li class="hw-space">Algebraically find the inverse of $f(x) = x$.</li>
+        <li class="hw-space">Algebraically find the inverse of $f(x) = 3x + 2, x\geq 1$.</li>
+        <li class="hw-space">Suppose $f(x) = x$ and $g(x) = \dfrac{1}{x}$. Are $f(x)$ and $g(x)$ inverses?</li>
+        <li class="hw-space">Suppose $f(x) = x^2$ and $g(x) = \sqrt{x}$. Are $f(x)$ and $g(x)$ inverses?</li>
+        <li class="hw-space">Suppose $f(x) = x, g(x) = \dfrac{1}{x-2}, h(x) = \sqrt{x}, i(x) = \dfrac{1}{x-3}$.
+            <ol><li>Find $f(x) + g(x) - h(x) - i(x)$ and it's domain.</li>
+                <li>Find $f(x) \cdot g(x) \cdot h(x) \cdot i(x)$ and it's domain.</li>
+            </ol>
+        </li>
+
+    </ol>
+
+</div>
+{% endblock %}

@@ -254,6 +254,9 @@ a:hover {
 .prelim-list-space {
     padding-bottom: 1em;
 }
+.hw-space {
+    padding-bottom: 1em;
+}
 .teachingicons {
     display: grid;
     grid-template-columns: repeat(5,1fr);
