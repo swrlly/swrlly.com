@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 DATABASE = 'darzadata/data/playerdata.db'
-cssVersion = "9"
+cssVersion = "10"
 
 @app.route("/")
 def Index():
@@ -17,7 +17,7 @@ def Index():
 
 @app.route("/projects")
 def About():
-    return render_template("swrlly/projects.html")
+    return render_template("swrlly/projects.html", cssVersion=cssVersion)
 
 @app.route("/blog")
 def Blog():
@@ -25,7 +25,7 @@ def Blog():
 
 @app.route("/music")
 def Music():
-    return render_template("swrlly/music.html")
+    return render_template("swrlly/music.html", cssVersion=cssVersion)
 
 @app.route("/robots.txt")
 def Robots():
