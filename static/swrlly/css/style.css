@@ -63,6 +63,11 @@ h2 {
     color: rgb(142, 181, 227);
 }
 
+.musich2 {
+    padding-top: 0.75em;
+    color: rgb(142, 181, 227);
+}
+
 th, td {
     color: var(--text-color);
 }
@@ -91,7 +96,9 @@ a:hover {
 
 .spotify-hover:hover {color:rgb(30, 215, 97); cursor:pointer;}
 
-.spotify-color {color:rgb(30, 215, 97) !important;}
+.spotify-color {
+    color:rgb(30, 215, 97) !important;
+}
 
 .yt-color {color:rgb(205, 32, 31) !important;}
 
@@ -249,6 +256,44 @@ a:hover {
     text-align: center;
 }
 
+.album-large-image {
+    margin: 0 auto;
+    display: flex;
+    max-width: 30%;
+    min-width: 300px;
+}
+
+.music-landing-page-container {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+.no-link-style {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.music-landing-page-icon-styling {
+    font-size: 40px;
+    padding-left: 12px;
+    font-family: "Font Awesome 6 Brands";
+    display: inline-block;
+    width: 40px;
+}
+
+.music-landing-page-one-row {
+    display:flex;
+    background:rgb(20,20,20);
+    border-radius:5px;
+    margin: 10px 0px 10px 0px;
+}
+
+.music-landing-page-one-row-text {
+    padding-top:20px;
+    padding-left:40px;
+}
 
 /* teaching */
 .prelim-list-space {
