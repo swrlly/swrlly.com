@@ -29,9 +29,10 @@
             <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/4gg8j3ijt8"></iframe></div>
         </div>
     </div>
-    <p>We will see more graphs in the next section!</p>
+    <p>We will see more graphs in the next section!
+    </p>
     <div class="math-example">
-        Find the six trigonometric of the following: \[1. \ t = \frac{\pi}{3} \qquad\qquad 2. \ t = \frac{\pi}{2}\]
+        Find the six trigonometric functions of the following: \[1. \ t = \frac{\pi}{3} \qquad\qquad 2. \ t = \frac{\pi}{2}\]
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
             <ol>
@@ -85,6 +86,51 @@
         </div>
     </div>
     <h2>Values of the Trigonometric Functions</h2><hr>
-    <div></div>
+    <div class="math-example">
+        What are the signs of the trigonometric functions in each quadrant?
+    </div>
+    <p>Given an arbitrary $t \in \mathbb{R}$, how can we quickly find, for example, $\tan(t)$? This is where the reference number + the sign of the function comes in handy. Below is the three step process:</p>
+    <div class="math-fact">
+       If $f(t)$ is an arbitrary trigonometric function, $t \in \mathbb{R}$, we find $f(t)$ in three steps:
+       <ol>
+        <li><b>Find the reference number </b> $\bar{t}$.</li>
+        <li><b>Determine the sign</b> of the trigonometric function based on the quadrant.</li>
+        <li>$f(\bar{t})$ has the same value as $f(t)$, except for sign. Correct the sign using the correct sign in Step 2. </li>
+       </ol>
+    </div>
+    <div class="math-example">
+        Find each value: \[\cos\left(\frac{2\pi}{3}\right) \qquad\qquad \tan\left(-\frac{\pi}{3}\right) \qquad\qquad \sin\left(\frac{19\pi}{4}\right)\]
+    </div>
+    <h4>Even-Odd Properties</h4>
+    <div class="math-fact">
+    $\sin, \csc, \tan, \cot$ are odd functions. $\cos, \sec$ are even:
+        \begin{array}{ccc}
+        \sin(-t) = -\sin t & \cos(-t) = \cos t & \tan(-t) = -\tan t\\
+        \csc(-t) = -\csc t & \sec(-t) = \sec t & \cot(-t) = -\cot t\\
+        \end{array}
+    </div>
+    <div class="math-example">
+        Use the unit circle to show why $\sin$ is odd and $\cos$ is even.
+    </div>
+    <div class="math-example">
+        Use the even-odd properties to find \[\sin\left(-\frac{\pi}{6}\right) \qquad \qquad \cos\left(-\frac{\pi}{4}\right)\]
+    </div>
+    <h4>Fundamental Trigonometric Identities</h4>
+    <div class="math-notxt">
+       <b>Reciprocal identities:</b>
+        \[\csc t = \frac{1}{\sin t} \qquad\qquad \sec t = \frac{1}{\cos t} \qquad\qquad \cot t = \frac{1}{\tan t} \qquad\qquad \tan t = \frac{\sin t}{\cos t} \qquad\qquad \cot t = \frac{\cos t}{\sin t}\]
+        <b>Pythagorean identities:</b>
+        \[\sin^2 t + \cos^2 t = 1 \qquad\qquad \tan^2t + 1 = \sec^2 t \qquad\qquad 1 + \cot^2 t = \csc^2 t\]
+    </div>
+    <p>Key ideas:
+        <ol>
+            <li>You only need to memorize $\sin, \cos, \tan$. The other three trigonometric functions are just reciprocals of these three.</li>
+            <li>You can derive the Pythagorean identities from the unit circle.</li>
+            <li>The notation $\sin^2t$ means $(\sin t)^2$. The entire quantity of $\sin$ must be squared.</li>
+            <li>If you are given one trigonometric function's value, you can find the rest.</li>
+        </ol>
+    </p>
+    <div class="math-example"> Derive the three Pythagorean identities, starting with $\sin^2 t + \cos^2 t= 1$.</div>
+    <div class="math-example"> If $t$ is in Quadrant IV and $\cos t = \frac{3}{5}$, find $\sin t$ and $\tan t$.</div>
 </div>
 {% endblock %}

@@ -345,8 +345,8 @@ a:hover {
     border-left-width: 1px;
     border-left-color: var(--lavender);
     padding-left: 10px;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .math-def:before {
@@ -360,8 +360,8 @@ a:hover {
     border-left-width: 1px;
     border-left-color: var(--examplecolor);
     padding-left: 10px;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .math-example:before {
@@ -391,8 +391,8 @@ a:hover {
     border-left-width: 1px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .math-fact:before {
@@ -401,13 +401,22 @@ a:hover {
     font-weight: bold;
 }
 
+.math-notxt {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--text-color);
+    padding-left: 10px;
+    margin-bottom: 2em;
+    margin-top: 2em;   
+}
+
 .math-method {
     border-left-style: solid;
     border-left-width: 1px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .math-method:before {
