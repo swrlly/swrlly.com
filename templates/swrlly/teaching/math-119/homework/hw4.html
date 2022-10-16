@@ -1,0 +1,89 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - Homework 4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - Homework 4"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 4"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/homework/hw4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 4</h1>
+    <p><b>Directions:</b> Turn in your answers in class on a physical piece of paper. Staple multiple sheets together. Feel free to use Desmos for graphing.</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Fill out this table. It will probably be helpful in the future.
+            <table class="table" style="max-width: 200px; margin: 1em auto;">
+                <thead>
+                <tr>
+                    <th scope="col">$t$</th>
+                    <th scope="col">$\tan(t)$</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>$0$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$\frac{\pi}{6}$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$\frac{\pi}{4}$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$\frac{\pi}{3}$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$\frac{\pi}{2}$</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li class="hw-space">Using the three step process, find the six trigonmetric functions of $t = \frac{7\pi}{6}$.</li>
+        <li class="hw-space">Using the three step process, Find the six trigonmetric functions of $t = -\frac{2\pi}{3}$.</li>
+        <li class="hw-space">Why is $\tan\left(\frac{\pi}{2}\right)$ undefined?</li>
+        <li class="hw-space">$P\left(-\dfrac{3}{5}, -\dfrac{4}{5}\right)$ is a terminal point associated with some $t \in \mathbb{R}$. Find $\sin(t), \cos(t)$ and $\tan(t)$.</li>
+        <li class="hw-space">
+            Using the three step process, find $\cos\left(\dfrac{10\pi}{3}\right)$.
+        </li>
+        <li class="hw-space">Let's say $\cos(t) = -\frac{7}{25}$ and the terminal point of $t$ is in Quadrant III. What is $\sin(t)$ and $\tan(t)$?
+        </li>
+        <li class="hw-space">State each relevant transformation, amplitude, and period. Graph one complete period by hand. Be sure to show in the graph the endpoints of one period.
+            <ol>
+                <li class="hw-space">$y = 1 + \cos \pi x$</li>
+                <li class="hw-space">$y = \dfrac{1}{2} - \dfrac{1}{2}\cos\left(2x - \dfrac{\pi}{3}\right)$</li>
+                <li class="hw-space">$y = \dfrac{1}{2} - \dfrac{1}{2}\cos\left(2\left(x - \dfrac{\pi}{3}\right)\right)$</li>
+                <li class="hw-space">$y = \sin(\pi + 2x)$</li>
+                <li class="hw-space">$y = 1 + \tan\left(\pi x\right)$</li>
+                <li class="hw-space">$y = 4 \tan (3x - 2\pi)$</li>
+                <li class="hw-space">$y = 5\sec\left(\pi x + \frac{\pi}{3}\right)$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Suppose \[f(x) = x \qquad\qquad g(x) = \sin(x)\] Graph $f(x) + g(x)$ in Desmos.Based on what you know about graphical addition, why does the graph $f(x) + g(x)$ look like the way it does?</li>
+        <li class="hw-space">Because $f(x) = \sin(x)$ is not one to one, what is the interval of values we restrict the domain of $f(x)$ to in order for $f(x)$ to have an inverse?</li>
+        <li class="hw-space"><a href="/teaching/math-119/lectures/2.8">Inverse function property in 2.8</a> tells us that if $f(x) = \sin(x)$ and $g(x) = \sin^{-1}(x)$, then $f\circ g$ is valid. For what values of $x$ is $(f \circ g)(x)$ valid? Moreover, explain the exact reason why these specific values of $x$ are valid.</li>
+        <li class="hw-space">Out of the following, which one is true? 🤔</li>
+        <ol>
+            <li class="hw-space">$\sin^{-1}\left(\sin\left(\dfrac{\pi}{3}\right)\right)$</li>
+            <li class="hw-space">$\sin^{-1}\left(\sin\left(-\dfrac{\pi}{4}\right)\right)$</li>
+            <li class="hw-space">$\sin^{-1}\left(\sin\left(-\dfrac{2\pi}{3}\right)\right)$</li>
+        </ol>
+        <li class="hw-space">Evaluate the following:
+            <ol>
+                <li class="hw-space">$\tan^{-1}(0)$</li>
+                <li class="hw-space">$\tan^{-1}(\sqrt{3})$</li>
+                <li class="hw-space">$\tan\left(\sin^{-1}\frac{\sqrt{2}}{2}\right)$</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+{% endblock %}
