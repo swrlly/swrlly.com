@@ -27,7 +27,7 @@
     <h2>Angle Measure</h2>
     <p>Let's first define what an angle is.</p>
     <div class="math-def">
-        If a circle of radius 1 is draw with the vertex of an angle at its center, then the measure of this angle in <b>radians</b> is the length of the arc that subtends the angle.
+        If a circle of radius 1 is drawn with the vertex of an angle at its center, then the measure of this angle in <b>radians</b> is the length of the arc that subtends the angle.
     </div>
     <p>Picture will be drawn in class.</p>
     <p>Since $\pi$ radians is a rotation halfway around the circle, we know that $180^\circ = \pi$ rad. Thus we have the following:</p>
@@ -66,5 +66,41 @@
             <li>Suppose a circle has radius 4 meters. A central angle is subtended by an arc length of 6 meters. Find the angle in radians.</li>
         </ul>
     </div>
+    <h2>Area of a Circular Sector</h2>
+    <div class="math-example">
+        In a circle of radius $r$ the area $A$ of a sector with a central angle of $\theta$ radians is \[A = \frac{1}{2}r^2\theta\]
+    </div>
+    <p>Insight: Rewrite the formula as $A = \frac{\theta}{2}\cdot r^2$. What does it look like now?</p>
+    <div class="math-example">
+        Find the area of a sector of a circle with central angle $60^\circ$ if the radius of the circle is three meters.
+    </div>
+    <div class="math-example">
+        For dinner, you tried to order one pizza with radius 9 inches. However, the pizza place ran out of pizzas that are six inches, and offered you four pizzas with radius 4 inches each for the same price. Should you take the deal?
+    </div>
+    <h2>Circular Motion</h2>
+    As a point swirls around a circle, there are two different ways we can quantify how "fast" the point is moving:
+    <div class="math-def">
+        <ul>
+            <li><b>Linear speed</b> is the rate at which the total distance traveled is changing (think the $t$ value).</li>
+            <li><b>Angular speed</b> is the rate at which the central angle $\theta$ is changing.</li>
+        </ul>
+    </div>
+    <div class="math-def">
+        Suppose a point moves along a circle of radius $r$ and the ray from the center of the circle to the point traverses $\theta$ radians in time $t$. Let $s = r\theta$ (the arc length) be the distance the point travels in time $t$. Then the speed of the object can be thought of in two different ways:
+
+        <table class="table" style="max-width: 250px; margin: 1em auto; border: #000000">
+            <tbody>
+            <tr>
+                <td><b>Angular speed</b></td>
+                <td>$\omega = \frac{\theta}{t}$</td>
+            </tr>
+            <tr>
+                <td><b>Linear speed</b></td>
+                <td>$\nu = \frac{s}{t}$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="math-example"> A boy spins a stone in a three feet long sling at a rate of 15 revolutions every 10 seconds. Find the angular and linear velocities of the stone in seconds.</div>
 </div>
 {% endblock %}
