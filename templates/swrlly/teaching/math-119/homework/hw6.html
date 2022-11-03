@@ -1,0 +1,65 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - Homework 6</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - Homework 6"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 6"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/homework/hw6"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 6</h1>
+    <p><b>Directions:</b> Turn in your answers in class on a physical piece of paper. Staple multiple sheets together. Feel free to use Desmos for graphing.</p>
+    
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Which of the following are identities? If they are not, show with specific variable values. If you think they are, justify using reasoning based off of previous sections or prove it.
+            <ol type="a">
+                <li class="hw-space" style="padding-top:1em;">$x^2 + y^2 = 1$</li>
+                <li class="hw-space">$x(y + z) = xy + xz$</li>
+                <li class="hw-space">$x^2 - \cos^2 x = (x - \cos x)(x + \cos x)$</li>
+                <li class="hw-space">$\sin(x + y) = \sin(x) + \sin(y)$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Simplify these expressions:
+            <ol type="a" style="padding-top:1em;">
+                <li class="hw-space">$\cos t \tan t$</li>
+                <li class="hw-space">$\dfrac{\sec x}{\csc x}$</li>
+                <li class="hw-space">$\dfrac{\sec \theta - \cos \theta}{\sin \theta}$</li>
+                <li class="hw-space">$\dfrac{1}{1 + \sin \theta} + \dfrac{1}{1 - \sin \theta}$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Prove these identities algebraically:
+            <ol type="a">
+                <li class="hw-space" style="padding-top:1em;">$\dfrac{\sin \theta}{\tan \theta} = \cos \theta$</li>
+                <li class="hw-space">$\dfrac{\cos x}{\sec x\sin x} = \csc x - \sin x$</li>
+                <li class="hw-space">$\dfrac{\sin \alpha \sec \alpha}{\tan \alpha}$</li>
+
+                <li class="hw-space">$\dfrac{(\sin x + \cos x)^2}{\sin x \cos x} = 2 + \sec x \csc x$</li>
+                <li class="hw-space">$\sin^4 \alpha - \cos^4 \alpha = \sin^2 \alpha - \cos^2 \alpha$. Hint: Let $x = \sin^2 \alpha, y = \cos^2 \alpha$ and factor.</li>
+                <li class="hw-space">$\dfrac{\cos x}{\sec x} + \dfrac{\sin x}{\csc x} = 1$</li>
+                <li class="hw-space">$\tan \theta + \cot \theta = \sec \theta \csc \theta$</li>
+                <li class="hw-space">$(\cot \theta - \csc \theta)(\cos \theta + 1) = -\sin\theta$</li>
+            </ol>
+        </li>
+        <li>Assume $0 < \theta < \pi/2$. Make the indicated trigonometric substitution and simplify.
+        <ol>
+            <li class="hw-space" style="padding-top:1em;">$\dfrac{x}{\sqrt{1 - x^2}}, \ x = \sin \theta$.</li>
+            <li class="hw-space">$\sqrt{9 - x^2}, \ x = 3\sin \theta$</li>
+        </ol>
+        </li>
+        <li> Use addition/subtraction formulas to find the following values:
+            <ol type="a">
+                <li class="hw-space" style="padding-top:1em;">$\sin 75^\circ$</li>
+                <li class="hw-space">$\cos \dfrac{11\pi}{12}$</li>
+                <li class="hw-space">$\sin18^\circ \cos27^\circ + \cos18^\circ\sin27^\circ$</li>
+            </ol>
+        </li>
+        
+    </ol>
+</div>
+{% endblock %}
