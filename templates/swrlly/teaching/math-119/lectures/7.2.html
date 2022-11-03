@@ -1,0 +1,43 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 7.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="7.2: Addition and Subtraction Formulas"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/7.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>7.2: Addition and Subtraction Formulas</h1><hr>
+    <p>We know how to find $\sin(x)$: just find how far you rotate on the unit circle.</p>
+    <p>That $x$ value can be decomposed into a sum of two values $x = s + t$. Is there a way to find $\sin(x) = \sin(s + t)$ in terms of just $s$ and $t$ plugged in?</p>
+    <p>The answer is yes:</p>
+
+    <div class="math-def">
+        For sine:
+        \begin{align}
+        \sin(s + t) &= \sin s \cos t + \cos s \sin t\\[0.5em]
+        \sin(s - t) &= \sin s \cos t - \cos s \sin t
+        \end{align}
+        For cosine:
+        \begin{align}
+        \cos(s + t) &= \cos s \cos t - \sin s \sin t \\[0.5em]
+        \cos(s - t) &= \cos s \cos t + \sin s \sin t
+        \end{align}
+        For tangent:
+        \begin{align}
+        \tan(s + t) &= \frac{\tan s + \tan t}{1 - \tan s \tan t}\\[0.5em]
+        \tan(s - t) &= \frac{\tan s - \tan t}{1 + \tan s \tan t}
+        \end{align}
+    </div>
+
+    <div class="math-example">
+        Find \[\cos 70^\circ \qquad\qquad \cos \frac{\pi}{12}\]
+    </div>
+
+</div>
+{% endblock %}

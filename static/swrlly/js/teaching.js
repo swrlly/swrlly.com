@@ -1,5 +1,7 @@
 // does not account for zooming out less than 100%
 function ModifyIconFont() {
+
+    // get box width first later; better
     let icons = document.querySelectorAll(".center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
         if (window.innerWidth >= 1200) {
@@ -56,6 +58,28 @@ function ModifyIconFont() {
         icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
         icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
     }
+
+    icons = document.querySelectorAll(".vsmall-center-text-over-image");
+    for (let i = 0; i < icons.length; i++) {
+        if (window.innerWidth >= 1200) {
+            icons[i].style["font-size"] = "15px";
+        }
+        else {
+            icons[i].style["font-size"] = "1.2931034482759vw";
+        }
+    }
+    icons = document.querySelectorAll(".vsmall-center-text-over-image");
+    for (let i = 0; i< icons.length; i++) {
+        let boxHeight = icons[i].offsetHeight;
+        let boxWidth = icons[i].offsetWidth;
+        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
+        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
+        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
+        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
+    }
+
+
+    
 }
 
 function ShowSolution(event) {

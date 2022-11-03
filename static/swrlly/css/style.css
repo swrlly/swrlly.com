@@ -18,7 +18,6 @@
     background-color: #352e7e;
 }
 
-
 html {
     font-size: 100%;
     --lavender: rgb(179, 154, 240);
@@ -318,7 +317,7 @@ a:hover {
     position: relative;
 }
 
-.center-text-over-image, .large-center-text-over-image, .small-center-text-over-image {
+.center-text-over-image, .large-center-text-over-image, .small-center-text-over-image, .vsmall-center-text-over-image {
     position: absolute;
     color: black;
     pointer-events: none;
@@ -352,6 +351,21 @@ a:hover {
 .math-def:before {
     content: "Definition:";
     color: var(--lavender);
+    font-weight: bold;
+}
+
+.math-beware {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: red;
+    padding-left: 10px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.math-beware:before {
+    content: "BEWARE:";
+    color: red;
     font-weight: bold;
 }
 
