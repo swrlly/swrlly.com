@@ -1,0 +1,72 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - Homework 1 (MW)</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - Homework 1"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 1"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/homework/tth/hw1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 1</h1>
+    <p><b>Directions:</b> Show each step of your work. Turn in your answers in class on a physical piece of paper. Staple multiple sheets together. Feel free to use Desmos for graphing.</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li>Suppose $A = (-\infty, -2), B = [-5, 1), C = (-6, 4]$. Find the following:
+            <ol type="a">
+                <li class="hw-space">$A\cup B$</li>
+                <li class="hw-space">$A \cap C$</li>
+                <li class="hw-space">$A \cup B \cup C$</li>
+                <li class="hw-space">$(A\cap B) \cup C$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Suppose there is a variable $x$ which is associated with a value $f(x)$. I find that two different inputs give the same evaluation. In particular, I find $x = -2$ and $x = 2$ have $f(-2) = f(2)$. Is $f(x)$ a function?</li>
+        <li class="hw-space">Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
+        <li class="hw-space">Suppose you have an expression $xy(x^2y - xy)$. You expand it by doing $xy \cdot x^2 y - xy \cdot xy = x^3y^2 - x^2y^2$. What property did you use?</li>
+        <li class="hw-space">Suppose there is an expression \[f(x) = \dfrac{(a + h)  + x}{(a+h)^3 - 5}\] Am I allowed to cancel out the $a+h$'s to get \[\dfrac{x}{(a+h)^2 - 5}\]
+        If I am not, when am I allowed to cancel in this fashion?
+        </li>
+        <li class="hw-space">A student tries to simplify $x^2 + x^3$ by applying exponent laws. They write \[x^2 + x^3 = x^{2+3} = x^5\] State the reason why this is incorrect.</li>
+        <li class="hw-space">A student tries to simplify $x^2 \cdot x^3$ by applying exponent laws. They write \[x^2 \cdot x^3 = x^{2\cdot3} = x^6\] State the reason why this is incorrect and write the correct answer.</li>
+        <li class="hw-space">A student tries to simplify $(a + b)^2$ by applying exponent laws. They write \[(a + b)^2 = a^2 + b^2\] State the reason why this is incorrect and write the correct answer.</li>
+        <li class="hw-space">When finding the domain of a function, what are the two types of inputs we need to exclude?</li>
+        <li class="hw-space">Suppose I have a function $f(x) = \dfrac{x}{(x+1)^2}$.
+            <ol type="a">
+                <li class="hw-space">Find $f(1), f(-a), f(a+h), f(x+1)$ and fully expand each expression.</li>
+                <li class="hw-space">When finding the domain, what value do we need to exclude? Why do we need to exclude it?</li>
+            </ol>
+        </li>
+        <li class="hw-space">Suppose a function takes an input $x$ and sends this to $\frac{1}{x + 1}$. What is the domain of $f(x)$?</li>
+        <li class="hw-space">Draw a coordinate plane and graph the functions $f(x) = x^2, g(x) = x^4$ and $h(x) = x^6$. What is similar between the graphs?</li>
+        <li class="hw-space">Rewrite the expression $\dfrac{1}{x^2y^3}$ in terms of negative exponents.</li>
+        <li class="hw-space">Graph the function \[f(x) = \begin{cases}-x^2 & x \leq 3 \\ -x + 1 & x > 3\end{cases}\]</li>
+        <li class="hw-space">In San Luis Obispo, the minimum sales tax rate $T$ is $8.75\%$ of the value of goods $x$. 
+            <ol type="a">
+                <li class="hw-space">Express $T$ as a function of $x$.</li>
+                <li class="hw-space">Find $T(100)$ and $T(1000)$.</li>
+                <li class="hw-space">In English, what is the meaning of $T(1000) - T(100)$?</li>
+            </ol>
+        </li>
+        <li class="hw-space">According to the IRS, tax refund fraud from identity theft has been increasing since 2010. The IRS estimates a function to measure the number (in millions of incidents) starting from 2010 $(t = 0)$ through 2013 $(t = 3)$ as \[f(t) = 0.01t^2 + 0.5 \qquad 0 \leq t \leq 3\]
+            <ol type="a">
+                <li class="hw-space">How many incidents occured in 2010? How about 2013?</li>
+                <li class="hw-space">How many more incidents occured in 2013 compared with 2010?</li>
+            </ol>
+        </li>
+        <li class="hw-space">Find two sets $A$ and $B$ such that $A \cap B = [-10, 5)$.</li>
+        <li class="hw-space">Suppose \[f(x) = x + 1 \qquad g(x) = \dfrac{x^2 + x}{x}\] Find the domains of $f(x)$ and $g(x)$.</li>
+        <li class="hw-space">Suppose U-Haul rents its 10-ft box truck at $\$45$/day and $\$0.5$/mile. Enterprise rents its 10-ft box truck at $\$60$/day and $\$0.4$/mile. 
+            <ol type="a">
+                <li class="hw-space">If $x$ is the number of miles driven, find a function $f(x)$ that represents the daily cost of leasing from U-Haul.</li>
+                <li class="hw-space">If $x$ is the number of miles driven, find a function $g(x)$ that represents the daily cost of leasing from Enterprise.</li>
+                <li class="hw-space">Enterprise says our rental is cheaper than U-Haul after 40 miles of driving. Is this claim true or false? Verify with calculations.</li>
+            </ol>
+        </li>
+    </ol>
+
+</div>
+{% endblock %}
