@@ -301,6 +301,10 @@ a:hover {
 .hw-space {
     padding-bottom: 1em;
 }
+.lec-list-space {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
 .teachingicons {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -411,6 +415,21 @@ a:hover {
 
 .math-fact:before {
     content: "Fact:";
+    color: var(--factcolor);
+    font-weight: bold;
+}
+
+.math-theorem {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--factcolor);
+    padding-left: 10px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.math-theorem:before {
+    content: "Theorem:";
     color: var(--factcolor);
     font-weight: bold;
 }

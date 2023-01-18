@@ -1,0 +1,109 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 2.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.4: Limits"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/2.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.4: Limits</h1>
+    <h2>A First Look</h2><hr>
+    <div class="math-example">
+        Given the function \[g(t) = \dfrac{4(t^2- 4)}{t - 2}\] what is the value of $g(t)$ when $t$ approaches $2$?
+    </div>
+    <div class="math-def">
+        The function $f$ has the <b>limit</b> $L$ as $x$ approaches $a$, written \[\lim_{x\rightarrow a}f(x) = L\] if the value of $f(x)$ can be made as close to the number $L$ as we please by taking $x$ sufficiently close to <b>but not equal to</b> $a$.
+    </div>
+    Important: the limit is <b>not equivalent to plugging in / evaluation</b> at $x = a$.
+    We saw plugging in value closer and closer to the value we are interested is one technique. We can also use the graph.
+
+    <div class="math-example">
+        Let $f(x) = x^3$. Find $\lim_{x \rightarrow 2}f(x)$.
+    </div>
+    <div class="math-example">
+        Let \[g(x) = \begin{cases} x + 2 & x \neq 1 \\ 1 & x = 1 \end{cases}\]
+        Find $\lim_{x\rightarrow 1} g(x)$.
+    </div>
+    <div class="math-example">
+        Find the limit of the following functions at the given value of $x$:
+        <ol>
+            <li class="lec-list-space">$f(x) = \begin{cases} -1 & x < 0 \\ 1 & x \geq 0\end{cases} \ $ at $x = 0$.</li>
+            <li class="lec-list-space">$\displaystyle 0g(x) = \frac{1}{x^2}$ at $x = 0$.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Find the limit of \[f(x) = \cos(x) + \frac{1}{10000}\] at $x = 0$.
+    </div>
+
+    We know how to use a table and the graph to find a limit. Let's see some algebraic properties of limits.
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Properties of Limits</b></br>
+
+            Suppose \[\lim_{x\rightarrow a} f(x) = L \qquad \lim_{x\rightarrow a} g(x) = M\] and $r$ is a positive constant, $c \in \mathbb{R}$. Then 
+         
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x)]^r = \left[\lim_{x \rightarrow a}f(x)\right]^r = L^r$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c\cdot f(x) = c\lim_{x \rightarrow a} f(x) = cL$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x) \pm g(x)] = \lim_{x\rightarrow a} f(x) \pm \lim_{x\rightarrow a} g(x) = L \pm M$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}[f(x)\cdot g(x)] = \left[\lim_{x\rightarrow a}f(x)\right]\cdot\left[\lim_{x\rightarrow a} g(x)\right] = L\cdot M$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\lim_{x \rightarrow a} f(x)}{\lim_{x \rightarrow a}g(x)} = \frac{L}{M}$ where $M \neq 0$.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Given these functions <img src="/static/swrlly/images/teaching/2.4 limit law intro.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        Find <ol>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow -2}  [f(x) + 5g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1}  [f(x) \cdot g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2}  \dfrac{f(x)}{g(x)}$</li>
+        </ol>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li class="lec-list-space">From the graphs we can see \[\lim_{x \rightarrow -2} f(x) = 1 \qquad \lim_{x \rightarrow -2} g(x) = -1\]
+                So by using the limit laws we see \begin{align}\lim_{x\rightarrow -2} [f(x) + 5g(x)] &= \lim_{x\rightarrow -2} f(x) + \lim_{x\rightarrow -2} [5g(x)]
+                \\&= \lim_{x\rightarrow -2} f(x) + 5\lim_{x \rightarrow -2}g(x)
+                \\&= 1 + 5\cdot (-1) = -4\end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    Here are five more limit laws that are extremely useful.
+    
+    <div class="math-theorem"> <b style="color:var(--factcolor)">More Properties of Limits</b></br>
+
+        Suppose $a, c \in \mathbb{R}$ and $n$ is a positive integer.
+     
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c = c$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x = a$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x^n = a^n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}\sqrt[n]{x} = \sqrt[n]{a}$</li>
+            <li class="lec-list-space">If $f(x)$ is any function, then $\displaystyle\lim_{x\rightarrow a} \sqrt[n]{f(x)}= \sqrt[n]{\lim_{x \rightarrow a} f(x)}$.</li>
+        </ol>
+    </div>    
+
+    <b>Note:</b> this says for $n$th roots and powers of $x$, we are allowed to substitute $a$ directly. We will see why this is true in Section 2.5.
+
+    <div class="math-example"> Using the previous fact, find the following limits.
+        <ol>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2} x^3$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 4} 5x^{3/2}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} (5x^4 - 2)$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} 2x^3\cdot \sqrt{x^2 + 7}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} \dfrac{2x^2 + 1}{x + 1}$</li>
+        </ol>
+    </div>
+
+
+</div>
+{% endblock %}
