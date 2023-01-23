@@ -38,5 +38,92 @@
     </div>
 
     <h2>Continuous Functions</h2><hr>
+
+    <p>In precalculus we learned that continuous functions are functions we can draw the graph of without lifting our pencil.</p>
+    <p>In calculus, use the previous sentence as intuition for the next definition:</p>
+    
+    <div class="math-def">A function $f$ is <b>continuous at a number</b> $x = a$ if the following conditions are satisfied:
+    <ol>
+        <li class="lec-list-space">$f(a)$ is defined.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x)$ exists.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x) = f(a)$.</li>
+    </ol>
+
+    <p>If any of these conditions fail, then the function is not continuous.</p>
+
+    </div>
+
+    <div class="math-example"> 
+        <p>Given this graph of a function $f$:</p> <img src="/static/swrlly/images/teaching/2.5cont.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        <p>Where is the function not continuous?</p>
+    </div>
+
+    In general:
+    <ol>
+        <li>A function $f$ is said to be <b>continuous on an interval</b> if $f$ is continuous on every number in the interval.</li>
+        <li>If $f$ is not continuous at $x = a$, it is said to be <b>discontinuous</b> at $x = a$.</li>
+    </ol>
+
+    <div class="math-example">
+        Find the values of $x$ where each function is continuous:
+        <ol>
+            <li class="lec-list-space">$f(x) = x + 2$</li>
+            <li class="lec-list-space">$g(x) = \dfrac{x^2-4}{x-2}$</li>
+            <li class="lec-list-space">$h(x) = \begin{cases} \frac{1}{x} & x > 0 \\ -1 & x \leq 0\end{cases}$</li>
+        </ol>
+    </div>
+
+    <h2>Properties of Continuous Functions</h2><hr>
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">If $c \in \mathbb{R}$, then $f(x) = c$ is continuous everywhere.</li>
+            <li class="lec-list-space">$f(x) = x$ is continuous everywhere.</li>
+        </ol>
+
+        Now if $f$ and $g$ are continuous at $x = a$, then 
+        <ol start=3>
+            <li class="lec-list-space">$[f(x)]^n$ is continuous at $x = a$ if it is defined.</li>
+            <li class="lec-list-space">$f\pm g, f\cdot g$ is continuous at $x = a$.</li>
+            <li class="lec-list-space">$f/g$ is continuous at $x = a$ if $g(a) \neq 0$.</li>
+        </ol>
+    </div>
+
+    If you take facts 2,3,4, we can create polynomial functions. Including fact 5 gives us rational functions. So in general:
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">A polynomial function $P(x)$ is continuous on any value of $x$.</li>
+            <li class="lec-list-space">A rational function $R(x) = p(x)/q(x)$ is continuous on every value of $x$ where $q(x) \neq 0$.</li>
+        </ol>
+    </div>
+
+    This means if we take any limit (except for limit at infinity) for polynomial and rational functions, we can just plug in the value!
+
+    <div class="math-example">
+        Find the values of $x$ where each function is continuous:
+        <ol>
+            <li class="lec-list-space">$f(x) = 3x^3 + 2x^2 - x + 10$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{8x^{10} - 4x + 1}{x^2 + 1}$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{4x^3 - 3x^2 + 1}{x^2 - 3x  +2}$</li>
+        </ol>
+    </div>
+
+    <h2>Intermediate Value Theorem</h2><hr>
+
+    <p>Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]
+
+        Consider the endpoints. At time $t = 0$, the maglev is at position $f(0) = 0$.
+
+        At time $t = 10$, the maglev is at position $f(10) = 400$.
+
+        This function is continuous. Intuitively, this means the maglev cannot "suddenly" jump over portions of the track; it must always be on the track.
+
+        As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b>
+    </p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b>
+    
+    If $f$ is a continuous function on a closed interval $[a, b]$ and $M$ is any number between $f(a)$ and $f(b)$, then there is at least one number $c$ in $[a,b]$ such that $f(c) = M$.
+    </div>
 </div>
 {% endblock %}
