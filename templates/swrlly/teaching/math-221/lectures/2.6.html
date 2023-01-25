@@ -1,0 +1,36 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 2.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.6: The Derivative"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/2.6"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.6: The Derivative</h1>
+
+    <h2>Maglev example (again)</h2>
+
+    <div class="math-example">
+        Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]
+        <ol>
+            <li>Find the average velocity over the time interval $[2, 4]$.</li>
+            <li>Try to find the instantaneous velocity at $t = 2$ by doing the following:
+                <ol type="a">
+                    <li>Set up the average velocity formula for $[2, t]$ where $t > 2$.</li>
+                    <li>Take the limit as $t \rightarrow 0$.</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    The above limit is known as the instantaneous rate of change. 
+
+    
+</div>
+{% endblock %}

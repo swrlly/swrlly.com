@@ -110,20 +110,32 @@
 
     <h2>Intermediate Value Theorem</h2><hr>
 
-    <p>Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]
+    <p>Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]</p>
 
-        Consider the endpoints. At time $t = 0$, the maglev is at position $f(0) = 0$.
+    <p>Consider the endpoints. At time $t = 0$, the maglev is at position $f(0) = 0$; it hasn't moved from its starting position.</p>
 
-        At time $t = 10$, the maglev is at position $f(10) = 400$.
+    <p>At time $t = 10$, the maglev is at position $f(10) = 400$. This means the maglev is 400 units away from it's starting position.</p>
 
-        This function is continuous. Intuitively, this means the maglev cannot "suddenly" jump over portions of the track; it must always be on the track.
+    <p>This function is continuous. Intuitively, this means the maglev cannot "suddenly" jump over portions of the track; it must always be on the track.</p>
 
-        As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b>
-    </p>
+    <p>As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b></p>
 
-    <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b>
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b><br>
     
     If $f$ is a continuous function on a closed interval $[a, b]$ and $M$ is any number between $f(a)$ and $f(b)$, then there is at least one number $c$ in $[a,b]$ such that $f(c) = M$.
+    </div>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Existence of Zeros of a Continuous Function</b><br>
+    
+        If $f$ is a continuous function on a closed interval $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there exists $c \in (a, b)$ where $f(c) = 0$.
+    </div>
+
+    <div class="math-example">
+        Let $f(x) = x^3 + x + 1$.
+        <ol>
+            <li>Show $f$ is continuous for all $x \in \mathbb{R}$.</li>
+            <li>Show there exists at least one $c \in (-1, 1)$ where $f(c) = 0$.</li>
+        </ol>
     </div>
 </div>
 {% endblock %}
