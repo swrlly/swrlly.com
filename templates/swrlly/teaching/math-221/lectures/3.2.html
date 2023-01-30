@@ -1,0 +1,62 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 3.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.2: Product and Quotient Rules"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/3.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>3.2: Product and Quotient Rules</h1>
+
+    <p>We know how to take derivatives of sums, constants, and $x^n$. What about products?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Product Rule</b><br>
+        \[\dfrac{d}{dx}[f(x)g(x)] = f(x)g'(x) + g(x)f'(x)\]
+    </div>
+
+    <div class="math-example">
+        Find the derivatives of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = (2x^2 - 1)(x^3 + 3)$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = x^3(\sqrt{x} + 1)$
+            </li>
+        </ol>
+    </div>
+
+    <p>How about quotients?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Quotient Rule</b><br>
+        \[\dfrac{d}{dx}\left[\dfrac{f(x)}{g(x)}\right] = \dfrac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}\]
+    </div>
+    
+    <p>You can remember this by thinking "low Dhigh minus high Dlow, square the bottom, away you go."</p>
+
+    <div class="math-example">Differentiate (find the derivative) of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{x}{2x-4}$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{x^2 + 1}{x^2-1}$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{\sqrt{x}}{x^2+1}$
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-example">The annual sales (in millions of dollars per year) of a DVD recording of a hit movie $t$ years from the date of release is given by \[S(t) = \dfrac{5t}{t^2 + 1}\]
+        Find a function for the rate at which the annual sales are changing at time $t$.
+    </div>
+
+</div>
+{% endblock %}
