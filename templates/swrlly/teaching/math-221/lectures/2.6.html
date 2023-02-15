@@ -23,14 +23,20 @@
             <li>Try to find the instantaneous velocity at $t = 2$ by doing the following:
                 <ol type="a">
                     <li>Set up the average velocity formula for $[2, t]$ where $t > 2$.</li>
-                    <li>Take the limit as $t \rightarrow 0$.</li>
+                    <li>Take the limit as $t \rightarrow 2$.</li>
                 </ol>
             </li>
         </ol>
     </div>
 
-    The above limit has been shown to be two things at once: the instantaneous rate of change at $t = 2$ and the slope of the tangent line touching the curve at $(2, f(2)) = (2, 16)$.
+    <p>The above limit has been shown to be two things at once: the instantaneous rate of change at $t = 2$ and the slope of the tangent line touching the curve at $(2, f(2)) = (2, 16)$.</p>
 
+    <p>This phenomena is called the <b>derivative</b>.</p>
+
+    <div class="math-def">
+        The derivative of a function $f$ with respect to $x$ is the function $f'$ where \[f'(x) = \lim_{h\rightarrow 0}\dfrac{f(x+h)-f(x)}{h}\]
+        The domain of $f'$ is the set of all $x$ for which the limit exists.
+    </div>
     
 </div>
 {% endblock %}

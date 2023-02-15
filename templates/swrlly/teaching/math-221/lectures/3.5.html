@@ -1,0 +1,88 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 3.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.5: Higher-Order Derivatives<"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/3.5"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>3.5: Higher-Order Derivatives</h1>
+
+    <h2>Higher-Order Derivatives</h2><hr>
+
+    <p>Recall the definition of the derivative:</p>
+
+    <div class="math-def">
+        The derivative of a function $f$ with respect to $x$ is the function $f'$ where \[f'(x) = \lim_{h\rightarrow 0}\dfrac{f(x+h)-f(x)}{h}\]
+        The domain of $f'$ is the set of all $x$ for which the limit exists.
+    </div>
+
+    <p>What if, in the definition, we had $f'(x+h) - f'(x)$ instead? This gives us the derivative of the derivative, or the second derivative.</p>\
+    
+    <p>To find the second derivative, first find $f'(x)$, then find the derivative of $f'(x)$.</p>
+
+    <p>In general, this extends to the $n$th derivative. Here are common notations for multiple derivatives:
+
+        <ol>
+            <li class="lec-list-space">
+                $f'(x), f''(x), f'''(x), \cdots, f^{(n)}(x)$
+            </li>
+            <li class="lec-list-space">
+                $D_xf(x), D^2_xf(x), D^3_xf(x), \cdots, D^(n)_xf(x)$
+            </li>
+            <li class="lec-list-space">
+                $y', y'', y''', \cdots, y^{(n)}$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{dy}{dx}, \dfrac{d^2y}{dx^2}, \dfrac{d^3y}{dx^3}, \cdots, \dfrac{d^ny}{dx^n}$
+            </li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        Find the derivatives of all orders of \[f(x) = x^5 - 3x^4 + 4x^3 - 2x^2 + x - 8\]
+    </div>
+
+    <p>Sometimes we need to use the product rule in the second derivative.</p>
+
+    <div class="math-example">
+        Find the second derivative of \[y = (2x^2 + 3)^{3/2}\]
+    </div>
+
+    <p>We saw in <a href="/teaching/math-221/lectures/2.6">Lecture 2.6</a> if $f(t)$ gives the position of an object moving in a straight line $t$ seconds after rest, then $f'(t)$ gives the velocity of the object at time $t$.</p>
+
+    <p>The rate of change of velocity is acceleration. This means $f''(t)$ gives the acceleration of the object at time $t$.</p>
+
+    <div class="math-example">
+        Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]
+        What is the maglev's acceleration at time $t$?
+    </div>
+
+    <div class="math-example">Suppose a ball is thrown straight up. The height of the ball is measured by \[f(t) = -16t^2 + 24t + 120\] where $t$ is measured in seconds and $f(t)$ is measured in feet. Find the velocity and acceleration of the ball at time $t$.</div>
+
+    <p>The <b>Consumer Price Index</b> (CPI) is a weighted average of a market basket of various goods and services. For example, clothing, food,, and energy are all contained in the market basket. CPI is a rough estimate of how much consumers are spending.</p>
+
+    <p>If $I(t)$ is the CPI at time $t$, then inflation rate is 
+        \[\text{inflation at } $t = c = \dfrac{\text{rate of change of CPI at } t = c}{\text{CPI at } t = c} = \dfrac{I'(c)}{I(c)}\] 
+    
+    so if $I'(t)$ were positive, then consumers are paying more for goods and services (inflation).</p>
+
+    <p>Consider $I''(t)$. Intuitively, it is telling us the rate of change of inflation (the $I(t)$ term can be ignored, it is a positive number). If $I''(t) < 0$, this is telling us the rate of change of inflation is negative.</p>
+        
+    <p>>It is possible for $I'(t) > 0$ and $I''(t) < 0$. This means we are experiencing inflation but the rate at which inflation is growing is slowing down.</p>
+
+    <div class="math-example">Suppose \[I(t) = -0.2t^3 + 3t^2 + 100 \qquad 0 \leq t \leq 9\]
+        is the CPI of an economy.
+        <ol>
+            <li class="lec-list-space">Find the inflation rate at $t = 6$.</li>
+            <li class="lec-list-space">Show that the rate at which inflation is growing is slowing down.</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
