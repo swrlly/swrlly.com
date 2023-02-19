@@ -299,7 +299,8 @@ a:hover {
     padding-bottom: 1em;
 }
 .hw-space {
-    padding-bottom: 1em;
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
 }
 .lec-list-space {
     padding-bottom: 0.5em;
