@@ -109,12 +109,55 @@
             \\\dfrac{dy}{dx} &= \dfrac{1 - \dfrac{y}{2\sqrt{xy}}}{\dfrac{x}{2\sqrt{xy}} - 1}\cdot{\color{yellow} \dfrac{2\sqrt{xy}}{2\sqrt{xy}}}
             \\\dfrac{dy}{dx} &= \dfrac{2\sqrt{xy} - y}{x - 2\sqrt{xy}}
             \end{align}
-
-            
         </div>
     </div>
 
-    
+    <h2>Related Rates</h2><hr>
+
+    <p>Imagine pumping air into a balloon.</p>
+
+    <p>Two quantities are changing with respect to time.: the volume and the radius of the balloon.</p>
+
+    <p>It is easier to measure the rate of change of volume due to being able to measure how much air you are pumping in.</p>
+
+    <p>It is not as easy to measure the rate of change of the radius with respect to time.</p>
+
+    <p><b>Related rates</b> problems are typically in the above setup. The rate of change of one quantity is easier to measure, and that rate will also tell us something about the harder to measure rate of change.</p>
+
+    <p>In general, two quantities $x$ and $y$ will depend on a third quantity $t$. Given $dx/dt$, can we find $dy/dt$?</p>
+
+    <div class="math-example"> 
+        Air is being pumped into a spherical balloon so that it volume increases at a rate of 100 cm$^3$/s. How fast is the radius of the balloon increasing when the diameter is 50 cm?
+    </div>
+
+    <p>A <b>housing start</b> is the start of construction on a new residential housing unit.
+    <a href="https://www.census.gov/construction/nrc/how_the_data_are_collected/soc.html">According to the US Census Bureau</a>, housing starts is estimated from a random sample of 2% of all housing starts.
+    </ol>
+    </p>
+
+    <div class="math-example">
+        The number of housing starts $N(t)$ is related to the mortgage rate $r(t)$, measured in percent per year, by the equation \[9N^2 + r = 36\]
+        What is the rate of change of the number of housing starts with respect to time when the mortgage rate is 11% per year and is increasing at the rate of 1.5% per year?
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Solving related rates problems</b><br>
+
+        <ol>
+            <li class="lec-list-space">
+                Assign a variable to each quantity that are functions of time. Draw a diagram to help you if needed.
+            </li>
+            <li class="lec-list-space">Write out the given information and the required rate in terms of derivatives.</li>
+            <li class="lec-list-space">If no equation is given, write an equation that relates the various quantities of the problem.</li>
+            <li class="lec-list-space">Implicitly differentiate both sides of the equation with respect to time.</li>
+            <li class="lec-list-space">If necessary, use the information given to eliminate variables from the original equation with substitution.</li>
+            <li class="lec-list-space">Solve for the unknown rate.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> 
+        A company is willing to make $x$ thousand flash drives available on the marketplace each week if the price is $\$p$ per drive. The relationship between $x$ and $p$ is governed by the supply equation \[x^2 - 3xp + p^2 = 5\]
+        How fast is the supply of drives changing when the price per drive is $\$11$, the quantity supplied is 4000 drives, and the wholesale price per drive is increasing at the rate of $\$0.10$ per drive per week?
+    </div>
 
 </div>
 {% endblock %}
