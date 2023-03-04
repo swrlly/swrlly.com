@@ -1,0 +1,25 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.1: Applications of the First Derivative"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>4.1: Applications of the First Derivative</h1>
+    
+    <h2>Increasing/Decreasing Functions</h2>
+
+    <div class="math-def">
+        A function is <b>increasing</b> on an interval $(a, b)$ if for any two numbers $x_1$ and $x_2$ in $(a, b)$, we have $f(x_1) < f(x_2)$ whenever $x_1 < x_2$. <br>
+        A function is <b>decreasing</b> on an interval $(a, b)$ if for any two numbers $x_1, x_2 \in (a, b)$, we have $f(x_1) > f(x_2)$ whenever $x_1 < x_2$.
+    </div>
+    
+</div>
+{% endblock %}
