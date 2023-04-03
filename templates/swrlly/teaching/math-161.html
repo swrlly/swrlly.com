@@ -1,0 +1,34 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - home"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="calculus for life sciences"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block extraimports %}
+<script async src="/static/swrlly/js/centertext.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Math 161</h1>
+    <p>Welcome to Math 161! This page contains all the relevant links for this class.</p>
+    <h2>Syllabus</h2>
+    <p><a href="/teaching/math-161/syllabus">Click here for the syllabus.</a></p>
+    <h2>Interactive Lecture Notes</h2>
+    <p><a href="/teaching/math-161/lectures">Click here for lecture notes.</a></p>
+    <h2>Homeworks</h2>
+    Soon!
+    <h2>Useful links</h2>
+    <ul>
+        <li><a href="https://www.desmos.com/">Online graphing utility (Desmos)</a></li>
+        <li><a href="/static/swrlly/files/xmethod.pdf">How to factor</a> $ax^2 + bx + c$</li>
+    </ul>
+
+</div>
+{% endblock %}
