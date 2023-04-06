@@ -1,0 +1,60 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 1"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 1"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 1</h1>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  </p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Suppose there is a variable $x$ which is associated with a value $f(x)$. I find that two different inputs give the same evaluation. In particular, I find $x = -2$ and $x = 2$ have $f(-2) = f(2)$. Is $f(x)$ a function?</li>
+        <li class="hw-space">Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
+        <li class="hw-space">Suppose there is an expression \[f(x) = \dfrac{(a + h)  + x}{(a+h)^3 - 5}\] Am I allowed to cancel out the $a+h$'s to get \[\dfrac{x}{(a+h)^2 - 5}\]
+        If I am not, when am I allowed to cancel in this fashion?
+        </li>
+        <li class="hw-space">When finding the domain of a function, what are the two types of inputs we need to exclude?</li>
+        <li class="hw-space">Suppose I have a function $f(x) = \dfrac{x}{(x+1)^2}$.
+            <ol type="a">
+                <li class="hw-space">Find $f(1), f(-a), f(x+h), f(x+1)$ and fully expand each expression.</li>
+            </ol>
+        </li>
+        <li class="hw-space">Suppose a function takes an input $x$ and sends this to $\frac{1}{x + 1}$. What is the domain of $f(x)$?</li>
+        <li class="hw-space">Draw a coordinate plane and graph the functions $f(x) = x^2, g(x) = x^4$ and $h(x) = x^6$. What is similar between the graphs?</li>
+        <li class="hw-space">Graph the function \[f(x) = \begin{cases}-x^2 & x \leq 3 \\ -x + 1 & x > 3\end{cases}\]</li>
+        <li class="hw-space">Is the point $\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$ on the unit circle? Show using calculations.</li>
+        <li class="hw-space">What is the reference number $\bar{t}$? What is the range of values $\bar{t}$ is allowed to be?</li>
+        <li class="hw-space">Find the following terminal points associated with the following $t$ values:
+            <ol>
+                <li class="hw-space">$t = 0$</li>
+                <li class="hw-space">$t = \frac{3\pi}{2}$</li>
+                <li class="hw-space">$t = \frac{2\pi}{3}$</li>
+                <li class="hw-space">$t = \frac{5\pi}{6}$</li>
+                <li class="hw-space">$t = -\frac{2\pi}{3}$</li>
+                <li class="hw-space">$t = -\frac{9\pi}{4}$</li>
+                <li class="hw-space">$t = 1000\pi + \frac{2\pi}{3}$</li>
+                <li class="hw-space">$t = -83\pi + \frac{\pi}{3}$</li>
+                <li class="hw-space">$t = \pi + 2\pi - 3\pi + \frac{4\pi}{3}$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Find the six trigonometric functions of $t = \frac{2\pi}{3}$.</li>
+        <li class="hw-space">Find the six trigonometric functions of $t = -\frac{5\pi}{6}$.</li>
+        <li class="hw-space"> Why is $\tan\left(\frac{\pi}{2}\right)$ undefined?</li>
+    </ol>
+
+</div>
+{% endblock %}
