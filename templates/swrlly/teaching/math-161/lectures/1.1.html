@@ -1,0 +1,96 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 1.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 16 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.1: Four Ways to Represent a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/1.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.1: Four Ways to Represent a Function</h1>
+    
+    <div class="math-def">
+        A <b>function</b> is a rule that assigns each element $x$ in a set $A$ with exactly one element $f(x)$ in another set $B$.
+    </div>
+
+    <p>When you think of a function, consider the relationship between time and temperature at one physical location.</p>
+    <p>One single time $t$ will only be associated with one temperature $f(t)$; it cannot be two or more different temperatures.</p>
+
+    <h2>Function Evaluation, Domain, and Graphs</h2>
+
+    <div class="math-example">
+        Given $f(x) = x^2 + 2x + 3$, find 
+        <ol>
+            <li class="lec-list-space">
+                $f(1)$
+            </li>
+            <li class="lec-list-space">
+                $f(a)$
+            </li>
+            <li class="lec-list-space">
+                $f(-a)$
+            </li>
+            <li class="lec-list-space">
+                $f(x+h)$
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Given \[f(x) = \dfrac{x+1}{x-1}\], find 
+        <ol>
+            <li class="lec-list-space">
+                $f(1)$
+            </li>
+            <li class="lec-list-space">
+                $f(x+h)$
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-def">
+        The <b>domain</b> of a function $f$ is the set of all numbers you are allowed to plug in.
+    </div>
+
+    <div class="math-example">
+        Find the domain of the following functions:
+        \[f(x) = \dfrac{1}{x}\qquad g(x) = \dfrac{1}{x^2 - x} \qquad h(t) = \dfrac{1}{\sqrt{t}(t-1)}\]
+    </div>
+
+    <div class="math-def"> The <b>graph</b> of a function $f$ is the set of points \[\{(x, f(x)) : x \text{ is in the domain of }f\}\]</div>
+
+    <p>Because $f(x)$ is the $y$ coordinate in the ordered pair, we will sometimes replace $F(x)$ with $y$.</p>
+
+    <div class="math-example">
+        Find the graph of $y = x^2$.
+    </div>
+
+    <div class="math-example">
+        Given this graph of a function
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/f7hgdp2ddc"></iframe></div>
+        what is $f(1)$ and $f(-1)$?
+    </div>
+
+    <h2>Piecewise Defined Functions</h2>
+
+    <p>A piecewise function is a function that has different formulas on different parts of the domain.</p>
+
+    <div class="math-example"> Graph the function \[f(x) = \begin{cases}1 - x & x \leq - 1 \\ x^2 & x > -1\end{cases}\]</div>
+
+    <div class="math-example"> Graph the function $y = \lvert x \rvert$.</div>
+
+    <p>The graph helps us determine if a curve in the plane is actually a function.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Vertical Line Test</b><br>
+        A curve in the $xy$-plane is the graph of a function of $x$ if and only if no vertical line intersects the curve more than once.
+    </div>
+
+
+
+</div>
+{% endblock %}
