@@ -1,0 +1,330 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 5.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.2: A Catalog of Essential Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/5.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.2: A Catalog of Essential Functions</h1>
+    <p>Now that we know what a function is, let's look at several function types, starting with the trigonometric functions. </p>
+    <h2>The Unit Circle</h2><hr>
+    <p>
+        Let's begin our foray into the world of trigonometric functions! Before we define the trigonometric functions, we need to discuss a tool to help us define them: the unit circle.
+    </p>
+    <div class="math-def">
+        The unit circle is the circle of radius 1 centered at the origin in the $xy$-plane. The equation is \[x^2 + y^2 = 1\]
+    </div>
+    <div class="math-example">
+        Is the point $P\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right)$ on the unit circle?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            A point is on the unit circle if it satisfies the unit circle equation $x^2 + y^2 = 1$. We have \[\left(\frac{\sqrt{3}}{3}\right)^2 + \left(\frac{\sqrt{6}}{3}\right)^2 = \frac{3}{9} + \frac{6}{9} = 1\]
+            so this point is on the unit circle.
+        </div>
+    </div>
+    <h2>Terminal Points and the Reference Number</h2><hr>
+    <div class="math-def">
+        Let $t$ be a real number. If $t \geq 0$, travel $t$ units along the unit circle counterclockwise from $(1, 0)$ and mark the destination point $P$. If $t < 0 $, travel $\lvert t \rvert$ units along the unit circle clockwise from $(1, 0)$ and mark the destination point $P$.</br>
+        The point $P$ is called the terminal point.
+    </div>
+    <!--<p><b>In general:</b> rotating counterclockwise means $t$ is positive and rotating clockwise means $t$ is negative.</p>-->
+    <div class="math-example">
+        Here is an interactive example of a terminal point $P$ for positive $t$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/inw4vgxdtt"></iframe></div>
+            If $t$ were negative, we would travel clockwise.
+        </div>
+       
+    </div>
+    <p>
+        <ul>
+            <li>The circumference of the unit circle is $C = 2\pi r = 2\pi$. This is why we saw $t = \pi$ when we traversed half of the circle above. </li>
+            <li>This means if $t = \frac{\pi}{2}$, we would have traveled a quarter counterclockwise.</li>
+        </ul>
+    </p>
+    <div class="math-example">
+        Find the terminal points for \[t = 3\pi\qquad t = -\pi \qquad t=-\frac{\pi}{2}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>Because $t = 3\pi = 2\pi + \pi$, we travel counterclockwise once around the unit circle, then halfway. The terminal point is $(-1, 0)$.</li>
+                <li>For $t=-\pi$, we travel clockwise halfway so the terminal point is $(-1, 0)$.</li>  
+                <li>For $t=-\frac{\pi}{2}$, we travel clockwise a quarter around the unit circle; the terminal point is $(0, -1)$.</li>
+            </ol>
+        </div>
+    </div>
+    <p>
+        Important! The terminal points associated with $t = \frac{\pi}{6}, \frac{\pi}{4}, \frac{\pi}{3}$ are common values you should commit to memory. Here they are:
+        <table class="table" style="max-width: 200px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">$t$</th>
+                <th scope="col">Terminal point</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>$0$</td>
+                <td>$(1, 0)$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{6}$</td>
+                <td>$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{4}$</td>
+                <td>$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{3}$</td>
+                <td>$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$</td>
+            </tr>
+            <tr>
+                <td>$\frac{\pi}{2}$</td>
+                <td>$(0, 1)$</td>
+            </tr>
+            </tbody>
+        </table>
+        Let's derive the terminal point $P$ for $t = \frac{\pi}{4}$. We know the terminal point lies halfway between $(0, 1)$ and $(1, 0)$. The unit circle is symmetric around the line $y = x$ so this line must cut through the terminal point $P$.
+    </br>We know $x^2 + y^2 = 1$, so substitute $y = x$ into the equation and solve for $x:$ 
+    \begin{align}
+    x^2 + y^2 &= 1\\
+    x^2 + x^2 &= 1\\
+    2x^2 &= 1\\
+    x^2 &= \frac{1}{2}\\
+    x &= \pm \frac{1}{\sqrt{2}}
+    \end{align}
+    When $t = \frac{\pi}{4}$, $P$ is in the first quadrant so $x$ must be $\frac{1}{\sqrt{2}}$. Since $y = x$ we know \[P\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\]
+    after rationalizing the denominator. Similar arguments can be used to derive the terminal points for $t = \frac{\pi}{6}, \frac{\pi}{3}$.
+    </p>
+    <div class="math-example">
+        Given $t = \frac{7\pi}{6}$ and its terminal point $P$, state two negative $t$ values that correspond to $P$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            One solution is $t = -\frac{5\pi}{6}$. Two ways to look at it:
+            <ol>
+                <li>$\frac{7\pi}{6}$ overshoots $(-1, 0)$ by $\frac{\pi}{6}$, and $-\frac{5\pi}{6}$ is missing a distance of $\frac{\pi}{6}$ to reach $(-1, 0)$.</li>
+                <li>$\pm 2\pi$ is a full rotation around the unit circle. Since $\frac{7\pi}{6} - 2\pi = -\frac{5\pi}{6}$, this means $-\frac{5\pi}{6}$ also shares $P$ as its terminal point.</li>
+            </ol> 
+        </br>In general, all solutions are $t = \frac{7\pi}{6} + 2k\pi$ where $k$ is an integer.
+        </div>        
+    </div>
+    <p>The terminal points in the first quadrant are <b>all you need</b> to derive the rest of the terminal points in the rest of the quadrants! See below for the first technique.</p>
+    <div class="math-example">
+        Find the terminal points associated with \[t = -\frac{\pi}{4} \qquad t = \frac{3\pi}{4} \qquad t = -\frac{5\pi}{6}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ul>
+                <li>
+                    From above we know that when $t = \frac{\pi}{4}, P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$ is the terminal point. Since $t = -\frac{\pi}{4}$ is rotating counterclockwise, the terminal point $Q$ will share the same $x$-coordinate, but have a negative $y$-value instead. Thus the terminal point is $Q\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$.
+                </li>
+                <li>
+                    Let $P$ be the terminal point for $t = \frac{\pi}{4}$ and $Q$ be our desired terminal point.
+                </br>Note that $t = \frac{3\pi}{4} = \frac{\pi}{2} + \frac{\pi}{4}$, meaning we first travel a quarter counterclockwise. Then by traveling a distance of $\frac{\pi}{4}$, we know that $Q$ has the same coordinates as $P$, except for sign due to being in a different quadrant. Clearly, the $y$-coordinate must be the same, but the $x$-coordinate is negative so $Q\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$.
+                </li>
+                <li>
+                    Let $Q$ be our desired terminal point. From the previous example, we know $t = \frac{7\pi}{6}$ also has $Q$ as its terminal point. Note that $\frac{7\pi}{6} = \pi + \frac{\pi}{6}$, meaning rotate counterclockwise halfway, then $\frac{\pi}{6}$. As a result, $Q$ must have the same terminal point as $t=\frac{\pi}{6}$, except for sign. Since both $x$ and $y$ are negative, we know $Q\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>The previous example is particularly insightful: if we can decompose $t$ into quarter/half rotations and perhaps some rotation $0 \leq q \leq \frac{\pi}{4}$, we can use symmetry arguments to find the terminal point. This is the exact reason why the table above is all you need to derive terminal points. Let's discuss how to do this.</p>
+    <div class="math-def">
+        Let $t$ be a real number and $P$ be the associated terminal point. The <b>reference number $\bar{t}$</b> associated with $t$ is the shortest distance from $P$ to the $x$-axis.
+    </div>
+    <div class="math-example">
+        Here is an interactive example of the reference number for $0 \leq t \leq 2\pi$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/o795tzaqhe"></iframe></div>
+            If $t$ were negative, we would travel clockwise.
+        </div>
+    </div>
+    <div class="math-example">
+        Find the reference numbers for 
+        <ol>
+            \[1. \ t = \frac{5\pi}{6} \qquad\qquad 2. \
+            t = \frac{7\pi}{4} \qquad\qquad 3. \ 
+            t = -\frac{2\pi}{3} \qquad\qquad 4.\
+            t = 5.80\]
+        </ol>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>$t$ is in the second quadrant. Therefore we drop down to the negative $x$-axis, or a half rotation $\pi$. Thus $\bar{t} = \pi  - \frac{5\pi}{6} = \frac{\pi}{6}$.</li>
+                <li>$t$ is in the fourth quadrant. Therefore we drop down to the positive $x$-axis, or a full rotation $2\pi$. Thus $\bar{t} = 2\pi  - \frac{7\pi}{4} = \frac{\pi}{4}$.</li>
+                <li>$t$ is in the third quadrant. Therefore we drop down to the negative $x$-axis, or a half rotation $\pi$. Thus $\bar{t} = \pi  - \frac{2\pi}{3} = \frac{\pi}{3}$.</li>
+                <ul>
+                    <li>Note: even though $t$ is negative, we are only interested in positive distance for $\bar{t}$. Make sure the $\bar{t}$ value lies between $0$ and $\frac{\pi}{2}$.</li>
+                </ul>
+                <li>$t$ is in the fourth quadrant. Therefore we drop down to the positive $x$-axis, or a full rotation $2\pi$.Thus $\bar{t} = 2\pi  - 5.80 \approx 0.48$. </li>
+            </ol>
+        </div>       
+    </div>
+    <p>The following method puts the technique we used three examples ago into a straightforward way to find the reference number for any terminal point.</p>
+    <div class="math-method">
+        To find the terminal point $P$ for any value of $t \in \mathbb{R}$, do
+        <ol>
+            <li>Find the reference number $\bar{t}$.</li>
+            <li>Find the terminal point $Q(a,b)$ for $\bar{t}$.</li>
+            <li>The terminal point for $t$ has form $P(\pm a, \pm b)$, depending on which quadrant you are in. Fix the sign according to the quadrant.</li>
+        </ol>
+    </div>
+    <div class="math-example">
+        Find the terminal point for \[1. \ t = \frac{5\pi}{6} \qquad\qquad 2. \
+        t = \frac{7\pi}{4} \qquad\qquad 3. \ 
+        t = -\frac{2\pi}{3}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{6}$</li>
+                        <li>$Q$ is $\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</li>
+                        <li>$t$ lies in the second quadrant, with negative $x$, positive $y$. Thus $P$ is $\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{4}$</li>
+                        <li>$Q$ is $\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$</li>
+                        <li>$t$ lies in the fourth quadrant, with positive $x$, negative $y$. Thus $P$ is $\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li>$\bar{t} = \frac{\pi}{3}$</li>
+                        <li>$Q$ is $\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$</li>
+                        <li>$t$ lies in the third quadrant, with negative $x$, negative $y$. Thus $P$ is $\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right))$</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="math-example">
+        Find the terminal point for $t = \frac{65\pi}{6}.$
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            If $t < -2\pi$ or $t > 2\pi$, bring $t$ closer to zero by subtracting or adding $2\pi$. This does not change the terminal point for $t$ because these are full rotations around the unit circle.
+        </br> For this case, the decomposition is \[t =  \frac{65\pi}{6} =  \frac{60 \pi}{6} + \frac{5 \pi}{6} = 10\pi + \frac{5 \pi}{6} = 5(2\pi) + \frac{5 \pi}{6}\]
+        The five initial rotations around the unit circle can be neglected. Thus $t$ has the same terminal point as #1 in the previous example: $\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$.
+        </div> 
+    </div>
+
+    <p>Let's now define the trigonometric functions!</p>
+
+    <h2>The Trigonometric Functions</h2><hr>
+    <p>Given the unit circle, for $t \in \mathbb{R}$ and it's associated terminal point $P(x, y)$, we can now define the trigonometric functions.</p>
+    <div class="math-def">
+        Let $t \in \mathbb{R}$ and let $P(x, y)$ be the corresponding terminal point on the unit circle. We define
+        \begin{align}
+        \sin t &= y &  \cos t &= x & \tan t &= \frac{y}{x}, \ x \neq 0 \\
+        \csc t &= \frac{1}{y}, \ y \neq 0 & \sec t &= \frac{1}{x}, \ x \neq 0 & \cot t &= \frac{x}{y}, \ y \neq 0
+        \end{align}
+    </div>
+    <div class="math-example">
+        The $\sin(t)$ function extracts the $y$ coordinate from $P(x, y)$! Look:
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/cb6bmvsb6p"></iframe></div>
+        </div>
+    </div>
+    <p>We will see more graphs in the next section!
+    </p>
+    <div class="math-example">
+        Find the six trigonometric functions of the following: \[1. \ t = \frac{\pi}{3} \qquad\qquad 2. \ t = \frac{\pi}{2}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>The corresponding terminal point is $P\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{3} &= \frac{\sqrt{3}}{2} & \cos\frac{\pi}{3} &= \frac{1}{2} & \tan\frac{\pi}{3} &= \frac{\frac{\sqrt{3}}{2}}{\frac{1}{2}} = \sqrt{3} \\
+                    \csc \frac{\pi}{3} = \frac{2}{\sqrt{3}} &= \frac{2\sqrt{3}}{3} & \sec\frac{\pi}{3} &= 2 & \cot\frac{\pi}{3} &= \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}
+                    \end{align}
+                </li>
+                <li>The corresponding terminal point is $P\left(0, 1\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{2} &= 1 & \cos\frac{\pi}{2} &= 0 & \tan\frac{\pi}{2} &= \frac{1}{0} = \text{DNE} \\
+                    \csc\frac{\pi}{2} &= \frac{1}{1} & \sec\frac{\pi}{2} = \frac{1}{0} &= \text{DNE} & \cot\frac{\pi}{2} &= \frac{0}{1} = 0
+                    \end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+    <p>Now that we know what the trigonometric functions are, let's see some properties and how to use them.</p>
+    <div class="math-fact">
+        The domains of the six trigonometric functions are
+        <table class="table" style="max-width: 200px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Function</th>
+                <th scope="col">Domain</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>$\sin, \cos$</td>
+                <td>$\mathbb{R}$</td>
+            </tr>
+            <tr>
+                <td>$\tan, \sec$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq \frac{\pi}{2} + n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            <tr>
+                <td>$\cot, \csc$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="math-example">
+        Why does $\tan(t)$ have a domain given above?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            The domain is all real numbers except $t = \frac{\pi}{2} + n\pi$ where $n$ is an integer. First, consider $n = 0$. Then $t = \frac{\pi}{2} + 0 \pi$, which is only a quarter rotation counterclockwise. Rotating a quarter gives $P(0, 1)$, which has $x = 0$. Since $\tan$ divides by $x$, you cannot divide by zero, implying $t = \frac{\pi}{2}$ is not in the domain.
+        </br> When $n = 1$, $t =  \frac{\pi}{2} + \pi$, which is our quarter rotation as before, but then another half circle rotation. This again forces the $x$ value to be zero. So we can see that <b>in general</b>, the points where $x = 0$ are where the domain are excluded!
+        </div>
+    </div>
+    <h2>Values of the Trigonometric Functions</h2><hr>
+    <div class="math-example">
+        What are the signs of the trigonometric functions in each quadrant?
+    </div>
+    <p>Given an arbitrary $t \in \mathbb{R}$, how can we quickly find, for example, $\tan(t)$? This is where the reference number + the sign of the function comes in handy. Below is the three step process:</p>
+    <div class="math-fact">
+       If $f(t)$ is an arbitrary trigonometric function, $t \in \mathbb{R}$, we find $f(t)$ in three steps:
+       <ol>
+        <li><b>Find the reference number </b> $\bar{t}$.</li>
+        <li><b>Determine the sign</b> of the trigonometric function based on the quadrant.</li>
+        <li>$f(\bar{t})$ has the same value as $f(t)$, except for sign. Correct the sign using the correct sign in Step 2. </li>
+       </ol>
+    </div>
+    <div class="math-example">
+        Find each value: \[\cos\left(\frac{2\pi}{3}\right) \qquad\qquad \tan\left(-\frac{\pi}{3}\right) \qquad\qquad \sin\left(\frac{19\pi}{4}\right)\]
+    </div>
+
+    <h4>Fundamental Trigonometric Identities</h4>
+    <div class="math-notxt">
+       <b>Reciprocal identities:</b>
+        \[\csc t = \frac{1}{\sin t} \qquad\qquad \sec t = \frac{1}{\cos t} \qquad\qquad \cot t = \frac{1}{\tan t} \qquad\qquad \tan t = \frac{\sin t}{\cos t} \qquad\qquad \cot t = \frac{\cos t}{\sin t}\]
+        <b>Pythagorean identities:</b>
+        \[\sin^2 t + \cos^2 t = 1 \qquad\qquad \tan^2t + 1 = \sec^2 t \qquad\qquad 1 + \cot^2 t = \csc^2 t\]
+    </div>
+    <p>Key ideas:
+        <ol>
+            <li>You only need to memorize $\sin, \cos, \tan$. The other three trigonometric functions are just reciprocals of these three.</li>
+            <li>You can derive the Pythagorean identities from the unit circle.</li>
+            <li>The notation $\sin^2t$ means $(\sin t)^2$. The entire quantity of $\sin$ must be squared.</li>
+            <li>If you are given one trigonometric function's value, you can find the rest.</li>
+        </ol>
+    </p>
+    <div class="math-example"> Derive the three Pythagorean identities, starting with $\sin^2 t + \cos^2 t= 1$.</div>
+</div>
+{% endblock %}
