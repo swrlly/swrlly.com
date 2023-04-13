@@ -1,0 +1,137 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 1.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.4: Exponential Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/1.5"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.5: Logarithms</h1>
+
+    <h2>Inverse Functions</h2><hr>
+
+    <div class="math-def">
+        A function $f$ is called <b>one-to-one</b> if it never takes on the same value twice. In symbols: $f(x_1) \neq f(x_2)$ whenever $x_1 \neq x_2$.
+    </div>
+
+    <div class="math-example">
+        Suppose $f(1) = 2, f(2) = 1, f(3) = 2$.
+        <ol>
+            <li class="lec-list-space">
+                Is $f$ a function?
+            </li>
+            <li class="lec-list-space">
+                Is $f$ one-to-one?
+            </li>
+        </ol>
+    </div>
+
+    <p>The graph can be used to quickly determine if a function is one-to-one.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Horizontal Line Test</b><br>
+        A function is one-to-one if no horizontal line intersects the graph more than once.
+    </div>   
+
+    <div class="math-example">
+        Suppose $f(x) = x^2$.
+        <ol>
+            <li class="lec-list-space">
+                Is $f$ one-to-one?
+            </li>
+            <li class="lec-list-space">
+                If it isn't, restrict the domain of $f$ so that it is one-to-one.
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-def">
+        Suppose $f$ is a one-to-one function. Then its <b>inverse function</b> $f^{-1}$ is defined by \[f^{-1}(y) = x \text{ whenever } f(x) = y\]
+    </div>
+
+    <p>Intuition: $f^{-1}$ acts in the opposite direction as $f$.</p>
+
+    <div class="math-example">
+        The function $f(x) = x^3$ has inverse function $f^{-1}(x) = x^{1/3}$. Show $f^{-1}$ is actually the inverse using the definition.
+    </div>
+
+    <div class="math-example">
+        Suppose $f(1) = 2, f(2) = 1, f(3) = 2$. Why does $f^{-1}$ not exist?
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Inverse Function Property</b>
+        Let $f$ be a one-to-one function with domain $A$ and range $B$. The inverse function $f^{-1}$ satisfies the following properties
+        \begin{align}
+        f^{-1}(f(x))=x \qquad &\text{ for every } x \text{ in } A\\
+        f(f^{-1}(x))=x \qquad &\text{ for every } x \text{ in } B
+        \end{align}
+    </div>
+
+    <div class="math-def"> Use the inverse function property to show $x^3$ and $x^{1/3}$ are inverses.</div>
+
+    <h2>Logarithms</h2><hr>
+
+    <p>The exponential function $f(x) = b^x$ for $b > 0, b\neq 1$ is one-to-one. It's inverse is called the logarithm with base $b$.</p>
+
+    <div class="math-def">
+        If $f(x) = b^x$ with $b > 0, b\neq 1$, then the <b>logarithm function with base $b$</b> is the function $g(x) = \log_b(x)$ where \[\log_bx = y \text{ whenever } b^y = x\]
+    </div>
+
+    <p>Think of $\log_bx$ as the exponent you need to raise $b$ to in order to get $x$.</p>
+
+    <div class="math-example">
+        Find the following logarithms:
+        <ol>
+            <li>$\log_28$</li>
+            <li>$\log_{10}100$</li>
+            <li>$\log_3\frac{1}{9}$</li>
+        </ol>
+    </div>
+
+    <p>If you apply the inverse function property, you get the following equations:</p>
+
+    <div class="math-fact">
+        \[\log_b(b^x) = x, \qquad b^{\log_bx} = x\]
+    </div>
+
+    <p>Moreover, the laws of exponents carry over to the logarithms as well:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Laws of Logarithms</b>
+
+        If $x, y$ are positive numbers, then
+        <ol>
+            <li class="lec-list-space">$\log_b(xy) = \log_b x + \log_b y$</li>
+            <li class="lec-list-space">$\log_b\left(\frac{x}{y}\right) = \log_bx - \log_by$</li>
+            <li class="lec-list-space">$\log_b(x^r) = r\log_bx$ for any real number $r$</li>
+        </ol>
+        
+    </div>
+
+    <div class="math-example">
+        Simplify $\log_2 80 - \log-2 5$.
+    </div>
+
+    <div class="math-example">
+        Combine the following into one logarithm:
+        <ol>
+            <li class="lec-list-space">
+                $\log_3 x + \log_3 y$
+            </li>
+            <li class="lec-list-space">
+                $2{\log _4}x + 5{\log _4}y - \frac{1}{2}{\log _4}z$
+            </li>
+            <li class="lec-list-space">
+                $3\ln \left( {t + 5} \right) - 4\ln t - 2\ln \left( {s - 1} \right)$
+            </li>
+        </ol>
+    </div>
+
+    <h2>Natural Logarithms</h2><hr>
+
+</div>
+{% endblock %}

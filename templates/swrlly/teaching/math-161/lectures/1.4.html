@@ -1,0 +1,44 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 1.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.4: Exponential Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/1.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.4: Exponential Functions</h1>
+
+    <div class="math-def">
+        A function of the form $f(x) = b^x$ where $b > 0$ is called a <b>exponential function.</b>
+    </div>
+
+    <div class="math-example">
+        Graph the function $f(x) = 2^x$.
+    </div>
+
+    <p>Exponential functions take on three different general shapes:
+
+        <img src="/static/swrlly/images/teaching/1.4 exp.PNG" style="max-width:900px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+
+    </p>
+
+    <div class="math-example">
+        The half-life of strontium-90 is 25 years. This means half of the mass of strontium-90 will decay in 25 years.<br>
+        If you have a 24 mg sample of strontium-90, find a function $m(t)$ for the remaining mass after $t$ years.
+    </div>
+
+    <div class="math-def">
+        <b>Euler's number</b>, denoted as $e$, is approximately $2.71828...$
+    </div>
+
+    <p>$e$ makes some calculus problems easier, as we will see.</p>
+
+</div>
+{% endblock %}

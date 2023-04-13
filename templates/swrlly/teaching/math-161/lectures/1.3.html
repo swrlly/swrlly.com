@@ -1,0 +1,56 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 1.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.3: New Functions from Old"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/1.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.3: New Functions from Old</h1>
+    <h2>Function Composition</h2><hr>
+        <p class="lecturep">Function evaluation on a number is straightforward: the preceding example utilized this concept. What if we evaluate a function on another function? This idea is called <b>function composition.</b></p>
+        <div class="math-def">
+            Given two functions $f$ and $g$, the composite function $f \circ g$ (also called the composition of $f$ and $g$) is defined by \[(f\circ g)(x) = f(g(x))\]
+        </div>
+        <p class="lecturep">To evaluate a function composition, you first plug in $g(x)$ into $f(x)$, and wherever there is an $x$ in $f(x)$, substitute the definition of $g(x)$ there. </p>
+        <div class="math-example">
+            Suppose $f(x) = x^2$ and $g(x) = x-3$. Find $f\circ g, g \circ f, (f\circ g)(5), (g\circ f)(5)$</br>
+            <br/><button class="math-btn">Show Solution</button>
+            <div class="math-solution">
+                We see that \[(f\circ g)(x) = f(g(x)) = f(x-3) = (x-3)^2\] and \[(g\circ f)(x) = g(f(x)) = g(x^2) = x^2 - 3\] Thus $(f\circ g)(5) = (5-3)^2 = 4$ and $(g\circ f)(5) = 5^2 - 3 = 22$.
+            </div>
+        </div>
+        <div class="lecturep"> Ideas:
+            <ul>
+                <li>This shows that the operation $\circ$ is not commutative, i.e. $f\circ g \neq g \circ f$. Do not mistake $f\circ g$ to mean function multiplication!</li>
+                <li>We can also take compositions of three or more functions. For example, $f\circ g \circ h = f(g(h(x)))$.</li>
+            </ul>
+        </div>
+        <div class="math-example">
+            Find $f\circ g \circ h$ where $f(x) = \frac{x}{x+1}, g(x) = x^{10}, h(x) = x+3$.
+            <br/><button class="math-btn">Show Solution</button>
+            <div class="math-solution">
+                \begin{align}
+                (f\circ g \circ h)(x) &= f(g(h(x)))\\
+                &= f(g(x+3))\\
+                &= f((x+3)^{10})\\
+                &= \frac{(x+3)^{10}}{(x+3)^{10}+1}
+                \end{align}
+            </div>
+        </div>
+        <div class="math-example">
+        Given $F(x) = \sqrt[4]{x + 9}$, find functions $f$ and $g$ such that $F = f\circ g$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
+            Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
+        </div>
+        </div>
+</div>
+{% endblock %}
