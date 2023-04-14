@@ -1,0 +1,59 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.1: Limits of Sequences"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.1: Limits of Sequences</h1>
+
+    <p>Limits underlie many different ideas in calculus.</p>
+
+    <h2>The Long-Term Behavior of a Sequence</h2><hr>
+
+   <div class="math-example"> What happens to the terms of the sequence when $n$ becomes large?
+    <ol>
+        <li class="lec-list-space">$a_n = \dfrac{1}{n}$</li>
+        <li class="lec-list-space">$b_n = (-1)^n$</li>
+    </ol>
+   </div>
+
+   <p>In general:</p>
+
+   <div class="math-def">
+    A sequence $\{a_n\}$ has the <b>limit</b> $L$ and we write \[\lim_{n\rightarrow \infty} a_n = L\] if we can make the terms $a_n$ as close to $L$ as we like by taking $n$ sufficiently large.
+   </div>
+
+   <ul>S
+        <li class="lec-list-space">If $\displaystyle\lim_{n\rightarrow \infty}a_n$ exists, we say the sequence <b>converges</b> (or is <b>convergent</b>)</li>
+        <li class="lec-list-space">Otherwise, we say the sequence <b>diverges</b> (or is <b>divergent<s/b>)</li>
+   </ul>
+
+   <div class="math-example"> Is the sequence $a_n = \sqrt{n}$ convergent or divergent?</div>
+
+   <h2>Limit Laws for Sequences</h2>
+
+   <div class="math-fact">
+    If $\{a_n\}, \{b_n\}$ are convergent sequences and $c$ is a constant, then
+    <ol>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n + b_n) = \displaystyle\lim_{n\rightarrow \infty}a_n + \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n - b_n) = \displaystyle\lim_{n\rightarrow \infty}a_n - \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}ca_n = c\displaystyle\lim_{n\rightarrow \infty}a_n$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_nb_n) = \displaystyle\lim_{n\rightarrow \infty}a_n \cdot \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}\dfrac{a_n}{b_n} =\dfrac{\displaystyle\lim_{n\rightarrow \infty}a_n}{\displaystyle\lim_{n\rightarrow \infty}b_n} \qquad if $\displaystyle\lim_{n\rightarrow \infty}b_n \neq 0$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}c = c$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n)^p = \left[\displaystyle\lim_{n\rightarrow \infty}a_n\right]^p$</li>
+    </ol>
+   </div>
+
+   <div class="math-example"> Find $\lim_{n\rightarrow \infty}\dfrac{1}{n}$.</div>
+
+</div>
+{% endblock %}
