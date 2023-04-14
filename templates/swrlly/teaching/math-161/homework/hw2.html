@@ -1,0 +1,92 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 2"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 2"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 2</h1>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Find the six trigonometric functions of $t = \frac{2\pi}{3}$.</li>
+        <li class="hw-space">Find the six trigonometric functions of $t = -\frac{5\pi}{6}$.</li>
+        <li class="hw-space">Why is $\tan\left(\frac{\pi}{2}\right)$ undefined?</li>
+        <li class="hw-space">
+            Suppose \[f(x) = x^2 + 2 \qquad g(x) = \dfrac{x + 1}{x - 1}\]
+            <ol type="a">
+                <li class="hw-space">Find $f\circ g, g\circ f, (f\circ g)(5), (g\circ f)(5)$.</li>
+            </ol>
+        </li>
+        <li class="hw-space">For the next few parts, find \[\dfrac{f(a + h) - f(a)}{h},\qquad h \neq 0\] <b>and simplify fully:</b>
+            <ol type="a">
+                <li class="hw-space">$f(x) = x^2$</li>
+                <li class="hw-space">$f(x) = \dfrac{1}{x}$</li>
+                <li class="hw-space">$f(x) = x^3 - 1$</li>
+            </ol>
+        </li>
+        <li class="hw-space">For the next few parts, find two functions $f$ and $g$ such that $h = f\circ g$. You are not allowed to choose $f(x) = x$ or $g(x) = x$.
+            <ol type="a">
+                <li class="hw-space">$h(x) = (x^3 + x + 1)^3$</li>
+                <li class="hw-space">$h(x) = \dfrac{1}{\sqrt{x^2 - 2}}$</li>
+                <li class="hw-space">$h(x) = \dfrac{1}{\sqrt{x + 1}} + \sqrt{x + 1}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Use the law of exponents to fully simplify \[\dfrac{\sqrt{a\sqrt{b}}}{\sqrt[3]{ab}}\]</li>
+       
+        <li class="hw-space">Solve each equation for $x$:
+            <ol type="a">
+                <li class="hw-space">$\ln(x^2 - 1) = 3$</li>
+                <li class="hw-space">$e^{2x}-5e^x + 4 = 0$</li>
+                <li class="hw-space">$2^{x-5}=3$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            If $f$ is a one-to-one function and $f(6) = 17$, what is $f^{-1}(17)$?
+        </li>
+
+        <li class="hw-space">Show why $f^{-1}$ is not the same function as $\dfrac{1}{f}$ with an example.</li>
+
+        <li class="hw-space">If $f(x) = x^2, x > 0$,  find $f(f^{-1}(2))$.</li>
+
+        <li class="hw-space">Combine into one logarithm:
+            <ol type="a">
+                <li class="hw-space">$2 \ln 5 + 3 \ln 2$</li>
+                <li class="hw-space">$\ln(a + b) - \ln(a-b) - 2\ln c$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">List the first five terms of these sequences:
+            <ol type="a">
+                <li class="hw-space">$a_n = \dfrac{2n}{n^2 + 1}$</li>
+                <li class="hw-space">$a_n = \cos\dfrac{n\pi}{2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find a formula for $a_n$ for the following sequences:
+            <ol type="a">
+                <li class="hw-space">$1, 0, -1,0, 1, 0, -1, 0</li>
+                <li class="hw-space">$\dfrac{1}{2}, -\dfrac{4}{3}, \dfrac{9}{4}, - \dfrac{16}{5}, \dfrac{25}{6}, \dots$</li>
+            </ol>
+        </li>
+
+    </ol>
+
+</div>
+{% endblock %}
