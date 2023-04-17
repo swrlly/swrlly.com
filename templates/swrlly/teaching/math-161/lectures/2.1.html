@@ -31,9 +31,9 @@
     A sequence $\{a_n\}$ has the <b>limit</b> $L$ and we write \[\lim_{n\rightarrow \infty} a_n = L\] if we can make the terms $a_n$ as close to $L$ as we like by taking $n$ sufficiently large.
    </div>
 
-   <ul>S
+   <ul>
         <li class="lec-list-space">If $\displaystyle\lim_{n\rightarrow \infty}a_n$ exists, we say the sequence <b>converges</b> (or is <b>convergent</b>)</li>
-        <li class="lec-list-space">Otherwise, we say the sequence <b>diverges</b> (or is <b>divergent<s/b>)</li>
+        <li class="lec-list-space">Otherwise, we say the sequence <b>diverges</b> (or is <b>divergent</b>)</li>
    </ul>
 
    <div class="math-example"> Is the sequence $a_n = \sqrt{n}$ convergent or divergent?</div>
@@ -47,13 +47,47 @@
         <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n - b_n) = \displaystyle\lim_{n\rightarrow \infty}a_n - \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
         <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}ca_n = c\displaystyle\lim_{n\rightarrow \infty}a_n$</li>
         <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_nb_n) = \displaystyle\lim_{n\rightarrow \infty}a_n \cdot \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
-        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}\dfrac{a_n}{b_n} =\dfrac{\displaystyle\lim_{n\rightarrow \infty}a_n}{\displaystyle\lim_{n\rightarrow \infty}b_n} \qquad if $\displaystyle\lim_{n\rightarrow \infty}b_n \neq 0$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}\dfrac{a_n}{b_n} =\dfrac{\displaystyle\lim_{n\rightarrow \infty}a_n}{\displaystyle\lim_{n\rightarrow \infty}b_n} \qquad$ if $\displaystyle\lim_{n\rightarrow \infty}b_n \neq 0$</li>
         <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}c = c$</li>
-        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n)^p = \left[\displaystyle\lim_{n\rightarrow \infty}a_n\right]^p$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n)^p = \left[\displaystyle\lim_{n\rightarrow \infty}a_n\right]^p$ for any number $p > 0$</li>
     </ol>
    </div>
 
-   <div class="math-example"> Find $\lim_{n\rightarrow \infty}\dfrac{1}{n}$.</div>
+   <div class="math-example"> Find $\displaystyle\lim_{n\rightarrow \infty}\dfrac{1}{n}$.</div>
+
+   <p>From the previous example and limit law 7, we can deduce that </p>
+
+   <div class="math-theorem"> For all $n > 0$, we have \[\lim_{x\rightarrow \infty} \dfrac{1}{x^n} = 0 \qquad \text{and} \qquad \lim_{x\rightarrow-\infty}\dfrac{1}{x^n} = 0\] if $\frac{1}{x^n}$ is defined.</div>
+
+   <div class="math-example">
+    Find \[\lim_{n\rightarrow \infty}\dfrac{1 + 2n^2}{5 + 3n + 4n^2}\]
+   </div>
+
+   <div class="math-example">
+    For the sequence \[a_n = \dfrac{n^2}{\sqrt{n^3 + 4n}}\], find what the sequence converges to.
+   </div>
+
+   <h2>Geometric Sequences</h2><hr>
+
+   <p>A <b>geometric sequence</b> is a sequence of the form $b_n = ar^n$. The sequence looks like \[a, \ ar, \ ar^2, \ ar^3, \ \dots, \]
+    
+    In general 
+
+    
+    </p>
+
+    <div class="math-fact"> \[\lim_{n\rightarrow \infty} r^n = \begin{cases} 0 & 0 < r < 1 \\ 1 & r = 1 \\ \infty & r > 1 \end{cases}\]</div>
+
+    <p>
+        <img src="/static/swrlly/images/teaching/2.1-1.PNG" style="max-width:550px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    </p>
+
+    <div class="math-example">
+        Find \[\lim_{n\rightarrow \infty} \dfrac{2^n - 1}{6^n}\]
+       </div>
+
+
+
 
 </div>
 {% endblock %}
