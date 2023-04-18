@@ -1,0 +1,95 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.2: Limits of Functions at Infinity"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.1: Limits of Functions at Infinity</h1>
+
+    <p>In this section, instead of looking at \[\lim_{n\rightarrow\infty} a_n\] we are interested in \[\lim_{x\rightarrow\infty} f(x)\]
+    </p>
+
+    <p>*picture in class*</p>
+
+    <h2>Definition of a Limit at Infinity</h2><hr>
+
+   <div class="math-def"> 
+    <p>The function $f$ has the limit $L$ as $x$ increases without bound (meaning $x\rightarrow \infty$), written as \[\lim_{x\rightarrow \infty}f(x) = L\] if $f(x)$ can be made arbitrarily close to $L$ by taking $x$ large enough.</p>
+
+    <p>Similarly, the function $f$ has the limit $M$ as $x$ decreases without bound (meaning $x\rightarrow -\infty$), written as \[\lim_{x\rightarrow -\infty}f(x) = M\] if $f(x)$ can be made arbitrarily close to $M$ by taking $x$ to be a sufficiently large negative number.</p>
+    </div>
+
+    <p>If $L$ or $M$ from above exist, then $f(x)$ has a horizontal asymptote.</p>
+
+   <div class="math-example"> Given this function $f(x)$ <img src="/static/swrlly/images/teaching/161-2.2-1.PNG" style="max-width:350px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    find $\displaystyle\lim_{x\rightarrow \infty} f(x)$ and $\displaystyle\lim_{x\rightarrow -\infty} f(x)$
+    </div>
+
+    <p>
+        Two ideas from 2.1 can be lifted to the function context. The first is
+    </p>
+
+    <div class="math-theorem"> For all $n > 0$, we have \[\lim_{x\rightarrow \infty} \dfrac{1}{x^n} = 0 \qquad \text{and} \qquad \lim_{x\rightarrow-\infty}\dfrac{1}{x^n} = 0\] if $\frac{1}{x^n}$ is defined.</div>
+
+    <p>You can quickly verify this because there exist horizontal asymptotes for any value of $n$. </p>
+
+    <p>Second idea is limit laws also hold for functions. For example: \[\lim_{x\rightarrow\infty}[f(x) + g(x)] = \lim_{x\rightarrow\infty}f(x) + \lim_{x\rightarrow\infty}g(x)\]</p>
+
+    <div class="math-example"> Find the following limits:
+    <ol>
+        <li class="lec-list-space">$\displaystyle\lim_{t\rightarrow \infty}\dfrac{8t}{1 + 4t^2}$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}\left(\sqrt{x^2 + 1} - x\right)$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}\sin x$</li>
+    </ol>
+    </div>
+
+   <h2>Exponential Functions</h2>
+
+   
+    <p> Recall the general shapes of exponential functions:
+    <img src="/static/swrlly/images/teaching/1.4 exp.PNG" style="max-width:900px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    </p>
+
+    <div class="math-example"> Find the following limits:
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow-\infty}e^x$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow-\infty}\left(\dfrac{1}{2}\right)^x$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow-\infty}e^{-x}$</li>
+        </ol>
+    </div>
+    
+    <div class="math-example">
+        In the 1930s the biologist G. F. Gause conducted an experiment with the protozoan <i>Paramecium</i>. He modeled his data with the logistic function \[P(t) = \dfrac{64}{1 + 31e^{-0.7944t}}\] for the protozoan population after $t$ days. Find the initial population and the long-run population.
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Paramecium.jpg" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    </div>
+
+    <h2>Infinite Limits at Infinity</h2><hr>
+
+    <p>The notation $\lim_{x\rightarrow\infty}f(x) = \infty$ means the values of $f(x)$ become large as $x$ becomes large. </p>
+        
+    <p>Note that $\infty$ is not a number; it is used to represent a specific characteristic about $f(x)$.</p>
+
+    <div class="math-example"> Find the following limits:
+
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}x^3$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}e^x$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}(x^2 - x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}\dfrac{x^2 + x}{3 - x}$</li>
+        </ol>
+    </div>
+
+
+
+
+</div>
+{% endblock %}
