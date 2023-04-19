@@ -1,0 +1,72 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 3"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 3"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 2</h1>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">
+             Draw a graph of a sequence which satisfies \[\lim_{n\rightarrow \infty} a_n = 3\]       
+        </li>
+        <li class="hw-space"> Below is a sequence $a_t$ of the world record times for the men's 100 meter spring every five years. 
+            <img src="/static/swrlly/images/teaching/161-hw2-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+            <ul>
+                <li class="hw-space">From a biological perspective, do you think $\lim_{t\rightarrow\infty} a_t = 0$ or greater than zero? Justify your answer.</li>
+            </ul>
+        </li>
+        <li class="hw-space">
+            Determine whether the following sequences are convergent or divergent. For the ones that converge, find out what it converges to.
+            <ul type="a">
+                <li class="hw-space">
+                    $a_n = \dfrac{3 + 5n}{2 + 7n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = 2^{-n} + 6^{-n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{10^n}{1 + 9^n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{3^{n+2}}{5^n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{2n^3 + n - 1}{n^2 + 1}$
+                </li>
+            </ul>
+        </li>
+        <li class="hw-space">
+            Find the limit:
+            <ul type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \dfrac{3x - 2}{2x + 1}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \dfrac{5}{10^x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \left(\sqrt{9x^2 + x} - 3x\right)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} (x^4 + x^5)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} \dfrac{1 - e^x}{1+2e^x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} \left(e^{-x} + 2\cos 2x\right)$</li>
+            </ul>
+        </li>
+
+        <li>more questions by wednesday night...</li>
+
+    </ol>
+
+</div>
+{% endblock %}
