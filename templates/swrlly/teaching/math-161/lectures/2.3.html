@@ -1,0 +1,111 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.3: Limits of Functions at Finite Numbers"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.3: Limits of Functions at Finite Numbers</h1>
+
+    <p>In this section, instead of looking at \[\lim_{x\rightarrow\infty} f(x)\] we are interested in \[\lim_{x\rightarrow a} f(x)\]
+    </p>
+
+    <h2>Limits: Numerical and Graphical Methods</h2><hr>
+
+    <p>There are usually three ways to find limits:
+        <ol>
+            <li class="lec-list-space">Make a table of values, see what $f(x)$ is approaching</li>
+            <li class="lec-list-space">Look at the graph</li>
+            <li class="lec-list-space">Limit laws</li>
+        </ol>
+    </p>
+
+    <p>This section develops our ability with #1 and #2. Next section looks at #3.</p>
+
+    <div class="math-def"> 
+    <p>Suppose $f(x)$ is defined when $x$ is near the number $a$. Then we write \[\lim_{x\rightarrow a} f(x) = L\] if we can make the values of $f(x)$ arbitrarily close to $L$ by taking $x$ sufficiently close to $a$ <b>but never, ever $a$ itself.</b></p>
+    </div>
+
+    <p>*picture in class*</p>
+
+    <p>If you use the table method, you need to check on both sides of $a$ to see if the limit exists.</p>
+
+    <div class="math-example">
+        Use the table method to guess the following limits:
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} \dfrac{x-1}{x^2 - 1}$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} g(x)$ where \[g(x) = \begin{cases} \dfrac{x-1}{x^2 - 1} & x \neq 1 \\ 2 & x = 1 \end{cases}\]</li>
+            <li class="lec-list-space">$\displaystyle\lim_{t\rightarrow 0} \dfrac{\sqrt{t^2 + 9} - 3}{t^2}$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 0} \left(x^3 + \dfrac{\cos 5x}{10000}\right)$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Find the limit of\[f(x) = \begin{cases} -1 & x < 0 \\ 1 & x \geq 0\end{cases} \] at $x = 0$.
+    </div>
+
+
+    <h2>One-Sided Limits</h2><hr>
+
+    <div class="math-def"> <b style="color:var(--lavender)"> One-Sided Limits</b>
+
+        <p>The function $f$ has the <b>right-hand limit</b> $L$ as $x\rightarrow a$ from the right, written \[\lim_{x\rightarrow a^+} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the right of $a$. </p>
+
+        <p>Similarly, the function $f$ has the <b>left-hand limit</b> $L$ as $x\rightarrow a$ from the left, written \[\lim_{x\rightarrow a^-} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the left of $a$. </p>
+    
+    </div>
+
+    <p>If left-and right-hand limits agree, the limit exists. This is why we have two tables/check both sides of $a$ on the graph.</p>
+
+    <p><b>If left- and right-hand limits disagree, the limit does not exist.</b></p>
+
+    <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <h2>Infinite Limits</h2><hr>
+
+    <div class="math-def"> 
+        Let $f$ be a function defined on both sides of $a$, except possibly at $a$. We write \[\lim_{x\rightarrow a} f(x) = \infty\] if $f(x)$ grows without bound by taking $x$ sufficiently close <b>but not equal to $a$.</b>
+    </div>
+
+    <p>
+        If $\lim_{x\rightarrow a}f(x) = -\infty$, then $f(x)$ is decreasing without bound. 
+    </p>
+
+    <p>These conditions are equivalent to the existence of a vertical asymptote.</p>
+
+    <p>The definition also applies to left- and right-hand limits.</p>
+
+    <div class="math-example"> Find \[\lim_{x\rightarrow 0} \dfrac{1}{x^2}\]
+    </div>
+
+    <div class="math-example"> Find $\displaystyle\lim_{x\rightarrow 3^+} \dfrac{2x}{x-3}$ and $\displaystyle\lim_{x\rightarrow 3^-} \dfrac{2x}{x-3}$.
+    </div>
+
+    <div class="math-example"> Show $x = \dfrac{\pi}{2}$ is a vertical asymptote of $f(x) = \tan(x)$.</div>
+
+    <!--<div class="math-example"> Find $\displaystyle \lim_{x\rightarrow 0^+} \ln x = - \infty$.</div>
+
+    <h2>Limit Laws</h2><hr>-->
+
+    <!--<div class="math-theorem"> <b style="color:var(--factcolor)">Properties of Limits</b></br>
+
+        Suppose \[\lim_{x\rightarrow a} f(x) \qquad \lim_{x\rightarrow a} g(x)\] exist and $c$ is a constant. Then
+     
+    <ol>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x)]^r = \left[\lim_{x \rightarrow a}f(x)\right]^r = L^r$ </li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c\cdot f(x) = c\lim_{x \rightarrow a} f(x) = cL$ </li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x) \pm g(x)] = \lim_{x\rightarrow a} f(x) \pm \lim_{x\rightarrow a} g(x) = L \pm M$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}[f(x)\cdot g(x)] = \left[\lim_{x\rightarrow a}f(x)\right]\cdot\left[\lim_{x\rightarrow a} g(x)\right] = L\cdot M$</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\lim_{x \rightarrow a} f(x)}{\lim_{x \rightarrow a}g(x)} = \frac{L}{M}$ where $M \neq 0$.</li>
+    </ol>-->
+</div>
+
+</div>
+{% endblock %}
