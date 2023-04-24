@@ -1,0 +1,130 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.4: Limits: Algebraic Methods"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>2.4: Limits: Algebraic Methods</h1>
+    <h2>The Limit Laws</h2><hr>
+
+    We know how to use a table and the graph to find a limit. Let's see some algebraic properties of limits.
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Properties of Limits</b></br>
+
+            Suppose $c$ is a constant and the limits \[\lim_{x\rightarrow a}f(x), \qquad \lim_{x\rightarrow a} g(x)\]
+        exist. Then:
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x) + g(x)] = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x) - g(x)] = \lim_{x\rightarrow a} f(x) - \lim_{x\rightarrow a} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c\cdot f(x) = c\lim_{x \rightarrow a} f(x)$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}[f(x)\cdot g(x)] = \left[\lim_{x\rightarrow a}f(x)\right]\cdot\left[\lim_{x\rightarrow a} g(x)\right]$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\lim_{x \rightarrow a} f(x)}{\lim_{x \rightarrow a}g(x)}$ if $\displaystyle\lim_{x\rightarrow a}g(x) \neq 0$.</li>
+        </ol>
+    </div>
+
+    <p>We have seen these before!</p>
+
+    <div class="math-example">
+        Given these functions <img src="/static/swrlly/images/teaching/2.4 limit law intro.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        Find <ol>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow -2}  [f(x) + 5g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1}  [f(x) \cdot g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2}  \dfrac{f(x)}{g(x)}$</li>
+        </ol>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li class="lec-list-space">From the graphs we can see \[\lim_{x \rightarrow -2} f(x) = 1 \qquad \lim_{x \rightarrow -2} g(x) = -1\]
+                So by using the limit laws we see \begin{align}\lim_{x\rightarrow -2} [f(x) + 5g(x)] &= \lim_{x\rightarrow -2} f(x) + \lim_{x\rightarrow -2} [5g(x)]
+                \\&= \lim_{x\rightarrow -2} f(x) + 5\lim_{x \rightarrow -2}g(x)
+                \\&= 1 + 5\cdot (-1) = -4\end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    Here are five more limit laws that are extremely useful.
+    
+    <div class="math-theorem"> <b style="color:var(--factcolor)">More Properties of Limits</b></br>
+
+        Suppose $a, c \in \mathbb{R}$ and $n$ is a positive integer.
+     
+        <ol start="6">
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c = c$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x = a$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x^n = a^n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}\sqrt[n]{x} = \sqrt[n]{a}$</li>
+            <li class="lec-list-space">If $f(x)$ is any function, then $\displaystyle\lim_{x\rightarrow a} \sqrt[n]{f(x)}= \sqrt[n]{\lim_{x \rightarrow a} f(x)}$.</li>
+        </ol>
+    </div>    
+
+    <b>Note:</b> this says for $n$th roots and powers of $x$, we are allowed to substitute $a$ directly. We will see why this is true in Section 2.5.
+
+    <div class="math-example"> Find the following limits:
+        <ol>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2} x^3$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 4} 5x^{2}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} (5x^4 - 2)$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} 2x^3\cdot \sqrt{x^2 + 7}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} \dfrac{2x^2 + 1}{x + 1}$</li>
+        </ol>
+    </div>
+
+    <h2>First Look at Indeterminate Forms</h2><hr>
+    <div class="math-example"> Consider \[\lim_{t\rightarrow 2}\dfrac{4(t^2 -4)}{t-2}\]
+
+        Let's try using the limit laws to compute this. We have 
+        \begin{align}
+        \displaystyle\lim_{t\rightarrow 2}\dfrac{4(t^2 -4)}{t-2} &= \dfrac{\displaystyle\lim_{t\rightarrow 2} 4(t^2 - 4)}{\displaystyle\lim_{t\rightarrow 2} (t-2)}
+        \\&= \dfrac{\displaystyle 4  (\lim_{t\rightarrow 2}t^2 - \lim_{t\rightarrow 2}4)}{\displaystyle\lim_{t\rightarrow 2} t-\lim_{t\rightarrow 2}2}
+        \\&= \dfrac{4(2^2 - 4)}{2 - 2}
+        \\&= \dfrac{0}{0}
+        \end{align}
+
+        The result is $0/0$, which we call an <b>indeterminate form</b>, which is different than dividing by zero.
+        To deal with these, we employ the following strategy:
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)"> Strategy for Evaluating Indeterminate Forms</b></br>
+
+        Suppose you want to evaluate $\displaystyle \lim_{x\rightarrow a}f(x)$ but end up with $0/0$. Then:
+        
+        <ol>
+            <li class="lec-list-space">Replace the original function $f(x)$ with a new function $g(x)$ that takes on the same values as the original function everywhere except at $x = a$. Then before applying limit laws, either:
+                <ol type="a">
+                    <li class="lec-list-space">Cancel out common factors.</li>
+                    <li class="lec-list-space">Rationalize the numerator or denominator.</li>
+                    <li class="lec-list-space">Simplify the expression.</li>
+                </ol>
+            </li>
+            <li class="lec-list-space">Then find $\displaystyle\lim_{x\rightarrow a} g(x)$ instead.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Find $\lim_{x\rightarrow 1}g(x)$ where \[\begin{cases}x + 1 & x \neq 1 \\ \pi & x = 1\end{cases}\]</div>
+
+    <div class="math-example"> Find \[\lim_{x\rightarrow 2}\dfrac{4(x^2-4)}{x-2}\]</div>
+
+    <div class="math-example"> Find \[\lim_{h\rightarrow 0}\dfrac{\sqrt{1 + h} - 1}{h}\]</div>
+
+    <div class="math-example"> Find \[\lim_{h\rightarrow 0}\dfrac{(3+h)^2 - 9}{h}\]</div>
+    
+    <h2>Additional Properties of Limits</h2><hr>
+
+    <p>Recall:</p>
+
+    <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <div class="math-example"> Prove \[\lim_{x\rightarrow 0}\lvert x \rvert = 0\]</div>
+
+</div>
+{% endblock %}
