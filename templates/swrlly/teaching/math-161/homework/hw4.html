@@ -24,7 +24,82 @@
     <p>Answer the following:</p>
     <ol>
         <li class="hw-space">
-             Draw a graph of a sequence which satisfies \[\lim_{n\rightarrow \infty} a_n = 3\]       
+            Determine if the following limits are $-\infty$ or $\infty$:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow-3^+}\dfrac{x+2}{x+3}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow-3^-}\dfrac{x+2}{x+3}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow1}\dfrac{2-x}{(x-1)^2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Given the following functions $f(x)$ and $g(x)$: 
+            <img src="/static/swrlly/images/teaching/161-hw4-1.PNG" style="max-width:500px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+            Find the following limits, if it exists. If it doesn't, explain why.
+            <ol type="a">
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 2}\ [f(x) + g(x)]$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 1}\ [f(x) + g(x)]$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\ [f(x)g(x)]$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 2}\ [x^3f(x)]$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 1}\ \sqrt{3 + f(x)}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the following limits using limit laws:
+            <ol type="a">
+                
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} \sqrt{\dfrac{2x^2 + 2}{2x^2 - 1}}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 5}\dfrac{x^2 - 6x + 5}{x - 5}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{h\rightarrow 0}\dfrac{(4+h)^2 - 16}{h}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sqrt{x^2 + 9} - 3}{x^2}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 5}\dfrac{4 - \sqrt{x}}{16x - x^2}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{1}{x} - \dfrac{1}{x^2 + x}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{t\rightarrow-3}\dfrac{t^2 - 9}{2t^2 + 7t  +3}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sin 3x}{x}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{t\rightarrow 0}\dfrac{\tan 6t}{\sin 2t}$
+                </li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sin^2 4t}{t^2}$
+                </li>
+            </ol>
+        </li>
+
+        <li class="hw-space">For the following problems, sketch the graph of $f$ and find $\displaystyle \lim_{x\rightarrow a} f(x)$, if it exists.
+            <ol type="a">
+                <li class="hw-space">$f(x) = \begin{cases} x^2 & x \leq 1 \\ x-1 & x > 1\end{cases}, \qquad a = 1$</li>
+                <li class="hw-space">$f(x) = \begin{cases} x^2 - 3 & x \neq 0 \\ 0 & x = 0\end{cases}, \qquad a = 0$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Use the squeeze theorem to show \[\lim_{x\rightarrow 0}x^2 \cos (20\pi x) = 0\]</li>
+
+        <li class="hw-space">If $ 4x - 9 \leq f(x) \leq x^2 - 4x + 7$ for all $x \geq 0$, find $\lim_{x\rightarrow 4}f(x)$.</li>
+
+        <li class="hw-space"> Given this graph of $f(x)$ <img src="/static/swrlly/images/teaching/hw3im1.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+            Determine which statements are true or false.
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^-} f(x) = 0$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^+} f(x) = 0$</li>
+                <li class="hw-space">$f(1)$ is defined.</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} f(x) = f(2)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} f(x)= 1$ </li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^-} f(x)= \lim_{x\rightarrow 3^+}f(x)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Suppose a function $f(x)$ has $f(2) = 5$ and $\displaystyle \lim_{x \rightarrow 2}f(x) = 5$. Is the function continuous at $x = 2$?</li>
+
+        <li class="hw-space">
+            <b>Use the definition of continuity</b> to explain why the function is discontinuous at the given number $a$.  Sketch the graph of the function.
+            <ol type="a">
+                <li class="hw-space">$\displaystyle f(x) = \begin{cases}e^x & x < 0 \\ x^2 & x \geq 0\end{cases} \qquad a = 0$</li>
+                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x + 5 & x < 0 \\ 2 & x = 0 \\ -x^2 + 5 & x > 0\end{cases} \qquad a = 0$</li>
+            </ol>
         </li>
 
 </div>
