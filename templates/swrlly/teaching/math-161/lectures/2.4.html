@@ -124,7 +124,47 @@
 
     <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
 
+    <p>Limit laws also hold for one-sided limits. This means instead of using the table technique, we can now check both left- and right-handed limits are equal with algebra!</p>
+
     <div class="math-example"> Prove \[\lim_{x\rightarrow 0}\lvert x \rvert = 0\]</div>
+
+    <div class="math-example"> Prove $\displaystyle\lim_{x\rightarrow 0}\lvert x \rvert = 0$ does not exist.</div>
+
+    <p>Sometimes limits can't be computed. But if we trap the function within two other functions that we know the limit of, we can find the limit of the original function itself.</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The Squeeze Theorem</b><br>
+
+        If $f(x) \leq g(x) \leq h(x)$ when $x$ is near $a$ (except possibly at $a$) and we know \[\lim_{x\rightarrow a}f(x) = \lim_{x\rightarrow a}h(x) = L\] then $\displaystyle \lim_{x\rightarrow a}g(x) = L$.
+
+        <img src="/static/swrlly/images/teaching/161-2.4-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+
+    <div class="math-example"> Show that $\displaystyle \lim_{x\rightarrow 0} x^2 \sin \dfrac{1}{x} = 0$.
+
+        <img src="/static/swrlly/images/teaching/161-2.4-2.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+
+    <h2>Limits of Trigonometric Functions</h2><hr>
+
+    <p>Here are a few limits to know.</p>
+
+    <div class="math-fact"> 
+
+        \[\lim_{\theta \rightarrow a}\sin\theta = \sin a \qquad \lim_{\theta \rightarrow a}\cos\theta = \cos a \qquad \lim_{\theta \rightarrow 0} \dfrac{\sin\theta}{\theta} = 1\]
+
+    </div>
+
+    <p>Notice for both $\sin \theta$ and $\cos \theta$ their limit values actually see what happens at $a$. The next section will describe why.</p>
+
+    <p>The core idea for trigonometric limits is to rewrite the expression in terms of limits you know how to evaluate.</p>
+
+    <div class="math-example"> Find $\displaystyle\lim_{x\rightarrow0} \dfrac{\sin 7x}{4x}$</div>
+
+    <div class="math-example"> Find $\displaystyle\lim_{\theta\rightarrow 0} \dfrac{\cos\theta - 1}{\theta}$</div>
+
+
 
 </div>
 {% endblock %}

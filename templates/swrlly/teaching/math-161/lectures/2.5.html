@@ -1,0 +1,151 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.4: Limits: Algebraic Methods"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>2.5: Continuity</h1>
+
+    <h2>Continuous Functions</h2><hr>
+
+    <p>In precalculus we learned that continuous functions are functions we can draw the graph of without lifting our pencil.</p>
+    <p>In calculus, use the previous sentence as intuition for the next definition:</p>
+    
+    <div class="math-def"> A function $f$ is <b>continuous at a number</b> $x = a$ if the following conditions are satisfied:
+    <ol>
+        <li class="lec-list-space">$f(a)$ is defined.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x)$ exists.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x) = f(a)$.</li>
+    </ol>
+
+    <p>If any of these conditions fail, then the function is not continuous.</p>
+
+    </div>
+
+    <p><b>Note:</b> The limit $\lim_{x\rightarrow a}$ doesn't see what happens at $a$.</p>
+
+    <p>Continuity is the reason why the limit does equal to the value at $a$.</p>
+
+    <div class="math-example"> 
+        <p>Given this graph of a function $f$:</p> <img src="/static/swrlly/images/teaching/2.5cont.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        <p>Where is the function not continuous?</p>
+    </div>
+
+    In general:
+    <ol>
+        <li class="lec-list-space">A function $f$ is said to be <b>continuous on an interval</b> if $f$ is continuous on every number in the interval.</li>
+        <li class="lec-list-space">If $f$ is not continuous at $x = a$, it is said to be <b>discontinuous</b> at $x = a$.</li>
+    </ol>
+
+    <div class="math-example">
+        Show $f(x) = x^3 + 3x^2$ is continuous at every real number.
+    </div>
+
+    <div class="math-example">
+        <b>Use the definition of continuity</b> to find out where each of the following functions are discontinuous:
+        <ol>
+            <li class="lec-list-space">$f(x) = \dfrac{x^2 - x - 2}{x-2}$</li>
+            <li class="lec-list-space">$f(x) = \begin{cases}\dfrac{1}{x^2} & x \neq 0 \\ 1 & x = 0\end{cases}$</li>
+            <li class="lec-list-space">$f(x) = \begin{cases}\dfrac{x^2-x-2}{x-2} & x \neq 2 \\ 1 & x = 2\end{cases}$</li>
+            <li class="lec-list-space">$f(t) = \begin{cases} 0 & t < 0 \\ 1 & t \geq 0 \end{cases}$</li>
+        </ol>
+
+        <img src="/static/swrlly/images/teaching/161-2.5-1.PNG" style="max-width:1200px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+
+
+
+
+    <h2>Which Functions are Continuous?</h2><hr>
+
+    <p>Continuity allows us to find limits quickly. Let's see what functions are continuous.</p>
+
+    <div class="math-def">
+        <p>A <b>polynomial function</b> of degree $n$ is a function of the form \[f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_2x^2 + a_1x + a_0\qquad a_n \neq 0\]
+        where $a_n, a_{n-1},\dots, a_1, a_0 \in \mathbb{R}$.</p>
+        <p>A <b>rational function</b> is a function of the form \[r(x) = \dfrac{p(x)}{q(x)}\] where $p(x)$ and $q(x)$ are both polynomials.</p>
+    </div>
+
+    <div class="math-fact">
+        If $f$ and $g$ are continuous at $a$ and $c$ is a constant, then the following functions are also continuous at $a$:
+        <ol>
+            <li class="lec-list-space">$f + g$</li>
+            <li class="lec-list-space">$f - g$</li>
+            <li class="lec-list-space">$cf$</li>
+            <li class="lec-list-space">$fg$</li>
+            <li class="lec-list-space">$f/g$ if $g(a) \neq 0$</li>
+        </ol>
+    </div>
+
+    If you take facts 1 and 3, we can create polynomial functions. Including fact 5 gives us rational functions. So in general:
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">A polynomial function $P(x)$ is continuous on any value of $x$.</li>
+            <li class="lec-list-space">A rational function $R(x) = p(x)/q(x)$ is continuous on every value of $x$ where $q(x) \neq 0$.</li>
+        </ol>
+    </div>
+
+    This means if we take any limit (except for limit at infinity) for polynomial and rational functions, we can just plug in the value!
+
+    <div class="math-example">
+        Find \[\lim_{x\rightarrow -2} \dfrac{x^3 + 2x^2 - 1}{5 - 3x}\]
+    </div>
+
+    <p>Turns out most of the functions we know about are continuous.</p>
+
+    <div class="math-theorem"> The following functions are continuous at every number in their domains:
+        <ol>
+            <li class="lec-list-space">polynomials</li>
+            <li class="lec-list-space">root functions</li>
+            <li class="lec-list-space">exponential functions</li>
+            <li class="lec-list-space">rational functions</li>
+            <li class="lec-list-space">trigonometric functions</li>
+            <li class="lec-list-space">logarithmic functions</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Find \[\lim_{x\rightarrow\pi}\dfrac{\sin x}{2 + \cos x}\]</div>
+
+    <h2>Intermediate Value Theorem</h2><hr>
+
+    <p>Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]</p>
+
+    <p>Consider the endpoints. At time $t = 0$, the maglev is at position $f(0) = 0$; it hasn't moved from its starting position.</p>
+
+    <p>At time $t = 10$, the maglev is at position $f(10) = 400$. This means the maglev is 400 units away from it's starting position.</p>
+
+    <p>This function is continuous. Intuitively, this means the maglev cannot "suddenly" jump over portions of the track; it must always be on the track.</p>
+
+    <p>As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b></p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b><br>
+    
+    If $f$ is a continuous function on a closed interval $[a, b]$ and $M$ is any number between $f(a)$ and $f(b)$, then there is at least one number $c$ in $[a,b]$ such that $f(c) = M$.
+    </div>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Existence of Zeros of a Continuous Function</b><br>
+    
+        If $f$ is a continuous function on a closed interval $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there exists $c \in (a, b)$ where $f(c) = 0$.
+    </div>
+
+    <div class="math-example">
+        Let $f(x) = x^3 + x + 1$.
+        <ol>
+            <li>Show $f$ is continuous for all $x \in \mathbb{R}$.</li>
+            <li>Show there exists at least one $c \in (-1, 1)$ where $f(c) = 0$.</li>
+        </ol>
+    </div>
+
+</div>
+{% endblock %}
