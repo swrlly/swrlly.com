@@ -1,0 +1,54 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.2: Derivative as a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.2: Derivative as a Function</h1><hr>
+
+    <p>Recall the definition of a derivative at $x = a$:</p>
+
+    <div class="math-def">
+        The <b>derivative of a function $f$ at a number $a$</b>, denoted by $f'(a)$, is \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] if this limit exists.
+    </div>
+
+    If we let $a$ vary, we can think of the derivative as a function:
+
+    <div class="math-def">
+        The <b>derivative of a function $f$</b>, denoted by $f'(x)$, is \[f'(x) = \lim_{h\rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\] if this limit exists.
+    </div>
+
+    <div class="math-example">
+        Given this graph 
+        <img src="/static/swrlly/images/teaching/161-3.2-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        Sketch the derivative.
+    </div>
+
+    <div class="math-example"> If $f(x) = \dfrac{1}{x}$, find $f'(x)$.</div>
+
+    <div class="math-example"> If $f(x) = \sqrt{x}$, find $f'(x)$. Compare their graphs.</div>
+
+    <h2>Differentiability</h2>
+
+    <p>If you let $y = f(x)$, the derivative has many different notations:
+
+        \[f'(x) = y' = \dfrac{dy}{dx} = \dfrac{d}{dx} f(x) = Df(x) = D_xf(x)\]
+    </p>
+
+    <div class="math-example"> A function $f$ is <b>differentiable at $a$</b> if $f'(a)$ exists. It is <b>differentiable on an open interval </b> $(a,b)$ if it is differentiable at every number in the interval.</div>
+
+    <div class="math-example">Show $f(x) = \lvert x \rvert$ is not differentiable at $x = 0$.</div>
+
+    <p>How are differentiability and continuity related?</p>
+
+</div>
+{% endblock %}

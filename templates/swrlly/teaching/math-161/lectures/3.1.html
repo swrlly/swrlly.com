@@ -1,0 +1,79 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.1: Derivatives and Rates of Change"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.1: Derivatives and Rates of Change</h1><hr>
+
+    <p>We will study a special type of limit called a <b>derivative.</b> These arise when we are looking at an instantaneous rate of change, the slope of a tangent line, or a velocity.</p>
+
+    <h2>Instantaneous Rate of Change</h2><hr>
+
+    <p>Average rate of changes can be used to find instantaneous rates of change.</p>
+
+    <p>In context of velocity, the instantaneous rate of change is the velocity you read off of your speedometer at a certain time point.</p>
+
+    <div class="math-example">
+        Suppose you wish to travel to Lake Tahoe. The total distance traveled from San Luis Obispo is modelled by \[f(t) = 12t^2 \qquad 0 \leq t \leq 6\] where $t$ is in hours.
+        <ol>
+            <li class="lec-list-space">What is the average rate of change of distance?</li>
+            <li class="lec-list-space">Find the average velocity over $[0, 6]$.</li>
+            <li class="lec-list-space">Using limit ideas, find the instantaneous velocity at the third hour.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">   
+        Medical researchers measured the blood alcohol concentration (BAC) of eight fasting adult male subjects after rapid consumption of 15 mL of ethanol (corresponding the one alcoholic drink). The data they obtained were modeled by the concentration function \[f(x) = 0.0225xe^{-0.0467x}\] where $x$ is in minutes after consumption and $f(x)$ is measured in mg/mL.
+
+        <img src="/static/swrlly/images/teaching/161-3.1-1.PNG" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        <p>How quickly is the BAC increasing after 10 minutes?</p>
+    </div>
+
+    <h2>Tangent Lines</h2><hr>
+
+    <p>For the BAC example, turns out the slope of the tangent line at $x = 10$ is the same as the instantaneous rate of change of BAC at $x = 10$.</p>
+
+    <div class="math-example"> Find the slope of the tangent line of the previous function at $x = 10$.
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/byvgnslv2c"></iframe></div>
+    </div>
+
+    <p>The previous two examples show the limit \[\lim_{x\rightarrow a}\dfrac{f(x) - f(a)}{x - a}\] is two things at once
+        <ol>
+            <li class="lec-list-space">Slope of the tangent line at $x = 10$</li>
+            <li class="lec-list-space">Instantaneous rate of change of BAC at $x = 10$.</li>
+        </ol>
+    </p>
+
+    <p>Instead of $x \rightarrow a$, it is easier to look at $a + h$ and let $h \rightarrow 0$.</p>
+
+    <div class="math-def">
+        The <b>derivative of a function $f$ at a number $a$</b>, denoted by $f'(a)$, is \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] if this limit exists.
+    </div>
+
+    <div class="math-example"> Find an equation of the tangent line to the function $y = 3/x$ at the point $(3, 1)$.</div>
+
+    <div class="math-example"> Find the derivative of the function $f(x) = x^2 - 8x + 9$ at the number $a$.</div>
+
+    <p>If $s = f(t)$ gives the position of an object moving in a straight line $t$ seconds after rest, then the instantaneous rate of change of $f(t)$ at $a$ gives the <b>velocity</b> at $t = a$.</p>
+
+    <div class="math-example"> Suppose a ball is dropped from a tower 450m above the ground and it's position is given by \[f(t) = 4.9t^2\]
+    What is the velocity of the ball after 5 seconds?
+    </div>
+
+
+
+
+
+</div>
+{% endblock %}
