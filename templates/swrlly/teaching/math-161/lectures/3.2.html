@@ -37,7 +37,7 @@
 
     <div class="math-example"> If $f(x) = \sqrt{x}$, find $f'(x)$. Compare their graphs.</div>
 
-    <h2>Differentiability</h2>
+    <h2>Differentiability</h2><hr>
 
     <p>If you let $y = f(x)$, the derivative has many different notations:
 
@@ -46,9 +46,32 @@
 
     <div class="math-example"> A function $f$ is <b>differentiable at $a$</b> if $f'(a)$ exists. It is <b>differentiable on an open interval </b> $(a,b)$ if it is differentiable at every number in the interval.</div>
 
-    <div class="math-example">Show $f(x) = \lvert x \rvert$ is not differentiable at $x = 0$.</div>
+    <div class="math-example"> Show $f(x) = \lvert x \rvert$ is not differentiable at $x = 0$.</div>
+
+    <p>There are three cases when $f'(x)$ does not exist. 
+
+        <img src="/static/swrlly/images/teaching/161-3.2-2.PNG" style="max-width:900px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    </p>
 
     <p>How are differentiability and continuity related?</p>
+
+    <div class="math-theorem"> If $f$ is differentiable at $a$, then $f$ is continuous at $a$.</div>
+
+
+
+    <p>The proof is in the textbook; we will omit it here.</p>
+
+    <div class="math-example"> The metabolic power $P(v)$ (amount of energy required) consumed by humans who run then walk at a speed $v$ is shown below
+
+        <img src="/static/swrlly/images/teaching/161-3.2-3.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        <ol>
+            <li class="lec-list-space">Is $P$ a differentiable function of $v$?</li>
+            <li class="lec-list-space">Sketch a graph of $P'(v)$.</li>
+        </ol>
+    </div>
+
+    <!-- do higher derivatives + inc/dec after shortcuts-->
 
 </div>
 {% endblock %}

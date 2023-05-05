@@ -1,0 +1,66 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.2: Derivative as a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.3: Basic Differentiation Formulas</h1><hr>
+
+    <p>It is tedious to evaluate \[f'(x) = \lim_{h\rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\] every time. Let's look how we can reduce our work by looking at shortcuts.</p>
+
+    <div class="math-theorem"> Suppose $c \in \mathbb{R}$ and $f(x)$ and $g(x)$ are differentiable functions. Then
+        <ol>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (c) = 0$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (x^n) = nx^{n-1}$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (cf(x)) = c\dfrac{d}{dx}[f(x)]$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} [f(x) \pm g(x)] = \dfrac{d}{dx}[f(x)] \pm \dfrac{d}{dx}[g(x)]$
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        For each of the following functions $f(x)$, find $f'(x)$.
+        <ol>
+            <li class="lec-list-space">$f(x) = 28$</li>
+            <li class="lec-list-space">$f(x) = \pi^2$</li>
+            <li class="lec-list-space">$f(x) = x$</li>
+            <li class="lec-list-space">$f(x) = x^8$</li>
+            <li class="lec-list-space">$f(x) = x^2\sqrt{x}$</li>
+            <li class="lec-list-space">$f(x) = \sqrt{x}$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{1}{\sqrt[3]{x}}$</li>
+            <li class="lec-list-space">$f(x) = 5x^3$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{3}{\sqrt{x}}$</li>
+            <li class="lec-list-space">$f(x) = 4x^5 + 3x^4 - 8x^2 + x + 3$</li>
+            <li class="lec-list-space">$f(t) = \dfrac{t^2}{5} + \dfrac{5}{t^3}$</li>
+        </ol>
+    </div>
+
+    <h2>Exponential Functions</h2><hr>
+
+    <p>If $f(x) = b^x$, let's try to compute $f'(x)$.</p>
+
+    <div class="math-fact"> $e$ is the number where \[e = \lim_{h\rightarrow 0} \dfrac{e^h - 1}{h} = 1\]</div>
+
+    <p>which tells us...</p>
+
+    <div class="math-fact"> \[\dfrac{d}{dx} (e^x) = e^x\]</div>
+
+
+</div>
+{% endblock %}
