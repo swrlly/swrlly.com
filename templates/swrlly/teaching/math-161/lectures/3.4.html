@@ -1,0 +1,71 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.4: Product and Quotient Rules"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.4: The Product and Quotient Rules</h1><hr>
+
+    <p>We know how to take derivatives of sums, constants, and $x^n$. What about products?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Product Rule</b><br>
+        \[\dfrac{d}{dx}[f(x)g(x)] = f(x)g'(x) + g(x)f'(x)\]
+    </div>
+
+    <div class="math-example">
+        Find the derivatives of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = x^2\sin(x)$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = x^3(\sqrt{x} + 1)$
+            </li>
+        </ol>
+    </div>
+
+    <p>How about quotients?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Quotient Rule</b><br>
+        \[\dfrac{d}{dx}\left[\dfrac{f(x)}{g(x)}\right] = \dfrac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}\]
+    </div>
+    
+    <p>You can remember this by thinking "low Dhigh minus high Dlow, square the bottom, away you go."</p>
+
+    <div class="math-example"> Differentiate (find the derivative) of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{x}{2x-4}$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{x^2 + 1}{x^2-1}$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{\sqrt{x}}{e^x + 1}$
+            </li>
+        </ol>
+    </div>
+
+    <h2>Trigonometric Functions</h2>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = \tan(x)$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = \csc(x)$
+            </li>
+        </ol>
+
+</div>
+{% endblock %}
