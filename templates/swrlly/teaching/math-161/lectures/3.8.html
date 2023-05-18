@@ -1,0 +1,42 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.8: Linear Approximations and Taylor Polynomials"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.8"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.8: Linear Approximations and Taylor Polynomials</h1><hr>
+
+    <h2>Tangent Line Approximations</h2><hr>
+
+    <p>A curve lies close to it's tangent line near the point of tangency.</p>
+
+    <p>This means we can use the tangent line to calculate approximate values near $x = a$.</p>
+
+    <p>If the tangent line is at $(a, f(a))$, then the point-slope form is \[y - f(a) = f'(a)(x - a)\]</p>
+
+    <p>If we call this line a function, it's called the <b>linearization</b> of $f$ at $a$:</p>
+
+    <div class="math-def">The <b>linearization</b> of $f$ at $a$ is \[L(x) = f(a) + f'(a)(x-a)\]</div>
+
+    <div class="math-example"> Find the linearization of $f(x) = \sqrt{x + 3}$ at $a = 1$ and use it to approximate the numbers $\sqrt{3.98}$ and $\sqrt{4.05}$. Are these approximations overestimates or underestimates?</div>
+
+    <div class="math-example"> Find the linear approximation of $f(x) = \sin(x)$ at $x = 0$.</div>
+
+    <h2>Taylor Polynomials</h2>
+
+
+
+
+    </div>
+
+ 
+{% endblock %}
