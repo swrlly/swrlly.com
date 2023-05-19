@@ -1,0 +1,65 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 7</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 7"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 7"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw7"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 7</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p><hr>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation:
+            <ol type="a">
+                <li class="hw-space">$x^2 - xy - y^2 = 4$</li>
+                <li class="hw-space">$1 + x = \sin(xy)$ </li>
+                <li class="hw-space">$2\sqrt{x} + \sqrt{y} = 3$</li>
+                <li class="hw-space">$(x + y)^3 + x^3 + y^3 = 0$</li>    
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the equation of the tangent line at $(1,2)$ for the equation \[x^2  + 2xy - y^2 + x = 2\]</li>
+
+        <li class="hw-space">The formula for the volume $V$ of a cube with side length $s$ is $V = s^3$. The sides of the cube are 5 feet long and increasing at the rate of $0.2$ inches/second. How fast is the volume of the cube changing?</li>
+
+        <li class="hw-space">Suppose a drop of dye was dropped into a large bowl filled with water. If the dye spreads out in a circle and its radius is increasing at a rate of 2 cm/sec, determine how fast the area is increasing when the radius of the circle is 10 cm.</li>
+
+        <li class="hw-space">Differentiate the following. Remember you can use logarithmic differentiation to simplify the form for some problems.
+            <ol type="a">
+                <li class="hw-space">$f(x) = x\ln x$</li>
+                <li class="hw-space">$f(x) = \ln (\sin^2 x)$</li>
+                <li class="hw-space">$f(x) = \sqrt[5]{\ln x}$</li>
+                <li class="hw-space">$f(x) = \ln{\sqrt[5]{x}}$</li>
+                <li class="hw-space">$y = \ln(e^{-x} + xe^{-x})$</li>
+                <li class="hw-space">$y = \dfrac{\sin x \cos^2 x}{(x^2 + 1)^4}$</li>
+                <li class="hw-space">$f(x) = x\ln x$</li>
+                <li class="hw-space">$f(x) = x^{\cos x}$</li>
+                <li class="hw-space">$f(x) = (\sin x)^{\sin x}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the linearization of $f(x) = \cos x$ at $a = \pi /2$.</li>
+
+        <li class="hw-space">Use a linear approximation to estimate $e^{-0.0015}$.</li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 3 at $a = 0$ for $f(x) = \sin \pi x$.</li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 4 at $a = 1$ for $f(x) = \dfrac{1}{x}$.</li>
+
+    </ol>
+</div>
+{% endblock %}
