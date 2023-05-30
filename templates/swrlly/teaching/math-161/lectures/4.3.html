@@ -1,0 +1,47 @@
+
+
+
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.3: L'Hospital's Rule"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>4.3: L'Hospital's Rule: Comparing Rates of Growth</h1><hr>
+
+    <p>Consider Problem 3c on Homework 4: Find \[\lim_{h\rightarrow 0}\dfrac{(4 + h^2) - 16}{h}\]
+    </p>
+
+    <p>In using Limit Laws, we get $0/0$. This is called an <b>indeterminate form</b>.</p>
+
+    <p>Previously, we had to preprocess the problem before using limit laws. We will now use the derivative to deal with four indeterminate forms for limits: \[\dfrac{0}{0} \qquad \dfrac{\infty}{\infty} \qquad 0 \cdot \infty \qquad \infty - \infty \]</p>
+
+    <h2>Indeterminate Quotients</h2><hr>
+
+    <p>Suppose $\displaystyle \lim_{x\rightarrow a} \dfrac{f(x)}{g(x)} = \dfrac{0}{0}$. This situation is pictured below: 
+        <img src="/static/swrlly/images/teaching/161-4.3-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        Replacing $f(x)$ with $f'(x)$ and $g(x)$ with $g'(x)$ near $x = a$ allows us to look at slopes instead.
+    </p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">L'Hospital's Rule</b> <br>
+    
+        Suppose $f$ and $g$ are differentiable and $g'(x) \neq 0$ near $x = a$. Suppose either $\displaystyle\lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a} g(x) = 0$ or $\displaystyle\lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a} g(x) = \pm\infty$.<br> 
+        Then \[\lim_{x\rightarrow a} \dfrac{f(x)}{g(x)} = \lim_{x\rightarrow a} \dfrac{ f'(x)}{g'(x)}\] if the limit on the right side exists or is $\pm \infty$.
+    </div>
+
+
+
+
+
+
+</div>
+{% endblock %}

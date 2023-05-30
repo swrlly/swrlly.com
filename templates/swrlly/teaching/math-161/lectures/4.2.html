@@ -3,13 +3,13 @@
 
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 221 - 4.1</title>{% endblock %}
+{% block title %}<title>Math 221 - 4.2</title>{% endblock %}
 
 {% block discord %}
 <meta property="og:title" content="Math 221 - lectures"/>
 <meta name = "theme-color" content="#b39af0"/>
-<meta property="og:description" content="4.1: Applications of the First Derivative"/>
-<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.1"/>
+<meta property="og:description" content="4.2: How Derivatives Affect the Shape of a Graph"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.2"/>
 <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
 {% endblock %}
 
@@ -49,7 +49,7 @@
 
     <div class="math-fact"> <b style="color:var(--factcolor)">The First Derivative Test</b>
 
-        Suppose $c$ is a critical number of a continuous function $f$.
+        Suppose $c$ is a critical number of a <b>continuous function</b> $f$.
 
         <ol>
             <li class="lec-list-space">If $f'$ changes from positive to negative at $c$, then $f$ has a local maximum at $c$.</li>
@@ -59,17 +59,19 @@
     
     </div>
 
-    <p>Using the First Derivative Test is the same method as the I/D Test.</p>
+    <p>Using the First Derivative Test is the same method as the I/D Test. <b>Just make sure the function is continuous.</b></p>
 
     <div class="math-example"> Find the local minimum and local maximum values for the previous function.</div>
 
+    <div class="math-example"> Find the local minimum and local maximum values for the function $f(x) = x^4 - 4x^3$.</div>
+
     <h2>Concavity</h2><hr>
+
+    <p>The second derivative also tells us more information about a function.</p>
 
     <div class="math-def"> A graph is <b>concave up</b> if all of the tangents lie below the graph. Alternatively, a graph is <b>concave down</b> if all of the tangents lie above the graph.</div>
 
-    <p>The second derivative also tells us how the graph of $f(x)$ must look.</p>
-
-    <div class="math-theorem"> <b style="color:var(--factcolor)">Concavity Test</b>
+    <div class="math-fact"> <b style="color:var(--factcolor)">Concavity Test</b>
 
         <ul>
             <li class="lec-list-space">
@@ -81,6 +83,35 @@
         </ul>
 
     </div>
+
+    <p>Using the Concavity test is similar to the I/D Test.
+        <ol>
+            <li class="lec-list-space">Find where $f''(x) = 0$ or $f''(x)$ does not exist (reason drawn in class).</li>
+            <li class="lec-list-space">Create a sign diagram of $f''$.</li>
+        </ol>
+    </p>
+
+    <div class="math-example"> Find the intervals of concavity for the function $f(x) = x^4 - 4x^3$.</div>
+
+    <div class="math-example"> Find the intervals of concavity for the function $f(x) = -x^4 + 2x^2 + 2$.</div>
+
+    <p>$f''(x)$ can also be used to find local minimums and maximums. The framework is similar to the First Derivative Test: find potential locations and test them. </p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Second Derivative Test</b><br>
+
+        Suppose $f''(x)$ is continuous near $c$.
+
+        <ol>
+            <li class="lec-list-space">If $f'(c) = 0$ and $f''(c) > 0$, then $f$ has a local minimum at $c$.</li>
+            <li class="lec-list-space">If $f'(c) = 0$ and $f''(c) < 0$, then $f$ has a local maximum at $c$.</li>
+            <li class="lec-list-space">If $f'(c) = 0$ and $f''(c) = 0$, the test is inconclusive.</li>
+        </ol>
+
+    </div>
+
+    <div class="math-example"> Find all local minimums and maximums for the function $f(x) = x^4 - 4x^3$ using the Second Derivative Test.</div>
+    
+    <div class="math-example"> Find all local minimums and maximums for the function $f(x) = -x^4 + 2x^2 + 2$ using the Second Derivative Test.</div>
     
 
 </div>
