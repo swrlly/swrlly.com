@@ -56,11 +56,29 @@
 
     <div class="math-example"> Rank the following functions in order of how quickly they approach infinity: \[y = \ln x \qquad y = x \qquad y = e^{0.1 x} \qquad y = \sqrt{x}\]</div>
 
+    <div class="math-example"> Analyze the limiting behavior of \[f(x) = \dfrac{x + x^4}{1 + x^2 + e^x}\] by considering the dominant terms in the numerator and denominator.</div>
+
     <h2>Indeterminate Products</h2><hr>
 
     <p>Let's now deal with the indeterminate form $0 \cdot \infty$.</p>
 
+    <p>Let's say $\displaystyle \lim_{x\rightarrow a} f(x) = 0$ and $\displaystyle \lim_{x\rightarrow a} g(x) = \infty$.</p>
 
+    <div class="math-example"> Evaluate $\displaystyle\lim_{x\rightarrow 0^+} x \cdot \ln x$.</div>
+
+    <div class="math-example"> Evaluate $\displaystyle\lim_{x\rightarrow -\infty} x^2\cdot e^x$.</div>
+
+    <div class="math-example"> We modeled the blood alcohol concentration after one alcoholic drink with the function \[C(t) = 0.0225t e^{-0.0467t}\] Find $\displaystyle \lim_{t \rightarrow \infty} C(t)$ and discuss if it makes sense or not.</div>
+
+    <h2>Indeterminate Differences</h2><hr>
+
+    <p>To deal with the indeterminate form $\infty - \infty$, try to put it into $0/0$ or $\infty/\infty$ indeterminate form then use L'Hospital's Rule.</p>
+
+    <p> You can also try to get it into $\infty \cdot \infty$ form, which is $\infty$, not indeterminate.</p>
+
+    <div class="math-example"> Compute \[\lim_{x\rightarrow \frac{\pi}{2}^-} (\sec x - \tan x)\]</div>
+
+    <div class="math-example"> Compute \[\lim_{x\rightarrow \infty} (e^x - x)\]</div>
 
 </div>
 {% endblock %}
