@@ -1,0 +1,59 @@
+
+
+
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.4: Optimization Problems"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>4.4: Optimization Problems</h1><hr>
+
+    <p>Finding the absolute minimum/maximum of a function comes up in many situations in life sciences. For example, minimizing the energy required for fish to swim. Here are some guidelines to solving these problems:</p>
+
+    <h2>Guidelines for Solving Optimization Problems</h2><hr>
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">Assign a letter to each variable mentioned in the problem. If it helps, draw a figure to help you identify variables.</li>
+            <li class="lec-list-space">Find a mathematical expression for the quantity to be optimized.</li>
+            <li class="lec-list-space"><b>Eliminate all variables in the expression except for one.</b> Be careful of domain restrictions (such as physical length needs to be greater than zero).
+            <ol>
+                <li class="lec-list-space">Use information you haven't used yet in the problem to find an equation relating the variables with each other.</li>
+            </ol>
+            </li>
+            <li class="lec-list-space">Optimize the function $f$ over its domain by finding the absolute minimum or maximum.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> A farmer has 2400 ft of fencing and wants to fence off a rectangular field that borders a river with a straight bank. He needs no fence along the river. What are the dimensions of the field that has the largest area?</div>
+
+    <div class="math-example"> Many animals forage on resources that are distributed in discrete patches. For example, bumblebees visit many flowers, foraging on nectar from each. The amount of nectar N(t) consumed from any flower increases with the amount of time spent at that flower, but with diminishing returns.
+
+
+    Suppose this function is given by \[N(t) = \dfrac{0.3t}{t + 2}\]
+    where $t$ is measured in seconds and $N$ in milligrams. Suppose also the time it takes a bee to travel from one flower to the next is 4 seconds.
+    <ol>
+        <li class="lec-list-space">
+            If a bee spends $t$ seconds at each flower, find an equation for the average amount of nectar consumed per second, from the beginning of a visit to a flower until the beginning of the visit to the next flower.
+        </li>
+        <li class="lec-list-space">
+            Suppose bumblebees forage on a given flower for an amount of time that maximizes the average rate of energy gain obtained in part (a). What is the optimal foraging time?
+        </li>
+
+    </ol>
+    </div>
+
+    <div class="math-example"> By cutting away identical squares from each corner of a rectangular piece of cardboard and folding up the resulting flaps, the cardboard may be turned into an open box. If the cardboard is 16 inches long and 10 inches wide, find the dimensions of the box that will yield the maximum volume. </div>
+
+
+</div>
+{% endblock %}
