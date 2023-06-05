@@ -1,0 +1,72 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 9"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 9"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw9"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 9</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p><hr>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">
+            Find the intervals of concavity:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 2x^3 + 3x^2 - 36x$</li>
+                <li class="hw-space">$f(x) = x^4 - 2x^2 +3$</li>
+                <li class="hw-space">$f(x) = 3x^{2/3} - x$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Suppose $f'(2) = 0$ and $f''(2) = 3$. What can you say about $f$ at $x = 2$?</li>
+        <li class="hw-space">State the intervals of concavity of the following function:
+
+            <img src="/static/swrlly/images/teaching/161-hw9-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        </li>
+        <li class="hw-space">What do the critical numbers tell us about local minimums/maximums?</li>
+        <li class="hw-space">Draw the graph of a function with the two types of local maximums.</li>        
+        <li class="hw-space">Draw a graph of a function satisfying the following:
+            <ul>
+                <li class="hw-space">$f'(x) > 0$ on $(-\infty, 1)$, $f'(x) < 0$ on $(1, \infty)$</li>
+                <li class="hw-space">$f''(x) < 0$ on $(- \infty, 1)$, $f''(x) > 0$ on $(1, \infty)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty} f(x)= 2$</li>
+                <li class="hw-space">$f(1) = 5$</li>
+            </ul>
+        </li>
+
+        <li class="hw-space">Find the following limits:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}\dfrac{5^x - 3^x}{x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1}\dfrac{x^2 - 1}{x^2 - x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty}x^3e^{-x^2}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty}\dfrac{(\ln(x))^2}{x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1}\dfrac{\ln x}{\sin \pi x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \pi / 2}\dfrac{1 - \sin x}{\csc x}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Rank the functions in order of how quickly they grow as $x \rightarrow \infty$: \[y = x^5 \qquad y = 2^x \qquad y = \ln(x^{10}) \qquad y = \sqrt{x} \]</li>
+
+        <li class="hw-space">Suppose $n$ is a positive integer. Show \[\lim_{x\rightarrow \infty} \dfrac{x^n}{e^x} = 0\] by using L'Hospital's Rule.</li>
+
+        <li class="hw-space">What does the previous problem tell us about the growth rate of $e^x$ versus $x^n$?</li>
+
+        <li class="hw-space">Find the following limit by considering the dominant terms in the numerator and denominator: \[\lim_{x\rightarrow \infty} = \dfrac{x^2 - x + \ln x}{x + 2^x}\]</li>
+
+    </ol>
+</div>
+{% endblock %}
