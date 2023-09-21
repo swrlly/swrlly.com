@@ -104,5 +104,5 @@ def bindex():
 
 app.register_blueprint(darzacharts)
 app.register_blueprint(blog)
-app.config["SERVER_NAME"] = "swrlly.com"
+#app.config["SERVER_NAME"] = "swrlly.com"
 #app.config["SERVER_NAME"] = "asfdljkadsjkl.com:8000"

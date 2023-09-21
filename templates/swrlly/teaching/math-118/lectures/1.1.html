@@ -1,6 +1,6 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 118 - Preliminaries</title>{% endblock %}
+{% block title %}<title>Math 118 - 1.1</title>{% endblock %}
 
 {% block discord %}
 <meta property="og:title" content="Math 118 - lectures"/>
@@ -13,8 +13,106 @@
 {% block content %}
 <div class="container fade-in-text text-padding">
     <h1>1.1: Real Numbers</h1>
+    <h2>Real Numbers</h2><hr>
+    <p>Let's review what the real numbers are.</p>
 
-    <p>hi i will fill this in before wednesday :)</p>
+    <p>The <b>natural numbers</b> look like $1, 2, 3, 4, 5, \dots$.</p>
+
+    <p><b>Integers</b> comprise of the natural numbers, their negatives, and zero: \[\dots, -3, -2, -1, 0, 1, 2, 3, \dots\]</p>
+
+    <p><b>Rational numbers</b> are all possible ratios of integers. They look like \[r = \dfrac{m}{n}\] where $m$ and $n$ are integers, $n \neq 0$.</p>
+
+    <p><b>Irrational numbers</b> are numbers that cannot be written as a ratio of integers. For example \[\sqrt{2}, \qquad \sqrt{3}, \qquad \pi, \qquad \dfrac{3}{\pi},\] are all irrational.</p>
+
+    <p><b>Real numbers</b> are numbers that are either rational or irrational.</p>
+
+    <p>If a number is rational, its decimal representation repeats. If it is irrational, the decimal representation will never repeat.</p>
+
+    <div class="math-example">
+        For each number, decide if it is natural, integer, rational, or irrational. It can be more than one.
+        <ul>
+            <li class="lec-list-space">$\dfrac{1}{2}$</li>
+            <li class="lec-list-space">$3.5474747\dots = 3.5\overline{47}$</li>
+            <li class="lec-list-space">$5$</li>
+            <li class="lec-list-space">$\sqrt{2} = 1.414213562373095\dots$</li>
+        </ul>
+    </div>
+
+    <h2>Properties of Real Numbers</h2><hr>
+
+    <p>Let's discuss the mathematical operation of addition.</p>
+
+    <p>If I give you 4 apples, then 6 apples later, you end up with 10 apples.</p>
+
+    <p>Now if I give you 6 apples first, then four, you still end up with 10 apples.</p>
+
+    <p>This shows in addition, order does not matter.</p>
+
+    <p>Now for multiplication. Suppose I would like to add up the number 5 sixteen times. Here it is: \[5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5\]</p>
+
+    <p>That is quite cumbersome. Multiplication is used as a shorthand to communicate how many times you would like to add.</p>
+
+    <p>Adding up 5 sixteen times is simply denoted $5\cdot 16$.</p>
+
+    <p>Here are common properties of real numbers.</p>
+
+    <div class="math-fact">
+        Let $a, b, c$ be real numbers.
+        <ul>
+            <li class="lec-list-space">Commutative Properties
+                <ul>
+                    <li>$a + b = b + a$</li>
+                    <li>$ab = ba$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Associative Properties
+                <ul>
+                    <li>$(a + b) + c = a + (b + c)$</li>
+                    <li>$(ab)c = a(bc)$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Distributive Property
+                <ul>
+                    <li>$a(b + c) = ab + ac$</li>
+                    <li>$(b+c)a = ab + ac$</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="math-example">Which statements are true? Point out which property was used.
+        <ol>
+            <li class="lec-list-space">$3 + 2 + 4 = 3 + 4 + 2$</li>
+            <li class="lec-list-space">$3 + 2 \cdot 4 = 3 + 4 \cdot 2$</li>
+            <li class="lec-list-space">$5 \cdot 2 + 4 = 4 \cdot 2 + 5$</li>
+            <li class="lec-list-space">$4(x + y) = 4x + y$</li>
+            <li class="lec-list-space">$5(x + y + 2) = 5x + 5y + 5\cdot2$</li>
+        </ol>
+    </div>
+
+    <p><b>Key idea:</b> In practice, when you are solving math problems and you write the equals sign $=$, you need to be able to point out which property or fact you used.</p>
+
+    <p>You can see in problem 4 we were unable to point out a valid mathematical property that was used. This means it is incorrect.</p>
+
+    <div class="math-example">
+        Use the distributive property on the following:
+        <ol>
+            <li class="lec-list-space">$2(x + 3)$</li>
+            <li class="lec-list-space">$(a + b)(x + y)$</li>
+        </ol>
+    </div>
+
+    <h2>Addition and Subtraction</h2><hr>
+
+    <p>Suppose $a$ is a real number.</p>
+
+    <p>The number 0 is called the <b>additive identity</b> since $a + 0 = a$; the number $a$ is left unchanged.</p>
+
+    <p>The number $a$ has a <b>negative</b>, denoted $-a$. This negative has the special property that \[a + (-a) = 0\]</p>
+
+    <p><b>Subtraction</b> is the operation that undoes addition. So technically subtraction doesn't exist as an operation; it is just addition on a negative number:
+    \[a - b = a + (-b)\]</p>
+
 
     
 </div>
