@@ -12,50 +12,88 @@
 
 {% block content %}
 <div class="container fade-in-text text-padding">
-    <h1>Homework 1</h1>
-    <p><b>Directions:</b> Turn in your answers in class on a physical piece of paper.</p>
+
+    <h1>Homework 1</h1><hr>
+
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+        </ol>  
+    </p><hr>
+
     <p>Answer the following:</p>
+
+    <p>Simplify problems 1-15.</p>
     <ol>
-        <li class="prelim-list-space">Suppose $f : \mathbb{R} \rightarrow \mathbb{R}$. Is the domain of $f(x) = \sqrt{x}$ all real numbers?</li>
-        <li class="prelim-list-space">In the expression $\dfrac{x}{x + 1}$, can we cancel out the $x$'s to get $\frac{0}{0 + 1} = 0$? If we cannot, explain why.</li>
-        <li class="prelim-list-space">For the expression $\dfrac{x + 1}{x}$, can we cancel out the $x$'s to get $\frac{0 + 1}{0}$ which is undefined? If we cannot, explain why.</li>
-        <li class="prelim-list-space">In the expression $\dfrac{x + 1}{x}$, can we rewrite this as $\dfrac{x}{x} + \dfrac{1}{x}$, which simplifies as $1 + \dfrac{1}{x}$? If we cannot, explain why.</li>
-        <li>Suppose I have an expression $f(x)$ and I find two different inputs that give the same evaluation. In particular, I find that $x = 2$ and $x = 3$ gives $f(2) = f(3)$. Is $f$ a function?</li>
-        <li>Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
-        <li>Suppose I have an expression $x(y^2 + y)$ and I am asked to expand it. I try $x\cdot y^2 + x \cdot y = xy^2 + xy$. What property did I use?</li>
-        <li>What factors do $4$ and $6$ have in common?</li>
-        <li>What factors do $(x+1)^2(x+3)$ and $(x+1)(x+2)(x+3)^3$ have in common?</li>
-        <li>What factors do $xy^2$ and $xy$ have in common?</li>
-        <li>Given the previous problem, what do we factor out of $xy^2 + xy$?</li>
-        <li>What is the reverse process of expanding an expression?</li>
-        <li>A student tries to simplify $x^2 + x^3$ by applying exponent laws. They write \[x^2 + x^3 = x^{2+3} = x^5\] Why is this incorrect?</li>
-        <li>A student tries to simplify $x^2 \cdot x^3$ by applying exponent laws. They write \[x^2 \cdot x^3 = x^{2\cdot3} = x^6\] Why is this incorrect?</li>
-        <li>A student tries to simplify $(a + b)^2$ by applying exponent laws. They write \[(a + b)^2 = a^2 + b^2\] Why is this incorrect?</li>
-        <li>A student tries to simplify $\frac{3x}{x^2 + 3x + 1}$ by cancelling common terms. Noticing the $3x$ is shared, they write \[\frac{3x}{x^2 + 3x + 1} =\frac{1}{x^2 + 1}\] Why is this incorrect?</li>
-        <li class="prelim-list-space" >(skip this) Suppose I have a function $f(x)$ and $g(x) = A + Bf(Cx + D)$. State which parts of $g(x)$ correspond to the following transformations of $f(x)$:
-            <ul>
-                <li>Vertical shift</li>
-                <li>Horizontal shift</li>
-                <li>Vertical stretch/shrink</li>
-                <li>Horizontal stretch/shrink</li>
-                <li>Reflection around $x$-axis</li>
-                <li>Reflection around $y$-axis</li>
-            </ul>
+        <li class="hw-space">$x^4 \cdot x^7$</li>
+        <li class="hw-space">$\left(\dfrac{1}{2}\right)^{-1}$</li>
+        <li class="hw-space">$(x^2y)^3$</li>
+        <li class="hw-space">$\left[\dfrac{(x^3y^5)^4}{z^{-4}}\right]^0$</li>
+        <li class="hw-space">$\left(\dfrac{x}{y}\right)^2 \cdot \left(\dfrac{y^2}{z}\right)^3$</li>
+        <li class="hw-space">$\dfrac{xy^{-3}z}{(2x)^{-1}y^2z^{-2}}$</li>
+        <li class="hw-space">$\dfrac{(x+1)(x+2)}{(x+1)^{-2}(x+2)^2(x+3)}$</li>
+        <li class="hw-space">$\dfrac{1}{3} + \dfrac{1}{6}$</li>
+        <li class="hw-space">$\dfrac{(x + 2)}{2(x+2)}$</li>
+        <li class="hw-space">$\dfrac{(x+1)(x + 2)}{2(x+3)(x+2)^2}$</li>
+        <li class="hw-space">$\dfrac{1}{x+1} + \dfrac{1}{(x+1)^2}$</li>
+        <li class="hw-space">$\dfrac{1}{(x+1)(x+2)} + \dfrac{1}{(x+1)^2}$</li>
+        <li class="hw-space">$\dfrac{1}{x} + \dfrac{1}{x^2} + \dfrac{1}{x^3}$</li>
+        <li class="hw-space">$x + 2x + 3x$</li>
+        <li class="hw-space">$4xy^2 + 5x^2y - 3xy^2 - 4x^2y$</li>
+    </ol>
+
+    <ol start="16">
+        <li class="hw-space">Your friend tells you "Anytime you write an equals sign to perform a mathematical move, you should be able to call out which law or property you used." Is this true or false?</li>
+        <li class="hw-space">If \[A = \{1,2,3,4,5,6,7\} \qquad B = \{2,4,6,8\} \qquad C = \{7,8,9,10\}\] find the following:
+            <ol type="a">
+                <li class="hw-space">$A\cup B$</li>
+                <li class="hw-space">$B\cup C$</li>
+                <li class="hw-space">$A \cap C$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Simplify and graph the resulting set:
+            <ol type="a">
+                <li class="hw-space">$(-2, 0) \cup (-1, 1)$</li>
+                <li class="hw-space">$(-2, 0] \cap (-1, 1)$</li>
+                <li class="hw-space">$(-\infty, 6]\cap (2, 10)$</li>
+                <li class="hw-space">$(-\infty, -4]\cup (4, \infty)$</li>
+            </ol>
+        </li>
+        <li class="hw-space">A student tries to simplify $x^2 + x^3$ by applying exponent laws. They write \[x^2 + x^3 = x^{2+3} = x^5\] Why is this incorrect?</li>
+        <li class="hw-space">A student tries to simplify $x^2 \cdot x^3$ by applying exponent laws. They write \[x^2 \cdot x^3 = x^{2\cdot3} = x^6\] Why is this incorrect?</li>
+        <li class="hw-space">A student tries to simplify $(a + b)^2$ by applying exponent laws. They write \[(a + b)^2 = a^2 + b^2\] Why is this incorrect?</li>
+        <li class="hw-space">What is the difference between a <b>term</b> and a <b>factor</b>?</li>
+        <li class="hw-space">A student tries to simplify $\frac{3x}{x^2 + 3x + 1}$ by cancelling common terms. Noticing the $3x$ is shared, they write \[\frac{3x}{x^2 + 3x + 1} =\frac{1}{x^2 + 1}\] Why is this incorrect?</li>
+        <li class="hw-space">The distributive law says \[a(b+c) = ab + ac\]Your friend tries to simplify $(x + 3)(x + 2)$ by using the Distributive law: \[(x + 3)(x + 2) = x + 3 \cdot x + x + 3 \cdot 2\] What did they do wrong?</li>
+        <li class="hw-space">Suppose I have an expression $x(y^2 + y)$ and I am asked to expand it. I try $x\cdot y^2 + x \cdot y = xy^2 + xy$. What property did I use?</li>
+        <li class="hw-space">What is the relationship between factoring and expanding?</li>
+        <li class="hw-space">Factor the following:
+            <ol type="a">
+                <li class="hw-space">$x^2 + 5x + 6$</li>
+                <li class="hw-space">$x^2y + 5xy + 6y$ (hint: previous problem)</li>
+                <li class="hw-space">$x^4 + x^3 + x^2 + x$</li>
+                <li class="hw-space">$2x^2 - 7x + 3$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Isolate $x$ in the following expressions:
+            <ol type="a">
+                <li class="hw-space">$3x + d = q$</li>
+                <li class="hw-space">$ax + bx = c$</li>
+                <li class="hw-space">$3x + b = 4x - 3$</li>
+            </ol>
         </li>
 
+        <li class="hw-space">In the expression $\dfrac{x}{x + 1}$, can we cancel out the $x$'s to get $\frac{0}{0 + 1} = 0$? If we cannot, explain why.</li>
+        <li class="hw-space">For the expression $\dfrac{x + 1}{x}$, can we cancel out the $x$'s to get $\frac{0 + 1}{0}$ which is undefined? If we cannot, explain why.</li>
+        <li class="hw-space">In the expression $\dfrac{x + 1}{x}$, can we rewrite this as $\dfrac{x}{x} + \dfrac{1}{x}$, which simplifies as $1 + \dfrac{1}{x}$? If we cannot, explain why.</li>
+        <li class="hw-space">Suppose $f$ is a function. What two problems do you need to look for when finding the domain?</li>
+        <li class="hw-space">Suppose I have an expression $f(x)$ and I find two different inputs that give the same evaluation. In particular, I find that $x = 2$ and $x = 3$ gives $f(2) = f(3)$. Is $f$ a function?</li>
+        <li class="hw-space">Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
+
     </ol>    
-    <p>State the LCD and add.</p>
-    <ol start="18">
-        <li class="prelim-list-space">$\dfrac{1}{x+1} + \dfrac{1}{(x+1)^2}$</li>
-        <li class="prelim-list-space">$\dfrac{1}{(x+1)(x+2)} + \dfrac{1}{(x+1)^2}$</li>
-        <li class="prelim-list-space">$\dfrac{1}{x} + \dfrac{1}{x^2} + \dfrac{1}{x^3}$</li>
-    </ol>
-    <p>Simplify the following expressions. Hint: look at the common factors.</p>
-    <ol start="21">
-        <li class="prelim-list-space">$\dfrac{2}{4}$</li>
-        <li class="prelim-list-space">$\dfrac{(x + 2)}{2(x+2)}$</li>
-        <li class="prelim-list-space">$\dfrac{(x+1)(x + 2)}{2(x+3)(x+2)^2}$</li>
-    </ol>
 
 </div>
 {% endblock %}
