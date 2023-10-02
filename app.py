@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 DATABASE = 'darzadata/data/playerdata.db'
-cssVersion = "16"
+cssVersion = "17"
 
 @app.route("/")
 def Index():

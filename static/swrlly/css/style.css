@@ -438,7 +438,7 @@ a:hover {
 .math-notxt {
     border-left-style: solid;
     border-left-width: 1px;
-    border-left-color: var(--text-color);
+    border-left-color: var(--lavender);
     padding-left: 10px;
     margin-bottom: 2em;
     margin-top: 2em;   
