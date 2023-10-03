@@ -1,0 +1,95 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.3: Expanding and Factoring"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.3: Expanding and Factoring</h1>
+
+    <p>Goal: Understand like terms, expanding, and factoring.</p>
+
+    <p>As always, looking for the structure of an expression before even writing anything down is crucial to using the correct properties!</p>
+
+    <h2>Algebraic Expressions</h2><hr>
+
+    <p>Algebraic expressions are just operations, numbers, and variables mixed together. For example \[2x^2 - 3x + 4 \qquad \sqrt{x} + 10 \qquad (x + 1)(x + 2) \qquad (a + b + c)^2(x^2y + 3)\] are all algebraic expressions.</p>
+
+    <h2>Adding and Subtracting</h2><hr>
+
+    <p>To add and subtract algebraic expressions, look for <b>like terms</b>.</p>
+
+    <p>Like terms are terms with the same factors except possibly for the numerical factor (called the <b>coefficient</b>).</p>
+
+    <div class="math-example">
+        Which are like terms?
+        <ul>
+            <li class="lec-list-space">$x^3$ and $3x^3$</li>
+            <li class="lec-list-space">$-4x^2y^2$ and $3y^2x^2$</li>
+            <li class="lec-list-space">$-(x+2)(x+1)$ and $3(x+1)(x+2)$</li>
+        </ul>
+    </div>
+
+    <p>Remember: identify the factors. This is your guiding light.</p>
+
+    <p>To add like terms, we undo the distributive law: \[x^3 + 2x^3 = 1\cdot x^3 + 2\cdot x^3 = x^3(1 + 2) = 3x^3\]</p>
+
+    <p>In essence, add together the coefficients for like terms.</p>
+
+    <div class="math-example">Add and subtract the following:
+        <ul>
+            <li class="lec-list-space">$x^3 + 2x^2 + 3x^3$</li>
+            <li class="lec-list-space">$(4x^2y + 3xy^2) - (3x^2y^2 - 2xy^2)$</li>
+        </ul>
+    </div>
+
+    <h2>Multiplying</h2><hr>
+
+    <p>Multiplying is also called <b>expanding</b>. Expanding problems are just the distributive law applied.</p>
+
+    <p>In expanding problems, you always start with <b>factors</b> and you end with <b>terms</b> (context if not explicitly mentioned is always the entire expression).</p>
+
+    <p>Look at the distibutive law: \[a\cdot(b + c) = a\cdot b + a \cdot c\]</p>
+
+    <p>The Law is saying for the <b>factor</b> $a$ outside the parenthesis, distibutive it to each <b>term</b> within the parenthesis.</p>
+
+    <div class="math-example">Expand the following:
+        <ul>
+            <li class="lec-list-space">$(2x + 1)(3x - 5)$</li>
+            <li class="lec-list-space">$(x^2 + 2x + 1)(x + 1)$</li>
+        </ul>
+    </div>
+
+    <h2>Special Product Formulas</h2><hr>
+
+    <p>Here are three formulas you should be able to recall by heart. Your calculus professor will expect you to immediately be able to see these.</p>
+
+    <div class="math-notxt">
+        <ul>
+            <li class="lec-list-space">$(A + B)(A - B) = A^2 - B^2$</li>
+            <li class="lec-list-space">$(A + B)^2 = A^2 + 2AB  +B^2$</li>
+            <li class="lec-list-space">$(A - B)^2 = A^2 - 2AB + B^2$</li>
+        </ul>
+    </div>
+
+    <p>Note that $A$ just needs to be a <b>term</b>. $A$ could be $(x + y)$. It could be $2x$. Hopefully you are starting to see the importance of identifying terms/factors. It is in everything we do!</p>
+
+    <div class="math-example"> Expand the following using the formulas:
+        <ul>
+            <li class="lec-list-space">$(2x + 1)^2$</li>
+            <li class="lec-list-space">$(2x - 3)(2x + 3)$</li>
+        </ul>
+    </div>
+
+    <h2>Factoring</h2>
+
+    
+</div>
+{% endblock %}
