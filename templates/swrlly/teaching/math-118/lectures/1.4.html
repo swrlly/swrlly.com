@@ -1,0 +1,71 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.4: Dealing with Rational Expressions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>1.4: Dealing with Rational Expressions</h1>
+
+    <p><a href="/teaching/math-118/lectures/1.1">Back in Section 1.1</a>, we defined five fraction properties we can use when manipulating fractions. They are copied here for convenience:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+
+        Suppose $a,b,c,d$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad + bc}{bd}$</li>
+            <li class="lec-list-space">$\dfrac{ac}{bc} = \dfrac{a}{b}$</li>
+        </ol>
+    </div>
+
+    <p>We will now manipulate fractional expressions but ones that include variables.</p>
+
+    <h2>Simplifying (property 5)</h2><hr>
+
+    <p>Property 5 says you can only cancel a <b>factor</b> within the <b>context of the entire numerator/denominator</b>.</p>
+
+    <p>To simplify, convert numerator/denominator to factors, then cancel.</p>
+
+    <div class="math-example"> Simplify the expression $\dfrac{x^2 - 1}{x^2 + x - 2}$.</div>
+
+    <h2>Multiplying (property 1)</h2><hr>
+
+    <p>When multiplying, you should simplify first, then multiply.</p>
+    
+    <div class="math-example"> Multiply and simplify: \[\dfrac{x^2 + 2x - 3}{x^2 + 8x + 16}\cdot \dfrac{3x + 12}{x - 1}\]</div>
+    
+    <h2>Dividing (property 2)</h2><hr>
+
+    <div class="math-example"> Divide and simplify: \[\dfrac{x-4}{x^2 - 4} \div \dfrac{x^2 - 3x - 4}{x^2 + 5x + 6}\]</div>
+
+    <h2>Adding (property 3 + 4)</h2><hr>
+
+    <p>Adding fractions required you to find the LCD.</p>
+
+    <p>LCD requires <b>factors</b>.</p>
+
+    <p>You can group <b>terms</b> together with parentheses to create a <b>factor</b>.</p>
+
+    <div class="math-example"> Perform the indicated operation and simplify:
+        <ul>
+            <li class="lec-list-space">$\dfrac{3}{x-1} + \dfrac{x}{x+2}$</li>
+            <li class="lec-list-space">$\dfrac{1}{x^2 - 1} - \dfrac{2}{(x + 1)^2}$</li>
+        </ul>
+    </div>
+
+
+    
+</div>
+{% endblock %}
