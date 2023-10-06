@@ -31,7 +31,7 @@
     <h2>Terminal Points and the Reference Number</h2><hr>
     <div class="math-def">
         Let $t$ be a real number. If $t \geq 0$, travel $t$ units along the unit circle counterclockwise from $(1, 0)$ and mark the destination point $P$. If $t < 0 $, travel $\lvert t \rvert$ units along the unit circle clockwise from $(1, 0)$ and mark the destination point $P$.</br>
-        The point $P$ is called the terminal point.
+        The point $P$ is called the <b>terminal point.</b>
     </div>
     <!--<p><b>In general:</b> rotating counterclockwise means $t$ is positive and rotating clockwise means $t$ is negative.</p>-->
     <div class="math-example">
@@ -43,6 +43,7 @@
         </div>
        
     </div>
+    <p>Goal: Determine terminal points for any t value on the unit circle.</p>
     <p>
         <ul>
             <li>The circumference of the unit circle is $C = 2\pi r = 2\pi$. This is why we saw $t = \pi$ when we traversed half of the circle above. </li>
@@ -92,18 +93,25 @@
             </tr>
             </tbody>
         </table>
-        Let's derive the terminal point $P$ for $t = \frac{\pi}{4}$. We know the terminal point lies halfway between $(0, 1)$ and $(1, 0)$. The unit circle is symmetric around the line $y = x$ so this line must cut through the terminal point $P$.
-    </br>We know $x^2 + y^2 = 1$, so substitute $y = x$ into the equation and solve for $x:$ 
-    \begin{align}
-    x^2 + y^2 &= 1\\
-    x^2 + x^2 &= 1\\
-    2x^2 &= 1\\
-    x^2 &= \frac{1}{2}\\
-    x &= \pm \frac{1}{\sqrt{2}}
-    \end{align}
-    When $t = \frac{\pi}{4}$, $P$ is in the first quadrant so $x$ must be $\frac{1}{\sqrt{2}}$. Since $y = x$ we know \[P\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\]
-    after rationalizing the denominator. Similar arguments can be used to derive the terminal points for $t = \frac{\pi}{6}, \frac{\pi}{3}$.
     </p>
+
+    <div class="math-example"> Show the terminal point for $t = \frac{\pi}{4}$ is the one stated above.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Let's derive the terminal point $P$ for $t = \frac{\pi}{4}$. We know the terminal point lies halfway between $(0, 1)$ and $(1, 0)$. The unit circle is symmetric around the line $y = x$ so this line must cut through the terminal point $P$.
+        </br>We know $x^2 + y^2 = 1$, so substitute $y = x$ into the equation and solve for $x:$ 
+        \begin{align}
+        x^2 + y^2 &= 1\\
+        x^2 + x^2 &= 1\\
+        2x^2 &= 1\\
+        x^2 &= \frac{1}{2}\\
+        x &= \pm \frac{1}{\sqrt{2}}
+        \end{align}
+        When $t = \frac{\pi}{4}$, $P$ is in the first quadrant so $x$ must be $\frac{1}{\sqrt{2}}$. Since $y = x$ we know \[P\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = P\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\]
+        after rationalizing the denominator. Similar arguments can be used to derive the terminal points for $t = \frac{\pi}{6}, \frac{\pi}{3}$.
+        </div>
+    </div>
+
     <div class="math-example">
         Given $t = \frac{7\pi}{6}$ and its terminal point $P$, state two negative $t$ values that correspond to $P$.
         <br/><button class="math-btn">Show Solution</button>
