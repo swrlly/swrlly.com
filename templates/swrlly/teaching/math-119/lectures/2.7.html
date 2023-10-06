@@ -26,31 +26,31 @@
     </div>
     <p class="lecturep">Simply put, $+, -, \times, \div$ functions together is done by performing the specified operation on the function output. Let's look at some examples.</p>
     <div class="math-example">
-        Let $f(x) = \frac{1}{x-2}$ and $g(x) = \sqrt{x}$. Find the following:
+        Let $f(x) = \frac{1}{x-2}$ and $g(x) = x - 3$. Find the following:
         <ol>
             <li> $f+g, f-g, fg, \frac{f}{g}$ and their domains</li>
-            <li>$(f+g)(4), \left(\frac{f}{g}\right)(4)$, and $\left(\frac{f}{g}\right)(0)$</li>
+            <li>$(f+g)(4), \left(\frac{f}{g}\right)(4)$, and $\left(\frac{f}{g}\right)(3)$</li>
         </ol>
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
             <ol>
-                <li>Let's first find the domains and intersect them. $f(x)$ has domain $ A = \{x : x \neq 2\}$ and $g(x)$ has domain $B = \{x : x \geq 0\}$. Thus \[A \cap B = \{x : x \geq 0 \text{ and } x \neq 2\} = [0, 2) \cup (2, \infty)\]
+                <li>Let's first find the domains and intersect them. $f(x)$ has domain $ A = \{x : x \neq 2\}$ and $g(x)$ has domain $B = \mathbb{R}$. Thus \[A \cap B = \{x : x \neq 2\} = (-\infty, 2) \cup (2, \infty)\]
                     Following the above table, we see that
                     \begin{align}
-                    (f+g)(x) &= f(x) + g(x)                             &&= \frac{1}{x-2} + \sqrt{x}  \\
-                    (f-g)(x) &= f(x) - g(x)                             &&= \frac{1}{x-2} - \sqrt{x}  \\
-                    (f\cdot g)(x) &= f(x)\cdot g(x)                     &&= \frac{\sqrt{x}}{x-2}      \\
-                    \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)}    &&= \frac{1}{(x-2)\sqrt{x}}   \\         
+                    (f+g)(x) &= f(x) + g(x)                             &&= \frac{1}{x-2} + x - 3  \\
+                    (f-g)(x) &= f(x) - g(x)                             &&= \frac{1}{x-2} - (x - 3) = \frac{1}{x-2} - x + 3  \\
+                    (f\cdot g)(x) &= f(x)\cdot g(x)                     &&= \frac{x - 3}{x-2}      \\
+                    \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)}    &&= \frac{1}{(x-3)(x-2)}   \\         
                     \end{align}
                 </li>
-                The first three functions have the domain $[0, 2) \cup (2, \infty)$ while the last one has domain $(0, 2) \cup (2, \infty)$ because plugging in zero results in division by zero.
+                The first three functions have the domain $(-\infty, 2) \cup (2, \infty)$ while the last one has domain $(-\infty, 2) \cup (2, 3) \cup (3, \infty)$ because plugging in zero results in division by zero.
                 <li>
                     From part 1, the definitions of $f+g$ and $f/g$ give
                     \begin{align}
-                    (f+g)(4) &= f(4) + g(4)                             &&= \frac{1}{4-2} + \sqrt{4} & = \frac{5}{2} \\
-                    \left(\frac{f}{g}\right)(4) &= \frac{f(4)}{g(4)}    &&= \frac{1}{(4-2)\sqrt{4}} &= \frac{1}{4}   \\
+                    (f+g)(4) &= f(4) + g(4)                             &&= \frac{1}{4-2} + (4 - 3) & = \frac{3}{2} \\
+                    \left(\frac{f}{g}\right)(4) &= \frac{f(4)}{g(4)}    &&= \frac{1}{(4-2)(4 - 3)} &= \frac{1}{2}   \\
                     \end{align}
-                    Since we cannot divide by zero, $\left(\frac{f}{g}\right)(0)$ is undefined.
+                    Since we cannot divide by zero, $\left(\frac{f}{g}\right)(3)$ is undefined.
                 </li>
             </ol>
         </div>
