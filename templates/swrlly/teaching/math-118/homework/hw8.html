@@ -1,0 +1,89 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - Homework 7</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - Homework 7"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 7"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/homework/hw7"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 7</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+    </p><hr>
+    
+    <p>Answer the following:</p>
+    
+    <ol>
+        <li class="hw-space">Two polynomials $P$ and $D$ are given. Use long division to divide $P(x)$ by $D(x)$ and express $P$ in the form \[P(x) = D(x)\cdot Q(x) + R(x)\]
+            <ol type="a">
+                <li class="hw-space">$P(x) = x^4 + 2x^3 - 10x, \qquad D(x) = x - 3$</li>
+                <li class="hw-space">$P(x) = 18x^5 - 9x^4 + 3x^2 - 3, \qquad D(x) = 3x^2 - 3x + 1$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Divide the following polynomials using long division. Write your answer as $P(x) = D(x) \cdot Q(x) + R(x)$.
+            <ol type="a">
+                <li class="hw-space">$\dfrac{4x^3 + 2x^2 - 2x - 3}{2x + 1}$</li>
+                <li class="hw-space">$\dfrac{x^6 + x^4 + x^2 + 1}{x^2 + 1}$</li>
+            </ol>
+        </li>
+        <li class="hw-space">If I have a polynomial $P(x)$ and I divide it by $x - c$, is the remainder $P(c)$?</li>
+        <li class="hw-space">If I divide $x^3 + 3x^2 - 7x + 6$ by $x - 2$, what is the remainder? You can either justify with the Remainder Theorem or long division.</li>
+        <li class="hw-space">If \[x^{201} - 2x^{199} + x^{52} - 2x^{32} + 3x + 1\] is divided by $x - 1$, what is the remainder?</li>
+        <li class="hw-space">Given $P(x) = x^3 - 3x^2 + 3x - 1$:
+            <ol type="a">
+                <li class="hw-space">Show $c = 1$ is a zero of $P(x)$.</li>
+                <li class="hw-space">Find a complete factorization of $P(x)$.</li>
+            </ol>
+        </li>
+        <li class="hw-space">Given $P(x) = x^3 - x^2 - 11x + 15$:
+            <ol type="a">
+                <li class="hw-space">Show $c = 3$ is a zero of $P(x)$.</li>
+                <li class="hw-space">Find all of the zeros of $P(x)$.</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Write a degree 6 polynomial with zeros $-2, -1, 0, 1$.</li>
+
+        <li class="hw-space">If $P(x)$ is a polynomial, what is the definition of a "complete factorization of $P(x)$"?</li>
+
+        <li class="hw-space">If $P(x)$ is a polynomial and you know $x = 1 + i$ is one of the zeros, what other zero must be present?</li>
+
+        <li class="hw-space">If $(x - 2i)$ is a factor of the polynomial $P(x)$, what other factor must be present?</li>
+
+        <li class="hw-space">Write a degree 5 polynomial with zeros $-3, 2i$ and $1 - i$.</li>
+
+        <li class="hw-space">Find a complete factorization of the following polynomials. Some zeros will be given.
+            <ol type="a">
+                <li class="hw-space">$P(x) = x^2 + 25$</li>
+                <li class="hw-space">$P(x) = x^2 + 2x + 2$</li>
+                <li class="hw-space">$P(x) = x^3 - 7x^2 + 17x - 15,\qquad x = 3$ is a zero</li>
+                <li class="hw-space">$P(x) = x^5 + x^3 + 8x^2 + 8$</li>
+                <li class="hw-space">$P(x) = x^3 - x - 6, \qquad x = 2$ is a zero</li>
+                <li class="hw-space">$P(x) = x^5 - 16x$</li>
+                <li class="hw-space">$P(x) = 2x^3 - 8x^2 + 9x - 9, \qquad x = 3$ is a zero</li>
+                <li class="hw-space">$P(x) = x^3 + 7x^2 + 18x + 18, \qquad x = -3$ is a zero</li>
+                <li class="hw-space">$P(x) = x^5 + 6x^3 + 9x$</li>
+                <li class="hw-space">$P(x) = x^3 - x^2 + x$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Given a degree $n$ polynomial, how many real and complex zeros are there, including zero multiplicity?</li>
+
+
+    </ol>
+
+
+</div>
+{% endblock %}
