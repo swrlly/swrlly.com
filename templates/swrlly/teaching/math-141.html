@@ -1,0 +1,36 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Cal Poly Math 141: Calculus I</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="precalculus"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block extraimports %}
+<script async src="/static/swrlly/js/centertext.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Math 141: Calculus I</h1>
+    <p>Welcome to Math 141! This page contains all the relevant links for this class.</p>
+    <h2>Syllabus</h2>
+    <p><a href="/teaching/math-141/syllabus">Click here for the syllabus.</a></p>
+    <h2>Interactive Lecture Notes</h2>
+    <p><a href="/teaching/math-141/lectures">Click here for interactive lecture notes.</a></p>
+    <h2>Homeworks</h2>
+    <p>Homework 1 will be posted by Monday 1/8.</p>
+    </ul>
+    <h2>Useful links</h2>
+    <ul>
+        <li><a href="https://www.desmos.com/">Online graphing utility (Desmos)</a></li>
+        <li><a href="/static/swrlly/files/xmethod.pdf">How to factor</a> $ax^2 + bx + c$</li>
+    </ul>
+
+</div>
+{% endblock %}
