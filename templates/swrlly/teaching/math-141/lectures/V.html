@@ -1,0 +1,90 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="1.5: Equation"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>Functions</h1>
+
+    <p>Goal: Describe the object we are going to use calculus on and how it appears in our everyday lives.</p>
+
+    <h2>Functions All Around Us</h2><hr>
+
+    <p>The word <b>function</b> describes a dependence of one quantity on another. For example:
+        <ul>
+            <li>The current room temperature is a function of time.</li>
+            <li>After a flight takes off, the total distance a plane travels is a function of time since takeoff.</li>
+        </ul>
+    </p>
+
+    <p>Functions should be thought of as a machine.</p>
+
+    <p>For example, when you input time, you get out the current temperature. Any temperature app you have uses this idea.</p>
+
+    <p>Notice that at a single time point, only one output is returned. This leads us to the mathematical definition of a function.</p>
+
+    <div class="math-def"> A <b>function</b> $f$ is a rule that assigns to each element $x$ in a set $A$ to exactly one element, called $f(x)$ in a set $B$.</div>
+
+    <div class="math-example"> What are some examples of functions you can think of?
+    </div>
+
+    <h2>Evaluating a Function</h2><hr>
+
+    <p>A simple way to mathematically represent input-output is with the notation $f(x)$.</p>
+
+    <p>Here, the $x$ between the parenthesis is your input variable, and $f(x)$ is your output.</p>
+
+    <div class="math-example">A function is defined by the formula \[f(x) = x^2 - 2\]
+        Evaluate the following:
+        <ul>
+            <li>$f(0)$</li>
+            <li>$f(-1)$</li>
+            <li>$f(-a)$</li>
+            <li>$f(x + h)$</li>
+            <li>$f(x + h) - f(x)$</li>
+        </ul>
+    </div>
+
+    <p><b>Beware:</b> everything between the parenthesis must be treated as input.</p>
+
+    <p>From now on, when instructed to perform something, like "evaluate $f(x + h)$" you must fully simplify.</p>
+
+    <p>For example, this can mean:
+        <ul>
+            <li>
+                expand then combine like terms whenever you can
+            </li>
+            <li>
+                use Fraction Law 5 to cancel factors if applicable
+            </li>
+            <li>
+                multiply all fractional expressions together to write your answer as one fraction
+            </li>
+            <li>etc.</li>
+        </ul>   
+    </p>
+
+    <div class="math-example"> A function is defined by \[g(x) = x^2 - x\] Evaluate the following:
+        <ul>
+            <li>$g(0)$</li>
+            <li>$g(-1)$</li>
+            <li>$g(-a)$</li>
+            <li>$g(x + h)$</li>
+            <li>$g(x + h) - g(x)$</li>
+        </ul>
+    </div>
+
+    <h2>Piecewise Functions</h2>
+
+</div>
+
+{% endblock %}
