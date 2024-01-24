@@ -101,7 +101,6 @@ blog = Blueprint(name="blog", import_name=__name__, static_folder="static", subd
 def bindex():
     return "test"
 
-
 app.register_blueprint(darzacharts)
 app.register_blueprint(blog)
-app.config["SERVER_NAME"] = "swrlly.com"
+#app.config["SERVER_NAME"] = "swrlly.com"
