@@ -28,7 +28,7 @@
 
     <p>Useful for introducing something you need, such as LCD or rationalizing!</p>
 
-    <p>There are also operations of equality. If you $+, -, \times, \div$ by the same number on each side, equality is also preserved.</p>
+    <p>There are also operations of equality. If you $+, -, \times, \div$ by the same number or expression on each side, equality is also preserved.</p>
 
     <h2>Solving for a Variable</h2><hr>
 
@@ -36,15 +36,120 @@
 
     <div class="math-example"> For the equation $3x + 4 = 10$, what value of $x$ solves the equation?</div>
 
+    <p>To solve the above equation, you need to end with the statement \[x = \cdots\]</p>
+
+    <p>This process of getting the variable by itself is called <b>isolating the variable</b>.</p>
+
     <div class="math-example"> Solve the equation $7x - 4 = 3x + 8$.</div>
 
+    <p>The previous equation is called a <b>linear equation</b>, which is an equation that looks like \[ax + b = 0\] with perhaps some manipulations.</p>
+
     <div class="math-example"> Solve for (isolate) $M$ in the equation $F = G\dfrac{mM}{r^2}$.</div>
+
+    <p>In general, if you want to isolate a variable, let's say "$x$", there are four steps:
+        <ol>
+            <li>Expand all expressions into terms so there are no parentheses.</li>
+            <li>Collect all terms with $x$ on one side. Put all other terms on the other.</li>
+            <li>Convert $x$ into a factor by using the GCF factoring method.</li>
+            <li>Divide both sides by the factor attached to $x$, therefore isolating $x$.</li>
+        </ol>
+    </p>
 
     <div class="math-example"> Isolate $w$ in the equation $A = 2lw + 2wh + 2lh$.</div>
 
     <div class="math-example"> Isolate $x$ in the equation $a - b(c + dx) = ex$.</div>
 
     <h2>Quadratics</h2><hr>
+
+    <p>The previous technique doesn't work if we have the variable to both a second power and a first power like \[x^2 + 5x = 1\] if we try factoring: \[x(x + 5) = 1 \implies x = \dfrac{1}{x + 5}\]</p>
+
+    <p>But $x$ is on both sides. Here's how to solve these, called <b>quadratic equations</b>:</p>
+    
+    <div class="math-def">
+        A <b>quadratic equation</b> is an equation of the form \[ax^2 + bx + c = 0\] where $a,b,c \in \mathbb{R}$ and $a \neq 0$.
+    </div>
+
+    <h3>Solving Quadratics with Factoring</h3>
+
+    <p>The following property is one technique to solve quadratics:</p>
+
+    <div class="math-def">
+        The <b>zero-product property</b> says \[A\cdot B = 0 \qquad \text{if and only if}\qquad A = 0 \quad \text{or} \quad B = 0\]
+    </div>
+
+    <div class="math-example">
+        Find all real-valued solutions (meaning your solutions $x \in \mathbb{R}$) of the equation $x^2 + 5x = 24$.
+    </div>
+
+    <h3>Solving Quadratics of the form $x^2 = c$</h3>
+
+    <p>Another technique to solve quadratics is by using this idea:</p>
+
+    <div class="math-fact">
+        The solutions of the equation \[x^2 = c\] are $x = \sqrt{c}$ and $x = - \sqrt{c}$.
+    </div>
+
+    <div class="math-example">
+        Find all real solutions of both equations: 
+        <ul>
+            <li class="lec-list-space">$x^2 = 5$</li>
+            <li class="lec-list-space">$(x-4)^2 = 5$</li>
+        </ul>
+    </div>
+
+    <h3>The Quadratic Formula</h3>
+
+    <p>Here is one more method to solve quadratics.</p>
+
+    <div class="math-fact">
+        The solutions of the quadratic equation $ax^2 + bx + c = 0$ where $a \neq 0$ are \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+    </div>
+
+    <div class="math-example">
+        Find all real-valued solutions of each equation.
+        <ul>
+            <li class="lec-list-space">$3x^2 - 5x - 1 = 0$</li>
+            <li class="lec-list-space">$4x^2 + 12x + 9 = 0$</li>
+            <li class="lec-list-space">$x^2 + 2x + 2 = 0$</li>
+        </ul>
+    </div>
+
+    <h2>Other Types of Equations</h2><hr/>
+
+    <p>There are other types of equations, not just linear or quadratic, such as \[\dfrac{3}{x} - \dfrac{2}{x - 3} = -\dfrac{12}{x^2 - 9} \qquad \qquad \sqrt{4x - 3} = 5 + x \qquad \qquad x^4 - 5x^2 + 4 = 0\]</p>
+
+    <p>Oftentimes, what will happen is this:
+        <ol>
+            <li>You start with a equation that isn't linear or quadratic, like above.</li>
+            <li>Try to convert the equation so that it looks linear or quadratic.</li>
+            <li>If it's linear, follow the four step process for isolating the variable.</li>
+            <li>If it's quadratic, choose one of three quadratic solving methods from above.</li>
+        </ol>
+    </p>
+
+    <h3>Equations Involving Fractional Expressions</h3>
+
+    <p>For these, think about "rescuing $x$" from the denominator, making it a global term.</p>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{3}{x} - \dfrac{2}{x - 3} = -\dfrac{12}{x^2 - 9}$.
+    </div>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{1}{x - 1} - \dfrac{2}{x^2} = 0$.
+    </div>
+
+    <h3>Equations Involving Radicals</h3>
+
+    <p>For these, think about removing the root to "rescue $x$", making it a global term.</p>
+
+    <div class="math-example">
+        Solve the equation $2x = 1 - \sqrt{2 - x}$.
+    </div>
+
+    <div class="math-example">
+        Solve the equation $\sqrt{3x + 1} = 2 + \sqrt{x + 1}$.
+    </div>
 
 
 
