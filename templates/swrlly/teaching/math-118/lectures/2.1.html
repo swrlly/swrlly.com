@@ -1,0 +1,134 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - V</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="V: Functions Crash Course"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.1"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>2.1: Functions</h1>
+
+    <p>Goals: 
+        <ul>
+            <li>Describe the object we are going to use calculus on and how it appears in our everyday lives.</li>
+            <li>Learn how to mathematically represent a function and manipulate them while avoiding common mistakes.</li>
+        </ul></p>
+
+    <h2>Functions All Around Us</h2><hr>
+
+    <p>The word <b>function</b> describes a dependence of one quantity on another. For example:
+        <ul>
+            <li>The current room temperature is a function of time.</li>
+            <li>After a flight takes off, the total distance a plane travels is a function of time since takeoff.</li>
+        </ul>
+    </p>
+
+    <p>Functions should be thought of as a machine.</p>
+
+    <p>For example, when you input time, you get out the current temperature. Any temperature app you have uses this idea.</p>
+
+    <p>Notice that at a single time point, only one output is returned. This leads us to the mathematical definition of a function.</p>
+
+    <div class="math-def"> A <b>function</b> $f$ is a rule that assigns to each element $x$ in a set $A$ to exactly one element, called $f(x)$ in a set $B$.</div>
+
+    <div class="math-example"> What are some examples of functions you can think of?
+    </div>
+
+    <h2>Evaluating a Function</h2><hr>
+
+    <p>A simple way to mathematically represent input-output is with the notation $f(x)$.</p>
+
+    <p>Here, the $x$ between the parenthesis is your input variable, and $f(x)$ is your output.</p>
+
+    <div class="math-example">A function is defined by the formula \[f(x) = x^2 - 2\]
+        Evaluate the following:
+        <ul>
+            <li>$f(0)$</li>
+            <li>$f(-1)$</li>
+            <li>$f(-a)$</li>
+            <li>$f(x + h)$</li>
+            <li>$f(x + h) - f(x)$</li>
+        </ul>
+    </div>
+
+    <p><b>Beware:</b> everything between the parenthesis must be treated as input.</p>
+
+    <p>From now on, when instructed to perform something, like "evaluate $f(x + h)$" you must fully simplify.</p>
+
+    <p>For example, this can mean:
+        <ul>
+            <li>
+                expand then combine like terms whenever you can
+            </li>
+            <li>
+                use Fraction Law 5 to cancel factors if applicable
+            </li>
+            <li>
+                multiply all fractional expressions together to write your answer as one fraction
+            </li>
+            <li>etc.</li>
+        </ul>   
+    </p>
+
+    <div class="math-example"> A function is defined by \[g(x) = x^2 - x\] Evaluate the following:
+        <ul>
+            <li>$g(0)$</li>
+            <li>$g(-1)$</li>
+            <li>$g(-a)$</li>
+            <li>$g(x + h)$</li>
+            <li>$g(x + h) - g(x)$</li>
+        </ul>
+    </div>
+
+    <h2>Domain of a Function</h2><hr>
+
+    <p>The domain of a function is the set of all inputs you can input to get out a valid real number.</p>
+
+    <p>The notation for this is $f : \mathbb{R} \rightarrow \mathbb{R}$</p>
+
+    <p>When finding domain, follow three steps:
+        <ol>
+            <li class="lec-list-space">Assume the domain is $\mathbb{R}$.</li>
+            <li class="lec-list-space">Look for numbers (call them <b>problems</b>), when evaluated, result in something that is not a real number. Problems are</li>
+            <ul>
+                <li>Plugging a number where you end up dividing by zero.</li>
+                <li>Plugging a number where you end up taking the square root of a negative number.</li>
+            </ul>
+            <li class="lec-list-space">Remove the problems from $\mathbb{R}$ and write your answer in interval notation.</li>
+        </ol>
+    </p>
+
+    <div class="math-example"> What is the domain of $g(x) = \sqrt{x}$?</div>
+    
+    <div class="math-example"> What is the domain of $g(x) = \dfrac{1}{x-4}$?</div>
+
+    <div class="math-example"> What is the domain of $g(x) = \dfrac{1}{x^2 - x}$?</div>
+
+    <div class="math-example"> What is the domain of $g(x) = \dfrac{x}{\sqrt{x + 1}}$?</div>
+
+
+
+    <h2>Piecewise Functions</h2><hr>
+
+    <p>Piecewise functions are functions where you have multiple different functions on different parts of the domain.</p>
+
+    <p>For example, \[f(x) = \begin{cases} x^2 & x \leq 1 \\ 2x + 1 & x > 1\end{cases}\] is a piecewise function.</p>
+
+    <p>Here's how to read this: If your input $x$ is less than or equal to 1, then you need to plug it into $x^2$.</p>
+
+    <p>If your input $x$ is strictly greater than 1, plug it into $2x + 1$.</p>
+
+    <div class="math-example"> For the above function, evaluate $f(0), f(1)$ and $f(2)$.</div>
+
+
+
+</div>
+
+{% endblock %}
