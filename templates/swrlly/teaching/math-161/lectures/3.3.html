@@ -17,13 +17,13 @@
 
     <p>It is tedious to evaluate \[f'(x) = \lim_{h\rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\] every time. Let's look how we can reduce our work by looking at shortcuts.</p>
 
-    <div class="math-theorem"> Suppose $c \in \mathbb{R}$ and $f(x)$ and $g(x)$ are differentiable functions. Then
+    <div class="math-theorem"> Suppose $c, n \in \mathbb{R}$ and $f(x)$ and $g(x)$ are differentiable functions. Then
         <ol>
             <li class="lec-list-space">
                 $\dfrac{d}{dx} (c) = 0$
             </li>
             <li class="lec-list-space">
-                $\dfrac{d}{dx} (x^n) = nx^{n-1}$
+                $\dfrac{d}{dx} (x^n) = nx^{n-1} \ $ (called the <b>Power Rule</b>)
             </li>
             <li class="lec-list-space">
                 $\dfrac{d}{dx} (cf(x)) = c\dfrac{d}{dx}[f(x)]$
@@ -51,66 +51,7 @@
         </ol>
     </div>
 
-    <h2>Higher-Order Derivatives</h2><hr>
-
-    <p>Recall the definition of the derivative:</p>
-
-    <div class="math-def">
-        The derivative of a function $f$ with respect to $x$ is the function $f'$ where \[f'(x) = \lim_{h\rightarrow 0}\dfrac{f(x+h)-f(x)}{h}\]
-        The domain of $f'$ is the set of all $x$ for which the limit exists.
-    </div>
-
-    <p>What if, in the definition, we had $f'(x+h) - f'(x)$ instead? This gives us the derivative of the derivative, or the second derivative.</p>
     
-    <p>To find the second derivative, first find $f'(x)$, then find the derivative of $f'(x)$.</p>
-
-    <p>In general, this extends to the $n$th derivative. Here are common notations for multiple derivatives:
-
-        <ol>
-            <li class="lec-list-space">
-                $f'(x), f''(x), f'''(x), \cdots, f^{(n)}(x)$
-            </li>
-            <li class="lec-list-space">
-                $D_xf(x), D^2_xf(x), D^3_xf(x), \cdots, D^{(n)}_xf(x)$
-            </li>
-            <li class="lec-list-space">
-                $y', y'', y''', \cdots, y^{(n)}$
-            </li>
-            <li class="lec-list-space">
-                $\dfrac{dy}{dx}, \dfrac{d^2y}{dx^2}, \dfrac{d^3y}{dx^3}, \cdots, \dfrac{d^ny}{dx^n}$
-            </li>
-        </ol>
-    </p>
-
-    <div class="math-example">
-        Find the derivatives of all orders of \[f(x) = x^5 - 3x^4 + 4x^3 - 2x^2 + x - 8\]
-    </div>
-
-    <h2>Exponential Functions</h2><hr>
-
-    <p>If $f(x) = b^x$, let's try to compute $f'(x)$.</p>
-
-    <div class="math-fact"> $e$ is the number where \[\lim_{h\rightarrow 0} \dfrac{e^h - 1}{h} = 1\]</div>
-
-    <p>which tells us...</p>
-
-    <div class="math-fact"> \[\dfrac{d}{dx} (e^x) = e^x\]</div>
-
-    <div class="math-example"> Differentiate $f(x) = e^x - x$.
-    </div>
-
-    <div class="math-example"> If $y = e^x$, find the point on the graph where the tangent line is parallel to $y = 2x$.
-    </div>
-
-    <h2>Sine and Cosine Functions</h2><hr>
-
-    <div class="math-fact">
-        \[\dfrac{d}{dx} \left[ \sin x\right] = \cos x \qquad \dfrac{d}{dx} \left[\cos x\right] = -\sin x\]
-    </div>
-
-    <div class="math-example"> Differentiate $y = 3\sin \theta + 4\cos \theta$.</div>
-
-    <div class="math-example"> If $f(x) = \sin x$, find $f^{(56)}(x)$.</div>
 
 </div>
 {% endblock %}
