@@ -24,26 +24,41 @@
         \cap B : g(x) \neq 0\}
     \end{align}
     </div>
-    <p class="lecturep">Simply put, $+, -, \times, \div$ functions together is done by performing the specified operation on the function output. Let's look at some examples.</p>
+
+    <p>Simply put, $+, -, \times, \div$ functions together is done by performing the specified operation on the function output. Let's look at some examples.</p>
+    
+    <p>Be careful when you are subtracting and multiplying functions together. If you are multiplying by $\geq 2$ terms, <b>do not forget parenthesis.</b></p>
+
+    <p>When you cancel a common factor in a rational function, you must exclude the zero of that factor from the domain.</p>
+
+    <p>Such a factor is called a <b>hole</b>.</p>
+
     <div class="math-example">
-        Let $f(x) = \frac{1}{x-2}$ and $g(x) = x - 3$. Find the following:
+        Redefine the rational function $f(x) = \dfrac{x^2 + 2x + 1}{x+1}$ with the domain exclusion.
+    </div>
+    
+    <div class="math-example">
+        Let $f(x) = x^2 + x$ and $g(x) = -x^2 - x$. Find the following:
         <ol>
             <li> $f+g, f-g, fg, \frac{f}{g}$ and their domains</li>
-            <li>$(f+g)(4), \left(\frac{f}{g}\right)(4)$, and $\left(\frac{f}{g}\right)(3)$</li>
+            <li> $\left(\frac{f}{g}\right)(0)$</li>
         </ol>
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
             <ol>
-                <li>Let's first find the domains and intersect them. $f(x)$ has domain $ A = \{x : x \neq 2\}$ and $g(x)$ has domain $B = \mathbb{R}$. Thus \[A \cap B = \{x : x \neq 2\} = (-\infty, 2) \cup (2, \infty)\]
+                <li>Let's first find the domains and intersect them. Both functions have domain $\mathbb{R}$.
                     Following the above table, we see that
                     \begin{align}
-                    (f+g)(x) &= f(x) + g(x)                             &&= \frac{1}{x-2} + x - 3  \\
-                    (f-g)(x) &= f(x) - g(x)                             &&= \frac{1}{x-2} - (x - 3) = \frac{1}{x-2} - x + 3  \\
-                    (f\cdot g)(x) &= f(x)\cdot g(x)                     &&= \frac{x - 3}{x-2}      \\
-                    \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)}    &&= \frac{1}{(x-3)(x-2)}   \\         
+                    (f+g)(x) &= f(x) + g(x)                             &&= x^2 + x + -x^2 - x = 0  \\
+                    (f-g)(x) &= f(x) - g(x)                             &&= x^2 + x - (-x^2 - x) = x^2 + x + x^2 + x = 2x^2 + 2x  \\
+                    (f\cdot g)(x) &= f(x)\cdot g(x)                     &&= (x^2 + x)(-x^2 - x) = (x^2 + x)(-x^2) + (x^2 + x)(-x) = -x^4 - x^3 - x^3 - x^2 = -x^4 - 2x^3 - x^2     \\
+                    \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)}    &&= \frac{x^2 + x}{-x^2  -x} = \frac{x(x+1)}{-x(x + 1)} = \frac{1}{-1} = -1 , \ x \neq 0, x \neq -1  \\         
                     \end{align}
                 </li>
-                The first three functions have the domain $(-\infty, 2) \cup (2, \infty)$ while the last one has domain $(-\infty, 2) \cup (2, 3) \cup (3, \infty)$ because plugging in zero results in division by zero.
+
+                To be clear, \[\dfrac{f(x)}{g(x)} = -1 , x \neq 0, x \neq -1\] Notice the domain exclusion (caused by cancelling factors) where your input $x$ cannot be $0$ nor $-1$.
+                
+                Since $\mathbb{R} \cap \mathbb{R} = \mathbb{R}$, all functions have domain $\mathbb{R}$.
                 <li>
                     From part 1, the definitions of $f+g$ and $f/g$ give
                     \begin{align}
