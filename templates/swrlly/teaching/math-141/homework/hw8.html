@@ -1,0 +1,89 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - Homework 8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - Homework 8"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 8"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/homework/hw8"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 8</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p><hr>
+    <p>Answer the following:</p>
+    <ol>
+
+        <li class="hw-space">A plane flying horizontally at an altitude of 1 mi and a speed of 500 mph passes directly over a radar station. Find the rate at which the distance from the plane to the station is increasing when it is 2 miles away from the station.</li>
+
+        <li class="hw-space">
+            Suppose $y = \sqrt{2x + 1}$ where $x$ and $y$ are functions of $t$. If $dx/dt = 3$, find $dy/dt$ when $x = 4$.
+        </li>
+
+        <li class="hw-space">The length of a rectangle is increasing at a rate of 8 cm/s and its width is increasing at a rate of 3 cm/s. When the length is 20 cm and the width is 10 cm, how fast is the area of the rectangle increasing?</li>
+
+        <li class="hw-space">The top of a ladder slides down a vertical wall at a rate of 0.15 meters per second. At the moment when the bottom of the ladder is 3 meters from the wall, it slides away from the wall at a rate of 0.2 meters peer second. How long is the ladder?</li>
+
+        <li class="hw-space">A boat is pulled into a dock by a rope attached to the bow of the boat and passing through a pulley on the dock that is 1 meter higher than the bow of the boat. If the rope is pulled in at a rate of 1 meter per second, how fast is the boat approaching the dock when it is 8 meters from the dock?
+
+            <img src="/static/swrlly/images/teaching/141-hw8-1.png" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        </li>
+
+        <li class="hw-space">
+            Explain the difference between an absolute minimum and a local minimum.
+        </li>
+
+        <li class="hw-space">
+            If $f$ is a continuous function on $(a, b)$, must an absolute maximum exist?
+        </li>
+
+        <li class="hw-space">Identify all absolute/local minimums and maximums for the following function: <img src="/static/swrlly/images/teaching/161-hw7-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></li>
+
+        <li class="hw-space">Draw a graph that is continuous on $[-2, 5]$ and has absolute minimum at $x = 3$, absolute maximum at $x = 0$.</li>
+
+        <li class="hw-space">State the definition of a <b>critical number</b> of a function $f$.</li>
+
+        <li class="hw-space">From a problem-solving perspective, without using the definition of a critical number, what does the critical number of a function tell us about?</li>
+
+        <li class="hw-space">Find the critical numbers for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) =  x^3 + 6x^2 - 15x$</li>
+                <li class="hw-space">$f(t) = t^4 + t^3 + t^2 + 1$</li>
+                <li class="hw-space">$f(y) = \dfrac{y - 1}{y^2 - y + 1}$</li>
+                <li class="hw-space">$f(x) = \sqrt{1 - x^2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the absolute maximum and minimum for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 12 + 4x - x^2, \qquad [0, 5]$</li>
+                <li class="hw-space">$f(x) = x^3 - 6x^2 + 5, \qquad [-3, 5]$</li>
+                <li class="hw-space">$f(t) = (t^2 - 4)^3, \qquad [-2, 3]$</li>
+                <li class="hw-space">$f(x) = x + \dfrac{1}{x} \qquad \left[\frac{1}{5}, 4\right]$</li>
+                <li class="hw-space">$f(x) = 5 + 54x - 2x^3, \qquad [0, 4]$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">If $a$ and $b$ are positive numbers, find the maximum value of \[f(x) = x^a(1-x)^b, \qquad 0 \leq x \leq 1\]
+
+            <br/><button class="math-btn">Show Hint</button>
+            <div class="math-solution">
+                Hint 1: Take the derivative, factor out $x^{a-1}(1-x)^{b-1}$, and use the zero product property on each factor.
+                <br/>Hint 2: The solution is one fraction with $a$ in the numerator and $a$'s and $b$'s in the denominator.
+                <br/>Cool fact: the above function is related to a statistical distribution called the <b>Beta distribution</b>. You just found the average of this distribution!
+            </div>
+        </li>
+
+    </ol>
+</div>
+{% endblock %}
