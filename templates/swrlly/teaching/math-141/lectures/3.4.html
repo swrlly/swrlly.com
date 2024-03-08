@@ -49,7 +49,27 @@
         <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}\left(\sqrt{x^2 + 1} - x\right)$</li>
         <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow\infty}\sin x$</li>
         <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow \infty} \sin \dfrac{1}{x}$</li>
-        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow \infty} \dfrac{\sqrt{2x^2 + 1}}{3x - 5}$</li>
+        <li class="lec-list-space">
+            $\displaystyle\lim_{x\rightarrow \infty} \dfrac{\sqrt{2x^2 + 1}}{3x - 5}$
+
+            <br/><button class="math-btn">Show Solution</button>
+            <div class="math-solution">
+                The largest power term of $x$ in the denominator is $x$. Because $x\rightarrow \infty$, $x$ is growing without bound, so $x$ must be positive.
+
+                Recalling that \[\sqrt{x}\cdot \dfrac{1}{x} = \sqrt{x}\cdot\sqrt{\dfrac{1}{x^2}} = \sqrt{x\cdot \dfrac{1}{x^2}}\] by the Laws of Exponents #4, we use this move in the numerator:
+
+                \begin{align}
+                \lim_{x\rightarrow \infty} \dfrac{\sqrt{2x^2 + 1}}{3x - 5} &=  \lim_{x\rightarrow \infty} \dfrac{\dfrac{\sqrt{2x^2 + 1}}{x}}{\dfrac{3x - 5}{x}}
+                \\&=  \lim_{x\rightarrow \infty} \dfrac{\sqrt{\dfrac{2x^2 + 1}{x^2}}}{3 - \dfrac{5}{x}}
+                \\&= \dfrac{\displaystyle \lim_{x\rightarrow \infty} \sqrt{2 + \dfrac{1}{x^2}}}{\displaystyle \lim_{x\rightarrow \infty} \left(3 - \dfrac{5}{x}\right)}
+                \\&=  \dfrac{\sqrt{\displaystyle \lim_{x\rightarrow \infty} 2 + \lim_{x\rightarrow\infty} \dfrac{1}{x^2}}}{\displaystyle \lim_{x\rightarrow \infty} 3 - 5\lim_{x\rightarrow \infty} \dfrac{1}{x}}
+                \\&= \dfrac{\sqrt{2 + 0}}{3 - 5 \cdot 0} 
+                \\&= \dfrac{\sqrt{2}}{3}
+                \end{align}
+            </div>
+
+
+        </li>
     </ol>
     </div>
 
