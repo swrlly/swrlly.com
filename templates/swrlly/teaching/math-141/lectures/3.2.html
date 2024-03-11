@@ -1,0 +1,103 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 3.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.2: The Mean Value Theorem"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/3.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>3.2: The Mean Value Theorem</h1>
+
+    <p>Another major concept in calculus is <b>integration</b>. To understand what the integral is, we discuss four different ideas:
+        <ol>
+            <li>Limits at infinity, or $\lim_{x\rightarrow a}f(x)$</li>
+            <li>Mean Value Theorem</li>
+            <li>Antiderivatives</li>
+            <li>The integral itself</li>
+        </ol>
+    </p>
+
+    <p>We will discuss the Mean Value Theorem in this section.</p>
+
+    <h2>Rolle's Theorem</h2><hr>
+
+    <p>Rolle's Theorem is a simpler case of the Mean Value Theorem.</p>
+
+    <div class="math-notxt"> <b style="color:var(--lavender)">Rolle's Theorem:</b>
+        Let $f$ be a function that satisfies the following hypotheses:
+        <ol>
+            <li>$f$ is continuous on the closed interval $[a,b]$</li>
+            <li>$f$ is differentiable on the open interval $(a,b)$</li>
+            <li>$f(a) = f(b)$</li>
+        </ol>
+        Then there is a number $c\in (a, b)$ such that $f'(c) = 0$.
+    </div>
+
+    <div class="math-example">
+        
+        <p>Suppose $s = f(t)$ is a position function. If the object is in same place at two different time points $t = a$ and $t = b$, then $f(a) = f(b)$.</p>
+
+        <p>Rolle's Theorem says there must exist $t = c$ between $a$ and $b$ where $f'(c) = 0$, or in other words, the velocity is zero.</p>
+
+        <p>You can see this in action by tossing a ball upwards; the ball's upward velocity reaches zero (which coincides with a local maximum!).</p>
+
+    </div>
+
+    <h2>Mean Value Theorem</h2><hr>
+
+    <p>Imagine if the heights $f(a)$ and $f(b)$ were different. This is called the Mean Value Theorem.</p>
+
+    <div class="math-notxt"> <b style="color:var(--lavender)">Mean Value Theorem:</b>
+        Let $f$ be a function that satisfies the following hypotheses:
+        <ol>
+            <li>$f$ is continuous on the closed interval $[a,b]$</li>
+            <li>$f$ is differentiable on the open interval $(a,b)$</li>
+        </ol>
+        Then there is a number $c\in (a, b)$ such that \[f'(c) = \dfrac{f(b) - f(a)}{b - a}\]
+        or multiplying both sides by $(b - a)$: \[f(b) - f(a) = f'(c)(b - a)\]
+    </div>
+
+    <div class="math-example"> Verify that the function \[f(x) = x^3 - x, \ \ [0, 4]\] satisfies the hypotheses of the MVT. Then find all numbers $c$ that satisfy the conclusion of the MVT. 
+    </div>
+
+    <h2>Consequences of the MVT</h2><hr>
+
+    <div class="math-notxt"> <b style="color:var(--lavender)">Corollary:</b>
+        If $f'(x) = 0$ for all $x \in (a, b)$, then $f$ is constant on $(a, b)$.
+
+        <br/><button class="math-btn">Show Proof</button>
+        <div class="math-solution">
+            <p>Let $x_1, x_2 \in (a, b)$ where $x_1 < x_2$.</p>
+
+            <p>Because $f$ is differentiable on $(a, b)$, it must be differentiable on $(x_1, x_2)$ and continuous on $[x_1, x_2]$. Therefore the hypotheses of MVT are satisfied.</p>
+
+            <p>Applying MVT on the interval $[x_1, x_2]$ gives us a number $c$ where $x_1 < c < x_2$ and \[f(x_2) - f(x_1) = f'(c)(x_2 - x_1)\]</p>
+
+            <p>Because $f'(x) = 0$, in particular $f'(c) = 0$, the equation above becomes \[f(x_2) - f(x_1) = 0\] or $f(x_2) = f(x_1)$.</p>
+
+            <p>This means all the heights $f(x)$ are the same in $(a, b)$. Therefore $f(x) = c$, or what we call $f$ is constant.</p>
+        </div>
+    </div>
+
+    <p>This is saying if you take the derivative of $f(x)$ and it's equal to zero, then $f(x) = c$ for some $c \in \mathbb{R}$.</p>
+
+    <p>The next consequence is the one we are after: the link to the antiderivatives.</p>
+
+    <div class="math-notxt"> <b style="color:var(--lavender)">Corollary:</b>
+        If $f'(x) = g'(x)$ for all $ x \in (a, b)$, then $f - g$ is constant on $(a, b)$, that is, \[f(x) = g(x) + c\] where $c$ is a constant.
+
+        <br/><button class="math-btn">Show Proof</button>
+        <div class="math-solution">
+            <p>Let $F(x) = f(x) - g(x)$. Then \[F'(x) = f'(x) - g'(x) = 0\] because $f'(x) = g'(x)$. By the previous theorem $F$ is constant; that is, $f - g$ is constant.</p>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
