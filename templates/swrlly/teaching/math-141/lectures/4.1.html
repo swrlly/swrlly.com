@@ -20,27 +20,73 @@
 
     <p>Before we do so, we need to discuss sigma notation.</p>
 
+    <h2>Sigma Notation</h2><hr>
+
     <p>Suppose you would like to add \[1 + 2 + 3 + 4 + 5 + \cdots + 100\]
 
         You can compactly represent this sum in <b>sigma notation</b>: \[1 + 2 + 3 + 4 + \cdots + 100 = \sum^{100}_{i = 1} i\]
 
         <ul>
             <li>The $i$ below the sigma is called the index.</li>
-            <li>The number above the sigma is where $i$ should stop.</li>
+            <li>$i$ is typically a natural number, and increases by 1 until it is equal to the number above the sigma.</li>
         </ul>
     </p>
 
     <div class="math-example">
         Evaluate the following sums:
         <ol type="a">
-            <li class="lec-list-space">$\displaystyle \sum^{5}_{i = 1}(-1)^i\cdot i</li>
-            <li class="lec-list-space">If $f(x) = x$, $\displaystyle \sum^{5}_{i = 1}i\cdot f(i)</li>
+            <li class="lec-list-space">$\displaystyle \sum^{5}_{i = 1}(-1)^i\cdot i$</li>
+            <li class="lec-list-space">$\displaystyle \sum^{5}_{i = 1}i\cdot f(i)$ given that $f(x) = x$.</li>
         </ol>
     </div>
 
     <h2>The Distance Problem</h2><hr>
 
+    <div class="math-example">
+        You are driving at 75 miles per hour. How far have you traveled after two hours?
+    </div>
+
+    <p>This example shows two things:
+        <ol>
+            <li>From velocity, we found distance. Sounds like an antiderivative (we started with $f'(x)$ and found $f(x)$)!</li>
+            <li>The calculation utilized the area underneath the graph and between the $x$-axis.</li>
+        </ol></p>
+
     <h2>The Area Problem</h2><hr>
+
+    <p>The previous problem had straight lines. But this "area underneath the curve" also works for curved lines.</p>
+
+    <div class="math-example">
+        Use rectangles to estimate the area underneath $f(x) = x^2$ on the interval $[0, 1]$.
+    </div>
+
+    <p>Here is the previous problem animated when using the <b>left endpoints</b> for the heights:
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/ujd0mbyvxh"></iframe></div>
+    </p>
+
+    <p>Notice how the approximation gets better and better as we use more and more rectangles.</p>
+    
+    <p>Consider $n$ to be the <b>number of rectangles</b>. Then in our previous sum we need to incorporate $\displaystyle\lim_{n\rightarrow \infty}$!</p>
+
+    <div class="math-example">
+        For $f(x) = x^2$ on $[0, 1]$, show the limit of the sums of the approximating rectangles approaches $\dfrac{1}{3}$.
+    </div>
+
+    <div class="math-def">
+        The area that lies underneath the graph of the <b>continuous</b> function $f$ is the limit of the sum of the approximating rectangles:
+        \begin{align}
+        A &= \lim_{n\rightarrow \infty} \left[f(x_1)\Delta x + f(x_2)\Delta x + \cdots + f(x_n) \Delta x\right]
+        \\&= \lim_{n\rightarrow \infty} \sum^n_{i = 1}f(x_i)\Delta x
+        \end{align}
+
+        where 
+        <ul>
+            <li>$\Delta x$ is the width of one rectangle, or $\Delta x = \dfrac{b - a}{n}$</li>
+            <li>$x_i$ is the right endpoint of the $i$th rectangle, where $x_i = a + i\cdot\Delta x$</li>
+        </ul>
+    </div>
+
+    <p>It turns out this limit sum formula is called the <b>definite integral</b>. <a href="/teaching/math-141/lectures/4.2">See the next section.</a></p>
 
 
 </div>
