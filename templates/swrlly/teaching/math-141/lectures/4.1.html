@@ -5,7 +5,7 @@
 {% block discord %}
 <meta property="og:title" content="Math 141 - lectures"/>
 <meta name = "theme-color" content="#b39af0"/>
-<meta property="og:description" content="4.1: The Mean Value Theorem"/>
+<meta property="og:description" content="4.1: Areas and Distances"/>
 <meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/4.1"/>
 <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
 {% endblock %}
@@ -57,11 +57,15 @@
     <p>The previous problem had straight lines. But this "area underneath the curve" also works for curved lines.</p>
 
     <div class="math-example">
-        Use rectangles to estimate the area underneath $f(x) = x^2$ on the interval $[0, 1]$.
+        Estimate the area between the graph and the $x$-axis of the function \[f(x) = x^2, \ \ [0, 1]\] using four rectangles and right endpoints for rectangle height.
+    </div>
+
+    <div class="math-example">
+        Estimate the area between the graph and the $x$-axis of the function \[f(x) = x^2, \ \ [0, 1]\] using four rectangles and left endpoints (for rectangle height).
     </div>
 
     <p>Here is the previous problem animated when using the <b>left endpoints</b> for the heights:
-        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/ujd0mbyvxh"></iframe></div>
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/v7o9kxybeb"></iframe></div>
     </p>
 
     <p>Notice how the approximation gets better and better as we use more and more rectangles.</p>
@@ -84,9 +88,11 @@
             <li>$\Delta x$ is the width of one rectangle, or $\Delta x = \dfrac{b - a}{n}$</li>
             <li>$x_i$ is the right endpoint of the $i$th rectangle, where $x_i = a + i\cdot\Delta x$</li>
         </ul>
-    </div>
 
-    <p>It turns out this limit sum formula is called the <b>definite integral</b>. <a href="/teaching/math-141/lectures/4.2">See the next section.</a></p>
+        <img src="/static/swrlly/images/teaching/141-4.1-1.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+    <p>This limit sum formula is called the <b>definite integral</b>. <a href="/teaching/math-141/lectures/4.2">See the next section.</a></p>
 
 
 </div>
