@@ -73,11 +73,17 @@
     <p>Consider $n$ to be the <b>number of rectangles</b>. Then in our previous sum we need to incorporate $\displaystyle\lim_{n\rightarrow \infty}$!</p>
 
     <div class="math-example">
-        For $f(x) = x^2$ on $[0, 1]$, show the limit of the sums of the approximating rectangles approaches $\dfrac{1}{3}$.
+        For $f(x) = x^2$ on $[0, 1]$, use $n$ rectangles and right endpoints.
     </div>
 
+    <p>This limit of sums of rectangles gives the exact area underneath the curve.</p>
+
+    <p>In our example, the exact area underneath the curve of $f(x) = x^2$ on $[0, 1]$ is the expression \[\lim_{n\rightarrow \infty} \dfrac{1}{n^3} \sum^n_{i = 1} i^2\]</p>
+
+    <p>In general</p>
+
     <div class="math-def">
-        The area that lies underneath the graph of the <b>continuous</b> function $f$ is the limit of the sum of the approximating rectangles:
+        The area that lies underneath the graph of the function $f(x)$ on the interval $[a, b]$ is the limit of the sum of the approximating rectangles:
         \begin{align}
         A &= \lim_{n\rightarrow \infty} \left[f(x_1)\Delta x + f(x_2)\Delta x + \cdots + f(x_n) \Delta x\right]
         \\&= \lim_{n\rightarrow \infty} \sum^n_{i = 1}f(x_i)\Delta x
