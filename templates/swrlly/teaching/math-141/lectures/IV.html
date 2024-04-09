@@ -44,11 +44,33 @@
 
     <p>When multiplying, you should simplify first, then multiply.</p>
     
-    <div class="math-example"> Multiply and simplify: \[\dfrac{x^2 + 2x - 3}{x^2 + 8x + 16}\cdot \dfrac{3x + 12}{x - 1}\]</div>
+    <div class="math-example"> 
+        Multiply and simplify: \[\dfrac{x^2 + 2x - 3}{x^2 + 8x + 16}\cdot \dfrac{3x + 12}{x - 1}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            \begin{align}
+            \dfrac{x^2 + 2x - 3}{x^2 + 8x + 16}\cdot \dfrac{3x + 12}{x - 1} &= \dfrac{(x+3)(x-1)}{(x+4)^2}\cdot \dfrac{3(x + 4)}{x - 1} && \text{new X method, GCF and } A^2 + 2AB + B^2
+            \\&= \dfrac{3(x+3)(x-1)(x+4)}{(x+4)^2(x-1)} && \text{Fraction Law 1}
+            \\&= \dfrac{3(x+3)}{(x+4)}
+            \end{align}
+        </div>
+    </div>
     
     <h2>Dividing (property 2)</h2><hr>
 
-    <div class="math-example"> Divide and simplify: \[\dfrac{x-4}{x^2 - 4} \div \dfrac{x^2 - 3x - 4}{x^2 + 5x + 6}\]</div>
+    <div class="math-example"> Divide and simplify: \[\dfrac{x-4}{x^2 - 4} \div \dfrac{x^2 - 3x - 4}{x^2 + 5x + 6}\]
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            \begin{align}
+            \dfrac{x-4}{x^2 - 4} \div \dfrac{x^2 - 3x - 4}{x^2 + 5x + 6} &= \dfrac{x-4}{x^2 - 4} \cdot \dfrac{x^2 + 5x + 6}{x^2 - 3x - 4} && \text{Fraction Law 2}
+            \\&= \dfrac{x-4}{(x-2)(x+2)} \cdot \dfrac{(x+2)(x+3)}{(x - 4)(x+1)} && A^2 - B^2 \text{ and new X method} 
+            \\&= \dfrac{(x-4)(x+2)(x+3)}{(x-2)(x+2)(x-4)(x+1)} && \text{Fraction Law 1}
+            \\&= \dfrac{x+3}{(x-2)(x+1)} && \text{Fraction Law 5}
+            \end{align}
+        </div>
+
+    </div>
 
     <h2>Adding (property 3 + 4)</h2><hr>
 
@@ -61,8 +83,58 @@
     <div class="math-example"> Perform the indicated operation and simplify:
         <ul>
             <li class="lec-list-space">$\dfrac{1}{6} + \dfrac{1}{8}$</li>
-            <li class="lec-list-space">$\dfrac{3}{x-1} + \dfrac{x}{x+2}$</li>
-            <li class="lec-list-space">$\dfrac{1}{x^2 - 1} - \dfrac{2}{(x + 1)^2}$</li>
+            <li class="lec-list-space">
+                
+                $\dfrac{3}{x-1} + \dfrac{x}{x+2}$
+            
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Let's find the LCD. The denominator are terms, so we can group together terms into one factor.
+
+                    \begin{align}
+                    (x-1) \quad \leftarrow \text{Missing } (x+2) \text{ as a factor}
+                    \\(x+2) \quad \leftarrow \text{Missing } (x-1) \text{ as a factor}
+                    \end{align}
+
+                    Introducing what we found to be missing:
+
+                    \begin{align}
+                    \dfrac{3}{x-1} + \dfrac{x}{x+2} &= \dfrac{(x+2)}{(x+2)}\dfrac{3}{x-1} + \dfrac{x}{x+2} \cdot \dfrac{(x-1)}{(x-1)} &&
+                    \\&= \dfrac{3(x+2)}{(x-1)(x+2)} + \dfrac{x(x-1)}{(x+2)(x-1)} && \text{Fraction Law 1}
+                    \\&= \dfrac{3(x+2) + x(x-1)}{(x-1)(x+2)} && \text{Fraction Law 3}
+                    \\&= \dfrac{3x + 6 + x^2 - x}{(x-1)(x+2)} && \text{Distributive Law}
+                    \\&= \dfrac{x^2 + 2x + 6}{(x-1)(x+2)}
+                    \end{align}
+
+                </div>
+
+            </li>
+
+
+            <li class="lec-list-space">
+
+                $\dfrac{1}{x^2 - 1} - \dfrac{2}{(x + 1)^2}$
+
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Let's find the LCD: 
+                    \begin{align}
+                    x^2 - 1 &= (x-1)(x+1) \quad \leftarrow \text{Missing } (x+1) \text{ as a factor}
+                    \\(x+1)^2 &= (x+1)(x+1) \quad \leftarrow \text{Missing } (x-1) \text{ as a factor}
+                    \end{align}
+
+                    Let's now introduce what we found:
+                    \begin{align}
+                    \dfrac{1}{x^2 - 1} - \dfrac{2}{(x + 1)^2} &=  \dfrac{(x+1)}{(x+1)} \cdot \dfrac{1}{(x-1)(x+1)} - \dfrac{2}{(x+1)^2} \cdot \dfrac{(x-1)}{(x-1)} &&
+                    \\&= \dfrac{(x+1)}{(x-1)(x+1)^2} - \dfrac{2(x-1)}{(x-1)(x+1)^2} && \text{Fraction Law 1}
+                    \\&= \dfrac{x + 1 - 2(x-1)}{(x-1)(x+1)^2} && \text{Fraction Law 3, careful with the subtraction}
+                    \\&= \dfrac{x + 1 - 2x + 2}{(x-1)(x+1)^2} && \text{Distributive Law}
+                    \\&= \dfrac{-x + 3}{(x-1)(x+1)^2}
+                    \end{align}
+                </div>
+
+            </li>
+            
         </ul>
     </div>
 
@@ -80,6 +152,8 @@
     <p>The second problem will appear in calculus again! Take note of the $h$'s cancelling through fraction law #5.</p>
 
     <h2>Rationalizing</h2><hr>
+
+    <p><a href="https://www.youtube.com/watch?v=ObfhiE3bugk">The rest of this lecture is recorded, available at this Youtube link.</a></p>
 
     <p>Rationalizing means to remove square roots. There are two types of problems you will encounter: one factor or two term.</p>
 
