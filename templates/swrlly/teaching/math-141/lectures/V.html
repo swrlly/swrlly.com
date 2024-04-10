@@ -160,9 +160,17 @@
         Graph the piecewise function \[f(x) = \begin{cases} x^2 & x \leq 1 \\ -2x + 3 & x > 1\end{cases}\] by hand.
     </div>
 
+    <div class="math-example"> Graph the function $y = \lvert x \rvert$.</div>
+
+    <p>The graph helps us determine if a curve in the plane is actually a function.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Vertical Line Test</b><br>
+        A curve in the $xy$-plane is the graph of a function of $x$ if and only if no vertical line intersects the curve more than once.
+    </div>
+
     <h2>Base Functions to be Familiar With</h2><hr>
 
-    <p>In calculus, you need to be familiar with what we call "parent functions:" linear, absolute value, polynomial, rational, exponential, logarithmic, and trigonometric functions.</p>
+    <p>In calculus, you need to be familiar with what we call "parent functions:" linear, absolute value, polynomial, rational and trigonometric functions.</p>
 
     <p>These are all part of the prerequisite of MATH 141.</p>
 
@@ -170,16 +178,16 @@
         <ul>
             <li>For polynomials: pages 246-256 in <i>Precalculus</i></li>
             <li>For rationals: Section 3.6 in <i>Precalculus</i> (pages 295-307)</li>
-            <li>For exponentials: Section 4.1 and 4.2 in <i>Precalculus</i> (pages 330-334, 338-339)</li>
-            <li>For logarithms: Section 4.3 and 4.4 in <i>Precalculus</i> (pages 344-358)</li>
+            <!--<li>For exponentials: Section 4.1 and 4.2 in <i>Precalculus</i> (pages 330-334, 338-339)</li>
+            <li>For logarithms: Section 4.3 and 4.4 in <i>Precalculus</i> (pages 344-358)</li>-->
             <li>For trigonometric functions: <ul>
-                <li><a href="https://swrlly.com/teaching/math-119/lectures/5.1">Interactive lecture notes on Section 5.1 describing the unit circle</a></li>
-                <li><a href="https://swrlly.com/teaching/math-119/lectures/5.2">Interactive lecture notes on Section 5.2 describing trigonometric functions with animations on how they are created from the unit circle.</a></li>
+                <li><a href="/teaching/math-119/lectures/5.1">Interactive lecture notes on Section 5.1 describing the unit circle</a></li>
+                <li><a href="/teaching/math-119/lectures/5.2">Interactive lecture notes on Section 5.2 describing trigonometric functions with animations on how they are created from the unit circle.</a></li>
             </ul></li>
         </ul>
     </p>
 
-    <p>Moreover, Section 1.2 in our <i>Calculus</i> textbook contains a very terse summary of all of these function types. If you do not remember the details of a logarithm, for example, I recommend the above list as another reference.</p>
+    <p>Moreover, Section 1.2 in our <i>Calculus</i> textbook contains a very terse summary of all of these function types. If you do not remember the details of the function $\tan(x)$, for example, I recommend the above list as another reference.</p>
 
     <p>Here's a visual guide to a few parent functions we'll encounter.
 
@@ -210,7 +218,7 @@
         Let $f(x) = x^2 + x$ and $g(x) = -x^2 - x$. Find the following:
         <ol>
             <li> $f(x)+g(x), f(x)-g(x), f(x)g(x), \frac{f}{g}$ and their domains</li>
-            <li> $\left(\frac{f}{g}\right)(0)$</li>
+            <li> $\frac{f(0)}{g(0)}$</li>
         </ol>
         <br/><button class="math-btn">Show Solution</button>
         <div class="math-solution">
@@ -227,14 +235,9 @@
 
                 To be clear, \[\dfrac{f(x)}{g(x)} = -1 , x \neq 0, x \neq -1\] Notice the domain exclusion (caused by cancelling factors) where your input $x$ cannot be $0$ nor $-1$.
                 
-                Since $\mathbb{R} \cap \mathbb{R} = \mathbb{R}$, all functions have domain $\mathbb{R}$.
+                The first three functions have domain $\mathbb{R}$ because you do not divide or have any square roots (sources of problems).
                 <li>
-                    From part 1, the definitions of $f+g$ and $f/g$ give
-                    \begin{align}
-                    (f+g)(4) &= f(4) + g(4)                             &&= \frac{1}{4-2} + (4 - 3) & = \frac{3}{2} \\
-                    \left(\frac{f}{g}\right)(4) &= \frac{f(4)}{g(4)}    &&= \frac{1}{(4-2)(4 - 3)} &= \frac{1}{2}   \\
-                    \end{align}
-                    Since we cannot divide by zero, $\left(\frac{f}{g}\right)(3)$ is undefined.
+                    We have \[\dfrac{f(0)}{g(0)} = \dfrac{0^2 + 0}{-0^2 - 0} = \dfrac{0}{0}\] which is undefined. 
                 </li>
             </ol>
         </div>
@@ -279,16 +282,26 @@
             </div>
         </div>
 
-        <p>The concept in these last two composition examples will be used extensively in calculus.</p>
+        <p>The concept in these last three composition examples will be used extensively in calculus.</p>
 
         <div class="math-example">
-        Given $F(x) = \sqrt[4]{x + 9}$, find functions $f$ and $g$ such that $F = f\circ g$.
-        <br/><button class="math-btn">Show Solution</button>
-        <div class="math-solution">
-            We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
-            Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
+            Given $F(x) = \sqrt[4]{x + 9}$, find functions $f$ and $g$ such that $F = f\circ g$.
+            <br/><button class="math-btn">Show Solution</button>
+            <div class="math-solution">
+                We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. 
+                </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
+                Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
+            </div>
         </div>
+
+        <div class="math-example">
+            Suppose $F(x) = \sin^3(x)$. Find functions $f$ and $g$ where $F = f \circ g$.
         </div>
+
+        <div class="math-example">
+            Suppose $F(x) = \sin(x^3)$. Find functions $f$ and $g$ where $F = f \circ g$.
+        </div>
+
 
 </div>
 
