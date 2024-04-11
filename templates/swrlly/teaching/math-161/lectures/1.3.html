@@ -15,6 +15,20 @@
 
     <h1>1.3: New Functions from Old</h1>
 
+    <h2>Holes</h2><hr>
+
+    <p>When you cancel a common factor in a rational function, you must exclude the zero of that factor from the domain.</p>
+
+    <p>Such a factor is called a <b>hole</b>.</p>
+
+    <div class="math-example">
+        Redefine the rational function $f(x) = \dfrac{x^2 + 2x + 1}{x+1}$ with the domain exclusion.
+    </div>
+
+    <div class="math-example">
+        Redefine the rational function $f(x) = \dfrac{x^3 - x}{x}$ with the domain exclusion.
+    </div>
+
     <h2>Creating New Functions with Operations</h2><hr>
 
     <p>$+, -, \times, \div$ functions together is done by performing the specified operation on the function output. Let's look at some examples.</p>
@@ -57,56 +71,65 @@
             <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/bgtbdfkq09"></iframe></div>
             </div>
     </div>
+
     <h2>Function Composition</h2><hr>
-        <p class="lecturep">Function evaluation on a number is straightforward: the preceding example utilized this concept. What if we evaluate a function on another function? This idea is called <b>function composition.</b></p>
-        <div class="math-def">
+        
+    <p class="lecturep">
+        Function evaluation on a number is straightforward: the preceding example utilized this concept. What if we evaluate a function on another function? This idea is called <b>function composition.</b>
+    </p>
+        
+    <div class="math-def">
             Given two functions $f$ and $g$, the composite function $f \circ g$ (also called the composition of $f$ and $g$) is defined by \[(f\circ g)(x) = f(g(x))\]
+    </div>
+    
+    <p class="lecturep">The function to the right of the circle, in this case $g(x)$, needs to be the input for the function to the left of the circle.</p>
+    
+    <div class="math-example">
+        Suppose $f(x) = x^2$ and $g(x) = x-3$. Find the functions $f\circ g$ and $g \circ f$.</br>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            We see that \[(f\circ g)(x) = f(g(x)) = f(x-3) = (x-3)^2\] and \[(g\circ f)(x) = g(f(x)) = g(x^2) = x^2 - 3\]$.
         </div>
-        <p class="lecturep">To evaluate a function composition, you first plug in $g(x)$ into $f(x)$, and wherever there is an $x$ in $f(x)$, substitute the definition of $g(x)$ there. </p>
-        <div class="math-example">
-            Suppose $f(x) = x^2$ and $g(x) = x-3$. Find the functions $f\circ g$ and $g \circ f$</br>
-            <br/><button class="math-btn">Show Solution</button>
-            <div class="math-solution">
-                We see that \[(f\circ g)(x) = f(g(x)) = f(x-3) = (x-3)^2\] and \[(g\circ f)(x) = g(f(x)) = g(x^2) = x^2 - 3\]$.
-            </div>
-        </div>
-        <div class="lecturep"> Ideas:
-            <ul>
-                <li>This shows that the operation $\circ$ is not commutative, i.e. $f\circ g \neq g \circ f$. Do not mistake $f\circ g$ to mean function multiplication!</li>
-                <li>We can also take compositions of three or more functions. For example, $f\circ g \circ h = f(g(h(x)))$.</li>
-            </ul>
-        </div>
-        <div class="math-example">
-            Find $f\circ g \circ h$ where $f(x) = \frac{x}{x+1}, g(x) = x^{10}, h(x) = x+3$.
-            <br/><button class="math-btn">Show Solution</button>
-            <div class="math-solution">
-                \begin{align}
-                (f\circ g \circ h)(x) &= f(g(h(x)))\\
-                &= f(g(x+3))\\
-                &= f((x+3)^{10})\\
-                &= \frac{(x+3)^{10}}{(x+3)^{10}+1}
-                \end{align}
-            </div>
-        </div>
+    </div>
 
-        <p>The concept in these last three composition examples will be used extensively in calculus.</p>
-
-        <div class="math-example">
-            Given $F(x) = \sqrt[4]{x + 9}$, find functions $f$ and $g$ such that $F = f\circ g$.
-            <br/><button class="math-btn">Show Solution</button>
-            <div class="math-solution">
-                We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. 
-                </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
-                Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
-            </div>
+    <div class="lecturep"> Ideas:
+        <ul>
+            <li>This shows that the operation $\circ$ is not commutative, i.e. $f\circ g \neq g \circ f$. Do not mistake $f\circ g$ to mean function multiplication!</li>
+            <li>We can also take compositions of three or more functions. For example, $f\circ g \circ h = f(g(h(x)))$.</li>
+        </ul>
+    </div>
+    
+    <div class="math-example">
+        Find $f\circ g \circ h$ where $f(x) = \frac{x}{x+1}, g(x) = x^{10}, h(x) = x+3$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            \begin{align}
+            (f\circ g \circ h)(x) &= f(g(h(x)))\\
+            &= f(g(x+3))\\
+            &= f((x+3)^{10})\\
+            &= \frac{(x+3)^{10}}{(x+3)^{10}+1}
+            \end{align}
         </div>
+    </div>
 
-        <div class="math-example">
-            Suppose $F(x) = \sin^3(x)$. Find functions $f$ and $g$ where $F = f \circ g$.
-        </div>
+    <p>The concept in these last three composition examples will be used extensively in calculus.</p>
 
-        <div class="math-example">
-            Suppose $F(x) = \sin(x^3)$. Find functions $f$ and $g$ where $F = f \circ g$.
+    <div class="math-example">
+        Given $F(x) = \sqrt[4]{x + 9}$, find functions $f$ and $g$ such that $F = f\circ g$.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            We can think of this function as the $\sqrt[4]{\cdot}$ as the outside function, and $x + 9$ as the inside function. 
+            </br>Since $f\circ g$ is the desired composition, let $g(x) = x+9$ and $f(x) = \sqrt[4]{x}$.
+            Then \[(f\circ g)(x) = f(g(x)) = f(x+9) = \sqrt[4]{x+9} = F(x)\]
         </div>
+    </div>
+
+    <div class="math-example">
+        Suppose $F(x) = \sin^3(x)$. Find functions $f$ and $g$ where $F = f \circ g$.
+    </div>
+
+    <div class="math-example">
+        Suppose $F(x) = \sin(x^3)$. Find functions $f$ and $g$ where $F = f \circ g$.
+    </div>
 </div>
 {% endblock %}
