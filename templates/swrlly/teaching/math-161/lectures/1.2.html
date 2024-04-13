@@ -13,14 +13,19 @@
 {% block content %}
 <div class="container fade-in-text text-padding">
     <h1>1.2: A Catalog of Essential Functions</h1>
+
     <p>Now that we know what a function is, let's look at several function types, starting with the trigonometric functions. </p>
+    
     <h2>The Unit Circle</h2><hr>
+    
     <p>
         Let's begin our foray into the world of trigonometric functions! Before we define the trigonometric functions, we need to discuss a tool to help us define them: the unit circle.
     </p>
+    
     <div class="math-def">
         The unit circle is the circle of radius 1 centered at the origin in the $xy$-plane. The equation is \[x^2 + y^2 = 1\]
     </div>
+    
     <div class="math-example">
         Is the point $P\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right)$ on the unit circle?
         <br/><button class="math-btn">Show Solution</button>
@@ -29,7 +34,15 @@
             so this point is on the unit circle.
         </div>
     </div>
+    
     <h2>Terminal Points and the Reference Number</h2><hr>
+    
+    <p>The unit circle is made up of infinite points.</p>
+
+    <p>Here is how to describe any point on the unit circle.</p>
+    
+    <p>The technique is to "walk" to it: you need a starting point and an ending point.</p>
+
     <div class="math-def">
         Let $t$ be a real number. If $t \geq 0$, travel $t$ units along the unit circle counterclockwise from $(1, 0)$ and mark the destination point $P$. If $t < 0 $, travel $\lvert t \rvert$ units along the unit circle clockwise from $(1, 0)$ and mark the destination point $P$.</br>
         The point $P$ is called the terminal point.
@@ -44,12 +57,14 @@
         </div>
        
     </div>
+    
     <p>
         <ul>
             <li>The circumference of the unit circle is $C = 2\pi r = 2\pi$. This is why we saw $t = \pi$ when we traversed half of the circle above. </li>
             <li>This means if $t = \frac{\pi}{2}$, we would have traveled a quarter counterclockwise.</li>
         </ul>
     </p>
+    
     <div class="math-example">
         Find the terminal points for \[t = 3\pi\qquad t = -\pi \qquad t=-\frac{\pi}{2}\]
         <br/><button class="math-btn">Show Solution</button>
@@ -61,6 +76,7 @@
             </ol>
         </div>
     </div>
+    
     <p>
         Important! The terminal points associated with $t = \frac{\pi}{6}, \frac{\pi}{4}, \frac{\pi}{3}$ are common values you should commit to memory. Here they are:
         <table class="table" style="max-width: 200px; margin: 1em auto;">
@@ -117,7 +133,9 @@
         </br>In general, all solutions are $t = \frac{7\pi}{6} + 2k\pi$ where $k$ is an integer.
         </div>        
     </div>
-    <p>The terminal points in the first quadrant are <b>all you need</b> to derive the rest of the terminal points in the rest of the quadrants! See below for the first technique.</p>
+    <p>The terminal points in the first quadrant are <b>all you need</b> to derive the rest of the terminal points in the rest of the quadrants!</p>
+    
+    <!--See below for the first technique.</p>
     <div class="math-example">
         Find the terminal points associated with \[t = -\frac{\pi}{4} \qquad t = \frac{3\pi}{4} \qquad t = -\frac{5\pi}{6}\]
         <br/><button class="math-btn">Show Solution</button>
@@ -137,6 +155,8 @@
         </div>
     </div>
     <p>The previous example is particularly insightful: if we can decompose $t$ into quarter/half rotations and perhaps some rotation $0 \leq q \leq \frac{\pi}{4}$, we can use symmetry arguments to find the terminal point. This is the exact reason why the table above is all you need to derive terminal points. Let's discuss how to do this.</p>
+    -->
+    <h2>Finding Terminal Points for any $t$</h2>
     <div class="math-def">
         Let $t$ be a real number and $P$ be the associated terminal point. The <b>reference number $\bar{t}$</b> associated with $t$ is the shortest distance from $P$ to the $x$-axis.
     </div>
@@ -148,6 +168,7 @@
             If $t$ were negative, we would travel clockwise.
         </div>
     </div>
+
     <div class="math-example">
         Find the reference numbers for 
         <ol>
@@ -169,7 +190,9 @@
             </ol>
         </div>       
     </div>
-    <p>The following method puts the technique we used three examples ago into a straightforward way to find the reference number for any terminal point.</p>
+    
+    <!--<p>The following method puts the technique we used three examples ago into a straightforward way to find the reference number for any terminal point.</p>-->
+        
     <div class="math-method">
         To find the terminal point $P$ for any value of $t \in \mathbb{R}$, do
         <ol>
@@ -178,6 +201,7 @@
             <li>The terminal point for $t$ has form $P(\pm a, \pm b)$, depending on which quadrant you are in. Fix the sign according to the quadrant.</li>
         </ol>
     </div>
+    
     <div class="math-example">
         Find the terminal point for \[1. \ t = \frac{5\pi}{6} \qquad\qquad 2. \
         t = \frac{7\pi}{4} \qquad\qquad 3. \ 
@@ -209,6 +233,7 @@
             </ol>
         </div>
     </div>
+    
     <div class="math-example">
         Find the terminal point for $t = \frac{65\pi}{6}.$
         <br/><button class="math-btn">Show Solution</button>
