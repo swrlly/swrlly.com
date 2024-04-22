@@ -53,7 +53,7 @@
     <p>To prove a function is continuous at $x = a$, you need to start with $\displaystyle \lim_{x\rightarrow a} f(x)$ and show that limit is equal to the evaluation $f(a)$.</p>
 
     <div class="math-example">
-        Show $f(x) = x^3 + 3x^2$ is continuous at every real number.
+        Show $f(x) = x^3 + 3x^2$ is continuous at $x = 2$.
     </div>
 
     <div class="math-example">
@@ -143,21 +143,23 @@
 
     <div class="math-example"> Find \[\lim_{x\rightarrow\pi}\dfrac{\sin x}{2 + \cos x}\]</div>
 
-    <div class="math-example"> Where is $\dfrac{\ln x + e^x}{x^2 - 1}$ continuous?</div>
+    <p>The previous theorem makes finding where a function is continuous into a domain problem.</p>
 
     <div class="math-example"> Where is $h(x) = \sqrt{x} + \dfrac{x+1}{x-1} - \dfrac{x + 1}{x^2 + 1}$ continuous?</div>
 
-    <div class="math-example"> Find \[\lim_{x\rightarrow e} \dfrac{\ln x + e^x}{x^2 - 1}\]</div>
-
     <p>How about compositions?</p>
-
-    <div class="math-theorem"> If $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, then the composite function $f \circ g$ is continuous at $a$.</div>
 
     <div class="math-example"> Where are the following functions continuous?
         <ol>
             <li class="lec-list-space">$h(x) = \sin (x^2)$</li>
             <li class="lec-list-space">$F(x) = \dfrac{1}{\sqrt{x^2 + 7} - 4}$</li>
         </ol>
+    </div>
+
+    <p>The last idea regarding continuity is the limit symbol can swap places with the function symbol.</p>
+
+    <div class="math-theorem">
+        If $f$ is continuous at $b$ and $\displaystyle\lim_{x\rightarrow a}g(x) = b$, then $\displaystyle\lim_{x\rightarrow a}f(g(x)) = f(b)$. In other words: \[\lim_{x\rightarrow a} f(g(x)) = f\left(\lim_{x\rightarrow a} g(x))\]
     </div>
 
     <h2>Intermediate Value Theorem</h2><hr>
