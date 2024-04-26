@@ -17,7 +17,16 @@
     <p>In this section, instead of looking at \[\lim_{x\rightarrow\infty} f(x)\] we are interested in \[\lim_{x\rightarrow a} f(x)\]
     </p>
 
-    <h2>Limits: Numerical and Graphical Methods</h2><hr>
+    <p>Goals: 
+        <ul>
+            <li>Define the limit of a function</li>
+            <li>Describe a tool for calculating the limit of a function.</li>
+            <li>Understand when a limit exists and what the graph looks like.</li>
+            <li>Describe pitfalls with this method.</li>
+        </ul>
+    </p>
+
+    <h2>The Table Method</h2><hr>
 
     <p>There are usually three ways to find limits:
         <ol>
@@ -27,30 +36,35 @@
         </ol>
     </p>
 
-    <p>This section develops our ability with #1 and #2. Next section looks at #3.</p>
+    <p>This section develops our skill with #1 and #2. Next section looks at #3.</p>
 
     <div class="math-def"> 
     <p>Suppose $f(x)$ is defined when $x$ is near the number $a$. Then we write \[\lim_{x\rightarrow a} f(x) = L\] if we can make the values of $f(x)$ arbitrarily close to $L$ by taking $x$ sufficiently close to $a$ <b>but never, ever $a$ itself.</b></p>
     </div>
 
-    <p>*picture in class*</p>
+    <p>I think about it like this: the heights $f(x)$ can be made as close to $L$ as possible when you move $x$ close to $a$ but never $a$ itself.</p>
 
-    <p>If you use the table method, you need to check on both sides of $a$ to see if the limit exists.</p>
+    <p>This results in three possible graphs: <img src="/static/swrlly/images/teaching/141-1.5-1.png" style="max-width:800px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+    <p>Our first tool for finding limits is called the <b>table method</b>.</p>
+
+    <p>Create two tables that samples $x$ values to the left and right of $a$ but never $a$. Do not plug in $a$!!!!</p>
+
+    <p>Then see what the values of $f(x)$ are approaching. If both tables agree then the limit exists.</p>
 
     <div class="math-example">
         Use the table method to guess the following limits:
         <ol>
             <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} \dfrac{x-1}{x^2 - 1}$</li>
             <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} g(x)$ where \[g(x) = \begin{cases} \dfrac{x-1}{x^2 - 1} & x \neq 1 \\ 2 & x = 1 \end{cases}\]</li>
-            <li class="lec-list-space">$\displaystyle\lim_{t\rightarrow 0} \dfrac{\sqrt{t^2 + 9} - 3}{t^2}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x\rightarrow 0} \dfrac{\sin x}{x}$</li>
             <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 0} \left(x^3 + \dfrac{\cos 5x}{10000}\right)$</li>
         </ol>
     </div>
 
-    <div class="math-example">
-        Find the limit of\[f(x) = \begin{cases} -1 & x < 0 \\ 1 & x \geq 0\end{cases} \] at $x = 0$.
-    </div>
+    <p>These examples show that the table method has a big pitfall: potential inaccuracy if you don't pick $x$ close enough to $a$.</p>
 
+    <p>However, the left and the right table can be represented in limit notation.</p>
 
     <h2>One-Sided Limits</h2><hr>
 
@@ -62,11 +76,33 @@
     
     </div>
 
-    <p>If left-and right-hand limits agree, the limit exists. This is why we have two tables/check both sides of $a$ on the graph.</p>
-
-    <p><b>If left- and right-hand limits disagree, the limit does not exist.</b></p>
+    <p>If left-and right-hand limits agree, the limit exists. This is equivalent to both tables agreeing. This idea is summarized as: </p>
 
     <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <p>This theorem is very important. <b>If left- and right-hand limits disagree, the limit does not exist.</b></p>
+
+    <div class="math-example"> For the Heaviside function \[H(t) = \begin{cases} 0 & t < 0 \\ 1 & t \geq 0\end{cases}\] determine if $\displaystyle\lim_{t\rightarrow 0}H(t)$ exists.</div>
+
+    <h2>The Graph Method</h2><hr/>
+
+    <p>Limits can also be seen on the graph: look at what the heights of the function are approaching on both sides of $x = a$.</p>
+
+    <div class="math-example"> A function $g(x)$ has the following graph:
+        <img src="/static/swrlly/images/teaching/141-1.5-2.png" style="max-width:700px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;margin-bottom:1em;"/>
+
+        Determine if the following exist. If they do, find the value.
+        <ul>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2^-} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2^+} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5^-} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5^+} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5} g(x)$</li>
+            <li class="lec-list-space">$f(2)$</li>
+            <li class="lec-list-space">$f(5)$</li>
+        </ul>
+    </div>
 
     <h2>Infinite Limits</h2><hr>
 
