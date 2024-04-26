@@ -87,12 +87,18 @@
 
     <h2>Which Functions are Continuous?</h2><hr>
 
-    <p>Continuity allows us to find limits quickly, just plug in $a$. Let's see what functions are continuous.</p>
+    <p>Finding where a function is continuous turns out to really be a problem on finding the <b>domain of the function.</b> Let's see why.</p>
+
+    <p>Recall:</p>
 
     <div class="math-def">
         <p>A <b>polynomial function</b> of degree $n$ is a function of the form \[f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_2x^2 + a_1x + a_0\qquad a_n \neq 0\]
         where $a_n, a_{n-1},\dots, a_1, a_0 \in \mathbb{R}$.</p>
         <p>A <b>rational function</b> is a function of the form \[r(x) = \dfrac{p(x)}{q(x)}\] where $p(x)$ and $q(x)$ are both polynomials.</p>
+    </div>
+
+    <div class="math-example">
+        Examples of polynomials are \[x^5 + x^3 \qquad \qquad 4x^2 - x + 1 \qquad \qquad x^6 - 4x^4 - x^2\]
     </div>
 
     <div class="math-fact">
@@ -106,7 +112,15 @@
         </ol>
     </div>
 
-    <p>If you take facts 1 and 3, we can create polynomial functions. Including fact 5 gives us rational functions. So in general:</p>
+    <div class="math-example">
+        <p>Suppose $f(x) = x^3$ and $g(x) = x^5$.</p>
+        <p>Limit Law 9 says for any $a \in \mathbb{R}$, we know \[\lim_{x\rightarrow a } x^3 = a^3 = f(a) \qquad \qquad \lim_{x\rightarrow a} x^5 = a^5 = g(a)\]
+        We showed $f(x)$ and $g(x)$ are continuous on $\mathbb{R}$.
+        </p>
+        <p>Using the previous fact: \[f(x) + g(x) = x^5 + x^3\] is continuous on $\mathbb{R}$.</p>
+    </div>
+
+    <p>This previous technique can be used to create any polynomial. Thus:</p>
 
     <div class="math-fact">
         <ol>
@@ -118,7 +132,7 @@
     <p>This means if we take any limit of polynomial/rational, instead of limit laws, you can:
         <ol>
             <li>First find the domain of the function.</li>
-            <li>Then if $x = a$ is in the domain, just plug it in. Otherwise it might be an indeterminate form, does not exist, or $\pm\infty$ which we have seen how to do in Section 1.5 and 1.6.</li>
+            <li>Then if $x = a$ is in the domain, just plug it in. Otherwise it might be an indeterminate form, does not exist, or $\pm\infty$ which we have seen how to deal with in Section 1.5 and 1.6.</li>
         </ol>
     </p>
 
@@ -156,11 +170,18 @@
         </ol>
     </div>
 
-    <p>The last idea regarding continuity is the limit symbol can swap places with the function symbol.</p>
+    <p>We found where these composed functions are continuous by finding the domain.</p>
+
+    <p>Here's why this works. The composition of continuous functions result in a continuous function:</p>
 
     <div class="math-theorem">
         If $f$ is continuous at $b$ and $\displaystyle\lim_{x\rightarrow a}g(x) = b$, then $\displaystyle\lim_{x\rightarrow a}f(g(x)) = f(b)$. In other words: \[\lim_{x\rightarrow a} f(g(x)) = f\left(\lim_{x\rightarrow a} g(x)\right)\]
     </div>
+
+    <p>Think of this as the limit symbol can swap places with the function symbol, only if the function is continuous.</p>
+
+    <div class="math-example">
+        Use the previous theorem to evaluate the following limit: \[\lim_{x\rightarrow\sqrt{\pi}} \sin(x^2)\] </div>
 
     <h2>Intermediate Value Theorem</h2><hr>
 
@@ -176,7 +197,8 @@
 
     <p>This function is continuous on $[0, \infty)$. Intuitively, this means your car cannot suddenly teleport from one location to another.</p>
 
-    <p>As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b></p>
+    <p>As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. </p>
+    <p>This is called the <b>Intermediate Value Theorem.</b></p>
 
     <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b><br>
     
