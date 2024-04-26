@@ -77,6 +77,19 @@
         The <b>derivative of a function $f$ at a number $a$</b>, denoted by $f'(a)$ is \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a+h) - f(a)}{h}\] if this limit exists.
     </div>
 
+    <p>The derivative can take on three interpretations:
+        <ol>
+            <li>It is the slope of the tangent line at $x = a$.</li>
+            <li>It is the "instantaneous rate of change" at $x = a$. For example:
+                <ul>
+                    <li>If $s(t)$ is a position function, then $s'(a)$ is the instantaneous velocity at the moment in time $t = a$.</li>
+                    <li>Think of this interpretation as how fast the heights $f(x)$ are changing at the $x$-value $a$.</li>
+                </ul>
+            </li>
+            <li>It is the slope of the curve at $x = a$. In particular, you should think of the tangent line as an "approximation" to the function $f(x)$.</li>
+        </ol>
+    </p>
+
     <div class="math-example">
         Find the derivative of the function $f(x) = x^2 - 8x + 9$ at the number $a$.
     </div>
@@ -85,15 +98,15 @@
 
     <p>Thus the tangent line to $y = f(x)$ at $(a, f(a))$ is the line through $(a, f(a))$ whose slope is $f'(a)$.</p>
 
-    <p>Using point-slope form you can describe the tangent line at $(a, f(a))$ as \[y - f(a) = f'(a) (x - a)\]</p>
+    <p>The general equation can be described with point-slope form.</p>
+
+    <div class="math-def">
+        Suppose $f(x)$ is a function. The equation of the <b>tangent line</b> at the point $(a, f(a))$ is \[y - f(a) = f'(a) (x - a)\]
+    </div>
 
     <div class="math-example">
         Find an equation of the tangent line to the parabola $y = x^2 - 8x + 9$ at the point $(3, -6)$.
     </div>
-
-
-
-
 
 </div>
 {% endblock %}
