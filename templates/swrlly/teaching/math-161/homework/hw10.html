@@ -1,0 +1,153 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 10</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 10"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Homework 10"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw10"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 10</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p><hr>
+    <p>Answer the following:</p>
+    <ol>
+
+        <li class="hw-space">If the minute hand of a clock has length r (in centimeters) find the rate at which it sweeps out area as a function of r.
+
+            <br/>
+
+        Hint: Use the equation of a sector of a circle $A = \dfrac{1}{2}r^2 \theta$ (picture showing this below) and the fact that the rate at which the minute hand moves is $2\pi$ radians per hour.
+
+        <img src="/static/swrlly/images/teaching/141-hw7-2.png" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        </li>
+
+        <li class="hw-space">Suppose a meat distributor is willing to make $x$ pounds of beef available every week on the marketplace when the price is $\$p$ per pound. The relationship between quantity supplied $x$ and price $p$ is \[650p^2 - x^2 = 100\] If 30,000 pounds of beef are available on the marketplace this week and the price per pound is falling by 2 cents per week, at what rate is the supply falling? 
+
+            <p>Hint: the quantity supplied $x$ and the price per pound $p$ are quantities that change every week, or in other words, over time.</p>
+        </li>
+
+        <li class="hw-space">Differentiate the following. Remember you can use logarithmic differentiation to simplify the form for some problems.
+            <ol type="a">
+                <li class="hw-space">$f(x) = x\ln x$</li>
+                <li class="hw-space">$f(x) = \log_3(1-x)$</li>
+                <li class="hw-space">$f(x) = \ln (\sin^2 x)$</li>
+                <li class="hw-space">$f(x) = \sqrt[5]{\ln x}$</li>
+                <li class="hw-space">$f(x) = \ln{\sqrt[5]{x}}$</li>
+                <li class="hw-space">$y = \ln(e^{-x} + xe^{-x})$</li>
+                <li class="hw-space">$y = \dfrac{\sin x \cos^2 x}{(x^2 + 1)^4}$</li>
+                <li class="hw-space">$f(x) = x\ln x$</li>
+                <li class="hw-space">$f(x) = x^{\cos x}$</li>
+                <li class="hw-space">$f(x) = x^{x}$</li>
+                <li class="hw-space">$f(x) = (\sin x)^{\sin x}$</li>
+                <li class="hw-space">$f(x) = \sqrt{x} \cdot e^{x^2} \cdot (x^2 -1)^3$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the linearization $L(x)$ of the following functions at the given number $a$.
+            <ol type="a">
+                <li class="hw-space">$f(x) = x^4 + 3x^2$ at $a = -1$</li>
+                <li class="hw-space">$f(x) = \cos x$ at $a = \dfrac{\pi}{2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 3 at $a = 0$ for $f(x) = \sin \pi x$.</li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 4 at $a = 1$ for $f(x) = \dfrac{1}{x}$.</li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 2 at $a=4$ for $f(x) = \sqrt{x}$.</li>
+
+        <li class="hw-space">
+            Explain the difference between an absolute minimum and a local minimum.
+        </li>
+
+        <li class="hw-space">
+            If $f$ is a continuous function on $(a, b)$, must an absolute maximum exist?
+        </li>
+
+        <li class="hw-space">Identify all absolute/local minimums and maximums for the following function: <img src="/static/swrlly/images/teaching/161-hw7-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></li>
+
+        <li class="hw-space">Draw a graph that is continuous on $[-2, 5]$ and has absolute minimum at $x = 3$, absolute maximum at $x = 0$.</li>
+
+        <li class="hw-space">State the definition of a <b>critical number</b> of a function $f$.</li>
+
+        <li class="hw-space">From a problem-solving perspective, without using the definition of a critical number, what does the critical number of a function tell us about?</li>
+
+        <li class="hw-space">Find the critical numbers for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) =  x^3 + 6x^2 - 15x$</li>
+                <li class="hw-space">$f(t) = t^4 + t^3 + t^2 + 1$</li>
+                <li class="hw-space">$f(y) = \dfrac{y - 1}{y^2 - y + 1}$</li>
+                <li class="hw-space">$f(x) = \sqrt{1 - x^2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the absolute maximum and minimum for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 12 + 4x - x^2, \qquad [0, 5]$</li>
+                <li class="hw-space">$f(x) = x^3 - 6x^2 + 5, \qquad [-3, 5]$</li>
+                <li class="hw-space">$f(t) = (t^2 - 4)^3, \qquad [-2, 3]$</li>
+                <li class="hw-space">$f(x) = x + \dfrac{1}{x} \qquad \left[\frac{1}{5}, 4\right]$</li>
+                <li class="hw-space">$f(x) = 5 + 54x - 2x^3, \qquad [0, 4]$</li>
+            </ol>
+        </li>
+
+        <!--
+        <li class="hw-space">
+            Find the intervals of concavity:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 2x^3 + 3x^2 - 36x$</li>
+                <li class="hw-space">$f(x) = x^4 - 2x^2 +3$</li>
+                <li class="hw-space">$f(x) = 3x^{2/3} - x$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Suppose $f'(2) = 0$ and $f''(2) = 3$. What can you say about $f$ at $x = 2$?</li>
+        <li class="hw-space">State the intervals of concavity of the following function:
+
+            <img src="/static/swrlly/images/teaching/161-hw9-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        </li>
+        <li class="hw-space">What do the critical numbers tell us about local minimums/maximums?</li>
+        <li class="hw-space">Draw the graph of a function with the two types of local maximums.</li>        
+        <li class="hw-space">Draw a graph of a function satisfying the following:
+            <ul>
+                <li class="hw-space">$f'(x) > 0$ on $(-\infty, 1)$, $f'(x) < 0$ on $(1, \infty)$</li>
+                <li class="hw-space">$f''(x) < 0$ on $(- \infty, 1)$, $f''(x) > 0$ on $(1, \infty)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty} f(x)= 2$</li>
+                <li class="hw-space">$f(1) = 5$</li>
+            </ul>
+        </li>
+
+        <li class="hw-space">Find the following limits:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}\dfrac{5^x - 3^x}{x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1}\dfrac{x^2 - 1}{x^2 - x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty}x^3e^{-x^2}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty}\dfrac{(\ln(x))^2}{x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1}\dfrac{\ln x}{\sin \pi x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \pi / 2}\dfrac{1 - \sin x}{\csc x}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Rank the functions in order of how quickly they grow as $x \rightarrow \infty$: \[y = x^5 \qquad y = 2^x \qquad y = \ln(x^{10}) \qquad y = \sqrt{x} \]</li>
+
+        <li class="hw-space">Suppose $n$ is a positive integer. Show \[\lim_{x\rightarrow \infty} \dfrac{x^n}{e^x} = 0\] by using L'Hospital's Rule.</li>
+
+        <li class="hw-space">What does the previous problem tell us about the growth rate of $e^x$ versus $x^n$?</li>
+
+        <li class="hw-space">Find the following limit by considering the dominant terms in the numerator and denominator: \[\lim_{x\rightarrow \infty} = \dfrac{x^2 - x + \ln x}{x + 2^x}\]</li>
+    -->
+    </ol>
+</div>
+{% endblock %}
