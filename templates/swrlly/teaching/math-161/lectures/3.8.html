@@ -33,9 +33,12 @@
 
     <h2>Taylor Polynomials</h2><hr>
 
-    <p>Our linear approximation is a first degree polynomial in which $L'(a) = f'(a)$.</p>
-    <p>You can think of $L(x)$ as the best linear approximation to $f$ at $a$ since the above says the rate of change of $f(x)$ is the same as $L(x)$ at $a$.</p>
-    <p>Let's try a degree two polynomial \[P(x) = A + B(x - a) + C(x - a)^2\] with the previous condition but also $P''(a) = f''(a)$.</p>
+    <!--<p>Our linear approximation is a first degree polynomial in which $L'(a) = f'(a)$.</p>-->
+    <p>You can think of $L(x)$ as the best first degree polynomial approximation to $f$ at $a$ since the above says the rate of change of $f(x)$ is the same as $L(x)$ at $a$.</p>
+    <!--<p>Let's try a degree two polynomial \[P(x) = A + B(x - a) + C(x - a)^2\] with the previous condition but also $P''(a) = f''(a)$.</p>-->
+
+    <p>What if we want the "best" second degree polynomial approximation? This is called the following:
+    </p>
 
     <div class="math-def"> The <b>second-degree Taylor polynomial</b> of $f$ centered at $a$ is \[P(x) = f(a) + f'(a)(x-a) + \frac{1}{2}f''(a)(x-a)^2\] and is usually denoted $T_2(x)$.</div>
 
