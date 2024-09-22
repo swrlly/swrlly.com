@@ -25,6 +25,12 @@ html {
     --examplecolor: rgb(232, 162, 212);
     --factcolor: rgb(236, 231, 141);
     --methodcolor: rgb(236, 231, 141);
+    --lightblue: rgb(142, 181, 227);
+
+    --lec-event-color: #245fcd;
+    --quiz-event-color: rgb(143, 59, 172);
+    --lecl-event-color: #0d3276;
+    --quizl-event-color: rgb(69, 10, 88);
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
@@ -488,3 +494,159 @@ a:hover {
     -o-animation: fadeIn linear 0.5s;
     -ms-animation: fadeIn linear 0.5s;
 }
+
+
+/* calendar stuff */
+
+.calendar {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 4rem;
+    grid-auto-rows: 6rem;
+  }
+  
+  .day-name {
+    text-align: center;
+    border-bottom: 1px solid rgba(166, 168, 179, 0.5);
+    padding: 1rem;
+  }
+  
+  .week-name {
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid rgba(166, 168, 179, 0.5);
+    padding: 1rem;
+    border-bottom: 0px !important;
+    display:flex;
+    align-items:center;
+  }
+
+/* no way..took me multiple hours to figure out you need to hardcode pushing boxes back into place if you want a floating box covering multiple columns in a grid */
+
+  .calbox {
+    border-bottom: 1px solid rgba(166, 168, 179, 0.5);
+  }
+
+  .calbox:nth-of-type(6n+6) {
+    border-right: 1px solid rgba(166, 168, 179, 0.5);
+  }
+
+  .calbox:nth-of-type(n + 1):nth-of-type(-n + 6) {
+    grid-row: 2;
+  }
+
+  .calbox:nth-of-type(n + 7):nth-of-type(-n + 12) {
+    grid-row: 3;
+  }
+
+  .calbox:nth-of-type(n + 13):nth-of-type(-n + 18) {
+    grid-row: 4;
+  }
+
+  .calbox:nth-of-type(n + 19):nth-of-type(-n + 24) {
+    grid-row: 5;
+  }
+
+  .calbox:nth-of-type(n + 25):nth-of-type(-n + 30) {
+    grid-row: 6;
+  }
+
+  .calbox:nth-of-type(n + 31):nth-of-type(-n + 36) {
+    grid-row: 7;
+  }
+
+  .calbox:nth-of-type(n + 37):nth-of-type(-n + 42) {
+    grid-row: 8;
+  }
+
+  .calbox:nth-of-type(n + 43):nth-of-type(-n + 48) {
+    grid-row: 9;
+  }
+
+  .calbox:nth-of-type(n + 49):nth-of-type(-n + 54) {
+    grid-row: 10;
+  }
+
+  .calbox:nth-of-type(n + 55):nth-of-type(-n + 60) {
+    grid-row: 11;
+  }
+
+  .calbox:nth-of-type(n + 61):nth-of-type(-n + 66) {
+    grid-row: 12;
+  }
+
+  .calbox:nth-of-type(n + 67):nth-of-type(-n + 72) {
+    grid-row: 13;
+  }
+
+.calbox:nth-of-type(6n+1) {
+    grid-column : 1;
+}
+
+.calbox:nth-of-type(6n+2) {
+    grid-column : 2;
+}
+
+.calbox:nth-of-type(6n+3) {
+    grid-column : 3;
+}
+
+.calbox:nth-of-type(6n+4) {
+    grid-column : 4;
+}
+
+.calbox:nth-of-type(6n+5) {
+    grid-column : 5;
+}
+
+.calbox:nth-of-type(6n+6) {
+    grid-column : 6;
+}
+
+  .lec-event {
+    padding: 0.25rem;
+    font-size:0.875rem;
+    line-height:1.25rem;
+    border-left: 4px solid var(--lecl-event-color);
+    background-color: var(--lec-event-color);
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .quiz-event {
+    padding: 0.25rem;
+    font-size:0.875rem;
+    line-height:1.25rem;
+    border-left: 4px solid var(--quizl-event-color);
+    background-color: var(--quiz-event-color);
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .special-event {
+    padding: 0.25rem;
+    font-size:0.875rem;
+    line-height:1.25rem;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+    background: linear-gradient(90deg, rgb(110, 3, 112) 0%, rgba(0,31,110,1) 100%);
+  }
+
+  .veterans-event {
+    padding: 0.25rem;
+    font-size:0.875rem;
+    line-height:1.25rem;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+    background: linear-gradient(150deg, rgba(0,89,255,1) 0%, rgba(255,255,255,0.4467532467532468) 50%, rgba(255,0,0,1) 100%);
+  }
+
+  .halloween-event {
+    padding: 0.25rem;
+    font-size:0.875rem;
+    line-height:1.25rem;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+    background: linear-gradient(107deg, rgba(0,0,0,1) 0%, rgba(255,93,0,1) 100%);
+  }
