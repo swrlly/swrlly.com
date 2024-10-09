@@ -24,326 +24,104 @@
     <p>Answer the following:</p>
     <ol>
 
-        <li class="hw-space">A function $g(x)$ has the following graph: 
-            <img src="/static/swrlly/images/teaching/141-hw3-2.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
-            Find the following. If they do not exist explain why.
+        <li class="hw-space">State in interval notation where each of the following functions are continuous.
             <ol type="a">
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^-} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^+} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -1} g(x)$</li>
-                <li class="hw-space">$g(3)$</li>
+                <li class="hw-space">$f(x) = \dfrac{\sin(x)}{x^2}$</li>
+                <li class="hw-space">$f(x) = 4x^{32} - 8x^2 + x - 1$</li>
+                <li class="hw-space">$f(x) = x^{32894983} - 2x + \dfrac{1}{x}$</li>
+                <li class="hw-space">$f(x) = \dfrac{\sin^4(x)\cos^3(x)}{x^2 - 4}$</li>
+            </ol> 
+        </li>
+
+        <li class="hw-space">Suppose $(1, f(1))$ is a point on the graph of $f(x)$. What is the equation of the tangent line at $x = 1$?</li>
+
+        <li class="hw-space"> 
+            When we are using the definition of the slope of the tangent line at the point $(a, f(a))$:
+            <ol type="a">
+                <li class="hw-space">What type of limit is this called? Hint: $0/0$</li>
+                <li class="hw-space">What always happens to the $h$ in the denominator?</li>
+                <li class="hw-space">Suppose the above phenomena in (b) does not happen. What do you think went wrong?</li>
             </ol>
         </li>
 
-        <li class="hw-space">Given the following functions $f(x)$ and $g(x)$: 
-            <img src="/static/swrlly/images/teaching/161-hw4-1.PNG" style="max-width:500px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
-            Find the following limits, if it exists. If it doesn't, explain why.
+        <li class="hw-space">Using the <b>limit definition</b> of the slope of a tangent line at $x = a$, i.e. \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] find an equation of the tangent line for the following functions at the given point:
             <ol type="a">
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 2}\ [f(x) + g(x)]$</li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 1}\ [f(x) + g(x)]$</li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\ [f(x)g(x)]$</li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 2}\ [x^3f(x)]$</li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 1}\ \sqrt{3 + f(x)}$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">
-            Suppose $f(x)$ and $g(x)$ are two different functions. You compute the limit: \[\lim_{x\rightarrow 5} \dfrac{f(x)}{g(x)} =  \cdots = \dfrac{0}{0}\]
-            <ol type="a">
-                <li class="hw-space">What type of result is this called?</li>
-                <li class="hw-space">Suppose you decide to leave your answer as $\dfrac{0}{0}$. Is your answer correct and complete?</li>
-                <li class="hw-space">What will <b>always happen</b> which allows you to remove the $0$'s from the numerator and denominator?</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Find the following limits using limit laws. If it is an indeterminate form of type $\dfrac{0}{0}$, make sure to properly deal with it.
-            <ol type="a">
-                
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} \sqrt{\dfrac{2x^2 + 2}{2x^2 - 1}}$</li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 5}\dfrac{x^2 - 6x + 5}{x - 5}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{h\rightarrow 0}\dfrac{(4+h)^2 - 16}{h}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sqrt{x^2 + 9} - 3}{x^2}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 16}\dfrac{4 - \sqrt{x}}{16x - x^2}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{1}{x} - \dfrac{1}{x^2 + x}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{t\rightarrow-3}\dfrac{t^2 - 9}{2t^2 + 7t  +3}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{h\rightarrow 0} \dfrac{\dfrac{1}{3 +h} - \dfrac{1}{3}}{h}$</li>
-                <!--<li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sin 3x}{x}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{t\rightarrow 0}\dfrac{\tan 6t}{\sin 2t}$
-                </li>
-                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{\sin^2 4t}{t^2}$
-                </li>-->
-            </ol>
-        </li>
-
-        <li class="hw-space">For the following problems, sketch the graph of $f$ and find $\displaystyle \lim_{x\rightarrow a} f(x)$, if it exists.
-            <ol type="a">
-                <li class="hw-space">$f(x) = \begin{cases} x^2 & x \leq 1 \\ x-1 & x > 1\end{cases}, \qquad a = 1$</li>
-                <li class="hw-space">$f(x) = \begin{cases} x^2 - 3 & x \neq 0 \\ 0 & x = 0\end{cases}, \qquad a = 0$</li>
-                <li class="hw-space">
-                    $f(x) = \begin{cases} -1 & x < 0 \\ x - 1 & x > 0 \end{cases}, \qquad a = 0$.
-                </li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Use the squeeze theorem to show \[\lim_{x\rightarrow 0}x^2 \cos (20\pi x) = 0\]</li>
-
-        <li class="hw-space">If $ 4x - 9 \leq f(x) \leq x^2 - 4x + 7$ for all $x \geq 0$, find $\displaystyle\lim_{x\rightarrow 4}f(x)$.</li>
-
-        <li class="hw-space"> Given this graph of $f(x)$ <img src="/static/swrlly/images/teaching/hw3im1.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
-            Determine which statements are true or false.
-            <ol type="a">
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^-} f(x) = 0$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^+} f(x) = 0$</li>
-                <li class="hw-space">$f(1)$ is defined.</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} f(x) = f(2)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} f(x)= 1$ </li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^-} f(x)= \lim_{x\rightarrow 3^+}f(x)$</li>
-                <li class="hw-space">(skip this one) $f(x)$ is continuous from the right at $x = 1$.</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Suppose a function $f(x)$ has $f(2) = 5$ and $\displaystyle \lim_{x \rightarrow 2}f(x) = 5$. Is the function continuous at $x = 2$?</li>
-
-        <li class="hw-space">Your professor asks you to use the definition of continuity to show $f(x)$ is continuous at $x=1$. Write down the three conditions you must verify in order for your answer to be considered correct.</li>
-
-        <hr/>
-        <p>The rest of these problems will appear on next week's homework. Skip the rest of these for Homework 3.</p>
-        <hr/>
-
-        <li class="hw-space">
-            <b>Use the definition of continuity</b> to explain why the function is continuous at the given number $a$. 
-            <ol type="a">
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}(x-1)^2& x < 0 \\ (x+1)^2 & x \geq 0\end{cases} \qquad a = 0$</li>
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x(x-1)& x < 1 \\ 0 & x = 1 \\ \sqrt{x-1} & x > 1\end{cases} \qquad a = 1$</li>
+                <li class="hw-space">$f(x) = 4x - 3x^2$ at the point $(2, -4)$</li>
+                <li class="hw-space">$f(x) = \dfrac{2x}{x + 1}$ at the point $(1, 1)$</li>
+                <li class="hw-space">$f(x) = \sqrt{x}$ at the point $(1, 1)$</li>
+                <li class="hw-space">$f(x) = (x-1)^2$ at the point $(1, 0)$</li>
             </ol>
         </li>
 
         <li class="hw-space">
-            <b>Use the definition of continuity</b> to explain why the function is discontinuous at the given number $a$.  Sketch the graph of the function.
+            A ball is dropped from a tower 1000 meters tall. Find the instantaneous velocity after 4 seconds.
+            <br>Hint: Use Galileo's Law, which says the total displacement for a freely falling body after $t$ seconds is described by the function $s(t) = 4.9t^2$.
+        </li>
+
+        <li class="hw-space">What are the three ways to think about the derivative $f'(x)$?</li>
+        
+        <li class="hw-space"><b>Using the limit definition of a derivative</b>, i.e. \[f'(x) = \lim_{h\rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\] find the derivative of the following functions.
             <ol type="a">
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x+1 & x < 0 \\ x^2 & x \geq 0\end{cases} \qquad a = 0$</li>
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x + 5 & x < 0 \\ 2 & x = 0 \\ -x^2 + 5 & x > 0\end{cases} \qquad a = 0$</li>
+                <li class="hw-space">$f(x) = 2x + 3$</li>
+                <li class="hw-space">$g(x) = x + \sqrt{x}$</li>
+                <li class="hw-space">$f(x) = x^2 - 1$</li>
+                <li class="hw-space">$g(x) = \dfrac{1}{\sqrt{x}}$</li>
+                <li class="hw-space">$f(x) = \dfrac{1}{x}$</li>
             </ol>
         </li>
+
+        <li class="hw-space">Suppose $f(x)$ is differentiable on $\mathbb{R}$. Must $f(x)$ be continuous on $\mathbb{R}$? If not, explain why.</li>
+
+        <li class="hw-space">Suppose $f(x)$ is continuous on $\mathbb{R}$. Must $f(x)$ be differentiable on $\mathbb{R}$? If not, draw the graph of a function where it fails to be differentiable.</li>
 
         <li class="hw-space">
-            If a function $f(x)$ is continuous at $x = a$, what does $\displaystyle \lim_{x\rightarrow a} f(x)$ have to be?
+            Suppose the graph of $f(x)$ is <img src="/static/swrlly/images/teaching/161-hw5-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> 
+            
+            Sketch a graph of $f'(x)$.
         </li>
 
-        <li class="hw-space">How would you define $f(2)$ in the function \[f(x) = \dfrac{x^2 - x - 2}{x - 2}\] in order to make $f(x)$ continuous at $x = 2$?</li>
+        <li class="hw-space">Draw <b>one graph</b> of a function in which all three cases where a function fails to be differentiable appears.</li>
 
-        <li class="hw-space">Where is the function \[f(x) = \dfrac{\sin(x)}{x + 1}\] continuous?</li>
+        <li class="hw-space">The graph of $f$ is given. State with reason the $x$ values where $f$ is not differentiable. You may assume the domain of $f$ is $\mathbb{R}$. <img src="/static/swrlly/images/teaching/161-hw5-2.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> </li>
 
-        <li class="hw-space">What's the difference between a removeable, jump and infinite discontinuity?</li>
-
-        <li class="hw-space">Draw one graph of a function which satisfies the following conditions simultaneously:
-            <ul>
-                <li>Jump discontinuity at $2$ but continuous from the right at $2$</li>
-                <li>Discontinuous at $-1$ and $4$ but continuous from the left at $-1$ and from the right at $4$.</li>
-                <li>Continuous everywhere else</li>
-            </ul> 
+        <li class="hw-space">Consider Galileo's Law for freely falling bodies: \[s(t) = 4.9t^2\]
+            <b>Using the limit definition of the derivative</b>, find the velocity $v(t)$ and acceleration $a(t)$ functions.
         </li>
 
-    </ol>
+        <li class="hw-space">Consider the function \[f(x) = x^2 - 1\]
+            <br>
+            <b>Using the limit definition of the derivative</b>, find $f'(x)$ and $f''(x)$.
+        </li>
 
-        <!--
-        
-        <li class="hw-space">Perform the indicated operation and/or fully simplify. Get rid of all negative exponents.
+        <li class="hw-space"><p>Find the derivative using the Differentiation Rules. </p>
+
+            <p>Hint 1: Remember to observe your input variable and to fully simplify each expression.</p>
+            
+            <p>Hint 2: You <b>need</b> to know how to manipulate exponents. See <a href="/teaching/math-141/lectures/II">Lecture Note II</a> for definitions.
+            </p>
             <ol type="a">
-                <li class="hw-space">$\dfrac{x^{-1} + y^{-1}}{4} \ \ $ (hint: use definition of negative exponent. This is a compound fraction)</li>
-                <li class="hw-space">$\dfrac{\dfrac{1}{\sqrt{x+h}} - \dfrac{1}{\sqrt{x}}}{h} \ \ $ (hint: get rid of the compound fraction, rationalize the denominator, and cancel common factors) </li>
-                <li class="hw-space">$\dfrac{1 + \dfrac{1}{x}}{\dfrac{1}{x} - 2}$</li>
-                <li class="hw-space">$\dfrac{\frac{1}{2x+1}}{\dfrac{1}{2x^2 + 5x + 2}}$</li>
-                
+                <li class="hw-space">$f(x) = 199$</li>
+                <li class="hw-space">$g(t) = \left(\sqrt{30}\right)^3$</li>
+                <li class="hw-space">$f(x) = x^3 + x^2 + x + 1$</li>
+                <li class="hw-space">$g(v) = \dfrac{a}{v} + bv + \dfrac{c}{v^2}$</li>
+                <li class="hw-space">$f(x) = \sqrt{x}(x - 1)$</li>
+                <li class="hw-space">$f(t) = 3t^{-3/4}$</li>
+                <li class="hw-space">$f(x) = x^{2.9}$</li>
+                <li class="hw-space">$f(r) = -9r^{2/3}$</li>
+                <li class="hw-space">$g(x) = 5x^2 + 6x + 7$</li>
+                <li class="hw-space">$h(r) = \dfrac{r^5 + 2r^4 + 3r + 1}{r}$</li>
+                <li class="hw-space">$f(a) = \dfrac{5}{a^4} - \dfrac{2}{\sqrt[3]{a^2}} -\dfrac{1}{a} + 200$</li>
+                <li class="hw-space">$f(x) = \dfrac{5}{x^4} + \dfrac{\sqrt{x^3}}{3} + x$</li>
+                <li class="hw-space">$f(x) = 2x\left(3x^2 + 1\right)$</li>
+                <li class="hw-space">$f(x) = (3x + 1)(4x^3 - 5x^2)$</li>
+                <li class="hw-space">$f(t) = \dfrac{t - \sqrt{t}}{t^{1/3}}$</li>
+                <!--<li class="hw-space">$y = \dfrac{x^2 + 1}{x^2 - 1}$</li>
+                <li class="hw-space">$y = x + \dfrac{1}{x}$</li>
+                <li class="hw-space">$y = \dfrac{1 + 2x}{3 - 4x}$</li>
+                <li class="hw-space">$f(x) = \dfrac{x}{x + \frac{1}{x}}$</li>
+                <li class="hw-space">$f(x) = (x + 1)(x^{-2} + x^{-3})$</li>-->
             </ol>
         </li>
-
-        <li class="hw-space">Draw a coordinate plane and graph the points $(1,2), (2, -1), (-3, -4)$ and $(4, -3)$.</li>
-        
-        <li class="hw-space">Suppose I have an expression $f(x)$ and I find two different inputs that give the same evaluation. In particular, I find that $x = 2$ and $x = 3$ gives $f(2) = f(3)$. Is $f$ a function?</li>
-        
-        <li class="hw-space">Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
-        
-        <li class="hw-space">Write down two examples of functions which you encounter in your daily life.</li>
-        
-        <li class="hw-space">Let $f(x) = x^2 - x + 1$. Evaluate and simplify the following:
-            <ol type="a">
-                <li class="hw-space">$f(1)$</li>
-                <li class="hw-space">$f(a)$</li>
-                <li class="hw-space">$f(-a)$</li>
-                <li class="hw-space">$f(x + h)$</li>
-                <li class="hw-space">$f(x + h) - f(x)$</li>
-                <li class="hw-space">$f(-x^2)$</li>
-            </ol>
-        </li>
-        <li class="hw-space">Let $f(x) = \dfrac{x + 1}{x^2 + x}$ Evaluate and simplify the following:
-            <ol type="a">
-                <li class="hw-space">$f(-1)$</li>
-                <li class="hw-space">$f(a + h)$</li>
-                <li class="hw-space">$f(a + h) - f(x)$</li>
-                <li class="hw-space">$f(x^2)$</li>
-            </ol>
-        </li>
-        <li class="hw-space">Let \[f(x) = \begin{cases} 3x + 2 & x \geq 2 \\ x^2 - x & x < 2\end{cases}\] Evaluate the following:
-            <ol type="a">
-                <li class="hw-space">$f(0)$</li>
-                <li class="hw-space">$f(1)$</li>
-                <li class="hw-space">$f(2)$</li>
-                <li class="hw-space">$f(3)$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Draw a rough sketch of the previous graph by hand. You may verify your graph in Desmos.<br/>
-        Hint: To graph a piecewise function in Desmos, you need to specify a domain restriction. You can graph $3x + 2, x \geq 2$ by typing the symbols $3x + 2 \{x \geq 2\}$ into Desmos, where the $\geq$ sign is created by first typing $>$ then $=$.</li>
-        
-        <li class="hw-space">Read these two lecture notes on trigonometric functions: <a href="https://swrlly.com/teaching/math-119/lectures/5.1">5.1: Unit Circle</a> and <a href="https://swrlly.com/teaching/math-119/lectures/5.2">5.2: Trigonometric Functions</a>. This is mandatory reading if you do not remember trigonometric functions. <br/>Write "Without using the internet, I can evaluate trigonometric functions and know their graph shapes." to get credit for this problem.</li>
-        
-        <li class="hw-space">For what inputs $x$ does the function $f(x) = \cos(x)$ output $0$? (Hint: 5.1 + 5.2 Lecture notes. In other words, which radian value results in an $x$-coordinate of 0 on the unit circle?). </li>
-
-        <li class="hw-space">Find the six trigonometric functions of $t = \frac{2\pi}{3}$.</li>
-        
-        <li class="hw-space">Find the six trigonometric functions of $t = -\frac{5\pi}{6}$.</li>
-        
-        <li class="hw-space">If $\sin t > 0$ and $ \cos t < 0$, what quadrant is the terminal point in?</li>
-        
-        <li class="hw-space">Suppose $f(x) = 8^x$. Evaluate $f\left(\dfrac{2}{3}\right)$ by using the definition of the fractional exponent.</li>
-        
-        <li class="hw-space">You are given a function and a input value. Evaluate the function on the input value and make sure intermediate steps which show your thought process:
-            <ol type="a">
-                <li class="hw-space">$f(x) = \log_3 x, \qquad x = 27$</li>
-                <li class="hw-space">$f(x) = 2^x + 4^x, \qquad x = 2$</li>
-                <li class="hw-space">$g(x) = \tan(x), \qquad x = \dfrac{\pi}{3}$</li>
-                <li class="hw-space">$h(x) = \dfrac{e^x + e^{-x}}{2}, \qquad x = 0$</li>
-                <li class="hw-space">$f(x) = e^{e^x}, \qquad x = 0$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Suppose \[f(x) = \sin(x) + \cos(x) \qquad g(x) = e^\frac{x}{\pi} - 1\]
-            Evaluate and simplify the following expressions without a calculator/the internet:
-            <ol type="a">
-                <li class="hw-space">$f(0)$</li>
-                <li class="hw-space">$g(0)$</li>
-                <li class="hw-space">$f\left(\frac{\pi}{2}\right) + g(\pi)$</li>
-                <li class="hw-space">$f(x)\cdot g(x)$</li>
-                <li class="hw-space">$f(x) - g(x)$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Redefine the following rational functions with their domain exclusions (holes):
-            <ol type="a">
-                <li class="hw-space">$f(x) = \dfrac{x^2 - 1}{x-1}$</li>
-                <li class="hw-space">$f(x) = \dfrac{2x^2 + 3x - 2}{x + 2}$</li>
-                <li class="hw-space">$f(x) = \dfrac{x^3 - 3x^2 - 4x}{x}$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Suppose \[f(x) = \sin(x) \qquad g(x) = x^2 - x \qquad h(x) = f(x)g(x)\] Evaluate the following:
-            <ol type="a">
-                <li class="hw-space">$f\circ g$</li>
-                <li class="hw-space">$g \circ f$</li>
-                <li class="hw-space">$h \circ f$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">You are given a function $F(x)$. Find two functions $f, g$ where $F = f \circ g$.
-            <ol type="a">
-                <li class="hw-space">$F(x) = \sin(\cos x)$</li>
-                <li class="hw-space">$F(x) = \sin^2(x)$</li>
-                <li class="hw-space">$F(x) = \cos(x^2)$</li>
-                <li class="hw-space">$F(x) = (x^3 - x^2 - 1)^{2/3}$</li>
-                <li class="hw-space">$F(x) = e^{x^2 - x}$</li>
-                <li class="hw-space">$F(x) = (e^x)^3 - \sin(e^x)$</li>
-                <li class="hw-space">$F(x) = e^{e^x}$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">If someone writes $f(x) = \cos x + 2$, do they mean the function $\cos(x) + 2$ or $\cos (x + 2)$? This is why parentheses are important.</li>
-
-        <li class="hw-space">Find the domain of the following functions:
-            <ol type="a">
-                <li class="hw-space">$f(x) = \dfrac{1}{x^2 - 1}$</li>
-                <li class="hw-space">$f(x) = \dfrac{1}{\cos x} \ $ (Hint: Problem 12).</li>
-            </ol>
-
-        </li>
-
-        <li class="hw-space">Draw a rough sketch by hand of the functions \[\ln x \qquad  \sin x \qquad \cos x \qquad e^x \qquad y = mx + b, m > 0\]</li>
-
-        <li class="hw-space">Describe the general graph shape in English for the following functions. The first problem is done for you.</br>Note: you are expected to be able to do these without technology, for example for in-class assignments.
-            <ol type="a">
-                <li class="hw-space">$f(x) = mx + b$ </br> This function's graph is a line. This is because in the formula $f(x)$ the variable you need to substitute is $x$. Since the largest power of $x$ among the terms is one (the first term), this function's parent function is $g(x) = x$, which we know is a line from Lecture Note V.</li>
-                <li class="hw-space">$f(x) = ax^2 + bx + c$ where  $a,b,c \in \mathbb{R}$ and $a \neq 0$.</li>
-                <li class="hw-space">$f(x) = \sin(x)$</li>
-                <li class="hw-space">$g(x) = \sqrt{x}$</li>
-                <li class="hw-space">$a(x) = e^x$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">
-            Suppose you have a function $f(x)$. What is the tangent problem?
-        </li>
-
-        <li class="hw-space">How is the tangent problem related to instantaneous velocity?</li>
-
-        <li class="hw-space">
-            Suppose $f(x)$ is a function and let $a$ be in the domain of $f(x)$. Describe in English how you would, using the graph, find the tangent line at the point on the graph $(a, f(a))$.
-        </li>
-
-        <li class="hw-space">Suppose $f(x)$ is a function. Explain in English what the symbols \[\lim_{x\rightarrow a}f(x) = L\] means.</li>
-
-        <li class="hw-space">In class we discussed one way of estimating limits of a function $f(x)$ at $x = a$. Does the limit utilize information about the $x$-value $a$?</li>
-
-        <li class="hw-space">Suppose $\lim_{x\rightarrow a}f(x) + L$. Draw the three possible graphs in which this limit can exist.</li>
-
-        <li class="hw-space">Suppose we have an expression $\frac{1}{x}$ where $x$ grows without bound. What does the expression $\frac{1}{x}$ end up approaching?</li>
-
-        <li class="hw-space">Suppose we have an expression $\frac{1}{x}$ where $x$ gets closer and closer to 0. What does the expression $\frac{1}{x}$ end up approaching?</li>
-        
-        <li class="hw-space">A function $f(x)$ has the following graph: 
-            <img src="/static/swrlly/images/teaching/141-hw3-1.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
-            Find the following. If they do not exist explain why.
-            <ol type="a">
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^-} f(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^+} f(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} f(x)$</li>
-                <li class="hw-space">$f(2)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 4} f(x)$</li>
-                <li class="hw-space">$f(4)$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Sketch the graph of a function $f(x)$ which satisfies the following:
-            <ol type="a">
-                <li class="hw-space">$f(0) = -1$</li>
-                <li class="hw-space">$f(3) = 1$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0} f(x) = 1$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^-} f(x) = -2$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^+} f(x) = 2$</li>
-            </ol>
-        </li>
-        
-        <li class="hw-space">A function $g(x)$ has the following graph: 
-            <img src="/static/swrlly/images/teaching/141-hw3-2.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
-            Find the following. If they do not exist explain why.
-            <ol type="a">
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^-} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^+} g(x)$</li>
-                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -1} g(x)$</li>
-                <li class="hw-space">$ g(3)$</li>
-            </ol>
-        </li>
-
-    -->
 
 </div>
 {% endblock %}
