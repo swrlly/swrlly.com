@@ -21,7 +21,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
+        <!--<script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>-->
+        <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
         <script>
             MathJax = {
@@ -38,9 +39,17 @@
         <script async src="/static/swrlly/js/teaching.js"></script>
         {% endblock %}
     </head>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("body").style.display = "";
+            }, 200);
+        };
+    </script>
     
     <body>
-        
+
         <div class="fullScreen" id="background">
             <canvas id="canvas2d"></canvas>
         </div>
@@ -116,12 +125,7 @@
         </div>
         {% endblock %}
 
-
     </body>
+
+
 </html>
-
-
-
-
-
-
