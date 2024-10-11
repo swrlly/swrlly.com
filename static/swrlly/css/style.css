@@ -501,7 +501,7 @@ a:hover {
 .calendar {
     display: grid;
     width: 100%;
-    grid-template-columns: 11.7% 17.66% 17.66% 17.66% 17.66% 17.66%;/*repeat(6, 1fr);*/
+    grid-template-columns: repeat(6, 1fr); /*11.7% 17.66% 17.66% 17.66% 17.66% 17.66%;*/
     grid-template-rows: 4rem;
     grid-auto-rows: 6rem;
   }
