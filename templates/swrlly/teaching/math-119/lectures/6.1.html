@@ -12,7 +12,9 @@
 
 {% block content %}
 <div class="container fade-in-text text-padding">
+
     <h1>6.1: Angle Measure</h1><hr>
+
     <p>From Chapter 5, we have two burning questions:
         <ul>
             <li>
@@ -24,13 +26,19 @@
         </ul>
         Question 1 will be answered today. Question 2 will be answered in 6.2.
     </p>
-    <h2>Angle Measure</h2>
+
+    <h2>Angle Measure</h2><hr>
+
     <p>Let's first define what an angle is.</p>
+
     <div class="math-def">
         If a circle of radius 1 is drawn with the vertex of an angle at its center, then the measure of this angle in <b>radians</b> is the length of the arc that subtends the angle.
     </div>
+
     <p>Picture will be drawn in class.</p>
+
     <p>Since $\pi$ radians is a rotation halfway around the circle, we know that $180^\circ = \pi$ rad. Thus we have the following:</p>
+
     <div class="math-fact">
         \[1 \text{ rad} = \left(\frac{180}{\pi}\right)^\circ \qquad\qquad 1^\circ = \frac{\pi}{180}\text{ rad}\]
         <ul>
@@ -38,45 +46,62 @@
             <li>To convert radians to degrees, multiply by $\frac{180}{\pi}$.</li>
         </ul>
     </div>
+
     <div class="math-example">
         <ul>
             <li>Express $60^\circ$ in radians.</li>
             <li>Express $\frac{\pi}{6}$ rad in degrees.</li>
         </ul>
     </div>
-    <h2>Angles in Standard Position</h2>
-    <p>You may have noticed the <b>length of the arc</b> is basically the $t$ value, except the initial side of the angle did not start on the positive $x$-axis. If the initial side is on the positive $x$-axis, we say the angle is in <b>standard position</b>.</p>
+
+    <h2>Angles in Standard Position</h2><hr>
+
+    <p>You may have noticed the <b>length of the arc</b> is the $t$ value, except the initial side of the angle did not start on the positive $x$-axis. If the initial side is on the positive $x$-axis, we say the angle is in <b>standard position</b>.</p>
+    
     <p>(picture in class)</p>
+
     <p>Two angles in standard position are <b>coterminal</b> if both the initial side and terminal sides lie on top of each other.</p>
+
     <div class="math-example">
         <ul>
             <li>Find two angles that are coterminal with the angle $\theta = 30^\circ$ in standard position.</li>
             <li>Find two angles that are coterminal with the angle $\theta =\frac{\pi}{3}$ in standard position.</li>
         </ul>
     </div>
-    <h2>Length of a Circular Arc</h2>
+
+    <h2>Length of a Circular Arc</h2><hr>
+
     <p>The $t$ value in Chapter 5 is arc length in radians. We also have a method to convert $t$ into the subtended angle. What is the relationship between the arc length and the angle?</p>
+
     <div class="math-def">
         In a circle of radius $r$ the length $s$ of an arc that subtends a central angle of $\theta$ radians is \[s = r\theta\]
     </div>
+
     <p>In Chapter 5 we had $r = 1$, giving $s = \theta$. This means the arc length was exactly the angle measure. Here, we are generalizing to any valid value of $r$.</p>
+    
     <div class="math-example">
         <ul>
             <li>Suppose a circle has radius 10 meters. An arc is subtended by an angle of $30^\circ$. Find the arc length.</li>
             <li>Suppose a circle has radius 4 meters. A central angle is subtended by an arc length of 6 meters. Find the angle in radians.</li>
         </ul>
     </div>
-    <h2>Area of a Circular Sector</h2>
+
+    <h2>Area of a Circular Sector</h2><hr>
+
     <div class="math-example">
         In a circle of radius $r$ the area $A$ of a sector with a central angle of $\theta$ radians is \[A = \frac{1}{2}r^2\theta\]
     </div>
+
     <p>Insight: Rewrite the formula as $A = \frac{\theta}{2}\cdot r^2$. What does it look like now?</p>
+
     <div class="math-example">
         Find the area of a sector of a circle with central angle $60^\circ$ if the radius of the circle is three meters.
     </div>
+
     <div class="math-example">
         For dinner, you tried to order one pizza with radius 9 inches. However, the pizza place ran out of pizzas that are six inches, and offered you four pizzas with radius 4 inches each for the same price. Should you take the deal?
     </div>
+
     <h2>Circular Motion</h2>
     As a point swirls around a circle, there are two different ways we can quantify how "fast" the point is moving:
     <div class="math-def">
@@ -85,6 +110,7 @@
             <li><b>Angular speed</b> is the rate at which the central angle $\theta$ is changing.</li>
         </ul>
     </div>
+
     <div class="math-def">
         Suppose a point moves along a circle of radius $r$ and the ray from the center of the circle to the point traverses $\theta$ radians in time $t$. Let $s = r\theta$ (the arc length) be the distance the point travels in time $t$. Then the speed of the object can be thought of in two different ways:
 
@@ -101,6 +127,7 @@
             </tbody>
         </table>
     </div>
+    
     <div class="math-example"> A boy spins a stone in a three feet long sling at a rate of 15 revolutions every 10 seconds. Find the angular and linear velocities of the stone in seconds.</div>
 </div>
 {% endblock %}

@@ -28,117 +28,99 @@
 
     <ol>
 
-        <li class="hw-space">
-            <b>Use the three-part definition of continuity</b> to explain why the function is continuous at the given number $a$. 
+        <li class="hw-space">Suppose a student sees a function \[f(x) = \dfrac{\sqrt{x}}{x^2 + x}\] and is asked to find $\dfrac{d}{dx} f(x)$. The student tries this: \[\dfrac{d}{dx} f(x) = \dfrac{d}{dx} \dfrac{\sqrt{x}}{x + 1} = \dfrac{\dfrac{d}{dx}  \sqrt{x}}{\dfrac{d}{dx} (x^2 + x)}\] Why is this incorrect?</li>
+
+        <li class="hw-space">Suppose a student tries again. They try \[\dfrac{d}{dx} f(x) = \dfrac{x^2 + x \cdot \frac{1}{2}x^{-1/2} - x^{1/2} \cdot 2x + 1}{(x^2 + x)^2}\] Why is this still incorrect?</li>
+
+        <li class="hw-space">Given $g(r) = \sqrt{r} + \sqrt[3]{r}$, find the first and second derivatives.</li>
+
+        <li class="hw-space">Suppose \[f(x) = 3\cdot(x^2 - 1)\] Do you need to use the product rule to find $f'(x)$? Why or why not?</li>
+
+        <li class="hw-space">Find the derivative using the Differentiation Rules. Remember to observe your input variable and to fully simplify each expression.
             <ol type="a">
-                <li class="hw-space">
-                    $\displaystyle f(x) = \begin{cases}(x-1)^2& x < 0 \\ (x+1)^2 & x \geq 0\end{cases} \qquad a = 0$
-                </li>
-                <li class="hw-space">
-                    $\displaystyle f(x) = \begin{cases}x(x-1)& x < 1 \\ 0 & x = 1 \\ \sqrt{x-1} & x > 1\end{cases} \qquad a = 1$
-                </li>
+                <li class="hw-space">$y = \dfrac{x^2 + 1}{x^2 - 1}$</li>
+                <li class="hw-space">$y = x + \dfrac{1}{x}$</li>
+                <li class="hw-space">$y = \dfrac{1 + 2x}{3 - 4x}$</li>
+                <li class="hw-space">$f(x) = \dfrac{x}{x + \frac{1}{x}}$</li>
+                <li class="hw-space">$f(x) = (x^2 + x + 1)(x^{-2} + x^{-3})$</li>
             </ol>
         </li>
 
-        <li class="hw-space">
-            <b>Use the three-part definition of continuity</b> to explain why the function is discontinuous at the given number $a$.  Sketch the graph of the function.
+        <li class="hw-space">The equation of motion of a particle is $s(t) = t^4 - 2t^3 + t^2 - t$ where $s$ is in meters and $t$ is in seconds.
             <ol type="a">
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x + 1 & x < 0 \\ x^2 & x \geq 0\end{cases} \qquad a = 0$</li>
-                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x + 5 & x < 0 \\ 2 & x = 0 \\ -x^2 + 5 & x > 0\end{cases} \qquad a = 0$</li>
-                <li class="hw-space">
-                    $\displaystyle f(x) = \begin{cases}-x & x < 0 \\ 1 & x = 0 \\ x & x > 0\end{cases} \qquad a = 0$
-                </li>
+                <li class="hw-space">Find the velocity and acceleration as functions of $t$.</li>
+                <li class="hw-space">Find the acceleration when the velocity is 0. (hint: set $v(t) = 0$ to find the time when the velocity is 0).</li>
             </ol>
         </li>
 
-        <li class="hw-space">
-            If a function $f(x)$ is continuous at $x = a$, what does $\displaystyle \lim_{x\rightarrow a} f(x)$ have to be?
-        </li>
-
-        <li class="hw-space">
-            How would you define $f(2)$ in the function \[f(x) = \dfrac{x^2 - x - 2}{x - 2}\] in order to make $f(x)$ continuous at $x = 2$?
-            <br>Hint: find the hole in $f(x)$ and "fill in" the hole.
-        </li>
-
-        <li class="hw-space">State in interval notation where each of the following functions are continuous.
-            <ol type="a">
-                <li class="hw-space">$f(x) = \dfrac{\sin(x)}{x^2}$</li>
-                <li class="hw-space">$f(x) = 4x^{32} - 8x^2 + x - 1$</li>
-                <li class="hw-space">$f(x) = x^{32894983} - 2x + \dfrac{1}{x}$</li>
-                <li class="hw-space">$f(x) = \dfrac{\sin^4(x)\cos^3(x)}{x^2 - 4}$</li>
-            </ol> 
-        </li>
-
-        <li class="hw-space"> Use the continuity limit swap theorem to prove the following function is continuous at 4.
-            \[\displaystyle f(x) = \begin{cases} \sqrt{x} & x < 4 \\ 2\cos\left(x-4\right) & x \geq 4\end{cases} \qquad a = 4\]
-        </li>
-
-        <li class="hw-space">Draw three different graphs, each of which shows one of each of a removeable, jump, and infinite discontinuity.</li>
-
-        <li class="hw-space">Draw one graph of a function which satisfies the following conditions simultaneously:
-            <ul>
-                <li>Jump discontinuity at $2$ but continuous from the right at $2$</li>
-                <li>Discontinuous at $-1$ and $4$ but continuous from the left at $-1$ and from the right at $4$.</li>
-                <li>Continuous everywhere else</li>
-            </ul> 
-        </li>
-
-        <li class="hw-space">Show $f(x) = x^4 + x - 3$ has a root between $(1, 2)$.</li>
-
-        <li class="hw-space">Suppose $(1, f(1))$ is a point on the graph of $f(x)$. What is the equation of the tangent line at $x = 1$?</li>
-
-        <li class="hw-space"> 
-            When we are using the definition of the slope of the tangent line at the point $(a, f(a))$:
-            <ol type="a">
-                <li class="hw-space">What type of limit is this called?</li>
-                <li class="hw-space">What always happens to the $h$ in the denominator?</li>
-                <li class="hw-space">Suppose the above phenomena does not happen. What do you think went wrong?</li>
+        <li class="hw-space">Find an equation of the normal line to the curve $y = \sqrt{x}$ that is parallel to the line $2x + y = 1$.
+            <br/>Hint: 
+            <ol>
+                <li>Find the derivative and set it equal to slope of the above line. </li>
+                <li>Solve for $x$, this value of $x$ gives you the $x$-value of the point of tangency.</li>
             </ol>
         </li>
-
-        <li class="hw-space">Using the <b>limit definition</b> of the slope of a tangent line, i.e. \[m = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\], find an equation of the tangent line for the following functions at the given point:
-            <ol type="a">
-                <li class="hw-space">$f(x) = 4x - 3x^2$ at the point $(2, -4)$</li>
-                <li class="hw-space">$f(x) = \dfrac{2x}{x + 1}$ at the point $(1, 1)$</li>
-                <li class="hw-space">$f(x) = \sqrt{x}$ at the point $(1, 1)$</li>
-                <li class="hw-space">$f(x) = (x-1)^2$ at the point $(1, 0)$</li>
-            </ol>
-        </li>
-
-        <hr/>
-        <p>The rest of these problems will appear on next week's homework. Skip the rest of these for Homework 4.</p>
-        <hr/>
-
-        <li class="hw-space">
-            A ball is dropped from a tower 1000 meters tall. Find the instantaneous velocity after 4 seconds.
-            <br>Hint: Use Galileo's Law, which says the total displacement for a freely falling body after $t$ seconds is described by the function $s(t) = 4.9t^2$.
-        </li>
-
-        <li class="hw-space">What are the three ways to think about the derivative $f'(a)$?</li>
         
-        <li class="hw-space"><b>Using the limit definition of a derivative</b>, find the derivative of the following functions at $x = a$.
+        <li class="hw-space">Differentiate the following:
             <ol type="a">
-                <li class="hw-space">$f(x) = 2x + 3$</li>
-                <li class="hw-space">$g(x) = x + \sqrt{x}$</li>
-                <li class="hw-space">$f(x) = x^2 - 1$</li>
-                <li class="hw-space">$g(x) = \dfrac{1}{\sqrt{x}}$</li>
-                <li class="hw-space">$f(x) = \dfrac{1}{x}$</li>
+                <li class="hw-space">$f(x) = \sec x$</li>
+                <li class="hw-space">$f(x) = \cot x$</li>
+                <li class="hw-space">$f(x) = x\cos x + 2\tan x$</li>
+                <li class="hw-space">$f(x) = \dfrac{\sec x}{1 + \tan x}$</li>
+                <li class="hw-space">$w(t) = \dfrac{\sin t}{1 - \sin t}$</li>
             </ol>
         </li>
 
-        <li class="hw-space">Suppose $f(x)$ is differentiable on $\mathbb{R}$. Must $f(x)$ be continuous on $\mathbb{R}$? If not, explain why.</li>
+        <li class="hw-space">Find the 51st derivative of $f(x) = \sin x$.</li>
 
-        <li class="hw-space">Suppose $f(x)$ is continuous on $\mathbb{R}$. Must $f(x)$ be differentiable on $\mathbb{R}$? If not, draw the graph of a function where it fails to be differentiable.</li>
+        <li class="hw-space">Suppose $F(x) = \sin(\cos (x))$. Finding a decomposition $f\circ g = F$, you determine that \[f(x) = x \qquad \qquad  g(x) = \sin (\cos (x))\] Why is this decomposition useless when finding $F'(x)$?</li>
 
         <li class="hw-space">
-            Suppose the graph of $f(x)$ is <img src="/static/swrlly/images/teaching/161-hw5-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> 
-            
-            Sketch a graph of $f'(x)$.
+            Differentiate the following. Be sure to recognize the form of the expression you are taking the derivative of in order to use the correct rule.
+            <ol type="a">
+                <li class="hw-space">$f(x) = (3x - x^3)^{23}$</li>
+                <li class="hw-space">$f(x) = \sqrt[3]{1 + \tan x}$</li>
+                <li class="hw-space">$f(x) = (3x + 2)^3(4x^2 + 3)^4$</li>
+                <li class="hw-space">$f(x) = \dfrac{\sin^2(x)\cdot(4x^2-1)^3}{(3x^3 - 2x)^4}$</li>
+                <li class="hw-space">$g(x) = \cos^3 x$</li>
+                <li class="hw-space">$g(\theta) = \cos \theta^3$</li>
+                <li class="hw-space">$y = \sqrt{x + \sqrt{ x + \sqrt{x}}}$</li>
+                <li class="hw-space">$f(x) = \sqrt{\dfrac{x}{x^2 + 4}}$</li>
+                <li class="hw-space">$f(x) = \sin x + \sin^2 x$</li>
+                <li class="hw-space">$g(a) = \sin(a \sin a)$</li>
+                <li class="hw-space">$f(x) = \sqrt{\sec x}$</li>
+                <li class="hw-space">$f(x) = \left(\dfrac{\sin^2(x)}{(x^2 + 1)^3}\right)^4$</li>
+            </ol>
         </li>
 
-        <li class="hw-space">Draw <b>one graph</b> of a function in which all three cases where a function fails to be differentiable appears.</li>
+        <li class="hw-space">Find the equation of the tangent line to the curve at the given point.
+            <ol type="a">
+                <li class="hw-space">$y = (1 + 2x)^{10}, \qquad (0, 1)$</li>
+                <li class="hw-space">$y = \sin(\sin(x)), \qquad (\pi, 0)$</li>
+            </ol>
+        </li>
 
-        <li class="hw-space">The graph of $f$ is given. State with reason the $x$ values where $f$ is not differentiable. You may assume the domain of $f$ is $\mathbb{R}$. <img src="/static/swrlly/images/teaching/161-hw5-2.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> </li>
+        <li class="hw-space">What is the main idea behind implicit differentiation?</li>
+
+        <li class="hw-space">What are the four steps to isolate an entity in an equation, let's say $\dfrac{dy}{dx}$?</li>
+
+        <li class="hw-space">Isolate $z$ in the equation \[-\sin(xy)(x + xz) = 1 + \cos(y)z\]
+        </li>
+
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation for the equation \[x^3 + y^3 + x^2 + y = 1\]     
+        </li>
+
+        <li class="hw-space">Consider the equation $x^{2/3} + y^{2/3} = 4$. Find the equation of the tangent line at the point $(-3\sqrt{3}, 1)$.</li>
+
+        <!--
+        <li class="hw-space">Find $dy/dx$ by implicit differentiation. Assume $y$ is the dependent variable and $x$ is the independent variable.
+            <ol type="a">
+                <li class="hw-space">$x^2 - 4xy + y^2 = 4$</li>
+                <li class="hw-space">$y \cos x = x^2 + y^2$</li>
+                <li class="hw-space">$\cos(xy) = 1 + \sin y$</li>
+                <li class="hw-space">$y \sin (x^2) = x \sin(y^2)$</li>
+            </ol>
+        </li>-->
 
 
     </ol>
