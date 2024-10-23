@@ -22,172 +22,71 @@
     </ol>  
     </p><hr>
 
-    <p><span style="color:red; font-weight: bold;">Note: if the problem says to use the limit definition and you use the shortcut, you will receive zero credit for that problem.</span></p>
-
     <p>Answer the following:</p>
     <ol>
 
-        <li class="hw-space">
-            A ball is dropped from a tower 1000 meters tall. Find the instantaneous velocity after 4 seconds.
-            <br>Hint: Use Galileo's Law, which says the total displacement for a freely falling body after $t$ seconds is described by the function $s(t) = 4.9t^2$.
+        <li class="hw-space">What is the main intuition behind implicit differentiation?</li>
+
+        <li class="hw-space">Isolate $z$ in the equation \[-\sin(xy)(x + xz) = 1 + \cos(y)z\]</li>
+
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation for the equation \[x^3 + y^3 + x^2 + y = 1\]     
         </li>
 
-        <li class="hw-space">Using the <b>limit definition</b> of the slope of a tangent line, i.e. \[m = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] find the equation of the tangent line for the following functions at the given point:
-            <ol type="a">
-                <li class="hw-space">$f(x) = x^2 - 1$ at the point $(1, 0)$</li>
-                <li class="hw-space">$f(x) = \dfrac{2x}{x + 1}$ at the point $(1, 1)$</li>
-                <li class="hw-space">$f(x) = \sqrt{x}$ at the point $(1, 1)$</li>
-                <li class="hw-space">$f(x) = (x-1)^2$ at the point $(1, 0)$</li>
-            </ol>
-        </li>
+        <li class="hw-space">Consider the equation $x^{2/3} + y^{2/3} = 4$. Find the equation of the tangent line at the point $(-3\sqrt{3}, 1)$.</li>
 
-        <li class="hw-space">What are the three ways to think about the derivative $f'(a)$?</li>
+        <li class="hw-space">Given an equation in implicit form, should you manipulate the equation before applying the derivative to both sides?</li>
+
+        <li class="hw-space">Here is the curve of $x^3 + y^3 = 6xy$ (called the Folium of Descartes): <img src="/static/swrlly/images/teaching/141-hw7-1.png" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em; margin-bottom:1em;"/>
         
-        <li class="hw-space"><b>Using the limit definition of a derivative</b>, find the derivative of the following functions.
-            <br>Do not use shortcuts; you will not receive credit for this problem.
+        In implicit differentiation, we assume $y = f(x)$ under suitable conditions. Draw multiple graphs which represent these "suitable conditions." 
+    
+        Hint: Chop up the curve so each part passes the vertical line test.
+        </li>
+
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation:
             <ol type="a">
-                <li class="hw-space">$f(x) = 2x + 3$</li>
-                <li class="hw-space">$g(x) = x + \sqrt{x}$</li>
-                <li class="hw-space">$f(x) = x^2 - 1$</li>
-                <li class="hw-space">$g(x) = \dfrac{1}{\sqrt{x}}$</li>
-                <li class="hw-space">$f(x) = \dfrac{1}{x}$</li>
+                <li class="hw-space">$x^3 + x^2 + y^3 + y^2 = 1$</li>
+                <li class="hw-space">$x^2 - xy - y^2 = 4$</li>
+                <li class="hw-space">$1 + x = \sin(xy)$ </li>
+                <li class="hw-space">$x^4y^3 + x^2y^4 = 2$</li>
+                <li class="hw-space">$2\sqrt{x} + \sqrt{y} = 3$</li>
+                <li class="hw-space">$(x + y)^3 + x^3 + y^3 = 0$</li>
+                <li class="hw-space">$\dfrac{x}{y^3 - y} = 1$</li>
+                <li class="hw-space">$\sin(x + y) = y^2 \cos x$</li>
+                <li class="hw-space">$(x+y)^3 + x^3 + y^3 = 0$</li>
             </ol>
         </li>
 
-        <li class="hw-space">Suppose $f(x)$ is differentiable on $\mathbb{R}$. Must $f(x)$ be continuous on $\mathbb{R}$? If not, explain why.</li>
+        <li class="hw-space">Find the equation of the tangent line at $(1,2)$ for the equation \[x^2  + 2xy - y^2 + x = 2\]</li>
 
-        <li class="hw-space">Suppose $f(x)$ is continuous on $\mathbb{R}$. Must $f(x)$ be differentiable on $\mathbb{R}$? If not, draw the graph of a function where it fails to be differentiable.</li>
+        <li class="hw-space">Find the equation of the tangent line at $(\pi, \pi)$ for the equation \[\sin(x + y) = 2x - 2y\]</li>
 
-        <li class="hw-space">
-            Suppose the graph of $f(x)$ is <img src="/static/swrlly/images/teaching/161-hw5-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> 
-            
-            Sketch a graph of $f'(x)$.
+        <li class="hw-space">When solving related rates problems, which variables do you need to differentiate with respect to time?</li>
+
+        <li class="hw-space">THe area of a triangle with lengths $a$ and $b$ and included angle $\theta$ is \[A = \frac{1}{2}ab \sin \theta\] If $a = 2$ cm, $b = 3$ cm, and $\theta$ is increasing at a rate of $0.2$ rad/min, how fast is the area increasing when $\theta = \frac{\pi}{3}$?</li>
+
+        <li class="hw-space">The formula for the volume $V$ of a cube with side length $s$ is $V = s^3$. The sides of the cube are 5 feet long and increasing at the rate of $0.2$ inches/second. How fast is the volume of the cube changing?</li>
+
+        <li class="hw-space">The kinetic energy of an object is $K = \frac{1}{2}mv^2$. If the object is accelerating at a rate of $9.8 \ m/s^2$, and the mass is $30$ kilograms, how fast is the kinetic energy increasing when the speed is $30$ meters per second?
+
+        <br/>Hint: Kinetic energy is measured in units $\frac{kg \cdot m^2}{s^2}$, so the rate of change of kinetic energy must be in units $\dfrac{\frac{kg \cdot m^2}{s^2}}{s} = \frac{kg \cdot m^2}{s^3}$ 
         </li>
 
-        <li class="hw-space">Draw <b>one graph</b> of a function in which all three cases where a function fails to be differentiable appears.</li>
+        <li class="hw-space">Suppose a drop of dye was dropped into a large bowl filled with water. If the dye spreads out in a circle and its radius is increasing at a rate of 2 cm/sec, determine how fast the area is increasing when the radius of the circle is 10 cm.</li>
 
-        <li class="hw-space">The graph of $f$ is given. State with reason the $x$ values where $f$ is not differentiable. You may assume the domain of $f$ is $\mathbb{R}$. <img src="/static/swrlly/images/teaching/161-hw5-2.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> </li>
+        <li class="hw-space">A plane flying horizontally at an altitude of 1 mi and a speed of 500 mph passes directly over a radar station. Find the rate at which the distance from the plane to the station is increasing when it is 2 miles away from the station.</li>
 
-        <hr/>
-        <p>The rest of these problems will appear on next week's homework. Skip the rest for this homework.</p>
-        <hr/>
+        <li class="hw-space">If the minute hand of a clock has length r (in centimeters) find the rate at which it sweeps out area as a function of r.
 
-        <li class="hw-space">Consider Galileo's Law for freely falling bodies: \[s(t) = 4.9t^2\]
-            <b>Using the limit definition of the derivative</b>, find the velocity $v(t)$ and acceleration $a(t)$ functions.
+            <br/>
+
+        Use the equation of a sector of a circle $A = \dfrac{1}{2}r^2 \theta$ (picture showing this below) and the fact that the rate at which the minute hand moves is $2\pi$ radians per hour.
+
+        <img src="/static/swrlly/images/teaching/141-hw7-2.png" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
         </li>
 
-        <li class="hw-space">Consider the function $f(x) = x^2 - 1$.
-            <br>
-            <b>Using the limit definition of the derivative</b>, find $f'(x)$ and $f''(x)$.
-        </li>
+        <li class="hw-space">Suppose a meat distributor is willing to make $x$ pounds of beef available every week on the marketplace when the price is $\$p$ per pound. The relationship between quantity supplied $x$ and price $p$ is \[650p^2 - x^2 = 100\] If 30,000 pounds of beef are available on the marketplace this week and the price per pound is falling by 2 cents per week, at what rate is the supply falling? </li>
 
-        <!--<hr/>
-        <p>The rest of these problems may appear on next week's homework, depending on if we get to Section 2.3 on Friday.</p>
-        <hr/>
-
-        <li class="hw-space">Find the derivative using the Differentiation Rules. Remember to observe your input variable and to fully simplify each expression.
-            <ol type="a">
-                <li class="hw-space">$f(x) = 199$</li>
-                <li class="hw-space">$g(t) = \left(\sqrt{30}\right)^3$</li>
-                <li class="hw-space">$f(x) = x^3 + x^2 + x + 1$</li>
-                <li class="hw-space">$f(v) = \dfrac{a}{v} + bv + \dfrac{c}{v^2}$</li>
-                <li class="hw-space">$f(x) = \sqrt{x}(x - 1)$</li>
-                <li class="hw-space">$f(t) = 3t^{-3/4}$</li>
-                <li class="hw-space">$f(x) = x^{2.9}$</li>
-                <li class="hw-space">$f(r) = -9r^{2/3}$</li>
-                <li class="hw-space">$f(x) = 5x^2 + 6x + 7$</li>
-                <li class="hw-space">$f(r) = \dfrac{r^5 + 2r^4 + 3r + 1}{r}$</li>
-                <li class="hw-space">$f(a) = \dfrac{5}{a^4} - \dfrac{2}{\sqrt[3]{a^2}} -\dfrac{1}{a} + 200$</li>
-                <li class="hw-space">$f(x) = \dfrac{5}{x^4} + \dfrac{\sqrt{x^3}}{3} + x$</li>
-                <li class="hw-space">$f(x) = 2x\left(3x^2 + 1\right)$</li>
-                <li class="hw-space">$f(x) = (3x + 1)(4x^3 - 5x^2)$</li>
-                <li class="hw-space">$f(t) = \dfrac{t - \sqrt{t}}{t^{1/3}}$</li>
-                <li class="hw-space">$y = \dfrac{x^2 + 1}{x^2 - 1}$</li>
-                <li class="hw-space">$y = x + \dfrac{1}{x}$</li>
-                <li class="hw-space">$y = \dfrac{1 + 2x}{3 - 4x}$</li>
-                <li class="hw-space">$f(x) = \dfrac{x}{x + \frac{1}{x}}$</li>
-                <li class="hw-space">$f(x) = (x + 1)(x^{-2} + x^{-3})$</li>
-            </ol>
-        </li>
-        -->
-        
-        <!--
-        <li class="hw-space">Show $f(x) = x^4 + x - 3$ has a root between $(1, 2)$.</li>
-
-        <li class="hw-space">Explain why $f(x) = \dfrac{\sin x}{x + 1}$ is continuous on $(\infty, -1) \cup (-1, \infty)$.</li>
-
-        <li class="hw-space"> When we are using the definition of the derivative:
-            <ol type="a">
-                <li class="hw-space">What always happens to the $h$ in the denominator?</li>
-                <li class="hw-space">Suppose the above phenomena does not happen. What do you think went wrong?</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Suppose $f(x)$ is differentiable on $\mathbb{R}$. Must $f(x)$ be continuous on $\mathbb{R}$? If not, explain why.</li>
-
-        <li class="hw-space">Suppose $f(x)$ is continuous on $\mathbb{R}$. Must $f(x)$ be differentiable on $\mathbb{R}$? If not, draw the graph of a function where it fails to be differentiable.</li>
-        <li class="hw-space">Find an equation of the tangent line at $(2, -4)$ for the function $f(x) = 4x - 3x^2$.</li>
-        <li class="hw-space"><b>Using the limit definition of a derivative</b>, find $f'(x)$.
-            <ol type="a">
-                <li class="hw-space">$f(x) = 2x + 3$</li>
-                <li class="hw-space">$f(x) = x + \sqrt{x}$</li>
-                <li class="hw-space">$f(x) = x^2 - 1$</li>
-                <li class="hw-space">$f(t) = \dfrac{1}{\sqrt{t}}$</li>
-                <li class="hw-space">$f(t) = \dfrac{1}{x}$</li>
-            </ol>
-        </li>
-        <li class="hw-space">
-            Suppose the graph of $f(x)$ is <img src="/static/swrlly/images/teaching/161-hw5-1.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> 
-            
-            Sketch a graph of $f'(x)$.
-        </li>
-        <li class="hw-space">Draw one graph of a function in which all three cases where a function fails to be differentiable appears.</li>
-        <li class="hw-space">The graph of $f$ is given. State with reason where $f$ is not differentiable. You may assume the domain of $f$ is $\mathbb{R}$. <img src="/static/swrlly/images/teaching/161-hw5-2.PNG" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/> </li>
-
-        <li class="hw-space"><b>Using the limit defintion of the derivative,</b> find an equation of the tangent line to the function $y = \dfrac{2x}{x + 1}$ at the point $(1, 1)$.</li>
-
-        <hr/>
-        <p>The rest of these problems will appear on next week's homework. Skip the rest of these for Homework 5.</p>
-        <hr/>
-
-        <li class="hw-space">Find the derivative using the Differentiation Rules. Remember to observe your input variable and to fully simplify each expression.
-            <ol type="a">
-                <li class="hw-space">$f(x) = 199$</li>
-                <li class="hw-space">$g(t) = \left(\sqrt{30}\right)^3$</li>
-                <li class="hw-space">$f(x) = x^3 + x^2 + x + 1$</li>
-                <li class="hw-space">$f(v) = \dfrac{a}{v} + bv + \dfrac{c}{v^2}$</li>
-                <li class="hw-space">$f(x) = \sqrt{x}(x - 1)$</li>
-                <li class="hw-space">$f(t) = 3t^{-3/4}$</li>
-                <li class="hw-space">$f(x) = x^{2.9}$</li>
-                <li class="hw-space">$f(r) = -9r^{2/3}$</li>
-                <li class="hw-space">$f(x) = 5x^2 + 6x + 7$</li>
-                <li class="hw-space">$f(r) = \dfrac{r^5 + 2r^4 + 3r + 1}{r}$</li>
-                <li class="hw-space">$f(a) = \dfrac{5}{a^4} - \dfrac{2}{\sqrt[3]{a^2}} -\dfrac{1}{a} + 200$</li>
-                <li class="hw-space">$f(x) = \dfrac{5}{x^4} + \dfrac{\sqrt{x^3}}{3} + x$</li>
-                <li class="hw-space">$f(x) = 2x\left(3x^2 + 1\right)$</li>
-                <li class="hw-space">$f(x) = (3x + 1)(4x^3 - 5x^2)$</li>
-                <li class="hw-space">$f(t) = \dfrac{t - \sqrt{t}}{t^{1/3}}$</li>
-                <li class="hw-space">$y = \dfrac{x^2 + 1}{x^2 - 1}$</li>
-                <li class="hw-space">$y = x + \dfrac{1}{x}$</li>
-                <li class="hw-space">$y = \dfrac{1 + 2x}{3 - 4x}$</li>
-                <li class="hw-space">$f(x) = \dfrac{x}{x + \frac{1}{x}}$</li>
-                <li class="hw-space">$f(x) = (x + 1)(x^{-2} + x^{-3})$</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Suppose a student sees a function \[f(x) = \dfrac{\sqrt{x}}{x + 1}\] and is asked to find $\dfrac{d}{dx} f(x)$. The student tries this: \[\dfrac{d}{dx} f(x) = \dfrac{d}{dx} \dfrac{\sqrt{x}}{x + 1} = \dfrac{\dfrac{d}{dx}  \sqrt{x}}{\dfrac{d}{dx} (x + 1)}\] Why is this incorrect?</li>
-
-        <li class="hw-space">Given $g(r) = \sqrt{r} + \sqrt[3]{r}$, find the first and second derivatives.</li>
-
-        <li class="hw-space">The equation of motion of a particle is $s(t) = t^4 - 2t^3 + t^2 - t$ where $s$ is in meters and $t$ is in seconds.
-            <ol type="a">
-                <li class="hw-space">Find the velocity and acceleration as functions of $t$.</li>
-                <li class="hw-space">Find the acceleration when the velocity is 0. (hint: set $v(t) = 0$ to find when the velocity is 0).</li>
-            </ol>
-        </li>
-
-        <li class="hw-space">Find an equation of the normal line to the curve $y = \sqrt{x}$ that is parallel to the line $2x + y = 1$.</li>-->
-        
     </ol>
 </div>
 {% endblock %}
