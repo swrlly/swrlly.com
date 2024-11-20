@@ -12,14 +12,22 @@
 
 {% block content %}
 <div class="container fade-in-text text-padding">
-    <h1>4.2: The Definite Integral</h1>
+
+    <h1>4.2: The Definite Integral</h1><hr>
 
     <p>The "area underneath the curve" is a limit of adding up smaller and smaller rectangles.</p>
 
     <p>This limit is called the <b>definite integral</b>:</p>
 
     <div class="math-def">
-        The <b>definite integral</b> of $f(x)$ from $a$ to $b$ is \[\int^b_a f(x) \ dx = \lim_{n\rightarrow \infty} \sum^n_{i=1} f(x_i)\Delta x\] where \[\Delta x = \dfrac{b - a}{n} \qquad \text{and} \qquad x_i = a + i\Delta x\]
+        The <b>definite integral</b> of $f(x)$ from $a$ to $b$ is \[\int^b_a f(x) \ dx = \lim_{n\rightarrow \infty} \sum^n_{i=1} f(x_i)\Delta x\]
+
+        where 
+        <ul>
+            <li>$\Delta x$ is the width of one rectangle, or $\Delta x = \dfrac{b - a}{n}$</li>
+            <li>$x_i$ is the right endpoint of the $i$th rectangle, where $x_i = a + i\cdot\Delta x$</li>
+        </ul>
+
     </div>
 
     <p>By convention, if $f(x)$ is above the $x$-axis, the area underneath the curve is positive. If $f(x)$ is under the $x$-axis, the area is negative.</p>
@@ -41,8 +49,6 @@
     <div class="math-example">
         Evaluate the integral $\displaystyle \int^3_0 x - 1 \ dx$.
     </div>
-
-
 
     <h2>Properties of the Definite Integral</h2><hr>
 
