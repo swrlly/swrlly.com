@@ -1,0 +1,74 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 8.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="8.4: Plane Curves and Parametric Equations"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/8.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>8.4: Plane Curves and Parametric Equations</h1><hr>
+
+    <p>Consider a curve in the plane. When drawing it, the tip of your pencil is at a point for one moment in time.</p>
+
+    <p>Insight: This point is moving through the plane with respect to time. We can represent this point moving behavior with <b>plane curves.</b></p>
+
+    <div class="math-def">
+        If $f$ and $g$ are functions defined on an interval $I$, then the set of all points $(f(t), g(t))$ is called a <b>plane curve</b>. The equations \[x = f(t) \qquad y = g(t)\] are called <b>parametric equations</b> with <b>parameter</b> $t$.
+    </div>
+
+    <div class="math-example">
+        Sketch the plane curve defined by the parametric equations \[x = \cos t \qquad y = \sin t\]
+        Remember to indicate which direction the point is moving on the curve.
+    </div>
+
+    <div class="math-example">
+        Sketch the plane curve defined by the parametric equations \[x = t^2 - 3t \qquad y = t - 1\]
+    </div>
+
+    <div class="math-example">
+        Sketch the plane curve defined by the parametric equations \[x = 2t \qquad y = t + 6\]
+    </div>
+
+    <h2>Eliminating the Parameter</h2><hr>
+
+    <p>If we eliminate the parameter $t$, then we have a rectangular equation.</p>
+
+    <div class="math-example">
+        Eliminate the parameter for the parametric equations \[x = t^2 - 3t \qquad y = t - 1\]
+    </div>
+
+    <div class="math-example">
+        Eliminate the parameter for the parametric equations \[x = \cos t \qquad y = \sin t\]
+    </div>
+
+    <h2>Polar Equations in Parametric Form</h2><hr>
+
+    <p>Consider a polar equation $r = f(\theta)$. Recalling that \[x = r\cos \theta \qquad y = r \sin \theta\] we replace $r$ with $f(\theta)$ to get \[x = f(\theta)\cos \theta \qquad y = f(\theta) \sin \theta\]
+        But these are parametric equations! Instead of using $\theta$, which represents angle, we use a general parameter $t$:
+    </p>
+
+    <div class="math-fact">
+        The graph of the polar equation $r = f(\theta)$ is the same as the plane curve with parametric equations \[x = f(t) \cos t \qquad y = f(t) \sin t\]
+    </div>
+
+    <div class="math-example">
+        Consider the equation $r = \theta$. Express this equation in parametric form. What is the graph?
+    </div>
+
+    <div class="math-example">
+        Consider the equation $r = 1 + \cos \theta$. Express this equation in parametric form.
+    </div>
+
+    <p><a href="/teaching/math-119/lectures/8.2">In Section 8.2,</a> we saw the length $r$ as an "arm" tracing out the polar graph.</p>
+
+    <p>I use these set of parametric equations to draw this arm!</p>
+
+</div>
+{% endblock %}

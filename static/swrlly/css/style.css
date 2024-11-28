@@ -414,6 +414,7 @@ a:hover {
     width: 100%;
     min-height: 600px;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #hide-desmos {

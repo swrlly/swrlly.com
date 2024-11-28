@@ -1,0 +1,91 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 8.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="8.4: Plane Curves and Parametric Equations"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/8.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>11.1: Parabolas</h1><hr>
+
+    <h2>Motivation</h2>
+
+    <p>Chapter 11 deals with <b>conic sections</b>. These are curves formed when a plane cuts a cone:</p>
+
+    <img src="/static/swrlly/images/teaching/119-11.1-1.png" style="max-width:500px; margin:1em auto; display:flex; border-radius:10px;"/>
+
+    <p>This section deals with parabolas.</p>
+
+    <h2>Geometric Definition of a Parabola</h2><hr>
+
+    <p>We know about the algebraic formulation of a parabola; it's the quadratic equation: \[y = ax^2 + bx + c\]</p>
+
+    <p>There is also a geometric definition:
+    </p>
+
+    <div class="math-def">
+        A <b>parabola</b> is the set of all points in the plane that are equidistant from a fixed point $F$ (called the <b>focus</b>) and a fixed line $\ell$ (called the <b>directrix</b>.)
+    </div>
+
+    <img src="/static/swrlly/images/teaching/119-11.1-2.png" style="max-width:400px; margin:1em auto; display:flex; border-radius:10px;"/>
+
+    <p>Note that the focus is always in the direction the parabola opens, and the directrix is on the other side.</p>
+
+    <h2>Parabola with Vertical Axis</h2><hr>
+
+    <div class="math-fact">
+        The graph of the equation \[x^2 = 4py\] is a parabola with the following properties:
+        <ul>
+            <li>Vertex: $(0, 0)$</li>
+            <li>Focus: $(0, p)$</li>
+            <li>Directrix: $y = -p$</li>
+        </ul>
+
+        This parabola opens upwards or downwards.
+    </div>
+
+    <div class="math-example">
+        Find the focus and directrix of the parabola $y = -x^2$. Sketch the graph, including the focus and directrix.
+    </div>
+
+    <div class="math-example">
+        Find an equation of a parabola with vertex $(0, 0)$ and focus $(0, 2)$. Sketch the graph.
+    </div>
+
+    <h2>Parabola with Horizontal Axis</h2><hr>
+
+    <div class="math-fact">
+        The graph of the equation \[y^2 = 4px\] is a parabola with the following properties
+        <ul>
+            <li>Vertex: $(0, 0)$</li>
+            <li>Focus: $(p, 0)$</li>
+            <li>Directrix: $x = -p$</li>
+        </ul>
+
+        This parabola opens left or right.
+    </div>
+
+    <div class="math-example">
+        A parabola has the equation $6x + y^2 = 0$. Find the focus and directrix of the parabola and sketch a graph.
+    </div>
+
+    <div class="math-example">
+        For the following problems, find an equation of the parabola with vertex at the origin satisfying the following conditions or state it's impossible to.
+        <ol>
+            <li>Focus at $(0, 6)$</li>
+            <li>Focus on the positive $x$-axis, directrix $y = 2$</li>
+        </ol>
+    </div>
+
+
+
+
+</div>
+{% endblock %}
