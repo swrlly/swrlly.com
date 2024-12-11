@@ -1,0 +1,104 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 4.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.5: The Substitution Rule"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/4.5"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>4.5: The Substitution Rule</h1><hr>
+
+    <h2>Motivation</h2>
+
+    <p>Integrals require antiderivatives. Antiderivatives require undoing derivative rules.</p>
+
+    <p>This section shows you how to undo the chain rule. The method is called U-Substitution!</p>
+
+    <h2>For Indefinite Integrals</h2><hr>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">The Substitution Rule</b><br>
+    
+    When integrating something with a composition, like $f(g(x))$, set $u = g(x)$, or the inside of the composition. Then \[\int f(g(x)) g'(x) \ dx = \int f(u) \ du\]
+
+    </div>
+
+    <p>Recall from Section 2.9 the definition of a differential:</p>
+
+    <div class="math-def">
+        If $u = f(x)$, then the <b>differential</b> $du$ is equivalent to $du = f'(x) \ dx$.
+    </div>
+
+    <p>After picking your $u$, you need to replace the $dx$ in your integral! The differential $du$ allows you to do this replacement.</p>
+
+    <div class="math-example"> 
+        
+        Integrate \[\int x^3 \cos(x^4 + 2) \ dx\]
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <p>First, we will rewrite the integral: \[\int x^3 \cos(x^4 + 2) \ dx = \int  \cos(x^4 + 2) \cdot x^3 \ dx\]</p>
+            <p>Let $u = x^4 + 2$, the inside of the composition. </p>
+            <p>Then $du = 4x^3 \ dx$.</p>
+            <p>Look at your integral. You need to replace $x^3 \ dx$. Solving for this in the previous equation: $x^3 \ dx = \dfrac{1}{4} \ du$. </p>
+            <p>Now substitute:</p>
+
+            \begin{align}
+            \int  \cos(x^4 + 2) \cdot x^3 \ dx &= \int cos(u) \dfrac{1}{4} \ du 
+            \\&= \dfrac{1}{4} \int \cos(u) \ du
+            \\&= \dfrac{1}{4} \left(\sin(u) + C\right)
+            \\&= \dfrac{\sin{u}}{4} + \dfrac{1}{4}C
+            \\&= \dfrac{\sin(x^4 + 2)}{4} + C
+            \end{align}
+            <p>Notice that I replaced $\dfrac{1}{4}C$ with $C$. You can do this because it's just a constant, it doesn't matter if $C$ is divided by four or not.</p>
+        </div>
+
+
+    </div>
+
+    <div class="math-example">
+        Integrate $\displaystyle \int \sqrt{2x + 1} \ dx$.
+    </div>
+
+    <div class="math-example">
+        Integrate $\displaystyle \int \sqrt{1 + x^2} \ x^5 \ dx$.
+    </div>
+
+    <h2>Insight</h2>
+
+    <p>Recall in <a href="/teaching/math-141/lectures/4.2">Section 4.2</a> we said the $dx$ is symbolically equivalent to the width of one rectangle.</p>
+
+    <p>In this section we are manipulating $dx$ as part of a differential.</p>
+
+    <p>We are allowed to do this because of the following reasons:
+        <ol type="a">
+            <li>First, the differential $du = f'(x) \ dx$ is only valid if $dx \neq 0$.</li>
+            <li>For the definite integral, which represents the area underneath the curve, we have the limit sum formula from <a href="/teaching/math-141/lectures/4.1">the bottom of Section 4.1</a>.</li>
+            <li>If you think about it, the $\displaystyle \lim_{n\rightarrow \infty}$ will never take $n$ to be infinity. $n$ is always a number.</li>
+            <li>Because $n$ represents the number of rectangles, a finite number of rectangles will always have a width of a rectangle $dx$ that is nonzero.</li>
+            <li>Therefore, we are allowed to manipulate the $dx$ in the integral <b>as a differential!</b></li>
+        </ol>
+    </p>
+
+    <h2>For Definite Integrals</h2><hr>
+
+    <p>Using U-substition on definite integrals is the same method as indefinite integrals.</p>
+
+    <p>The <b>only</b> difference is the top and bottom bound of integration must be changed from $x$ to $u$'s.</p>
+
+    <div class="math-example">
+        Integrate \[\int^4_0 \sqrt{2x + 1} \ dx \]
+    </div>
+
+    <div class="math-example"> 
+        Integrate \[\int^2_1 \dfrac{1}{(3 - 5x)^2} \ dx\]
+    </div>
+
+</div>
+{% endblock %}
