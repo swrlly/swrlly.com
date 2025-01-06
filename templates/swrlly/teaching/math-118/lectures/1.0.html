@@ -1,0 +1,318 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - Pre-Calculus Intuition</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="I: Pre-Calculus Intuition"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/I"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>1.0: The Beginning</h1>
+
+    <h2>Algebraic Intuition</h2><hr>
+
+    <p>Let's think about the act of doing mathematics.</p>
+        
+    <p>First, you are asked to memorize set-in-stone rules, properties, or theorems.</p>
+
+    <p>Then, you are expected to see when and how to use them accurately. I call this <b>algebraic intuition.</b></p>
+
+    <p>The issue: Problems can be extremely complicated and it's not so obvious which rule can be used when.</p>
+
+    <p>I will show you the algebraic intuition in precalculus problems so:
+        <ul>
+            <li>You will be able to point out which rule you are allowed to use instead of guessing.</li>
+            <li>You will use the rule correctly.</li>
+        </ul>
+    </p>
+
+    <p>Let's visit one of our old friends: terms and factors.</p>
+
+    <h2>Terms and Factors</h2><hr>
+
+    <div class="math-def"> <b>Term, Factor</b> <br>
+        <b>Terms</b> are entities separated by subtraction and addition.<br/>
+        <b>Factors</b> are entities separated by multiplication.
+    </div>
+
+    <div class="math-example">
+        For each entity, identify if they are comprised of terms or factors.
+        <ol>
+            <li class="lec-list-space">$x$</li>
+            <li class="lec-list-space">$x - 2$</li>
+            <li class="lec-list-space">$(x-2)(x+4)$</li>
+        </ol>
+    </div>
+
+    <p>The last example shows us a fundamental law:
+    </p>
+
+    <p>Using the word "term" or "factor" requires you to  <b>specify the context</b>, or the environment in which an entity is a term/factor.</p>
+
+    <div class="math-def">
+        <b>Global context, local context</b><br>
+        <b>Global context</b> refers to the context of the entire expression.<br>
+        <b>Local context</b> refers to a context smaller than the entire expression.
+    </div>
+
+    <p>Local context exists in multiple levels.</p>
+
+    <div class="math-example">
+        List all possible terms/factors (and their contexts) for the expression \[(x-2)(x+4) + 3\]
+
+        <p>Here's the solution.</p>
+
+        <table class="table" style="max-width: 600px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Context Level</th>
+                <th scope="col">Terms/Factors</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>L1 (global)</td>
+                <td>$\underbrace{(x-2)(x+4)}_{\text{term}} + \underbrace{3}_{\text{term}}$</td>
+            </tr>
+            <tr>
+                <td>L2 (local)</td>
+                <td>$\underbrace{(x-2)}_{\text{factor}}\underbrace{(x+4)}_{\text{factor}} + 3$</td>
+            </tr>
+            <tr>
+                <td>L3 (local)</td>
+                <td>$(\underbrace{x}_{\text{term}}-\underbrace{2}_{\text{term}})(\underbrace{x}_{\text{term}}+\underbrace{4}_{\text{term}}) + 3$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Level 1 (or L1) context refers to global.</p>
+
+    <p>Zooming in one level to Level 2 (or L2) is local.</p>
+
+    <p>Zooming in one more level to Level 3 (or L3) is also local.</p>
+
+    <div class="math-example">
+        List all possible terms/factors (and their contexts) for the expression \[(2x+3)(2x-3) - (x+2)4\]
+        In what context level is $(2x-3)$ considered a factor?
+    </div>
+
+    <p>For fractional expressions, only consider the global context of just the numerator and denominator when labeling terms/factors.</p>
+
+    <div class="math-example">
+        Identify if you have terms or factors in the <b>global (L1) context</b>.
+        <ol type="a">
+            <li class="lec-list-space">$\dfrac{(x^2 + 1)(x + 3) + 4}{x + 3}$</li>
+            <li class="lec-list-space">$\dfrac{-x(x-2)(2x+3)}{2x + 3}$</li>
+        </ol>
+    </div>
+
+    <p>Most of algebraic mistakes come from failing to identify terms/factors and their context level.</p>
+
+    <p>Let's see why!</p>
+
+    <!--
+
+    <h2>Dealing with Fractional Expressions</h2><hr>
+
+    <p>Here are the five ways to deal with Fractions.</p>
+
+    <p>These are the <b>only</b> ways to manipulate fractions.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+
+        Suppose $a,b,c,d$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d} \ \ $ first find the LCD, then use property 3.</li>
+            <li class="lec-list-space">$\dfrac{ac}{bc} = \dfrac{a}{b}$</li>
+        </ol>
+    </div>
+
+    <p>We can already see the importance of terms and factors.</p>
+    <p>In Fraction Law #5, $c$ must be a <b>factor in the global context of the numerator and denominator</b>. </p>
+
+    <div class="math-example">
+        Can I cancel out the $x^2$ in \[\dfrac{x^2 + 1}{x^2 + 2}\]
+        Why or why not?
+    </div>
+
+    <div class="math-example">
+        Can you cross out the $x-1$ in \[\dfrac{(x-1)(x+2) + 3x^2}{(x-1)(x+3)}\]
+        Why or why not?
+    </div>
+
+    <div class="math-example">
+        Can you cross out the $x$ in \[\dfrac{x(x-1)(x+1)}{2x + 1}\]
+        Why or why not?
+    </div>
+
+    <div class="math-example">
+        Use the proper fraction law to simplify the following:
+        <ol>
+            <li class="lec-list-space">$\dfrac{1}{6} + \dfrac{1}{8}$</li>
+            <li class="lec-list-space">$\dfrac{1}{x + 1} + \dfrac{1}{x + 2}$</li>
+            <li class="lec-list-space">$\dfrac{(x-1)(x+2)(x-3)}{x-1}$</li>
+            <li class="lec-list-space">$\dfrac{x+1}{\frac{x+1}{3x - 4}}$</li>
+        </ol>
+    </div>
+
+    <div>We will fully deal with all fractional expressions in a few days.</div>
+
+    <h2>Properties of Real Numbers</h2><hr>
+
+    <p>Typically you'll be given this list of properties of real numbers.</p>
+
+    <div class="math-fact">
+        Let $a, b, c$ be real numbers.
+        <ul>
+            <li class="lec-list-space">Commutative Properties
+                <ul>
+                    <li>$a + b = b + a$</li>
+                    <li>$ab = ba$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Associative Properties
+                <ul>
+                    <li>$(a + b) + c = a + (b + c)$</li>
+                    <li>$(ab)c = a(bc)$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Distributive Property
+                <ul>
+                    <li>$a(b + c) = ab + ac$</li>
+                    <li>$(b+c)a = ab + ac$</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p>How to think about commutative property: Say you have the expression \[(x-1)(x+2) + 3x^2(x-3) + 4\]
+    </p>
+
+    <p>The addition property says you can switch the positions of the terms around.</p>
+
+    <p>The multiplication property says <b>within each term</b>, you can switch the positions of each factor around.</p>
+
+    <div class="math-example">
+        Using terms and factors, describe what the distributive law \[a(b + c)\] is describing.
+    </div>
+
+    <div class="math-example">
+        Use the distributive property to expand $(x - 1)(x + 2)$.
+    </div>
+
+    <h2>Negatives</h2><hr>
+
+    <p>A negative expression $-(x-2)$ has a very specific meaning: $(-1) \cdot (x-2)$.</p>
+
+    <p>This means a negative is really a <b>factor</b> of $-1$ in front of the $x - 2$.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Negatives</b></br>
+
+        Suppose $a,b$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$(-1)a = -a$</li>
+            <li class="lec-list-space">$-(-a) = a$</li>
+            <li class="lec-list-space">$-(a+b) = -a-b$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Use the properties of negatives to simplify the expression:
+        <ol>
+            <li class="lec-list-space">$4-(x+2)$</li>
+            <li class="lec-list-space">$-(-(-3))$</li>
+            <li class="lec-list-space">$-(x+y-z)$</li>
+        </ol>
+    </div>
+
+    <h2>The Real Line</h2><hr>
+
+    <p><a href="https://www.youtube.com/watch?v=PuTROUqSoSQ">The rest of this lecture has a recorded video, which you can follow along here.</a></p>
+
+    <p>The real numbers can be represented with a horizontal line, drawn in class.</p>
+
+    <h2>Sets and Intervals</h2><hr>
+
+    <p>A <b>set</b> is a collection of objects. These objects are called <b>elements</b> of the set.</p>
+
+    <p>For example, the set of all real numbers is denoted $\mathbb{R}$. If $a$ is a real number, we write $a \in \mathbb{R}$ meaning $a$ is an element of the real numbers.</p>
+
+    <p>Other common sets are
+        <ol>
+            <li>$\mathbb{N}$, the set of natural numbers</li>
+            <li>$\mathbb{Z}$, the set of integers</li>
+            <li>$\mathbb{Q}$, the set of all rational numbers</li>
+        </ol>
+    </p>
+
+    <p>There are two ways to describe a set.</p>
+
+    <p>The first is to list out all the elements: \[A = \{1,2,3,4,5,6\}\]</p>
+
+    <p>The second is to use <b>set-builder notation:</b> \[A = \{\text{objects} \ : \ \text{condition}\}\]</p>
+
+    <p>Set $A$ above could also be described as \[A = \{x : x \in \mathbb{Z} \text{ and } 0 < x < 7\}\]</p>
+
+    <p>If $S$ and $T$ are sets, there are two operations:
+        <ol>
+            <li class="lec-list-space"><b>union</b>, denoted $S \cup T$, which is the set that contains all elements that are in $S$ <b>or</b> $T$</li>
+            <li class="lec-list-space"><b>intersection</b>, denoted $S \cap T$, which is the set that contains all elements that are in $S$ <b>and</b> $T$</li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        If \[S = \{1,2,3,4,5\} \qquad T = \{4,5,6,7\} \qquad V = \{6,7,8\}\]
+        find 
+        <ol>
+            <li class="lec-list-space">$S \cup T$</li>
+            <li class="lec-list-space">$S \cap T$</li>
+            <li class="lec-list-space">$S \cap V$</li>
+        </ol>
+    </div>
+
+    <p>Sets of real numbers are called <b>intervals</b>. I will describe them in class.</p>
+
+    <div class="math-example"> 
+        Draw the real line representation of the following sets:
+        <ol>
+            <li class="lec-list-space">$(1,3) \cup [4,7]$</li>
+            <li class="lec-list-space">$(-\infty,-3) \cup (3, \infty)$</li>
+            <li class="lec-list-space">$(-\infty, -2) \cup (0, 1) \cup (1, \infty)$</li>
+        </ol>
+    </div>
+    
+    <div class="math-example">
+        Use set builder notation to describe the set "all real numbers except for 1 and 4."
+    </div>
+
+    <h2>Absolute Value and Distance</h2><hr>
+
+    <div class="math-def">
+        If $a$ is a real number, then the <b>absolute value</b> of $a$ is \[\lvert a \rvert = \begin{cases} a & a \geq 0 \\ -a & a < 0 \end{cases}\]
+    </div>
+
+    <div class="math-example">
+        Simplify:
+        <ol>
+            <li class="lec-list-space">$\lvert 3 \rvert$</li>
+            <li class="lec-list-space">$\lvert -3 \rvert$</li>
+            <li class="lec-list-space">$\lvert-\lvert -3 \rvert\rvert$</li>
+            <li class="lec-list-space">$\lvert 2 - \pi \rvert$</li>
+        </ol>
+    </div>-->
+
+
+    
+</div>
+{% endblock %}
