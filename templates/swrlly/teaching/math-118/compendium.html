@@ -1,0 +1,129 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 Compendium</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="precalculus"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/compendium"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+<!--{% block extraimports %}
+<script async src="/static/swrlly/js/centertext.js"></script>
+{% endblock %}-->
+
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Math 118: Compendium</h1>
+
+    <!--<p>A compendium is a <a href="https://www.merriam-webster.com/dictionary/compendium">"a brief summary of a larger work or of a field of knowledge."</a></p>-->
+
+    <p>This document contains all of the <b>definitions</b>, <b style="color: var(--factcolor)">facts</b>, and <b style="color: var(--factcolor)">theorems</b> you need to <b>memorize</b> for weekly assessments.</p>
+
+    <p>Quick metric for success: During the quiz, if I were to walk up to you and ask you any definition from this list, you will be able to recall it by heart.</p>
+
+    <h2>Week 1</h2><hr>
+
+    <h4>1.0: The Beginning</h4>
+
+    <div class="math-def"> <b>Term, Factor</b> <br>
+        <b>Terms</b> are entities separated by subtraction and addition.<br/>
+        <b>Factors</b> are entities separated by multiplication.
+    </div>
+
+    <div class="math-def">
+        <b>Global context, local context</b><br>
+        <b>Global context</b> refers to the context of the entire expression.<br>
+        <b>Local context</b> refers to a context smaller than the entire expression.
+    </div>
+
+    <h4>1.1: Real Numbers</h4>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+
+        Suppose $a,b,c,d$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{c} \pm \dfrac{b}{c} = \dfrac{a \pm b}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d}\qquad $ Find the LCD, then use Fraction Law 3.</li>
+            <li class="lec-list-space">$\dfrac{ac}{bc} = \dfrac{a}{b}$</li>
+        </ol>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Real Numbers</b></br>
+        Let $a, b, c$ be real numbers.
+        <ul>
+            <li class="lec-list-space">Commutative Properties
+                <ul>
+                    <li>$a + b = b + a$</li>
+                    <li>$ab = ba$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Associative Properties
+                <ul>
+                    <li>$(a + b) + c = a + (b + c)$</li>
+                    <li>$(ab)c = a(bc)$</li>
+                </ul>
+            </li>
+            <b>Tip:</b> in English, the commutative/associative properties only interact <b>within the same context level</b> (e.g. only in L3)!
+            <li class="lec-list-space">Distributive Property
+                <ul>
+                    <li>$a(b + c) = ab + ac$</li>
+                    <li>$(b+c)a = ab + ac$</li>
+                </ul>
+            </li>
+            <b>Tip:</b> in English, the distributive law describes how <b>terms and factors interact</b>. <br>This is the only way they can interact; anything else is false.
+        </ul>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Negatives</b></br>
+
+        Suppose $a,b$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$(-1)a = -a$</li>
+            <li class="lec-list-space">$-(-a) = a$</li>
+            <li class="lec-list-space">$(-a)(-b) = ab$</li>
+            <li class="lec-list-space">$-(a+b) = -a-b$</li>
+        </ol>
+    </div>
+
+    <div class="math-def">
+        If $a$ is a real number, then the <b>absolute value</b> of $a$ is \[\lvert a \rvert = \begin{cases} a & a \geq 0 \\ -a & a < 0 \end{cases}\]
+    </div>
+
+    <h4>1.2: Exponents and Radicals</h4>
+
+    <div class="math-def">
+        The <b>$n$th power</b> of $a$ is \[a^n = a\cdot a \cdot \cdots a\]
+    </div>
+
+    <div class="math-def"> <b>Zero</b> and <b>negative</b> exponents are defined as
+        \[a^0 = 1 \qquad \qquad a^{-n} = \dfrac{1}{a^n}\]
+    </div>
+
+    <div class="math-fact"> <b style="color: var(--factcolor)">Laws of Exponents</b><br>
+        
+        <ol>
+            <li class="lec-list-space">$a^ma^n = a^{m+n}$</li>
+            <li class="lec-list-space">$\dfrac{a^m}{a^n} = a^{m-n}$</li>
+            <li class="lec-list-space">$(a^m)^n = a^{mn}$</li>
+            <li class="lec-list-space">$(ab)^n = a^nb^n$</li>
+            <li class="lec-list-space">$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$</li>
+            <li class="lec-list-space">$\left(\dfrac{a}{b}\right)^{-n} = \dfrac{b^n}{a^n}$</li>
+            <li class="lec-list-space">$\dfrac{a^{-n}}{b^{-m}} = \dfrac{b^m}{a^n}$</li>
+        </ol>
+
+    </div>
+
+    <div class="math-def"> The <b>principal <i>n</i>th root</b> of $a$ is defined as \[\sqrt[n]{a} = b \qquad \text{means} \qquad b^n = a\] If $n$ is even, we must have $a \geq 0, b \geq 0$.</div>
+
+    <div class="math-def"> For any rational exponent $m/n$ in lowest terms, we define \[a^{m/n} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}\]</div>
+
+</div>
+{% endblock %}
