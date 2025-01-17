@@ -33,12 +33,20 @@
                   fontCache: 'global'
                 }
               };
+
         </script>
         <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
         {% block mathimports %}
         <script async src="/static/swrlly/js/teaching.js"></script>
         {% endblock %}
     </head>
+
+     <!--MathJax.Hub.Register.StartupHook("TeX color Ready", function() {
+        var color = MathJax.Extension["TeX/color"];
+        color.colors["lavender"] = color.getColor('RGB','179,154,240');
+        color.colors["lightblue"] = color.getColor('RGB','142,181,227');
+        color.colors["lightyellow"] = color.getColor('RGB','236,231,141');
+        });-->
 
     <script type="text/javascript">
         window.onload = function() {

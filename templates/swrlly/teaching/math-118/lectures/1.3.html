@@ -124,19 +124,96 @@
 
     </div>
 
+    <p>If you plan to take Calculus, the following type of factoring problem is common after you use what's called the <b>Product Rule</b>.</p>
+
+    <div class="math-example">
+        Factor: \[3(2x+1)^2(3x^2-4)^2 + 12x(3x^2 - 4)(2x+1)^3\]
+    </div>
+
     <h3>Method 2: Factoring the form $ax^2 + bx + c$.</h3><hr>
 
-    <p>This method works on three terms. Some examples include \[x^2 + 4x + 3 \qquad\qquad x^2 - 4 \qquad\qquad 2(x+1)^2 - 7(x+1) + 3\]</p>
+    <p>This method works on three terms. Some examples include \begin{align}
+        &x^2 + 4x + 3 \\&x^2 - 4 \\&2(x+1)^2 - 7(x+1) + 3\end{align}</p>
 
-    <p><a href="/static/swrlly/files/xmethod.pdf">See this handout for the idea. Let's call this the "new" X method.</a></p>
+    <h4 style="text-decoration: underline;">Intuition</h4>
 
-    <div class="math-example"> Factor:
-        <ul>
-            <li class="lec-list-space">$x^2 + 7x + 12$</li>
-            <li class="lec-list-space">$6x^2 + 7x - 5$</li>
-            <li class="lec-list-space">$(5a+1)^2 - 2(5a+1) - 3$</li>
+    <!---->
+
+    <p>Consider this expansion problem \begin{align}\definecolor{lavender}{RGB}{179,154,240} \definecolor{lightyellow}{RGB}{236, 231, 141} \definecolor{lightblue}{RGB}{142, 181, 227} -(2x + 1)(3x - 5) &= {\color{lavender} 6 }x^2 \ {\color{lightblue}-} \ {\color{lightblue}10}x \ {\color{lightblue}+} \ {\color{lightblue}3}x \ {\color{lightyellow}
+    -} \ {\color{lightyellow} 5} \\&= {\color{lavender}6}x^2  \ {\color{lightblue}-} \ {\color{lightblue}7}x \ {\color{lightyellow}-} \ {\color{lightyellow} 5}\end{align}</p>
+
+    <p>Here, ${\color{lavender} a = 6}, {\color{lightblue}b = -7}, {\color{lightyellow} c = -5}$.</p>
+
+    <p>Arrange the factors vertically and erase the $x$: \begin{align}(2 \ \ & \ + 1) \\ (3 \ \ & \ - 5) \end{align}</p>
+
+    <p>Insights:
+        <ol>
+            <li>First column product is
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
+                    <li style="flex-grow: 1;">\[2 \cdot 3 = 6 = {\color{lavender}a}\]</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\ \downarrow \ & \ \ \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+                
+            </li>
+            <li>Second column product is 
+                <ul style="display: flex; list-style: none; max-width: 400px; margin:auto; align-items: center;">
+                    <li style="flex-grow: 1;">\[1 \cdot (-5) = -5 = {\color{lightyellow}c}\]</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ \ & \ \ \ \ \downarrow  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+            </li>
+            <li>Cross product and sum 
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
+                    <li style="flex-grow: 1;"> \begin{align}2 \cdot (-5) + 1 \cdot 3 &= {\color{lightblue}-10 + 3} \\&= -7 \\&= {\color{lightblue}b}\end{align}</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+
+            </li>
+        </ol>
+    </p>
+
+    <p>But we are trying to factor. Given $\color{lavender} a = 6$, you do not know beforehand that it must be $2\cdot 3$. It could be $1\cdot 6$! Therefore you need to generate candidates!</p>
+
+    <p><a href="/static/swrlly/files/xmethod.pdf">See this handout for more examples.</a></p>
+
+    <p>Let's call this the "new" X method.</p>
+
+    <h4 style="text-decoration: underline;">Method: "new" X method</h4>
+
+    <p>Given $ax^2 + bx + c$:</p>
+
+    <p>First, write the coefficient structure: 
+        \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+        Then:
+        <ol>
+            <li>Generate candidates for $a$ (all possibilites of two numbers that multiply to $a$).</li>
+            <li>Generate candidates for $c$.</li>
+            <li>Choose the right candidates by checking the cross-product and sum against $b$.</li>
+        </ol>
+    </p>
+
+    <div class="math-example"> 
+        Factor: \[x^2 + 7x + 12\]  
+        <!--Solution:
+        <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
+            <li style="flex-grow: 1;">\begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}</li>
+            <li style="flex-grow: 1;">\begin{align} a &= 1 \\ b&= 7 \\ c&= 12 \end{align}</li>-->
         </ul>
     </div>
+
+    <p></p>
+
+    <div class="math-example"> 
+        Factor: \[2x^2 + 5x + 2\]    
+    </div>
+
+    <div class="math-example"> 
+        Factor: \[6x^2 + 7x - 5\]    
+    </div>
+
+    <div class="math-example"> 
+        Factor: \[(5a+1)^2 - 2(5a + 1) - 3\]    
+    </div>
+
 
     <h3>Method 3: Special Factoring Formulas</h3><hr>
 
