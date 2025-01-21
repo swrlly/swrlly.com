@@ -149,20 +149,20 @@
     <p>Insights:
         <ol>
             <li>First column product is
-                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
                     <li style="flex-grow: 1;">\[2 \cdot 3 = 6 = {\color{lavender}a}\]</li>
                     <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\ \downarrow \ & \ \ \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
                 </ul>
                 
             </li>
             <li>Second column product is 
-                <ul style="display: flex; list-style: none; max-width: 400px; margin:auto; align-items: center;">
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
                     <li style="flex-grow: 1;">\[1 \cdot (-5) = -5 = {\color{lightyellow}c}\]</li>
                     <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ \ & \ \ \ \ \downarrow  \\ (3 \ \ & \ - 5) \end{align}</li>
                 </ul>
             </li>
             <li>Cross product and sum 
-                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
                     <li style="flex-grow: 1;"> \begin{align}2 \cdot (-5) + 1 \cdot 3 &= {\color{lightblue}-10 + 3} \\&= -7 \\&= {\color{lightblue}b}\end{align}</li>
                     <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
                 </ul>
@@ -185,19 +185,66 @@
         \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
         Then:
         <ol>
-            <li>Generate candidates for $a$ (all possibilites of two numbers that multiply to $a$).</li>
-            <li>Generate candidates for $c$.</li>
+            <li>Generate candidates for $a$ (first column product, all possibilities of two numbers that multiply to $a$).</li>
+            <li>Generate candidates for $c$ (second column product, all possibilities of two numbers that multiply to $c$).</li>
             <li>Choose the right candidates by checking the cross-product and sum against $b$.</li>
         </ol>
     </p>
 
     <div class="math-example"> 
-        Factor: \[x^2 + 7x + 12\]  
-        <!--Solution:
-        <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center;">
-            <li style="flex-grow: 1;">\begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}</li>
-            <li style="flex-grow: 1;">\begin{align} a &= 1 \\ b&= 7 \\ c&= 12 \end{align}</li>-->
-        </ul>
+        Factor: \[x^2 + 7x + 12\] 
+        
+        <!--Here's the solution: <br>
+        
+        <ul style="display: flex; list-style: none; max-width: 800px; max-height: 600px; margin: 0 auto; align-items: stretch; box-sizing: border-box;">
+            <li style="flex: 1; border: 1px solid black; padding: 0.75em;">
+
+            <p>We first identify ${\color{lavender} a = 1}, {\color{lightblue}b = 7}, {\color{lightyellow}c = 12}$. </p>
+              
+            <p>Make your coefficient structure</p>
+              
+            \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+            </li>
+            <ul class="xmethod" style="display: flex; list-style:none; flex-direction: column; flex: 3;">
+              
+              <li style="border: 1px solid; padding: 0.75em; align-items: center;"> Candidates for $a$:
+                <table style="display: inline-flex;">
+                  <tr>
+                    <td>$1$</td>
+                  </tr>
+                  <tr>
+                    <td>$1$</td>
+                  </tr>
+                </table>
+              </li>
+              
+              <li style="border: 1px solid; padding: 0.75em; align-items: center;"> Candidates for $c$:
+                <table style="display: inline-flex;">
+                  <tr>
+                    <td style="border-right: 1px solid;">$1$</td>
+                    <td style="border-right: 1px solid;">$12$</td>
+                    <td style="border-right: 1px solid;">$2$</td>
+                    <td style="border-right: 1px solid;">$6$</td>
+                    <td style="border-right: 1px solid;">$3$</td>
+                    <td>$4$</td>
+                  </tr>
+                  <tr>
+                    <td style="border-right: 1px solid;">$12$</td>
+                    <td style="border-right: 1px solid;">$1$</td>
+                    <td style="border-right: 1px solid;">$6$</td>
+                    <td style="border-right: 1px solid;">$2$</td>
+                    <td style="border-right: 1px solid;">$4$</td>
+                    <td>$3$</td>
+                  </tr>
+                </table>
+              </li>
+              
+              <li style="border-left: 1px solid; border-right: 1px solid; padding: 0.75em;">Now check candidates against $b$:
+              </li>
+              <li style="border-left: 1px solid; border-right: 1px solid; border-bottom: 1px solid; padding: 0.75em;">\begin{align}(2 \ \ & \ + 1) \\ \downarrow \ & \ \ \ \  \\ (3 \ \ & \ - 5) \end{align}
+              </li>
+            </ul>
+        </ul>-->
     </div>
 
     <p></p>
