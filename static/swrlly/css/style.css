@@ -651,3 +651,23 @@ a:hover {
     border-radius: 0.25rem;
     background: linear-gradient(107deg, rgba(0,0,0,1) 0%, rgba(255,93,0,1) 100%);
   }
+
+#toc_container {
+background: none repeat scroll 0 0;
+border: 1px solid #aaa;
+border-radius:10%;
+display: table;
+font-size: 95%;
+margin-bottom: 1em;
+padding: 20px;
+max-width: 200px;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+/*#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}*/

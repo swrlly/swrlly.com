@@ -25,7 +25,16 @@
 
     <p>Quick metric for success: During the quiz, if I were to walk up to you and ask you any definition from this list, you will be able to recall it by heart.</p>
 
-    <h2>Week 1</h2><hr>
+    <div id="toc_container">
+        <p class="toc_title">Table of Contents</p>
+        <ul class="toc_list">
+            <li><a href="#118w1">Week 1</a></li>
+            <li><a href="#118w2">Week 2</a></li>
+            <li><a href="#118w3">Week 3</a></li>
+        </ul>
+    </div>
+    
+    <h2 id="118w1">Week 1</h2><hr>
 
     <h4>1.0: The Beginning</h4>
 
@@ -123,7 +132,64 @@
 
     <div class="math-def"> The <b>principal <i>n</i>th root</b> of $a$ is defined as \[\sqrt[n]{a} = b \qquad \text{means} \qquad b^n = a\] If $n$ is even, we must have $a \geq 0, b \geq 0$.</div>
 
-    <div class="math-def"> For any rational exponent $m/n$ in lowest terms, we define \[a^{m/n} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}\]</div>
+    <div class="math-def"> For any rational exponent $\dfrac{m}{n}$ in lowest terms, we define \[a^{\frac{m}{n}} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}\]</div>
+
+    <h2 id="118w2">Week 2</h2><hr>
+
+    <div class="math-def"> <b>Like terms</b><br>
+        <b>Like terms</b> are terms with the same factors except for the numerical factor (called the <b>coefficient</b>).
+    </div>
+
+    <div class="math-fact">
+        <ul>
+            <li class="lec-list-space">$(A + B)(A - B) = A^2 - B^2$</li>
+            <li class="lec-list-space">$(A + B)^2 = A^2 + 2AB + B^2$</li>
+            <li class="lec-list-space">$(A - B)^2 = A^2 - 2AB + B^2$</li>
+        </ul>
+    </div>
+
+    <p><b>Memorize and be able to use the four methods of factoring.</b></p>
+
+    <div class="math-fact">
+        <ul>
+            <li class="lec-list-space">$A^2 - B^2 = (A-B)(A+B)$</li>
+            <li class="lec-list-space">$A^2 + 2AB + B^2 = (A+B)^2$</li>
+            <li class="lec-list-space">$A^2 - 2AB + B^2 = (A-B)^2$</li>
+        </ul>
+    </div>
+
+    <div class="math-fact">
+        <table class="table" style="max-width: 600px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Number of Terms</th>
+                <th scope="col">Factoring Methods to Try (in order)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="border-right: 1px solid;">2 terms</td>
+                <td>GCF, $A^2 - B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">3 terms</td>
+                <td>GCF, $ax^2 + bx + c, A^2 + 2AB + B^2, A^2 - 2AB + B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">4 terms</td>
+                <td>GCF, grouping</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\geq$ 5 terms</td>
+                <td>GCF</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="118w3">Week 3</h2><hr>
+
+    <p>soon.</p>
 
 </div>
 {% endblock %}
