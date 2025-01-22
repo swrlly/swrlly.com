@@ -64,18 +64,20 @@
 
     <div class="math-example"> Solve for (isolate) $M$ in the equation $F = G\dfrac{mM}{r^2}$.</div>
 
-    <p>In general, if you want to isolate a variable, let's say "$x$", there are four steps:
+    <p>In general, if you want to isolate a variable, let's call "$x$", use these four steps:
         <ol>
             <li>Expand all expressions into global terms.</li>
-            <li>Collect all terms with $x$ on one side. Put all other terms on the other.</li>
-            <li>Convert $x$ into a factor by using the GCF factoring method.</li>
+            <li>Collect terms with $x$ on one side. Put all other terms on the other side.</li>
+            <li>Convert $x$ into a global factor using the GCF factoring method.</li>
             <li>Divide both sides by the factor attached to $x$, therefore isolating $x$.</li>
         </ol>
     </p>
 
     <div class="math-example"> Isolate $w$ in the equation $A = 2lw + 2wh + 2lh$.</div>
 
-    <div class="math-example"> Isolate $x$ in the equation $a - b(c + dx) = ex$.</div>
+    <p>The next example appears in Calculus.</p>
+
+    <div class="math-example"> Isolate $y'$ in the equation $3(y + xy') - 3x^2 + 2y^2 y' = y'$.</div>
 
     <h2>Quadratics</h2><hr>
 
@@ -87,7 +89,9 @@
         A <b>quadratic equation</b> is an equation of the form \[ax^2 + bx + c = 0\] where $a,b,c \in \mathbb{R}$ and $a \neq 0$.
     </div>
 
-    <h3>Solving Quadratics with Factoring</h3><hr>
+    <p>We discuss three ways to solve quadratics.</p>
+
+    <h4>Solving Quadratics with Factoring</h4>
 
     <p>The following property is one technique to solve quadratics:</p>
 
@@ -99,7 +103,7 @@
         Find all real-valued solutions (meaning your solutions $x \in \mathbb{R}$) of the equation $x^2 + 5x = 24$.
     </div>
 
-    <h3>Solving Quadratics of the form $x^2 = c$</h3><hr>
+    <h4>Solving Quadratics of the form $x^2 = c$</h4>
 
     <p>Another technique to solve quadratics is by using this idea:</p>
 
@@ -115,7 +119,7 @@
         </ul>
     </div>
 
-    <h3>The Quadratic Formula</h3><hr>
+    <h4>The Quadratic Formula</h4>
 
     <p>Here is one more method to solve quadratics.</p>
 
@@ -128,7 +132,6 @@
         <ul>
             <li class="lec-list-space">$3x^2 - 5x - 1 = 0$</li>
             <li class="lec-list-space">$4x^2 + 12x + 9 = 0$</li>
-            <li class="lec-list-space">$x^2 + 2x + 2 = 0$</li>
         </ul>
     </div>
 
@@ -152,26 +155,27 @@
     <p>Multiply both sides by the LCD to get $x$ out of the denominator.</p>
 
     <div class="math-example">
-        Solve the equation $\dfrac{1}{x - 1} - \dfrac{2}{x^2} = 0$.
+        Solve the equation $\dfrac{1}{x-\dfrac{1}{2}}-\dfrac{2}{x^{2}} = 0$.
     </div>
 
+    <p>The next example appears in Calculus.</p>
+
     <div class="math-example">
-        Solve the equation $\dfrac{3}{x} - \dfrac{2}{x - 3} = -\dfrac{12}{x^2 - 9}$.
+        Solve the equation $\dfrac{1 - \dfrac{1}{x^2}}{x} = 0$.
     </div>
 
     <h3>Equations Involving Radicals</h3><hr>
 
-    <p>For these, think about removing the root to "rescue $x$", making it a global term.</p>
+    <p>First, isolate the square root expression on one side.</p>
+
+    <p>Then square both sides, and solve normally.</p>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{\sqrt{x} + 1}{x + 1} = 1$
+    </div>
 
     <div class="math-example">
         Solve the equation $2x = 1 - \sqrt{2 - x}$.
     </div>
-
-    <div class="math-example">
-        Solve the equation $\sqrt{3x + 1} = 2 + \sqrt{x + 1}$.
-    </div>
-
-
-
 
 {% endblock %}
