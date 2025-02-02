@@ -25,6 +25,7 @@ html {
     --examplecolor: rgb(232, 162, 212);
     --factcolor: rgb(236, 231, 141);
     --methodcolor: rgb(236, 231, 141);
+    --bewarecolor: #E74C3C;
     --lightblue: rgb(142, 181, 227);
 
     --lec-event-color: #245fcd;
@@ -377,16 +378,38 @@ a:hover {
 .math-beware {
     border-left-style: solid;
     border-left-width: 1px;
-    border-left-color: red;
+    border-left-color: var(--bewarecolor);
     padding-left: 10px;
     margin-bottom: 2em;
     margin-top: 2em;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .math-beware:before {
-    content: "BEWARE:";
-    color: red;
+    content: "Careful:";
     font-weight: bold;
+    animation-name: bewarecol;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bewarecol {
+    0% {
+        color: var(--bewarecolor);
+    }
+    25% {
+        color: var(--bewarecolor);
+    }
+    50% {
+        color: black;
+    }
+    75% {
+        color: var(--bewarecolor);
+    }
+    100% {
+        color: var(--bewarecolor);
+    }
 }
 
 .math-example {
@@ -666,6 +689,15 @@ max-width: 200px;
 .toc_title {
     font-weight: 700;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .largeScreen {display: none;}
+}
+
+@media only screen and (min-width: 800px) {
+    .smallScreen {display: none;}
 }
 
 /*#toc_container li, #toc_container ul, #toc_container ul li{

@@ -31,6 +31,7 @@
             <li><a href="#118w1">Week 1</a></li>
             <li><a href="#118w2">Week 2</a></li>
             <li><a href="#118w3">Week 3</a></li>
+            <li><a href="#118w4">Week 4</a></li>
         </ul>
     </div>
     
@@ -260,7 +261,104 @@
     <div class="math-fact">
         The solutions of the quadratic equation $ax^2 + bx + c = 0$ where $a \neq 0$ are \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
     </div>
+
+    <h2 id="118w4">Week 4</h2><hr>
+
+    <h4>1.6: Complex Numbers</h4>
     
+    <div class="math-def"> <b>complex number</b>
+
+        <p>A complex number has the form \[a + bi\] where $a, b$ are real numbers and $i^2 = -1$. Also, $i = \sqrt{-1}$.</p>
+
+        <p>$a$ is called the real part, while $b$ is called the imaginary part.</p>
+    
+    </div>
+
+    <div class="math-fact"> 
+        For the quadratic equation $ax^2 + bx + c = 0$, the quantity $b^2 - 4ac$ is called the <b>discriminant</b>.
+        <ul>
+            <li>If $b^2 - 4ac > 0$, there are two distinct (different) real solutions.</li>
+            <li>If $b^2 - 4ac = 0$, there is one real solution.</li>
+            <li>If $b^2 - 4ac < 0$, there are two distinct complex solutions.</li>
+        </ul>
+    </div>
+
+    <h4>1.8: Inequalities</h4>
+    
+    <div class="math-fact">  <b style="color: var(--factcolor)">Properties of Inequalities</b>
+        <ul>
+            <li>If $A \leq B$, then $A \pm C \leq B \pm C$.
+                <br> <b>English</b> Adding the same number on both sides does not flip the inequality.
+            </li>
+            <li>If $C > 0$, then given $A \leq B$, we know $A\cdot C \leq B\cdot C$. 
+                <br> <b>English</b> Multiplying a positive number on both sides does not flip the inequality.
+            </li>
+            <li>If $C < 0$, then:
+                <ul>
+                    <li>Given $A \leq B$, we know $A\cdot C \geq B \cdot C$
+                    </li>
+                    <li>Given $A < B$, we know $A\cdot C > B \cdot C$
+                        <br> <b>English</b> Multiplying a negative number on both sides flips the inequality.
+                    </li>
+                </ul>
+                
+            </li>
+        </ul>
+    </div>
+
+    <h4>1.9: Coordinate Plane, Graphs of Equations</h4>
+
+    <p>The coordinate plane describes where a point is in two dimensional space.</p>
+
+    <img src="/static/swrlly/images/teaching/coordinateplane.svg" style="max-width:550px; margin:3rem auto; display:flex; border-radius: 70px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+
+    <div class="math-def"> A <b>graph</b> of an equation in $x$ and $y$ is all points $(x, y)$ which make the equation true.</div>
+
+    <div class="math-def">
+        The <b>$x$-intercept</b> of a graph is the $x$-coordinate where the graph intersects the $x$-axis.<br>
+        The <b>$y$-intercept</b> of a graph is the $y$-coordinate where the graph intersects the $y$-axis.
+    </div>
+
+    <h4>1.10: Lines</h4>
+
+    <div class="math-def">
+
+        <div class="largeScreen">
+            <div style="display: flex; align-items:center; column-gap: 5vw;">
+                <div style="flex: 2";>
+                    <img src="/static/swrlly/images/teaching/118-1.10-1.svg" style="max-width:500px; margin:3rem auto; display:flex; border-radius: 70px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+                </div>
+                <div style="flex: 1";>
+                    The <b>slope</b> of a line that runs through two points $P(x_1, y_1)$ and $Q(x_2, y_2)$ is \[m = \text{slope} = \dfrac{\text{rise}}{\text{run}} = \dfrac{y_2 - y_1}{x_2 - x_1}\]
+                </div>
+            </div>
+        </div>
+
+        <div class="smallScreen">
+            
+            The <b>slope</b> of a line that runs through two points $P(x_1, y_1)$ and $Q(x_2, y_2)$ is \[m = \text{slope} = \dfrac{\text{rise}}{\text{run}} = \dfrac{y_2 - y_1}{x_2 - x_1}\]
+
+                    <img src="/static/swrlly/images/teaching/118-1.10-1.svg" style="min-width:300px; margin:3rem auto; display:flex; border-radius: 70px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+        </div>
+    </div>
+
+    
+    <div class="math-def">
+        The <b>point-slope</b> form of a line is an equation of a line that passes through $(x_1, y_1)$ and has slope $m$: \[y - y_1 = m(x - x_1)\]</b>
+    </div>
+
+    <div class="math-fact"> 
+        <ul>
+            <li>The vertical line through $(a, b)$ is $x = a$.</li>
+            <li>The horizontal line through $(a, b)$ is $y = b$.</li>
+        </ul> 
+    </div>
+
+    <h4>2.1: Functions</h4>
+
+    <div class="math-def"> A <b>function</b> $f$ is a rule that assigns to each element $x$ in a set $A$ to exactly one element, called $f(x)$ in a set $B$.</div>
+
+    <img src="/static/swrlly/images/teaching/118-2.1-1.svg" style="flex:2; max-width:600px; margin:3rem auto; padding:3rem; display:flex; border-radius: 20px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
 
 </div>
 {% endblock %}
