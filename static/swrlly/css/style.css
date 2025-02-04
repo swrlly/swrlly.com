@@ -212,12 +212,32 @@ a:hover {
     
 }
 
+.dayheader {
+    font-size: 1.25rem; 
+    /*background: rgb(160,198,255); 
+    background: linear-gradient(90deg, rgba(160,198,255,1) 0%, rgba(177,143,219,1) 68%, rgba(240,195,245,1) 100%);
+    background-clip: text; 
+    color: transparent;*/
+}
+
 @keyframes glow {
+    0% {
+      text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    }
+    50% {
+      text-shadow: 0 0 50px rgba(240,195,245,1), 0 0 10px rgba(240,195,245,1);
+    }
+    100% {
+        text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    }
+}
+
+@keyframes gradient-anim {
     from {
-      text-shadow: 0 0 2px rgb(188, 167, 238), 0 0 5px rgb(188, 167, 238);
+        -webkit-filter: hue-rotate(0deg);
     }
     to {
-      text-shadow: 0 0 5px rgb(188, 167, 238), 0 0 10px rgb(188, 167, 238);
+        -webkit-filter: hue-rotate(360deg);
     }
 }
 
