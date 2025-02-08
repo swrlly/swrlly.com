@@ -32,6 +32,7 @@ html {
     --quiz-event-color: rgb(143, 59, 172);
     --lecl-event-color: #0d3276;
     --quizl-event-color: rgb(69, 10, 88);
+    --fade-in-time: 0.2s;
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
@@ -143,20 +144,20 @@ a:hover {
        Just because a vendor prefix is there, doesn't mean it will
        work in a browser made by that vendor either, it's just for
        future-proofing purposes I guess. */
-    -o-transition:.4s;
-    -ms-transition:.4s;
-    -moz-transition:.4s;
-    -webkit-transition:.4s;
+    -o-transition:var(--fade-in-time);
+    -ms-transition:var(--fade-in-time);
+    -moz-transition:var(--fade-in-time);
+    -webkit-transition:var(--fade-in-time);
     /* ...and now for the proper property */
-    transition:.4s;    
+    transition:var(--fade-in-time);    
 }
 
 .fade-in-text {
-    animation: fadeIn linear 1s;
-    -webkit-animation: fadeIn linear 1s;
-    -moz-animation: fadeIn linear 1s;
-    -o-animation: fadeIn linear 1s;
-    -ms-animation: fadeIn linear 1s;
+    animation: fadeIn linear var(--fade-in-time);
+    -webkit-animation: fadeIn linear var(--fade-in-time);
+    -moz-animation: fadeIn linear var(--fade-in-time);
+    -o-animation: fadeIn linear var(--fade-in-time);
+    -ms-animation: fadeIn linear var(--fade-in-time);
 }
 
 @keyframes fadeIn {
@@ -184,7 +185,7 @@ a:hover {
 
 .navbar {
     border-top: 2px solid var(--lavender);
-    transition: all .5s ease-in-out;
+    transition: all var(--fade-in-time) ease-in-out;
 }
 
 .navbar-icon {
@@ -268,10 +269,10 @@ a:hover {
     width: 100%;
     height: 100%;
     border-radius: 2%;
+    transition: transform 0.2s;
 }
 
 .albumicon:hover {
-    transition: transform 0.2s;
     transform: scale(1.03);
 }
 
@@ -377,7 +378,7 @@ a:hover {
     background: #0f0f0f;
     /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
     box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #171717;
-    border: 3px outset #2b2b2b;
+    border: 3px double #2b2b2b;
     transition: all 0.2s ease;
 }
 
