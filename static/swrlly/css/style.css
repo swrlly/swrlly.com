@@ -20,7 +20,7 @@
 
 html {
     font-size: 100%;
-    --lavender: rgb(179, 154, 240);
+    --lavender: #b39af0;
     --darklavender: rgb(156, 125, 234);
     --examplecolor: rgb(232, 162, 212);
     --factcolor: rgb(236, 231, 141);
@@ -61,7 +61,7 @@ a {
 }
 
 b {
-    color: var(--darklavender)
+    color: var(--lavender)
 }
 
 h2 {

@@ -1,9 +1,9 @@
 {% extends "swrlly/teaching.html" %}
 
-{% block title %}<title>Math 141 - 2.1</title>{% endblock %}
+{% block title %}<title>Math 118 - 2.1</title>{% endblock %}
 
 {% block discord %}
-<meta property="og:title" content="Math 141 - lectures"/>
+<meta property="og:title" content="Math 118 - lectures"/>
 <meta name = "theme-color" content="#b39af0"/>
 <meta property="og:description" content="2.1: Functions"/>
 <meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.1"/>
@@ -81,17 +81,19 @@
 
     <h2>Domain of a Function</h2><hr>
 
-    <p>The domain of a function is the set of all inputs you can input to get out a valid real number.</p>
+    <div class="math-def"> <b>domain</b><br>
+    The domain of a function is the set of all possible inputs, when evaluated, gives you a real number.</div>
 
-    <p>The notation for this is $f : \mathbb{R} \rightarrow \mathbb{R}$</p>
+    <div class="math-example">
+        Suppose $f(x) = \sqrt{x}$. Show that $x = 0$ is in the domain and $x = -1$ is not.
+    </div>
 
-    <p>When finding domain, follow three steps:
+    <p>When finding domain, follow two steps:
         <ol>
-            <li class="lec-list-space">Assume the domain is $\mathbb{R}$.</li>
-            <li class="lec-list-space">Look for numbers (call them <b>problems</b>), when evaluated, result in something that is not a real number. Problems are</li>
+            <li class="lec-list-space">Look for <b>problems</b> (these are numbers, when evaluated, result in something that is not a real number). Problems can be found by </li>
             <ul>
-                <li>Plugging a number where you end up dividing by zero.</li>
-                <li>Plugging a number where you end up taking the square root of a negative number.</li>
+                <li>Setting "denominators" $= 0$ and solving.</li>
+                <li>Setting "inside square roots" $< 0$ and solving.</li>
             </ul>
             <li class="lec-list-space">Remove the problems from $\mathbb{R}$ and write your answer in interval notation.</li>
         </ol>
@@ -99,7 +101,7 @@
 
     <div class="math-example"> What is the domain of $g(x) = \sqrt{x}$?</div>
     
-    <div class="math-example"> What is the domain of $g(x) = \dfrac{1}{x-4}$?</div>
+    <div class="math-example"> What is the domain of $g(x) = \dfrac{1}{x^2-4x}$?</div>
 
     <div class="math-example"> What is the domain of $g(x) = \dfrac{x}{\sqrt{x + 1}}$?</div>
 
@@ -117,7 +119,7 @@
 
     <div class="math-example">
         Suppose \[f(x) = \begin{cases} 1 & x \geq 0 \\ 0 & x < 0 \end{cases}\]
-        Evaluate $f(-2), f(-1), $f(-0.01), f(0), f\left(\dfrac{1}{100}\right), f(1)$ and $f(2)$.
+        Evaluate $f(-2), f(-1), f(-0.01), f(0), f\left(\dfrac{1}{100}\right), f(1)$ and $f(2)$.
     </div>
 
 </div>

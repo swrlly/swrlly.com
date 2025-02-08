@@ -1,0 +1,74 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 2.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.2: Graphs of Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.2"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>2.2: Graphs of Functions</h1>
+
+    <p>In <a href="/teaching/math-118/">Section 1.9</a>, we defined the graph for an equation.</p>
+
+    <p>We now do the same for a function.</p>
+
+    <div class="math-def">
+        The <b>graph</b> of a function with domain $A$ is the set of all possible coordinates $(x, f(x))$ which make the equation true.
+    </div>
+
+    <p>The only difference between this definition and the one in Section 1.9 is $y$ was replaced with $f(x)$:</p>
+
+    <img src="/static/swrlly/images/teaching/118-2.2-1.svg" style="max-width:500px; margin:3rem auto; padding:3rem; display:flex; border-radius: 20px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+
+    <p>Insight: $f(x)$ is the <b>height from the $x$-axis to the graph</b>. </p>
+
+    <p>We have two interpretations of $f(x)$:
+        <ol>
+            <li>Algebraically, $f(x)$ is the output.</li>
+            <li>Geometrically, $f(x)$ is the height of the function.</li>
+        </ol>
+    </p>
+
+    <p>Graphing a function is the same exact method introduced in <a href="/teaching/math-118/">Section 1.9</a>! Except, $y$ is replaced with $f(x)$.</p>
+    
+    <div class="math-example">
+        Graph the function $f(x) = \sqrt{x}$.
+    </div>
+
+    <h2>Graphing Piecewise Functions</h2><hr>
+
+    <p>
+        Be careful when graphing piecewise functions.
+    </p>
+
+    <p>
+        When you see a $<$ or a $>$, plug the number that it should be equal to and draw an open circle.
+    </p>
+
+    <div class="math-example">
+        Graph the function \[f(x) = \begin{cases} x^2 & x \leq 1 \\ 2x + 1 & x > 1\end{cases}\]
+    </div>
+
+    <p>Don't forget to plug in $1$ into $2x + 1$, and draw an open circle there. That is where the line $2x + 1$ ends.</p>
+
+    <div class="math-example">
+        Graph the function \[f(x) = \begin{cases} 1 & x > 0 \\ 0 & x = 0 \\ -1 & x < 0\end{cases}\]
+    </div>
+
+    <h2>Vertical Line Test</h2>
+
+
+
+
+
+
+</div>
+
+{% endblock %}
