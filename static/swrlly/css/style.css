@@ -353,11 +353,9 @@ a:hover {
 }
 
 .teachingicon {
-    border-radius: 10px; 
-    border-width: 2px;
-    background: #0f0f0f;
-    /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
-    box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #141414;
+    border-radius: 20px; 
+    background: linear-gradient(145deg, #000, #121212);
+    box-shadow: inset 10px 10px 22px #000, inset -10px -10px 20px #000;
     border: 4px solid #0e0e0e;
     transition: all 0.15s ease;
 }
@@ -373,12 +371,9 @@ a:hover {
     }
 
     .teachingicon {
-        border-radius: 10px; 
-        border-width: 2px;
-        background: #0f0f0f;
-        /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
-        box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #343434;
-        border: 2px solid #1a1a1a;
+        border-radius: 15px; 
+        background: linear-gradient(145deg, #000, #191919);
+        box-shadow: inset 10px 10px 22px #000, inset -10px -10px 20px #000;
         transition: all 0.15s ease;
     }
 
