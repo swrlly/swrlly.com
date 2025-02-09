@@ -198,7 +198,7 @@
                     <p>Parent is $f(x) = \sqrt{x}$.</p>
                     <p>The $-x$ seems like a reflection around the $y$-axis and the $-2$ a horizontal shift right 2 units. This is incorrect due to the presence of 2 horizontal transformations.</p>
                     <p>Factor out the $-$ to get $g(x) = \sqrt{-x - 2} = \sqrt{-(x+2)}$.</p>
-                    Transformations are reflection around the $y$-axis and horizontal shift left 2 units because $g(x) = f(-(x+2))$.
+                    <p>Transformations are reflection around the $y$-axis and horizontal shift left 2 units because $g(x) = f(-(x+2))$.</p>
                 </div>
             </li>
         </ul>
@@ -235,8 +235,39 @@
     <div class="math-example">
         Identify the parent function and the transformation(s):
         <ul>
-            <li class="lec-list-space">$g(x) = \frac{1}{2}\sqrt{x - 2} + 2$</li>
-            <li>$g(x) = 2(3 - x)^2$</li>
+            <li class="lec-list-space">
+                $g(x) = \frac{1}{2}\sqrt{x - 2} + 2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>Parent is $f(x) = \sqrt{x}$.</p> <!-- apparantely the spec says ul can't be in p-->
+                    <p style="margin-bottom:0;">Transformations are</p>
+                    <ul>
+                        <li>vertical shrink by a factor of $\frac{1}{2}$</li>
+                        <li>horizontal shift right 2 units</li>
+                        <li>vertical shift up 2 units</li>
+                    </ul> 
+                    <p>because $g(x) = \frac{1}{2}f(x - 2) + 2$.</p>
+                </div>
+            </li>
+            <li>
+                $g(x) = 2(3 - x)^2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>Parent is $f(x) = x^2$.</p>
+                    <p>$x$ is negative and there is also the term $3$, which are two horizontal transformations.</p>
+                    <p>Factor out the $-$ to get 
+                        \begin{align}
+                        g(x) &= 2(3-x)^2 \\&= 2(-x + 3)^2 \\&= 2\big[-(x - 3)\big]^2
+                        \end{align}</p>
+                    <p style="margin-bottom:0;">Transformations are</p>
+                    <ul>
+                        <li>vertical stretch by a factor of 2</li>
+                        <li>$y$-axis reflection</li>
+                        <li>horizontal shift right 2 units</li>
+                    </ul> 
+                    <p>because $g(x) = 2f(-(x-2))$.</p>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -271,8 +302,41 @@
     <div class="math-example">
         Identify the parent function and the transformation(s):
         <ul>
-            <li>$f(x) = -3 - \sqrt{\frac{1}{2}x}$</li>
-            <li>$f(x) = 1 - \left(3 - 6x\right)^2$</li>
+            <li>
+                $f(x) = -3 - \sqrt{\frac{1}{2}x}$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>Parent is $f(x) = \sqrt{x}$.</p>
+                    <p style="margin-bottom:0;">Transformations are</p>
+                    <ul>
+                        <li>vertical shift down 3 units</li>
+                        <li>$x$-axis reflection</li>
+                        <li>horizontal stretch by a factor of $\dfrac{1}{\frac{1}{2}} = 2$ units</li>
+                    </ul> 
+                    <p>because $g(x) = -f\left(-\frac{1}{2}\right)$.</p>
+                </div>
+            </li>
+            <li>
+                $f(x) = 1 - \left(3 - 6x\right)^2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>Parent is $f(x) = x^2$.</p>
+                    <p>$x$ is negative, there is a term $3$ and a factor 6, which are three horizontal transformations.</p>
+                    <p>Factor out the $-6$ to get 
+                        \begin{align}
+                        g(x) &= 1 - \left(3 - 6x\right)^2 \\&= 1 - \left(-6x + 3\right)^2 \\&= 1 - \left[-6\left(x - \frac{1}{2}\right)\right]^2
+                        \end{align}</p>
+                    <p style="margin-bottom:0;">Transformations are</p>
+                    <ul>
+                        <li>vertical shift up 1</li>
+                        <li>$x-$axis reflection</li>
+                        <li>$y$-axis reflection</li>
+                        <li>horizontal shrink by a factor of $\frac{1}{6}$</li>
+                        <li>horizontal shift right $\frac{1}{2}$ units</li>
+                    </ul> 
+                    <p>because $g(x) = 1 - f\left(-6\left(x - \frac{1}{2}\right)\right)$.</p>
+                </div>
+            </li>
         </ul>
     </div>
 
