@@ -523,6 +523,15 @@ a:hover {
     margin-top: 2em;   
 }
 
+.math-fact-notxt {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--factcolor);
+    padding-left: 10px;
+    margin-bottom: 2em;
+    margin-top: 2em;   
+}
+
 .math-method {
     border-left-style: solid;
     border-left-width: 1px;
@@ -551,6 +560,7 @@ a:hover {
 }
 
 .math-solution {
+    padding-bottom: 2rem;
     display: none;
     animation: fadeIn linear 0.5s;
     -webkit-animation: fadeIn linear 0.5s;
