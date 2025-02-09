@@ -15,15 +15,6 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "5.5vw";
         }
     }
-    icons = document.querySelectorAll(".center-text-over-image");
-    for (let i = 0; i< icons.length; i++) {
-        let boxHeight = icons[i].offsetHeight;
-        let boxWidth = icons[i].offsetWidth;
-        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
-    }
 
     icons = document.querySelectorAll(".large-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
@@ -37,15 +28,7 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "10vw";
         }
     }
-    icons = document.querySelectorAll(".large-center-text-over-image");
-    for (let i = 0; i< icons.length; i++) {
-        let boxHeight = icons[i].offsetHeight;
-        let boxWidth = icons[i].offsetWidth;
-        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
-    }
+
     
     icons = document.querySelectorAll(".small-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
@@ -59,15 +42,7 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "3.5vw";//"1.7241379310345vw";
         }
     }
-    icons = document.querySelectorAll(".small-center-text-over-image");
-    for (let i = 0; i< icons.length; i++) {
-        let boxHeight = icons[i].offsetHeight;
-        let boxWidth = icons[i].offsetWidth;
-        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
-    }
+
 
     icons = document.querySelectorAll(".vsmall-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
@@ -80,15 +55,6 @@ function ModifyIconFont() {
         else {
             icons[i].style["font-size"] = "2.4vw";
         }
-    }
-    icons = document.querySelectorAll(".vsmall-center-text-over-image");
-    for (let i = 0; i< icons.length; i++) {
-        let boxHeight = icons[i].offsetHeight;
-        let boxWidth = icons[i].offsetWidth;
-        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
     }
 
     icons = document.querySelectorAll(".vvsmall-center-text-over-image");
@@ -103,15 +69,6 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "1.8vw";
         }
     }
-    icons = document.querySelectorAll(".vvsmall-center-text-over-image");
-    for (let i = 0; i< icons.length; i++) {
-        let boxHeight = icons[i].offsetHeight;
-        let boxWidth = icons[i].offsetWidth;
-        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
-        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
-        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
-        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
-    }
 
     icons = document.querySelectorAll(".vvvsmall-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
@@ -125,7 +82,7 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "1.3vw";
         }
     }
-    icons = document.querySelectorAll(".vvvsmall-center-text-over-image");
+    icons = document.querySelectorAll(".center-text-over-image, .large-center-text-over-image, .small-center-text-over-image, .vsmall-center-text-over-image, .vvsmall-center-text-over-image, .vvvsmall-center-text-over-image");
     for (let i = 0; i< icons.length; i++) {
         let boxHeight = icons[i].offsetHeight;
         let boxWidth = icons[i].offsetWidth;

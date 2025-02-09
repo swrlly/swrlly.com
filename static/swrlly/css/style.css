@@ -377,8 +377,8 @@ a:hover {
         border-width: 2px;
         background: #0f0f0f;
         /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
-        box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #1d1d1d;
-        border: 3px solid #1a1a1a;
+        box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #343434;
+        border: 2px solid #1a1a1a;
         transition: all 0.15s ease;
     }
 
