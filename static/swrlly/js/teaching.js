@@ -2,13 +2,17 @@
 function ModifyIconFont() {
 
     // get box width first later; better
+
     let icons = document.querySelectorAll(".center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth > 1200) {
             icons[i].style["font-size"] = "40px";
         }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "3.8vw";
+        }
         else {
-            icons[i].style["font-size"] = "3.448275862069vw";
+            icons[i].style["font-size"] = "5.5vw";
         }
     }
     icons = document.querySelectorAll(".center-text-over-image");
@@ -23,11 +27,14 @@ function ModifyIconFont() {
 
     icons = document.querySelectorAll(".large-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
-        if (window.innerWidth >= 1200) {
-            icons[i].style["font-size"] = "80px";
+        if (window.innerWidth > 1200) {
+            icons[i].style["font-size"] = "60px";
+        }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "6.33vw";
         }
         else {
-            icons[i].style["font-size"] = "6.896551724138vw";
+            icons[i].style["font-size"] = "10vw";
         }
     }
     icons = document.querySelectorAll(".large-center-text-over-image");
@@ -42,11 +49,14 @@ function ModifyIconFont() {
     
     icons = document.querySelectorAll(".small-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
-        if (window.innerWidth >= 1200) {
-            icons[i].style["font-size"] = "20px";
+        if (window.innerWidth > 1200) {
+            icons[i].style["font-size"] = "30px";
+        }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "2.2166vw";
         }
         else {
-            icons[i].style["font-size"] = "1.7241379310345vw";
+            icons[i].style["font-size"] = "3.5vw";//"1.7241379310345vw";
         }
     }
     icons = document.querySelectorAll(".small-center-text-over-image");
@@ -61,11 +71,14 @@ function ModifyIconFont() {
 
     icons = document.querySelectorAll(".vsmall-center-text-over-image");
     for (let i = 0; i < icons.length; i++) {
-        if (window.innerWidth >= 1200) {
-            icons[i].style["font-size"] = "15px";
+        if (window.innerWidth > 1200) {
+            icons[i].style["font-size"] = "20px";
+        }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "1.8vw";
         }
         else {
-            icons[i].style["font-size"] = "1.2931034482759vw";
+            icons[i].style["font-size"] = "2.4vw";
         }
     }
     icons = document.querySelectorAll(".vsmall-center-text-over-image");
