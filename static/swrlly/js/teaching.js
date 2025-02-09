@@ -91,8 +91,50 @@ function ModifyIconFont() {
         icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
     }
 
+    icons = document.querySelectorAll(".vvsmall-center-text-over-image");
+    for (let i = 0; i < icons.length; i++) {
+        if (window.innerWidth > 1200) {
+            icons[i].style["font-size"] = "15px";
+        }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "1.35vw";
+        }
+        else {
+            icons[i].style["font-size"] = "1.8vw";
+        }
+    }
+    icons = document.querySelectorAll(".vvsmall-center-text-over-image");
+    for (let i = 0; i< icons.length; i++) {
+        let boxHeight = icons[i].offsetHeight;
+        let boxWidth = icons[i].offsetWidth;
+        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
+        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
+        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
+        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
+    }
 
-    
+    icons = document.querySelectorAll(".vvvsmall-center-text-over-image");
+    for (let i = 0; i < icons.length; i++) {
+        if (window.innerWidth > 1200) {
+            icons[i].style["font-size"] = "11px";
+        }
+        else if (window.innerWidth > 800) {
+            icons[i].style["font-size"] = "1vw";
+        }
+        else {
+            icons[i].style["font-size"] = "1.3vw";
+        }
+    }
+    icons = document.querySelectorAll(".vvvsmall-center-text-over-image");
+    for (let i = 0; i< icons.length; i++) {
+        let boxHeight = icons[i].offsetHeight;
+        let boxWidth = icons[i].offsetWidth;
+        let backgroundBoxHeight = icons[i].previousElementSibling.offsetHeight;
+        let backgroundBoxWidth = icons[i].previousElementSibling.offsetWidth;
+        icons[i].style.top = ((backgroundBoxHeight - boxHeight) / 2) + "px";
+        icons[i].style.left = ((backgroundBoxWidth - boxWidth) / 2) + "px";
+    }
+
 }
 
 function ShowSolution(event) {
