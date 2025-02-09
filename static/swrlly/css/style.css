@@ -352,6 +352,16 @@ a:hover {
     margin: 0 auto;
 }
 
+.teachingicon {
+    border-radius: 10px; 
+    border-width: 2px;
+    background: #0f0f0f;
+    /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
+    box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #141414;
+    border: 4px solid #0e0e0e;
+    transition: all 0.15s ease;
+}
+
 @media screen and (max-width: 800px) {
 
     .teachingicons {
@@ -362,6 +372,21 @@ a:hover {
         margin: 0 auto;
     }
 
+    .teachingicon {
+        border-radius: 10px; 
+        border-width: 2px;
+        background: #0f0f0f;
+        /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
+        box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #1d1d1d;
+        border: 3px solid #1a1a1a;
+        transition: all 0.15s ease;
+    }
+
+}
+
+.teachingicon:hover {
+    transform: scale(1.08);
+    box-shadow: inset 1px 1px 8px #b393ff, inset -1px -1px 8px #3994ff;
 }
 
 .padding-top {
@@ -383,21 +408,6 @@ a:hover {
     text-align: center;
     margin-top: 1vh;
     display: flex;
-}
-
-.teachingicon {
-    border-radius: 10px; 
-    border-width: 2px;
-    background: #0f0f0f;
-    /*box-shadow: -2px -2px 5px #b393ff, 2px 2px 5px #3994ff;*/
-    box-shadow: inset 11px 11px 22px #000, inset -11px -11px 22px #141414;
-    border: 4px solid #0e0e0e;
-    transition: all 0.15s ease;
-}
-
-.teachingicon:hover {
-    transform: scale(1.08);
-    box-shadow: inset 1px 1px 8px #b393ff, inset -1px -1px 8px #3994ff;
 }
 
 .math-def {
