@@ -32,6 +32,7 @@
             <li><a href="#118w2">Week 2</a></li>
             <li><a href="#118w3">Week 3</a></li>
             <li><a href="#118w4">Week 4</a></li>
+            <li><a href="#118w5">Week 5</a></li>
         </ul>
     </div>
     
@@ -359,6 +360,116 @@
     <div class="math-def"> A <b>function</b> $f$ is a rule that assigns to each element $x$ in a set $A$ to exactly one element, called $f(x)$ in a set $B$.</div>
 
     <img src="/static/swrlly/images/teaching/118-2.1-1.svg" style="max-width:400px; margin:3rem auto; padding:3rem; display:flex; border-radius: 20px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+
+    <div class="math-def"> <b>domain</b><br>
+        The domain of a function is the set of all possible inputs, when evaluated, gives you a real number.
+    </div>
+
+    <h2 id="118w5">Week 5</h2><hr>
+
+    <h4>2.2: Graphs of Functions</h4>
+
+    <div class="math-def">
+        The <b>graph</b> of a function with domain $A$ is the set of all possible coordinates $(x, f(x))$ which make the equation true.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor)">Vertical Line Test</b><br>
+        A curve in the plane is the <b>graph</b> of a function if no vertical intersects the curve more than once.
+    </div>
+
+    <h4>2.3: Using the Graph</h4>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Domain from a Graph</b>
+        <p>Imagine the points drop straight down by gravity:</p>
+            
+        <img class="img-shadow" src="/static/swrlly/images/teaching/118-2.3-1.svg" style="max-width:500px; max-height:400px;"/>
+
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Solving $f(x) = g(x)$ and $f(x) < g(x)$</b><br>
+        The solutions to the equation $f(x) = g(x)$ are the $x$-values where the graphs intersect. <br>
+
+        The solutions to the inequality $f(x) < g(x)$ are the $x$-values where the graph of $f(x)$ is under $g(x)$.
+    </div>
+
+    <div class="math-def"> <b>increasing, decreasing function</b> <br>
+        $f$ is increasing on an interval $I$ if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$ in $I$. <br>
+
+        $f$ is decreasing on an interval $I$ if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$ in $I$.
+    </div>
+
+    <div class="math-def"> <b>local maximum, local minimum</b> <br>
+        The number $f(a)$ is a local maximum value of $f$ if $f(a) \geq f(x)$ when $x$ is near $a$. <br>
+        The number $f(a)$ is a local minimum value of $f$ if $f(a) \leq f(x)$ when $x$ is near $a$. <br>
+    </div>
+
+    <h4>2.4: Average Rate of Change of a Function</h4>
+
+    <div class="math-def"> <b>average rate of change</b><br>
+        The average rate of change (ARoC) of $y = f(x)$ on the interval $(a, b)$ is \[\text{ARoC} = \dfrac{\text{change in } y}{\text{change in } x} = \dfrac{f(b) - f(a)}{b - a}\]
+        The ARoC is the slope of the line through $(a, f(a))$ and $(b, f(b))$.
+    </div>
+
+    <h4>2.6: Transformations of Functions</h4>
+
+    <p>Parent functions are functions that have different shapes, based on their algebra. Memorize the following.</p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:4vw; grid-template-columns: repeat(4, 1fr);">
+            <span style="margin: 0.5rem auto;">$\large f(x) = x$</span>
+            <span style="margin: 0.5rem auto;">$\large f(x) = x^2$</span>
+            <span style="margin: 0.5rem auto;">$\large f(x) = \sqrt{x}$</span>
+            <span style="margin: 0.5rem auto;">$\large f(x) = \lvert x \rvert$</span>
+            <img style="margin: 1rem auto;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-1.svg"/>
+            <img style="margin: 1rem auto;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-2.svg"/>
+            <img style="margin: 1rem auto;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-3.svg"/>
+            <img style="margin: 1rem auto;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-4.svg"/>
+        </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid; column-gap:4vw; grid-template-columns: repeat(2, 1fr);">
+            <span style="margin: 0.5rem auto;">$\large f(x) = x$</span>
+            <span style="margin: 0.5rem auto;">$\large f(x) = x^2$</span>
+            <img style="margin: 1rem auto; max-width:300px;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-1.svg"/>
+            <img style="margin: 1rem auto;  max-width:300px;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-2.svg"/>
+            <span style="margin: 0.5rem auto;">$\large f(x) = \sqrt{x}$</span>
+            <span style="margin: 0.5rem auto;">$\large f(x) = \lvert x \rvert$</span>
+            <img style="margin: 1rem auto;  max-width:300px;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-3.svg"/>
+            <img style="margin: 1rem auto;  max-width:300px;" class="img-shadow" src="/static/swrlly/images/teaching/118-2.6-4.svg"/>
+        </div>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Vertical Shifts of Graphs</b><br>
+        To graph $y = f(x) + c$, shift $f(x)$ upwards $c$ units. <br>
+        To graph $y = f(x) - c$, shift $f(x)$ downwards $c$ units. 
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Horizontal Shifts of Graphs</b><br>
+        To graph $y = f(x - c)$, shift $f(x)$ right $c$ units. <br>
+        To graph $y = f(x + c)$, shift $f(x)$ left $c$ units. 
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Reflecting Graphs</b><br>
+        To graph $y = -f(x)$, reflect $f(x)$ around the $x$-axis. <br>
+        To graph $y = f(-x)$, reflect $f(x)$ around the $y$-axis. 
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Vertical Stretching and Shrinking</b><br>
+        To graph $y = c\cdot f(x)$:
+        <ul style="list-style-type: none;">
+            <li>If $c > 1$, stretch $f(x)$ vertically by a factor of $c$.</li>
+            <li>If $0 < c < 1$, shrink $f(x)$ vertically by a factor of $c$.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Horizontal Stretching and Shrinking</b><br>
+        To graph $y = f(c\cdot x)$:
+        <ul style="list-style-type: none;">
+            <li>If $c > 1$, shrink $f(x)$ vertically by a factor of $\frac{1}{c}$.</li>
+            <li>If $0 < c < 1$, stretch $f(x)$ vertically by a factor of $\frac{1}{c}$.</li>
+        </ul>
+    </div>
 
 </div>
 {% endblock %}
