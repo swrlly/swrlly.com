@@ -374,7 +374,7 @@ a:hover {
         border-radius: 15px; 
         background: linear-gradient(145deg, #000, #191919);
         box-shadow: inset 10px 10px 22px #000, inset -10px -10px 20px #000;
-        border: 4px solid #1a1a1a;
+        border: 1.5px solid #1a1a1a;
         transition: all 0.15s ease;
     }
 
@@ -408,7 +408,7 @@ a:hover {
 
 .math-def {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--lavender);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -423,7 +423,7 @@ a:hover {
 
 .math-beware {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--bewarecolor);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -459,12 +459,16 @@ a:hover {
 }
 
 .math-example {
-    border-left-style: solid;
-    border-left-width: 1px;
+    /*border-left-style: solid;
+    border-left-width: 2px;
     border-left-color: var(--examplecolor);
-    padding-left: 10px;
+    padding-left: 10px;*/
     margin-bottom: 2em;
     margin-top: 2em;
+    border: 1px solid var(--examplecolor);
+    border-radius: 10px;
+    padding:0.75rem;
+    box-shadow: 0px 0px 10px #414141;
 }
 
 .math-example:before {
@@ -492,7 +496,7 @@ a:hover {
 
 .math-fact {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -507,7 +511,7 @@ a:hover {
 
 .math-theorem {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -522,7 +526,7 @@ a:hover {
 
 .math-notxt {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--lavender);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -531,7 +535,7 @@ a:hover {
 
 .math-fact-notxt {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -540,7 +544,7 @@ a:hover {
 
 .math-method {
     border-left-style: solid;
-    border-left-width: 1px;
+    border-left-width: 2px;
     border-left-color: var(--factcolor);
     padding-left: 10px;
     margin-bottom: 2em;
@@ -566,7 +570,7 @@ a:hover {
 }
 
 .math-solution {
-    padding-bottom: 2rem;
+    /*padding-bottom: 2rem;*/
     display: none;
     animation: fadeIn linear 0.5s;
     -webkit-animation: fadeIn linear 0.5s;
@@ -580,7 +584,27 @@ a:hover {
     margin: 3rem auto; 
     padding: 1rem; 
     border-radius: 20px; 
-    box-shadow: 2px 2px 10px #151515, -2px -2px 10px #171717;
+    border: 1px solid #202020;
+    box-shadow: 2px 2px 2px #151515, -2px -2px 2px #171717;
+}
+
+.precalc-trans-text {
+    margin: 1.5rem auto;
+    margin-bottom: 1rem;
+}
+
+.precalc-trans-picture {
+    padding: 0;
+    margin: 1rem auto;  
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.precalc-trans-picture-sm {
+    padding: 0;
+    margin: 1rem auto;  
+    max-width:300px;
+    padding: 0.5rem;
 }
 
 /* calendar stuff */
