@@ -33,6 +33,7 @@
             <li><a href="#118w3">Week 3</a></li>
             <li><a href="#118w4">Week 4</a></li>
             <li><a href="#118w5">Week 5</a></li>
+            <li><a href="#118w6">Week 6</a></li>
         </ul>
     </div>
     
@@ -564,6 +565,71 @@
         </div>
     </div>
 
+    <h2 id="118w5">Week 6</h2><hr>
+
+    <h4>2.7: New Functions From Old</h4>
+
+    <p>$+, -, \times, \div$ functions together is simple: just substitute. But...</p>
+    
+    <div class="math-beware"> When you are subtracting and multiplying functions with two or more terms, <b style="color: var(--bewarecolor)">do not forget parenthesis.</b></div>
+
+    <div class="math-def"> <b>composite function</b>
+        <br>Given two functions $f$ and $g$, the composite function $f \circ g$ is defined by \[(f\circ g)(x) = f(g(x))\]
+    </div>
+
+    <h4>2.8: One-to-One Functions and Inverses</h4>
+
+    <div class="math-def">
+        A function $f(x)$ with domain $A$ is called <b>one-to-one</b> if no two elements of $A$ are sent to the same value. <br/>In other words, if $x_1\neq x_2$, then it is always the case that $f(x_1) \neq f(x_2)$.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Horizontal Line Test</b><br>
+        A function is one-to-one if and only if no horizontal line intersects the graph of $f(x)$ more than once.
+    </div>
+
+    <div class="math-def"> <b>codomain</b><br>
+        The <b>codomain</b> of a function $f$ is the set of all possible outputs when $f$ is evaluated on the domain.
+    </div>
+
+    <div class="math-def"> <b>inverse function, $f^{-1}$</b><br>
+        Let $f$ be a one-to-one function with domain $A$, codomain $B$. Then the inverse function, denoted $f^{-1}$, has domain $B$ and codomain $A$ and is defined by \[f^{-1}(y) = x \text{ if and only if } f(x) = y\]
+    </div>
+
+    <div class="math-beware"> $f^{-1}$ is not equivalent to $\frac{1}{f}$. Don't confuse it with a negative exponent!</div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor);">Inverse Function Property</b><br>
+        Let $f$ be a one-to-one function with domain $A$ and codomain $B$. The inverse function $f^{-1}$ satisfies the following properties
+        \begin{align}
+        f^{-1}(f(x))=x \qquad &\text{ for every } x \text{ in } A\\
+        f(f^{-1}(x))=x \qquad &\text{ for every } x \text{ in } B
+        \end{align}
+    </div>
+
+    <div class="math-method">
+        Given a function $f$, here are the steps to find the inverse $f^{-1}$:
+        <ol>
+            <li>Check $f$ is an one-to-one function. If so, proceed. If not, $f$ does not have an inverse.</li>
+            <li>Write $y = f(x)$. If there is a domain restriction, convert the domain restriction into a codomain restriction.</li>
+            <li>Solve this equation for $x$ in terms of $y$. Meaning, isolate $x$.</li>
+            <li>Interchange $x$ and $y$, including the codomain restriction into a domain restriction if there was one. The resulting equation is $y = f^{-1}(x)$.</li>
+        </ol>
+    </div>
+
+    <h4>3.1: Quadratic Functions</h4>
+
+    <div class="math-def"> <b>polynomial function</b><br>
+        A polynomial function of degree $n$ is a function of the form \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $a_n, a_{n-1}, \dots, a_1, a_0 \in \mathbb{R}$.</div>
+
+    <div class="math-def"> <b>quadratic function</b><br>
+        A quadratic function is a polynomial function of degree 2, with form \[f(x) = ax^2 + bx + c \qquad a\neq 0\]
+    </div>
+
+    <div class="math-fact"> To complete the square for $x^2 + bx$, add and subtract $\left(\dfrac{b}{2}\right)^2$.</div>
+
+    <div class="math-def"> <b>standard form, vertex</b><br>
+        A quadratic function $f(x) = ax^2 + bx + c$ can be expressed in the standard form \[f(x) = a(x - h)^2 + k\] by completing the square.
+        <br>The <b>vertex</b> of the parabola is $(h, k)$.
+    </div>
 
 </div>
 {% endblock %}

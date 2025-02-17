@@ -1,0 +1,70 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 2.8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="2.8: One-to-One Functions and Inverses"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.8"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.1: Quadratic Functions</h1>
+
+    <h2>What Are We Doing?</h2><hr>
+
+    <p>In Chapter 2 we studied functions in general.</p>
+
+    <p>Chapter 3 will dive into a specific type of function called a <b>polynomial function</b>.</p>
+
+    <div class="math-def"> <b>polynomial function</b><br>
+    A polynomial function of degree $n$ is a function of the form \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $a_n, a_{n-1}, \dots, a_1, a_0 \in \mathbb{R}$.</div>
+
+    <p>The degree tells you the highest power of $x$ that is present.</p>
+
+    <div class="math-example"> $P(x) = 3$ is a degree 0 polynomial. <br> $P(x) = 2x + 3$ is a degree 1 polynomial.</div>
+
+    <p>This section studies quadratic, or degree 2 polynomials.</p>
+
+    <h2>Quadratic Functions</h2><hr>
+
+    <div class="math-def"> <b>quadratic function</b><br>
+        A quadratic function is a polynomial function of degree 2, with form \[f(x) = ax^2 + bx + c \qquad a\neq 0\]
+    </div>
+
+    <p><b>Q:</b> How can we convert the form $ax^2 + bx + c$ into transformations from $x^2$?</p>
+
+    <p><b>A:</b> To convert $ax^2 + bx + c$ into transformations, we need a technique called completing the square.</p>
+
+    <h2>Completing the Square</h2><hr>
+
+    <div class="math-fact"> To complete the square for $x^2 + bx$, add and subtract $\left(\dfrac{b}{2}\right)^2$.</div>
+
+    <div class="math-example">
+        Complete the square for $x^2 + 4x$.
+    </div>
+
+    <p>In the fact, the coefficient of $x^2$ is $1$. If needed, you need to use GCF to factor out the coefficient of $x^2$ before completing the square.</p>
+
+    <div class="math-example">
+        Complete the square for $2x^2  + 12x$.
+    </div>
+
+    <h2>Standard Form</h2><hr>
+
+    <p>The standard form of $ax^2 + bx + c$ is just completing the square, putting it into transformation form.</p>
+
+    <div class="math-def"> <b>standard form, vertex</b><br>
+        A quadratic function $f(x) = ax^2 + bx + c$ can be expressed in the standard form \[f(x) = a(x - h)^2 + k\] by completing the square.
+        <br>The <b>vertex</b> of the parabola is $(h, k)$.
+    </div>
+
+    <div class="math-example"> Suppose $f(x) = 2x^2 - 12x + 13$. Express $f$ in standard form and sketch a rough graph.
+    </div>
+
+</div>
+{% endblock %}
