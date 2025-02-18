@@ -42,7 +42,31 @@
 
     <h2>Monomials</h2><hr>
 
-    <p>A <b>monomial</b> has the form $P(x) = x^n$. These graphs have three possible types of shapes: </p>
+    <p>A <b>monomial</b> has the form $P(x) = x^n$. These graphs have three possible types of shapes, depending on $n$:
+    </p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:2vw; grid-template-columns: 1fr 2fr 2fr;">
+            <!-- using % causes overflow when using column-gap https://css-tricks.com/introduction-fr-css-unit/-->
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <span style="margin: auto; font-size: 1.5rem; ">$n$ is even</span>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:300px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+       </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid; grid-template-columns: 1fr;">
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <img class="img-shadow" style="max-width:250px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is even</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+        </div>
+    </div>
 
     <div class="math-example"> Sketch an accurate graph of $f(x) = (x-2)^4$.</div>
 
@@ -59,6 +83,26 @@
     <p>In Calculus, you will learn the official definition.</p>
 
     <p>Moreover, there cannot be any corners or sharp corners (cusps):</p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:2vw; grid-template-columns: 1fr 1fr;">
+            <span style="margin: 0 auto; font-size: 1.5rem;">Not Graphs of Polynomials</span>
+            <span style="margin: 0 auto; font-size: 1.5rem;">Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-4.svg"/>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-5.svg"/>
+       </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid;grid-template-columns: 1fr;">
+            <span style="margin: 0 auto; font-size: 1.5rem;">Not Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-4.svg"/>
+            <span style="margin: 0 auto; font-size: 1.5rem;">Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-5.svg"/>
+       </div>
+    </div>
+
+
 
     <p>Polynomial graphs can be broken up into two main ideas: end behavior and zeros.</p>
 
