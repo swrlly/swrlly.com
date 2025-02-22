@@ -34,6 +34,7 @@
             <li><a href="#118w4">Week 4</a></li>
             <li><a href="#118w5">Week 5</a></li>
             <li><a href="#118w6">Week 6</a></li>
+            <li><a href="#118w7">Week 7</a></li>
         </ul>
     </div>
     
@@ -620,9 +621,6 @@
 
     <h4>3.1: Quadratic Functions</h4>
 
-    <div class="math-def"> <b>polynomial function</b><br>
-        A polynomial function of degree $n$ is a function of the form \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $a_n, a_{n-1}, \dots, a_1, a_0 \in \mathbb{R}$.  $n$ is an integer.</div>
-
     <div class="math-def"> <b>quadratic function</b><br>
         A quadratic function is a polynomial function of degree 2, with form \[f(x) = ax^2 + bx + c \qquad a\neq 0\]
     </div>
@@ -633,6 +631,103 @@
         A quadratic function $f(x) = ax^2 + bx + c$ can be expressed in the standard form \[f(x) = a(x - h)^2 + k\] by completing the square.
         <br>The <b>vertex</b> of the parabola is $(h, k)$.
     </div>
+
+    <h2 id="118w7">Week 7</h2><hr>
+
+    <h4>3.2: Polynomial Functions and Their Graphs</h4>
+
+    <div class="math-def"> <b>polynomial function</b><br>
+        A polynomial function of degree $n$ is a function of the form \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $n$ is an integer.
+        <ul>
+            <li>$a_n, a_{n-1}, \dots, a_1, a_0$ are called the <b>coefficients</b>.</li>
+            <li>$a_0$ is called the <b>constant coefficient</b> or <b>constant term</b>.</li>
+            <li>$a_n$ is called the <b>leading coefficient</b>.</li>
+            <li>$a_nx^n$ is called the <b>leading term</b>.</li>
+        </ul>
+    </div>
+
+    <p>Monomials $P(x) = x^n$ have the following graphs:</p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:2vw; grid-template-columns: 1fr 2fr 2fr;">
+            <!-- using % causes overflow when using column-gap https://css-tricks.com/introduction-fr-css-unit/-->
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <span style="margin: auto; font-size: 1.5rem; ">$n$ is even</span>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:300px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+       </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid; grid-template-columns: 1fr;">
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <img class="img-shadow" style="max-width:250px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is even</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+        </div>
+    </div>
+
+    <div class="math-notxt"> <b>Informal Definition: continuity</b><br>
+        A graph is continuous if you can draw it without lifting your pencil.
+    </div>
+
+    <div class="math-def"> <b>end behavior</b>
+
+        <p>The end behavior of a polynomial depends on the degree $n$ and the leading coefficient $a_n$:</p>
+
+        <img class="img-shadow" style="max-width:800px; margin-top: 1rem; padding:0;" src="/static/swrlly/images/teaching/118-3.2-10.png"/>
+    </div>
+
+    
+    <div class="math-def"> <b>zeros</b><br>
+        Suppose $P$ is a polynomial and $c$ is a real number. Then the following are equivalent:
+        <ul>
+            <li>$c$ is a zero of $P$.</li>
+            <li>$c$ is a $x$-intercept of the graph of $P$.</li>
+            <li>$x = c$ is a solution of the equation $P(x) = 0$. Meaning, $P(c) = 0$.</li>
+            <li>$(x - c)$ is a factor of $P(x)$.</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> <b>zero of multiplicity $m$</b><br>
+        $c$ is a zero of multiplicity $m$ if $(x - c)^m$ appears in the factorization of $P$.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor);">Graph Shape Near Zeros of Multiplicity $m$</b><br>
+
+        If $c$ is a zero of multiplicity $m$, then the graph shape near $c$ corresponds is as follows:
+
+        <div class="large-screen">
+            <div style="display:grid; margin: auto; padding-top:2em; max-width:800px; column-gap:2vw; grid-template-columns: 0.8fr 1fr 0.1fr 1fr;">
+                <span style="margin: auto; font-size: 1.5rem;">$n$ odd, $n \neq 1$</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-6.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-7.svg"/>
+                <span style="margin: auto; font-size: 1.5rem;">$n$ even</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-8.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-9.svg"/>
+            </div>
+        </div>   
+
+        <div class="small-screen">
+            <div style="display:grid; margin: auto; padding-top:2em; column-gap:2vw; grid-template-columns: 0.8fr 1fr 0.1fr 1fr;">
+                <span style="margin: auto; font-size: 1.5rem;">$n$ odd,<br>$n \neq 1$</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-6.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-7.svg"/>
+                <span style="margin: auto; font-size: 1.5rem;">$n$ even</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-8.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-9.svg"/>
+            </div>
+        </div>   
+    </div>
+
 
 </div>
 {% endblock %}
