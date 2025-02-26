@@ -1,0 +1,137 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 3.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="3.3: Real Zeros"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/3.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>3.5: Complex Zeros</h1>
+
+    <P>First, some notation. The symbol $\mathbb{C}$ means the set of all complex numbers, similar to $\mathbb{R}$.</P>
+
+    <h2>Motivation</h2><hr>
+
+    <p>Question: Can we factor irreducibles?</p>
+
+    <p>Answer: yes, if you involve complex numbers.</p>
+
+    <div class="math-example">
+        Factor $P(x) = x^2 + 1$ into linear factors.
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+
+            <p>$c$ is a zero if</p>
+            <ul>
+                
+                <li>$(x - c)$ is a factor of $x^2 + 1$ and</li>
+                <li>$x = c$ is a solution to $x^2 + 1 = 0$.</li>
+            </ul>
+
+            <p>Solving the equation:
+                \begin{align}
+                    x^2 + 1 &= 0\\
+                    x^2 &= -1\\
+                    \sqrt{x^2} &= \pm \sqrt{-1}\\
+                    x &= \pm i
+                \end{align}
+            </p>
+
+            <p>The solutions are $x = i$ and $x = -i$.</p>
+            <p>Therefore $x^2 + 1 = (x - i)(x - (-i)) = \boxed{(x - i)(x + i)}$</p>
+        </div>
+    </div>
+
+    <p>We just saw an irreducible $x^2 + 1$ break down into complex zeros.</p>
+
+    <p>Zeros must always exist if your resultant factors are allowed to have complex numbers (called a <b>factorization over $\mathbb{C}$</b>).</p>
+        
+    <p>This is exactly what the next theorem says:</p>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Fundamental Theorem of Algebra</b><br>
+
+        Every polynomial \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\]
+
+        with complex coefficients has at least one complex zero.
+    </div>
+
+    <p>Recall the Real Factorization Theorem:\[P(x) = (\text{linear factors}) \cdot (\text{irreducible factors})\]</p>
+
+    <p>Breaking down the irreducibles into linear factors gives you a <b>complete factorization over $\mathbb{C}$</b>: </p>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Complex Factorization Theorem</b><br>
+
+        Suppose $P(x)$ is a degree $n$ polynomial with complex coefficients. Then:
+
+        <ol>
+            <li>there exists complex numbers $a, c_1, c_2, \dots, c_n$ where \[P(x) = a(x-c_1)(x-c_2)\cdots(x-c_{n-1})(x-c_{n})\] and</li>
+            <li>$P(x)$ has exactly $n$ zeros, provided a zero of multiplicity $k$ is counted $k$ times.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Suppose $P(x) = x^3 - 3x^2 + x - 3$. 
+        <ol>
+            <li>How many zeros are there, counting multiplicity?</li>
+            <li>Find a complete factorization over $\mathbb{R}$.</li>
+            <li>Find a complete factorization over $\mathbb{C}$.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Suppose $P(x) = x^3 - 2x + 4$, and you know that $P(-2) = 0$. 
+        <ol>
+            <li>Find a complete factorization over $\mathbb{R}$.</li>
+            <li>Find a complete factorization over $\mathbb{C}$.</li>
+        </ol>
+    </div>
+
+    <p>Next example looks at multiplicity.</p>
+
+    <div class="math-example">
+        Suppose $P(x) = 3x^5 + 12x^3 + 12x$.
+        <ol>
+            <li>How many zeros are there, counting multiplicity?</li>
+            <li>Find a complete factorization over $\mathbb{R}$.</li>
+            <li>Find a complete factorization over $\mathbb{C}$.</li>
+        </ol>
+    </div>
+
+    <h2>Complex Zeros Come in Pairs</h2><hr>
+
+    <div class="math-def"> <b>complex conjugate</b><br>
+        The complex conjugate of $a + bi$ is $a - bi$.
+    </div>
+
+    <p>In other words, the imaginary part sign was flipped.</p>
+
+    <div class="math-example"> Find the complex conjugate of $-3 - 2i$.</div>
+
+    <div class="math-example"> Find the complex conjugate of $\dfrac{1 + i\sqrt{5}}{2}$.</div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Conjugate Pairs Theorem</b><br>
+
+        If $P(x)$ has real coefficients and $a + bi$ is a zero, then $a - bi$ must also be a zero.
+    </div>
+
+    <p>Why?</p>
+
+    <p>The irreducibles are the only source of complex zeros.</p>
+
+    <p>Irreducibles are quadratics with $b^2 - 4ac < 0$, so the only source of complex zeros are from the quadratic formula \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\] in particular, the $\pm \sqrt{b^2 - 4ac}$.</p>
+
+    <p>This $\pm$ creates conjugate pairs!</p>
+
+    <div class="math-example">
+        Give an example of a degree 3 polynomial with zeros $\frac{1}{2}$ and $3 - i$. Leave factored.
+    </div>
+
+</div>
+{% endblock %}
