@@ -95,12 +95,84 @@
 
     <p>Next example looks at multiplicity.</p>
 
-    <div class="math-example">
+    <div id="3.5multexample" class="math-example">
         Suppose $P(x) = 3x^5 + 12x^3 + 12x$.
         <ol>
-            <li>How many zeros are there, counting multiplicity?</li>
-            <li>Find a complete factorization over $\mathbb{R}$.</li>
-            <li>Find a complete factorization over $\mathbb{C}$.</li>
+            <li>
+                How many zeros are there, counting multiplicity?
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    The degree is five, so five zeros.
+                </div>
+            </li>
+            <li>
+                Find a complete factorization over $\mathbb{R}$.
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>We're looking for linear factors and irreducibles.</p>   
+
+                    <p>No zero was given, so let's use Chapter 1 methods. Use GCF first, pull out $3x$:</p>
+
+                    \begin{align}
+                        3x^5 + 12x^3 + 12x &= 3x (x^4 + 4x^2 + 4) && \text{GCF}
+                        \\&= 3x\bigg(\big(x^2\big)^2 + 4x^2 + 4\bigg) && \text{Rewriting to substitute $y = x^2$}
+                        \\&= 3x\bigg(y^2 + 4y + 4\bigg) && \text{Substitute $y = x^2$}
+                        \\&= 3x(y+2)^2 && \text{Factoring quadratic}
+                        \\&= 3x(x^2+2)^2 && \text{Backsubstitute } y = x^2
+                    \end{align}
+
+                    <p>Now we need to check if the quadratic $(x^2 + 2)$ is irreducible or not.</p>
+
+                    <p>We have $a = 1, b = 0, c = 2$, so 
+                        \begin{align}
+                        b^2 - 4ac &= 0^2 - 4 \cdot 1 \cdot 2 \\&= -8 \\&< 0
+                        \end{align}
+                        $x^2 + 2$ is irreducible. No zeros over $\mathbb{R}$.</p>
+
+                    <p>A complete factorization over $\mathbb{R}$ is $\boxed{P(x) = 3x(x^2+2)^2}$</p>
+
+                </div>
+            </li>
+            <li>
+                Find a complete factorization over $\mathbb{C}$.
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    <p>We know a CF over $\mathbb{C}$ just means to break down the irreducibles into linear factors from the CF over $\mathbb{R}$.</p>
+
+                    <p>From part 2, we saw $x^2 + 2$ was the only irreducible. So we need to factor it.</p>
+
+                    <p>Remember that $c$ is a zero if</p>
+                    <ul style="margin-bottom: 1rem;">
+                        
+                        <li>$(x - c)$ is a factor of $x^2 + 2$ and</li>
+                        <li>$x = c$ is a solution to $x^2 + 2 = 0$.</li>
+                    </ul>
+        
+                    <p>Solving the equation:
+                        \begin{align}
+                            x^2 + 2 &= 0\\
+                            x^2 &= -2\\
+                            \sqrt{x^2} &= \pm \sqrt{-2}\\
+                            x &= \pm i\sqrt{2}
+                        \end{align}
+                    </p>
+        
+                    <p>The solutions are $x = i\sqrt{2}$ and $x = -i\sqrt{2}$.</p>
+                    <p>Therefore $x^2 + 2 = (x - i\sqrt{2})(x - (-i\sqrt{2})) = (x - i\sqrt{2})(x + i\sqrt{2})$</p>
+
+                    <p>Now substitute into the CF over $\mathbb{R}$ and simplify:
+                        \begin{align}
+                        P(x) &= 3x(x^2 + 1)^2 
+                        \\&= 3x\bigg[(x - i\sqrt{2})(x + i\sqrt{2})\bigg]^2 && \text{Substituting}
+                        \\&= \boxed{3x(x-i\sqrt{2})^2(x+i\sqrt{2})^2} && \text{Using } (ab)^2 = a^2b^2
+                        \end{align}
+                    </p>
+
+                    <p>Notice that \[P(x) = \underbrace{3x}_{\text{multiplicity } 1} \cdot \underbrace{(x-i\sqrt{2})^2}_{\text{multiplicity } 2}\cdot \underbrace{(x+i\sqrt{2})^2}_{\text{multiplicity } 2}\]</p>
+
+                    <p>Adding up the multiplicities $1 + 2 + 2 = 5$, which is the degree of $P(x)$!</p>
+                </div>
+            </li>
         </ol>
     </div>
 

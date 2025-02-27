@@ -186,7 +186,15 @@
     <p>This tells us the structure of a complete factorization over $\mathbb{R}$:</p>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Real Factorization Theorem</b><br>
-        Suppose $P(x)$ is a polynomial with real coefficients. A complete factorization of $P(x)$ over $\mathbb{R}$ will break down into linear (degree 1) factors and irreducible quadratics.
+        <p>Suppose $P(x)$ is a polynomial with real coefficients. A complete factorization of $P(x)$ over $\mathbb{R}$ will break down into linear (degree 1) factors and irreducible quadratics.</p>
+
+        There are three possibilities:
+
+        \begin{align}
+        P(x) &= (\text{linear factors})
+        \\P(x) &= (\text{linear factors}) \cdot (\text{irreducible factors})
+        \\P(x) &= (\text{irreducible factorsf})
+        \end{align}
     </div>
 
     <div class="math-example">
@@ -195,6 +203,37 @@
 
     <div class="math-example">
         Suppose $P(x) = x^4 - 4x^3 + 5x^2 - 4x + 4$. Verify $P(2) = 0$ and find a complete factorization over $\mathbb{R}$.
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <p>First, we verify $P(2) = 0$. We have \begin{align}P(2) &= 2^4 - 4\cdot 2^3 + 5\cdot 2^2 - 4\cdot 2 + 4 
+                \\&= 16 - 32 + 20 - 8 + 4
+                \\&= -16 + 12 + 4
+                \\&= 0\end{align}
+            </p>
+            <p>So $(x - 2)$ is a factor. Long dividing:  
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.3-1.svg"/>
+
+                So $Q(x) = x^3 - 2x^2 + x - 2$.
+            </p>
+
+            <p>We have two options:
+            </p>
+
+            <ol>
+                <li>Multiplicity:  check if $x = 2$ is a factor of $x^3 - 2x^2 + x - 2$.</li>
+                <li>Chapter 1: we could just do grouping on $Q(x)$.</li>
+            </ol>
+
+            <p>Let's go with option 2. We have \begin{align}
+                Q(x) &= x^3 - 2x^2 + x - 2
+                \\&= x^2(x - 2) + (x -2) 
+                \\&= (x-2)(x^2 + 1)
+                \end{align}
+            </p>
+
+            <p>Because we saw earlier $x^2 + 1$ is irreducible, a complete factorization of $P(x)$ over $\mathbb{R}$ is $\boxed{P(x) = (x-2)^2(x^2+1)}$</p>
+        </div>
     </div>
 
     <p><a href="/teaching/math-118/lectures/3.5">Section 3.5</a> will show you the irreducibles can be factored!</p>
