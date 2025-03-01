@@ -35,6 +35,7 @@
             <li><a href="#118w5">Week 5</a></li>
             <li><a href="#118w6">Week 6</a></li>
             <li><a href="#118w7">Week 7</a></li>
+            <li><a href="#118w8">Week 8</a></li>
         </ul>
     </div>
     
@@ -728,6 +729,85 @@
         </div>   
     </div>
 
+    <h2 id="118w8">Week 8</h2><hr>
+
+    <h1>3.3: Real Zeros of Polynomials</h1>
+
+    <div class="math-def"> <b>division algorithm</b><br>
+        $P(x)$ and $D(x)$ are polynomials, with $D(x) \neq 0$. Then there exist unique polynomials $Q(x)$ and $R(x)$, where the degree of $R(x)$ is 0 or less than the degree of $P(x)$ where:
+
+        \[\dfrac{P(x)}{D(x)} = Q(x) + \dfrac{R(x)}{D(x)} \qquad \text{ or } \qquad P(x) = D(x)\cdot Q(x) + R(x)\]
+        
+        <ul>
+            <li>$P(x)$ is the <b>dividend</b> (what you are dividing)</li>
+            <li>$D(x)$ is the <b>divisor</b> (what you are dividing by)</li>
+            <li>$Q(x)$ is the <b>quotient</b></li>
+            <li>$R(x)$ is the <b>remainder</b>.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Remainder Theorem</b><br>
+        If $P(x)$ is divided by $x - c$, then the remainder is $P(c)$.
+    </div>
+
+    
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Factor Theorem</b><br>
+        $c$ is a zero of $P$ if and only if $(x-c)$ is a factor of $P(x)$.
+    </div>
+
+    <div class="math-def"> <b>Complete Factorization of $P(x)$ over $\mathbb{R}$</b><br>
+        A complete factorization of a polynomial $P(x)$ over $\mathbb{R}$ is one where the resultant factors only have real coefficients.
+    </div>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">Complete Factorization of $P(x)$ over $\mathbb{R}$</b><br>
+        For each zero $c$:
+        <ol>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Setup:</b>Convert into a factor $(x - c)$.</li>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Divide:</b> Use the division algorithm to divide $P(x) = (x - c)Q(x)$.</li>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Multiplicity:</b> Check if $c$ is a zero of $Q(x)$. If so, repeat and keep dividing $Q(x)$ until $c$ is no longer a zero. Move on to the next zero.</li>
+        </ol>
+
+        Repeat until you have a quadratic. Then try to factor using Chapter 1 techniques (<a href="/teaching/math-118/lectures/1.3#newx">"new" X method</a>, or the quadratic formula).<br>
+        Do not factor irreducibles, leave them alone. 
+        
+    </div>
+
+    <div class="math-def"> <b>irreducible</b><br>
+        An irreducible polynomial is a quadratic polynomial with no real zeros.
+    </div>
+
+    <div class="math-fact"> An irreducible's discriminant $b^2 - 4ac < 0$ due to the quadratic formula \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+        The $\sqrt{b^2 - 4ac}$ is a root of a negative number, so the zeros can't be real!
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Real Factorization Theorem</b><br>
+        <p>Suppose $P(x)$ is a polynomial with real coefficients. A complete factorization of $P(x)$ over $\mathbb{R}$ will break down into linear (degree 1) factors and irreducible quadratics.</p>
+
+        There are three possibilities:
+
+        \begin{align}
+        P(x) &= (\text{linear factors})
+        \\P(x) &= (\text{linear factors}) \cdot (\text{irreducible factors})
+        \\P(x) &= (\text{irreducible factors})
+        \end{align}
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Fundamental Theorem of Algebra</b><br>
+
+        Every polynomial \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\]
+
+        with complex coefficients has at least one complex zero.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Complex Factorization Theorem</b><br>
+
+        Suppose $P(x)$ is a degree $n$ polynomial with complex coefficients. Then:
+
+        <ol>
+            <li>there exists complex numbers $a, c_1, c_2, \dots, c_n$ where \[P(x) = a(x-c_1)(x-c_2)\cdots(x-c_{n-1})(x-c_{n})\] and</li>
+            <li>$P(x)$ has exactly $n$ zeros, provided a zero of multiplicity $k$ is counted $k$ times.</li>
+        </ol>
+    </div>
 
 </div>
 {% endblock %}
