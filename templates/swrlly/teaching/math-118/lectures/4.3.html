@@ -1,0 +1,142 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 4.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.3: Logarithmic Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/4.3"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>4.3: Logarithmic Functions</h1>
+
+    <p>This section studies the <a href="/teaching/math-118/lectures/2.8">inverse</a> of $f(x) = a^x$.</p>
+
+    <p>Recall the graph of $a^x$:</p>
+
+    <div class="math-fact">
+        The exponential function $f(x) = a^x$ has two possible graph shapes:
+
+        <div class="large-screen">
+            <div style="margin-top:1em; display:grid; column-gap:2vw; grid-template-columns: 1fr 1fr;">
+                <span style="margin: 0 auto; font-size: 1.5rem;">$a > 1$</span>
+                <span style="margin: 0 auto; font-size: 1.5rem;">$0 < a < 1$</span>
+                <img class="img-shadow" style="max-width: 300px;" src="/static/swrlly/images/teaching/118-4.1-1.svg"/>
+                <img class="img-shadow" style="max-width: 300px;" src="/static/swrlly/images/teaching/118-4.1-2.svg"/>
+           </div>
+        </div>
+
+        <div class="small-screen">
+            <div style="margin-top:1em; display:grid; column-gap:4vw; grid-template-columns: 1fr 1fr;">
+                <span style="margin: 0 auto; font-size: 1.5rem;">$a > 1$</span>
+                <span style="margin: 0 auto; font-size: 1.5rem;">$0 < a < 1$</span>
+                <img class="img-shadow" style="max-width: 300px;" src="/static/swrlly/images/teaching/118-4.1-1.svg"/>
+                <img class="img-shadow" style="max-width: 300px;" src="/static/swrlly/images/teaching/118-4.1-2.svg"/>
+           </div>
+        </div>
+
+    </div>
+
+    <p>$a^x$ is one-to-one because it passes the horizontal line test.</p>
+
+    <p>An inverse of $a^x$ must exist! We call it the <b>logarithm</b>. </p>
+
+    <h2>Logarithmic Functions</h2><hr>
+
+    <div class="math-def"> <b>logarithmic function</b><br>
+        Suppose $a > 0, a \neq 1$. The logarithmic function with base $a$ is defined by \[\log_a x = y \qquad \text{means} \qquad a^y = x\]
+    </div>
+
+    <p>Both equations have names: \[\underbrace{\log_a x = y}_{\Large\text{logarithmic form}} \qquad \qquad \underbrace{a^y = x}_{\Large{\text{exponential form}}}\]</p>
+
+    <div class="math-beware"> Writing $\log_a x$ means you are plugging in $x$ into $\log_a$.<br>You can use parentheses for readability: $\log_a(x)$ </div>
+
+    <p>To find logs, convert to exponential form and find what power $a$ needs to be taken to in order to get $x$.</p>
+
+    <div class="math-example">
+        Evaluate the following:
+        <ol>
+            <li>$\log_28 $</li>
+            <li>$\log_{10}100$</li>
+            <li>$\log_{16}4$</li>
+            <li>$\log_2\left(\frac{1}{2}\right)$</li>
+        </ol>
+    </div>
+
+    <p>Few useful facts for logarithms:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor);">Properties of Logarithms</b>
+        <ol>
+            <li>$\log_a 1 = 0$</li>
+            <li>$\log_a a = 1$</li>
+            <li>$\log_a a^x = x$</li>
+            <li>$a^{\log_a x} = x$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Evaluate the following:
+        <ol>
+            <li>$\log_51 $</li>
+            <li>$\log_{5}5$</li>
+            <li>$\log_{4}4^8$</li>
+            <li>$6^{\log_6 12}$</li>
+        </ol>
+    </div>
+
+    <p>Here are two logarithms which will be extensively used.</p>
+
+    <div class="math-def"> <b>common logarithm</b><br>
+    Base 10 logarithm, the base is omitted: \[\log x = \log_{10} x\]
+    </div>
+
+    <div class="math-def"> <b>natural logarithm</b><br>
+        Base $e$ logarithm, denoted by $\ln$: \[\ln x = \log_{e} x\]
+    </div>
+
+    <p>We can rewrite the properties of logarithms for the natural logarithm:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor);">Properties of Natural Logarithms</b>
+        <ol>
+            <li>$\ln 1 = 0$</li>
+            <li>$\ln e = 1$</li>
+            <li>$\ln e^x = x$</li>
+            <li>$e^{\ln x} = x$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Evaluate:
+        <ol>
+            <li>$\ln e^8$</li>
+            <li>$\ln \left(\frac{1}{e^2}\right)$</li>
+        </ol>
+    </div>
+
+    <h2>Logarithmic Graphs</h2><hr>
+
+    <p>Let's inspect what the graph looks like.</p>
+
+    <div class="math-fact">
+        The function $f(x) = \log_a x$ has the general shape
+        <img class="img-shadow" style="max-width: 500px;" src="/static/swrlly/images/teaching/118-4.3-1.svg"/>
+        In general:
+
+        <ul>
+            <li>Domain: $(0, \infty)$</li>
+            <li>Codomain (range): $\mathbb{R}$</li>
+            <li>Asymptotes: $x = 0$</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> Sketch a graph of $f(x) = 1 + \log_{10}(x - 3)$. </div>
+
+
+
+</div>
+{% endblock %}

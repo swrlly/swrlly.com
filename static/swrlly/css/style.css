@@ -778,19 +778,31 @@ a:hover {
   }
 
 #toc_container {
-background: none repeat scroll 0 0;
-border: 1px solid #aaa;
-border-radius:10%;
-display: table;
-font-size: 95%;
-margin-bottom: 1em;
-padding: 20px;
-max-width: 200px;
+    border-radius: 20px; 
+    background: linear-gradient(145deg, #000, #121212);
+    box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;
+    border: 4px solid #1a1a1a;
+    transition: all 0.15s ease;
+    display: table;
+    padding:1rem;
+
+    font-size: 95%;
+    margin-bottom: 1em;
+}
+
+.toc_list {
+    list-style-type: none;
+    padding-left:0.5rem;
 }
 
 .toc_title {
     font-weight: 700;
     text-align: center;
+}
+
+.toc_ol {
+    list-style-type: none;
+    padding-left:0.75rem;
 }
 
 
