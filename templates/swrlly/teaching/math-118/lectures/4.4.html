@@ -1,0 +1,53 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 4.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="4.4: Laws of Logarithms"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/4.4"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+
+    <h1>4.4: Laws of Logarithms</h1>
+
+    <h2>Motivation</h2><hr>
+
+    <p>Logarithms are exponents.</p>
+    <p>The three exponent laws \[x^A \cdot x^B = x^{A + B} \qquad \qquad \dfrac{x^A}{x^B} = x^{A-B} \qquad \qquad (x^A)^C = a^{A\cdot C} \] have corresponding forms in logarithms.</p>
+
+    <h2>Laws of Logarithms</h2><hr>
+
+    <div class="math-fact"> <b style="color: var(--factcolor)">Laws of Logarithms</b><br>
+        Let $a > 0, a \neq 1$ and $A,B,C \in \mathbb{R}$ where $A > 0$ and $B > 0$.
+
+        <ol>
+            <li class="lec-list-space">$\log_a(AB) = \log_a A + \log_a B$</li>
+            <li class="lec-list-space">$\log_a\left(\dfrac{A}{B}\right) = \log_a A - \log_a B$</li>
+            <li class="lec-list-space">$\log_a(A^C) = C\cdot\log_a A$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Evaluate each expression using Laws of Logarithms.
+        <ol>
+            <li class="lec-list-space">$\log_8 16 + \log_8 4$</li>
+            <li class="lec-list-space">$\log_2 56 - \log_2 7$</li>
+            <li class="lec-list-space">$-\dfrac{2}{3}\ln\left(\dfrac{1}{e^3}\right)$</li>
+        </ol>
+    </div>
+
+    <p>These laws are used in Calculus. For example:</p>
+
+    <div class="math-example"> Expand the expression $\ln\big(x(x-1)\big)^{x^2 - 1}.$</div>
+
+    <p>Combining logarithms means to convert terms into one logarithm.</p>
+
+    <div class="math-example"> Combine the expression $3\ln (x-1) + \dfrac{1}{2}\ln(x + 1) - 3\ln(x^2 + 1).$</div>
+
+</div>
+{% endblock %}
