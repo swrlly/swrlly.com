@@ -81,12 +81,12 @@
     <p>The last example shows us a fundamental law:
     </p>
 
-    <p>Using the word "term" or "factor" requires you to  <b>specify the context</b>, or the environment in which an entity is a term/factor.</p>
+    <p>Using the word "term" or "factor" requires you to  <b>specify the context</b>, or the environment in which an entity is a term/factor. Otherwise it is ambiguous!</p>
 
     <div class="math-def">
         <b>Global context, local context</b><br>
         <b>Global context</b> refers to the context of the entire expression.<br>
-        <b>Local context</b> refers to a context smaller than the entire expression.
+        <b>Local context</b> refers to a context smaller than the entire expression (when you zoom in).
     </div>
 
     <p>Two important facts:</p>
@@ -110,15 +110,15 @@
             </thead>
             <tbody>
             <tr>
-                <td>L1 (global)</td>
+                <td>Global (L1)</td>
                 <td>$\underbrace{(x-2)(x+4)}_{\text{term}} + \underbrace{3}_{\text{term}}$</td>
             </tr>
             <tr>
-                <td>L2 (local)</td>
+                <td>Local (L2)</td>
                 <td>$\underbrace{(x-2)}_{\text{factor}}\underbrace{(x+4)}_{\text{factor}} + 3$</td>
             </tr>
             <tr>
-                <td>L3 (local)</td>
+                <td>Local (L3)</td>
                 <td>$(\underbrace{x}_{\text{term}}-\underbrace{2}_{\text{term}})(\underbrace{x}_{\text{term}}+\underbrace{4}_{\text{term}}) + 3$</td>
             </tr>
             </tbody>
@@ -129,14 +129,16 @@
 
     <p>In practice, you only need to differentiate between <b>global</b> and <b>local</b> context.</p>
 
-    <h2>Terms Take Priority Over Factors</h2><hr>
+    <h2>Term Context Before Factor Context</h2><hr>
 
-    <p>In the previous example, the global context had terms. Why not factors first?</p>
+    <p>In the previous example, the global context had terms. Why doesn't the global context have factors first?</p>
 
     <div class="math-example">
         Consider the expression $2 \cdot 3 + 5$. When using PEMDAS, we do \[2 \cdot 3 + 5 = 6 + 5 = 11\]
-        Because factors (multiplication) disappears before terms (addition), terms always takes priority in structure. The addition structure (terms) stays until the end of the calculation!
+        Because factors (multiplication) disappears before terms (addition), the term structure stays longer than the multiplication structure!
     </div>
+
+
 
     <div class="math-example">
         In the expression \[(2x+3)(2x-3) - (x+2)4\] is $(2x-3)$ a global or a local factor?
@@ -145,6 +147,20 @@
            $(2x + 3)(2x - 3)$ and $(x + 2)4$ are global terms.<br>Zooming into the term $(2x + 3)(2x - 3)$, we can now say $(2x - 3)$ is a factor.<br>
            Therefore $(2x - 3)$ is a local factor.
         </div>
+    </div>
+
+    <div class="math-example">
+        Create a mathematical expression with two global terms, where each global term contains three local factors.
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            With two global terms, we know our global structure needs to look like \[\square + \square\]
+            Then in each term, there needs to be two multiplications: \[\square \cdot \square \cdot \square + \square \cdot \square \cdot \square\]
+            Now fill in the squares with factors, for example:
+
+        \[3 \cdot (x-1) \cdot (2x-4) + 4 \cdot x \cdot (y-3)\]
+
+        </div>
+
     </div>
 
     <h2>Dealing With Fractions</h2><hr>
@@ -173,7 +189,16 @@
         </ol>
     </div>
 
-    <p>Most mistakes come from failing to identify terms/factors and their context level.</p>
+    <h2>Why Should I Care? This is Obvious...</h2><hr>
+
+    <p>Most algebraic mistakes result from failing to identify terms/factors and their context level.</p>
+
+    <p>Identifying terms/factors and their context levels helps you understand:
+        <ul>
+            <li>What mathematical laws are <b>actually</b> saying</li>
+            <li>How a complicated expression is built out of terms and factors.</li>
+        </ul>
+    </p>
 
     <p><a href="/teaching/math-118/lectures/1.1">Let's see why in the next section!</a></p>
 
