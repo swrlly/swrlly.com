@@ -1,12 +1,13 @@
 :root {
     --text-color: #C9D1D9;
     --background-col: rgb(0, 0, 0);
-    --website-width:1200px;
+    --website-width:1000px;
 }
 
 .container {
     max-width: var(--website-width);
     margin: 0 auto;
+    text-align: justify;
 }
 
 .smallcontainer {
@@ -33,7 +34,7 @@ html {
     --quiz-event-color: rgb(143, 59, 172);
     --lecl-event-color: #0d3276;
     --quizl-event-color: rgb(69, 10, 88);
-    --fade-in-time: 0.2s;
+    --fade-in-time: 0.35s;
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
@@ -129,12 +130,12 @@ a:hover {
        Just because a vendor prefix is there, doesn't mean it will
        work in a browser made by that vendor either, it's just for
        future-proofing purposes I guess. */
-    -o-transition:.4s;
-    -ms-transition:.4s;
-    -moz-transition:.4s;
-    -webkit-transition:.4s;
+    -o-transition: var(--fade-in-time);
+    -ms-transition:var(--fade-in-time);
+    -moz-transition:var(--fade-in-time);
+    -webkit-transition:var(--fade-in-time);
     /* ...and now for the proper property */
-    transition:.4s;
+    transition:var(--fade-in-time);
 }
 
 .fa-brands {
@@ -154,24 +155,77 @@ a:hover {
 }
 
 .fade-in-text {
-    animation: fadeIn linear var(--fade-in-time);
-    -webkit-animation: fadeIn linear var(--fade-in-time);
-    -moz-animation: fadeIn linear var(--fade-in-time);
-    -o-animation: fadeIn linear var(--fade-in-time);
-    -ms-animation: fadeIn linear var(--fade-in-time);
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: fadeIn linear var(--fade-in-time) forwards;
+    -webkit-animation: fadeIn linear var(--fade-in-time) forwards;
+    -moz-animation: fadeIn linear var(--fade-in-time) forwards;
+    -o-animation: fadeIn linear var(--fade-in-time) forwards;
+    -ms-animation: fadeIn linear var(--fade-in-time) forwards;
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .fade-in-text-short {
-    animation: fadeIn linear 0.5s;
-    -webkit-animation: fadeIn linear 0.5s;
-    -moz-animation: fadeIn linear 0.5s;
-    -o-animation: fadeIn linear 0.5s;
-    -ms-animation: fadeIn linear 0.5s;
+
+    animation: fadeIn linear 0.5s forwards;
+    -webkit-animation: fadeIn linear 0.5s forwards;
+    -moz-animation: fadeIn linear 0.5s forwards;
+    -o-animation: fadeIn linear 0.5s forwards;
+    -ms-animation: fadeIn linear 0.5s forwards;
+}
+
+#second {
+    animation-delay: 0.15s;
+}
+
+#third {
+    animation-delay: 0.3s;
+}
+
+#fourth {
+    animation-delay: 0.45s;
+}
+
+#fifth {
+    animation-delay: 0.6s;
+}
+
+#sixth {
+    animation-delay: 0.75s;
+}
+
+#seventh {
+    animation-delay: 0.9s;
+}
+
+#eighth {
+    animation-delay: 1.05s;
+}
+
+#ninth {
+    animation-delay: 1.2s;
+}
+
+#tenth {
+    animation-delay: 1.35s;
+}
+
+#eleventh {
+    animation-delay: 1.5s;
+}
+
+#twelvth {
+    animation-delay: 1.65s;
 }
 
 .navbar-toggler {
@@ -260,7 +314,7 @@ a:hover {
 
 .text-padding {
     /*padding: 20px !important;*/
-    padding-top: 100px;
+    padding-top: 50px;
     padding-right:20px;
     padding-left:20px;
     padding-bottom:20px;
@@ -298,6 +352,7 @@ a:hover {
     display: flex;
     max-width: 30%;
     min-width: 300px;
+    border-radius: 3px;
 }
 
 .music-landing-page-container {
@@ -313,11 +368,16 @@ a:hover {
 }
 
 .music-landing-page-icon-styling {
-    font-size: 40px;
-    padding-left: 12px;
+    font-size: 60px;
+    margin: 0 auto;
     font-family: "Font Awesome 6 Brands";
-    display: inline-block;
-    width: 40px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.music-landing-page-icon-styling:hover {
+    transform: scale(1.06);
 }
 
 .music-landing-page-one-row {
@@ -348,7 +408,7 @@ a:hover {
 .teachingicons {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    column-gap: 5vw;
+    column-gap: 3vw;
     row-gap: 4vh;
     margin: 0 auto;
 }
@@ -361,15 +421,69 @@ a:hover {
     transition: all 0.15s ease;
 }
 
+.musicicons {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.5vw;
+    row-gap: 4vh;
+    margin: 0 auto;
+}
+
+.bg-image {
+    height: inherit;
+}
+
+.music-service-icons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 3vw;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 500px;
+}
+ 
+.music-landing-page-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.page-title {
+    font-size: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .music-service-icons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1.5vw;
+    row-gap: 4vh;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 500px;
+    }
+
+    .music-landing-page-grid {
+        display: inherit;
+    }
+}
+
 @media screen and (max-width: 800px) {
 
     .teachingicons {
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        column-gap: 5vw;
+        column-gap: 3vw;
         row-gap: 4vh;
         margin: 0 auto;
     }
+
+    .musicicons {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3vw;
+        row-gap: 4vh;
+        margin: 0 auto;
+    }  
 
     .teachingicon {
         border-radius: 15px; 

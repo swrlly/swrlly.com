@@ -21,7 +21,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <!--<script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>-->
         <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
         <script>
@@ -64,7 +63,7 @@
 
         <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
 
-        <nav class="navbar fade-in-text-short navbar-expand bg-transparent">
+        <nav class="navbar navbar-expand bg-transparent">
             <div class="container">
 
                 <div id="navbarLinks">
@@ -89,15 +88,18 @@
                 </div>
             </div>
         </nav>     
+
         {% block content %}
         <div class="container fade-in-text text-padding">
-            <h1>Teaching</h1>
-            <p>Welcome! Here you can find class materials for classes I've taught before.</p>
 
-            <p><b>Note</b> The icon order has been reversed! MATH 118 is now the first icon.</p>
+            <p style="font-size: 5rem;">Teaching</p>
+            <p>Welcome! Here you can find class materials for classes I've taught at universities before.</p>
+
+            <h1>Cal Poly</h1><hr>
+
             <div class="padding-top teachingicons">
 
-                <div class="iconcontainer">
+                <div id="second" class="fade-in-text iconcontainer">
                     <a href="teaching/math-118">
                         <img class="teachingicon" src="/static/swrlly/images/teaching/lecture-card-texture.png"></img>
                         <div class="center-text-over-image">\(f(x)\)</div>
@@ -105,7 +107,7 @@
                     <div class="bottomicontext">Math 118</div>
                 </div>
 
-                <div class="iconcontainer">
+                <div id="third" class="fade-in-text iconcontainer">
                     <a href="teaching/math-119">
                         <img class="teachingicon" src="/static/swrlly/images/teaching/lecture-card-texture.png"></img>
                         <div class="center-text-over-image">\(\sin(x)\)</div>
@@ -113,7 +115,7 @@
                     <div class="bottomicontext">Math 119</div>
                 </div>
 
-                <div class="iconcontainer">
+                <div id="fourth" class="fade-in-text iconcontainer">
                     <a href="teaching/math-141">
                         <img class="teachingicon" src="/static/swrlly/images/teaching/lecture-card-texture.png"></img>
                         <div class="center-text-over-image">\(\dfrac{d}{dx}\)</div>
@@ -121,7 +123,7 @@
                     <div class="bottomicontext">Math 141</div>
                 </div>
 
-                <div class="iconcontainer">
+                <div id="fifth" class="fade-in-text iconcontainer">
                     <a href="teaching/math-161">
                         <img class="teachingicon" src="/static/swrlly/images/teaching/lecture-card-texture.png"></img>
                         <div class="center-text-over-image">\(\dfrac{d}{dx}\)</div>
@@ -129,7 +131,7 @@
                     <div class="bottomicontext">Math 161</div>
                 </div>
 
-                <div class="iconcontainer">
+                <div id="sixth" class="fade-in-text iconcontainer">
                     <a href="teaching/math-221">
                         <img class="teachingicon" src="/static/swrlly/images/teaching/lecture-card-texture.png"></img>
                         <div class="large-center-text-over-image">\(\int\)</div>

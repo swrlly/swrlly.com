@@ -35,8 +35,8 @@
         </div>
 
         <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
-
-        <nav class="navbar fade-in-text-short navbar-expand bg-transparent">
+        
+        <nav class="navbar navbar-expand bg-transparent">
             <div class="container">
 
                 <div id="navbarLinks">
@@ -63,6 +63,7 @@
             </div>
         </nav>      
 
+        {% block content %}
         <div class = "container">
 
             <div class = "parent d-flex justify-content-center align-items-center">
@@ -85,6 +86,8 @@
                 </h2>
             </div>
         </div>
+
+        {% endblock %}
 
     </body>
 
