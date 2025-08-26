@@ -34,6 +34,9 @@ html {
     --quiz-event-color: rgb(143, 59, 172);
     --lecl-event-color: #0d3276;
     --quizl-event-color: rgb(69, 10, 88);
+
+    --blog-date-color: #9299a0;
+
     --fade-in-time: 0.35s;
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
@@ -447,53 +450,6 @@ a:hover {
     grid-template-columns: 50% 50%;
 }
 
-.page-title {
-    font-size: 5rem;
-}
-
-@media screen and (max-width: 600px) {
-    .music-service-icons {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1.5vw;
-    row-gap: 4vh;
-    margin: 0 auto;
-    align-items: center;
-    max-width: 500px;
-    }
-
-    .music-landing-page-grid {
-        display: inherit;
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-    .teachingicons {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        column-gap: 3vw;
-        row-gap: 4vh;
-        margin: 0 auto;
-    }
-
-    .musicicons {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 3vw;
-        row-gap: 4vh;
-        margin: 0 auto;
-    }  
-
-    .teachingicon {
-        border-radius: 15px; 
-        background: linear-gradient(145deg, #000, #1a1a1a);
-        box-shadow: inset 5px 5px 10px #000, inset -5px -5px 10px #000;
-        border: 2px solid #1f1f1f;
-        transition: all 0.15s ease;
-    }
-
-}
 
 .teachingicon:hover {
     transform: scale(1.08);
@@ -919,6 +875,156 @@ a:hover {
     padding-left:0.75rem;
 }
 
+/*#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}*/
+
+.blog-h2 {
+    padding-top: 2em;
+    color: rgb(142, 181, 227);
+}
+
+.blog-date, .blog-time-last-edited {
+    color: var(--blog-date-color);
+    padding-bottom: 2vh;
+    font-size: 80%
+}
+
+.blog-date-icon {
+    stroke-width:1;
+    width: 1.5rem;
+}
+
+.blog-title {
+    text-align: start;
+}
+
+.blog-subtitle {
+    text-align: start;
+    color: var(--blog-date-color);
+}
+
+.blog-blockquote {
+  border-left: solid 4px;
+  padding: 20px 30px 20px 30px;
+  border-color: var(--lavender);
+  box-shadow: 3px 3px 10px 0 rgb(55, 55, 55);
+}
+
+.blog-2-quote {
+    display: grid; 
+    grid-template-columns: 1.5fr 1fr; 
+    column-gap: 2vw;
+}
+
+
+
+
+
+
+.page-title {
+    font-size: 5rem;
+    padding-bottom: 3rem;
+}
+
+.blog-article {
+    display:grid; 
+    grid-template-columns: 4fr 1fr; 
+    border: 2px solid #111;
+    column-gap: 4vw;
+    padding: 30px 30px 30px 30px;   
+    border-radius: 15px;
+    background: #0f0f0f;
+    /*box-shadow: inset 20px 20px 60px #0b0b0b, inset -20px -20px 60px #1f1f1f;*/
+    text-align: left;
+}
+
+.no-link-style:hover {
+    color: var(--text-color);
+}
+
+.blog-article-title {
+    font-size: 130%;
+    text-align: left;
+}
+
+.blog-article-date {
+    color: var(--blog-date-color);
+    font-size: 80%;
+}
+
+.blog-year-header {
+    font-size: 100%;
+    color: var(--text-color);
+}
+
+.blog-article-picture {
+    display: flex;
+    padding: 5px 5px 5px 5px; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: black;
+    box-shadow: inset 20px 20px 60px #000, inset -20px -20px 60px #1a1919;
+    font-size: 90%;
+}
+
+
+@media screen and (max-width: 600px) {
+        .music-service-icons {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1.5vw;
+        row-gap: 4vh;
+        margin: 0 auto;
+        align-items: center;
+        max-width: 500px;
+    }
+
+    .music-landing-page-grid {
+        display: inherit;
+    }
+
+    .blog-2-quote {
+        display: inherit;
+    }
+
+    .blog-article-title {
+        font-size: 100%
+    }
+
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    .teachingicons {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 3vw;
+        row-gap: 4vh;
+        margin: 0 auto;
+    }
+
+    .musicicons {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3vw;
+        row-gap: 4vh;
+        margin: 0 auto;
+    }  
+
+    .teachingicon {
+        border-radius: 15px; 
+        background: linear-gradient(145deg, #000, #1a1a1a);
+        box-shadow: inset 5px 5px 10px #000, inset -5px -5px 10px #000;
+        border: 2px solid #1f1f1f;
+        transition: all 0.15s ease;
+    }
+
+}
+
 
 @media only screen and (max-width: 800px) {
     .large-screen {display: none;}
@@ -927,7 +1033,3 @@ a:hover {
 @media only screen and (min-width: 800px) {
     .small-screen {display: none;}
 }
-
-/*#toc_container li, #toc_container ul, #toc_container ul li{
-    list-style: outside none none !important;
-}*/

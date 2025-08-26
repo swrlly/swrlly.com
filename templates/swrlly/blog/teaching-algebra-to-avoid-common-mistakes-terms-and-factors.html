@@ -1,0 +1,462 @@
+{% extends "swrlly/blog.html" %}
+
+{% block title %}
+<title>Teaching Algebra To Avoid Common Mistakes: Terms and Factors</title>
+{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="blog"/>
+<meta name = "theme-color" content="#b39af0"/>
+<meta property="og:description" content="Teaching Algebra To Avoid Common Mistakes: Terms and Factors"/>
+<meta property="og:url" content="https://swrlly.com/blog/teaching-algebra-to-avoid-common-mistakes-terms-and-factors"/>
+<meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png"/>
+{% endblock %}
+
+{% block extraimports %}
+<script async src="/static/swrlly/js/teaching.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class = "container fade-in-text text-padding">
+
+    <h1 class="blog-title">Teaching Algebra To Avoid Common Mistakes: Terms And Factors</h1>
+    <div class="blog-subtitle">Using term/factor context analysis to engender greater algebraic understanding.</div>
+    <div class="blog-date">
+        <svg xmlns="http://www.w3.org/2000/svg" class="blog-date-icon" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"></path>
+            <path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"></path>
+            <circle cx="18" cy="18" r="4"></circle>
+            <path d="M15 3v4"></path>
+            <path d="M7 3v4"></path>
+            <path d="M3 11h16"></path>
+            <path d="M18 16.496V18l1 1"></path>
+        </svg>
+        <time>August 26, 2025<time>
+     </div>
+
+    <p>I've taught Calculus for two years and Precalculus for four years at Cal Poly San Luis Obispo as a lecturer. One recurring issue I've noticed that comes up every quarter is making common mistakes and misunderstanding basic algebra manipulations. If you've taught Calculus, Precalculus, or high school math for a while you'll be familiar with these mistakes as well. They are frustrating!
+    </p>
+
+    <p>In this blog post I will outline a new pedagogical approach (based on terms/factors) to teaching algebra which allows students to not only understand why mistakes are actually mistakes, but also be able to better deal with Calculus level algebraic problems. I developed this approach after one year of diligently studying student assignments and exams to understand why students kept making common errors. Here's how this blog post is organized:</p>
+        <ol>
+            <li>First, I'll present a few examples of algebraic mistakes I've seen in my classroom.</li>
+            <li>Then, I'll introduce the new approach to terms/factors.</li>
+            <li style="margin-bottom: 1rem;">Finally, we will use this new pedagogical approach to introduce new math laws and analyze/prevent common mistakes.</li>
+        </ol>
+
+    <p>I've used this approach in my own classrooms to a great degree of success; many students have told me this approach really helped them understand algebra:</p>
+
+    <div class="blog-2-quote">
+        <blockquote id="third" class="fade-in-text blog-blockquote">
+            <div>
+                "I really enjoyed learning about terms/factors in the beginning of the quarter because I have taken precalc/calc before and had never been taught about factors/terms. It really set a foundation for the rest of the quarter and that helped solve more difficult problems as we continued through the quarter!"
+            </div>
+            <div style="margin-top:1vh; color:var(--blog-date-color); font-size: 80%;"><i>Math 118: Precalculus (Winter 2025)</i></div>
+        </blockquote>
+
+        <blockquote id="fifth" class="fade-in-text blog-blockquote">
+            <div>
+                "One new concept/strategy I learned was thoroughly understanding global and local terms/factors. Once this concept was solidified it made everything sooooo much easier!"
+            </div>
+            <div style="margin-top:1vh; color:var(--blog-date-color); font-size: 80%;"><i>Math 118: Precalculus (Winter 2025)</i></div>
+        </blockquote>
+    </div>
+
+    <p>Let's begin!</p>
+
+    <h2 class="blog-h2">A Few Common Mistakes</h2><hr>
+
+    <!--<p>This post isn't going to address the importance of problem repetition until concept mastery. That's definitely important but out of the scope of this post!</p>-->
+
+    <p>As a mathematics educator, algebraic manipulations seem to be second nature to us. We know exactly how to manipulate or simplify an expression quickly. But this isn't the case for a non-trivial number of students: some may feel overwhelmed by all the rules (distributive law, factoring, etc.) they need to memorize and have to use correctly.</p>
+
+    <p>Take for example this fraction cancellation problem:</p>
+
+    <div class="math-example"> 
+        Simplify \[\dfrac{3(x-1) + 4}{(x-1)(x-2)}\]
+        <p>A common mistake is seeing the factor of $(x-1)$ and deciding to cancel: \[\dfrac{3(x-1) + 4}{(x-1)(x-2)} = \dfrac{3\cancel{(x-1)} + 4}{\cancel{(x-1)}(x-2)} = \dfrac{3 + 4}{x-2} = \boxed{\dfrac{7}{x - 2}}\]</p>
+    </div>
+
+    <p>Students may believe this manipulation is allowed because the cancellation rule is usually taught as "cancel common factors:"</p>
+
+    <div class="math-fact"> $\dfrac{ac}{bc} = \dfrac{a}{b}$ where $c$ is a common factor.
+    </div>
+
+    <p>In our problem, $(x - 1)$ is a factor, so the law seems to apply! But we know it does not because there is a term in the numerator.</p>
+
+    <p>Here is another (very) common mistake by distributing powers to terms:</p>
+
+    <div class="math-example"> Expand: $(x + 3)^2$
+        <p>A common mistake is distributing the power of $2$ to $x$ and $3$: \[(x+3)^2 = x^2 + 3^2 = \boxed{x^2 + 9}\]</p>
+    </div>
+
+    <p>Another common mistake:</p>
+    
+    <div class="math-example"> Solve: $x(x-4) = 5$
+        <p>
+            A student may incorrectly use the zero product property:
+            \begin{align*}
+            x(x-&4) = 5 \\
+            x = 5 \qquad & \qquad x-4 = 5\\
+            \boxed{x = 5} \qquad & \qquad \boxed{x = 9}
+            \end{align*}
+        </p>
+    </div>
+
+    <p>And one more, this time misusing the distributive property with negatives:</p>
+
+    <div class="math-example"> Expand: $x + 2 - 3(x - 4)$
+        <p>A common mistake is distibuting only the $3$ instead of $-3$:
+            \[x + 2 - 3(x - 4) = x + 2 - 3x - 12 = \boxed{-2x - 10}\]
+        </p>
+    </div>
+
+    <p>There are many more common mistakes; you can visit <a href="https://www.hoffmath.com/2022/07/commonmistakes.html">Rebecca's blog</a> to get a more exhaustive list.</p>
+
+    <p>I argue that all of these mistakes stem from one conceptual misunderstanding: not identifying terms/factors in a given problem and how math laws/rules are not introduced with respect to terms/factors. Oftentimes as educators, we introduce a list of laws, such as the Laws of Exponents, and use them in a variety of problems to show students how to use them. But by doing so, we are not teaching them what the laws are actually describing and we allow for misinterpretation on the student's end. Let's see how we can eliminate these common mistakes by focusing on terms and factors.</p>
+
+    <h2 class="blog-h2">Method: Terms and Factors and Their Context</h2><hr>
+
+    <p>Terms and factors are usually introduced as "expressions separated by addition and multiplication, respectively." After a few examples distinguishing terms and factors, that's usually the end of discussion about them. In my view, we are not doing justice to the power of terms and factors. Doing so causes many common mistakes and incapacitates the ability of a student to analyze complex algebraic expressions. For example, here's one structure of a complicated algebraic expression that appears in Calculus (product rule), such as \[3(x-2)^2(2x-1)2 - 3(x-2)(2x-1)^2\] Expressions like these are better understood by breaking it up into building blocks of terms/factors.</p>
+        
+    <p>Here's what I've done in my classrooms, usually at the beginning of the semester/quarter of a Precalculus course. I'll be roughly following my <a href="/teaching/math-118/lectures/1.0">first lecture in Precalculus</a> as a guide. For the rest of this post, I'll outline the new pedagogical approach to terms/factors and use it to analyze and prevent situations with common mistakes.</p>
+
+    <h3>Terms and Factors</h3>
+
+    <p>First, we will show terms/factors are building blocks and how to analyze them. I first introduce terms/factors as an entity.</p>
+
+    <div class="math-def"> <b>Term, Factor</b> <br>
+        <b>Terms</b> are entities separated by subtraction and addition.<br/>
+        <b>Factors</b> are entities separated by multiplication.
+    </div>
+
+    <p>I go through a few examples, discovering along the way a few key insights:
+        <ul>
+            <li>Standalone entities are both terms and factors.</li>
+            <li>Grouping terms with parentheses creates a factor.</li>
+            <li>the words "term" and "factor" are actually ambiguous; you need to define the <b>context</b>, or environment in which it is a factor or a term.</li>
+        </ul>
+
+        <div class="math-example">
+        For each entity, identify if they are comprised of terms or factors.
+        <ul>
+            <li class="lec-list-space">
+                $x$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    $x$ is <b>both</b> a term and a factor.<br>
+                    It's a term because $x = x + 0$ and it's a factor because $x = x \cdot 1$.
+                </div>
+            </li>
+            <li class="lec-list-space">
+                $x - 2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    $x$ and $2$ are separated by subtraction, so terms.
+                </div>
+            </li>
+            <li class="lec-list-space">$(x - 2)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    We took the terms $x$ and $2$ and put parentheses around them. <br>So $(x - 2)$ is a <b>factor</b> because $(x-2) = (x - 2) \cdot 1$.<br>
+                    This example shows us a fundamental rule: grouping two or more terms together in parentheses will usually create a factor.
+                </div>
+            </li>
+            <li class="lec-list-space">
+                $(x-2)(x+4)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    There is a multiplication outside the parentheses. So one interpretation is factors: \[\underbrace{(x-2)}_{\text{factor}}\underbrace{(x+4)}_{\text{factor}}\]
+                    But we can also zoom into each parentheses. Doing so gives terms:
+                    \[(\underbrace{x}_{\text{term}}-\underbrace{2}_{\text{term}})(\underbrace{x}_{\text{term}}+\underbrace{4}_{\text{term}})\]
+                    But when is an entity a term or a factor? Which interpretation do we use?
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p>This is the new approach: terms and factors need to be given a context in which that entity is a term/factor. I introduce two different types of context: global and local.</p>
+
+    <h3>Global and Local Context</h3>
+
+    <div class="math-def">
+        <b>Global context, local context</b><br>
+        <b>Global context</b> refers to the context of the entire expression.<br>
+        <b>Local context</b> refers to a context smaller than the entire expression (when you zoom in on an entity).
+    </div>
+
+    <p>Now we will analyze an expression using this new terminology:</p>
+
+    <div class="math-example">
+        List all possible terms/factors (and their contexts) for the expression \[(x-2)(x+4) + 3\]
+
+        <p>Solution: $\times$ and $+$ are present outside the parentheses. We choose $+$ first: terms.</p>
+
+        <table class="table" style="max-width: 600px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Context Level</th>
+                <th scope="col">Terms/Factors</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Global (L1)</td>
+                <td>$\underbrace{(x-2)(x+4)}_{\text{term}} + \underbrace{3}_{\text{term}}$</td>
+            </tr>
+            <tr>
+                <td>Local (L2)</td>
+                <td>$\underbrace{(x-2)}_{\text{factor}}\underbrace{(x+4)}_{\text{factor}} + 3$</td>
+            </tr>
+            <tr>
+                <td>Local (L3)</td>
+                <td>$(\underbrace{x}_{\text{term}}-\underbrace{2}_{\text{term}})(\underbrace{x}_{\text{term}}+\underbrace{4}_{\text{term}}) + 3$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>The word context can be ambiguous; students might try to say there are both terms and factors. When going through this process point out:</p>
+
+    <div class="math-notxt">
+        <p><b>Two important facts</b></p>
+
+        <ol>
+            <li>In each context level, only choose term or factor. Not both!</li>
+            <li>Terms and factors are context/environment creators! <b>Zoom in on one term or factor</b> to increase one level in context.</li>
+        </ol>
+    </div>
+
+    <p>It's true that there are both terms and factors. But later in this post we will see how common mistakes are avoided if term/factor context is identified, especially the global context. In practice the L1, L2, L3 is unnecessary and can cause confusion; I usually stick to global/local terminology.</p>
+
+    <h3>Term Structure Before Factor Structure</h3>
+
+    <p>At this point, students may be confused why terms come before factors in the analysis. Doesn't multiplication get evaluated first? The key lies within PEMDAS: addition and subtraction are last to be evaluated so the term structure is the last to go.</p>
+
+    <div class="math-example">
+        Consider the expression $2 \cdot 3 + 5$. When using PEMDAS, we do \[2 \cdot 3 + 5 = 6 + 5 = 11\]
+        Because factors (multiplication) disappears before terms (addition), the term structure stays longer than the multiplication structure!<br>
+    </div>
+
+    <div class="math-notxt"> <b>Tip:</b>
+        When $+/-$ and $\times$ are present at the same context level, term structure come first.
+    </div> 
+
+    <p>We now drive home the point that terms/factors are building blocks of complicated expressions:</p>
+
+    <div class="math-example">
+        Create a mathematical expression with two global terms, where each global term contains three local factors.
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            With two global terms, we know our global structure needs to look like \[\square + \square\]
+            Then in each term, there needs to be two multiplications: \[\square \cdot \square \cdot \square + \square \cdot \square \cdot \square\]
+            Now fill in the squares with factors, for example $3$ in the first box, $(x-1)$ in the second box, $(2x-4)^2$ in the third, and so on:
+
+        \[3(x-1) (2x-4)^2 + 4x(x-1)\]
+        </div>
+    </div>
+
+    <p>This expression certainly looks complicated but approaching terms/factors pedagogy in this way helps students break down complicated algebraic expressions.</p>
+
+    <p>Finally, we introduce the terminology for fractions, where the numerator and denominator are separate global contexts. This is arguably the most important step in the development of global/local context.</p>
+
+    <p>For fractional expressions, the numerator and denominator are separate global contexts.</p>
+
+    <div class="math-example">
+        Identify if you have terms or factors in the <b>global context</b> for the expression
+        \[\dfrac{-x(x-2)(2x+3)}{2x + 3}\]
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <span>Numerator has global factors as multiplication is the only operation present outside the parentheses.</span><br>
+            
+            <span>Denominator has global terms as both multiplication and addition are present but terms take priority:</span>
+            \[\dfrac{\overbrace{-x}^{\text{factor}}\overbrace{(x-2)}^{\text{factor}}\overbrace{(2x+3)}^{\text{factor}}}{\underbrace{2x}_{\text{term}} + \underbrace{3}_{\text{term}}}\]
+        </div>
+    </div>
+
+    <p>At this point, students have a new tool in their toolbox to deal with algebra. Let's use this tool to analyze mathematical laws and see how common mistakes are avoided!</p>
+
+    <h2 class="blog-h2">Application: Avoiding Mistakes</h2><hr>
+
+    <p>At this point we are ready to use term/factor analysis in the classroom. When introducing a new math law, describe what is actually happening with terms/factors and their context levels in English. Do not just write it down; this gives students room for interpretation and causes room for the common mistakes to occur.</p>
+
+    <p>We will run through a few examples of introducing laws, then applying context analysis to avoid the common mistakes from earlier.</p>
+
+    <h3>Fraction Cancellation</h3>
+
+    <p>We'll start with the fraction cancellation law:</p>
+
+        <div class="math-fact"> <b style="color:var(--factcolor)">Fraction Cancellation</b></br>
+         Let $a, b, c$ be real numbers.   
+        <ul>
+            <li class="lec-list-space">
+                $\dfrac{ac}{bc} = \dfrac{a}{b}$
+                <div style="padding-top: 0.75rem;"><b>English:</b> Cancelling an entity $c$ requires the entity to be a <b>global</b> factor in <b>both</b> the numerator and denominator.</div>
+            </li>
+        </ul>
+    </div>
+
+    <p>Now really hammer home that the cancelled factor needs to be a global factor. Here's a few examples for inspiration:</p>
+
+    <div class="math-example">
+        Can you cross out the $x-1$ in \[\dfrac{(x-1)(x+2) + 3x^2}{(x-1)(x+3)}\]
+        Why or why not?
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Cancelling requires global factors.<br>
+            Performing global context analysis gives \[\dfrac{\overbrace{(x-1)(x+2)}^{\text{term}} + \overbrace{3x^2}^{\text{term}}}{\underbrace{(x-1)}_{\text{factor}}\underbrace{(x+3)}_{\text{factor}}}\]
+
+            $(x-1)$ is a global factor in the denominator but $(x-1)$ is a <b>local</b> factor in the numerator (you zoomed in on the term $(x-1)(x+2)$, a smaller context than global, in order for $(x-1)$ to be a factor). <br> You cannot cancel.
+        </div>
+    </div>
+
+    <div class="math-example">
+        Can you cross out the $\color{pink}x$ in \[\dfrac{ {\color{pink}x} (x-1)(x+1)}{2 {\color{pink}x} + 1}\]
+        Why or why not?
+
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Cancelling requires global factors.<br>
+            $x$ is a global factor in numerator but $x$ is a <b>local</b> factor in the denominator (global terms in denominator). <br> You cannot cancel.
+        </div>
+    </div>
+
+    <p>In my classroom, when I get to this problem I usually implement a Think-Pair-Share. After a few minutes, I ask the class "Can we cancel the $x$? Raise your hand if you think so" and most of the students will raise their hands. I'm not surprised by this result because no one taught the students that the cancelled factor needs to be <b>global</b>. The law is usually only taught as "cancel common factors." </p>
+
+    <p>By implementing term/factor analysis in your classrooms, you not only give students a way to really understand and use laws correctly, but also have terminology to describe why a factor cannot be cancelled if a student asks why. To me, this is the elusive "algebraic intuition" that some students struggle to develop.</p>
+
+    <h3>Distributive Law</h3>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Distributive Law</b></br>
+        Let $a, b, c$ be real numbers. The Distributive Property says
+            <ul>
+                <li>$a(b + c) = ab + ac$</li>
+                <li>$(b+c)a = ab + ac$</li>
+            </ul>
+        <b>English:</b> the distributive law describes how <b>terms and factors interact</b>. In other words \[\underbrace{a}_{\text{factor}}\cdot \underbrace{(b+c)}_{\text{factor w/ terms}}\]
+        The factor $a$ is distributed to all terms in the parentheses $b$ and $c$.
+    </div>
+
+    <p>In particular, point out the Distributive Law is the <b>only</b> law that allows terms and factors to interact.</p>
+    <p>Let's use our term/factor context analysis tool to the Distributive Property mistake earlier. Keep in mind the definition of a negative: $-a$ = $(-1)\cdot a$ so subtraction is actually a factor of $(-1)$.
+    </p>
+
+    <div class="math-example"> Expand: $x + 2 - 3(x - 4)$
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <p>Convert $-3$ into $(-1)\cdot 3$ and perform context analysis:
+                \begin{align*}
+                x + 2 - 3(x - 4) &= x + 2 + \underbrace{(-1)\cdot 3}_{\text{factor}}\underbrace{(x-4)}_{\text{factor w/ terms}}
+                \\&= x + 2 + (-1)3x - (-1)3\cdot 4 \qquad \text{Distributive Law}
+                \\&= x + 2 - 3x + 12
+                \\&= \boxed{-2x + 14}
+                \end{align*}
+            </p>
+        </div>
+    </div>
+
+    <p>After this example students will understand why subtraction must distribute to all terms. In practice after seeing this a few times I tell students to remember to distibute the negative to each term (writing out the $-$ is unnecessary after understanding why). Remembering it on a test is a different challenge however.</p>
+
+    <p>We can apply the same context analysis to exponents as well!</p>
+
+    <h3>Exponents</h3>
+
+    <p>When introducing exponents, describe how it is a shorthand for multiplication, or <b>factors</b>:</p>
+
+    <div class="math-def">
+        If $a \in \mathbb{R}$, then the <b>$n$th power</b> of $a$ is \[a^n = a\cdot a \cdot \cdots a\]
+    </div>
+
+    <p>After this definition Laws of Exponents usually follow. I'll point out the relevant one for the common mistake earlier:</p>
+
+    <div class="math-fact"> <b style="color: var(--factcolor)">Laws of Exponents</b><br>
+        Let $a,b$ be real and $n$ be an integer.
+        <ul>
+            <li class="lec-list-space">
+                $(ab)^n = a^nb^n$<br>
+                <b>English:</b> $a$ and $b$ are factors. Law says exponents <b>only</b> distribute to factors.
+            </li>
+
+        </ul>
+    </div>
+
+    <p>Now identifying terms/factors on our common mistake earlier:</p>
+
+    <div class="math-example"> Expand: $(x + 3)^2$
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <p>Term/factor analysis gives \[(\underbrace{x}_{\text{term}} + \underbrace{3}_{\text{term}})^2\]<br>
+            We cannot use the Law of Exponents! $x$ and $3$ are terms while the law requires factors.</p>
+            <p>In particular, the exponent $2$ is describing factors while $x$ and $3$ are terms.</p>
+            <p>Remember: The <b>only</b> way terms and factors interact is the distributive law. Let's expand the power of 2 to use Distributive Law:
+                \begin{align*}
+                (x+3)^2 &= \underbrace{(x+3)}_{\text{factor}}\underbrace{(x+3)}_{\text{factor w/ terms}}  &&\text{Definition of exponent}
+                \\&= (x+3)x + (x+3)3 &&\text{Dist. Law} 
+                \\&= x^2 + 3x + 3x + 9 &&\text{Dist. Law}
+                \\&= \boxed{x^2 + 6x + 9}
+                \end{align*}
+            </p>
+        </div>
+    </div>
+
+    <p>In general, the key idea is to get students to stop and analyze the term/factor structure of a problem before performing calculations. Doing so allows students to understand how to pick the right laws to use!</p>
+
+    <h3>Zero Product Property</h3>
+
+    <p>Anytime you introduce a law, frame it from the point of view of term/factors. Doing this throughout the school semester/quarter gives students a unified framework to remember laws instead of a disparate set of laws to memorize.</p>
+
+    <p>Let's now do it for the Zero Product Property.</p>
+
+    <div class="math-def">
+        The <b>zero-product property</b> says \[A\cdot B = 0 \qquad \text{if and only if}\qquad A = 0 \quad \text{or} \quad B = 0\]
+        <div><b>English:</b> If $(\text{factors}) = 0$, you can use the property.</div>
+    </div>
+
+    <p>Applying our new perspective on the common mistake earlier:</p>
+
+    <div class="math-example"> Solve: $x(x-4) = 5$
+        <p>
+            We need $(\text{factors}) = 0$. Currently we have $(\text{factors}) = 5$. So moving $5$ to the left and creating factors on the left:
+            \begin{align*}
+                x(x-4) &= 5\\
+                x^2 - 4x - 5 &= 0 \\
+                (x-5)(x+1) &= 0\\
+                x - 5 = 0\qquad  &\qquad x + 1 = 0\\
+                \boxed{x = 5}\qquad & \qquad\boxed{x = -1}
+            \end{align*}
+        </p>
+    </div>
+
+    <p>There are many more examples of common mistakes out there in the wild. I may add some more, and how to frame them as a term/factor context analysis in the future!</p>
+
+    <h2 class="blog-h2">Conclusion</h2><hr>
+
+    <p>In order to correct many common algebraic mistakes, a new pedagogical approach was introduced:
+        <ol>
+            <li>Introduce term/factor analysis and the necessity of global/local context</li>
+            <li>Introduce new laws in English from the point of view of terms/factors</li>
+            <li>Show students the value of term/factor analysis by applying them to common mistakes.</li>
+        </ol>
+    </p>
+
+    <p>The advantage of this approach is as an educator, you have a unified framework to analyze student misapplications of math laws and to explain why common mistakes are mistakes. And as a student, you have a framework to truly understand what laws are saying and to be able to break down complex problems into it's building blocks: terms and factors. As a result, you and the student both own a new analysis tool to build algebraic intuition.</p>
+
+    <p>In my experience, local/global context usually only needs to be invoked when dealing with fractions. The cancellation example is a great demonstration of the benefit of global/local context analysis. Problems not involving fractions generally only need term/factor identification, not context.</p>
+
+    <p>Not every student needs this framework. It can be confusing to skilled students who already have developed good algebraic intuition. Nevertheless, I have found that this term/factor analysis strikes at the core reason why students struggle with generalization on algebraic problems: they see us do problems and memorize the "how," not the "why." Term/factor analysis is the why.</p>
+
+    <p>Thanks for reading and I hope this approach will help you in your classrooms! And hooray for my first blog post 🎉</p>
+
+    <div class="blog-time-last-edited">
+        <svg xmlns="http://www.w3.org/2000/svg" class="blog-date-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"></path>
+            <circle cx="12" cy="12" r="9"></circle>
+            <polyline points="12 7 12 12 15 15"></polyline>
+        </svg>
+        <time>Last Updated on August 26, 2025<time>
+    </div>
+
+
+</div>
+{% endblock %}
+

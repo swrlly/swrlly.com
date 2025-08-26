@@ -24,6 +24,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
+        <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+            };
+
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
         {% block extraimports %} {% endblock %}
     </head>
     
@@ -60,14 +72,37 @@
                 </div>
             </div>
         </nav>     
+        
         {% block content %}
         <div class = "container fade-in-text text-padding">
 
 
-            <p style="font-size: 5rem;">Blog</p>
-            <p>
-                soon :)
-            </p>
+            <h1 class="page-title">Blog</h1>
+
+            <p>Collection of my thoughts. Enjoy!</p>
+
+            <h2 class="blog-year-header">2025</h2>
+            <div style="display:grid; grid-template-columns: 1; row-gap: 1vh;">
+                <a id="second" class="fade-in-text no-link-style" href="/blog/teaching-algebra-to-avoid-common-mistakes-terms-and-factors">
+                    <section class="blog-article">
+                        <div>
+                            <div class="blog-article-title">Teaching Algebra To Avoid Common Mistakes: Terms and Factors</div>
+                            <time class="blog-article-date">August 26, 2025<time>
+                        </div>  
+                        <div class="blog-article-picture">$(x+2)^2 = x^2 + 2^2$</div>
+                    </section>
+                </a>
+
+                <!--<a class="no-link-style" href="/blog/teaching-algebra-to-avoid-common-mistakes-terms-and-factors">
+                    <section class="blog-article">
+                        <div>
+                            <div class="blog-article-title">Teaching Algebra To Avoid Common Mistakes: Terms and Factors</div>
+                            <time class="blog-article-date">August 26, 2025<time>
+                        </div>  
+                        <div class="blog-article-picture">$(x+2)^2 = x^2 + 2^2$</div>
+                    </section>
+                </a>-->
+            </div>
         </div>
         {% endblock %}
 
