@@ -3,13 +3,14 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.exceptions import NotFound
 
 import sqlite3
+import time
 import json
 import re
 import os
 
 app = Flask(__name__)
 DATABASE = 'darzadata/data/playerdata.db'
-cssVersion = "14"
+cssVersion = str(round(time.time()))
 
 @app.route("/")
 def Index():
