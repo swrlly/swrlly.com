@@ -28,11 +28,13 @@ for subdir, dirs, files in os.walk("templates/"):
 
         elif "templates/swrlly" in filepath:
             pathLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
-            paths.append(re.sub("templates/swrlly", "", filepath))
+            paths.append(re.sub("\\\\", "/", re.sub("templates/swrlly", "", filepath)))
 
         elif "templates/darzacharts" in filepath:
             darzaLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
-            darzaPaths.append(re.sub("templates/darzacharts", "", filepath))
+            darzaPaths.append(re.sub("\\\\", "/", re.sub("templates/darzacharts", "", filepath)))
+
+print(paths)
 
 @app.route("/sitemap.xml")
 def sitemap():
@@ -63,7 +65,7 @@ def Music():
 def Robots():
     return app.send_static_file("swrlly/robots.txt")
 
-@sitemapper.include(url_variables={"path": paths, "lastmod": pathLastMod})
+@sitemapper.include(url_variables={"path": paths}, lastmod = pathLastMod)
 @app.route("/<path:path>")
 def CatchAll(path):
     # render_template escapes strings
@@ -79,8 +81,6 @@ def CatchAll(path):
 
 @app.errorhandler(404)
 def page_not_found(e):
-
-    print("?")
 
     # get subdomain
     subdomain = re.search("//(.+)/", request.base_url).group(1).split(".")[0]
