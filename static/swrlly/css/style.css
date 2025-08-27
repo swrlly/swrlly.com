@@ -4,6 +4,12 @@
     --website-width:1000px;
 }
 
+
+p {
+    
+    line-height: 175%;
+}
+
 .container {
     max-width: var(--website-width);
     margin: 0 auto;
@@ -941,7 +947,7 @@ a:hover {
   border-left: solid 4px;
   padding: 20px 30px 20px 30px;
   border-color: var(--lavender);
-  box-shadow: 2px 2px 5px 0 rgb(55, 55, 55);
+  box-shadow: 2px 0px 5px 0 rgb(55, 55, 55);
   border-radius: 10px;
 }
 
@@ -1054,11 +1060,12 @@ a:hover {
     }
 
     .blog-2-quote {
-        display: inherit;
+        display: block; 
     }
 
     .blog-blockquote {
-        box-shadow: 1px 1px 10px 0 rgb(55, 55, 55);
+        box-shadow: 1px 0px 10px 0 rgb(55, 55, 55);
+        margin-bottom: 2rem;
     }
 
     .blog-article-title {
