@@ -2,7 +2,6 @@ from flask import Flask, Blueprint, g, request, render_template, abort
 from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.exceptions import NotFound
 from flask_sitemapper import Sitemapper
-from pathlib import Path
 
 import sqlite3
 import time
@@ -16,11 +15,10 @@ DATABASE = 'darzadata/data/playerdata.db'
 lastEdited = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 cssVersion = str(round(time.time()))
 
-baseDir = Path(app.root_path) / "templates/swrlly/"
-print("hello", baseDir)
-
 paths = []
+pathLastMod = []
 darzaPaths = []
+darzaLastMod = []
 for subdir, dirs, files in os.walk("templates/"):
     for file in files:
         filepath = subdir + os.sep + file
@@ -29,9 +27,11 @@ for subdir, dirs, files in os.walk("templates/"):
             continue
 
         elif "templates/swrlly" in filepath:
+            pathLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
             paths.append(re.sub("templates/swrlly", "", filepath))
 
         elif "templates/darzacharts" in filepath:
+            darzaLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
             darzaPaths.append(re.sub("templates/darzacharts", "", filepath))
 
 @app.route("/sitemap.xml")
@@ -63,21 +63,13 @@ def Music():
 def Robots():
     return app.send_static_file("swrlly/robots.txt")
 
-@sitemapper.include(url_variables={"path": paths}, lastmod=lastEdited)
+@sitemapper.include(url_variables={"path": paths, "lastmod": pathLastMod})
 @app.route("/<path:path>")
 def CatchAll(path):
     # render_template escapes strings
     try:
         safe = "/templates/swrlly/"
-        #req = (baseDir / path).resolve()
-       # print(req)
-        #if req.is_relative_to(baseDir):
-            #abort(403, "Denied")
-            #return
-        #print(req.is_relative_to(baseDir))
-        #print(os.path.realpath(safe + path + ".html"))
-        #print(os.path.commonpath((os.path.realpath(safe + path + ".html"), safe)))
-        lastEdited = time.asctime(time.gmtime(os.path.getmtime("templates/swrlly/" + path + ".html")))#".html"))
+        lastEdited = time.asctime(time.gmtime(os.path.getmtime("templates/swrlly/" + path + ".html")))
         lastEdited = lastEdited.split(" ")
         lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
         return render_template("swrlly/" + path + ".html", cssVersion=cssVersion, lastEdited = lastEdited)
