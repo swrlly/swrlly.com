@@ -995,6 +995,9 @@ a:hover {
         font-size: 100%
     }
 
+    .blog-article {
+        background: #1e1e1e;
+    }
     
 }
 
