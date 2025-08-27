@@ -2,15 +2,15 @@
 <html lang="en">
     {% block title %}<title>swrlly</title>{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
-    {% block header %}
-    <head>
 
+    <head>
+        {% block discord %}
         <meta property="og:title" content="swrlly"/>
         <meta name = "theme-color" content="#b39af0">
-        <meta property="og:description" content="hello :)"/>
+        <meta property="og:description" content="Math lecturer at Cal Poly SLO. Data enthusiast, mathematics educator and musician."/>
         <meta property="og:url" content="https://swrlly.com"/>
-        <meta property="og:image" content="https://swrlly.com/static/swrlly/favicon.png" />
-
+        <meta property="og:image" content="/static/swrlly/favicon.png" />
+        {% endblock %}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -26,7 +26,7 @@
         <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
     </head>
-    {% endblock %}
+
 
     <body>
 

@@ -909,6 +909,7 @@ a:hover {
   padding: 20px 30px 20px 30px;
   border-color: var(--lavender);
   box-shadow: 3px 3px 10px 0 rgb(55, 55, 55);
+  border-radius: 10px;
 }
 
 .blog-2-quote {
