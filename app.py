@@ -27,38 +27,38 @@ for subdir, dirs, files in os.walk("templates/"):
             continue
 
         elif "templates/swrlly" in filepath:
-            pathLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
+            a = time.strftime("%Y-%m-%dT%H:%M%z", time.gmtime(os.path.getmtime(filepath)))
+            pathLastMod.append(a[:-2] + ":" + a[-2:])
             paths.append(re.sub("\\\\", "/", re.sub("templates/swrlly", "", filepath)))
 
         elif "templates/darzacharts" in filepath:
-            darzaLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
+            a = time.strftime("%Y-%m-%dT%H:%M%z", time.gmtime(os.path.getmtime(filepath)))
+            darzaLastMod.append(a[:-2] + ":" + a[-2:])
             darzaPaths.append(re.sub("\\\\", "/", re.sub("templates/darzacharts", "", filepath)))
+
+for i in range(len(darzaPaths)):
+    print(darzaPaths[i], darzaLastMod[i])
 
 @app.route("/sitemap.xml")
 def sitemap():
   return sitemapper.generate()
 
-@sitemapper.include(lastmod=lastEdited)
 @app.route("/")
 def Index():
     return render_template("swrlly/index.html", cssVersion=cssVersion)
 
-@sitemapper.include(lastmod=lastEdited)
 @app.route("/projects")
 def About():
     return render_template("swrlly/projects.html", cssVersion=cssVersion)
 
-@sitemapper.include(lastmod=lastEdited)
 @app.route("/blog")
 def Blog():
     return render_template("swrlly/blog.html", cssVersion=cssVersion)
 
-@sitemapper.include(lastmod=lastEdited)
 @app.route("/music")
 def Music():
     return render_template("swrlly/music.html", cssVersion=cssVersion)
 
-@sitemapper.include(lastmod=lastEdited)
 @app.route("/robots.txt")
 def Robots():
     return app.send_static_file("swrlly/robots.txt")
@@ -70,7 +70,7 @@ def CatchAll(path):
     try:
         safe = "/templates/swrlly/"
         lastEdited = time.asctime(time.gmtime(os.path.getmtime("templates/swrlly/" + path + ".html")))
-        lastEdited = lastEdited.split(" ")
+        lastEdited = re.split("\\s+", lastEdited)
         lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
         return render_template("swrlly/" + path + ".html", cssVersion=cssVersion, lastEdited = lastEdited)
     except Exception as e:
@@ -112,7 +112,7 @@ def close_connection(exception):
 
 darzacharts = Blueprint(name="darzacharts", import_name=__name__, static_folder="static", subdomain="darzacharts")
 
-@sitemapper.include(lastmod=lastEdited)
+#@sitemapper.include(lastmod=lastEdited)
 @darzacharts.route("/api/playercount")
 def dplayercount():
     cur = get_db().cursor()
@@ -121,12 +121,12 @@ def dplayercount():
     results = json.dumps(results)
     return results
 
-@sitemapper.include(lastmod=lastEdited)
+@sitemapper.include(lastmod=darzaLastMod[0])
 @darzacharts.route("/")
 def dindex():
     return render_template("darzacharts/index.html", cssVersion=cssVersion)
 
-@sitemapper.include(lastmod=lastEdited)
+#@sitemapper.include(lastmod=lastEdited)
 @darzacharts.route("/robots.txt")
 def drobots():
     return app.send_static_file("darzacharts/robots.txt")
