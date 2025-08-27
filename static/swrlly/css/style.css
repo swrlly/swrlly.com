@@ -73,11 +73,13 @@ b {
 h2 {
     padding-top: 1.25em;
     color: rgb(142, 181, 227);
+    text-align: left;
 }
 
 h3 {
     padding-top: 0.75em;
     color: rgb(142, 181, 227);
+    text-align: left;
 }
 
 h4 {
@@ -882,6 +884,7 @@ a:hover {
 .blog-h2 {
     padding-top: 2em;
     color: rgb(142, 181, 227);
+    text-align: left;
 }
 
 .blog-date, .blog-time-last-edited {

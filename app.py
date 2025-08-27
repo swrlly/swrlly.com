@@ -34,8 +34,6 @@ for subdir, dirs, files in os.walk("templates/"):
             darzaLastMod.append(time.asctime(time.gmtime(os.path.getmtime(filepath))))
             darzaPaths.append(re.sub("\\\\", "/", re.sub("templates/darzacharts", "", filepath)))
 
-print(paths)
-
 @app.route("/sitemap.xml")
 def sitemap():
   return sitemapper.generate()
