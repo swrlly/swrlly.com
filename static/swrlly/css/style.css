@@ -851,35 +851,65 @@ a:hover {
 
 #toc_container {
     border-radius: 20px; 
-    background: linear-gradient(145deg, #000, #121212);
-    box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;
-    border: 4px solid #1a1a1a;
+    background: #1a1a1a;
+    /*box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;*/
+    border: 4px solid #000000;
     transition: all 0.15s ease;
     display: table;
     padding:1rem;
+    text-align: left;
+    font-size: 100%;
+    margin-bottom: 2em;
+}
 
-    font-size: 95%;
-    margin-bottom: 1em;
+.toc_link_style {
+    color: rgb(142, 181, 227);
+    text-decoration:underline;
+    text-decoration-thickness: 0.2pt;
+}
+
+.toc_link_style:hover {
+    color: rgb(87, 128, 175);
 }
 
 .toc_list {
-    list-style-type: none;
-    padding-left:0.5rem;
+    list-style-type:decimal;
+    padding-left:1.2rem;
+}
+
+.toc_li {
+    padding-top: 0.22rem;
+    padding-bottom: 0.22rem;
 }
 
 .toc_title {
     font-weight: 700;
     text-align: center;
+    font-size: 150%;
 }
 
 .toc_ol {
-    list-style-type: none;
-    padding-left:0.75rem;
+    list-style-type: inherit;
+    padding-left: 0.75rem;
+}
+
+.toc_ul {
+    padding-left: 2vw;
+}
+
+.toc_li::marker{
+    color: var(--text-color);
 }
 
 /*#toc_container li, #toc_container ul, #toc_container ul li{
     list-style: outside none none !important;
 }*/
+
+.toc_above_intro {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .blog-h2 {
     padding-top: 2em;
@@ -911,7 +941,7 @@ a:hover {
   border-left: solid 4px;
   padding: 20px 30px 20px 30px;
   border-color: var(--lavender);
-  box-shadow: 3px 3px 10px 0 rgb(55, 55, 55);
+  box-shadow: 2px 2px 5px 0 rgb(55, 55, 55);
   border-radius: 10px;
 }
 
@@ -921,10 +951,11 @@ a:hover {
     column-gap: 2vw;
 }
 
-
-
-
-
+.blog-toc-grid {
+    display:grid; 
+    grid-template-columns: 2fr 1fr; 
+    column-gap: 2vw;
+}
 
 .page-title {
     font-size: 5rem;
@@ -974,6 +1005,38 @@ a:hover {
     font-size: 90%;
 }
 
+.twt-btn {
+  cursor: pointer;
+  border: none; 
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+.twt-btn:hover {
+    transform: scale(1.2);
+}
+
+.btn__icon {
+    display: inline;
+    height: 1rem;
+    width: 1rem;
+    background: transparent;
+    fill: #1DA1F2;
+    fill: none;
+    stroke: #1DA1F2;
+    stroke-width: 2px;
+    stroke-linejoin:bevel;
+    }
+
+/*
+.btn__text {
+  font-size: 1rem;
+  font-weight: 600;
+}*/
+
+
 
 @media screen and (max-width: 600px) {
         .music-service-icons {
@@ -994,6 +1057,10 @@ a:hover {
         display: inherit;
     }
 
+    .blog-blockquote {
+        box-shadow: 1px 1px 10px 0 rgb(55, 55, 55);
+    }
+
     .blog-article-title {
         font-size: 100%
     }
@@ -1001,6 +1068,14 @@ a:hover {
     .blog-article {
         background: #1e1e1e;
     }
+
+    .container {
+        text-align:left;
+    }
+
+    /*.blog-toc-grid {
+        display:none;
+    }*/
     
 }
 
@@ -1039,4 +1114,12 @@ a:hover {
 
 @media only screen and (min-width: 800px) {
     .small-screen {display: none;}
+}
+
+@media only screen and (max-width: 600px) {
+    .larger-screen {display: none;}
+}
+
+@media only screen and (min-width: 600px) {
+    .smaller-screen {display: none;}
 }
