@@ -5,7 +5,6 @@
     --website-width:1000px;
 }
 
-
 p {
     
     line-height: 175%;
@@ -29,8 +28,8 @@ p {
 html {
     font-size: 100%;
     /*--lavender: #b39af0;*/
-    --lavender: #B39CD0;
-    --lavender-t: rgba(179, 156, 208, 0.5);
+    --lavender: #BE90F7;
+    --lavender-t: rgba(190, 144, 247, 0.5);
     --lightblue: #A8DADC;
     --darklavender: #9b6dd3;
     --pink: #FFC1CC;
@@ -54,8 +53,8 @@ html {
 
     --fade-in-time: 0.35s;
 
-    --h1-color: #f5f5f5;
-    --h2-color: #f5f5f5;
+    --h1-color: #f9f9f9;
+    --h2-color: #f9f9f9;
     --card-color: #0f0f0f;
 
     /*--examplecolor: rgb(232, 162, 212)*/
@@ -472,6 +471,10 @@ ol {
     margin: 0 auto;
     align-items: center;
     max-width: 500px;
+}
+
+.music-page-title {
+    display: flex; justify-content: center; padding-top: 5vh; padding-bottom: 2vh;
 }
  
 .music-landing-page-grid {
@@ -991,18 +994,20 @@ ol {
 .blog-article {
     display:grid; 
     grid-template-columns: 4fr 1fr; 
-    /*border: 1px solid black;*/
+    border: 1px solid #111;
     column-gap: 4vw;
     padding: 30px 30px 30px 30px;   
     border-radius: 15px;
     background: #111;
     /*box-shadow: inset 20px 20px 60px #0b0b0b, inset -20px -20px 60px #1f1f1f;*/
+    box-shadow: inset 0px 0px 0px #000, inset 0px 0px 0px #000;
     text-align: left;
-    transition: transform 0.2s;
+    transition: all 0.2s ease;
 }
 
 .blog-article:hover {
      transform: scale(1.03);
+     box-shadow: inset 1px 1px 8px var(--lavender), inset -1px -1px 8px #3994ff;
 }
 
 .no-link-style:hover {
@@ -1070,7 +1075,7 @@ ol {
 
 
 @media screen and (max-width: 600px) {
-        .music-service-icons {
+    .music-service-icons {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         column-gap: 1.5vw;
@@ -1101,13 +1106,11 @@ ol {
         background: #1e1e1e;
     }
 
-    .container {
-        text-align:left;
-    }
-
     /*.blog-toc-grid {
         display:none;
     }*/
+
+    .larger-screen {display: none;}
     
 }
 
@@ -1137,19 +1140,16 @@ ol {
         transition: all 0.15s ease;
     }
 
-}
+    .container {
+        text-align:left;
+    }
 
-
-@media only screen and (max-width: 800px) {
     .large-screen {display: none;}
+
 }
 
-@media only screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
     .small-screen {display: none;}
-}
-
-@media only screen and (max-width: 600px) {
-    .larger-screen {display: none;}
 }
 
 @media only screen and (min-width: 600px) {
