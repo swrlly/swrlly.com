@@ -132,4 +132,4 @@ def dpage_not_found(e):
 
 app.register_blueprint(darzacharts)
 sitemapper.init_app(app)
-#app.config["SERVER_NAME"] = "swrlly.com"
+app.config["SERVER_NAME"] = "swrlly.com"
