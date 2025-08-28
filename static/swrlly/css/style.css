@@ -1,6 +1,7 @@
 :root {
-    --text-color: #C9D1D9;
-    --background-col: rgb(0, 0, 0);
+    /*--text-color: #C9D1D9;*/
+    --text-color: #D3D3D3;
+    --background-col: #030303;
     --website-width:1000px;
 }
 
@@ -27,14 +28,22 @@ p {
 
 html {
     font-size: 100%;
-    --lavender: #b39af0;
-    --darklavender: #9c7dea;
-    --examplecolor: rgb(232, 162, 212);
-    --exampleboxcolor: rgba(232, 162, 212, 0.7);
-    --factcolor: #ece78d;
+    /*--lavender: #b39af0;*/
+    --lavender: #B39CD0;
+    --lavender-t: rgba(179, 156, 208, 0.5);
+    --lightblue: #A8DADC;
+    --darklavender: #9b6dd3;
+    --pink: #FFC1CC;
+    --pink-t: rgba(255, 193, 204, 0.5);
+    --examplecolor: var(--pink);
+    --exampleboxcolor: rgba(255, 193, 204, 0.7);
+    --factcolor: rgb(236, 241, 141);
+    --factcolor-t: rgba(236, 241, 141, 0.5);
     --methodcolor: #ece78d;
     --bewarecolor: #e74c3c;
-    --lightblue: #8eb5e3;
+
+    --link-color: #9cdcfe;
+    --link-hover-color:#179ff1;
 
     --lec-event-color: #245fcd;
     --quiz-event-color: rgb(143, 59, 172);
@@ -44,6 +53,12 @@ html {
     --blog-date-color: #9299a0;
 
     --fade-in-time: 0.35s;
+
+    --h1-color: #f5f5f5;
+    --h2-color: #f5f5f5;
+    --card-color: #0f0f0f;
+
+    /*--examplecolor: rgb(232, 162, 212)*/
     /*--lavender: rgb(170, 142, 235);*/
     /* --lavender: rgb(188, 167, 238); */
 }
@@ -68,23 +83,33 @@ body {
 }
 
 a {
-    color: var(--lavender);
+    color: var(--link-color);
     cursor: pointer;
+    text-decoration: none;
 }
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
 
 b {
     color: var(--lavender)
 }
 
+h1 {
+    color: var(--h1-color);
+}
+
 h2 {
     padding-top: 1.25em;
-    color: rgb(142, 181, 227);
+    color: var(--h2-color);
     text-align: left;
 }
 
 h3 {
     padding-top: 0.75em;
-    color: rgb(142, 181, 227);
+    color: var(---h2-color);
     text-align: left;
 }
 
@@ -94,7 +119,7 @@ h4 {
 
 .musich2 {
     padding-top: 0.75em;
-    color: rgb(142, 181, 227);
+    color: var(--h2-color);
 }
 
 th, td {
@@ -111,10 +136,6 @@ ol {
 
 .no-underline {
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--darklavender);
 }
 
 .nav-link:hover, .github-hover:hover { color:var(--lavender) !important; cursor:pointer;}
@@ -487,12 +508,14 @@ a:hover {
 
 .math-def {
     border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--lavender);
-    padding-left: 10px;
+    border-left-width: 4px;
+    border-left-color: var(--darklavender);
+    padding: 0.75rem;
     margin-bottom: 2em;
+    border-radius: 0px 10px 10px 0px;
     margin-top: 2em;
     overflow: auto;
+    background-color: var(--card-color);
 }
 
 .math-def:before {
@@ -543,13 +566,15 @@ a:hover {
     border-left-width: 2px;
     border-left-color: var(--examplecolor);
     padding-left: 10px;*/
+    border-left: 4px solid var(--pink-t);
     margin-bottom: 2em;
     margin-top: 2em;
-    border: 1px solid var(--exampleboxcolor);
-    border-radius: 10px;
+    /*border: 1px solid var(--exampleboxcolor);*/
+    border-radius: 0px 10px 10px 0px;
     padding: 0.75rem;
-    box-shadow: 0px 0px 10px #414141;
+    /*box-shadow: 0px 0px 10px #414141;*/   
     overflow: auto;
+    background-color: var(--card-color);
 }
 
 .math-example:before {
@@ -576,13 +601,13 @@ a:hover {
 }
 
 .math-fact {
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--factcolor);
-    padding-left: 10px;
+    border-left: 4px solid var(--factcolor-t);
+    padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;
     overflow: auto;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--card-color);
 }
 
 .math-fact:before {
@@ -592,12 +617,11 @@ a:hover {
 }
 
 .math-theorem {
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--factcolor);
-    padding-left: 10px;
+    border-left: 4px solid var(--factcolor-t);
+    padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;
+    border-radius: 0px 10px 10px 0px;
     overflow: auto;
 }
 
@@ -608,30 +632,25 @@ a:hover {
 }
 
 .math-notxt {
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--lavender);
-    padding-left: 10px;
+    border-left: 4px solid var(--lavender-t);
+    padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;   
     overflow: auto;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .math-fact-notxt {
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--factcolor);
-    padding-left: 10px;
+    border-left: 2px solid var(--factcolor-t);
+    padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;   
     overflow: auto;
 }
 
 .math-method {
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-left-color: var(--factcolor);
-    padding-left: 10px;
+    border-left: 4px solid var(--factcolor-t);
+    padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;
     overflow: auto;
@@ -857,7 +876,7 @@ a:hover {
 
 #toc_container {
     border-radius: 20px; 
-    background: #1a1a1a;
+    background: var(--card-color);
     /*box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;*/
     border: 4px solid #000000;
     transition: all 0.15s ease;
@@ -869,13 +888,13 @@ a:hover {
 }
 
 .toc_link_style {
-    color: rgb(142, 181, 227);
-    text-decoration:underline;
+    color: var(--link-color);
+    text-decoration:none;
     text-decoration-thickness: 0.2pt;
 }
 
 .toc_link_style:hover {
-    color: rgb(87, 128, 175);
+    color: var(--link-hover-color);
 }
 
 .toc_list {
@@ -884,14 +903,15 @@ a:hover {
 }
 
 .toc_li {
-    padding-top: 0.22rem;
-    padding-bottom: 0.22rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .toc_title {
     font-weight: 700;
     text-align: center;
     font-size: 150%;
+    color: var(--h2-color);
 }
 
 .toc_ol {
@@ -919,7 +939,7 @@ a:hover {
 
 .blog-h2 {
     padding-top: 2em;
-    color: rgb(142, 181, 227);
+    color: var(--h2-colors);
     text-align: left;
 }
 
@@ -948,7 +968,7 @@ a:hover {
   padding: 20px 30px 20px 30px;
   border-color: var(--lavender);
   box-shadow: 2px 0px 5px 0 rgb(55, 55, 55);
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .blog-2-quote {
@@ -971,13 +991,18 @@ a:hover {
 .blog-article {
     display:grid; 
     grid-template-columns: 4fr 1fr; 
-    border: 2px solid #111;
+    /*border: 1px solid black;*/
     column-gap: 4vw;
     padding: 30px 30px 30px 30px;   
     border-radius: 15px;
-    background: #0f0f0f;
+    background: #111;
     /*box-shadow: inset 20px 20px 60px #0b0b0b, inset -20px -20px 60px #1f1f1f;*/
     text-align: left;
+    transition: transform 0.2s;
+}
+
+.blog-article:hover {
+     transform: scale(1.03);
 }
 
 .no-link-style:hover {
