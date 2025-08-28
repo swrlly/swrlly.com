@@ -109,7 +109,6 @@ def close_connection(exception):
 
 darzacharts = Blueprint(name="darzacharts", import_name=__name__, static_folder="static", subdomain="darzacharts")
 
-#@sitemapper.include(lastmod=lastEdited)
 @darzacharts.route("/api/playercount")
 def dplayercount():
     cur = get_db().cursor()
@@ -123,12 +122,10 @@ def dplayercount():
 def dindex():
     return render_template("darzacharts/index.html", cssVersion=cssVersion)
 
-#@sitemapper.include(lastmod=lastEdited)
 @darzacharts.route("/robots.txt")
 def drobots():
     return app.send_static_file("darzacharts/robots.txt")
 
-#@sitemapper.include(lastmod=lastEdited)
 @darzacharts.errorhandler(404)
 def dpage_not_found(e):
     return render_template("darzacharts/errors/404.html", cssVersion=cssVersion)
