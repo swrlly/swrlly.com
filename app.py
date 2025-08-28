@@ -9,10 +9,9 @@ import json
 import re
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, subdomain_matching = True)
 sitemapper = Sitemapper()
 DATABASE = 'darzadata/data/playerdata.db'
-lastEdited = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 cssVersion = str(round(time.time()))
 
 paths = []
@@ -35,9 +34,6 @@ for subdir, dirs, files in os.walk("templates/"):
             a = time.strftime("%Y-%m-%dT%H:%M%z", time.gmtime(os.path.getmtime(filepath)))
             darzaLastMod.append(a[:-2] + ":" + a[-2:])
             darzaPaths.append(re.sub("\\\\", "/", re.sub("templates/darzacharts", "", filepath)))
-
-for i in range(len(darzaPaths)):
-    print(darzaPaths[i], darzaLastMod[i])
 
 @app.route("/sitemap.xml")
 def sitemap():
@@ -68,7 +64,8 @@ def Robots():
 def CatchAll(path):
     # render_template escapes strings
     try:
-        safe = "/templates/swrlly/"
+        #safe = "/templates/swrlly/"
+        if path.endswith(".html"): path = path[:-5]
         lastEdited = time.asctime(time.gmtime(os.path.getmtime("templates/swrlly/" + path + ".html")))
         lastEdited = re.split("\\s+", lastEdited)
         lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
