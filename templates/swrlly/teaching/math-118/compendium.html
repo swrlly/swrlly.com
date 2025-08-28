@@ -16,7 +16,7 @@
 
 
 {% block content %}
-<div class="container fade-in-text text-padding">
+<div class="container fade-in-text text-padding teaching-container">
     <h1>Math 118: Compendium</h1>
 
     <!--<p>A compendium is a <a href="https://www.merriam-webster.com/dictionary/compendium">"a brief summary of a larger work or of a field of knowledge."</a></p>-->
@@ -27,7 +27,7 @@
 
     <div id="toc_container">
         <p class="toc_title">Table of Contents</p>
-        <ul class="toc_list">
+        <ul class="toc_list_no_bullet">
             <li style="margin-top:0.25rem;" >
                 <a href="#118w1">Week 1</a>
                 <ol class="toc_ol">
@@ -127,14 +127,32 @@
 
     <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
 
-        Suppose $a,b,c,d$ are real numbers.
-
         <ol>
-            <li class="lec-list-space">$\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$</li>
-            <li class="lec-list-space">$\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$</li>
-            <li class="lec-list-space">$\dfrac{a}{c} \pm \dfrac{b}{c} = \dfrac{a \pm b}{c}$</li>
+
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Multiplying fractions requires multiplying <b>global</b> context of the numerators and <b>global</b> context of the denominators.</div>
+            </li>
+            
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Dividing fractions requires taking the reciprocal of the right fraction, then multiplying.</div>
+            </li>
+
+            <li class="lec-list-space">
+                $\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Adding fractions with the same denominator requires adding the <b>global</b> context of the numerators together.</div>
+            </li>
+
             <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d}\qquad $ Find the LCD, then use Fraction Law 3.</li>
-            <li class="lec-list-space">$\dfrac{ac}{bc} = \dfrac{a}{b}$</li>
+
+            <li class="lec-list-space">
+                $\dfrac{ac}{bc} = \dfrac{a}{b}$
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Cancelling an entity $c$ requires the entity to be a <b>global</b> factor in <b>both</b> the numerator and denominator.</div>
+            </li>
         </ol>
     </div>
 
@@ -397,13 +415,11 @@
     <div class="math-def">
 
         <div class="large-screen">
-            <div style="display: flex; align-items:center; column-gap: 5vw;">
-                <div style="flex: 2";>
-                    <img class="img-shadow" src="/static/swrlly/images/teaching/118-1.10-1.svg" style="max-width:500px;"/>
-                </div>
-                <div style="flex: 1";>
-                    The <b>slope</b> of a line that runs through two points $P(x_1, y_1)$ and $Q(x_2, y_2)$ is \[m = \text{slope} = \dfrac{\text{rise}}{\text{run}} = \dfrac{y_2 - y_1}{x_2 - x_1}\]
-                </div>
+            <div>
+                <img class="img-shadow" src="/static/swrlly/images/teaching/118-1.10-1.svg" style="max-width:400px;"/>
+            </div>
+            <div style=" text-align: center;">
+                The <b>slope</b> of a line that runs through two points $P(x_1, y_1)$ and $Q(x_2, y_2)$ is \[m = \text{slope} = \dfrac{\text{rise}}{\text{run}} = \dfrac{y_2 - y_1}{x_2 - x_1}\]
             </div>
         </div>
 

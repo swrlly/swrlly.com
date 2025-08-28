@@ -1,19 +1,33 @@
 :root {
     /*--text-color: #C9D1D9;*/
     --text-color: #D3D3D3;
-    --background-col: #030303;
+    --background-col: #090909;
     --website-width:1000px;
 }
 
 p {
-    
     line-height: 175%;
+}
+
+.text-padding {
+    /*padding: 20px !important;*/
+    padding-top:50px;
+    padding-right:20px;
+    padding-left:20px;
+    padding-bottom:20px;
 }
 
 .container {
     max-width: var(--website-width);
     margin: 0 auto;
     text-align: justify;
+}
+
+.title-page-container {
+    padding:40px;
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0px 0px 50px black;
 }
 
 .smallcontainer {
@@ -55,7 +69,7 @@ html {
 
     --h1-color: #f9f9f9;
     --h2-color: #f9f9f9;
-    --card-color: #0f0f0f;
+    --card-color: #121212;
 
     /*--examplecolor: rgb(232, 162, 212)*/
     /*--lavender: rgb(170, 142, 235);*/
@@ -137,7 +151,15 @@ ol {
     text-decoration: none;
 }
 
-.nav-link:hover, .github-hover:hover { color:var(--lavender) !important; cursor:pointer;}
+.nav-link:hover { color:var(--lavender) !important; cursor:pointer;}
+
+.github-hover {
+    transition: all 0.3s;
+}
+
+.github-hover:hover {
+    filter: invert(66%) sepia(62%) saturate(2247%) hue-rotate(213deg) brightness(101%) contrast(94%);
+}
 
 .sc-hover:hover {color:rgb(254, 109, 53); cursor:pointer;}
 
@@ -343,14 +365,6 @@ ol {
     font-size: 4vh;
 }
 
-.text-padding {
-    /*padding: 20px !important;*/
-    padding-top: 50px;
-    padding-right:20px;
-    padding-left:20px;
-    padding-bottom:20px;
-}
-
 .albumicon {
     width: 100%;
     height: 100%;
@@ -424,6 +438,13 @@ ol {
 }
 
 /* teaching */
+
+.teaching-container {
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px black;
+    padding: 40px;
+}
 .prelim-list-space {
     padding-bottom: 1em;
 }
@@ -448,7 +469,7 @@ ol {
     border-radius: 20px; 
     background: linear-gradient(145deg, #000, #121212);
     box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;
-    border: 4px solid #1a1a1a;
+    border: 2px solid #1a1a1a;
     transition: all 0.15s ease;
 }
 
@@ -484,7 +505,7 @@ ol {
 
 
 .teachingicon:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
     box-shadow: inset 1px 1px 8px #b393ff, inset -1px -1px 8px #3994ff;
 }
 
@@ -881,7 +902,7 @@ ol {
     border-radius: 20px; 
     background: var(--card-color);
     /*box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;*/
-    border: 4px solid #000000;
+    border: 4px solid var(--card-color);
     transition: all 0.15s ease;
     display: table;
     padding:1rem;
@@ -905,9 +926,13 @@ ol {
     padding-left:1.2rem;
 }
 
+.toc_list_no_bullet {
+    list-style-type:circle;
+    padding-left:1.2rem;
+}
+
 .toc_li {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    padding-top: 1rem;
 }
 
 .toc_title {
@@ -940,6 +965,13 @@ ol {
     justify-content: center;
 }
 
+.blog-post-container {
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px black;
+    padding: 40px;
+}
+
 .blog-h2 {
     padding-top: 2em;
     color: var(--h2-colors);
@@ -970,8 +1002,9 @@ ol {
   border-left: solid 4px;
   padding: 20px 30px 20px 30px;
   border-color: var(--lavender);
-  box-shadow: 2px 0px 5px 0 rgb(55, 55, 55);
+  box-shadow: 5px 5px 5px #161616;
   border-radius: 0px 10px 10px 0px;
+  background: black;
 }
 
 .blog-2-quote {
@@ -987,8 +1020,8 @@ ol {
 }
 
 .page-title {
-    font-size: 5rem;
-    padding-bottom: 3rem;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
 }
 
 .blog-article {
@@ -1072,6 +1105,27 @@ ol {
   font-weight: 600;
 }*/
 
+@media screen and (max-width: 1000px) {
+    .teaching-container {
+        border: none;
+        box-shadow:none;
+        padding-right:20px;
+        padding-left:20px;
+    }
+
+    .blog-post-container {
+        border: none;
+        box-shadow:none;
+        padding-right:20px;
+        padding-left:20px;
+    }
+
+    .title-page-container {
+        margin-left:30px auto;
+        margin-right:30px auto;
+        margin-bottom:30px;
+    }
+}
 
 
 @media screen and (max-width: 600px) {
@@ -1089,12 +1143,7 @@ ol {
         display: inherit;
     }
 
-    .blog-2-quote {
-        display: block; 
-    }
-
     .blog-blockquote {
-        box-shadow: 1px 0px 10px 0 rgb(55, 55, 55);
         margin-bottom: 2rem;
     }
 
@@ -1142,6 +1191,14 @@ ol {
 
     .container {
         text-align:left;
+    }
+
+    .blog-2-quote {
+        display: block; 
+    }
+
+    .toc_li {
+        padding-top: 0.2rem;
     }
 
     .large-screen {display: none;}
