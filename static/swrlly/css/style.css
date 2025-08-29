@@ -1,38 +1,55 @@
+/* base selectors */
+
 :root {
     /*--text-color: #C9D1D9;*/
     --text-color: #D3D3D3;
     --background-col: #090909;
     --website-width:1000px;
+    --bold-weight: 600;
+    --list-line-height: 1.5;
+    --line-height: 1.75;
+    --paragraph-bottom-margin: 1rem;
+    --card-bottom-margin: 30px;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/static/fonts/OpenSans.woff2") format('woff2');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+*/}
+
+body {
+    background-color: var(--background-col) !important;
+    color: var(--text-color) !important;
+    font-family: 'Open Sans', sans-serif !important;   
+    margin: 0;
 }
 
 p {
-    line-height: 175%;
-}
-
-.text-padding {
-    /*padding: 20px !important;*/
-    padding-top:50px;
-    padding-right:20px;
-    padding-left:20px;
-    padding-bottom:20px;
+    line-height: var(--line-height);
+    margin-top: 0;
+    margin-bottom: var(--paragraph-bottom-margin);
 }
 
 .container {
     max-width: var(--website-width);
-    margin: 0 auto;
-    text-align: justify;
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    /*text-align: justify;*/
 }
 
-.title-page-container {
-    padding:40px;
-    border: 1px solid #1f1f1f;
-    border-radius: 24px;
-    box-shadow: 0px 0px 50px black;
-}
-
-.smallcontainer {
-    max-width: 900px;
-    margin: 0 auto;
+.text-padding {
+    padding-top:50px;
+    padding-right:20px;
+    padding-left:20px;
+    padding-bottom:20px;
 }
 
 ::selection {
@@ -67,8 +84,8 @@ html {
 
     --fade-in-time: 0.35s;
 
-    --h1-color: #f9f9f9;
-    --h2-color: #f9f9f9;
+    --h1-color: #e8e8e8;
+    --h2-color: #e8e8e8;
     --card-color: #121212;
 
     /*--examplecolor: rgb(232, 162, 212)*/
@@ -76,23 +93,12 @@ html {
     /* --lavender: rgb(188, 167, 238); */
 }
 
+img, svg {
+  vertical-align: middle;
+}
+
 img {
-    width: 100%;
-}
-
-body {
-    background-color: var(--background-col) !important;
-    color: var(--text-color) !important;
-    font-family: 'Open Sans', sans-serif !important;   
-}
-
-#background {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
+       width: 100%;
 }
 
 a {
@@ -107,65 +113,152 @@ a:hover {
 
 
 b {
+    font-weight: var(--bold-weight);
     color: var(--lavender)
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
 h1 {
+    font-size: calc(1.375rem + 1.5vw);
     color: var(--h1-color);
 }
 
 h2 {
+    font-size: calc(1.325rem + .9vw);
     padding-top: 1.25em;
     color: var(--h2-color);
     text-align: left;
 }
 
 h3 {
+    font-weight: 400;
+    font-size: calc(1.3rem + .6vw);
     padding-top: 0.75em;
-    color: var(---h2-color);
+    color: var(--h2-color);
     text-align: left;
 }
 
 h4 {
+    font-size: calc(1.275rem + .3w);
     padding-top: 0.5em;
 }
 
-.musich2 {
-    padding-top: 0.75em;
-    color: var(--h2-color);
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
 }
 
 th, td {
     color: var(--text-color);
 }
 
-ol {
+ol, ul {
     margin-bottom: 0;
+    line-height: var(--list-line-height);
+    padding-left: 2rem;
 }
 
-.teachingheader {
-    font-size: 3rem;
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+
+blockquote {
+    line-height: 1.5;
+    margin-bottom: var(--paragraph-bottom-margin);
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+
+
+
+
+
+
+/* new selectors */
+
+.title-page-container {
+    padding:40px;
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0px 0px 50px black;
+    background-color: var(--background-col);
+
+}
+
+.smallcontainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.page-title {
+    font-size: calc(2.650rem + 1.8vw);
+    padding-bottom: 1.5rem;
+}
+
+.index-title {
+    font-size: calc(2em + 2vw);
 }
 
 .no-underline {
     text-decoration: none;
 }
 
-.nav-link:hover { color:var(--lavender) !important; cursor:pointer;}
-
-.github-hover {
-    transition: all 0.3s;
+.titleicons {
+    flex-direction: row;
+    display: flex;
+    gap: 1.5rem;
 }
 
-.github-hover:hover {
-    filter: invert(66%) sepia(62%) saturate(2247%) hue-rotate(213deg) brightness(101%) contrast(94%);
+.titleicon {
+    font-size: 4vh;
 }
 
-.sc-hover:hover {color:rgb(254, 109, 53); cursor:pointer;}
+.github-icon, .sc-icon, .spotify-icon, .yt-icon {
+    align-content: center;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+    color: var(--text-color);
+    font-size: min(1.75rem, 4vw);
+}
 
-.yt-hover:hover {color:rgb(205, 32, 31); cursor:pointer;}
+.github-icon:hover { color: var(--lavender); }
 
-.spotify-hover:hover {color:rgb(30, 215, 97); cursor:pointer;}
+.sc-icon:hover {color:rgb(254, 109, 53); cursor:pointer;}
+
+.yt-icon:hover {color:rgb(205, 32, 31); cursor:pointer;}
+
+.spotify-icon:hover {color:rgb(30, 215, 97); cursor:pointer;}
 
 .spotify-color {color:rgb(30, 215, 97) !important;}
 
@@ -174,22 +267,6 @@ ol {
 .bc-color {color: #1DA0C3 !important;}
 
 .sc-color {color:rgb(254, 109, 53) !important;}
-
-.nav-link{
-    color: var(--text-color) !important;
-    text-align: center;
-    font-size: 1.25rem;
-    /* First we need to help some browsers along for this to work.
-       Just because a vendor prefix is there, doesn't mean it will
-       work in a browser made by that vendor either, it's just for
-       future-proofing purposes I guess. */
-    -o-transition: var(--fade-in-time);
-    -ms-transition:var(--fade-in-time);
-    -moz-transition:var(--fade-in-time);
-    -webkit-transition:var(--fade-in-time);
-    /* ...and now for the proper property */
-    transition:var(--fade-in-time);
-}
 
 .fa-brands {
     color: var(--text-color);
@@ -281,6 +358,24 @@ ol {
     animation-delay: 1.65s;
 }
 
+.nav-link{
+    color: var(--text-color) !important;
+    text-align: center;
+    font-size: 1.25rem;
+    /* First we need to help some browsers along for this to work.
+       Just because a vendor prefix is there, doesn't mean it will
+       work in a browser made by that vendor either, it's just for
+       future-proofing purposes I guess. */
+    -o-transition: var(--fade-in-time);
+    -ms-transition:var(--fade-in-time);
+    -moz-transition:var(--fade-in-time);
+    -webkit-transition:var(--fade-in-time);
+    /* ...and now for the proper property */
+    transition:var(--fade-in-time);
+}
+
+.nav-link:hover { color:var(--lavender) !important; cursor:pointer;}
+
 .navbar-toggler {
     color: var(--text-color);
     border: 0px;
@@ -292,8 +387,16 @@ ol {
 }
 
 .navbar {
-    border-top: 2px solid var(--lavender);
+    display: flex;
+    flex-direction: row;
     transition: all var(--fade-in-time) ease-in-out;
+    padding: 0.5rem 0.5rem;
+
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    /*justify-content: space-between;*/
 }
 
 .navbar-icon {
@@ -302,6 +405,10 @@ ol {
     padding-left: 1rem;
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+.nav-item {
+    padding: 0.5rem 0.5rem;
 }
 
 .dropdownicon {
@@ -319,14 +426,6 @@ ol {
     min-height: 80vh;
     flex-direction: column;
     
-}
-
-.dayheader {
-    font-size: 1.25rem; 
-    /*background: rgb(160,198,255); 
-    background: linear-gradient(90deg, rgba(160,198,255,1) 0%, rgba(177,143,219,1) 68%, rgba(240,195,245,1) 100%);
-    background-clip: text; 
-    color: transparent;*/
 }
 
 @keyframes glow {
@@ -354,17 +453,6 @@ ol {
     font-size: 12vh;
 }
 
-.titleicons {
-    font-size: 4.6vh;
-    flex-direction: row;
-    display: flex;
-    gap: 3vh;
-}
-
-.titleicon {
-    font-size: 4vh;
-}
-
 .albumicon {
     width: 100%;
     height: 100%;
@@ -381,6 +469,7 @@ ol {
     height: 100%;
     border: 0;
     background: transparent;
+    padding: 0.375rem 0.75rem;
 }
 
 .dropdown-toggle:after {
@@ -396,7 +485,7 @@ ol {
     margin: 0 auto;
     display: flex;
     max-width: 30%;
-    min-width: 300px;
+    min-width: 250px;
     border-radius: 3px;
 }
 
@@ -415,7 +504,6 @@ ol {
 .music-landing-page-icon-styling {
     font-size: 60px;
     margin: 0 auto;
-    font-family: "Font Awesome 6 Brands";
     display: flex;
     justify-content: center;
     transition: transform 0.2s;
@@ -435,42 +523,6 @@ ol {
 .music-landing-page-one-row-text {
     padding-top:20px;
     padding-left:40px;
-}
-
-/* teaching */
-
-.teaching-container {
-    border: 1px solid #1f1f1f;
-    border-radius: 24px;
-    box-shadow: 0px 0px 20px black;
-    padding: 40px;
-}
-.prelim-list-space {
-    padding-bottom: 1em;
-}
-.hw-space {
-    padding-top:0.5em;
-    padding-bottom: 0.5em;
-}
-.lec-list-space {
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-}
-
-.teachingicons {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    column-gap: 3vw;
-    row-gap: 4vh;
-    margin: 0 auto;
-}
-
-.teachingicon {
-    border-radius: 20px; 
-    background: linear-gradient(145deg, #000, #121212);
-    box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;
-    border: 2px solid #1a1a1a;
-    transition: all 0.15s ease;
 }
 
 .musicicons {
@@ -504,13 +556,69 @@ ol {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* teaching */
+
 .teachingicon:hover {
     transform: scale(1.1);
     box-shadow: inset 1px 1px 8px #b393ff, inset -1px -1px 8px #3994ff;
 }
 
-.padding-top {
-    padding-top: 2vh;
+.teachingheader {
+    font-size: 3rem;
+}
+
+.dayheader {
+    font-size: 1.25rem; 
+    /*background: rgb(160,198,255); 
+    background: linear-gradient(90deg, rgba(160,198,255,1) 0%, rgba(177,143,219,1) 68%, rgba(240,195,245,1) 100%);
+    background-clip: text; 
+    color: transparent;*/
+}
+
+.teaching-container {
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px black;
+    padding: 40px;
+    margin-bottom: var(--card-bottom-margin);
+}
+.prelim-list-space {
+    padding-bottom: 1em;
+}
+.hw-space {
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
+}
+.lec-list-space {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.teachingicons {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 3vw;
+    row-gap: 4vh;
+    margin: 0 auto;
+}
+
+.teachingicon {
+    border-radius: 20px; 
+    background: linear-gradient(145deg, #000, #121212);
+    box-shadow: inset 10px 10px 20px #000, inset -10px -10px 20px #000;
+    border: 2px solid #1a1a1a;
+    transition: all 0.15s ease;
 }
 
 .iconcontainer {
@@ -545,7 +653,7 @@ ol {
 .math-def:before {
     content: "Definition:";
     color: var(--lavender);
-    font-weight: bold;
+    font-weight: var(--bold-weight);
 }
 
 .math-beware {
@@ -561,7 +669,7 @@ ol {
 
 .math-beware:before {
     content: "Careful:";
-    font-weight: bold;
+    font-weight: var(--bold-weight);
     animation-name: bewarecol;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -604,7 +712,7 @@ ol {
 .math-example:before {
     content: "Example:";
     color: var(--examplecolor);
-    font-weight: bold;
+    font-weight: var(--bold-weight);
 }
 
 .lecturep {
@@ -637,7 +745,7 @@ ol {
 .math-fact:before {
     content: "Fact:";
     color: var(--factcolor);
-    font-weight: bold;
+    font-weight: var(--bold-weight);
 }
 
 .math-theorem {
@@ -652,7 +760,7 @@ ol {
 .math-theorem:before {
     content: "Theorem:";
     color: var(--factcolor);
-    font-weight: bold;
+    font-weight: var(--bold-weight);
 }
 
 .math-notxt {
@@ -683,7 +791,7 @@ ol {
 .math-method:before {
     content: "Method:";
     color: var(--factcolor);
-    font-weight: bold;
+    font-weight: var(--bold-weight);
 }
 
 .math-btn {
@@ -911,6 +1019,23 @@ ol {
     margin-bottom: 2em;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .toc_link_style {
     color: var(--link-color);
     text-decoration:none;
@@ -924,6 +1049,7 @@ ol {
 .toc_list {
     list-style-type:decimal;
     padding-left:1.2rem;
+    line-height: var(--list-line-height);
 }
 
 .toc_list_no_bullet {
@@ -936,7 +1062,7 @@ ol {
 }
 
 .toc_title {
-    font-weight: 700;
+    font-weight: var(--bold-weight);
     text-align: center;
     font-size: 150%;
     color: var(--h2-color);
@@ -955,26 +1081,40 @@ ol {
     color: var(--text-color);
 }
 
-/*#toc_container li, #toc_container ul, #toc_container ul li{
-    list-style: outside none none !important;
-}*/
-
 .toc_above_intro {
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
+
+
+
+/* project page */
+
+.project-title {
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+/* blog */
+
 .blog-post-container {
     border: 1px solid #1f1f1f;
     border-radius: 24px;
     box-shadow: 0px 0px 20px black;
     padding: 40px;
+    margin-bottom: var(--card-bottom-margin);
 }
 
 .blog-h2 {
     padding-top: 2em;
-    color: var(--h2-colors);
+    color: var(--h2-color);
     text-align: left;
 }
 
@@ -1005,6 +1145,8 @@ ol {
   box-shadow: 5px 5px 5px #161616;
   border-radius: 0px 10px 10px 0px;
   background: black;
+  margin: 0;
+  margin-bottom: var(--paragraph-bottom-margin);
 }
 
 .blog-2-quote {
@@ -1014,15 +1156,14 @@ ol {
 }
 
 .blog-toc-grid {
-    display:grid; 
+    display: grid; 
     grid-template-columns: 2fr 1fr; 
     column-gap: 2vw;
+    align-items: center;
+    margin-top: -0.5rem;
 }
 
-.page-title {
-    font-size: 4rem;
-    padding-bottom: 1.5rem;
-}
+
 
 .blog-article {
     display:grid; 
@@ -1105,6 +1246,59 @@ ol {
   font-weight: 600;
 }*/
 
+/* icons */
+
+@font-face {
+  font-family: 'icons';
+  src: url('/static/fonts/icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.5;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-linkedin-square:before {
+  content: "\e901";
+}
+.i-github:before {
+  content: "\e900";
+}
+.i-bandcamp:before {
+  content: "\1f32c";
+}
+.i-spotify:before {
+  content: "\e902";
+}
+.i-youtube-play:before {
+  content: "\e903";
+}
+.i-soundcloud:before {
+  content: "\e904";
+}
+
+
+
+
+
+
+
+
+
+/* queries */
+
 @media screen and (max-width: 1000px) {
     .teaching-container {
         border: none;
@@ -1123,44 +1317,8 @@ ol {
     .title-page-container {
         margin-left:30px auto;
         margin-right:30px auto;
-        margin-bottom:30px;
+        margin-bottom: var(--card-bottom-margin);
     }
-}
-
-
-@media screen and (max-width: 600px) {
-    .music-service-icons {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 1.5vw;
-        row-gap: 4vh;
-        margin: 0 auto;
-        align-items: center;
-        max-width: 500px;
-    }
-
-    .music-landing-page-grid {
-        display: inherit;
-    }
-
-    .blog-blockquote {
-        margin-bottom: 2rem;
-    }
-
-    .blog-article-title {
-        font-size: 100%
-    }
-
-    .blog-article {
-        background: #1e1e1e;
-    }
-
-    /*.blog-toc-grid {
-        display:none;
-    }*/
-
-    .larger-screen {display: none;}
-    
 }
 
 @media screen and (max-width: 800px) {
@@ -1197,6 +1355,13 @@ ol {
         display: block; 
     }
 
+    .blog-blockquote {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .toc_li {
         padding-top: 0.2rem;
     }
@@ -1205,10 +1370,73 @@ ol {
 
 }
 
+
+@media screen and (max-width: 600px) {
+    .music-service-icons {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1.5vw;
+        /*row-gap: 4vh;*/
+        margin: 0 auto;
+        align-items: center;
+        max-width: 500px;
+    }
+
+    .music-landing-page-grid {
+        display: inherit;
+    }
+
+    .blog-article-title {
+        font-size: 100%
+    }
+
+    .blog-article {
+        background: #1e1e1e;
+    }
+
+    .blog-blockquote {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .larger-screen {display: none;}
+    
+}
+
 @media screen and (min-width: 800px) {
     .small-screen {display: none;}
 }
 
 @media only screen and (min-width: 600px) {
     .smaller-screen {display: none;}
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2  {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    .page-title {
+        font-size: 4rem;
+    }
+    .index-title {
+        font-size: 4rem;
+    }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

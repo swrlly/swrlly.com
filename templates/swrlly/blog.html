@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
     <head>
@@ -7,22 +6,14 @@
         {% block discord %}
         <meta property="og:title" content="blog"/>
         <meta name = "theme-color" content="#b39af0"/>
-        <meta property="og:description" content="math, data science and music"/>
+        <meta property="og:description" content="Math lecturer at Cal Poly SLO. Data enthusiast, mathematics educator and electronic music producer. Read about my thoughts here!"/>
         <meta property="og:url" content="https://swrlly.com/blog"/>
-        
+        <meta property="og:image" content="/static/swrlly/favicon.png" />
         {% endblock %}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>
+        <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
         <script>
         MathJax = {
@@ -40,38 +31,29 @@
     </head>
     
     <body>
-        
-        <!--<div class="fullScreen" id="background">
-            <canvas id="canvas2d"></canvas>
-        </div>
 
-        <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>-->
-
-        <nav class="navbar navbar-expand bg-transparent">
-            <div class="container">
-
-                <div id="navbarLinks">
-
-                    <ul class="nav navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/projects">projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/music">music</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog">blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/teaching">teaching</a>
-                        </li>
-                    </ul>
+        {% block navbar %}
+        <div style="border-top: 2px solid var(--lavender);"></div>
+        <div class="container">
+            <nav class="navbar bg-transparent">
+                <div class="nav-item">
+                    <a class="nav-link" href="/">home</a>
                 </div>
-            </div>
-        </nav>     
+                <div class="nav-item">
+                    <a class="nav-link" href="/projects">projects</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/music">music</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/blog">blog</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/teaching">teaching</a>
+                </div>
+            </nav>    
+        </div>
+        {% endblock %}   
         
         {% block content %}
         <div class = "container fade-in-text text-padding">

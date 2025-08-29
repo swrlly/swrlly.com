@@ -143,10 +143,9 @@ StarField.prototype._updateStarField = function() {
  * and not redrawing the whole frame
  */
 StarField.prototype._renderStarField = function() {
-    var i,
-        star;
+    var i, star;
     // Background
-    this.canvas.fillStyle = "rgba(0, 0, 0, 1)";
+    this.canvas.fillStyle = "#090909";
     this.canvas.fillRect(0, 0, this.width, this.height);
     // Stars
     for (i = 0; i < this.numStars; i++) {

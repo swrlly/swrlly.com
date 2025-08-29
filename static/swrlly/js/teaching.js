@@ -79,7 +79,7 @@ function ModifyIconFont() {
             icons[i].style["font-size"] = "1vw";
         }
         else {
-            icons[i].style["font-size"] = "1.3vw";
+            icons[i].style["font-size"] = "1.7vw";
         }
     }
     icons = document.querySelectorAll(".center-text-over-image, .large-center-text-over-image, .small-center-text-over-image, .vsmall-center-text-over-image, .vvsmall-center-text-over-image, .vvvsmall-center-text-over-image");

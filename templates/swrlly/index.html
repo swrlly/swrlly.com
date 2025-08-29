@@ -1,28 +1,18 @@
 <!doctype html>
 <html lang="en">
-    {% block title %}<title>swrlly</title>{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='swrlly/favicon.png')}}">
-
     <head>
+        {% block title %}<title>swrlly</title>{% endblock %}
         {% block discord %}
         <meta property="og:title" content="swrlly"/>
         <meta name = "theme-color" content="#b39af0">
-        <meta property="og:description" content="Math lecturer at Cal Poly SLO. Data enthusiast, mathematics educator and musician."/>
+        <meta property="og:description" content="Math lecturer at Cal Poly SLO. Data enthusiast, mathematics educator and electronic music producer."/>
         <meta property="og:url" content="https://swrlly.com"/>
         <meta property="og:image" content="/static/swrlly/favicon.png" />
         {% endblock %}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <!--<script src="{{url_for('static', filename='swrlly/js/starfield.js')}}"></script>-->
         <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
         {% block header %} {% endblock %}
@@ -30,50 +20,70 @@
 
 
     <body>
-
-        <!--<div class="fullScreen" id="background">
+        {% block animation %}
+        <div class="fullScreen" id="background">
             <canvas id="canvas2d"></canvas>
         </div>
-
-        <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>-->
+        <script>var starField = new StarField('background').render(1000, 0.5, 80);</script>
+        {% endblock %}
         
-        <nav class="navbar navbar-expand bg-transparent">
-            <div class="container">
-
-                <div id="navbarLinks">
-                    <ul class="nav navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/projects">projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/music">music</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog">blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/teaching">teaching</a>
-                        </li>
-                    </ul>
-
+        {% block navbar %}
+        <div style="border-top: 2px solid var(--lavender);"></div>
+        <div class="container">
+            <nav class="navbar bg-transparent">
+                <div class="nav-item">
+                    <a class="nav-link" href="/">home</a>
                 </div>
-                
-            </div>
-        </nav>      
+                <div class="nav-item">
+                    <a class="nav-link" href="/projects">projects</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/music">music</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/blog">blog</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="/teaching">teaching</a>
+                </div>
+            </nav>    
+        </div>
+        {% endblock %}
 
         {% block content %}
+        <div class="container" style="margin-top:10vh;">
+            <div class="container title-page-container fade-in-text text-padding" style="text-align: left;">
+                <h1 class="index-title">Hi, I'm Charlie</h1>
+                <p>Welcome to my personal website! I'm a mathematics teacher, data scientist, and electronic music producer. I was a former mathematics lecturer at Cal Poly; I've created <a href="/teaching">interactive lecture notes</a> and developed new approaches in precalculus pedagogy <a href="/blog/teaching-algebra-to-avoid-common-mistakes-terms-and-factors">to understand and prevent common algebraic mistakes</a> in the pursuit of equitable and quality mathematics teaching.</p>
+                
+                <p>I'm also a huge data enthusiast. Over the years I've done projects ranging from analyzing marine population dynamics using segmented regression to scraping Billboard and Genius to investigate differences between collaborative and solo songwriting. My analytics internship at <a href="https://www.houzz.com/">Houzz</a> was spent writing ETL pipelines, building Tableau boards for advertisement funnel analysis, and A/B testing. </p>
 
-        <!--<div class="container fade-in-text text-padding">
-            <h1 class="page-title">Hi, I'm Charlie.</h1>
-            <p>Mathematics educator, Python enthusiast, data geek, musician.</p>
-        </div>-->
+                <p>On my free time you'll find me producing <a href="/music">electronic music</a> and pursuing <a href="/projects">projects</a> ranging from reverse engineering, math, and web design/development.</p>
 
+                <p>I'm currently looking for my next role in data science or mathematics education. Shoot me an email at <span id="change"></span> if you'd like to chat!</p>
 
+                <div class = "titleicons fade-in-text">
+                    <div style="margin-left: auto;"></div>
+                    <a class="no-underline github-icon" href="https://github.com/swrlly/" target="_blank"> 
+                        <span class="i-github"></span>
 
-        <div class = "container">
+                    </a>
+                    <a class="no-underline sc-icon" href="https://soundcloud.com/swrlly/" target="_blank">
+                        <span class="i-soundcloud"></span>
+                       
+                    </a>
+                    <a class="no-underline yt-icon" href="https://www.youtube.com/channel/UCj4C0AeAZCwiWWntBrFVSqA" target="_blank">
+                        <span class="i-youtube-play"></span>
+
+                    </a>
+                    <a class="no-underline spotify-icon" href="https://open.spotify.com/artist/4QCigBPj4bUoMFsow7KQ9k?si=Pww4h3CXQheOxwopf-EeTA" target="_blank" rel="noopener noreferrer" aria-hidden="true">
+                        <span class="i-spotify"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class = "container">
 
             <div class = "parent d-flex justify-content-center align-items-center">
                 
@@ -94,9 +104,13 @@
                     </a>
                 </h2>
             </div>
-        </div>
+        </div>-->
 
         {% endblock %}
+
+        <script>
+        document.getElementById("change").innerHTML = "c" + "b" + "l" + "i" + "o" + "u" + "@" + "c" + "a" + "l" + "p" + "o" + "l" + "y" + "." + "e" + "d" + "u"
+        </script>
 
     </body>
 
