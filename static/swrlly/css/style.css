@@ -589,7 +589,7 @@ button {
 .teaching-container {
     border: 1px solid #1f1f1f;
     border-radius: 24px;
-    box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px 5px black;
     padding: 40px;
     margin-bottom: var(--card-bottom-margin);
 }
@@ -1107,7 +1107,7 @@ button {
 .blog-post-container {
     border: 1px solid #1f1f1f;
     border-radius: 24px;
-    box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px 5px black;
     padding: 40px;
     margin-bottom: var(--card-bottom-margin);
 }
