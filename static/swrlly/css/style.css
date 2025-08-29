@@ -12,6 +12,7 @@
     --card-bottom-margin: 30px;
     --trail-time: 2.5s;
     --title-page-border: #1f1f1f;
+    
 }
 
 @font-face {
@@ -90,6 +91,7 @@ html {
     --h1-color: #e8e8e8;
     --h2-color: #e8e8e8;
     --card-color: #121212;
+    --mobile-card-color: #1b1b1b;
 
     /*--examplecolor: rgb(232, 162, 212)*/
     /*--lavender: rgb(170, 142, 235);*/
@@ -1337,7 +1339,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     border: 2px solid black;
     border-radius: 10px;
     background: black;
-    box-shadow: inset 20px 20px 60px #000, inset -20px -20px 60px #1a1919;
+    box-shadow: inset 20px 20px 60px #000, inset -20px -20px 60px #191919;
     font-size: 90%;
 }
 
@@ -1467,9 +1469,10 @@ put delay first, then use delay anim to put blue border at bottom right corner
 
     .teachingicon {
         border-radius: 15px; 
-        background: linear-gradient(145deg, #000, #1a1a1a);
-        box-shadow: inset 5px 5px 10px #000, inset -5px -5px 10px #000;
-        border: 2px solid #1f1f1f;
+        background: var(--mobile-card-color);
+        box-shadow: none;
+        /*box-shadow: inset 5px 5px 10px #000, inset -5px -5px 10px #000;*/
+        /*border: 2px solid #1f1f1f;*/
         transition: all 0.15s ease;
     }
 
@@ -1508,6 +1511,11 @@ put delay first, then use delay anim to put blue border at bottom right corner
         max-width: 500px;
     }
 
+    .top-trail, .left-trail{
+        display: none;
+
+    }
+
     .music-landing-page-grid {
         display: inherit;
     }
@@ -1517,7 +1525,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     }
 
     .blog-article {
-        background: #1e1e1e;
+        background: var(--mobile-card-color);
     }
 
     .blog-blockquote {
