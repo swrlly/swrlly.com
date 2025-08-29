@@ -230,7 +230,7 @@ button {
     background: radial-gradient(200% 100% at right, var(--lavender), transparent 50%);
     offset-path: border-box;
     offset-anchor: 100% 50%;
-    offset-distance: 0.1%;
+    offset-distance: 0.6%;
     animation: top-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99), delay-animation calc(2 * var(--trail-time));
 }
 
@@ -253,8 +253,11 @@ button {
   50.001% {
     opacity: 0;
   }
+  70% {
+    opacity: 0;;
+  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
