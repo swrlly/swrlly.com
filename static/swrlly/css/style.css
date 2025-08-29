@@ -232,7 +232,7 @@ button {
     offset-path: border-box;
     offset-anchor: 100% 50%;
     offset-distance: 1.1%;
-    --webkit-animation: delay-animation calc(2 * var(--trail-time)), top-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
+    -webkit-animation: delay-animation calc(2 * var(--trail-time)), top-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
     animation: delay-animation calc(2 * var(--trail-time)), top-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
 }
 
@@ -298,7 +298,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     offset-path: border-box;
     /*offset-anchor: 73% 100%;*/
     offset-distance: 100%;
-    --webkit-animation: delay-animation-left calc(2 * var(--trail-time)) forwards, left-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
+    -webkit-animation: delay-animation-left calc(2 * var(--trail-time)) forwards, left-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
     animation: delay-animation-left calc(2 * var(--trail-time)) forwards, left-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99);
 }
 
