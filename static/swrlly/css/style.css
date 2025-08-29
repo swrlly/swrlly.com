@@ -10,6 +10,8 @@
     --line-height: 1.75;
     --paragraph-bottom-margin: 1rem;
     --card-bottom-margin: 30px;
+    --trail-time: 2.5s;
+    --title-page-border: #1f1f1f;
 }
 
 @font-face {
@@ -83,6 +85,7 @@ html {
     --blog-date-color: #9299a0;
 
     --fade-in-time: 0.35s;
+    --long-fade-in-time: 1.5s;
 
     --h1-color: #e8e8e8;
     --h2-color: #e8e8e8;
@@ -196,13 +199,84 @@ button {
 /* new selectors */
 
 .title-page-container {
-    padding:40px;
-    border: 1px solid #1f1f1f;
-    border-radius: 24px;
+    /*padding:40px;*/
+    /*border: 1px solid #1f1f1f;*/
+    /*border-radius: 24px;*/
+    padding: 0;
     box-shadow: 0px 0px 50px black;
-    background-color: var(--background-col);
-
+    /*background: var(--card-color) padding-box;*/
 }
+
+.title-page-content-container {
+    background: var(--background-col) padding-box;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.title-page-border {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 24px;
+    clip-path: inset(0px 0px 0px 0px round 24px);
+    background: var(--title-page-border);
+}
+
+.top-trail {
+    width: 200px;
+    aspect-ratio: 2 / 1;
+    position: absolute;
+    background: radial-gradient(200% 100% at right, var(--lavender), transparent 50%);
+    offset-path: border-box;
+    offset-anchor: 100% 50%;
+    offset-distance: 0.1%;
+    animation: top-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99), delay-animation calc(2 * var(--trail-time));
+}
+
+@keyframes top-trail-animation {
+    100% {
+        offset-distance: 50%;
+    }
+}
+
+@keyframes delay-animation {
+  0% {
+    opacity: 0.01;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  50.001% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.left-trail {
+    width: 200px;
+    aspect-ratio: 2;
+    position: absolute;
+    background: radial-gradient( 200% 100% at left, var(--lightblue), transparent 50%);
+    offset-path: border-box;
+    /*offset-anchor: 73% 100%;*/
+    offset-distance: 100%;
+    animation: left-trail-animation var(--trail-time) cubic-bezier(0.54, 0.01, 0.08, 0.99) forwards, delay-animation calc(2 * var(--trail-time));
+}
+
+@keyframes left-trail-animation {
+    100% {
+        offset-distance: 50%;
+    }
+}
+
+
 
 .smallcontainer {
     max-width: 900px;
@@ -286,7 +360,6 @@ button {
 
 .fade-in-text {
     opacity: 0;
-    transform: translateX(-10px);
     animation: fadeIn linear var(--fade-in-time) forwards;
     -webkit-animation: fadeIn linear var(--fade-in-time) forwards;
     -moz-animation: fadeIn linear var(--fade-in-time) forwards;
@@ -294,14 +367,23 @@ button {
     -ms-animation: fadeIn linear var(--fade-in-time) forwards;
 }
 
+.long-fade-in-text {
+    opacity: 0;
+    animation: fadeIn linear var(--long-fade-in-time) forwards;
+    -webkit-animation: fadeIn linear var(--long-fade-in-time) forwards;
+    -moz-animation: fadeIn linear var(--long-fade-in-time) forwards;
+    -o-animation: fadeIn linear var(--long-fade-in-time) forwards;
+    -ms-animation: fadeIn linear var(--long-fade-in-time) forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateX(-10px);
+        transform: translateY(+10px);
     }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
     }
 }
 
@@ -314,48 +396,60 @@ button {
     -ms-animation: fadeIn linear 0.5s forwards;
 }
 
-#second {
+#d-2 {
     animation-delay: 0.15s;
 }
 
-#third {
+#d-3 {
     animation-delay: 0.3s;
 }
 
-#fourth {
+#d-4 {
     animation-delay: 0.45s;
 }
 
-#fifth {
+#d-5 {
     animation-delay: 0.6s;
 }
 
-#sixth {
+#d-6 {
     animation-delay: 0.75s;
 }
 
-#seventh {
+#d-7 {
     animation-delay: 0.9s;
 }
 
-#eighth {
+#d-8 {
     animation-delay: 1.05s;
 }
 
-#ninth {
+#d-9 {
     animation-delay: 1.2s;
 }
 
-#tenth {
+#d-10 {
     animation-delay: 1.35s;
 }
 
-#eleventh {
+#d-11 {
     animation-delay: 1.5s;
 }
 
-#twelvth {
+#d-12 {
     animation-delay: 1.65s;
+}
+
+#d-13 {
+    animation-delay: 1.8s;
+}
+
+#d-14 {
+    animation-delay: 1.95s;
+}
+
+#d-15 {
+    animation-delay: 2.1s;
 }
 
 .nav-link{
@@ -587,7 +681,7 @@ button {
 }
 
 .teaching-container {
-    border: 1px solid #1f1f1f;
+    /*border: 1px solid #1f1f1f;*/
     border-radius: 24px;
     box-shadow: 0px 0px 20px 5px black;
     padding: 40px;
