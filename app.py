@@ -63,14 +63,18 @@ def Robots():
 @app.route("/<path:path>")
 def CatchAll(path):
     # render_template escapes strings
+    print(path)
     try:
         #safe = "/templates/swrlly/"
+        print(path)
         if path.endswith(".html"): path = path[:-5]
         lastEdited = time.asctime(time.gmtime(os.path.getmtime("templates/swrlly/" + path + ".html")))
         lastEdited = re.split("\\s+", lastEdited)
         lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
         return render_template("swrlly/" + path + ".html", cssVersion=cssVersion, lastEdited = lastEdited)
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         print(e, "f")
         return render_template("swrlly/errors/404.html", cssVersion=cssVersion)
 
@@ -90,7 +94,8 @@ def page_not_found(e):
             if handler is not None:
                 # if a handler was found, return it's response
                 return handler(e)
-    
+                
+
     # return original site 404
     return render_template("swrlly/errors/404.html")
 

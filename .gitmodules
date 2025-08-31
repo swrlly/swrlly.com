@@ -1,3 +1,6 @@
 [submodule "darzadata"]
 	path = darzadata
 	url = https://github.com/swrlly/darzadata.git
+[submodule "RotMG-Time-Series"]
+	path = RotMG-Time-Series
+	url = https://github.com/swrlly/RotMG-Time-Series.git

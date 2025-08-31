@@ -18,7 +18,7 @@
     <link href="{{url_for('static', filename='darzacharts/css/style.css')}}" rel="stylesheet">
     {% block header %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highstock/6.0.3/highstock.js" integrity="sha512-xStuxZIFeepdcpLwBhqIuU761mDfYUDbV8C8lUiTX96W+kyL+AYmY9l3o/Ku30gEek9l+hUJGQpmT4pcVm6LeA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{url_for('static', filename='darzacharts/js/graphdata.js')}}"></script>
+    <script rel="preconnect" src="/static/darzacharts/js/graphdata.js"></script>
     {% endblock %}
     </head>
     
