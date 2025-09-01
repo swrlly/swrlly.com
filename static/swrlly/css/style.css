@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300 800;
   font-stretch: 100%;
@@ -25,7 +25,7 @@
 */}
 
 @font-face {
-  font-family: 'Source Code Pro, monospace;';
+  font-family: "Source Code Pro, monospace";
   font-style: normal;
   font-weight: 300 800;
   font-stretch: 100%;
@@ -95,7 +95,7 @@ html {
     --lecl-event-color: #0d3276;
     --quizl-event-color: rgb(69, 10, 88);
 
-    --blog-date-color: #9299a0;
+    --blog-date-color: #9fa0a0;
 
     --fade-in-time: 0.35s;
     --long-fade-in-time: 1.5s;
@@ -114,6 +114,12 @@ html {
     --vscode-lightblue: #B0D6F5; /*args in function */
     --vscode-lightgreen: #BACA9E;/* numbers */
     --vscode-darkgreen: #799461; /* comments */
+
+    --h1-size: calc(1.375rem + 1.5vw - 0.4rem);
+    --h2-size: calc(1.325rem + .9vw  - 0.3rem);
+    --h3-size: calc(1.3rem + .6vw  - 0.2rem);
+    --h4-size: calc(1.275rem + .3w  - 0.1rem);
+    --h5-size: 0.95rem;
 
     /*--examplecolor: rgb(232, 162, 212)*/
     /*--lavender: rgb(170, 142, 235);*/
@@ -331,8 +337,6 @@ put delay first, then use delay anim to put blue border at bottom right corner
         offset-distance: 45%;
     }
 }
-
-
 
 .smallcontainer {
     max-width: 900px;

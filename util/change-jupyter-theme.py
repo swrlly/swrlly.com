@@ -4,8 +4,32 @@ import re
 
 
 
-r = """.highlight .nb { color: var(--vscode-lightgreen) } 
-.hl-ipython3 {background-color: var(--card-color); color: var(--text-color); line-height: 1.5; padding: 10px;}"""
+r = """.highlight .nb { color: var(--vscode-lightgreen); } 
+.hl-ipython3 {background-color: var(--card-color); color: var(--text-color); line-height: 1.5; padding: 10px; overflow: scroll; font-family: "Source Code Pro, monospace"}
+.pre {color: var(--text-color); }
+.modifyImg {width: 80%; margin: 0 auto; display: flex;}
+.modifyPrintText {color: var(--text-color);}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2  {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    .page-title {
+        font-size: 4rem;
+    }
+    .index-title {
+        font-size: 4rem;
+    }
+}
+"""
 #.highlight .n { color: var(--vscode-lightblue)} /* base funcs */
 
 """
@@ -20,16 +44,46 @@ r = """.highlight .nb { color: var(--vscode-lightgreen) }
 """
 
 replace = {
+    # remove keywords/operator bold
     ".highlight .o { color: var\(--jp-mirror-editor-operator-color\); font-weight: bold }" : ".highlight .o { color: var(--text-color) }",
     ".highlight .ow { color: var\(--jp-mirror-editor-operator-color\); font-weight: bold }" : ".highlight .ow { color: var(--vscode-pink); }",
     ".highlight .kc { color: var\(--jp-mirror-editor-keyword-color\); font-weight: bold }" : ".highlight .kc { color: var(--vscode-blue); }",
-    "</style>" : r + "</style>",
+    # inject css
+    "</style>\n.+text/css.+>" : r + "</style>\n<style type=\"text/css\">",
+    # change df table print
     ".jp-OutputArea-output {\n.+display: table-cell;" : ".jp-OutputArea-output {\n display: table-cell; margin-top: 2rem; margin-bottom: 2rem;\n",
     ".jp-Cell-outputWrapper {\n.+display: flex;" : ".jp-Cell-outputWrapper {\ndisplay: flex;margin-top:1rem;\nmargin-bottom:1rem;",
-    # table
-    "var\(--jp-layout-color0\)": "var(--card-color)",
     "var\(--jp-rendermime-table-row-background\)": "var(--ligthter-card-color)",
-    ".jp-MarkdownOutput {": ".jp-MarkdownOutput {color: var(--text-color);\n"
+    "--jp-rendermime-table-row-hover-background: var\(--md-light-blue-50\);": "--jp-rendermime-table-row-hover-background: var(--lighter-card-color);",
+    # forgot
+    "var\(--jp-layout-color0\)": "var(--card-color)",
+    # md font color
+    ".jp-MarkdownOutput {": ".jp-MarkdownOutput {color: var(--text-color);\n",
+    #"a {\n.+\n.+\n}" : "a {text-decoration: unset; color: var(--link-color);}",
+    "a:hover {\n.+\n.+\n}" : "a:hover {text-decoration: unset; color: var(--link-hover-color);}",
+    "--jp-content-link-color: var\(--md-blue-900\);" : "--jp-content-link-color: var(--link-color);",
+    # remove code blocks
+    "<div class=\"jp-OutputPrompt jp-OutputArea-prompt\">.*</div>": "",
+    "<div class=\"jp-InputPrompt jp-InputArea-prompt\">.*(\r\n|\r|\n)*.*</div>": "",
+    """<div class="jp-OutputArea-child jp-OutputArea-executeResult">.+(\r\n|\r|\n)*.+<div class="jp-OutputPrompt jp-OutputArea-prompt">.*</div>.*(\r\n|\r|\n)*.*<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex=".*">.*(\r\n|\r|\n)*.*<pre>.+</pre>.*(\r\n|\r|\n)*.*</div>.*(\r\n|\r|\n)*.*</div>""": "",
+    "<div class=\"jp-OutputPrompt jp-OutputArea-prompt\"></div>": "",
+    #don't do this it screws up svgs which screws up mathjax
+    #".jp-RenderedSVG svg {": ".jp-RenderedSVG svg {width: 80%; margin: 0 auto; display: flex;",
+    #inline code
+    "--jp-content-font-color1: rgba\(0, 0, 0, 0.87\);": "--jp-content-font-color1: var(--text-color);",
+    "--jp-layout-color2: var\(--md-grey-200\);": "--jp-layout-color: var(--lighter-card-color);",
+    "<img.+class=\"\"": "<img class=\"modifyImg\"",
+    # print statement font
+    "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\".+>\n*<pre>": "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\" tabindex=\"0\">\n*<pre class=\"modifyPrintText\">",
+    # time to change headers and paragraph decls
+    #"--jp-content-heading-line-height: 1;": 
+    # Base font size 
+    "--jp-content-font-size1: 14px;":  "--jp-content-font-size1: var(--h5-size);, 
+    "--jp-content-font-size2: 1.2em;": "--jp-content-font-size2: var(--h4-size);",
+    "--jp-content-font-size3: 1.44em;":  "--jp-content-font-size3: var(--h3-size);",
+    "--jp-content-font-size4: 1.728em;": "--jp-content-font-size4: var(--h2-size);",
+    "--jp-content-font-size5: 2.0736em;" :  "--jp-content-font-size5: var(--h1-size);"
+
 }
 
 numbers= "var\(--jp-mirror-editor-number-color\)"
