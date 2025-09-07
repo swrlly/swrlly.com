@@ -1,0 +1,88 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 2.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.5: The Chain Rule"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/2.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h2>2.5: The Chain Rule</h2><hr>
+
+    <p>We further build our understanding of the derivative by looking at compositions of functions next.</p>
+
+    <p>For example, how would you take the derivative of $F(x) = \sin(x^2)$?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Chain Rule</b><br>
+        If $h(x) = f(g(x))$, then \[h'(x) = \dfrac{d}{dx}f(g(x)) = f'(g(x))\cdot g'(x)\] If we write $u = g(x)$, meaning $y = h(x) = f(g(x)) = f(u)$, then \[\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}\]
+    </div>
+
+    <p>In other words, $h'(x)$ is the derivative of the outside function evaluated at the inside function, then multiplied by the derivative of inside.</p>
+
+    <div class="math-example">
+        Let $F(x) = (3x+1)^2$.
+        <ol>
+            <li class="lec-list-space">Find $F'(x)$ using the chain rule.</li>
+            <li class="lec-list-space">Find $F'(x)$ without using the chain rule.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \sqrt{x^2 + 1}$</li>
+            <li class="lec-list-space">$F(x) = \sin(x^2)$</li>
+            <li class="lec-list-space">$F(x) = \sin^2(x)$</li>
+        </ol>
+    </div>
+
+    <p>The chain rule is used when a function is taken to a power, for example \[(2x+5)^5 \qquad \sqrt{4x^2 + 2x + 1} \qquad (4x^5 + 3x^2 + 1)^{6/5}\]
+        This means the outside function $f(x) = x^n$ sometimes! Thus:  
+    </p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The General Power Rule</b><br> If $g$ is differentiable and $h(x) = [g(x)]^n$, then \[h'(x) = \dfrac{d}{dx}[g(x)]^n = n[g(x)]^{n-1}g'(x)\]</div>
+
+    <div class="math-example"> Differentiate $y = (x^3-1)^{100}$.</div>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \dfrac{1}{\sqrt[3]{x^2 + x + 1}}$</li>
+            <li class="lec-list-space">$H(t) = \left(\dfrac{t - 2}{2t + 1}\right)^9$</li>
+        </ol> 
+    </div>
+
+    <h2>Longer Chains</h2>
+
+    <p>Suppose $y = f(g(h(t)))$. Assigning $y = f(u), u = g(x), x = h(t)$, what is $\dfrac{dy}{dt}$?</p>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \sin(\cos(\tan(x)))$</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

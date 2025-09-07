@@ -1,0 +1,87 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 2.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.3: Using the Graph"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>2.3: Using the Graph</h1>
+
+    <p>The graph tells us a wealth of information about a function.</p>
+
+    <h2>Domain</h2><hr>
+
+    <p>Finding domain is as simple as dropping points down to the $x$-axis.</p>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Domain from a Graph</b>
+        <p>Imagine the points drop straight down by gravity:</p>
+            
+        <img class="img-shadow" src="/static/swrlly/images/teaching/118-2.3-1.svg" style="max-width:500px; max-height:400px;"/>
+
+    </div>
+
+    <div class="math-example">
+        Determine the domain of the function $f(x) = \sqrt{4 - x^2}$.
+    </div>
+
+    <h2>Solving Equations and Inequalities</h2><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Solving $f(x) = g(x)$ and $f(x) < g(x)$</b><br>
+        The solutions to the equation $f(x) = g(x)$ are the $x$-values where the graphs intersect. <br>
+
+        The solutions to the inequality $f(x) < g(x)$ are the $x$-values where the graph of $f(x)$ is under $g(x)$.
+    </div>
+
+    <div class="math-example">
+        Solve the following equation and inequality:
+        <ol>
+            <li>$2x^2 + 3 = 5x + 6$</li>
+            <li>$2x^2 + 3 \leq 5x + 6$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Solve the inequality\[$x^3 + 6 \geq 2x^2 + 5x\]
+
+        <b>Hint</b> Subtract both sides by $2x^2 + 5x$ and solve $x^3 - 2x^2 - 5x + 6 \geq 0$ instead.
+    </div>
+
+    <h2>Increasing/Decreasing Functions</h2><hr>
+
+    <div class="math-def"> <b>increasing, decreasing function</b> <br>
+        $f$ is increasing on an interval $I$ if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$ in $I$. <br>
+
+        $f$ is decreasing on an interval $I$ if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$ in $I$.
+    </div>
+
+    <div class="math-example"> 
+        Find the intervals where \[f(x) = 12x^2 + 4x^3 - 3x^4\] are increasing and decreasing.
+    </div>
+
+    <div class="math-example">
+        Find the intervals where \[f(x) = x^{2/3}\] are increasing and decreasing.
+    </div>
+
+    <h2>Local Maxima and Minima</h2><hr>
+
+    <div class="math-def"> <b>local maximum, local minimum</b> <br>
+        The number $f(a)$ is a local maximum value of $f$ if $f(a) \geq f(x)$ when $x$ is near $a$. <br>
+        The number $f(a)$ is a local minimum value of $f$ if $f(a) \leq f(x)$ when $x$ is near $a$. <br>
+    </div>
+
+    <div class="math-example"> 
+        Find all local minima and maxima for the function \[f(x) = 12x^2 + 4x^3 - 3x^4\]
+    </div>
+
+
+</div>
+
+{% endblock %}

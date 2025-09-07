@@ -1,0 +1,63 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.8: Inequalities"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.8"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.8: Inequalities</h1>
+
+    <p>Inequalities are just equations with the $=$ replaced with $<, >, \leq$ or $\geq$.</p>
+
+    <p>For example: \[3x + 5 \leq 17\] is an inequality.</p>
+
+    <p>We are interested in solving these, similar to <a href="/teaching/math-118/lectures/1.5">solving equations in Section 1.5</a>.</p>
+
+    <p>To manipulate inequalities, use these properties:</p>
+
+    <div class="math-fact">  <b style="color: var(--factcolor)">Properties of Inequalities</b>
+        <ul>
+            <li>If $A \leq B$, then $A \pm C \leq B \pm C$.
+                <br> <b>English</b> Adding the same number on both sides does not flip the inequality.
+            </li>
+            <li>If $C > 0$, then given $A \leq B$, we know $A\cdot C \leq B\cdot C$. 
+                <br> <b>English</b> Multiplying a positive number on both sides does not flip the inequality.
+            </li>
+            <li>If $C < 0$, then:
+                <ul>
+                    <li>Given $A \leq B$, we know $A\cdot C \geq B \cdot C$
+                    </li>
+                    <li>Given $A < B$, we know $A\cdot C > B \cdot C$
+                        <br> <b>English</b> Multiplying a negative number on both sides flips the inequality.
+                    </li>
+                </ul>
+                
+            </li>
+        </ul>
+    </div>
+
+    <h2>Solving Linear Inequalities</h2><hr>
+
+    <p>To solve an inequality, isolate the variable using the previous properties.</p>
+
+    <div class="math-example">
+        Solve the inequality $3x < 9x + 4$.
+    </div>
+
+    
+    <div class="math-example">
+        Solve the inequality $4 \leq 3x - 2 < 13$.
+    </div>
+
+</div>
+
+
+{% endblock %}

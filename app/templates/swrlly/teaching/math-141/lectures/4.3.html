@@ -1,0 +1,98 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 4.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.3: The Fundamental Theorem of Calculus"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/4.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>4.3: The Fundamental Theorem of Calculus</h1><hr>
+
+    <h2>Motivation</h2>
+
+    <p>We derived the formula for the area underneath the curve for $f(x) = x^2$ on $[0, 1]$:
+        \[\int^1_0 x^2 \ dx = \lim_{n\rightarrow \infty} \dfrac{1}{n^3} \sum^n_{i = 1}i^2\]
+
+        This sum formula is not so easy to deal with.
+    </p>
+
+    <p>In this section we find a simple way to find definite integrals by answering two questions:
+        <ol>
+            <li><b>What</b> is the relationship between the derivative and the integral?</li>
+            <li><b>How</b> do we exploit this relationship to easily find definite integrals?</li>
+        </ol>
+    </p>
+
+    <h2>FTC Part 1 (the What)</h2><hr>
+
+    <p>Consider the function \[g(x) = \int^x_a f(t) \ dt\] where $f(t)$ is a continuous function on $[a, b]$.</p>
+
+    <div class="math-example"> Consider $f(x) = x^2$ on $[0, 5]$. Then $g(3)$ is equal to \[g(3) = \int^3_0 x^2 \ dx\]
+        which is the area underneath the curve of $x^2$ on $[0, 3]$.
+    </div>
+
+    <p>In other words, this function gives you control over the right bound of integration for function $f$.</p>
+
+    <p>We now take the derivative of $g(x)$.</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Fundamental Theorem of Calculus, Part 1</b><br>
+
+        If $f$ is continuous on $[a, b]$, then the function \[g(x) = \int^x_a f(t) \ dt \qquad a \leq x \leq b\] is also continuous on $[a, b]$, differentiable on $(a, b)$, and $g'(x) = f(x)$.
+    </div>
+
+    <div class="math-example">
+        Find the derivative of the function \[g(x) = \int^x_0 \sqrt{1 + t^2} \ dt\]
+    </div>
+
+    <div class="math-example">
+        Find the derivative of the function \[g(x) = \int^0_x \sin(t) \ dt\]
+    </div>
+
+    <h4>Intuition for FTC Part 1</h4><hr>
+
+    <p>Note that the independent variable for $g$ is $x$. When you take the derivative it is respect to $x$.
+    </p>
+    <p> So FTC Part 1's conclusion, $g'(x) = f(x)$, is really saying \[g'(x) = \dfrac{d}{dx} \int^x_a f(t) \ dt = f(x) \]</p>
+
+    <p>In plain English, this says starting with function $f$, <b>if you integrate first, then take the derivative second</b>, then you end up back with $f(x)$.</p>
+
+    <p>This means the integral and derivative are <b>inverse processes</b>: each undoes what the other has done.</p>
+
+    <p><a href="/teaching/math-141/lectures/3.9">In Section 3.9</a> we saw the opposite process of the derivative is the <b>antiderivative</b>.</p>
+
+    <p>Therefore, finding integrals involves taking antiderivatives.</p>
+
+    <h2>FTC Part 2 (the How)</h2><hr>
+
+    <p>To find any definite integral using antiderivatives, we have the following theorem:</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Fundamental Theorem of Calculus, Part 2</b><br>
+
+        If $f(x)$ is continuous on $[a, b]$, then \[\int^b_a f(x) \ dx = F(b) - F(a)\] where $F(x)$ is <b>any antiderivative</b> of $f(x)$.
+    </div>
+
+    <p>Notation: to succinctly represent $F(b) - F(a)$, we use a vertical bar\[F(x) \Bigg|^b_a=F(b) - F(a) \]</p>
+
+    <div class="math-example"> Integrate $\displaystyle \int^1_0 x^2 \ dx$. </div>
+
+    <div class="math-example"> Integrate $\displaystyle \int^1_0 1 + 4x \ dx$. </div>
+
+    <div class="math-example"> Integrate $\displaystyle \int^{\pi/2}_0 x + \cos x \ dx$. </div>
+
+    <div class="math-example"> Try integrating using FTC Part 2: \[\int^3_{-1} \dfrac{1}{x^2} \ dx\] What is wrong with this calculation?</div>
+
+    <p>The Fundamental Theorem of Calculus is one of the most important mathematical achievements in human history.</p>
+
+    <p>Instead of having to calculate a difficult infinite limit sum, we can use antiderivatives instead! It's like magic.</p>
+
+
+
+</div>
+{% endblock %}

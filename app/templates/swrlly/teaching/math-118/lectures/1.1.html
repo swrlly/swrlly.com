@@ -1,0 +1,317 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.1: Real Numbers"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.1"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>1.1: Real Numbers</h1>
+    <h2>Real Numbers</h2><hr>
+    <p>Let's review what the real numbers are.</p>
+
+    <p>The <b>natural numbers</b> look like $1, 2, 3, 4, 5, \dots$.</p>
+
+    <p><b>Integers</b> comprise of the natural numbers, their negatives, and zero: \[\dots, -3, -2, -1, 0, 1, 2, 3, \dots\]</p>
+
+    <p><b>Rational numbers</b> are all possible ratios of integers. They look like \[r = \dfrac{m}{n}\] where $m$ and $n$ are integers, $n \neq 0$.</p>
+
+    <p><b>Irrational numbers</b> are numbers that cannot be written as a ratio of integers. For example \[\sqrt{2}, \qquad \sqrt{3}, \qquad \pi, \qquad \dfrac{3}{\pi},\] are all irrational.</p>
+
+    <p><b>Real numbers</b> are numbers that are either rational or irrational.</p>
+
+    <p>If a number is rational, its decimal representation repeats. If it is irrational, the decimal representation will never repeat.</p>
+
+    <div class="math-example">
+        For each number, decide if it is natural, integer, rational, or irrational. It can be more than one.
+        <ul>
+            <li class="lec-list-space">$\dfrac{1}{2}$</li>
+            <li class="lec-list-space">$3.5474747\dots = 3.5\overline{47}$</li>
+            <li class="lec-list-space">$5$</li>
+            <li class="lec-list-space">$\sqrt{2} = 1.414213562373095\dots$</li>
+        </ul>
+    </div>
+
+    <h2>Multiplication and Division</h2><hr>
+
+    <p>The number 1 is called the <b>multiplicative identity</b> because it is the only real number where $a \cdot 1 = a$.</p>
+
+    <p>Similar to negatives, every real number $a$ has an <b>inverse</b>, denoted $1/a$ where \[a \cdot \dfrac{1}{a} = 1\]</p>
+
+    <p>Division is the operation that undoes multiplication. To divide by $b$, we just multiply by $1/b$. If $b\neq 0$, \[a\div b = a \cdot \frac{1}{b} = \dfrac{a}{b}\]</p>
+
+    <p>Hey look: above we had fractions! Here are the five ways to deal with fractions.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+        <ol>
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Multiplying fractions requires multiplying <b>global</b> context of the numerators and <b>global</b> context of the denominators.</div>
+            </li>
+            
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Dividing fractions requires taking the reciprocal of the right fraction, then multiplying.</div>
+            </li>
+
+            <li class="lec-list-space">
+                $\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Adding fractions with the same denominator requires adding the <b>global</b> context of the numerators together.</div>
+            </li>
+
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d}\qquad $ Find the LCD, then use Fraction Law 3.</li>
+
+            <li class="lec-list-space">
+                $\dfrac{ac}{bc} = \dfrac{a}{b}$
+                <div style="padding-top: 0.75rem;"><b>Meaning</b> Cancelling an entity $c$ requires the entity to be a <b>global</b> factor in <b>both</b> the numerator and denominator.</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Can I cancel out the $x^2$ in \[\dfrac{x^2 + 1}{x^2 + 2}\]
+        Why or why not?
+
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Cancelling requires global factors.<br>
+            $x^2$ is a global term in numerator/denominator.<br> You cannot cancel.
+        </div>
+    </div>
+
+    <div class="math-example">
+        Can you cross out the $x-1$ in \[\dfrac{(x-1)(x+2) + 3x^2}{(x-1)(x+3)}\]
+        Why or why not?
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Cancelling requires global factors.<br>
+            $(x-1)$ is a global factor in denominator but $(x-1)$ is a <b>local</b> factor in the numerator. <br> You cannot cancel.
+        </div>
+    </div>
+
+    <div class="math-example">
+        Can you cross out the $\color{pink}x$ in \[\dfrac{ {\color{pink}x} (x-1)(x+1)}{2 {\color{pink}x} + 1}\]
+        Why or why not?
+
+        <button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Cancelling requires global factors.<br>
+            $x$ is a global factor in numerator but $x$ is a <b>local</b> factor in the denominator. <br> You cannot cancel.
+        </div>
+    </div>
+
+    <p>We see importance of terms and factors.</p>
+    
+    <p>In Fraction Law #5, $c$ can be cancelled out only when $c$ is a <b>global (L1) factor in both numerator/denominator</b>. </p>
+
+    <div class="math-example">
+        Simplify. State the law you are using every time you write the $=$ sign.
+        <ol>
+            <li class="lec-list-space">$\dfrac{2}{3} \cdot \dfrac{5}{7}$</li>
+            <li class="lec-list-space">$\dfrac{2}{5} + \dfrac{7}{5}$</li>
+            <li class="lec-list-space">$\dfrac{2}{3} \div 2$</li>
+            <li class="lec-list-space">$\dfrac{2}{3} \div \dfrac{5}{7}$</li>
+            <li class="lec-list-space">$\dfrac{5}{36} + \dfrac{7}{120}$</li>
+        </ol>
+    </div>
+
+    <!--<div class="math-example">
+        Use the proper fraction law to simplify the following:
+        <ol>
+            <li class="lec-list-space">$\dfrac{1}{x + 1} + \dfrac{1}{x + 2}$</li>
+        </ol>
+    </div>-->
+
+    <h2>Properties of Real Numbers</h2><hr>
+
+    <p>Let's discuss the mathematical operation of addition.</p>
+
+    <p>If I give you 4 apples, then 6 apples later, you end up with 10 apples.</p>
+
+    <p>Now if I give you 6 apples first, then four, you still end up with 10 apples.</p>
+
+    <p>This shows in addition, order does not matter; we call this the commutative property.</p>
+
+    <p>Now suppose I would like to add up the number 5 sixteen times. Here it is: \[5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5\]</p>
+
+    <p>That is quite cumbersome. Multiplication is used as a shorthand to communicate how many times you would like to add.</p>
+
+    <p>Adding up 5 sixteen times is simply denoted $5\cdot 16$.</p>
+
+    <p>Here are common properties of real numbers.</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Real Numbers</b></br>
+        Let $a, b, c$ be real numbers.
+        <ul>
+            <li class="lec-list-space">Commutative Properties
+                <ul>
+                    <li>$a + b = b + a$</li>
+                    <li>$ab = ba$</li>
+                </ul>
+            </li>
+            <li class="lec-list-space">Associative Properties
+                <ul>
+                    <li>$(a + b) + c = a + (b + c)$</li>
+                    <li>$(ab)c = a(bc)$</li>
+                </ul>
+            </li>
+            <b>Tip:</b> in English, the commutative/associative properties only interact <b>within the same context level</b> (e.g. only in L3)!
+            <li class="lec-list-space">Distributive Property
+                <ul>
+                    <li>$a(b + c) = ab + ac$</li>
+                    <li>$(b+c)a = ab + ac$</li>
+                </ul>
+            </li>
+            <b>Tip:</b> in English, the distributive law describes how <b>terms and factors interact</b>. <br>This is the only way they can interact; anything else is false.
+        </ul>
+    </div>
+
+    <div class="math-example"> Which statements are true? Point out which property was used (possibly incorrectly).
+        <ol>
+            <li class="lec-list-space">$(x + 2) + 3 = x + (2 + 3)$</li>
+            <li class="lec-list-space">$x(x-1) = (x-1)x$</li>
+            <li class="lec-list-space">$(x-1) \cdot x + x^2 = (x-1) \cdot x^2 + x$</li>
+            <li class="lec-list-space">$1 - \left[2(x-1)\right] = 1 - \left(2x - 2\right)$</li>
+            <li class="lec-list-space">$(x-1)(x+2) = (x-1)x + (x-1)2$</li>
+        </ol>
+    </div>
+
+    <p><b>Tip:</b> In practice, when you write the equals sign $=$, you need to be able to point out which property or fact you used.</p>
+
+    <p>You can see in problem 4 we were unable to point out a valid mathematical property that was used. This means it is incorrect.</p>
+
+    <p>Practicing writing down the laws will help you use properties correctly.</p>
+
+    <p>When you feel comfortable skipping writing down the property, do so.</p>
+
+    <div class="math-example">
+        Apply the distributive property once:
+        <ol>
+            <li class="lec-list-space">$y(x-2)$</li>
+            <li class="lec-list-space">$(a + b + c)(x + y)$</li>
+        </ol>
+    </div>
+
+    <h2>Addition and Subtraction</h2><hr>
+
+    <p>Suppose $a$ is a real number.</p>
+
+    <p>The number 0 is called the <b>additive identity</b> since $a + 0 = a$; the number $a$ is left unchanged.</p>
+
+    <p>The number $a$ has a <b>negative</b>, denoted $-a$. This negative has the special property that \[a + (-a) = 0\]</p>
+
+    <p><b>Subtraction</b> is the operation that undoes addition. So technically subtraction doesn't exist as an operation; it is just addition on a negative number:
+    \[a - b = a + (-b)\]</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Negatives</b></br>
+
+        Suppose $a,b$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$(-1)a = -a$</li>
+            <li class="lec-list-space">$-(-a) = a$</li>
+            <li class="lec-list-space">$(-a)(-b) = ab$</li>
+            <li class="lec-list-space">$-(a+b) = -a-b$</li>
+        </ol>
+    </div>
+
+    <p>Property 1 says whenever you see a number $-a$, it's really $(-1)\cdot a$.</p>
+
+    <p>Negatives are really <b>a factor of $(-1)$.</b></p>
+
+    <div class="math-example">
+        Use the properties of negatives to simplify the expression:
+        <ol>
+            <li class="lec-list-space">$-(x+2)$</li>
+            <li class="lec-list-space">$-(-(-3))$</li>
+            <li class="lec-list-space">$-(-x + 4)-(x - 3)$</li>
+        </ol>
+    </div>
+
+    <h2>The Real Line</h2><hr>
+
+    <p>The real numbers can be represented with a horizontal line. See in class...</p>
+
+    <h2>Interval Notation</h2><hr>
+
+    <!--<h2>Sets and Intervals</h2><hr>
+
+    <p>A <b>set</b> is a collection of objects. These objects are called <b>elements</b> of the set.</p>
+
+    <p>For example, the set of all real numbers is denoted $\mathbb{R}$. If $a$ is a real number, we write $a \in \mathbb{R}$ meaning $a$ is an element of the real numbers.</p>
+
+    <p>Other common sets are
+        <ol>
+            <li>$\mathbb{N}$, the set of natural numbers</li>
+            <li>$\mathbb{Z}$, the set of integers</li>
+            <li>$\mathbb{Q}$, the set of all rational numbers</li>
+        </ol>
+    </p>
+
+    <p>There are two ways to describe a set.</p>
+
+    <p>The first is to list out all the elements: \[A = \{1,2,3,4,5,6\}\]</p>
+
+    <p>The second is to use <b>set-builder notation:</b> \[A = \{\text{objects} \ : \ \text{condition}\}\]</p>
+
+    <p>Set $A$ above could also be described as \[A = \{x : x \in \mathbb{Z} \text{ and } 0 < x < 7\}\]</p>
+
+    <p>If $S$ and $T$ are sets, there are two operations:
+        <ol>
+            <li class="lec-list-space"><b>union</b>, denoted $S \cup T$, which is the set that contains all elements that are in $S$ <b>or</b> $T$</li>
+            <li class="lec-list-space"><b>intersection</b>, denoted $S \cap T$, which is the set that contains all elements that are in $S$ <b>and</b> $T$</li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        If \[S = \{1,2,3,4,5\} \qquad T = \{4,5,6,7\} \qquad V = \{6,7,8\}\]
+        find 
+        <ol>
+            <li class="lec-list-space">$S \cup T$</li>
+            <li class="lec-list-space">$S \cap T$</li>
+            <li class="lec-list-space">$S \cap V$</li>
+        </ol>
+    </div>-->
+
+    <p>Sets of real numbers are called <b>intervals</b>. I will describe them in class.</p>
+
+    <div class="math-example"> 
+        Describe in English what each set means:
+        <ol>
+            <li class="lec-list-space">$(1,3) \cup [4,7]$</li>
+            <li class="lec-list-space">$(-\infty,-3) \cup (3, \infty)$</li>
+            <li class="lec-list-space">$(-\infty, -2) \cup (0, 1) \cup (1, \infty)$</li>
+        </ol>
+    </div>
+    
+    <!--<div class="math-example">
+        Use set builder notation and interval notation to describe the set "all real numbers except for 1 and 4."
+    </div>-->
+
+    <h2>Absolute Value and Distance</h2><hr>
+
+    <div class="math-def">
+        If $a$ is a real number, then the <b>absolute value</b> of $a$ is \[\lvert a \rvert = \begin{cases} a & a \geq 0 \\ -a & a < 0 \end{cases}\]
+    </div>
+
+    <div class="math-example">
+        Simplify:
+        <ol>
+            <li class="lec-list-space">$\lvert 3 \rvert$</li>
+            <li class="lec-list-space">$\lvert -3 \rvert$</li>
+            <li class="lec-list-space">$\lvert-\lvert -3 \rvert\rvert$</li>
+            <li class="lec-list-space">$\lvert 2 - \pi \rvert$</li>
+        </ol>
+    </div>
+    
+</div>
+{% endblock %}

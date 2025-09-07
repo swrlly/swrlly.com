@@ -1,0 +1,137 @@
+:root {
+    --text-color: #C9D1D9;
+    --background-col: rgb(20, 20, 20);
+    --website-width: 1200px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 100%;
+    --lavender: rgb(179, 154, 240);
+    /*--lavender: rgb(170, 142, 235);*/
+    /* --lavender: rgb(188, 167, 238); */
+}
+
+body {
+    margin-bottom: 60px; 
+    background-color: var(--background-col) !important;
+    color: var(--text-color) !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+    display: flex;
+    /*position: absolute; see if you can absolute position a flex box properly later 
+    bottom: 0;*/
+    height: 60px;
+    padding-top: 20px;
+}
+
+.bottomr {
+    margin-left: auto;
+    flex-shrink: 0;
+    align-items: flex-end;
+    font-size: 18px;
+}
+
+.bottoml {
+    margin-top: revert;
+    align-items: flex-end;
+    font-size: 12px;
+}
+
+.navbar-brand:hover > .m-icon {
+    transform: rotate(-6deg);
+} 
+
+.m-icon:hover {
+    transform: rotate(-6deg);
+}
+
+.m-icon {
+    margin-right: 6px;
+    transition: transform .7s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-link, .navbar-brand, .githubicon, .homeicon {
+    color: var(--text-color) !important; 
+    text-align: center;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+}
+
+.navbar-brand {margin-left: 0px; margin-right: 0px}
+
+.navbar-text {
+    margin-left: 0px; 
+    margin-right: 0px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.nav-link:hover, .navbar-brand:hover, .fa-github:hover { color:var(--lavender) !important; }
+
+.githubicon:hover {fill: var(--lavender);}
+
+.navbar {
+    border-bottom: 0px solid var(--lavender);
+}
+
+.navbar-icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.homeicon {
+    height:32px;
+    width:32px;
+}
+
+.homeicon:hover {
+    transform: rotate(8deg);
+}
+
+.container {
+    max-width: var(--website-width);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.chart-container {
+    max-width: var(--website-width);
+    margin:0 auto;
+}
+
+.playercount-footer-text {
+    font-size: 12px;
+}
+
+.footer-text {
+    font-size: 16px;
+}
+
+#pagenotfound {
+    font-size: 120px;
+    text-align: center;
+}
+
+/* fix the ugly rangeSelector date box when selected */
+.highcharts-range-selector:focus{
+    outline: 0.5px solid white;
+    border: 0px !important;
+    border-radius: 4px;
+}
+
+.highcharts-tooltip .highcharts-label:nth-child(1) {
+    display: none;
+}

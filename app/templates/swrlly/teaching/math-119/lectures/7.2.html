@@ -1,0 +1,129 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 7.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="7.2: Addition and Subtraction Formulas"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/7.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>7.2: Addition and Subtraction Formulas</h1><hr>
+    <p>We know how to find $\sin(x)$: just find how far you rotate on the unit circle.</p>
+    <p>That $x$ value can be decomposed into a sum of two values $x = s + t$. Is there a way to find $\sin(x) = \sin(s + t)$ in terms of just $s$ and $t$ plugged in?</p>
+    <p>The answer is yes:</p>
+
+    <div class="math-def">
+        For sine:
+        \begin{align}
+        \sin(s + t) &= \sin s \cos t + \cos s \sin t\\[0.5em]
+        \sin(s - t) &= \sin s \cos t - \cos s \sin t
+        \end{align}
+        For cosine:
+        \begin{align}
+        \cos(s + t) &= \cos s \cos t - \sin s \sin t \\[0.5em]
+        \cos(s - t) &= \cos s \cos t + \sin s \sin t
+        \end{align}
+        For tangent:
+        \begin{align}
+        \tan(s + t) &= \frac{\tan s + \tan t}{1 - \tan s \tan t}\\[0.5em]
+        \tan(s - t) &= \frac{\tan s - \tan t}{1 + \tan s \tan t}
+        \end{align}
+    </div>
+
+    <p>We will prove $\cos(s + t) = \cos s \cos t - \sin s\sin t$ in class.</p>
+
+    <div class="math-example">
+        Find \[\cos 75^\circ \qquad\qquad \cos \frac{\pi}{12} \qquad\qquad \sin20^\circ\cos40^\circ + \cos20^\circ \sin40^\circ\]
+    </div>
+
+    <div class="math-example">
+        Prove \[\frac{1 + \tan x}{1 - \tan x} = \tan\left(\frac{\pi}{4} + x\right)\]
+    </div>
+
+    <div class="math-example">
+        Prove \[\cos\left(\dfrac{\pi}{2} - u\right) = \sin u\]
+    </div>
+
+    <div class="math-example">
+        Prove \[\cos(x + y)\cos(x - y) = \cos^2x - \sin^2y\]
+
+        <p><b>Solution:</b> The solution will be presented like I am solving this problem for the first time.</p>
+        
+        <p>This will give you a sense of the experimentation process you need to use to solve harder proofs.</p>
+
+        <p>First, we need to choose a side. Let's choose the left hand side because it is low-hanging fruit. We can easily apply the additon and subtraction identities.
+        </p>
+
+        <p>We have</p>
+
+        \begin{align}
+        \text{LHS} &= \cos(x + y)\cos(x - y)
+            \\&= \bigg(\cos(x)\cos(y) - \sin(x)\sin(y)\bigg) \cdot \bigg(\cos(x)\cos(y) + \sin(x)\sin(y)\bigg)
+            \\&= \cos^2(x)\cos^2(y) + \cos(x)\cos(y)\sin(x)\sin(y) - \cos(x)\cos(y)\sin(x)\sin(y) - \sin^2(x)\sin^2(y)
+            \\&= \cos^2(x)\cos^2(y) - \sin^2(x)\sin^2(y)
+        \end{align}
+        
+        <b>Attempt 1:</b> <p>Now look at the RHS. We need one $\cos^2(x)$ and one $\sin^2(y)$ but in our calculation we have an extra factor $\cos^2(y)$ and extra factor of $\sin^2(x)$.</p>
+
+        <p>Let's add zero, and transform the zero into two factors $\sin^2(y)\cos^2(x)$ and use grouping factorization:</p>
+
+        \begin{align}
+        \text{LHS} &= \cos^2(x)\cos^2(y) - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y) + {\color{pink}  0} - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y)\  {\color{pink}- \sin^2(y)\cos^2(x) + \sin^2(y)\cos^2(x)} - \sin^2(x)\sin^2(y)   
+        \\&= \bigg(\cos^2(x)\cos^2(y) - \sin^2(y)\cos^2(x)\bigg) + \bigg(\sin^2(y)\cos^2(x) - \sin^2(x)\sin^2(y)\bigg) 
+        \\&= \underbrace{\cos^2(x) \bigg(\cos^2(y) - \sin^2(y)\bigg)}_{\text{global term}} + \underbrace{\sin^2(y)\bigg(\cos^2(x) - \sin^2(x)\bigg)}_{\text{global term}}
+        \end{align}
+
+        <p>Wait..We are stuck because even though we have two global terms, they don't share any common factors. This train of thought seems like a dud.</p>
+
+        <b>Attempt 2:</b> <p>Instead of adding and subtracting $\sin^2(y)\cos^2(x)$, let's swap the positions of $x$ and $y$ and experiment.
+            
+        <p>Let's add and subtract $\sin^2(x)\cos^2(y)$ and see if we can make more progress.</p>
+
+        \begin{align}
+        \text{LHS} &= \cos^2(x)\cos^2(y) - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y) + {\color{pink}  0} - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y) \ {\color{pink}+ \sin^2(x)\cos^2(y) - \sin^2(x)\cos^2(y)} - \sin^2(x)\sin^2(y)   
+        \\&= \bigg(\cos^2(x)\cos^2(y) + \sin^2(x)\cos^2(y)\bigg) + \bigg(-\sin^2(x)\cos^2(y) - \sin^2(x)\sin^2(y) \bigg) 
+        \\&= \cos^2(y) \bigg(\cos^2(x) + \sin^2(x)\bigg) -\sin^2(x)\bigg(\cos^2(y) + \sin^2(y)\bigg)
+        \\&= \cos^2(y) \cdot 1 - \sin^2(x) \cdot 1
+        \\&= \cos^2 y - \sin^2 x
+        \end{align}
+
+        <p>The RHS is $\cos^2 x - \sin^2 y$ but in our solution the $x$ and $y$ are in the wrong place.</p>
+        
+        <p>So we should have stuck to our initial strategy of adding and subtracting $\sin^2(y)\cos^2(x)$ because this should, in theory, swap our $x$ and $y$ in the solution. </p>
+
+        <p>But we tried it already...think of the possible differences you can make in <b>Attempt 1</b>.</p>
+
+        <b>Attempt 3:</b>
+
+        <p>The only thing you can change in <b>Attempt 1</b> is to swap the added and subtracted terms. Add first, then subtract. Let's see if this works:</p>
+
+        \begin{align}
+        \text{LHS} &= \cos^2(x)\cos^2(y) - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y) + {\color{pink}  0} - \sin^2(x)\sin^2(y)
+        \\&= \cos^2(x)\cos^2(y)\  {\color{pink}+ \sin^2(y)\cos^2(x) - \sin^2(y)\cos^2(x)} - \sin^2(x)\sin^2(y)   
+        \\&= \bigg(\cos^2(x)\cos^2(y) + \sin^2(y)\cos^2(x)\bigg) + \bigg(-\sin^2(y)\cos^2(x) - \sin^2(x)\sin^2(y)\bigg) 
+        \\&= \cos^2(x) \bigg(\cos^2(y) + \sin^2(y)\bigg) - \sin^2(y)\bigg(\cos^2(x) + \sin^2(x)\bigg)
+        \\&= \cos^2(x) \cdot 1 - \sin^2(y)\cdot 1
+        \\&= \cos^2 x - \sin^2 y 
+        \\&= \text{RHS}
+        \end{align}
+
+        <p>and we have proved the identity. $\blacksquare$</p>
+
+        <p>This is the type of experimentation you will need for tougher problems.</p>
+
+        <p>Try, fail, think of a new idea, try again, and repeat.</p>
+
+    </div>
+
+</div>
+{% endblock %}

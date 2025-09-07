@@ -1,0 +1,253 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 3"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 3"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 3</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+    </p><hr>
+
+    <p>Answer the following:</p>
+    
+    <ol>
+
+        <li class="hw-space"> Suppose $f(x) = 2^x$. Evaluate the following; your answer must be one singular number with no exponents.
+            <ol type="a">
+                <li class="hw-space">
+                    $f(-1)$
+                </li>
+                <li class="hw-space">
+                    $f(0)$
+                </li>
+                <li class="hw-space">
+                    $\sqrt[3]{f(6)}$
+                </li>
+                <li class="hw-space">
+                    $f(5)$
+                </li>
+            </ol>
+        </li>
+
+        <li class="hw-space">You are given a function $F(x)$. Find two functions $f, g$ where $F = f \circ g$.
+            <ol type="a">
+                <li class="hw-space">$F(x) = e^{\sin(x)}$</li>
+                <li class="hw-space">$F(x) = \sin(10^x)$</li>
+                <li class="hw-space">$F(x) = \log_{32}(e^x)$</li>
+                <li class="hw-space">$F(x) = e^{5x}$</li>
+                <li class="hw-space">$F(x) = (e^x)^4$</li>
+                <li class="hw-space">$F(x) = \ln(\sin(x))$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Draw two graphs of two functions, one of which is not one-to-one and one of which is one-to-one.</li>
+
+        <li class="hw-space"> For each of the following functions, determine if they are inverses of each other.
+            <ol type="a">
+                <li class="hw-space">$f(x) = 2x - 1, \ \ g(x) = \dfrac{x + 1}{2}$
+                </li>
+                <li class="hw-space">$f(x) = \dfrac{1}{x}, \ \ g(x) = \dfrac{1}{x}$
+                </li>
+                <li class="hw-space">$f(x) = \dfrac{1}{x - 1}, \ \ g(x) = x + 1$</li>
+                <li class="hw-space">$f(x) = \log_{5}(x), \ \ g(x) = 5^x$
+                </li>
+                <li class="hw-space">$f(x) = e^\sqrt{x}, \ \ g(x) = (\ln(x))^2$
+                </li>
+            </ol>
+
+        </li>
+
+        <li class="hw-space">
+            If $f$ is a one-to-one function and $f(6) = 17$, what is $f^{-1}(17)$?
+        </li>
+
+        <li class="hw-space">Show why $f^{-1}$ is not the same function as $\dfrac{1}{f}$ with an example. 
+            <br> Hint: The function $f(x) = x^2$. Find $\dfrac{1}{f(x)}$ and use the inverse function property.</li>
+
+        <li class="hw-space">Combine into one logarithm:
+            <ol type="a">
+                <li class="hw-space">$2 \ln 5 + 3 \ln 2$</li>
+                <li class="hw-space">$3\log_{10}(a + b) - \frac{1}{2}\log_{10}(a-b) - 2\log_{10}c$</li>
+                <li class="hw-space">$\ln(a + b) - \ln(a-b) - 2\ln c$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Solve each equation for $x$:
+            <ol type="a">
+                <li class="hw-space">$\ln(x^2 - 1) = 3$</li>
+                <li class="hw-space">
+                    $e^{2x}-5e^x + 4 = 0$
+                    <br>Hint: Let $y = e^x$, and perform substitution described in <a href="/teaching/math-161/lectures/III">Lecture Note III.</a>
+                </li>
+                <li class="hw-space">$2^{x-5}=3$</li>
+                <li class="hw-space">$\ln(3x - 10) = 2$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">List the first five terms of these sequences. Make sure you have a list of numbers.
+            <ol type="a">
+                <li class="hw-space">$a_n = \dfrac{1}{n^2}$</li>
+                <li class="hw-space">$a_n =(-1)^{n+1}2^n$</li>
+                <li class="hw-space">$a_n = \dfrac{2n}{n^2 + 1}$</li>
+                <li class="hw-space">$a_n = \cos\dfrac{n\pi}{2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find a formula for $a_n$ for the following sequences:
+            <ol type="a">
+                <li class="hw-space">$1, 0, -1,0, 1, 0, -1, 0, \dots$</li>
+                <li class="hw-space">$\dfrac{1}{2}, -\dfrac{4}{3}, \dfrac{9}{4}, - \dfrac{16}{5}, \dfrac{25}{6}, \dots$</li>
+                <li class="hw-space">$-1, 2, -4, 8, -16, 32, \dots$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+             Draw a graph of a sequence which satisfies \[\lim_{n\rightarrow \infty} a_n = 3\]       
+        </li>
+
+        <li class="hw-space"> Below is a sequence $a_t$ of the world record times for the men's 100 meter spring every five years. 
+            <img src="/static/swrlly/images/teaching/161-hw2-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+            <ul>
+                <li class="hw-space">From a biological perspective, do you think $\lim_{t\rightarrow\infty} a_t = 0$ or greater than zero? Justify your answer.</li>
+            </ul>
+        </li>
+
+        <li class="hw-space">
+            Determine whether the following sequences are convergent or divergent. For the ones that converge, find out what it converges to.
+            <ol type="a">
+                <li class="hw-space">
+                    $a_n = \dfrac{3 + 5n}{2 + 7n}$
+                </li>
+                <li class="hw-space">
+                    (skip this one) $a_n = 2^{-n} + 6^{-n}$
+                </li>
+                <li class="hw-space">
+                    (skip this one) $a_n = \dfrac{10^n}{1 + 9^n}$
+                </li>
+                <li class="hw-space">
+                    (skip this one)  $a_n = \dfrac{3^{n+2}}{5^n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{2n^3 + n - 1}{n^2 + 1}$
+                </li>
+                <!--<li class="hw-space">
+                    $a_n = \dfrac{n^5 + n^3}{4n^2 + \sqrt[3}{n^{19}}$
+                </li>-->
+                <li class="hw-space">
+                    (skip this one) $a_n = \dfrac{2^n + 3^n}{5^n}$
+                </li>
+                <li class="hw-space">
+                    (skip this one) $a_n = \dfrac{n^3}{\sqrt{n^7 + 1}}$
+                </li>
+            </ol>
+        </li>
+
+        <!--
+        <li class="hw-space">
+            Determine whether the following sequences are convergent or divergent. For the ones that converge, find out what it converges to.
+            <ul type="a">
+                <li class="hw-space">
+                    $a_n = \dfrac{3 + 5n}{2 + 7n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = 2^{-n} + 6^{-n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{10^n}{1 + 9^n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{3^{n+2}}{5^n}$
+                </li>
+                <li class="hw-space">
+                    $a_n = \dfrac{2n^3 + n - 1}{n^2 + 1}$
+                </li>
+            </ul>
+        </li>
+    
+        <li class="hw-space">
+            Find the limit:
+            <ul type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \dfrac{3x - 2}{2x + 1}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \dfrac{5}{10^x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow\infty} \left(\sqrt{9x^2 + x} - 3x\right)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} (x^4 + x^5)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} \dfrac{1 - e^x}{1+2e^x}$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow-\infty} \left(e^{-x} + 2\cos 2x\right)$</li>
+            </ul>
+        </li>
+
+        <li class="hw-space">Suppose \[\lim_{x\rightarrow 1^-} f(x) = 3 \qquad \lim_{x\rightarrow 1^+} f(x) = 3.01\] Does $\displaystyle\lim_{x\rightarrow 1}f(x)$ exist? If not, why?</li>
+
+        <li class="hw-space">
+            Given this function $f(x)$ <img src="/static/swrlly/images/teaching/161-hw3-1.PNG" style="max-width:350px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        
+            find the following:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^+}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 4^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 4^+}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 4}f(x)$</li>
+                <li class="hw-space">$f(2)$</li>
+                <li class="hw-space">$f(4)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            Given this function $f(x)$ <img src="/static/swrlly/images/teaching/161-hw3-2.PNG" style="max-width:500px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        
+            find the following:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3^+}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^+}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}f(x)$</li>
+                <li class="hw-space">$f(0)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 5^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 5^+}f(x)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            Given this function $f(x)$ <img src="/static/swrlly/images/teaching/161-hw3-3.PNG" style="max-width:500px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        
+            find the following:
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^-}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2^+}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow \infty}f(x)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow -\infty}f(x)$</li>
+                <li class="hw-space">Find all vertical and horizontal asymptotes.</li>
+        </li>
+
+    </ol>
+
+    <li class="hw-space">
+        Use a table or graph to find the following limits:
+        <ol type="a">
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^+}\ln(x^2 - 9)$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 5^-}\dfrac{e^x}{(x-5)^3}$</li>
+        </ol>
+    </li>
+    -->
+
+</div>
+{% endblock %}

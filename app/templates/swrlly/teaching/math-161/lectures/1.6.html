@@ -1,0 +1,58 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 1.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.6: Exponential Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/1.6"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>1.5: Sequences and Difference Equations</h1>
+
+    <h2>Sequences</h2><hr>
+
+    <div class="math-def">
+        A <b>sequence</b> is a (possibly infinite) list of numbers written in a specific order: \[a_1, \ \ a_2, \ \ a_3, \ \ a_4, \ \ \dots, \ \ a_n, \ \ \dots\]
+    </div>
+
+    <p>Usually, a formula for $a_n$ is given, allowing you to derive all the terms. $n$ usually starts at 1 unless otherwise stated.</p>
+
+    <div class="math-example">
+        Find the first five terms of the following sequences:
+        <ol>
+            <li class="lec-list-space">$a_n = \dfrac{n}{n + 1}, \ \  n\geq 1$</li>
+            <li class="lec-list-space">$a_n = (-1)^{n-1}, \ \ n\geq 1$</li>
+            <!--<li class="lec-list-space">$a_n = \dfrac{n}{n + 1}, \ \ n \geq 0$</li>-->
+        </ol>
+    </div>
+
+    <p>Sequences can be thought as functions.</p>
+
+    <p>The input is position on the list. Output is the actual term. Therefore:</p>
+
+    <div class="math-def">
+        The <b>graph</b> of a sequence is the set \[\{(n, a_n) : n \geq 1\}\]
+    </div>    
+
+    <div class="math-example">
+        Graph the sequence $a_n = (-1)^{n-1}, \ \ n\geq 1$.
+    </div>
+
+    <p>Above we were given a formula for $a_n$. We can also be asked to find $a_n$ given a sequence.</p>
+
+    <div class="math-example">
+        Find a formula for $a_n$ of the sequence \[\dfrac{3}{5}, \ \ -\dfrac{4}{25}, \ \ \dfrac{5}{125}, \ \ -\dfrac{6}{625}, \ \ \dfrac{7}{3125}, \ \ \dots \]
+    </div>
+
+    <div class="math-example">
+        Find a formula for $a_n$ of the sequence \[-1, \ \ \dfrac{1}{3}, \ \ -\dfrac{1}{5}, \ \ \dfrac{1}{7}, \ \ -\dfrac{1}{9}, \ \ \dots \]
+    </div>
+
+
+</div>
+{% endblock %}

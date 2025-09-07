@@ -1,0 +1,90 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 4.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.2: The Definite Integral"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/4.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>4.2: The Definite Integral</h1><hr>
+
+    <p>The "area underneath the curve" is a limit of adding up smaller and smaller rectangles.</p>
+
+    <p>This limit is called the <b>definite integral</b>:</p>
+
+    <div class="math-def">
+        The <b>definite integral</b> of $f(x)$ from $a$ to $b$ is \[\int^b_a f(x) \ dx = \lim_{n\rightarrow \infty} \sum^n_{i=1} f(x_i)\Delta x\]
+
+        where 
+        <ul>
+            <li>$\Delta x$ is the width of one rectangle, or $\Delta x = \dfrac{b - a}{n}$</li>
+            <li>$x_i$ is the right endpoint of the $i$th rectangle, where $x_i = a + i\cdot\Delta x$</li>
+        </ul>
+
+    </div>
+
+    <p>By convention, if $f(x)$ is above the $x$-axis, the area underneath the curve is positive. If $f(x)$ is under the $x$-axis, the area is negative.</p>
+
+    <p><img src="/static/swrlly/images/teaching/141-4.2-1.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+    <p>When dealing with integrals, you need to treat the expression \[\int^b_a f(x) \ dx\] as one entire entity; you cannot pull out the $dx$ or manipulate the expressions to the right of the integral. </p>
+
+    <p>Integrals are hard to evaluate.</p> 
+    
+    <p>For example, we saw that the area underneath the curve of $f(x) = x^2$ on $[0, 1]$ is the following calculation: \[\int^b_a x^2 \ dx = \lim_{n\rightarrow \infty}\dfrac{1}{n^3}\sum^n_{i = 1}i^2\]</p>
+
+    <p>But sometimes you can use geometric arguments to evaluate integrals.</p>
+
+    <div class="math-example">
+        Evaluate the integral $\displaystyle \int^1_0 \sqrt{1 - x^2} \ dx$.
+    </div>
+
+    <div class="math-example">
+        Evaluate the integral $\displaystyle \int^3_0 x - 1 \ dx$.
+    </div>
+
+    <h2>Properties of the Definite Integral</h2><hr>
+
+    <p>Because the definite integral is an area, you can manipulate integrals with geometric intuition:</p>
+
+    <div class="math-fact"> Suppose $c \in \mathbb{R}$. Then:
+        <ol>
+            <li class="lec-list-space">$\displaystyle \int^b_a c \ dx = c \cdot (b - a)$
+
+                <p><img src="/static/swrlly/images/teaching/141-4.2-2.png" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+            </li>
+            <li class="lec-list-space">$\displaystyle \int^b_a [f(x) \pm g(x)]\ dx = \int^b_a f(x) \ dx \pm \int^b_a g(x) \ dx$</li>
+            <li class="lec-list-space">$\displaystyle \int^b_a cf(x) \ dx = c\int^b_a f(x) \ dx$</li>
+            <li class="lec-list-space">$\displaystyle \int^c_a f(x) \ dx + \int^b_c f(x) \ dx = \int^b_a f(x) \ dx$
+
+                <p><img src="/static/swrlly/images/teaching/141-4.2-3.png" style="max-width:350px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+            </li>
+            <li class="lec-list-space">$\displaystyle \int^a_a f(x) \ dx = 0$</li>
+            <li class="lec-list-space">$\displaystyle \int^a_b f(x) \ dx = -\int^b_a f(x) \ dx$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Evaluate the integral $\displaystyle \int^3_3 \sin^2(x)\cos^2(x)(x^9 - x^2 + 1) \ dx$.
+    </div>
+
+    <div class="math-example">
+        If $\displaystyle \int^{10}_0 f(x) \ dx = 17$ and $\displaystyle \int^8_0 f(x) \ dx = 12$, find $\displaystyle \int^{10}_8 f(x) \ dx$.
+    </div>
+
+    <div class="math-example">
+        Evaluate $\displaystyle \int^1_0 1 + 4x^2 \ dx$.
+    </div>
+
+
+</div>
+{% endblock %}

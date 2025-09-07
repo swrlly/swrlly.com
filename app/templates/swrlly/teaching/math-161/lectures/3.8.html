@@ -1,0 +1,59 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.8: Linear Approximations and Taylor Polynomials"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.8"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.8: Linear Approximations and Taylor Polynomials</h1><hr>
+
+    <h2>Tangent Line Approximations</h2><hr>
+
+    <p>A curve lies close to it's tangent line near the point of tangency.</p>
+
+    <p>This means we can use the tangent line to calculate approximate values near $x = a$.</p>
+
+    <p>If the tangent line is at $(a, f(a))$, then the point-slope form is \[y - f(a) = f'(a)(x - a)\]</p>
+
+    <p>If we call this line a function, it's called the <b>linearization</b> of $f$ at $a$:</p>
+
+    <div class="math-def"> The <b>linearization</b> of $f$ at $a$ is \[L(x) = f(a) + f'(a)(x-a)\]</div>
+
+    <div class="math-example"> Find the linearization of $f(x) = \sqrt{x + 3}$ at $a = 1$ and use it to approximate the numbers $\sqrt{3.98}$ and $\sqrt{4.05}$. Are these approximations overestimates or underestimates?</div>
+
+    <div class="math-example"> Find the linear approximation of $f(x) = \sin(x)$ at $x = 0$.</div>
+
+    <h2>Taylor Polynomials</h2><hr>
+
+    <!--<p>Our linear approximation is a first degree polynomial in which $L'(a) = f'(a)$.</p>-->
+    <p>You can think of $L(x)$ as the best first degree polynomial approximation to $f$ at $a$ since the above says the rate of change of $f(x)$ is the same as $L(x)$ at $a$.</p>
+    <!--<p>Let's try a degree two polynomial \[P(x) = A + B(x - a) + C(x - a)^2\] with the previous condition but also $P''(a) = f''(a)$.</p>-->
+
+    <p>What if we want the "best" second degree polynomial approximation? This is called the following:
+    </p>
+
+    <div class="math-def"> The <b>second-degree Taylor polynomial</b> of $f$ centered at $a$ is \[P(x) = f(a) + f'(a)(x-a) + \frac{1}{2}f''(a)(x-a)^2\] and is usually denoted $T_2(x)$.</div>
+
+    <div class="math-example"> Find the second-degree Taylor polynomial $T_2(x)$ centered at $a = 0$ for $f(x) = \cos x$.</div>
+
+    <p>We can do this with a degree $n$ polynomial. If we force $P^{(k)}(x) = f^{(k)}(x)$, it turns out the coefficients we derived by hand for the second-degree polynomial have a nice form in general:</p>
+
+    <div class="math-def"> The polynomial \[T_n(x) = f(a) + f'(a)(x - a) + \dfrac{f''(a)}{2!}(x-a)^2 + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^n\] is called the <b>$n$th-degree Taylor polynomial of $f$ centered at $a$.</b></div>
+
+    <div class="math-example"> Find the first three Taylor polynomials for $f(x) = \ln x$ at $a = 1$.</div>
+
+    <div class="math-example"> Find the first three Taylor polynomials for $f(x) = \sin x$ at $a = 0$.</div>
+
+
+    </div>
+
+ 
+{% endblock %}

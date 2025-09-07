@@ -1,0 +1,130 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.6</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.6: Complex Numbers"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.6"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.6: Complex Numbers</h1>
+
+    <h2>Motivation</h2><hr>
+
+    <p>Consider solving this equation:</p>
+
+    <div class="math-example">
+        
+        Solve $x^2 + 4 = 0$.
+
+        <p>
+            Using <a href="/teaching/math-118/lectures/1.5#quadratic-method2">Method 2 for quadratics</a>, we have 
+            \begin{align}
+            x^2 + 4 &= 0 \\
+            x^2 &= -4 \\
+            \sqrt{x^2} &= \pm \sqrt{-4}
+            \end{align}
+        </p>
+
+        <p>To evaluate $\sqrt{-4}$ we need to find a number $a$ where $a^2 = -4$, a negative number.</p>
+
+        <p>This is impossible. If $a$ is positive, $a^2$ is positive.</p>
+        <p>If $a^2$ is negative, then $a^2$ is still positive.</p>
+
+        <p>Therefore we need a number $a$ where $a^2$ can be negative!</p>
+    </div>
+
+    <div class="math-def"> <b>complex number</b>
+
+        <p>A complex number has the form \[a + bi\] where $a, b$ are real numbers and $i^2 = -1$. Also, $i = \sqrt{-1}$.</p>
+
+        <p>$a$ is called the real part, while $b$ is called the imaginary part.</p>
+    
+    </div>
+
+    <p>In our introductory example, we still need to take the square root of $-4$, a negative number.</p>
+
+    <p>Here's how.</p>
+
+    <h2>Square Roots of Negative Numbers</h2><hr>
+
+    <div class="math-fact">
+        If $-r$ is negative, the <b>principal square root</b> of $-r$ is \[\sqrt{-r} = \sqrt{(-1)r} = \sqrt{-1}\sqrt{r} = i\sqrt{r}\]
+
+        If variables are involved, the two square roots of $-r$ are $i\sqrt{r}$ and $-i\sqrt{r}$.
+    </div>
+
+    <div class="math-example">
+        Simplify $\sqrt{-16}$.
+
+        <p>Solution: We have \[\sqrt{-16} = i\sqrt{16} = i\cdot 4 = \boxed{4i}\]</p>
+    </div>
+
+    <div class="math-example">
+        Simplify $\sqrt{-3}$.
+    </div>
+
+    <div class="math-example">
+        Simplify $\sqrt{-2}\sqrt{-3}$.
+    </div>
+
+    <h2>Complex Solutions of Quadratic Equations</h2><hr>
+
+    <p>Recall that a quadratic equation $ax^2 + bx + c = 0$ has solutions \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
+
+    <p>$b^2 - 4ac$ in the square root determines what type of solutions a quadratic could have.</p>
+
+    <div class="math-fact"> 
+        For the quadratic equation $ax^2 + bx + c = 0$, the quantity $b^2 - 4ac$ is called the <b>discriminant</b>.
+        <ul>
+            <li>If $b^2 - 4ac > 0$, there are two distinct (different) real solutions.</li>
+            <li>If $b^2 - 4ac = 0$, there is one real solution.</li>
+            <li>If $b^2 - 4ac < 0$, there are two distinct complex solutions.</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> Solve $x^2 + 4 = 0$.
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            We have            
+            \begin{align}
+            x^2 + 4 &= 0 \\
+            x^2 &= -4 \\
+            \sqrt{x^2} &= \pm \sqrt{-4} \\
+            x &= \pm i\sqrt{4} \\
+            &\boxed{x = \pm 2i}
+            \end{align}
+        </div>
+    </div>
+
+    <div class="math-example"> Solve $x^2 + 4x + 5 = 0$.
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            Using the quadratic formula with $a = 1, b = 4, c = 5$:
+
+            \begin{align}
+            x &= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+            &= \dfrac{-4 \pm\sqrt{4^2 - 4\cdot 1 \cdot 5}}{2\cdot 1} \\
+            &= \dfrac{-4 \pm\sqrt{16 - 20}}{2} \\
+            &= \dfrac{-4 \pm \sqrt{-4}}{2} \\
+            &= \dfrac{-4 \pm i\sqrt{4}}{2} \\
+            &= \dfrac{-4 \pm 2i}{2} \\
+            &= \dfrac{2(-2\pm i)}{2} \\
+            &= \boxed{-2 \pm i}
+            \end{align}
+        </div>
+
+    </div>
+    
+</div>
+
+
+{% endblock %}

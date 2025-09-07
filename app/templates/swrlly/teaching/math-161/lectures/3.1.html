@@ -1,0 +1,203 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.1: Derivatives and Rates of Change"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.1"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.1: Derivatives and Rates of Change</h1><hr>
+
+    <p>We will study a special type of limit called a <b>derivative.</b> These arise when we are looking at an instantaneous rate of change, the slope of a tangent line, or a velocity.</p>
+
+    <h2>Tangents</h2><hr/>
+
+    <p>This <a href="/teaching/math-141/lectures/1.4">lecture note</a> describes the intuition behind creating a tangent line.</p>
+
+    <p>We saw it was a limit. Here's the definition:</p>
+
+    <div class="math-def"> 
+        The <b>tangent line</b> to the curve $y = f(x)$ at the point $P(a, f(a))$ is the line through $P$ with slope \[m = \lim_{x\rightarrow a}\dfrac{f(x) - f(a)}{x - a}\] if this limit exists.
+    </div>
+
+    <div class="math-example">
+        Find an equation of the tangent line to the parabola $y = x^2$ at the point $P(1,1)$.
+    </div>
+
+    <p>The tangent line limit is an indeterminate form. Here is an animation of the previous example:
+        <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/kayrpca1fi"></iframe></div>
+    </p>
+
+    <p>Notice how the expression $f(x) - f(a)$ approaches $0$ and $x - a$ also approaches 0.</p>
+
+    <p>Because this limit is an indeterminate form, we need to simplify the expression before applying the limit.</p>
+
+    <p>In practice, it's easier to simplify the following equivalent expression of the slope of the tangent line: \[m = \lim_{h \rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\]</p>
+
+    <div class="math-example">
+        Find an equation of the tangent line to the hyperbola $y = 3/x$ at the point $(3, 1)$.
+    </div>
+
+    <p>The tangent line is sometimes called the <b>slope of the curve</b> because if you zoom in far enough, the curve almost looks like a straight line.</p>
+
+    <h2>Instantaneous Rates of Change</h2><hr/>
+
+    <p>If $f(x)$ is a function, we can analyze "on average" how much $f(x)$ changes over an interval $[a, a + h]$.</p>
+
+    <p>For example, a <b>position function</b> $s = f(t)$ gives the total distance traveled of an object moving in a straight line $t$ seconds after rest.</p>
+
+    <div class="math-example">
+        Suppose you are traveling from San Luis Obispo to Lake Tahoe. The total distance traveled from your home is modeled by \[f(t) = 60t^2 \qquad 0 \leq 0 \leq t \leq 6\] where $t$ is in hours and $f(t)$ is in miles.
+
+        <ol type="a">
+            <li>How far have you travelled after one hour and two hours?</li>
+            <li>How far did you travel between one hour and two hours?</li>
+        </ol>
+    </div>
+
+    <p>Over the time interval $[a, a+h]$, the change in position is $f(a + h) - f(a)$. Thus the average velocity is \[\text{average velocity} = \dfrac{\text{total displacement}}{\text{total time elapsed}} = \dfrac{f(a + h) - f(a)}{h}\]</p>
+
+    <p>We want the <b>instantaneous rate of change</b> at $x = a$, or how fast the function is changing exactly at one $x$-value.</p>
+
+    <p>In the context of velocity, we can look at shorter and shorter time periods of the average velocity. This requires $h \rightarrow 0$. Thus we have the following definition:</p>
+
+    <div class="math-def">
+        The <b>instantaneous velocity</b> $v(a)$ at time $t = a$ is the limit of the average velocities \[v(a) = \lim_{h \rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\]
+    </div>
+
+    <p>Think of instantaneous velocity as reading off your speedometer in the car at one point in time!</p>
+
+    <div class="math-example"> 
+        Suppose that a ball is dropped from the upper observation deck of the CN Tower in Toronto, 450 m above the ground. Find the instantaneous velocity of the ball after 5 seconds.
+    </div>
+
+    <h2>Derivatives</h2><hr/>
+
+    <p>Notice how the same limit \[\lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] occurred when we wanted to calculate a "rate of change" or a tangent line. This limit appears often enough so we give it a name:</p>
+
+    <div class="math-def">
+        The <b>derivative of a function $f$ at a number $a$</b>, denoted by $f'(a)$ is \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a+h) - f(a)}{h}\] if this limit exists.
+    </div>
+
+    <p>The derivative can take on three interpretations:
+        <ol>
+            <li>It is the slope of the tangent line at $x = a$.</li>
+            <li>It is the "instantaneous rate of change" at $x = a$. For example:
+                <ul>
+                    <li>If $s(t)$ is a position function, then $s'(a)$ is the instantaneous velocity at the moment in time $t = a$.</li>
+                    <li>Think of this interpretation as how fast the heights $f(x)$ are changing at the $x$-value $a$.</li>
+                </ul>
+            </li>
+            <li>It is the slope of the curve at $x = a$. In particular, you should think of the tangent line as an "approximation" to the function $f(x)$.</li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        Find the derivative of the function $f(x) = x^2 - 8x + 9$ at the number $a$.
+    </div>
+
+    <div class="math-example">   
+        Medical researchers measured the blood alcohol concentration (BAC) of eight fasting adult male subjects after rapid consumption of 15 mL of ethanol (corresponding the one alcoholic drink). The data they obtained were modeled by the concentration function \[f(x) = 0.0225xe^{-0.0467x}\] where $x$ is in minutes after consumption and $f(x)$ is measured in mg/mL.
+
+        <img src="/static/swrlly/images/teaching/161-3.1-1.PNG" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        <p>How quickly is the BAC increasing after 10 minutes?</p>
+
+        <p>Solution: You are asked to find the instantaneous rate of change of $f(x)$ at $x = 10$. </p>
+            
+        <p>This is equivalent to finding the slope of the tangent line at $x = 10$.</p>
+
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/byvgnslv2c"></iframe></div>
+    </div>
+
+    <p>The slope of the tangent line is the derivative.</p>
+
+    <p>Thus the tangent line to $y = f(x)$ at $(a, f(a))$ is the line through $(a, f(a))$ whose slope is $f'(a)$.</p>
+
+    <p>The general equation can be described with point-slope form.</p>
+
+    <div class="math-def">
+        Suppose $f(x)$ is a function. The equation of the <b>tangent line</b> at the point $(a, f(a))$ is \[y - f(a) = f'(a) (x - a)\]
+    </div>
+
+    <div class="math-example">
+        Find an equation of the tangent line to the parabola $y = x^2 - 8x + 9$ at the point $(3, -6)$.
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+
+
+    <h2>Instantaneous Rate of Change</h2><hr>
+
+    <p>Average rate of changes can be used to find instantaneous rates of change.</p>
+
+    <p>In context of velocity, the instantaneous rate of change is the velocity you read off of your speedometer at a certain time point.</p>
+
+    <div class="math-example">
+        Suppose you wish to travel to Lake Tahoe. The total distance traveled from San Luis Obispo is modelled by \[f(t) = 12t^2 \qquad 0 \leq t \leq 6\] where $t$ is in hours.
+        <ol>
+            <li class="lec-list-space">What is the average rate of change of distance?</li>
+            <li class="lec-list-space">Find the average velocity over $[0, 6]$.</li>
+            <li class="lec-list-space">Using limit ideas, find the instantaneous velocity at the third hour.</li>
+        </ol>
+    </div>
+
+
+
+    <h2>Tangent Lines</h2><hr>
+
+    <p>For the BAC example, turns out the slope of the tangent line at $x = 10$ is the same as the instantaneous rate of change of BAC at $x = 10$.</p>
+
+    <div class="math-example"> Find the slope of the tangent line of the previous function at $x = 10$.
+
+    </div>
+
+    <p>The previous two examples show the limit \[\lim_{x\rightarrow a}\dfrac{f(x) - f(a)}{x - a}\] is two things at once
+        <ol>
+            <li class="lec-list-space">Slope of the tangent line at $x = 10$</li>
+            <li class="lec-list-space">Instantaneous rate of change of BAC at $x = 10$.</li>
+        </ol>
+    </p>
+
+    <p>Instead of $x \rightarrow a$, it is easier to look at $a + h$ and let $h \rightarrow 0$.</p>
+
+    <div class="math-def">
+        The <b>derivative of a function $f$ at a number $a$</b>, denoted by $f'(a)$, is \[f'(a) = \lim_{h\rightarrow 0} \dfrac{f(a + h) - f(a)}{h}\] if this limit exists.
+    </div>
+
+    <div class="math-example"> Find an equation of the tangent line to the function $y = 3/x$ at the point $(3, 1)$.</div>
+
+    <div class="math-example"> Find the derivative of the function $f(x) = x^2 - 8x + 9$ at the number $a$.</div>
+
+    <p>If $s = f(t)$ gives the position of an object moving in a straight line $t$ seconds after rest, then the instantaneous rate of change of $f(t)$ at $a$ gives the <b>velocity</b> at $t = a$.</p>
+
+    <div class="math-example"> Suppose a ball is dropped from a tower 450m above the ground and it's position is given by \[f(t) = 4.9t^2\]
+    What is the velocity of the ball after 5 seconds?
+    </div>
+
+    -->
+
+
+
+</div>
+{% endblock %}

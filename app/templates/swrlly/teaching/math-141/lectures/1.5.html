@@ -1,0 +1,144 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 1.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.5: The Limit of a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/1.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.5: The Limit of a Function</h1>
+
+    <p>Goals: 
+        <ul>
+            <li>Define the limit of a function</li>
+            <li>Describe a tool for calculating the limit of a function.</li>
+            <li>Understand when a limit exists and what the graph looks like.</li>
+            <li>Describe pitfalls with this method.</li>
+        </ul>
+    </p>
+
+    <h2>The Table Method</h2><hr>
+
+    <p>We start with an example.</p>
+
+    <div class="math-example">
+        For the function $f(x) = x^2 - x + 2$, investigate what happens near $x = 2$ but <b>not at $x = 2$</b>.
+    </div>
+
+    <div class="math-def"> 
+        Suppose $f(x)$ is defined when $x$ is near the number $a$. Then the notation \[\lim_{x\rightarrow a} f(x) = L\]
+        means we can make the values of $f(x)$ arbitrarly close to $L$ by taking $x$ sufficiently close to $a$ but <b>never, ever $a$ itself.</b>
+    </div>
+
+    <p>I think about it like this: the heights $f(x)$ can be made as close to $L$ as possible when you move $x$ close to $a$ but never $a$ itself.</p>
+
+    <p>This results in three possible graphs: <img src="/static/swrlly/images/teaching/141-1.5-1.png" style="max-width:800px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+    <p>Our first tool for finding limits was described in the first example; it's called the <b>table method</b>. Create two tables that samples $x$ values to the left and right of $a$ but never $a$. Do not plug in $a$!!!!</p>
+
+    <p>Then see what the values of $f(x)$ are approaching. If both tables agree then the limit exists.</p>
+
+    <div class="math-example">
+        Use the table method to guess the following limits:
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} \dfrac{x-1}{x^2 - 1}$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 1} g(x)$ where \[g(x) = \begin{cases} \dfrac{x-1}{x^2 - 1} & x \neq 1 \\ 2 & x = 1 \end{cases}\]</li>
+            <!--<li class="lec-list-space">$\displaystyle\lim_{t\rightarrow 0} \dfrac{\sqrt{t^2 + 9} - 3}{t^2}$</li>-->
+            <li class="lec-list-space">$\displaystyle \lim_{x\rightarrow 0} \dfrac{\sin x}{x}$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow 0} \left(x^3 + \dfrac{\cos 5x}{10000}\right)$</li>
+        </ol>
+    </div>
+
+    <p>These examples show that the table method has a big pitfall: potential inaccuracy if you don't pick $x$ close enough to $a$.</p>
+
+    <h2>One-Sided Limits</h2><hr/>
+
+    <p>The table method requires two tables: one with $x$ values less than $a$, and another with $x$ values greater than $a$.</p>
+
+    <p>Here's limit notation for each table:</p>
+
+    <div class="math-def"> <b style="color:var(--lavender)"> One-Sided Limits</b>
+
+        <p>The function $f$ has the <b>right-hand limit</b> $L$ as $x\rightarrow a$ from the right, written \[\lim_{x\rightarrow a^+} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the right of $a$. </p>
+
+        <p>Similarly, the function $f$ has the <b>left-hand limit</b> $L$ as $x\rightarrow a$ from the left, written \[\lim_{x\rightarrow a^-} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the left of $a$. </p>
+    
+    </div>
+
+    <p>If left-and right-hand limits agree, the limit exists. This is equivalent to both tables agreeing. This idea is summarized as: </p>
+
+    <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <p>This theorem is very important. <b>If left- and right-hand limits disagree, the limit does not exist.</b></p>
+
+    <div class="math-example"> For the Heaviside function \[H(t) = \begin{cases} 0 & t < 0 \\ 1 & t \geq 0\end{cases}\] determine if $\displaystyle\lim_{t\rightarrow 0}H(t)$ exists.</div>
+
+    <h2>The Graph Method</h2><hr/>
+
+    <p>Limits can also be seen on the graph: look at what the heights of the function are approaching on both sides of $x = a$.</p>
+
+    <div class="math-example"> A function $g(x)$ has the following graph:
+        <img src="/static/swrlly/images/teaching/141-1.5-2.png" style="max-width:700px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;margin-bottom:1em;"/>
+
+        Determine if the following exist. If they do, find the value.
+        <ul>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2^-} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2^+} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow2} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5^-} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5^+} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow5} g(x)$</li>
+            <li class="lec-list-space">$f(2)$</li>
+            <li class="lec-list-space">$f(5)$</li>
+        </ul>
+    </div>
+
+
+    <h2>Infinite Limits</h2><hr/>
+
+    <p>The symbol $\infty$ is not a number. Certainly not a real number.</p>
+
+    <p>This is why in interval notation you always see $(-\infty, 3)$ or $(0, \infty)$, but never $(0, \infty]$.</p>
+
+    <p>Mathematicians use the symbol $\infty$ to represent the idea that a quantity grows forever.</p>
+
+    <div class="math-def"> 
+        Let $f$ be a function defined on both sides of $a$, except possibly at $a$. We write \[\lim_{x\rightarrow a} f(x) = \infty\] if $f(x)$ grows without bound by taking $x$ sufficiently close <b>but not equal to $a$.</b>
+    </div>
+
+    <p>
+        If $\lim_{x\rightarrow a}f(x) = -\infty$, then $f(x)$ is decreasing without bound. 
+    </p>
+
+    <p>These conditions are equivalent to the existence of a vertical asymptote. See pictures in class.</p>
+
+    <p>The definition also applies to left- and right-hand limits, i.e. $\lim_{x\rightarrow a^-} f(x) = \infty$ means the heights of the graph are growing without bound as $x$ approaches $a$ from the left.</p>
+
+    <div class="math-example"> Find \[\lim_{x\rightarrow 0} \dfrac{1}{x^2}\]
+    </div>
+
+    <div class="math-example"> Find $\displaystyle\lim_{x\rightarrow 3^+} \dfrac{2x}{x-3}$ and $\displaystyle\lim_{x\rightarrow 3^-} \dfrac{2x}{x-3}$.
+    </div>
+
+    <div class="math-example"> Show $x = \dfrac{\pi}{2}$ is a vertical asymptote of $f(x) = \tan(x)$.</div>
+
+    <p>In summary, we know two ways to find limits:
+        <ul>
+            <li>Use the table technique, observe what $f(x)$ is approaching</li>
+            <li>Use the graph, observe what the heights $f(x)$ seem to be approaching.</li>
+        </ul>
+     </p>
+
+
+
+    
+</div>
+
+{% endblock %}

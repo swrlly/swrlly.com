@@ -1,0 +1,95 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - Homework 3 (T/TH)</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - Homework 3"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 3"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/homework/tth/hw3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 3</h1>
+    <p><b>Directions:</b> Show each step of your work. Turn in your answers in class on a physical piece of paper. Staple multiple sheets together. Feel free to use Desmos for graphing.</p>
+    <p>Answer the following:</p>
+    <ol>
+        <li>Given these functions <img src="/static/swrlly/images/teaching/hw2im1.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        find the limits. If they do not exist, explain why they do not.
+        <ol type="a">
+            <li class="hw-space">$\displaystyle\lim_{x \rightarrow 2}[f(x) + g(x)]$</li>
+            <li class="hw-space">$\displaystyle\lim_{x \rightarrow -1}[f(x)g(x)]$</li>
+            <li class="hw-space">$\displaystyle\lim_{x \rightarrow 3}[f(-1) + g(x)]$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2}[x^2 \cdot f(x)]$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}[f(x) + g(x)]$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3}\left[\dfrac{f(x)}{g(x)}\right]$</li>
+        </ol>
+        </li>
+
+        <li class="hw-space">Find the following limits using the limit laws and fully simplify. <b>State which laws you are using</b> (refer to <a href="/teaching/math-221/lectures/2.4">Lecture 2.4</a>) for each equal sign.
+        
+        <ol type="a">
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} (x + 1)$</li>
+            <li class="hw-space">$\displaystyle\lim_{t\rightarrow 0} (4t^2 + 2t + 1)$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} (x + 1)$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3} (2x + 1)(x-1)(x+2)^2$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} \sqrt{x + 2}$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} \sqrt{\dfrac{2x^2 + 2}{2x^2 - 1}}$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow -1}\dfrac{x^2 - 1}{x + 1}$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0}\dfrac{2x^2 + x}{x}$</li>
+            <li class="hw-space">$\displaystyle\lim_{x\rightarrow -3}\dfrac{x+1}{x-3}$</li>
+        </ol>
+        </li>
+
+        <li class="hw-space">Find the following limits with the appropriate technique.
+        
+            <ol type="a">
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 1}\dfrac{\sqrt{x} - 1}{x - 1}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow 0}\dfrac{2x^2 - 2x}{x}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow -2}\dfrac{x^2 - 4}{x^3 + 2x^2}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow \infty}\dfrac{x^4 + x^2 + 1}{x^3 + x + 3}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow \infty}\dfrac{x^3 + 2x^2 - x - 6}{3x^3 -2x^2 + 4x}$</li>
+                <li class="hw-space">$\displaystyle \lim_{x\rightarrow \infty}\dfrac{x^2 + 1}{x^4 - x}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">It is estimated that the total population of San Luis Obispo is given by the function \[P(t) = \dfrac{25t^2 + 125t + 200}{t^2 + 5t + 20}\] where $t$ is years since $2020$.<br>
+            Evaluate $\displaystyle\lim_{t\rightarrow \infty} P(t)$ and interpret the meaning of the limit in English.
+        </li>
+
+        <li class="hw-space"> Given this graph of $f(x)$ <img src="/static/swrlly/images/teaching/hw3im1.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+            Determine which statements are true or false.
+            <ol type="a">
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^-} f(x) = 0$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 0^+} f(x) = 0$</li>
+                <li class="hw-space">$f(1)$ is defined.</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 2} f(x) = f(2)$</li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 1} f(x)= 1$ </li>
+                <li class="hw-space">$\displaystyle\lim_{x\rightarrow 3^-} f(x)= \lim_{x\rightarrow 3^+}f(x)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Suppose a function $f(x)$ has $f(2) = 5$ and $\displaystyle \lim_{x \rightarrow 2}f(x) = 5$. Is the function continuous at $x = 2$?</li>
+
+        <li class="hw-space">
+            Given each function, <b>use the definition of continuity</b> to determine where the function is discontinuous.
+            <ol type="a">
+                <li class="hw-space">$\displaystyle f(x) = \dfrac{2}{2x - 1}$</li>
+                <li class="hw-space">$f(x) = x^{100} + 2x^{99} + 95x^5 + 99x^2 + 1$</li>
+                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x & x \leq 1 \\ 2x - 1 & x > 1\end{cases}$</li>
+                <li class="hw-space">$\displaystyle f(x) = \begin{cases}x + 5 & x < 0 \\ 2 & x = 0 \\ -x^2 + 5 & x > 0\end{cases}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Draw the graph of a function which is continuous on $(-\infty, -2) \cup (-2, 3) \cup (3, \infty)$ and $\displaystyle\lim_{x\rightarrow 3}f(x)$ does not exist. </li>
+
+        <li class="hw-space">
+            Suppose $f(x) = 2x^{12324538742389}$. Are we allowed to use the limit laws to find $\displaystyle \lim_{x\rightarrow 3^+} f(x)$?
+        </li>
+
+    </ol>
+
+</div>
+{% endblock %}

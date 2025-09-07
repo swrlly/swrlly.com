@@ -2,33 +2,33 @@
 # jupyter nbconvert --execute --format basic --to html runes-domain.ipynb
 import re
 
-
+# .modifyImg {width: 80%; margin: 0 auto; display: flex;}
 
 r = """.highlight .nb { color: var(--vscode-lightgreen); } 
-.hl-ipython3 {background-color: var(--card-color); color: var(--text-color); line-height: 1.5; padding: 10px; overflow: scroll; font-family: "Source Code Pro, monospace"}
-.pre {color: var(--text-color); }
-.modifyImg {width: 80%; margin: 0 auto; display: flex;}
-.modifyPrintText {color: var(--text-color);}
-@media (min-width: 1200px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2  {
-        font-size: 2rem;
-    }
-    h3 {
-        font-size: 1.75rem;
-    }
-    h4 {
-        font-size: 1.5rem;
-    }
-    .page-title {
-        font-size: 4rem;
-    }
-    .index-title {
-        font-size: 4rem;
-    }
+.hl-ipython3 {
+    background-color: var(--card-color); 
+    color: var(--text-color); 
+    padding: 10px; 
+    overflow: scroll; 
+    font-family: "Source Code Pro, monospace"; 
+    font-size: 10px; 
+    letter-spacing: -0.2px;
 }
+.pre { color: var(--text-color); }
+.modifyImg { margin: 1.5rem auto; 
+    display: flex; 
+    border: 1px var(--card-color) solid; 
+    box-shadow: 0px 0px 10px 5px black;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+.modifyPrintText {color: var(--text-color); overflow: auto; }
+.ol, ul {
+    line-height: var(--list-line-height);
+}
+.h2, .h3, .h4, .h5 {
+    line-height: var(--line-height);
+    }
 """
 #.highlight .n { color: var(--vscode-lightblue)} /* base funcs */
 
@@ -53,7 +53,7 @@ replace = {
     # change df table print
     ".jp-OutputArea-output {\n.+display: table-cell;" : ".jp-OutputArea-output {\n display: table-cell; margin-top: 2rem; margin-bottom: 2rem;\n",
     ".jp-Cell-outputWrapper {\n.+display: flex;" : ".jp-Cell-outputWrapper {\ndisplay: flex;margin-top:1rem;\nmargin-bottom:1rem;",
-    "var\(--jp-rendermime-table-row-background\)": "var(--ligthter-card-color)",
+    "var\(--jp-rendermime-table-row-background\)": "var(--lighter-card-color)",
     "--jp-rendermime-table-row-hover-background: var\(--md-light-blue-50\);": "--jp-rendermime-table-row-hover-background: var(--lighter-card-color);",
     # forgot
     "var\(--jp-layout-color0\)": "var(--card-color)",
@@ -65,20 +65,39 @@ replace = {
     # remove code blocks
     "<div class=\"jp-OutputPrompt jp-OutputArea-prompt\">.*</div>": "",
     "<div class=\"jp-InputPrompt jp-InputArea-prompt\">.*(\r\n|\r|\n)*.*</div>": "",
-    """<div class="jp-OutputArea-child jp-OutputArea-executeResult">.+(\r\n|\r|\n)*.+<div class="jp-OutputPrompt jp-OutputArea-prompt">.*</div>.*(\r\n|\r|\n)*.*<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex=".*">.*(\r\n|\r|\n)*.*<pre>.+</pre>.*(\r\n|\r|\n)*.*</div>.*(\r\n|\r|\n)*.*</div>""": "",
+    #"""<div class="jp-OutputArea-child jp-OutputArea-executeResult">.+(\r\n|\r|\n)*.+<div class="jp-OutputPrompt jp-OutputArea-prompt">.*</div>.*(\r\n|\r|\n)*.*<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex=".*">.*(\r\n|\r|\n)*.*<pre>.+</pre>.*(\r\n|\r|\n)*.*</div>.*(\r\n|\r|\n)*.*</div>""": "",
     "<div class=\"jp-OutputPrompt jp-OutputArea-prompt\"></div>": "",
     #don't do this it screws up svgs which screws up mathjax
     #".jp-RenderedSVG svg {": ".jp-RenderedSVG svg {width: 80%; margin: 0 auto; display: flex;",
+    """.jp-RenderedHTMLCommon img,\n.*.jp-RenderedImage img,\n.*.jp-RenderedHTMLCommon svg,\n.*.jp-RenderedSVG svg {\n.*max-width: 100%;\n.*height: auto;\n}""": """jp-RenderedHTMLCommon svg, .jp-RenderedSVG svg {max-width: 100%; height: auto;}\n .jp-RenderedHTMLCommon img, .jp-RenderedImage img {max-width: 90%; height: auto;}""",
     #inline code
     "--jp-content-font-color1: rgba\(0, 0, 0, 0.87\);": "--jp-content-font-color1: var(--text-color);",
     "--jp-layout-color2: var\(--md-grey-200\);": "--jp-layout-color: var(--lighter-card-color);",
     "<img.+class=\"\"": "<img class=\"modifyImg\"",
     # print statement font
-    "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\".+>\n*<pre>": "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\" tabindex=\"0\">\n*<pre class=\"modifyPrintText\">",
+    "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\".+>\n*<pre>": "<div class=\"jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult\" data-mime-type=\"text/plain\" tabindex=\"0\">\n<pre class=\"modifyPrintText\">",
+    # embedded in markdown code background
+    """.jp-RenderedHTMLCommon :not\(pre\) > code {\n.*background-color: var\(--jp-layout-color2\);\n.*padding: 1px 5px;\n}""" : """.jp-RenderedHTMLCommon :not(pre) > code {background-color: var(--lighter-card-color); padding: 2px 2px; border-radius: 2.5px;}""",
+    # mobile allow overflow for print statements
+    """.jp-OutputArea-output pre {\n.*border: none;\n.*margin: 0;\n.*padding: 0;\n.*overflow-x: auto;\n.*overflow-y: auto;\n.*word-break: break-all;\n.*word-wrap: break-word;\n.*white-space: pre-wrap;\n} """ : """.jp-OutputArea-output pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}""",
+    # allow overflow on mobile
+    "word-break: break-all;": "",
+    "word-wrap: break-word;": "",
+    "white-space: pre-wrap;": "",
+    # center overflow mjax
+    "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"": "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"overflow: auto;",
+    # allow dataframe to overflow
+    "<div>\n.*<style scoped=\"\">": "<div style=\"overflow: auto;\">\n<style scoped=\"\" >",
     # time to change headers and paragraph decls
     #"--jp-content-heading-line-height: 1;": 
     # Base font size 
-    "--jp-content-font-size1: 14px;":  "--jp-content-font-size1: var(--h5-size);, 
+    "--jp-content-font-size1: 14px;":  "--jp-content-font-size1: var(--h5-size);",
     "--jp-content-font-size2: 1.2em;": "--jp-content-font-size2: var(--h4-size);",
     "--jp-content-font-size3: 1.44em;":  "--jp-content-font-size3: var(--h3-size);",
     "--jp-content-font-size4: 1.728em;": "--jp-content-font-size4: var(--h2-size);",
@@ -94,17 +113,17 @@ codeBorder = "var\(--jp-cell-editor-border-color\)"
 comment = "var\(--jp-mirror-editor-comment-color\).+" #get rid of italics
 code = "var\(--jp-code-font-family\)"
 
-a = open("../templates/swrlly/runes-domain.html", "r").read()
+a = open("../templates/swrlly/runes-domain.html", "r", encoding = "utf-8").read()
 for i in replace:
     a = re.sub(i, replace[i], a)
-a = re.sub(numbers, "var(--vscode-lightgreen)", a)
-a = re.sub(strings, "var(--vscode-orange)", a)
-a = re.sub(keywords, "var(--vscode-pink)}", a)
-a = re.sub(punctuation, "var(--vscode-darkyellow)", a)
-a = re.sub(comment, "var(--vscode-darkgreen)}", a)
-a = re.sub(codeBorder, "var(--card-color)", a)
+a = re.sub(numbers, "var(--vscode-lightgreen);", a)
+a = re.sub(strings, "var(--vscode-orange);", a)
+a = re.sub(keywords, "var(--vscode-pink);}", a)
+a = re.sub(punctuation, "var(--vscode-darkyellow);", a)
+a = re.sub(comment, "var(--vscode-darkgreen);}", a)
+a = re.sub(codeBorder, "var(--card-color);", a)
 #a = re.sub(code, "\"Source Code Pro, monospace\"", a)
 
-b = open("../templates/swrlly/runes-domain.html", "w")
-b.write(a)
+b = open("../templates/swrlly/runes-domain.html", "wb")
+b.write(a.encode("utf-8"))
 b.close()

@@ -1,0 +1,117 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 3.6</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.6: Rational Functions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/3.6"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.6: Rational Functions</h1>
+
+    <p>This is the last type of function we will study in this chapter!</p>
+
+    <div class="math-def"> <b>rational function</b><br>
+        A rational function has the form \[r(x) = \dfrac{P(x)}{Q(x)}\]where $P$ and $Q$ are polynomials.
+    </div>
+
+    <div class="math-example">
+        These two functions are rational: \[f(x) = \dfrac{1}{x} \qquad\qquad f(x) = \dfrac{2x + 1}{x^3 - 4}\] because the numerator and denominator are polynomials.
+
+        <br>This one is not: \[f(x) = \dfrac{\sqrt{x} - 2}{x^4 - x^2 - 2}\] because the numerator has an exponent of $\frac{1}{2}$. Polynomials only have whole numbers for powers.
+    </div>
+
+    <p>Before looking into rational functions, let's answer "how to approach a number?"</p>
+
+    <div class="math-fact"> 
+        There are two ways to approach a number $a$: from the left and from the right.
+
+        <div class="large-screen">
+            <div style="display:grid; column-gap:2vw; grid-template-columns: 0.5fr 1fr; padding-top:1rem;">
+                <span style="margin: 0 auto; font-size: 1.5rem;">Notation</span>
+                <span style="margin: 0 auto; font-size: 1.5rem;">Visualization</span>
+                <span style="margin: 0 auto; font-size: 1.5rem; align-content: center;">$x\rightarrow a^-$<br><span style="font-size: 1rem;">(from the left)</span></span>
+                <img class="img-shadow" style="align-content: center; margin:1rem auto; padding:0;" src="/static/swrlly/images/teaching/118-3.6-1.svg"/>
+                <span style="margin: 0 auto; font-size: 1.5rem; align-content: center;">$x\rightarrow a^+$<br><span style="font-size: 1rem;">(from the right)</span></span>
+                <img class="img-shadow" style="align-content: center; margin:1rem auto; padding:0;" src="/static/swrlly/images/teaching/118-3.6-2.svg"/>
+           </div>
+        </div>
+    
+        <div class="small-screen">
+            <div style="display:grid; column-gap:2vw; grid-template-columns: 0.5fr 1fr; padding-top:1rem;">
+                <span style="margin: 0 auto; font-size: 1.5rem;">Notation</span>
+                <span style="margin: 0 auto; font-size: 1.5rem;">Visualization</span>
+                <span style="margin: 0 auto; font-size: 1.5rem; align-content: center;">$x\rightarrow a^-$<br><span style="font-size: 1rem;">(from the left)</span></span>
+                <img class="img-shadow" style="align-content: center; margin:1rem auto; padding:0;" src="/static/swrlly/images/teaching/118-3.6-1.svg"/>
+                <span style="margin: 0 auto; font-size: 1.5rem; align-content: center;">$x\rightarrow a^+$<br><span style="font-size: 1rem;">(from the right)</span></span>
+                <img class="img-shadow" style="margin:1rem auto; padding:0;" src="/static/swrlly/images/teaching/118-3.6-2.svg"/>
+           </div>
+        </div>
+    </div>
+
+    <p>In Calculus, the first week will discuss this "approaching a number" idea in more detail.</p>
+
+    <div class="math-example"> Graph the function $f(x) = \dfrac{1}{x}$.</div>
+
+    <p>From this example, the two behaviors \[\dfrac{1}{\text{BIG}} = small \qquad \qquad \dfrac{1}{\text{small}} = \text{BIG}\]
+        correspond to <b>horizontal</b> and <b>vertical</b> asymptotes, respectively.
+    </p>
+
+    <p>In Calculus, these are called <b>limits</b>! But for us, we will call them asymptotes.</p>
+
+    <h2>Vertical/Horizontal Asymptotes</h2><hr>
+
+    <div class="math-fact">
+        The line $x = a$ is a vertical asymptote if $y \rightarrow \pm \infty$ as $x \rightarrow a^+$ or $x \rightarrow a^-$. <br>
+
+        The line $y = b$ is a horizontal asymptote if $y \rightarrow b$ as $x \rightarrow \pm \infty$.
+    </div>
+
+    <p>Finding asymptotes for rational functions is straightforward.</p>
+
+    <div class="math-fact">
+        Suppose you have a rational function \[r(x) = \dfrac{a_nx^n + \cdots}{b_mx^m + \cdots}\]
+        <ul>
+            <li class="lec-list-space">To find vertical asymptotes, set denominator $= 0$ and solve for $x$.</li>
+            <li class="lec-list-space">To find horizontal asymptotes, there are three cases, depending on the leading terms:
+                <ol type="1">
+                    <li class="lec-list-space">If $n < m$, then $y = 0$ is the horizontal asymptote.</li>
+                    <li class="lec-list-space">If $n = m$, then $y = \dfrac{a_n}{b_m}$.</li>
+                    <li class="lec-list-space">If $n > m$, there are no horizontal asymptotes.</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div class="math-example">Suppose \[r(x) = \dfrac{3x^2 - 2x - 1}{2x^2 + 3x - 2}\]Find all vertical and horizontal asymptotes.</div>
+
+    <p>Here's what the graph looks like:</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/pxm80pylos"></iframe></div>
+
+    <p>Notice how the horizontal asymptote can be crossed, but the vertical ones cannot.</p>
+
+    <p>Graphing this example is difficult by hand. You won't be expected to do so.</p>
+
+    <p>However, you will need to know how to graph rational functions which have holes by hand.</p>
+
+    <h2>Holes</h2><hr>
+
+    <p>We first saw what holes are back <a href="/teaching/math-118/lectures/2.7">in Section 2.7.</a></p>
+
+    <p>Holes are the zero of the common factor in the numerator and denominator.</p>
+
+    <div class="math-example"> Graph $r(x) = \dfrac{x^3 - 2x^2}{x - 2}$.</div>
+
+    <div class="math-example"> Graph $r(x) = \dfrac{x-3}{x^2 - 3x}$.</div>
+
+    
+
+</div>
+{% endblock %}

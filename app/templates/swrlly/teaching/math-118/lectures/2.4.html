@@ -1,0 +1,50 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 2.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.4: Average Rate of Change of a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/2.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>2.4: Average Rate of Change of a Function</h1>
+
+    <h2>Average Rate of Change</h2><hr>
+
+    <div class="math-def"> <b>average rate of change</b><br>
+        The average rate of change (ARoC) of $y = f(x)$ on the interval $(a, b)$ is \[\text{ARoC} = \dfrac{\text{change in } y}{\text{change in } x} = \dfrac{f(b) - f(a)}{b - a}\]
+        The ARoC is the slope of the line through $(a, f(a))$ and $(b, f(b))$.
+    </div>
+
+    <div class="math-example">
+        Calculate the average rate of change for $f(x) = (x-3)^2$ on the interval $(1, 3)$.
+    </div>
+
+    <p>If you have a distance function $f(t)$, which tells you how far something has traveled over some time, the average rate of change of $f(t)$ on an interval is the <b>average speed.</b></p>
+
+    <div class="math-example">
+        Suppose you begin walking. The distance you cover is modeled by $f(t) = 4t^2$, where $t$ is minutes elapsed and $f(t)$ is the total distance traveled in feet.<br>
+        Calculate the average speed in the first five minutes.
+    </div>
+
+    <h2>What does $\frac{f(x+h) - f(x)}{h}$ mean?</h2><hr>
+
+    <p>This fraction will appear again in Calculus. It is the ARoC of $f(x)$ on the interval $(x, x+h)$.</p>
+    
+    <p>Witness:</p>
+
+    <div class="math-example">
+        Consider $f(t) = 16t^2$. Calculate the average rate of change on the interval $(x, x+h)$.
+    </div>
+
+
+
+</div>
+
+{% endblock %}

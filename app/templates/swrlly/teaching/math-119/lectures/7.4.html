@@ -1,0 +1,69 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 7.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="7.4: Solving Trigonometric Equations"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/7.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>7.4: Basic Trigonometric Equations</h1><hr>
+
+    <p>Equations like \[\sin^2\theta + \cos^2 \theta = 1\] are <b>identities</b> since it's true for any value of $\theta \in \mathbb{R}$.</p>
+
+    <p>But equations like \[2\sin \theta - 1 = 0 \qquad\qquad \tan 2\theta -1 = 0\] are not identities. They are true for specific values of $\theta$.</p>
+
+    <p>Goal: Solve simple trigonometric equations like the ones above.</p>
+
+    <h2>Basic Trigonometric Equations</h2><hr>
+
+    <p>The general strategy for solving trigonometric equations is two steps:</p>
+
+    <div class="math-fact">
+        Solving Trigonometric equations:
+        <ol>
+            <li>Find the solutions in one period.</li>
+            <li>Find all solutions (accounting for period).</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Solve $\sin \theta = \dfrac{1}{2}$.
+    </div>
+
+    <div class="math-example">
+        Solve $\cos \theta = -\dfrac{\sqrt{2}}{2}$.
+    </div>
+
+    <div class="math-example">
+        Solve $\tan \theta = -1$.
+    </div>
+
+    <div class="math-example">
+        Solve $2 \sin \theta - 1 = 0$.
+    </div>
+
+    <div class="math-example">
+        Solve $\tan^2\theta - 3 = 0$.
+    </div>
+
+    <h2>Solving Trigonometric Equations by Factoring</h2><hr>
+
+    <p>You may need to simplify before solving.</p>
+
+    <div class="math-example">
+        Solve \[2\cos^2 \theta - 7\cos \theta + 3 = 0\]
+    </div>
+
+    <div class="math-example">
+        Solve \[4\sin\theta \cos\theta + 2 \cos\theta = 0\]
+
+    </div>
+
+</div>
+{% endblock %}

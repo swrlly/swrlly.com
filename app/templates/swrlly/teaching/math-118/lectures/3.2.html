@@ -1,0 +1,212 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 3.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.2: Polynomial Functions and Their Graphs"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/3.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.2: Polynomial Functions and Their Graphs</h1>
+
+    <h2>What Are We Doing?</h2><hr>
+
+    <p>This section wil show you:</p>
+
+    <ul>
+        <li>what graphs of polynomials look like.</li>
+        <li>how to graph a polynomial by hand using <b>end behavior</b> and <b>$x$-intercepts.</b></li>
+    </ul>
+
+    <h2>Vocabulary</h2><hr>
+
+    <p>Here's the definition of a polynomial with some extra identifiers:</p>
+
+    <div class="math-def"> <b>polynomial function</b><br>
+        A polynomial function of degree $n$ is a function of the form \[P(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $n$ is an integer.
+        <ul>
+            <li>$a_n, a_{n-1}, \dots, a_1, a_0$ are called the <b>coefficients</b>.</li>
+            <li>$a_0$ is called the <b>constant coefficient</b> or <b>constant term</b>.</li>
+            <li>$a_n$ is called the <b>leading coefficient</b>.</li>
+            <li>$a_nx^n$ is called the <b>leading term</b>.</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> Suppose \[-3x^5 + 6x^4 - 2x^3 + x^2 + 7x + 6\] Identify the degree, leading term, leading coefficient, and constant coefficient.</div>
+
+    <h2>Monomials</h2><hr>
+
+    <p>A <b>monomial</b> has the form $P(x) = x^n$. These graphs have three possible types of shapes, depending on $n$:
+    </p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:2vw; grid-template-columns: 1fr 2fr 2fr;">
+            <!-- using % causes overflow when using column-gap https://css-tricks.com/introduction-fr-css-unit/-->
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <span style="margin: auto; font-size: 1.5rem; ">$n$ is even</span>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:300px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+       </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid; grid-template-columns: 1fr;">
+            <span style="margin: auto; font-size: 1.5rem;">$n = 1$</span>
+            <img class="img-shadow" style="max-width:250px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-1.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is even</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-2.svg"/>
+            <span style="margin: auto; font-size: 1.5rem;">$n$ is odd</span>
+            <img class="img-shadow" style="max-width:500px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-3.svg"/>
+        </div>
+    </div>
+
+    <div class="math-example"> Sketch an accurate graph of $f(x) = (x-2)^4$.</div>
+
+    <p>The monomial shapes are important to remember. Their shapes, as we will see, appear in the graph of every polynomial.</p>
+
+    <h2>Polynomial Graphs</h2><hr>
+
+    <p>Polynomials have domain $\mathbb{R}$, and their graphs are <b>continuous</b>:</p>
+
+    <div class="math-notxt"> <b>Informal Definition: continuity</b><br>
+        A graph is continuous if you can draw it without lifting your pencil.
+    </div>
+
+    <p>In Calculus, you will learn the official definition.</p>
+
+    <p>Moreover, there cannot be any corners or sharp corners (cusps):</p>
+
+    <div class="large-screen">
+        <div style="display:grid; column-gap:2vw; grid-template-columns: 1fr 1fr;">
+            <span style="margin: 0 auto; font-size: 1.5rem;">Not Graphs of Polynomials</span>
+            <span style="margin: 0 auto; font-size: 1.5rem;">Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-4.svg"/>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-5.svg"/>
+       </div>
+    </div>
+
+    <div class="small-screen">
+        <div style="display:grid;grid-template-columns: 1fr;">
+            <span style="margin: 0 auto; font-size: 1.5rem;">Not Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-4.svg"/>
+            <span style="margin: 0 auto; font-size: 1.5rem;">Graphs of Polynomials</span>
+            <img class="img-shadow" style="margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-5.svg"/>
+       </div>
+    </div>
+
+    <p>Polynomial graphs can be broken up into two main ideas: end behavior and zeros.</p>
+
+    <h2>End Behavior</h2><hr>
+
+    <p>Let's start with the "ends" of the graph. First, notation:</p>
+
+    <ul>
+        <li>$y\rightarrow \infty$ means $y$ grows without bound. Meaning, $y$ is bigger than <b>any</b> number you can think of!</li>
+        <li>$y\rightarrow -\infty$ means $y$ decreases without bound.</li>
+    </ul>
+
+    <div class="math-def"> <b>end behavior</b>
+
+        <p>The end behavior of a polynomial depends on the degree $n$ and the leading coefficient $a_n$:</p>
+
+        <img class="img-shadow" style="max-width:800px; margin-top: 1rem; padding:0;" src="/static/swrlly/images/teaching/118-3.2-10.png"/>
+    </div>
+
+    <div class="math-example"> Determine the end behavior of $P(x) = -2x^4 + 5x^3 + 4x - 7$.</div>
+
+    <div class="math-example"> Determine the end behavior of $P(x) = -(2x-2)^2(x-4)^3$.</div>
+
+    <h2>Zeros ($x$-intercepts)</h2><hr>
+
+    <p>Now we look between the "ends".</p>
+
+    <div class="math-def"> <b>zeros</b><br>
+        Suppose $P$ is a polynomial and $c$ is a real number. Then the following are equivalent:
+        <ul>
+            <li>$c$ is a zero of $P$.</li>
+            <li>$c$ is a $x$-intercept of the graph of $P$.</li>
+            <li>$x = c$ is a solution of the equation $P(x) = 0$. Meaning, $P(c) = 0$.</li>
+            <li>$(x - c)$ is a factor of $P(x)$.</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> Find the zeros of $P(x) = x^2 + x - 6$.</div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor);">Intermediate Value Theorem for Polynomials</b><br>
+    If $P$ is a polynomial and $P(a)$ and $P(b)$ have opposite signs, then there exists at least one value $c$ between $a$ and $b$ where $P(c) = 0$.
+    </div>
+
+    <p>Consequence of IVT: between two successive zeros, $P(x) > 0$ or $P(x) < 0$.</p>
+
+    <p>Putting it all together:</p>
+
+    <div class="math-method"> <b style="color: var(--factcolor);">Graphing Polynomials</b><br>
+        <ol>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Find zeroes:</b> Factor and solve for $x$.</li>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">IVT test points:</b> Make a sign diagram of $P(x)$ and whether it's $+$ or $-$ between two successive zeros.</li>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Find end behavior.</b> </li>
+            <li><b style="color: var(--factcolor); margin-right: 0.5em;">Graph:</b> Connect the end behavior, signs, and zeros in a smooth and continuous fashion.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Sketch a graph of $P(x) = (x+2)(x-1)(x-3)$.
+    </div>
+
+    <div class="math-example">
+        Sketch a graph of $P(x) = x^3 - 2x^2 - 4x + 8$.
+    </div>
+
+    <p>In this example, $(x-2)^2$ looks like a parabola near $x = 2$ (think horizontal shift from $x^2$ right two units).</p>
+    
+    <p>The power tells you the shape. They correspond to the monomial shapes.</p>
+
+    <h2>Shape of a Graph Near a Zero</h2><hr>
+
+    <div class="math-def"> <b>zero of multiplicity $m$</b><br>
+        $c$ is a zero of multiplicity $m$ if $(x - c)^m$ appears in the factorization of $P$.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor);">Graph Shape Near Zeros of Multiplicity $m$</b><br>
+
+        If $c$ is a zero of multiplicity $m$, then the graph shape near $c$ corresponds is as follows:
+
+        <div class="large-screen">
+            <div style="display:grid; margin: auto; padding-top:2em; max-width:800px; column-gap:2vw; grid-template-columns: 0.8fr 1fr 0.1fr 1fr;">
+                <span style="margin: auto; font-size: 1.5rem;">$n$ odd, $n \neq 1$</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-6.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-7.svg"/>
+                <span style="margin: auto; font-size: 1.5rem;">$n$ even</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-8.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-9.svg"/>
+            </div>
+        </div>   
+
+        <div class="small-screen">
+            <div style="display:grid; margin: auto; padding-top:2em; column-gap:2vw; grid-template-columns: 0.8fr 1fr 0.1fr 1fr;">
+                <span style="margin: auto; font-size: 1.5rem;">$n$ odd,<br>$n \neq 1$</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-6.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-7.svg"/>
+                <span style="margin: auto; font-size: 1.5rem;">$n$ even</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-8.svg"/>
+                <span style="margin: auto;">or</span>
+                <img class="img-shadow" style="max-width:400px; margin-top: 1rem;" src="/static/swrlly/images/teaching/118-3.2-9.svg"/>
+            </div>
+        </div>   
+    </div>
+
+    <div class="math-example"> Graph the polynomial $P(x) = x^2(x-2)^3(2x+1)^2$.</div>
+
+</div>
+{% endblock %}

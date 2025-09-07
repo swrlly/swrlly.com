@@ -1,0 +1,180 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.5: Equations"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.5: Equations</h1>
+
+    <div class="math-def">
+        An <b>equation</b> is a statement where two mathematical expressions are equal.
+    </div>
+
+    <p> For example \[3 + 5 = 8 \qquad \qquad 4x + 7 = 16\] are equations.</p>
+
+    <h2>Solving Equations</h2><hr>
+
+    <div class="math-def">
+        <b>Solving an equation</b> means finding all values of the variables which makes the equation true.
+    </div>
+
+    <p>To preserve equality (be able to write down "$=$" and have it be true) we have seen one method already: <b>multiplying by one</b>. For example: 
+        \begin{align}
+        \dfrac{1}{6} + \dfrac{1}{8} &= 1\cdot \dfrac{1}{6} + \dfrac{1}{8} \cdot 1 
+        \\ &= \dfrac{4}{4}\cdot \dfrac{1}{6} + \dfrac{1}{8}\cdot \dfrac{3}{3}
+        \end{align}
+    </p>
+
+    <p>Useful for introducing something you need, such as LCD or rationalizing!</p>
+
+    <p>There are also operations of equality. If you add or multiply by the same number or expression on each side, equality is also preserved.</p>
+
+    <div class="math-fact"> <b style="color: var(--factcolor)">Properties of Equality</b>
+        <ul>
+            <li>Given $A = B$, we also know $A + C = B + C$.</li>
+            <li>Given $A = B$, we also know $A\cdot C = B\cdot C$ provided $C \neq 0$.</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> For the equation $3x + 4 = 10$, find a solution and a non-solution.</div>
+
+    <p>To solve the above equation, you need to end with the statement \[x = \cdots\]</p>
+
+    <p>This process of getting the variable by itself is called <b>isolating the variable</b>.</p>
+
+    <div class="math-example"> Solve the equation $7x - 4 = 3x + 8$.</div>
+
+    <p>The previous equation is called a <b>linear equation</b>:
+
+        <div class="math-def"> A <b>linear equation</b> is an equation that can be manipulated into the form \[ax + b = 0\]
+            with $a, b \in \mathbb{R}$ and $a \neq 0$.
+        </div>
+    
+    <h2>Solving for (isolating) a Variable</h2><hr>
+
+    <div class="math-example"> Solve for (isolate) $M$ in the equation $F = G\dfrac{mM}{r^2}$.</div>
+
+    <p>In general, if you want to isolate a variable, let's call "$x$", use these four steps:
+        <ol>
+            <li>Expand all expressions into global terms.</li>
+            <li>Collect terms with $x$ on one side. Put all other terms on the other side.</li>
+            <li>Convert $x$ into a global factor using the GCF factoring method.</li>
+            <li>Divide both sides by the factor attached to $x$, therefore isolating $x$.</li>
+        </ol>
+    </p>
+
+    <div class="math-example"> Isolate $w$ in the equation $A = 2lw + 2wh + 2lh$.</div>
+
+    <p>The next example appears in Calculus.</p>
+
+    <div class="math-example"> Isolate $y'$ in the equation $3(y + xy') - 3x^2 + 2y^2 y' = y'$.</div>
+
+    <h2>Quadratics</h2><hr>
+
+    <p>The previous technique doesn't work if we have the variable to both a second power and a first power like \[x^2 + 5x = 1\] if we try factoring: \[x(x + 5) = 1 \implies x = \dfrac{1}{x + 5}\]</p>
+
+    <p>But $x$ is on both sides. Here's how to solve these, called <b>quadratic equations</b>:</p>
+    
+    <div class="math-def">
+        A <b>quadratic equation</b> is an equation of the form \[ax^2 + bx + c = 0\] where $a,b,c \in \mathbb{R}$ and $a \neq 0$.
+    </div>
+
+    <p>We discuss three ways to solve quadratics.</p>
+
+    <h4>Method 1: Solving Quadratics with Factoring</h4>
+
+    <p>The following property is one technique to solve quadratics:</p>
+
+    <div class="math-def">
+        The <b>zero-product property</b> says \[A\cdot B = 0 \qquad \text{if and only if}\qquad A = 0 \quad \text{or} \quad B = 0\]
+    </div>
+
+    <div class="math-example">
+        Find all real-valued solutions (meaning your solutions $x \in \mathbb{R}$) of the equation $x^2 + 5x = 24$.
+    </div>
+
+    <h4 id="quadratic-method2">Method 2: Solving Quadratics of the form $x^2 = c$</h4>
+
+    <p>Another technique to solve quadratics is by using this idea:</p>
+
+    <div class="math-fact">
+        The solutions of the equation \[x^2 = c\] are $x = \sqrt{c}$ and $x = - \sqrt{c}$.
+    </div>
+
+    <div class="math-example">
+        Find all real solutions of both equations: 
+        <ul>
+            <li class="lec-list-space">$x^2 = 5$</li>
+            <li class="lec-list-space">$(x-4)^2 = 5$</li>
+        </ul>
+    </div>
+
+    <h4>Method 3: The Quadratic Formula</h4>
+
+    <p>Here is one more method to solve quadratics.</p>
+
+    <div class="math-fact">
+        The solutions of the quadratic equation $ax^2 + bx + c = 0$ where $a \neq 0$ are \[x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+    </div>
+
+    <div class="math-example">
+        Find all real-valued solutions of each equation.
+        <ul>
+            <li class="lec-list-space">$3x^2 - 5x - 1 = 0$</li>
+            <li class="lec-list-space">$4x^2 + 12x + 9 = 0$</li>
+        </ul>
+    </div>
+
+    <h2>Other Types of Equations</h2><hr/>
+
+    <p>There are other types of equations, not just linear or quadratic, such as \[\dfrac{3}{x} - \dfrac{2}{x - 3} = -\dfrac{12}{x^2 - 9} \qquad \qquad \sqrt{4x - 3} = 5 + x \qquad \qquad x^4 - 5x^2 + 4 = 0\]</p>
+
+    <p>Oftentimes, what will happen is this:
+        <ol>
+            <li>You start with a equation that isn't linear or quadratic, like above.</li>
+            <li>Try to convert the equation so that it looks linear or quadratic.</li>
+            <li>If it's linear, follow the four step process for isolating the variable.</li>
+            <li>If it's quadratic, choose one of three quadratic solving methods from above.</li>
+        </ol>
+    </p>
+
+    <h3>Equations Involving Fractional Expressions</h3><hr>
+
+    <p>For these, think about "rescuing $x$" from the denominator.</p>
+
+    <p>Multiply both sides by the LCD to get $x$ out of the denominator.</p>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{1}{x-\dfrac{1}{2}}-\dfrac{2}{x^{2}} = 0$.
+    </div>
+
+    <p>The next example appears in Calculus.</p>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{1 - \dfrac{1}{x^2}}{x} = 0$.
+    </div>
+
+    <h3>Equations Involving Radicals</h3><hr>
+
+    <p>First, isolate the square root expression on one side.</p>
+
+    <p>Then square both sides, and solve normally.</p>
+
+    <div class="math-example">
+        Solve the equation $\dfrac{\sqrt{x} + 1}{x + 1} = 1$
+    </div>
+
+    <div class="math-example">
+        Solve the equation $2x = 1 - \sqrt{2 - x}$.
+    </div>
+
+{% endblock %}

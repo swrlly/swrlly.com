@@ -1,0 +1,114 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 2.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.3: Derivative as a Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/2.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>2.3: Differentiation Formulas</h1><hr>
+
+    <p>It is tedious to evaluate \[f'(x) = \lim_{h\rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\] every time. Let's look how we can reduce our work by looking at shortcuts.</p>
+
+    <div class="math-theorem"> Suppose $c, n\in \mathbb{R}$ and $f(x)$ and $g(x)$ are differentiable functions. Then
+        <ol>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (c) = 0$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (x^n) = nx^{n-1} \ $ (called the <b>Power Rule</b>)
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} (cf(x)) = c\dfrac{d}{dx}[f(x)]$
+            </li>
+            <li class="lec-list-space">
+                $\dfrac{d}{dx} [f(x) \pm g(x)] = \dfrac{d}{dx}[f(x)] \pm \dfrac{d}{dx}[g(x)]$
+            </li>
+        </ol>
+    </div>
+
+    <p>For the Power Rule, you need to make sure the derivative variable matches the variable you are applying it to.</p>
+
+    <p>For example \[\dfrac{d}{dx} x^2 = 2x^{2-1} = 2x\] but \[\dfrac{d}{dx}y^2 \neq 2y^{2-1}\]</p>
+
+    <div class="math-example">
+        For each of the following functions $f(x)$, find $f'(x)$.
+        <ol>
+            <li class="lec-list-space">$f(x) = 28$</li>
+            <li class="lec-list-space">$f(x) = \pi^2$</li>
+            <li class="lec-list-space">$f(x) = -x$</li>
+            <li class="lec-list-space">$f(x) = x^8$</li>
+            <li class="lec-list-space">$f(x) = x^2\sqrt{x}$</li>
+            <li class="lec-list-space">$f(x) = \sqrt{x}$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{1}{\sqrt[3]{x}}$</li>
+            <li class="lec-list-space">$f(x) = 5x^3$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{3}{\sqrt{x}}$</li>
+            <li class="lec-list-space">$f(x) = 4x^5 + 3x^4 - 8x^2 + x + 3$</li>
+            <li class="lec-list-space">$f(t) = \dfrac{t^2}{5} + \dfrac{5}{t^3}$</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        The equation of motion of a particle is $s(t) = 2t^3 - 5t^2 + 3t + 4$, where $s$ is measured in centimeters and $t$ in seconds. Find acceleration as a function of time and compute the acceleration after 2 seconds.
+    </div>
+
+    <h2>Product and Quotient Rules</h2><hr>
+
+    <p>We know how to take derivatives of sums, constants, and $x^n$. What about products?</p>
+    
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Product Rule</b><br>
+        \[\dfrac{d}{dx}[f(x)g(x)] = f(x)g'(x) + g(x)f'(x)\]
+    </div>
+    
+    <div class="math-example">
+        Find the derivatives of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(v) = (v^2 +1)(v^2 - 1)$
+            </li>
+            <li class="lec-list-space">
+                $f(x) = x^3(\sqrt{x} + 1)$
+            </li>
+        </ol>
+    </div>
+    
+    <p>How about quotients?</p>
+    
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Quotient Rule</b><br>
+        \[\dfrac{d}{dx}\left[\dfrac{f(x)}{g(x)}\right] = \dfrac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}\]
+    </div>
+    
+    <p>You can remember this by thinking "low Dhigh minus high Dlow, square the bottom, away you go."</p>
+    
+    <div class="math-example"> Differentiate (find the derivative) of the following:
+        <ol>
+            <li class="lec-list-space">
+                $f(x) = \dfrac{x^2 + x - 2}{x^3 + 6}$
+            </li>
+        </ol>
+    </div>
+
+    <p>The tangent line has a point of tangency. If you take the line that is perpendicular to the tangent line at the point of tangency, this is called the <b>normal line.</b></p>
+
+    <p>Here is an illustration: <img src="/static/swrlly/images/teaching/141-2.3-1.png" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></p>
+
+    <div class="math-example"> Find equations of the tangent line and normal line to the function $y = \dfrac{\sqrt{x}}{1 + x^2}$ at the point $\left(1, \frac{1}{2}\right)$.</div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+

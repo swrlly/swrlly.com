@@ -1,0 +1,141 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 2.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.5: One-Sided Limits and Continuity"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/2.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>2.5: One-Sided Limits and Continuity</h1>
+    <h2>One-Sided Limits</h2><hr>
+    <p>We saw the use of approaching from the left and right to determine if a limit exists. Let's make the notation rigorous under the limit laws.</p>
+
+    <div class="math-def"> <b style="color:var(--lavender)"> One-Sided Limits</b>
+
+        <p>The function $f$ has the <b>right-hand limit</b> $L$ as $x\rightarrow a$ from the right, written \[\lim_{x\rightarrow a^+} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the right of $a$. </p>
+
+        <p>Similarly, the function $f$ has the <b>left-hand limit</b> $L$ as $x\rightarrow a$ from the left, written \[\lim_{x\rightarrow a^-} f(x) = L\] if $f(x)$ can be made close to $L$ as we please by taking $x$ sufficiently close to and to the left of $a$. </p>
+    
+    </div>
+
+    <p>Note that the limit laws hold for left and right hand limits as well.</p>
+
+    <p>If left and right hand limits agree, the limit exists:</p>
+
+    <div class="math-theorem"> Let $f(x)$ be a function and $a,b\in \mathbb{R}$ where $b$ is close to $a$. Suppose $f(b)$ is defined, but possibly $f(a)$ is not. Then \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <div class="math-example"> Let \[f(x) = \begin{cases} -x & x \leq 0 \\ \sqrt{x} & x > 0 \end{cases}\qquad g(x) = \begin{cases} -1 & x < 0 \\ 1 & x \geq 0 \end{cases}\]
+    <ol>
+        <li>Show $\lim_{x\rightarrow 0} f(x)$ exists and find the value by using one-sided limits.</li>
+        <li>Show $\lim_{x\rightarrow 0} g(x)$ does not exist.</li>
+    </ol>
+    </div>
+
+    <h2>Continuous Functions</h2><hr>
+
+    <p>In precalculus we learned that continuous functions are functions we can draw the graph of without lifting our pencil.</p>
+    <p>In calculus, use the previous sentence as intuition for the next definition:</p>
+    
+    <div class="math-def">A function $f$ is <b>continuous at a number</b> $x = a$ if the following conditions are satisfied:
+    <ol>
+        <li class="lec-list-space">$f(a)$ is defined.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x)$ exists.</li>
+        <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a}f(x) = f(a)$.</li>
+    </ol>
+
+    <p>If any of these conditions fail, then the function is not continuous.</p>
+
+    </div>
+
+    <div class="math-example"> 
+        <p>Given this graph of a function $f$:</p> <img src="/static/swrlly/images/teaching/2.5cont.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        <p>Where is the function not continuous?</p>
+    </div>
+
+    In general:
+    <ol>
+        <li>A function $f$ is said to be <b>continuous on an interval</b> if $f$ is continuous on every number in the interval.</li>
+        <li>If $f$ is not continuous at $x = a$, it is said to be <b>discontinuous</b> at $x = a$.</li>
+    </ol>
+
+    <div class="math-example">
+        Find the values of $x$ where each function is continuous:
+        <ol>
+            <li class="lec-list-space">$f(x) = x + 2$</li>
+            <li class="lec-list-space">$g(x) = \dfrac{x^2-4}{x-2}$</li>
+            <li class="lec-list-space">$h(x) = \begin{cases} \frac{1}{x} & x > 0 \\ -1 & x \leq 0\end{cases}$</li>
+        </ol>
+    </div>
+
+    <h2>Properties of Continuous Functions</h2><hr>
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">If $c \in \mathbb{R}$, then $f(x) = c$ is continuous everywhere.</li>
+            <li class="lec-list-space">$f(x) = x$ is continuous everywhere.</li>
+        </ol>
+
+        Now if $f$ and $g$ are continuous at $x = a$, then 
+        <ol start=3>
+            <li class="lec-list-space">$[f(x)]^n$ is continuous at $x = a$ if it is defined.</li>
+            <li class="lec-list-space">$f\pm g, f\cdot g$ is continuous at $x = a$.</li>
+            <li class="lec-list-space">$f/g$ is continuous at $x = a$ if $g(a) \neq 0$.</li>
+        </ol>
+    </div>
+
+    If you take facts 2,3,4, we can create polynomial functions. Including fact 5 gives us rational functions. So in general:
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">A polynomial function $P(x)$ is continuous on any value of $x$.</li>
+            <li class="lec-list-space">A rational function $R(x) = p(x)/q(x)$ is continuous on every value of $x$ where $q(x) \neq 0$.</li>
+        </ol>
+    </div>
+
+    This means if we take any limit (except for limit at infinity) for polynomial and rational functions, we can just plug in the value!
+
+    <div class="math-example">
+        Find the values of $x$ where each function is continuous:
+        <ol>
+            <li class="lec-list-space">$f(x) = 3x^3 + 2x^2 - x + 10$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{8x^{10} - 4x + 1}{x^2 + 1}$</li>
+            <li class="lec-list-space">$f(x) = \dfrac{4x^3 - 3x^2 + 1}{x^2 - 3x  +2}$</li>
+        </ol>
+    </div>
+
+    <h2>Intermediate Value Theorem</h2><hr>
+
+    <p>Suppose a maglev's position at time $t$ is determined by the function \[f(t) = 4t^2 \qquad 0 \leq t \leq 10\]</p>
+
+    <p>Consider the endpoints. At time $t = 0$, the maglev is at position $f(0) = 0$; it hasn't moved from its starting position.</p>
+
+    <p>At time $t = 10$, the maglev is at position $f(10) = 400$. This means the maglev is 400 units away from it's starting position.</p>
+
+    <p>This function is continuous. Intuitively, this means the maglev cannot "suddenly" jump over portions of the track; it must always be on the track.</p>
+
+    <p>As such, if we were to ask "is there a time $t$ where $f(t) = 100$?", the answer must be yes. This is called the <b>Intermediate Value Theorem.</b></p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Intermediate Value Theorem</b><br>
+    
+    If $f$ is a continuous function on a closed interval $[a, b]$ and $M$ is any number between $f(a)$ and $f(b)$, then there is at least one number $c$ in $[a,b]$ such that $f(c) = M$.
+    </div>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Existence of Zeros of a Continuous Function</b><br>
+    
+        If $f$ is a continuous function on a closed interval $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there exists $c \in (a, b)$ where $f(c) = 0$.
+    </div>
+
+    <div class="math-example">
+        Let $f(x) = x^3 + x + 1$.
+        <ol>
+            <li>Show $f$ is continuous for all $x \in \mathbb{R}$.</li>
+            <li>Show there exists at least one $c \in (-1, 1)$ where $f(c) = 0$.</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}

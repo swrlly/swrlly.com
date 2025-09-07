@@ -1,0 +1,67 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.4: Optimization I"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>4.4: Optimization I</h1>
+    
+    <h2>Absolute Extrema</h2><hr>
+
+    <div class="math-def">
+        If $f(x) \leq f(c)$ for all $x$ in the domain of $f$, then $f(c)$ is called the <b>absolute maximum value</b> of $f$. <br>
+        If $f(x) \geq  f(c)$ for all $x$ in the domain of $f$, then $f(c)$ is called the <b>absolute minimum value</b> of $f$. <br>
+    </div>
+
+    Absolute extrema might not exist.
+
+    <div class="math-theorem">
+        If a function $f$ is continuous on a closed interval $[a,b]$ then $f$ has both an absolute maximum value and an absolute minimum value on $[a, b]$.
+    </div>
+
+    To find absolute extrema, just find critical numbers and check endpoints of the interval.
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Finding Absolute Extrema on a Closed Interval</b>
+        <ol>
+            <li class="lec-list-space">
+                Find the critical number of $f$ in $(a, b)$.
+            </li>
+            <li class="lec-list-space">
+                Keep track of the value of $f$ at each critical number and compute $f(a)$ and $f(b)$.
+            </li>
+            <li class="lec-list-space">
+                The absolute maximum and absolute minimum value will correspond to the smalles and largest values found in step 2.
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Find the absolute extrema of $f(x) = x^2$ on $[-1, 2]$.</div>
+
+    <div class="math-example"> Find the absolute extrema of the function \[f(x) = x^3 - 2x^2 - 4x + 4\] on $[0, 3]$.</div>
+
+    <div class="math-example">
+        Find absolute extrema of \[f(x) = x^{2/3}\] on $[-1, 8]$.
+    </div>    
+
+    <div class="math-example"> Acrosonic's total profit in dollars from manufacturing and selling $x$ units of their loudspeaker is given by \[P(x) = -0.02x^2 + 300x - 200000 \qquad 0 \leq x \leq 20000\]
+        How many units of the loudspeaker system must Acrosonic produce to maximize its profits?
+    </div>
+
+    <div class="math-example"> The daily average cost function (dollars per unit) of some company is given by \[\bar{C}(x) = 0.0001x^2 - 0.08x + 40 + \dfrac{5000}{x} \qquad x \geq 0\]
+        Show that a production level of 500 units per day results in a minimum average cost for the company.
+    </div>
+
+    <div class="math-example">
+        The altitude (in feet) of a rocket $t$ seconds into flight is given by \[f(t) = -t^3 + 96t^2 + 195t + 5 \qquad t \geq 0\]
+        Find the maximum altitude and maximum velocity attained by the rocket.
+    </div>
+</div>
+{% endblock %}

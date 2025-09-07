@@ -1,0 +1,74 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 1.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.4: Tangent and Velocity Problems"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/1.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.4: The Tangent and Velocity Problems</h1>
+
+    <p>Goals: 
+        <ul>
+            <li>Describe the intuition behind the <b>derivative</b>, the object we are studying in calculus.</li>
+        </ul>
+    </p>
+
+    <h2>The Tangent Problem</h2><hr>
+
+    <p> Consider the following graph of a function. *drawn in class* </p>
+
+    <div class="math-def"> 
+        The <b>tangent line</b> of a graph of a function $f(x)$ is a line that intersects the graph at one point $(a, f(a))$ <b>near that point</b>.
+    </div>
+
+    <p>We will describe what "near the point" means in Section 1.5.</p>
+
+    <p></p>How do we actually create this line? Here's how:
+        <ol>
+            <li>Start with the point you want the tangent line to be at (called <b>point of tangency</b>).</li>
+            <li>Pick another point near the point of tangency.</li>
+            <li>You now have two points. Draw a line through it (called the <b>secant line</b>).</li>
+            <li>Move the other point closer and closer to the point of tangency.</li>
+            <li>If you move this point closer forever, the secant line will be as close as you want to the tangent line.</li>
+        </ol>
+    </p>
+
+    <p>Here is an example of the above process with an animation.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/g4hs8jah7p"></iframe></div>
+
+    <p>This process of "moving closer and seeing what's at the end" is called a <b>limit</b>, which will be described in the next section.</p>
+
+    <p>It turns out the slope of the tangent line (dotted line above) is called the <b>derivative</b>.</p>
+
+    <h2>The Velocity Problem</h2><hr/>
+
+    <p>When driving a car, your speedometer tells you the exact speed you are going.</p>
+
+    <p>That number at a specific time point is called the <b>instantaneous velocity</b>; the word instantaneous is meant to describe that velocity you see happens at one single point in time only.</p>
+
+    <p>You can find the instantaneous velocity if you have a function $s(t)$ which describes the total distance traveled after $t$ seconds.</p>
+
+    <div class="math-example"> Suppose that a ball is dropped from the upper observation deck of the CN Tower in Toronto, 450 m above the ground. Find the instantaneous velocity of the ball after 5 seconds.
+    </div>
+
+    <p>Again, finding instantaneous velocity involves moving a quantity closer to another one. This is a limit!</p>
+
+    <p>Therefore, to understand the derivative and instantaneous velocity, we need to understand limits.</p>
+
+    <p>Let's do this now.</p>
+
+    
+
+    
+</div>
+
+{% endblock %}

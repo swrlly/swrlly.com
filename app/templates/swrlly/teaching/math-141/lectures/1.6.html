@@ -1,0 +1,175 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 1.6</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.6: Calculating Limits Using the Limit Laws"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/1.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.6: Calculating Limits Using the Limit Laws</h1>
+
+    <h2>The Limit Laws</h2><hr/>
+
+    <p>We just saw two ways of computing limits: the table and the graph.</p>
+
+    <p>Both methods have their own weaknesses. We now turn to looking at algebraic manipulations.</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Limit Laws</b></br>
+
+        Suppose $c$ is a constant and the limits \[\lim_{x\rightarrow a}f(x), \qquad \lim_{x\rightarrow a} g(x)\]
+    exist. Then:
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} [f(x) \pm g(x)] = \lim_{x\rightarrow a} f(x) \pm \lim_{x\rightarrow a} g(x)$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c\cdot f(x) = c\lim_{x \rightarrow a} f(x)$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}[f(x)\cdot g(x)] = \left[\lim_{x\rightarrow a}f(x)\right]\cdot\left[\lim_{x\rightarrow a} g(x)\right]$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\lim_{x \rightarrow a} f(x)}{\lim_{x \rightarrow a}g(x)}$ if $\displaystyle\lim_{x\rightarrow a}g(x) \neq 0$.</li>
+        </ol>
+    </div>
+
+    <p>Law 1 and 2 says you can just put the limit in front of each <b>term</b>.</p>
+
+    <p>Law 4 says you can put the limit in front of each <b>factor</b>.</p>
+
+    <div class="math-example">
+        Given these functions <img src="/static/swrlly/images/teaching/2.4 limit law intro.PNG" style="max-width:600px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        Find <ol>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow -2}  [f(x) + 5g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1}  [f(x) \cdot g(x)]$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2}  \dfrac{f(x)}{g(x)}$</li>
+        </ol>
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li class="lec-list-space">From the graphs we can see \[\lim_{x \rightarrow -2} f(x) = 1 \qquad \lim_{x \rightarrow -2} g(x) = -1\]
+                So by using the limit laws we see \begin{align}\lim_{x\rightarrow -2} [f(x) + 5g(x)] &= \lim_{x\rightarrow -2} f(x) + \lim_{x\rightarrow -2} [5g(x)]
+                \\&= \lim_{x\rightarrow -2} f(x) + 5\lim_{x \rightarrow -2}g(x)
+                \\&= 1 + 5\cdot (-1) = -4\end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    Here are six more limit laws that are extremely useful.
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">More Properties of Limits</b></br>
+
+        Suppose $a, c \in \mathbb{R}$ and $n$ is a positive integer.
+    
+        <ol start="5">
+            <li class="lec-list-space">$\displaystyle \lim_{x\rightarrow a}[f(x)]^n = \left[\lim_{x\rightarrow a}f(x)\right]^n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} c = c$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x = a$ </li>
+            <li class="lec-list-space">$\displaystyle\lim_{x\rightarrow a} x^n = a^n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{x \rightarrow a}\sqrt[n]{x} = \sqrt[n]{a}$</li>
+            <li class="lec-list-space">If $f(x)$ is any function, then $\displaystyle\lim_{x\rightarrow a} \sqrt[n]{f(x)}= \sqrt[n]{\lim_{x \rightarrow a} f(x)}$.</li>
+        </ol>
+    </div>    
+
+    <b>Note:</b> this says for $n$th roots and powers of $x$, we are allowed to substitute $a$ directly. We will see why this is true in Section 1.8.
+
+    <div class="math-example"> Find the following limits:
+        <ol>
+            <!--<li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 2} x^3$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 4} 5x^{2}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} (5x^4 - 2)$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} 2x^3\cdot \sqrt{x^2 + 7}$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x \rightarrow 1} \dfrac{2x^2 + 1}{x + 1}$</li>-->
+            <li class="lec-list-space">$\displaystyle \lim_{x\rightarrow 5}(2x^2 - 3x + 4)$</li>
+            <li class="lec-list-space">$\displaystyle \lim_{x\rightarrow -2}\dfrac{x^3 + 2x^2 - 1}{5 - 3x}$</li>
+        </ol>
+    </div>
+
+    <h2>First Look at Indeterminate Forms</h2><hr>
+    <div class="math-example"> Consider \[\lim_{t\rightarrow 2}\dfrac{4(t^2 -4)}{t-2}\]
+
+        Let's try using the limit laws to compute this. We have 
+        \begin{align}
+        \displaystyle\lim_{t\rightarrow 2}\dfrac{4(t^2 -4)}{t-2} &= \dfrac{\displaystyle\lim_{t\rightarrow 2} 4(t^2 - 4)}{\displaystyle\lim_{t\rightarrow 2} (t-2)}
+        \\&= \dfrac{\displaystyle 4  (\lim_{t\rightarrow 2}t^2 - \lim_{t\rightarrow 2}4)}{\displaystyle\lim_{t\rightarrow 2} t-\lim_{t\rightarrow 2}2}
+        \\&= \dfrac{4(2^2 - 4)}{2 - 2}
+        \\&= \dfrac{0}{0}
+        \end{align}
+
+        The result is $0/0$, which we call an <b>indeterminate form</b>, which is different than dividing by zero.
+    </div>
+
+    <p>Remember: we are studying limits because we need them to understand derviatives.</p>
+
+    <p>It turns out the calculation of the <b>derviative</b> is actually an <b>indeterminate form</b> which we will see in Chapter 2.</p>
+
+    <p>To deal with indeterminate forms, we employ the following strategy:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)"> Strategy for Evaluating Indeterminate Forms</b></br>
+
+        Suppose you want to evaluate $\displaystyle \lim_{x\rightarrow a}f(x)$ but end up with $0/0$. Then:
+        
+        <ol>
+            <li class="lec-list-space">Replace the original function $f(x)$ with a new function $g(x)$ that takes on the same values as the original function everywhere except at $x = a$<br/> In practice, this means you need to ignore the limit for now and first do some pre-calculus:
+                <ol type="a">
+                    <li>Cancel out common factors.</li>
+                    <li>Rationalize the numerator or denominator.</li>
+                    <li>Simplify the expression.</li>
+                    <li>Potentially all of these.</li>
+                </ol>
+            </li>
+            <li class="lec-list-space">Then find $\displaystyle\lim_{x\rightarrow a} g(x)$ instead.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Find $\lim_{x\rightarrow 1}g(x)$ where \[g(x) = \begin{cases}x + 1 & x \neq 1 \\ \pi & x = 1\end{cases}\]</div>
+
+    <div class="math-example"> Find \[\lim_{x\rightarrow 2}\dfrac{4(x^2-4)}{x-2}\]</div>
+
+    <div class="math-example"> Find \[\lim_{h\rightarrow 0}\dfrac{\sqrt{1 + h} - 1}{h}\]</div>
+
+    <div class="math-example"> Find \[\lim_{h\rightarrow 0}\dfrac{(3+h)^2 - 9}{h}\]</div>
+
+    <h2>Additional Properties of Limits</h2><hr>
+
+    <p>Recall:</p>
+
+    <div class="math-theorem"> \[\lim_{x\rightarrow a^+}f(x) = L = \lim_{x\rightarrow a^-}f(x) \qquad \text{if and only if} \qquad  \lim_{x\rightarrow a}f(x) = L\]</div>
+
+    <p>Limit laws also hold for one-sided limits. This means instead of using the table technique, we can now check both left- and right-handed limits are equal with algebra!</p>
+
+    <div class="math-example"> Prove \[\lim_{x\rightarrow 0}\lvert x \rvert = 0\]</div>
+
+    <div class="math-example"> Prove \[\displaystyle\lim_{x\rightarrow 0}\dfrac{\lvert x \rvert}{x}\] does not exist.</div>
+
+    <div class="math-example"> If \[f(x) = \begin{cases} \sqrt{x - 4} & x > 4 \\ 8 - 2x & x < 4 \end{cases}\] determine if $\displaystyle \lim_{x\rightarrow 4} f(x)$ exists.</div>
+
+    <p>Sometimes limits can't be computed. But if we trap the function within two other functions that we know the limit of, we can find the limit of the original function itself.</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The Squeeze Theorem</b><br>
+
+        If $f(x) \leq g(x) \leq h(x)$ when $x$ is near $a$ (except possibly at $a$) and we know \[\lim_{x\rightarrow a}f(x) = \lim_{x\rightarrow a}h(x) = L\] then $\displaystyle \lim_{x\rightarrow a}g(x) = L$.
+
+        <img src="/static/swrlly/images/teaching/161-2.4-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+
+    <div class="math-example"> Show that $\displaystyle \lim_{x\rightarrow 0} x^2 \sin \dfrac{1}{x} = 0$.
+
+        <img src="/static/swrlly/images/teaching/161-2.4-2.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+    </div>
+
+    <p>Hint: You cannot evaluate $\lim_{x\rightarrow 0} \sin \dfrac{1}{x}$ because it does not exist: 
+        
+
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/49cn8cewhi"></iframe></div>
+    </p>
+
+
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.5: Optimization II"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>4.5: Optimization II</h1>
+
+    In 4.4 we were given functions to find the absolute maxima/minima of. This section will deal with optimization problems where there is no function given.
+    
+    <h2>Guidelines for Solving Optimization Problems</h2><hr>
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">Assign a letter to each variable mentioned in the problem. If it helps, draw a figure to help you identify variables.</li>
+            <li class="lec-list-space">Find a mathematical expression for the quantity to be optimized.</li>
+            <li class="lec-list-space"><b>Eliminate all variables in the expression except for one.</b> Be careful of domain restrictions (such as physical length needs to be greater than zero).
+            <ol>
+                <li class="lec-list-space">Use information you haven't used yet in the problem to find an equation relating the variables with each other.</li>
+            </ol>
+            </li>
+            <li class="lec-list-space">Optimize the function $f$ over its domain using 4.4 ideas.</li>
+        </ol>
+    </div>
+
+    <h2>Maximization Problems</h2><hr>
+
+    <div class="math-example">
+        A man wishes to have a rectangular-shaped garden in his backyard. He has 50 feet of fencing in which to enclose his garden. Find the dimensions for the largest garden he can have if he uses all of the fencing.
+    </div>
+
+    <div class="math-example">
+        By cutting away identical squares from each corner of a rectanguar piece of cardboard and folding up the resulting flaps, the cardboard may be turned into an open box. If the cardboard is 16 inches long and 10 inches wide, find the dimensions of the box that will yield the maximum volume.
+    </div>
+
+    <h2>Minimization Problems</h2><hr>
+
+    <div class="math-example">
+        Your company requires that its corned beef hash containers have a capacity of 54 cubic inches, have the shape of a right circular cylinder, and be made of aluminium. Determine the radius and height of the container that requires the least amount of metal.
+    </div>
+
+    <div class="math-example">
+        You are the sole agent for the Excalibur 250-cc motorcycle. Management estimates the demand for these motorcycles is 10,000 per year and they will sell at a uniform (linear) rate throughout the year. The cost incurred in ordering each shipment of motorcycles is $10,000 and the cost per year of storing each motorcycle is $200.<br>
+        How large should each order be, and how often should orders be placed, to minimize ordering and storage costs?
+    </div>
+    
+</div>
+{% endblock %}

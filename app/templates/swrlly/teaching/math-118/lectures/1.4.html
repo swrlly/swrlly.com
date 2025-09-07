@@ -1,0 +1,137 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 1.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="1.4: Dealing with Rational Expressions"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/1.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>1.4: Dealing with Rational Expressions</h1>
+
+    <p><a href="/teaching/math-118/lectures/1.1">Back in Section 1.1</a>, we defined five fraction properties we can use when manipulating fractions. They are copied here for convenience:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+
+        Suppose $a,b,c,d$ are real numbers.
+
+        <ol>
+            <li class="lec-list-space">$\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{c} \pm \dfrac{b}{c} = \dfrac{a \pm b}{c}$</li>
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d}\qquad $ Find the LCD, then use Fraction Law 3.</li>
+            <li class="lec-list-space">$\dfrac{ac}{bc} = \dfrac{a}{b}$</li>
+        </ol>
+    </div>
+
+    <p>This section is all about manipulating fractional expressions.</p>
+
+    <h2>Simplifying (property 5)</h2><hr>
+
+    <p>Property 5 says you can only cancel a <b>global factor</b> in both the numerator and denominator.</p>
+
+    <p>To simplify, convert numerator/denominator to factors, then cancel.</p>
+
+    <p>If you cannot use either of the four factoring techniques, just leave your answer in terms.</p>
+
+    <div class="math-example"> Simplify the expression \[\dfrac{x^2 - 1}{x^2 + x - 2}\]</div>
+    
+    <p>Sometimes you need to first expand to combine like terms in order to factor.</p>
+
+    <p>The next problem appears in Calculus.</p>
+
+    <div class="math-example"> Simplify the expression \[\dfrac{(x+h)^2 - 1 - (x - 1)}{h}\]</div>
+
+    <h2 id="118-1.4-multiplying">Multiplying (property 1)</h2><hr>
+
+    <p>When multiplying, you should simplify first, then multiply.</p>
+    
+    <div class="math-example"> Multiply and simplify: \[\dfrac{x^2 + 2x - 3}{x^2 + 8x + 16}\cdot \dfrac{3x + 12}{x - 1}\]</div>
+    
+    <h2>Dividing (property 2)</h2><hr>
+
+    <div class="math-example"> Divide and simplify: \[\dfrac{x-4}{x^2 - 4} \div \dfrac{x^2 - 3x - 4}{x^2 + 5x + 6}\]</div>
+
+    <h2>Adding (property 3 + 4)</h2><hr>
+
+    <p>Adding fractions required you to find the LCD.</p>
+
+    <p>LCD requires <b>factors</b>.</p>
+
+    <p>You can group <b>terms</b> together with parentheses to create a <b>factor</b>.</p>
+
+    <div class="math-example"> Perform the indicated operation and simplify:
+        <ul>
+            <li class="lec-list-space">$\dfrac{3}{x-1} + \dfrac{x}{x+2}$</li>
+            <li class="lec-list-space">$\dfrac{1}{x^2 - 1} - \dfrac{2}{(x + 1)^2}$</li>
+        </ul>
+    </div>
+
+    <h2>Compound Fractions</h2><hr>
+
+    <p>A compound fraction is a fraction nested within another fraction, for example \[\dfrac{\dfrac{x}{y} + 1}{1 - \dfrac{y}{x}}\] When you're asked to "simplify a compound fraction," this means getting rid of the nested fraction by removing the internal denominators.</p>
+
+    <div class="math-example"> Simplify the following:
+        <ul>
+            <li class="lec-list-space">$\dfrac{\dfrac{x}{y} + 1}{1 - \dfrac{y}{x}}$</li>
+            <li class="lec-list-space">$\dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h}$</li>
+        </ul>
+    </div>
+
+    <p>The second problem will appear in calculus again! Take note of the $h$'s cancelling through fraction law #5.</p>
+
+    <h2>Rationalizing</h2><hr>
+
+    <p>Rationalizing means to remove square roots. There are two types of problems you will encounter: one factor or two term.</p>
+
+    <h4>One Factor</h4>
+
+    <div class="math-example">
+        Rationalize the denominator: $\dfrac{2}{\sqrt{x}}$
+    </div>
+
+    <p><b>Remember:</b> when you are asked to simplify a fractional expression, remember to simplify nested fractions!</p>
+ 
+    <div class="math-example"> Rationalize the denominator and simplify: $\dfrac{\frac{1}{\sqrt{x}}}{x}$</div>
+
+    <h4>Two term</h4>
+
+    <div class="math-example"> Rationalize the denominator: $\dfrac{1}{\sqrt{x} + 1}$</div>
+
+    <p>Rationalization appears in calculus. Here's a rationalization problem from Calculus.</p>
+
+    <div class="math-example"> Rationalize the numerator: $\dfrac{\sqrt{4 + h} - 2}{h}$</div>
+
+    <h2 id="simplify">What does "Simplify" mean?</h2><hr>
+
+    <p>Upon completing this section, we see that <b>"simplify"</b> means:
+    
+        <ol>
+            <li>Answer is one fraction.</li>
+            <li>Compound fractions have been eliminated.</li>
+            <li>Answer has no negative exponents.</li>
+            <li>Expand <b>if</b> you can create like terms. Then combine them.</li>
+            <li>Try to keep existing factors if you have them. If you have terms, try to factor using <a href="/teaching/math-118/lectures/1.3">the four methods to factor.</a> 
+                <ul>
+                    <li>If you are unable to factor or don't know how to, leave answer as terms.</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+
+    <p>General advice:
+        <ol>
+            <li>Use all exponent laws until you cannot.</li>
+            <li>Use all fraction properties until you cannot. Never leave your answer as two or more independent fractions.</li>
+            <li>If you can expand a local term to create like terms, do so.</li>
+        </ol>
+    </p>
+
+</div>
+{% endblock %}

@@ -1,0 +1,215 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.5</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.5: The Chain Rule"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.5"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.5: The Chain Rule</h1><hr>
+
+    <p>How about taking the derivative of a composition of functions?</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">Chain Rule</b><br>
+        If $h(x) = f(g(x))$, then \[h'(x) = \dfrac{d}{dx}f(g(x)) = f'(g(x))\cdot g'(x)\] If we write $u = g(x)$, meaning $y = h(x) = f(g(x)) = f(u)$, then \[\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}\]
+    </div>
+
+    <p>In other words, $h'(x)$ is the derivative of the outside function evaluated at the inside function, then multiplied by the derivative of inside.</p>
+
+    <div class="math-example">
+        Let $F(x) = (3x+1)^2$.
+        <ol>
+            <li class="lec-list-space">Find $F'(x)$ using the chain rule.</li>
+            <li class="lec-list-space">Find $F'(x)$ without using the chain rule.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \sqrt{x^2 + 1}$</li>
+            <li class="lec-list-space">$F(x) = \sin(x^2)$</li>
+            <li class="lec-list-space">$F(x) = \sin^2(x)$</li>
+        </ol>
+    </div>
+
+    <p>The chain rule is used when a function is taken to a power, for example \[(2x+5)^5 \qquad \sqrt{4x^2 + 2x + 1} \qquad (4x^5 + 3x^2 + 1)^{6/5}\]
+        This means the outside function $f(x) = x^n$ sometimes! Thus:  
+    </p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The General Power Rule</b><br> If $g$ is differentiable and $h(x) = [g(x)]^n$, then \[h'(x) = \dfrac{d}{dx}[g(x)]^n = n[g(x)]^{n-1}g'(x)\]</div>
+
+    <div class="math-example"> Differentiate $y = (x^3-1)^{100}$.</div>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \dfrac{1}{(4x^2 - 7)^2}$</li>
+            <li class="lec-list-space">$H(t) = \left(\dfrac{t - 2}{2t + 1}\right)^9$</li>
+            <li class="lec-list-space">$F(x) = e^{\sin x}$</li>
+        </ol> 
+    </div>
+
+    <h2>Exponential Functions with Arbitrary Bases</h2><hr>
+
+    <p>We know the derivative of $f(x) = e^x$ is just $e^x$. How about arbitrary bases?</p>
+
+    <div class="math-fact">  \[\dfrac{d}{dx}b^x = b^x \ln b\]</div>
+
+    <div class="math-example"> Differentiate $f(x) = 2^x$.</div>
+
+    <h2>Longer Chains</h2><hr>
+
+    <p>Suppose $y = f(g(h(t)))$. Assigning $y = f(u), u = g(x), x = h(t)$, what is $\dfrac{dy}{dt}$?</p>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$F(x) = \sin(\cos(\tan(x)))$</li>
+            <li class="lec-list-space">$y= e^{\csc 3\theta}$</li>
+        </ol>
+    </div>
+
+    <h2>Differentiating Implicitly</h2><hr>
+
+    <p>Thus far, we have been given functions in the form $y = f(x)$, such as 
+        \[
+        y = x^2 \qquad
+        y = \dfrac{x + 1}{x-1} \qquad
+        y = \sqrt{36 - x}\]
+    </p>
+
+    <p>Not all functions are of the form $y = f(x)$. Consider \[x^2y + y - x^2 + 1 = 0\] In thi form, $y$ is not explicitly a function of $x$, meaning $y$ is not isolated on one side. We call this an <b>implicit equation</b>.</p>
+
+    <p>Sometimes it is possible to convert an implicit equation into an explicit equation. From above we see that
+        \begin{align}
+        x^2y + y - x^2 + 1 &= 0 \\
+        y(x^2 + 1) &= x^2 - 1 \\
+        y &= \dfrac{x^2 - 1}{x^2 + 1}
+        \end{align}
+    
+    and we have converted the implicit equation into an <b>explicit equation</b>.</p>
+
+    <p>This is not always possible. Consider \[y^4 - y^3 - y + 2x^3 - x = 8\]
+        There is no way to isolate a single $y$ on one side.
+    </p>
+
+    <p>In this case, we want to assume we can take $y = f(x)$ under suitable conditions. These suitable conditions usually mean to force the implicit equation to pass the vertical line test by chopping it up into multiple functions:
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/iukguwp6ao"></iframe></div>
+    </p>
+
+    <p>Finding the derivative of an implicit equation is called <b>implicit differentiation</b>.</p>
+
+    <div class="math-example"> Given $y^2 = x$, find $\dfrac{dy}{dx}$.</div>
+
+    <p>In general:</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Finding $\dfrac{dy}{dx}$ with Implicit Differentiation</b>
+    <ol>
+        <li class="lec-list-space">
+            Apply $\dfrac{d}{dx}$ to both sides.
+        </li>
+        <li class="lec-list-space">
+            Use the chain rule on terms involving $y$.
+        </li>
+        <li class="lec-list-space">
+            Differentiate terms involving $x$ normally.
+        </li>
+        <li class="lec-list-space">
+            Solve the equation for $\dfrac{dy}{dx}$.
+        </li>
+    </ol></div>
+
+    <div class="math-example"> Given \[y^3 - y + 2x^3 - x = 8\] find $\dfrac{dy}{dx}$.</div>
+
+    <div class="math-example"> Given $x^2 + y^2 = 4$:
+        <ol>
+            <li class="lec-list-space">Find $\dfrac{dy}{dx}$ using implicit differentiation.</li>
+            <li class="lec-list-space">Find the slope of the tangent line at $(1, \sqrt{3})$ in the above graph.</li>
+        </ol>
+    </div>
+
+    <p>Sometimes we need to use the product rule on terms involving both $x$ and $y$, such as $x^2y^3$.</p>
+
+    <div class="math-example"> Find $\dfrac{dy}{dx}$ for the following equation \[x^2y^3 + 6x^2 = \sin(y) + 12\]</div>
+
+    <p>The next two problems involves product and chain rules.</p>
+
+    <div class="math-example"> Find the tangent line to the equation \[x^3 + y^3 = 6xy\] at $(3,3)$.</div>
+
+    <div class="math-example"> Find $dy/dx$ for the equation \[\sqrt{xy} = x + y\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            First, convert the square root into an exponent. Applying $\dfrac{d}{dx}$ gives 
+            \begin{align}
+            \dfrac{d}{dx}\left[(xy)^{\frac{1}{2}}\right] &= \dfrac{d}{dx}\left[x + y\right]
+            \\\dfrac{1}{2}(xy)^{-\frac{1}{2}}\cdot \dfrac{d}{dx}[xy] &= \dfrac{d}{dx}[x] + \dfrac{d}{dx}[y] 
+            \\\dfrac{1}{2}(xy)^{-\frac{1}{2}}(x\dfrac{d}{dx}[y] + y \dfrac{d}{dx}[x]) &= 1 + 1\cdot \dfrac{dy}{dx} 
+            \\\dfrac{1}{2}(xy)^{-\frac{1}{2}}(x\cdot 1\cdot \dfrac{dy}{dx} + y\cdot 1) &= 1 + \dfrac{dy}{dx}
+            \\\dfrac{1}{2}(xy)^{-\frac{1}{2}}x\dfrac{dy}{dx} + \dfrac{1}{2}(xy)^{-\frac{1}{2}}y &= 1 + \dfrac{dy}{dx}
+            \\\dfrac{1}{2}(xy)^{-\frac{1}{2}}x\dfrac{dy}{dx} - \dfrac{dy}{dx} &= 1 - \dfrac{1}{2}(xy)^{-\frac{1}{2}}y
+            \\\dfrac{dy}{dx}\left(\dfrac{1}{2}(xy)^{-\frac{1}{2}}x - 1\right) &= 1 - \dfrac{1}{2}(xy)^{-\frac{1}{2}}y
+            \\\dfrac{dy}{dx} &= \dfrac{1 - \dfrac{1}{2}\frac{1}{(xy)^{1/2}}y}{\dfrac{1}{2}\frac{1}{(xy)^{1/2}}x - 1}
+            \\\dfrac{dy}{dx} &= \dfrac{1 - \dfrac{y}{2\sqrt{xy}}}{\dfrac{x}{2\sqrt{xy}} - 1}\cdot{\color{yellow} \dfrac{2\sqrt{xy}}{2\sqrt{xy}}}
+            \\\dfrac{dy}{dx} &= \dfrac{2\sqrt{xy} - y}{x - 2\sqrt{xy}}
+            \end{align}
+        </div>
+    </div>
+
+    <h2>Related Rates</h2><hr>
+
+    <p>Imagine a cop with a radar gun, waiting on the side of the street.</p>
+
+    <p>You pass by in a car. The cop wants to know if you're speeding or not.</p>
+
+    <p>Two quantities are changing with respect to time: the distance between you and the cop (call it $z$), and the distance between you and the point straight ahead of you perpendicular to the cop's line of vision to the road (call this distance $x$).</p>
+
+    <p>It is easier to measure the rate of change of the distance $z$; the radar gun can measure this.</p>
+
+    <p>However, the cop wants to know your real speed, or the rate of change or $x$.</p>
+
+    <p><b>Related rates</b> problems are typically in the above setup. The rate of change of one quantity is easier to measure, and that rate will also tell us something about the harder to measure rate of change.</p>
+
+    <p>In general, two quantities $x$ and $y$ will depend on a third quantity $t$. Given $dx/dt$, can we find $dy/dt$?</p>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Solving related rates problems</b><br>
+
+        <ol>
+            <li class="lec-list-space">
+                Assign a variable to each quantity that are <b>functions of time</b>. Draw a diagram to help you if needed.
+            </li>
+            <li class="lec-list-space">Write out the given information and the required rate in terms of derivatives.</li>
+            <li class="lec-list-space">If no equation is given, write an equation that relates the various quantities of the problem.</li>
+            <li class="lec-list-space">Implicitly differentiate both sides of the equation with respect to time.</li>
+            <li class="lec-list-space">If necessary, use the information given to eliminate variables from the original equation with substitution.</li>
+            <li class="lec-list-space">Solve for the unknown rate.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> 
+        Air is being pumped into a spherical balloon so that it volume increases at a rate of 100 cm$^3$/s. How fast is the radius of the balloon increasing when the diameter is 50 cm?
+    </div>
+
+    <div class="math-example"> 
+        When the diameter of a spherical tumor is 16mm it is growing at a rate of 0.4 mm a day. How fast is the volume of the tumor changing at that time?
+    </div>
+
+    <div class="math-example"> At a distance of 4000 feet from the launch site, a spectator is observing a rocket being launched. If the rocket lifts off vertically and is rising at a speed of 600 feet/second when it is at an altitude of 3000 feet, how fast is the distance between the rocket and the spectator changing at that instant?</div>
+
+    <div class="math-example">
+        A 10 foot ladder is leaning against a vertical wall. If the bottom of the ladder is sliding away from the wall at a rate of 1 foot per second, how fast is the top of the ladder sliding down the wall when the bottom of the ladder is 6 feet away from the wall?
+    </div>
+
+
+    
+
+
+    </div>
+
+ 
+{% endblock %}

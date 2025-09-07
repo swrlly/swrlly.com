@@ -1,0 +1,137 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - Homework 8</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - Homework 8"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 8"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/homework/hw8"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 8</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+</p><hr>
+    <p>Answer the following:</p>
+    <ol>
+
+        <li class="hw-space">
+            Find the derivative of each of the following functions. Remember to recognize the form, whether it be factors, composition, etc.
+            <ol type="a">
+                <li class="hw-space">$y = \dfrac{x^2 + 1}{x^2 - 1}$</li>
+                <li class="hw-space">$y = \dfrac{1 + 2x}{3 - 4x}$</li>
+                <li class="hw-space">$f(x) = \dfrac{x}{x + \frac{1}{x}}$</li>
+                <li class="hw-space">$f(x) = \sec x$</li>
+                <li class="hw-space">$f(x) = \cot x$</li>
+                <li class="hw-space">$f(x) = \dfrac{\sec x}{1 + \tan x}$</li>
+                <li class="hw-space">$f(t) = e^t\sin t$</li>
+                <li class="hw-space">$f(x) = (x^4 + 4x^2)e^x$</li>
+                <li class="hw-space">$y = \dfrac{e^x}{1 + x}$</li>
+                <li class="hw-space">$f(t) = \dfrac{t - \sqrt{t}}{t^{1/3}}$</li>
+                <li class="hw-space">$y = e^{\sqrt{x}}$</li>
+                <li class="hw-space">$f(x) = (3x - x^3)^{23}$</li>
+                <li class="hw-space">$f(x) = \sqrt[3]{1 + \tan x}$</li>
+                <li class="hw-space">$f(x) = xe^{-2x}$</li>
+                <li class="hw-space">$f(x) = (3x + 2)^3(4x^2 + 3)^4$</li>
+                <li class="hw-space">$y = \sqrt{x + \sqrt{ x + \sqrt{x}}}$</li>
+                <li class="hw-space">$f(x) = 2^{\sin \pi x}$</li>
+                <li class="hw-space">$f(x) = \sqrt{\dfrac{x}{x^2 + 4}}$</li>
+                <li class="hw-space">$f(x) = e^{e^x}$</li>
+                <li class="hw-space">$f(x) = \sin x + \sin^2 x$</li>
+                <li class="hw-space">$f(x) = 2^{3^x}</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the equation of the tangent line to the curve at the given point.
+            <ol type="a">
+                <li class="hw-space">$y = (1 + 2x)^{10}, \qquad (0, 1)$</li>
+                <li class="hw-space">$y = \sin(\sin(x)), \qquad (\pi, 0)$</li>
+            </ol>
+        </li>
+
+        <hr/>
+        <p>The rest of these problems will appear on next week's homework. Skip the rest of these for this Homework.</p>
+        <hr/>
+
+        <li class="hw-space">What is the main intuition behind implicit differentiation?</li>
+
+        <li class="hw-space">Isolate $z$ in the equation \[-\sin(xy)(x + xz) = 1 + \cos(y)z\]</li>
+
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation for the equation \[x^3 + y^3 + x^2 + y = 1\]     
+        </li>
+
+        <li class="hw-space">Consider the equation $x^{2/3} + y^{2/3} = 4$. Find the equation of the tangent line at the point $(-3\sqrt{3}, 1)$.</li>
+
+        <li class="hw-space">Given an equation in implicit form, should you manipulate the equation before applying the derivative to both sides?</li>
+
+        <li class="hw-space">Here is the curve of $x^3 + y^3 = 6xy$: <img src="/static/swrlly/images/teaching/141-hw7-1.png" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        
+        In implicit differentiation, we assume $y = f(x)$ under suitable conditions. Draw multiple graphs which represent these "suitable conditions.". 
+    
+        Hint: Chop up the curve so each part passes the vertical line test.
+        </li>
+
+        <li class="hw-space">Find $dy/dx$ with implicit differentiation:
+            <ol type="a">
+                <li class="hw-space">$x^2 - xy - y^2 = 4$</li>
+                <li class="hw-space">$1 + x = \sin(xy)$ </li>
+                <li class="hw-space">$x^4y^3 + x^2y^4 = 2$</li>
+                <li class="hw-space">$2\sqrt{x} + \sqrt{y} = 3$</li>
+                <li class="hw-space">$(x + y)^3 + x^3 + y^3 = 0$</li>
+                <li class="hw-space">$\dfrac{x}{y^3 - y} = 1$</li>
+                <li class="hw-space">$\sin(x + y) = y^2 \cos x$</li>
+                <li class="hw-space">$(x+y)^3 + x^3 + y^3 = 0$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the equation of the tangent line at $(1,2)$ for the equation \[x^2  + 2xy - y^2 + x = 2\]</li>
+
+        <li class="hw-space">Find the equation of the tangent line at $(\pi, \pi)$ for the equation \[\sin(x + y) = 2x - 2y\]</li>
+
+        <!--
+
+        <li class="hw-space">Find the Taylor polynomial of degree 3 at $a = 0$ for $f(x) = \sin \pi x$.</li>
+
+        <li class="hw-space">Find the Taylor polynomial of degree 4 at $a = 1$ for $f(x) = \dfrac{1}{x}$.</li>
+        <li class="hw-space">
+            Explain the difference between an absolute minimum and a local minimum.
+        </li>
+        <li class="hw-space">
+            If $f$ is a continuous function on $(a, b)$, does an absolute maximum have to exist?
+        </li>
+        <li class="hw-space">Identify all absolute/local minimums and maximums for the following function: <img src="/static/swrlly/images/teaching/161-hw7-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></li>
+        <li class="hw-space">Draw a graph that is continuous on $[-2, 5]$ and has absolute minimum at $x = 3$, absolute maximum at $x = 0$.</li>
+        <li class="hw-space">Find the critical numbers for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) =  x^3 + 6x^2 - 15x$</li>
+                <li class="hw-space">$f(x) = x^2e^{-3x}$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Find the absolute maximum and minimum for the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 12 + 4x - x^2, \qquad [0, 5]$</li>
+                <li class="hw-space">$f(x) = x  - \ln x, \qquad \left[\frac{1}{2}, 2\right]$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Find the intervals on which $f$ is increasing and all local minimum and maximum values:
+            <ol type="a">
+                <li class="hw-space">$f(x) = 2x^3 + 3x^2 - 36x$</li>
+                <li class="hw-space">$f(x) = x^2e^{-3x}$</li>
+                <li class="hw-space">$f(x) = \dfrac{\ln x}{\sqrt{x}}$</li>
+            </ol>
+        </li>
+        <li class="hw-space">Suppose $f(x)$ is not continuous and you use the First Derivative Test to find all local minimums and maximums. Draw a picture of the situation where a found local maximum isn't actually a real one.</li>
+        <li class="hw-space">Why does the Increasing/Decreasing Test work?</li>-->
+
+    </ol>
+</div>
+{% endblock %}

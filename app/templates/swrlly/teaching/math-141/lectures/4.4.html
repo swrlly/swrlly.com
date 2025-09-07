@@ -1,0 +1,90 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - 4.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.4: Indefinite Integrals and the Net Change Theorem"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/lectures/4.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>4.4: Indefinite Integrals and the Net Change Theorem</h1><hr>
+
+    <h2>Motivation</h2>
+
+    <p>The final example in <a href="/teaching/math-141/lectures/4.3">Section 4.3</a> involved finding the integral \[\int^2_{-1}\dfrac{1}{x^2} \ dx\]</p>
+
+    <p>Even though we can't use FTC Part 2 to calculate the integral, the antiderivative \[F(x) = -\dfrac{1}{x} + C\] is still valid on the domain $(-\infty, 0) \cup (0, \infty)$.</p>
+
+    <p>Thus you may manipulate the antiderivatives symbolically. Sometimes this is called "symbolic integration," or in modern times, we usually call it the <b>indefinite integral.</b></p>
+
+    <h2>The Indefinite Integral</h2><hr>
+
+    <div class="math-def"> 
+        The <b>indefinite integral</b> is equivalent to the <b>most general antiderivative:</b>
+        \[\int f(x) \ dx = F(x) + C \qquad \text{means} \qquad \dfrac{d}{dx} [F(x) + C] = f(x)\]
+    </div>
+
+    <div class="math-example"> $\displaystyle \int x^2 \ dx = \dfrac{x^3}{3} + C$
+    </div>
+
+    <p>Here are a few indefinite integrals to be familiar with. They are the opposite of the derivative rules you know about!
+
+        \begin{align}
+        &\int x^n \ dx &&= \dfrac{x^{n+1}}{n+1} + C \qquad (n \neq -1) \\
+        &\int \sec^2 x \ dx &&= \tan x + C \\ 
+        &\int \csc^2 x \ dx &&= - \cot x + C \\
+        &\int \sec x \tan x \ dx &&= \sec x + C \\
+        &\int \csc x \cot x \ dx &&= - \csc x + C
+        \end{align}
+    </p>
+
+    <div class="math-example"> Find the following integral: \[\int (10x^4 - 2\sec^2 x) \ dx\]</div>
+
+    <div class="math-example"> Integrate the following: \[\int \dfrac{\cos \theta}{\sin^2 \theta} \ d\theta\]</div>
+
+    <div class="math-example"> Integrate the following: \[\int^9_1 \dfrac{2t^2 + t^2 \sqrt{t} - 1}{t^2} \ dt\]</div>
+
+    <h2>Net Change Theorem</h2>
+
+    <p>Integrating a rate of change gives you what's called the net change:</p>
+
+    <div class="math-theorem"> The integral of a rate of change is the net change: \[\int^b_a F'(x) \ dx = F(b) - F(a)\]</div>
+
+    <p>Let's consider the distance problem in <a href="/teaching/math-141/lectures/4.1">Section 4.1</a>.</p>
+
+    <div class="math-example">
+        <p>Suppose $v(t)$ is an instantaneous velocity function for a particle moving in a straight line. Then by convention $s(t)$ is the position function.</p>
+
+        <p>If $v(t) > 0$, the particle moves to the right, and if $v(t) < 0$, the particle moves to the left. Here's an example $v(t)$ on a time interval $[t_1, t_2]$: </p>
+
+        <img src="/static/swrlly/images/teaching/141-4.4-1.png" style="max-width:450px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+
+        <p>The <b>displacement</b> of the particle is defined as the difference between the final position and the initial position.</p>
+
+        <p>The <b>distance</b> of the particle is defined as the total unit length travelled, regardless if the particle moves left or right.</p>
+
+        <p>The displacement the a time interval $[t_1, t_2]$ is just the difference between the final position and the initial position, or the net change: \[\text{displacement} = \int^{t_2}_{t_1} v(t) \ dt = A_1 - A_2 + A_3\]</p>
+
+        <p>But the distance travelled on $[t_1, t_2]$ is different. Both $v(t) > 0$ and $v(t) < 0$ account for total distance travelled. So the formula requires you to integrate $\lvert v(t) \rvert$: \[\text{distance} = \int^{t_2}_{t_1} \lvert v(t) \rvert \ dt = A_1 + A_2 + A_3\] </p>
+    </div>
+
+    <p>Now we have the conceptual idea, let's look at the details.</p>
+
+    <div class="math-example">
+        A particle moves along a horizontal line so that its velocity at time $t$ is $v(t) = t^2 - t - 6$.
+        <ol type="a">
+            <li>Find the displacement of the particle on $[1, 4]$. Did the particle end up to the left or the right of the starting position?</li>
+            <li>Find the distance of the particle on $[1, 4]$.</li>
+        </ol>
+    </div>
+
+
+
+</div>
+{% endblock %}

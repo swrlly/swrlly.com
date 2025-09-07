@@ -1,0 +1,144 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 11.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="11.4: Shifted Conics"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/11.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>11.4: Shifted Conics</h1><hr>
+
+    <p>The first three sections describe the algebra behind ellipses, parabolas, and hyperbolas.</p>
+
+    <p>It is time to learn how to shift them.</p>
+
+    <h2>Shifting Graphs of Equations</h2><hr>
+
+    <div class="math-fact">
+
+        Suppose $h, k > 0$. For an equation in $x$ and $y$, the following shifts are possible:
+
+        <table style="margin: auto; margin-top: 1em;">
+            <tr>
+                <th style="width:50%;">Replacement</th>
+                <th>How the graph is shifted</th>
+            </tr>
+            <tr>
+                <td>$x$ replaced with $x - h$</td>
+                <td>Right $h$ units</td>
+            </tr>
+            <tr>
+                <td>$x$ replaced with $x + h$</td>
+                <td>Right $h$ units</td>
+            </tr>
+            <tr>
+                <td>$y$ replaced with $y - k$</td>
+                <td>Up $k$ units</td>
+            </tr>
+            <tr>
+                <td>$y$ replaced with $y + k$</td>
+                <td>Down $k$ units</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Shifted Ellipses</h2><hr>
+    
+    <p>To shift an ellipse:
+        <ol>
+            <li>Identify if the parent ellipse is either \[\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 \qquad \text{or} \qquad \dfrac{x^2}{b^2} + \dfrac{y^2}{a^2} = 1\]</li>
+            <li>Then, identify the shifts.</li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        Sketch a graph of the ellipse \[\dfrac{(x+1)^2}{4} + \dfrac{(y-2)^2}{9} = 1\]
+        Also include the foci in the sketch.
+    </div>
+
+    <div class="math-example">
+        Sketch a graph of the ellipse \[x^2 + \dfrac{(y+2)^2}{4} = 1\]
+        Also include the foci in the sketch.
+    </div>
+
+    <h2>Shifted Parabolas</h2><hr>
+
+    <p>Shifting a parabola is similar to shifting an ellipse:
+        <ol>
+            <li>Identify if the parent parabola is either \[y^2 = 4px \qquad \text{or} \qquad x^2 = 4py\]</li>
+            <li>Then, identify the shifts.</li>
+        </ol>
+    </p>
+
+    <p>Sometimes, we will need a method called "Completing the Square."</p>
+
+    <h2>Completing the Square</h2><hr>
+
+    <p>Recall that \[(A + B)^2 = A^2 + 2AB + B^2\]</p>
+
+    <p>If $B^2$ is missing, you can add and subtract it to be able to factor it. In general:</p>
+
+    <div class="math-fact">
+        To complete the square for $x^2 + bx$, add and subtract $\left(\dfrac{b}{2}\right)^2$. Witness: 
+        \begin{align}
+        x^2 + bx &= x^2 + bx + \left(\dfrac{b}{2}\right)^2 - \left(\dfrac{b}{2}\right)^2
+        \\&= \left(x + \dfrac{b}{2}\right)^2 - \dfrac{b^2}{4}
+        \end{align}
+    </div>
+
+    <div class="math-example">
+        Complete the square for $x^2 + 4x$.
+    </div>
+
+    <p>Notice that completing the square requires the coefficient of $x^2$ to be one.</p>
+
+    <div class="math-example">
+        Complete the square for $2x^2 + 6x$.
+    </div>
+
+    <p>Now we are ready to shift parabolas.</p>
+
+    <div class="math-example">
+        Sketch a graph of the parabola \[x^2 - 4x = 8y - 28\]
+        Include the vertex, focus, and directrix.
+    </div>
+
+    <div class="math-example">
+        Sketch a graph of the parabola \[y^2 - 6y - 12x + 33 = 0\]
+        Include the vertex, focus, and directrix.
+    </div>
+
+    <h2>Shifted Hyperbolas</h2><hr>
+
+    <p>To shift a hyperbola:
+        <ol>
+            <li>Identify if the parent hyperbola is either \[\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\qquad \text{or} \qquad \dfrac{y^2}{a^2} - \dfrac{x^2}{b^2} = 1\]</li>
+            <li>Then, identify the shifts.</li>
+        </ol>
+    </p>
+
+    <div class="math-example">
+        Consider the hyperbola \[9x^2 - 72x - 16y^2 - 32y = 16\]
+        <ol>
+            <li>Complete the square to get the shifted form.</li>
+            <li>Sketch a graph. Include the vertices, foci, and asymptotes.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        Sketch a graph of the hyperbola \[\dfrac{(x+1)^2}{9} - \dfrac{(y-3)^2}{16} = 1\]
+        Include the vertices, foci, and asymptotes.
+    </div>
+
+
+
+
+</div>
+{% endblock %}

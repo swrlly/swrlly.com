@@ -1,0 +1,275 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - Homework 9</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - Homework 9"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 9"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/homework/tth/hw9"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 9</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+    </p><hr>
+    
+    <p>Answer the following:</p>
+
+    <ol>
+
+        <li class="hw-space">
+            Suppose a polynomial $P(x)$ has real coefficients. If $P(x)$ factors as $(x - i)Q(x)$, what other factor must be present in $P(x)$?
+        </li>
+
+        <li class="hw-space">
+            Find a degree 4 polynomial with zeros $-2i$ and $1 - i$.
+        </li>
+
+        <li class="hw-space">
+            Find a degree 6 polynomial with zeros $3, -2, i$ and $\dfrac{1 - i\sqrt{3}}{2}$.
+        </li>
+
+        <li class="hw-space">True or False: it is possible for a polynomial $P(x)$ with real coefficients to factor like \[P(x) = (x-2)(2x - 3i)(x+2)\]</li>
+
+        <li class="hw-space">If $y \rightarrow -\infty$ as $x \rightarrow 2^+$, what is the line $x = 2$ called?</li>
+
+        <li class="hw-space">If $y \rightarrow 3$ as $x \rightarrow -\infty$, what is the line $y = 3$ called?</li>
+
+        <li class="hw-space">Find the vertical and horizontal asymptotes for the following rational functions, if any. If the rational function has a hole, make sure to redefine it in it's simpler form (the domain restriction).
+            <ol type="a">
+                <li class="hw-space">$f(x) = \dfrac{4x - 4}{x + 2}$</li>
+                <li class="hw-space">$f(x) = \dfrac{(x+1)(2x-3)}{(x-2)(4x+7)}$</li>
+                <li class="hw-space">$f(x) = \dfrac{3x + 1}{4x^2 + 1}$</li>
+                <li class="hw-space">$r(x) = \dfrac{x^2 - 1}{x^2 + 2x + 1}$</li>
+                <li class="hw-space">$f(x) = \dfrac{4x^2 - 1}{2x^2 + 7x + 3}$</li>
+                <li class="hw-space">$f(x) = \dfrac{x^3 - x^2}{x^2 - 3x - 2}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">What horizontal and vertical asymptotes does this graph have? <img src="/static/swrlly/images/teaching/118-hw9-1.png" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/></li>
+
+        <li class="hw-space">The rational function \[r(x) = \dfrac{x^3 - 5x^2 + 3x + 9}{x+1}\] has a hole at $x = -1$. 
+            <ol type="a">
+                <li>What factor must be present in the numerator?</li>
+                <li>Use the division algorithm to divide the numerator and sketch a rough graph.<br><b>Hint</b> You will get a quadratic, put in standard form $a(x-h)^2 + k$.</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Given the function $f(x) = 4^x$, evaluate:
+            <ol type="a">
+                <li class="hw-space">$f(1)$</li>
+                <li class="hw-space">$f\left(\dfrac{1}{2}\right)$</li>
+                <li class="hw-space">$f(2)$</li>
+                <li class="hw-space">$f\left(\dfrac{3}{2}\right)$</li>
+            </ol>
+            <b>Hint</b> Your answers will be numbers, no exponents.
+        </li>
+
+        <li class="hw-space">Suppose $f(x) = a^x$ where $a > 0, a \neq 1$.
+            <ol type="a">
+                <li>What asymptotes does $f(x)$ have?</li>
+                <li>What's the domain and range of $f(x)$?</li>
+            </ol>
+        </li>
+        
+        <li class="hw-space">If $f(x) = 2^x$, evaluate and simplify the expression \[\dfrac{f(x + h) - f(x)}{h}\] so there is one fraction with $h$'s in it.<br><b>Hint</b> $2^{x+h} = 2^x \cdot 2^h$ by LoE.</li>
+        
+        <li class="hw-space">You found a bank which doubles your deposited money every day 🤯. <br> You deposit one penny at day $t = 0$. The next day ($t = 1$) you have two pennies, and the second day you have four pennies.
+            <ol type="a">
+                <li class="hw-space">Find an exponential function $f(t)$ which can describe the amount of money you have after $t$ days.
+                </li>
+                <li class="hw-space">How many days does it take for your balance to surpass one million dollars? Desmos can help here.</li>
+                <li class="hw-space">What is your reaction to the answer from the previous part?</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">What is the difference between simple interest, compound interest, and APY?</li>
+
+        <li class="hw-space">If \$10,000 is invested at an interest rate of 3% per year, compounded semiannually, find the value of the investment after 5, 10, and 15 years.</li>
+
+        <li class="hw-space">Find the APY for an investment that earns 8% per year, compounded monthly.</li>
+
+        <li class="hw-space">You decide to open a Certificate of Deposit for one year, where your APY interest is credited monthly into your other savings account. Your principal is \$20,000 USD and the bank says the APY is 5%. Every month you receive around \$83.34. Is the bank properly paying out the APY of 5%?
+
+            <br><b>Hint</b> This is not a compound interest problem. Instead, the gain from APY is spread out each month.
+        </li>
+
+        <li class="hw-space">Sketch a rough graph of the following functions using transformations: \[f(x) = 2^{-x} \qquad \qquad g(x) = -2^{x} \qquad \qquad h(x) = -2^{-x}\]</li>
+
+        <li class="hw-space">With a base function $f(x) = e^x$, state the order of transformations (and their numbers) the following functions use:
+            <ol type="a">
+                <li class="hw-space">$g(x) = 1 + e^x$</li>
+                <li class="hw-space">$h(x) = e^{2x}$</li>
+                <li class="hw-space">$r(x) = 2 - e^{x-3}$</li>
+                <li class="hw-space">$g(x) = 4 + e^{3(x+2)}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">To obtain a larger financial gain, determine which interest rate is better after 50 years:
+            <ol type="a">
+                <li class="hw-space">$5.125\%$ per year, compounded semiannually</li>
+                <li class="hw-space">$5\%$ per year, compounded continuously</li>
+            </ol>
+            <b>Hint</b> You don't need to set the principal to a number, just like what we did in class!
+        </li>
+
+        <li class="hw-space">A drug was taken by an individual. The number of milligrams remaining in the person's bloodstream after $t$ hours is \[D(t) = 50e^{-t}\]
+            <ol type="a">
+                <li class="hw-space">
+                    As $t \rightarrow \infty$, what does $D(t)$ approach? Do you think this behavior is appropriate to model our intuition from the real world?
+                </li>
+                <li class="hw-space">How many milligrams of the drug remains in the bloodstream after 5 hours?</li>
+            </ol>
+        </li>
+        
+        <li class="hw-space">Animal populations are not capable of unrestricted growth because of limited habitat and food supplies. Under such conditions the population follows a <b>logistic growth model</b>:
+            
+            \[P(t) = \dfrac{d}{1 + ke^{-ct}}\]
+            
+            where $c,d$ and $k$ are positive constants. For a certain fish population in a small pond, we estimate $d = 1200, k = 11, c = 0.2$ and let $t$ be measured in years. The fish were introduced into the pond at time $t = 0$.
+            <ol type="a">
+                <li class="hw-space">How many fish were originally put into the pond?</li>
+                <li class="hw-space">Find the fish population after 10, 20 and 30 years.</li>
+                <li class="hw-space">Evaluate $P(t)$ for large values of $t$. In fact, as $t\rightarrow \infty$, what does the population approach?</li>
+                <li class="hw-space">From your answer in part $(c)$, what does the constant $d$ represent? </li>
+                <li class="hw-space">Graph $P(t)$ in Desmos. Does this function make sense in terms of a limited habitat and food supplies?</li>
+                <li class="hw-space">From part $(d)$, what does this show us about setting parameters in functions? If this was a real life scenario, could we use these same ideas to model real life phenomena?</li>
+            </ol>
+        </li>
+
+        
+        <li class="hw-space">Suppose $f(x) = \log_a x$ where $a > 0, a \neq 1$.
+            <ol type="a">
+                <li>What asymptotes does $f(x)$ have?</li>
+                <li>What's the domain and range of $f(x)$?</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            Express the equation in exponential form:
+            <ol type="a">
+                <li class="hw-space">$\log_35 = x$</li>
+                <li class="hw-space">$\log_381 = 4$</li>
+                <li class="hw-space">$\ln(x-1) = 4$</li>
+                <li class="hw-space">$\ln(x^2 - x - 2) = 3$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Evaluate the expression:
+            <ol type="a">
+                <li class="hw-space">$\log_22$</li>
+                <li class="hw-space">$\log_636$</li>
+                <li class="hw-space">$\log_{10}\sqrt{10}$</li>
+                <li class="hw-space">$\log_{49}7$</li>
+                <li class="hw-space">$\log_77^{10}$</li>
+                <li class="hw-space">$\ln(1/e)$</li>
+                <li class="hw-space">$e^{\ln3}$</li>
+                <li class="hw-space">$\ln e^4$</li>
+                <li class="hw-space">$\log_51$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Use the definition of the logarithm to find the number $x$.
+            <ol type="a">
+                <li class="hw-space">$\log_3 x = -2$</li>
+                <li class="hw-space">$\log_x16 = 4$</li>
+                <li class="hw-space">$\ln e^2 = x$</li>
+                <li class="hw-space">$\log_x6 = \dfrac{1}{2}$</li>
+                <li class="hw-space">$\ln x = -1$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Explain why $f(x) = \ln(x - 3)$ is horizontally shifted to the right three units from $g(x) = \ln x$.</li>
+
+        <li class="hw-space">Use transformations to sketch the following:
+            <ol type="a">
+                <li class="hw-space">$f(x) = \ln(-x)$</li>
+                <li class="hw-space">$f(x) = - \ln(- x - 2)$</li>
+            </ol>
+        </li>
+
+        <hr style="margin-top:2em; margin-bottom: 2em;"><p><b>The rest of these problems will be on the last homework assigned next week. Skip for now.</b></p>
+
+        <li class="hw-space">State which of the following are true or false:
+            <ol type="a">
+                <li class="hw-space">$\ln 3x = \ln 3 + \ln x$</li>
+                <li class="hw-space">$\ln(3 + x) = \ln 3 + \ln x$</li>
+                <li class="hw-space">$\ln\left[x(x-1)\right] = \ln x + \ln (x - 1)$</li>
+                <li class="hw-space">$\ln x^2 = 2\ln x$</li>
+                <li class="hw-space">$(\ln x)^2 = 2\ln x$</li>
+                <li class="hw-space">$\log_2(x - 3) = \log_2 x - \log_2 3$</li>
+                <li class="hw-space">$\ln\left(\dfrac{x}{x - 1}\right) = \ln x - \ln (x - 1)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Use Laws of Logarithms to evaluate the expression without a calculator. Your answer will be one number.
+            <ol type="a">
+                <li class="hw-space">$\log 5 + \log 20$</li>
+                <li class="hw-space">$\log_5 \sqrt{5}$</li>
+                <li class="hw-space">$\log_2 60 - \log_2 15$</li>
+                <li class="hw-space">$\log_4 16^{100}$</li>
+                <li class="hw-space">$\ln (\ln e^{e^{200}})$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Expand these logarithms using Laws of Logarithms:
+            <ol type="a">
+                <li class="hw-space">$\log_3 4x^2$</li>
+                <li class="hw-space">$\ln \sqrt{x^2y}$</li>
+                <li class="hw-space">$\ln \dfrac{3x^2}{(x - 1)^4}$</li>
+                <li class="hw-space">$\ln \sqrt[3]{\dfrac{x-1}{b + 2}}$</li>
+                <li class="hw-space">$\log_7 x(x+1)^2$</li>
+                <li class="hw-space">$\ln(\ln(x)\ln(y))$</li>
+            </ol>
+        </li>
+
+        <!--
+
+        <li class="hw-space">Find the solution of the exponential equation. Write your answer as a number unless the logarithm is not easy to evaluate.
+            <ol type="a">
+                <li class="hw-space">$5^{x - 1} = 125$</li>
+                <li class="hw-space">$5^{2x-3} = 1$</li>
+                <li class="hw-space">$e^{1-4x} = 2$</li>
+                <li class="hw-space">$5^x = 4^{x+1}$</li>
+                <li class="hw-space">$e^{2x} - 3e^x + 2 = 0$</li>
+                <li class="hw-space">$x^22^x - 2^x = 0$</li>
+                <li class="hw-space">$x^2e^x + xe^x - e^x = 0$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the solution of the logarithmic equation. Write your answer as a number unless the exponent is not easy to evaluate.
+            <ol type="a">
+                <li class="hw-space">$\log x + \log(x - 1) = \log(4x)$</li>
+                <li class="hw-space">$\ln x = 10$</li>
+                <li class="hw-space">$\ln(2 + x) = 1$</li>
+                <li class="hw-space">$2\log x = \log 2 + \log(3x - 4)$</li>
+                <li class="hw-space">$\log x + \log(x - 3) = 1$</li>
+                <li class="hw-space">$\log_2(x^2 - x - 2) = 2$</li>
+                <li class="hw-space">$\log_2(\log_3 x) = 4$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">How long will it take for an investment of $1000 to double in value if the interest rate is 8.5%
+            per year, compounded continuously?</li>
+
+        <li class="hw-space">You invest $6500 in an account that pays 6% interest per year, compounded continuously.
+            <ol type="a">
+                <li class="hw-space">What is the APY?</li>
+                <li class="hw-space">How long will it take for your investment to double?</li>
+            </ol>
+        </li>-->
+    
+    </ol>
+
+
+</div>
+{% endblock %}

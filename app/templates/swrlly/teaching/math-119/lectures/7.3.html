@@ -1,0 +1,115 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 7.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="7.3: Double-Angle, Half-Angle, and Product-Sum Formulas"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/7.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>7.3: Double-Angle, Half-Angle, and Product-Sum Formulas</h1><hr>
+
+    <p>Below are four sets of trigonometric formulas that are useful!</p>
+
+    <h2>Double-Angle Formulas</h2><hr>
+
+    <div class="math-fact">
+        \begin{align}
+        \sin 2x &= 2\sin x \cos x \\
+        \cos 2x &= \cos^2 x - \sin^2 x \\
+        &= 1 - 2\sin^2 x \\
+        &= 2\cos^2 x - 1 \\
+        \tan 2x &= \dfrac{2\tan x}{1 - \tan^2 x}
+        \end{align}
+    </div>
+
+    <p>These identites are useful for expressions like $\sin 3x$ and $\sin 4x$. We can write 
+
+        \begin{align}
+        \sin 3x &= \sin (x + 2x) & \\
+        &= \sin x \cos 2x + \cos x \sin 2x & \text{Addition identity}
+        \end{align}
+
+        and also \[\sin 4x = \sin\bigg(2(2x)\bigg) = 2\sin 2x \cos 2x\]
+
+        Notice how both of the expressions now contain $\sin2x$ and $\cos 2x$. These can be simplified using the double angle formula again.
+    </p>
+
+    <div class="math-example">
+        Prove the identity \[\dfrac{\sin 3x}{\sin x \cos x} = 4\cos x - \sec x\]
+    </div>
+
+    <h2>Half-Angle Formulas</h2><hr>
+
+    <div class="math-fact">
+        \begin{align}
+            \sin \dfrac{u}{2} &= \pm \sqrt{\dfrac{1 - \cos u}{2}} \\
+            \cos \dfrac{u}{2} &= \pm \sqrt{\dfrac{1 + \cos u}{2}} \\
+            \tan \dfrac{u}{2} &= \dfrac{1 - \cos u}{\sin u} = \dfrac{\sin u}{1 + \cos u}
+        \end{align}
+
+        where the sign depends on the quadrant where $\dfrac{u}{2}$ lies.
+    </div>
+
+    <div class="math-example">
+        Find the exact value of $\sin 22.5^\circ$.
+    </div>
+
+    <div class="math-example">
+        Find the exact value of $\cos 15^\circ$.
+    </div>
+
+    <h2>Product-to-Sum Formulas</h2><hr>
+
+    <p>Below are four formulas which convert factors into terms.</p>
+
+    <div class="math-fact">
+        \begin{align}
+           \sin u \cos v &= \dfrac{1}{2}\left[\sin(u + v) + \sin(u - v)\right] \\
+           \cos u \sin v &= \dfrac{1}{2}\left[\sin(u + v) - \sin(u - v)\right] \\
+           \cos u \cos v &= \dfrac{1}{2}\left[\cos(u + v) + \sin(u - v)\right] \\
+           \sin u \sin v &= \dfrac{1}{2}\left[\cos(u + v) - \sin(u + v)\right] \\
+        \end{align}
+
+    </div>
+
+    <div class="math-example">
+        Express $\sin 3x \sin 5x$ as a sum.
+    </div>
+
+    <div class="math-example">
+        Express $\cos 5x \cos 3x$ as a sum.
+    </div>
+
+    <h2>Sum-to-Product Formulas</h2><hr>
+
+    <p>Below are four formulas which covnvert terms into factors.</p>
+
+    <div class="math-fact">
+        \begin{align}
+            \sin x + \sin y &= 2\sin\dfrac{x + y}{2}\cos\dfrac{x - y}{2} \\ 
+            \sin x - \sin y &= 2\cos\dfrac{x + y}{2}\sin\dfrac{x - y}{2} \\ 
+            \cos x + \cos y &= 2\cos\dfrac{x + y}{2}\cos\dfrac{x - y}{2} \\ 
+            \cos x - \cos y &= -2\sin\dfrac{x + y}{2}\sin\dfrac{x - y}{2} \\ 
+        \end{align}
+
+    </div>
+
+    <div class="math-example">
+        Express $\sin 7x + \sin 3x$ as a product.
+    </div>
+
+    <div class="math-example">
+        Prove the identity \[\dfrac{\sin 3x - \sin x}{\cos 3x + \cos x} = \tan x\]
+    </div>
+
+    
+
+
+</div>
+{% endblock %}

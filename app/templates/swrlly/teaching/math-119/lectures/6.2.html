@@ -1,0 +1,55 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 6.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="6.2: Trigonometry of Right Triangles"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/6.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>6.2: Trigonometry of Right Triangles</h1><hr>
+    <p>Previously, we saw $\sin(t)$ extracted the $y$-coordinate from the terminal point, $\cos(t)$ the $x$-coordinate, and so on. Let's see how we can do the same with a right triangle.</p>
+
+    <div class="math-def">
+        Consider the following right triangle:
+        <img src="/static/swrlly/images/teaching/righttriangle.png" style="max-width:300px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        Then we have
+        <table class="table" style="max-width: 450px; margin: 1em auto; border: #000000">
+            <tbody>
+            <tr>
+                <td>$\sin \theta = \dfrac{\text{opposite}}{\text{hypotenuse}}$</td>
+                <td>$\cos \theta = \dfrac{\text{adjacent}}{\text{hypotenuse}}$</td>
+                <td>$\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}$</td>
+            </tr>
+            <tr>
+                <td>$\csc \theta = \dfrac{\text{hypotenuse}}{\text{opposite}}$</td>
+                <td>$\sec \theta = \dfrac{\text{hypotenuse}}{\text{adjacent}}$</td>
+                <td>$\cot \theta = \dfrac{\text{adjacent}}{\text{opposite}}$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>An acronym to remember this is SOH CAH TOA. For example, SOH means Sine Opposite Adjacent.</p>
+    <div class="math-example">
+        What's the connection between this right triangle $\sin$ definition and the definition based on the terminal point?
+    </div>
+    <div class="math-example">
+        Suppose a right triangle has an acute angle. The opposite side is 2, adjacent is $\sqrt{5}$, and hypotense is $3$. Find $\sin \theta, \cos \theta$ and $\tan \theta$.
+    </div>
+    <div class="math-example">
+        Suppose a right triangle has an acute angle. The opposite side is $\sqrt{7}$, adjacent is $3$, and hypotense is $4$. Find $\sin \theta, \cos \theta$ and $\tan \theta$.
+    </div>
+    <h2>Special Triangles</h2>
+    <p>It's time to answer how we know the arbitrary terminal point values for $\frac{\pi}{3}$ and $\frac{\pi}{6}$. This part will be done in class.</p>
+    <h2>Applications of Trigonometry of Right Triangles</h2>
+    <p>A triangle is comprised of three sides and three angles.<b> Solving a right triangle</b> means to find the values of the three sides and three angles.</p>
+    <div class="math-example">
+        Triangle $ABC$ has $\angle A = 30^\circ, \angle C = 90^\circ$ and hypotenuse $12$. Solve $ABC$.
+    </div>
+    </div>
+{% endblock %}

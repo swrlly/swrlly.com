@@ -1,0 +1,65 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 3.7</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="3.7: Derivatives of the Logarithm"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/3.7"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>3.7: Derivatives of the Logarithm</h1><hr>
+
+    The function $y = \log_b x$ seems to be differentiable on it's domain. We will show this to be true.
+
+    <h2>Differentiating Logarithmic Functions</h2><hr>
+
+    <div class="math-fact"> \[\dfrac{d}{dx}\log_b x = \dfrac{1}{x \ln b}\]</div>
+
+    <p>In general, $\dfrac{d}{dx} \ln x = \dfrac{1}{x}$.</p>
+
+    <div class="math-example"> Differentiate the following:
+        <ol>
+            <li class="lec-list-space">$y = \ln (x^3 + 1)$</li>
+            <li class="lec-list-space">$y = \ln (\sin x)$</li>
+            <li class="lec-list-space">$y = \sqrt{\ln x}$</li>
+            <li class="lec-list-space">$f(x) = \log_{10}(2 + \sin x)$</li>
+            <li class="lec-list-space">$y = \ln\left(\dfrac{x + 1}{\sqrt{x + 2}}\right)$</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> If $f(x) = \ln \lvert x \rvert$, find $f'(x)$.</div>
+
+    <h2>Logarithmic Differentiation</h2><hr>
+
+    <p>We can use logarithms and implicit differentiation to quickly take the derivative of a complicated looking function.</p>
+
+    <div class="math-example"> Differentiate the following function \[y = \dfrac{x^{3/4}\sqrt{x^2 + 1}}{(3x + 2)^5}\] by first taking the natural log of both sides, then implicitly differentiating.</div>
+
+    <div class="math-example"> Differentiate the following function \[y = (2x + 1)^5(x^4-3)^6\] using logarithmic differentiation.</div>
+
+    <div class="math-example"> Differentiate the following function \[y = \sqrt[4]{\dfrac{x^2 + 1}{x^2 - 1}}\] using logarithmic differentiation.</div>
+
+    <div class="math-example"> Show the Power Rule \[\dfrac{d}{dx} x^n = nx^{n-1}\] is true with logarithmic differentiation.</div>
+
+    <div class="math-example"> Differentiate $y = x^{\sqrt{x}}$.</div>
+
+    <h2>The Number $e$ as a Limit</h2><hr>
+
+    <p>We will now define Euler's Number $e$. Previously we said </p>
+
+    <div class="math-fact"> $e$ is the number where \[\lim_{h\rightarrow 0}\dfrac{e^h - 1}{h} = 1\]</div>
+
+    <p>With the derivative of $\ln x$, we can show:</p>
+
+    <div class="math-fact"> \[e = \lim_{x\rightarrow 0}(1 + x)^{\frac{1}{x}}\]</div>
+
+    </div>
+
+ 
+{% endblock %}

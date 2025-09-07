@@ -1,0 +1,70 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 118 - 4.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 118 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.2: The Natural Exponential Function"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-118/lectures/4.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>4.2: The Natural Exponential Function</h1>
+
+    <div class="math-def"> <b>e</b><br>
+        The number $e$ is defined to be \[\left(1 + \dfrac{1}{n}\right)^n \rightarrow e \quad \text{as} \quad n \rightarrow \infty\]
+    </div>
+
+    <p>As a decimal, $e \approx 2.7182818...$</p>
+
+    <p>Because $e > 0$, we can use it as the base of an exponential:</p>
+
+    <div class="math-def"> <b>natural exponential function</b><br>
+        Exponential function with base $e$: \[f(x) = e^x\]
+    </div>
+
+    <p>In practice, the natural exponential is useful in Calculus. It will simplify calculations, as you will see in Calculus!</p>
+
+    <p>Let's see this function in an example.</p>
+
+    <div class="math-example">
+        A disease begins to spread in a small town of 10,000 people. The total number of people infected on day $t$ is \[v(t) = \dfrac{10,000}{5 + 1245e^{-0.97t}}\]
+        <ol type="a">
+            <li>How many people were infected initially (at time $t = 0$)?</li>
+            <li>Find the number of people infected on day five.</li>
+            <li>Analyze $v(t)$ as time progresses ($t\rightarrow \infty$).</li>
+        </ol>
+    </div>
+
+    <h2>Continuously Compounded Interest</h2>
+
+    <p>Recall the compound interest formula:
+        \[A(t) = P\left(1 + \dfrac{r}{n}\right)^{nt}\]
+        If you apply compounding at shorter and shorter intervals, $n$ grows. 
+    </p>
+
+    <p>As you let $n\rightarrow\infty$, interest is allowed to compound at every moment in time!</p>
+
+    <p>Doing so replaces the interest calculation with a simple form:</p>
+
+    <div class="math-def"> <b>continuously compounded interest</b><br>
+        Continuously compounded interest is calculated by \[A(t) = Pe^{rt}\] 
+        where
+        <ul style="list-style-type: none;">
+            <li>$A(t) = $ amount after $t$ years</li>
+            <li>$P = $ principal</li>
+            <li>$r = $ interest rate per year</li>
+            <li>$t = $ number of years.</li>
+        </ul>
+    </div>
+
+    <div class="math-example">
+        Find the amount after 3 years if $1,000 is invested at an interest rate of 12% per year, compounded continuously.
+    </div>
+
+</div>
+{% endblock %}

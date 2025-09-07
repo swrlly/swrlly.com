@@ -1,0 +1,60 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 8.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="8.2: Graphs of Polar Equations"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/8.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>8.2: Graphs of Polar Equations</h1><hr>
+
+    <h2>Simple Polar Graphs</h2><hr>
+
+    <p>If $r$ or $\theta$ are equal to a number, then it's easy to graph by hand.</p>
+
+    <p>If $r$ is a number, then $\theta$ will take on all possible angles!</p>
+
+    <div class="math-example"> Sketch a graph of the equation $r = 3$.
+    </div>
+
+    <p>Conversely, if $\theta$ is a number, then $r$ can take on all possible distances!</p>
+
+    <div class="math-example"> Sketch a graph of the equation $\theta = \dfrac{\pi}{3}$. Convert it to a rectangular equation.
+    </div>
+
+    <h2>More Polar Graphs</h2><hr>
+
+    <p>Polar equations can be written in the form $r = f(\theta)$.</p>
+
+    <p>In English, this is "$r$ is a function of $\theta$," meaning, plug in an angle $\theta$ to determine how far you need to walk in that direction $r$.</p>
+
+    <p>A few examples are \[r = \theta \qquad \qquad r = 2\cos \theta \qquad \qquad r = 1 - \cos \theta\]</p>
+
+    <div class="math-example"> 
+        Graph $r = \cos \theta$ by hand on the interval $[0, \pi]$.
+    </div>
+
+    <p>Here's an animation of the previous problem. Notice how the length $r$ is like an "arm" tracing out the graph:</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/fpigoqwfeg"></iframe></div>
+
+    <div class="math-example">
+        Use Desmos to graph $r = \cos 2\theta$. Describe it's shape in English.
+
+        <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/sl56gfljmz"></iframe></div>
+
+    </div>
+
+    <p>Most polar graphs in the form $r = f(\theta)$ are difficult to graph by hand. Use Desmos to help you.</p>
+
+    
+
+</div>
+{% endblock %}

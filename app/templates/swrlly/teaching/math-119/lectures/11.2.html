@@ -1,0 +1,90 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 11.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="11.2: Ellipses"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/11.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+
+    <h1>11.1: Ellipses</h1><hr>
+
+    <p>An ellipse is a curve that looks like an oval. Similar to the parabola, we have a geometric definition:</p>
+
+    <div class="math-def">
+        An <b>ellipse</b> is the set of all points where the sum of the distances from two fixed points $F_1$ and $F_2$ is a constant.<br>
+        The two points $F_1$ and $F_2$ are the <b>foci</b> (plural of <b>focus</b>) of the ellipse.
+    </div>
+
+    <img src="/static/swrlly/images/teaching/119-11.2-1.png" style="max-width:400px; margin:1em auto; display:flex; border-radius:10px;"/>
+
+    <p>You can draw an ellipse by hand using the above technique. Nail a piece of string at its ends at two different points (these are the foci). Pull the string tight with a pencil, and perform one revolution.</p>
+
+    <p>This creates the set of all points where the sum of the distances from the foci is the same; the string length is the sum!</p>
+
+    <h2>Equation and Graphs of Ellipses</h2><hr>
+
+    <div class="math-fact"> The following equations are ellipses with center at the origin and the following properties:
+
+        <img src="/static/swrlly/images/teaching/119-11.2-2.png" style="max-width:900px; margin:1em auto; display:flex; border-radius:10px;"/>
+
+    </div>
+
+    <div class="math-example">
+        An ellipse has the equation \[\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1\]
+        <ol>
+            <li>Find the foci, vertices, and lengths of the major/minor axes.</li>
+            <li>Sketch a graph.</li>
+        </ol>
+    </div>
+
+    <div class="math-example">
+        An ellipse has the equation \[16x^2 + 9y^2 = 144\]
+        <ol>
+            <li>Find the foci, vertices, and lengths of the major/minor axes.</li>
+            <li>Sketch a graph.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> The vertices of an ellipse are $(\pm 4, 0)$ and the foci are $(\pm 2, 0)$. Find the equation.
+    </div>
+
+    <div class="math-example"> Find the equation of the ellipse satisfying the following:
+        <ol>
+            <li>Length of major axis is 4</li>
+            <li>Length of minor axis is 2</li>
+            <li>Foci on $y$-axis</li>
+        </ol>
+    </div>
+    
+    <h2>Eccentricity of an Ellipse</h2><hr>
+
+    <p>What describes whether an ellipse is a skinny oval, or an almost round circle?</p>
+
+    <div class="math-def">
+        For the ellipses \[\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 \qquad \qquad \dfrac{x^2}{b^2} + \dfrac{y^2}{a^2} = 1\]
+        the <b>eccentricity</b> $e$ is the number \[e = \dfrac{c}{a}\] where $c = \sqrt{a^2 - b^2}$. Note that $0 < e < 1$.
+    </div>
+
+    <p>The closer $e$ is to zero, the more circular the ellipse. The closer $e$ is to one, the more elongated the ellipse.</p>
+
+    <img src="/static/swrlly/images/teaching/119-11.2-3.png" style="max-width:800px; margin:1em auto; display:flex; border-radius:10px;"/>
+    
+    <div class="math-example"> Find the equation of the ellipse with foci $(0, \pm 8)$, eccentricity $\dfrac{4}{5}$ and sketch the graph.</div>
+
+    <h2>Applications of Ellipses</h2><hr>
+
+    <p>The orbits of planets are well-modelled by ellipses, including our Earth!
+        <img src="https://primaryleap.co.uk/images/wikileap/post_levels/thumb_orignal/cd175b0f1d0b13fc2324a1d47fc7024acba15e8faq.jpg" style="max-width:900px; margin:1em auto; display:flex; border-radius:10px;"/>
+    </p>
+
+    <p>Other applications include elliptical exercise machines, or designing everyday objects in the shape of an ellipse.</p>
+
+</div>
+{% endblock %}

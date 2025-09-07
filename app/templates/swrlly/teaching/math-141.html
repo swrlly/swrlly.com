@@ -1,0 +1,225 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Cal Poly Math 141: Calculus I</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Calculus I"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141"/>
+
+{% endblock %}
+
+{% block extraimports %}
+<script async src="/static/swrlly/js/centertext.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Math 141: Calculus I</h1>
+    <p>Welcome to Math 141! This page contains all the relevant links for this class.</p>
+    <h2>Syllabus</h2>
+    <p><a href="/teaching/math-141/syllabus">Click here for the syllabus.</a></p>
+    <h2>Interactive Lecture Notes</h2>
+    <p><a href="/teaching/math-141/lectures">Click here for interactive lecture notes.</a></p>
+    <h2>Homeworks</h2>
+    <ul> 
+        
+        <li><a href="/teaching/math-141/homework/hw1">Homework 1</a></li>
+        <li><a href="/teaching/math-141/homework/hw2">Homework 2</a></li>
+        <li><a href="/teaching/math-141/homework/hw3">Homework 3</a></li>
+        <li><a href="/teaching/math-141/homework/hw4">Homework 4</a></li>
+        <li><a href="/teaching/math-141/homework/hw5">Homework 5</a></li>
+        <li><a href="/teaching/math-141/homework/hw6">Homework 6</a></li>
+        <li><a href="/teaching/math-141/homework/hw7">Homework 7</a></li>
+        <li><a href="/teaching/math-141/homework/hw8">Homework 8</a></li>
+        <li><a href="/teaching/math-141/homework/hw9">Homework 9</a></li>
+        <li><a href="/teaching/math-141/homework/hw10">Homework 10</a></li>
+    </ul>
+
+    <h2>Selected Solutions</h2>
+
+    <ul>
+        <li><a href="/static/swrlly/files/MATH 141 Midterm 1 Key.pdf">Midterm 1 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Midterm 2 Key.pdf">Midterm 2 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 1 Key.pdf">Quiz 1 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 2 Key.pdf">Quiz 2 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 3 Key.pdf">Quiz 3 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 4 Key.pdf">Quiz 4 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 5 Key.pdf">Quiz 5 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 6 Key.pdf">Quiz 6 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Quiz 7 Key.pdf">Quiz 7 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Pretest Key.pdf">Pretest Key</a></li>
+     </ul>
+
+    <!--<p>Posted when class begins.</p>-->
+
+    <h2>Useful links</h2>
+
+    <!--<p>Posted when class begins.</p>-->
+    
+    <ul>
+        <li><a href="/static/swrlly/files/MATH 141 Some Practice Final Problems.pdf">Some Practice Final Problems</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Some Practice Final Problems Key.pdf">Some Practice Final Problems Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Practice Midterm 1.pdf">Practice Midterm 1</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Practice Midterm 1 Key.pdf">Practice Midterm 1 Key</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Practice Midterm 2.pdf">Practice Midterm 2</a></li>
+        <li><a href="/static/swrlly/files/MATH 141 Practice Midterm 2 Key.pdf">Practice Midterm 2 Key</a></li>
+        <li><a href="/static/swrlly/files/xmethod.pdf">How to factor two or three term problems in the form </a> $ax^2 + bx + c$</li>
+        <li><a href="https://www.desmos.com/">Online graphing utility (Desmos)</a></li>
+    </ul>
+
+    <h2>Class Schedule</h2><hr>
+
+    <p>Here is a daily overview of the entire quarter.</p>
+
+    <p>Rows dates are Mondays. Today is <span style="font-size:1.5rem;"><span id="current_date"></span>.</p>
+    <script>
+        date = new Date();
+        y = date.getFullYear();
+        m = date.getMonth() + 1;
+        d = date.getDate();
+        document.getElementById("current_date").innerHTML = m + "/" + d + "/" + y;
+    </script></span>
+    </p>
+
+    <div class="calendar">
+        <span></span>
+        <span class="day-name">Mon</span>
+        <span class="day-name">Tue</span>
+        <span class="day-name">Wed</span>
+        <span class="day-name">Thu</span>
+        <span class="day-name">Fri</span>
+
+        
+        <div class="calbox week-name">Week of 9/23</div>
+        <div class="calbox">
+            <div class="quiz-event">Pretest</div>
+        </div>
+        <div class="calbox"> <div class="lec-event">I, II, III, IV</div> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">Review of Functions (V)</div> </div>
+        <div class="calbox"> <div class="lec-event">1.4</div> </div>
+        
+
+        <div class="calbox week-name">Week of 9/30</div>
+        <div class="calbox"> <div class="lec-event">1.5 </div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">1.6</div> 
+            <div class="quiz-event">Quiz 1</div> 
+        </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">1.6 + 1.8</div> </div>
+        <div class="calbox"> <div class="lec-event">1.8</div> </div>
+        
+
+        <div class="calbox week-name">Week of 10/7</div>
+        <div class="calbox"> <div class="lec-event">2.1</div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">2.1</div> 
+            <div class="quiz-event">Quiz 2</div> 
+        </div>
+        <div class="calbox"></div>
+        <div class="calbox"> <div class="lec-event">2.2</div></div>
+        <div class="calbox"> <div class="lec-event">2.2 + 2.3</div> </div>
+
+
+        <div class="calbox week-name">Week of 10/14</div>
+        <div class="calbox"> <div class="lec-event">2.3 + 2.4</div> </div>
+        <div class="calbox"> <div class="quiz-event">Midterm 1</div> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">2.5</div></div>
+        <div class="calbox"> <div class="lec-event">2.5 + 2.6</div></div>
+
+
+        <div class="calbox week-name">Week of 10/21</div>
+        <div class="calbox"> <div class="lec-event">2.6</div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">2.6 + 2.8</div> 
+            <div class="quiz-event">Quiz 3</div> 
+        </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">2.8</div> </div>
+        <div class="calbox"> <div class="lec-event">2.8</div> </div>
+
+
+        <div class="calbox week-name">Week of 10/28</div>
+        <div class="calbox"> <div class="lec-event">2.8 + 2.9</div></div>
+        <div class="calbox"> 
+            <div class="lec-event">2.9 + 3.1</div> 
+            <div class="quiz-event">Quiz 4</div> 
+        </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> 
+            <div class="lec-event">3.1</div> 
+            <div class="halloween-event">Halloween 🎃</div>
+        </div>
+        <div class="calbox"> <div class="lec-event">3.2</div> </div>
+
+
+        <div class="calbox week-name">Week of 11/4</div>
+        <div class="calbox"> <div class="lec-event">3.3</div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">3.3</div> 
+            <div class="quiz-event">Quiz 5</div> 
+            <div class="special-event">Election Day</div> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">3.3</div> </div>
+        <div class="calbox"> <div class="lec-event">3.3 + 3.4</div>  </div>
+
+
+        <div class="calbox week-name">Week of 11/11</div>
+        <div class="calbox"> <div class="veterans-event">Veterans Day 🇺🇸</div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">3.4</div>
+            <div class="quiz-event">Quiz 6</div> 
+         </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">3.7</div> </div>
+        <div class="calbox"> <div class="lec-event">3.9</div> </div>
+
+
+        <div class="calbox week-name">Week of 11/18</div>
+        <div class="calbox"> <div class="lec-event">4.1</div> </div>
+        <div class="calbox"> <div class="quiz-event">Midterm 2</div> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">4.2</div> </div>
+        <div class="calbox"> <div class="lec-event">4.3</div> </div>
+ 
+
+        <div class="calbox week-name">Week of 11/25</div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+
+
+        <div class="calbox week-name">Week of 12/2</div>
+        <div class="calbox"> <div class="lec-event">4.3</div> </div>
+        <div class="calbox"> 
+            <div class="lec-event">4.4</div> 
+            <div class="quiz-event">Quiz 7</div> 
+        </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> <div class="lec-event">4.4</div> </div>
+        <div class="calbox"> <div class="lec-event">4.5</div> </div>
+
+
+        <div class="calbox week-name">Week of 12/9</div>
+        <div class="calbox">
+        </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+        <div class="calbox"> </div>
+
+        <section class="special-event" style="grid-column: 2 / span 5; grid-row: 11; align-self: start; position: relative;">Thanksgiving Break 🦃</section>
+        <section class="special-event" style="grid-column: 2 / span 5; grid-row: 13; align-self: start; position: relative;">Finals Week</section>
+ 
+    </div>
+    
+
+</div>
+{% endblock %}

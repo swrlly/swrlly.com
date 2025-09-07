@@ -1,0 +1,66 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - Homework 7 (T/TH)</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - Homework 7"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 7"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/homework/tth/hw7"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 7</h1>
+    <p><b>Directions:</b> 
+        <ol>
+            <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+            <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+            <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+            <li class="hw-space">Feel free to use Desmos for graphing.</li>
+        </ol>  
+    </p>
+    <p>Answer the following:</p>
+    <ol>
+        <li class="hw-space">Find the derivative of \[xy - y - 1 = 0\] in two ways:
+            <ol type="a">
+                <li class="hw-space">Solve for $y$, then take the derivative normally.</li>
+                <li class="hw-space">Implicitly differentiate.</li>
+                <li class="hw-space">Show the two derivatives are identical (Hint: substitute the definition of $y$ in part (a)).</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            Find $\dfrac{dy}{dx}$ with implicit differentiation.
+            <ol type="a">
+                <li class="hw-space">$x^2 + y^2 = 16$</li>
+                <li class="hw-space">$x^2 + 2y^3 + y^2 = x$</li>
+                <li class="hw-space">$x^4 + y^2 = y^4 + x^2$</li>
+                <li class="hw-space">$2 = x^2y^3 + y^2$</li>
+                <li class="hw-space">$(x+y)^3 + x^3 + y^3 = 0$</li>
+                <li class="hw-space">$\sqrt{xy} = x + y$</li>
+                <li class="hw-space">$x^2y^3 = 5 + 2xy^2$</li>
+                <li class="hw-space">$\dfrac{x^2}{y^3 + y^4} = y^2$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find $\dfrac{d^2y}{dx^2}$ of the equation $xy= 1$.</li>
+
+        <li class="hw-space">Suppose a demand equation for cotton shirts is \[100x^2 + 9p^2 = 3600\] where $x$ represents (in thousands) the number of shirts demanded each week when the unit price is $\$p$. How fast is the quantity demanded increasing when the unit price per shirt is $\$14$ and the price is decreasing at $\$0.15$ shirt/week?</li>
+
+        <li class="hw-space">The formula for the volume $V$ of a cube with side length $s$ is $V = s^3$. The sides of the cube are 5 feet long and increasing at the rate of $0.2$ inches/second. How fast is the volume of the cube changing?</li>
+
+        <li class="hw-space">Suppose a drop of dye was dropped into a large bowl filled with water. If the dye spreads out in a circle and its radius is increasing at a rate of 2 cm/sec, determine how fast the area is increasing when the radius of the circle is 10 cm.</li>
+
+        <li class="hw-space">Suppose a meat distributor is willing to make $x$ pounds of beef available every week on the marketplace when the price is $\$p$ per pound. The relationship between quantity supplied and price is \[650p^2 - x^2 = 100\] If 30,000 pounds of beef are available on the marketplace this week and the price per pound is falling by 2 cents per week, at what rate is the supply falling? </li>
+
+        <li class="hw-space">Two people are standing next to each other. At the same time, one walks north at 4 mph, and the other walks east at 3 mph. How fast is the distance changing between them after thirty minutes? (Hint: be careful of units!)</li>
+
+        <li class="hw-space">The number of housing starts is related to the mortgage rate by the equation \[11N^{3}+r=16\] where $N(t)$ is the number of housing starts (in units of a million) and $r(t)$ is the mortgage rate (in percent per year). What is the rate of change of the mortgage rate with respect to time when the number of housing starts is 1 million and is decreasing by $1/33$ of a million per year?</li>
+
+        <li class="hw-space">Suppose \[9a^2 + 4b^2 = 36\] where $a$ and $b$ are functions of time. If $\dfrac{db}{dt} = \frac{1}{3}$, find $\dfrac{da}{dt}$ when $a = 2$ and $b = \dfrac{2}{3}\sqrt{5}$.</li>
+
+    </ol>
+</div>
+{% endblock %}

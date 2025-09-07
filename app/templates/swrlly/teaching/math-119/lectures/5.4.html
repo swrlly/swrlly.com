@@ -1,0 +1,72 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 5.4</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="5.4: More Trigonometric Graphs"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/5.4"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>5.4: More Trigonometric Graphs</h1><hr>
+    <p>We now know how to graph common transformations of sine and cosine. Let's look at the rest of the graphs.</p>
+    <div class="math-fact">
+        Tangent and cotangent have period $\pi$:
+        \[\tan(t + \pi) = \tan t \qquad\qquad \tan(t + \pi) = \tan t\]
+        while cosecant and secant have period $2\pi$:
+        \[\csc(t + 2\pi) = \csc t \qquad\qquad \sec(t + 2\pi) = \sec t\]
+    </div>
+    <div class="math-example">
+        Draw one period of $f(x) = \tan(x)$ by hand.
+    </div>
+    <p>The graph of $\tan(x)$ is especially interesting. As we approach $t = \frac{\pi}{2}$ from the left, the ratio $\frac{y}{x}$ becomes very large because $x$ is getting close to 0 while $y$ is getting close to $1$. Dividing a number close to one by a number close to zero results in extremely large values! In fact, these values have a name:</p>
+    <div class="math-def">
+        The vertical line $x = a$ is a <b>vertical asymptote</b> of the function $y = f(x)$ if $y$ approaches $\pm\infty$ as $x$ approaches $a$ from the right or left. 
+    </div>
+    <p>Usually, dividing by zero gives a vertical asymptote. This shows when $x = 0$ for a terminal point, $\tan(t)$ will have an asymptote.</p>
+    <div class="math-example">
+        Here are all the trigonometric graphs. Note the vertical asymptotes:
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/lcrtbb8yeh"></iframe></div>
+            For reference:
+            <ul>
+                <li>$\tan(x)$ completes one complete period on $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$</li>
+                <li>$\cot(x)$ completes one complete period on $\left[0, \pi\right]$</li>
+                <li>$\csc(x)$ completes one complete period on $\left[0, 2\pi\right]$</li>
+                <li>$\sec(x)$ completes one complete period on $\left[0, 2\pi\right]$</li>
+            </ul>
+        </div>
+
+    </div>
+    <h2>Transformations of tangent and cotangent</h2><hr>
+    <div class="math-notxt">
+        Given $k > 0$, the functions
+        \[y = a\tan k(x - b) \qquad\qquad y = a\cot k(x - b)\]
+        have period $\frac{\pi}{k}$ and horizontal shift of $+b$ units.
+    </div>
+    <div class="math-example">
+        In the language of function transformations, what type of transformation is $a$, $k$ and $b$?
+    </div>
+    <div class="math-example">
+        Find the period, and sketch by hand.
+        \[f(x) = \tan(2x) \qquad\qquad g(x) = \tan2 \left(x - \frac{\pi}{4}\right) \qquad\qquad h(x) = 2 \cot\left(3x - \frac{\pi}{4}\right)\]
+    </div>
+    <h2>Transformations of secant and cosecant</h2><hr>
+    <div class="math-notxt">
+        Given $k > 0$, the functions
+        \[y = a\csc k(x - b) \qquad\qquad y = a\sec k(x - b)\]
+        have period $\frac{2\pi}{k}$ and horizontal shift of $+b$ units.        
+    </div>
+    <div class="math-example">
+        Graph each function by hand.
+        \[y = \frac{1}{2}\csc 2x \qquad\qquad y = \frac{1}{2}\csc\left(2x + \frac{\pi}{2}\right)\]
+    </div>
+
+
+</div>
+{% endblock %}

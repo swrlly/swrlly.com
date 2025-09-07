@@ -1,0 +1,79 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 221 - 4.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 221 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="4.1: Applications of the First Derivative"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-221/lectures/4.1"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>4.1: Maximum and Minimum Values</h1>
+
+    <h2>Absolute and Local Extreme Values</h2><hr>
+
+    <div class="math-def"> Let $c$ be in the domain $D$ of $f(x)$. Then $f(c)$ is the 
+        <ul>
+            <li class="lec-list-space"><b>absolute maximum</b> value of $f$ if $f(c) \geq f(x)$ for all $x \in D$ and</li>
+            <li class="lec-list-space"><b>absolute minimum</b> value of $f$ if $f(c) \leq f(x)$ for all $x \in D$.</li>
+        </ul>
+    </div>
+
+    <p>The comparison above was with all numbers in the domain. We can restrict our context to just be near a point instead.</p>
+
+    <div class="math-def"> The number $f(c)$ is a 
+        <ul>
+            <li class="lec-list-space"><b>local maximum</b> value of $f$ if $f(c) \geq f(x)$ when $x$ is near $c$ and</li>
+            <li class="lec-list-space"><b>local minimum</b> value of $f$ if $f(c) \leq f(x)$ when $x$ is near $c$.</li>
+        </ul>
+    </div>
+
+    <div class="math-example"> Identify all absolute/local minimums and maximums for the following function: 
+        <img src="/static/swrlly/images/teaching/161-4.1-1.PNG" style="max-width:400px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+    </div>
+
+    <div class="math-example"> Identify all absolute/local minimums and maximums for $f(x) = x^2$ and $f(x) = x^3$.</div>
+
+    <p>When do absolute extrema exist? Turns out you only need two requirements.</p>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The Extreme Value Theorem</b><br> 
+        
+        If $f$ is continuous on a closed interval $[a, b]$, then $f$ is guaranteed to have an absolute maximum $f(c)$ and an absolute minimum $f(d)$ for some $c,d \in [a, b]$.</div>
+
+    <p>*pictures in class*</p>
+
+    <h2>The Closed Interval Method</h2>
+
+    <p>We are interested in locating where the absolute minimum/maximum occur.</p>
+        
+    <p>These graphs show absolute min/max can occur at a local min/max or an endpoint.</p>
+
+    <p>If it is at a local min/max, then either $f'(c) = 0$ or there is a corner at $c$, meaning $f'(c)$ does not exist. Such numbers are given a name:</p>
+
+    <div class="math-def"> A <b>critical number</b> of $f$ is a number $c$ where $f'(c) = 0$ or $f'(c)$ does not exist.</div>
+
+    <div class="math-example"> Find all critical numbers of $f(x) = x^{3/5}(4 - x)$.</div>
+
+    <div class="math-example"> Find all critical numbers $f(x) = x^3 + 3x^2 - 24x$.</div>
+
+    <div class="math-theorem"> <b style="color:var(--factcolor)">The Closed Interval Method</b> <br>
+        
+        To find the <b>absolute</b> maximum and minimum values of a continuous function $f$ on a closed interval $[a, b]$:
+    <ol>
+        <li class="lec-list-space">Find the values of $f$ at the critical numbers of $f$ in $(a, b)$.</li>
+        <li class="lec-list-space">Find the values of $f$ at the endpoints of the interval.</li>
+        <li class="lec-list-space">The largest number from Steps 1 and 2 is the absolute maximum and the smallest is the absolute minimum.</li>
+    </ol></div>
+
+    <div class="math-example"> Find the absolute extrema of the function \[f(x) = x^3 - 2x^2 - 4x + 4\] on $[0, 3]$.</div>
+
+    <div class="math-example">
+        Find the absolute extrema of \[f(x) = x^{2/3}\] on $[-1, 8]$.
+    </div>   
+
+</div>
+{% endblock %}

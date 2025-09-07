@@ -1,0 +1,137 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 119 - 5.2</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 119 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="5.2: Trigonometric Functions of Real Numbers"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-119/lectures/5.2"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>5.2: Trigonometric Functions of Real Numbers</h1>
+    <p><a href="https://www.youtube.com/watch?v=sAp3538O_cA">This lecture is recorded! See this link for a YouTube video, starting at 44:41.</a></p>
+    <h2>The Trigonometric Functions</h2><hr>
+    <p>Given the unit circle, for $t \in \mathbb{R}$ and it's associated terminal point $P(x, y)$, we can now define the trigonometric functions.</p>
+    <div class="math-def">
+        Let $t \in \mathbb{R}$ and let $P(x, y)$ be the corresponding terminal point on the unit circle. We define
+        \begin{align}
+        \sin t &= y &  \cos t &= x & \tan t &= \frac{y}{x}, \ x \neq 0 \\
+        \csc t &= \frac{1}{y}, \ y \neq 0 & \sec t &= \frac{1}{x}, \ x \neq 0 & \cot t &= \frac{x}{y}, \ y \neq 0
+        \end{align}
+    </div>
+    <div class="math-example">
+        The $\sin(t)$ function extracts the $y$ coordinate from $P(x, y)$! Look:
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <div id="hide-desmos"><iframe id="desmos-example" src="https://www.desmos.com/calculator/cb6bmvsb6p"></iframe></div>
+        </div>
+    </div>
+    <p>We will see more graphs in the next section!
+    </p>
+    <div class="math-example">
+        Find the six trigonometric functions of the following: \[1. \ t = \frac{\pi}{3} \qquad\qquad 2. \ t = \frac{\pi}{2}\]
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ol>
+                <li>The corresponding terminal point is $P\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{3} &= \frac{\sqrt{3}}{2} & \cos\frac{\pi}{3} &= \frac{1}{2} & \tan\frac{\pi}{3} &= \frac{\frac{\sqrt{3}}{2}}{\frac{1}{2}} = \sqrt{3} \\
+                    \csc \frac{\pi}{3} = \frac{2}{\sqrt{3}} &= \frac{2\sqrt{3}}{3} & \sec\frac{\pi}{3} &= 2 & \cot\frac{\pi}{3} &= \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}
+                    \end{align}
+                </li>
+                <li>The corresponding terminal point is $P\left(0, 1\right)$. From the definitions above, we have
+                    \begin{align}
+                    \sin\frac{\pi}{2} &= 1 & \cos\frac{\pi}{2} &= 0 & \tan\frac{\pi}{2} &= \frac{1}{0} = \text{DNE} \\
+                    \csc\frac{\pi}{2} &= \frac{1}{1} & \sec\frac{\pi}{2} = \frac{1}{0} &= \text{DNE} & \cot\frac{\pi}{2} &= \frac{0}{1} = 0
+                    \end{align}
+                </li>
+            </ol>
+        </div>
+    </div>
+    <p>Now that we know what the trigonometric functions are, let's see some properties and how to use them.</p>
+    <div class="math-fact">
+        The domains of the six trigonometric functions are
+        <table class="table" style="max-width: 200px; margin: 1em auto;">
+            <thead>
+            <tr>
+                <th scope="col">Function</th>
+                <th scope="col">Domain</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>$\sin, \cos$</td>
+                <td>$\mathbb{R}$</td>
+            </tr>
+            <tr>
+                <td>$\tan, \sec$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq \frac{\pi}{2} + n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            <tr>
+                <td>$\cot, \csc$</td>
+                <td>$\left\{t : t \in \mathbb{R} \text{ and } t \neq n\pi, n \in \mathbb{Z}\right\}$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="math-example">
+        Why does $\tan(t)$ have a domain given above?
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            The domain is all real numbers except $t = \frac{\pi}{2} + n\pi$ where $n$ is an integer. First, consider $n = 0$. Then $t = \frac{\pi}{2} + 0 \pi$, which is only a quarter rotation counterclockwise. Rotating a quarter gives $P(0, 1)$, which has $x = 0$. Since $\tan$ divides by $x$, you cannot divide by zero, implying $t = \frac{\pi}{2}$ is not in the domain.
+        </br> When $n = 1$, $t =  \frac{\pi}{2} + \pi$, which is our quarter rotation as before, but then another half circle rotation. This again forces the $x$ value to be zero. So we can see that <b>in general</b>, the points where $x = 0$ are where the domain are excluded!
+        </div>
+    </div>
+    <h2>Values of the Trigonometric Functions</h2><hr>
+    <div class="math-example">
+        What are the signs of the trigonometric functions in each quadrant?
+    </div>
+    <p>Given an arbitrary $t \in \mathbb{R}$, how can we quickly find, for example, $\tan(t)$? This is where the reference number + the sign of the function comes in handy. Below is the three step process:</p>
+    <div class="math-fact">
+       If $f(t)$ is an arbitrary trigonometric function, $t \in \mathbb{R}$, we find $f(t)$ in three steps:
+       <ol>
+        <li><b>Find the reference number </b> $\bar{t}$.</li>
+        <li><b>Determine the sign</b> of the trigonometric function based on the quadrant.</li>
+        <li>$f(\bar{t})$ has the same value as $f(t)$, except for sign. Correct the sign using the correct sign in Step 2. </li>
+       </ol>
+    </div>
+    <div class="math-example">
+        Find each value: \[\cos\left(\frac{2\pi}{3}\right) \qquad\qquad \tan\left(-\frac{\pi}{3}\right) \qquad\qquad \sin\left(\frac{19\pi}{4}\right)\]
+    </div>
+    <h4>Even-Odd Properties</h4>
+    <div class="math-fact">
+    $\sin, \csc, \tan, \cot$ are odd functions. $\cos, \sec$ are even:
+        \begin{array}{ccc}
+        \sin(-t) = -\sin t & \cos(-t) = \cos t & \tan(-t) = -\tan t\\
+        \csc(-t) = -\csc t & \sec(-t) = \sec t & \cot(-t) = -\cot t\\
+        \end{array}
+    </div>
+    <div class="math-example">
+        Use the unit circle to show why $\sin$ is odd and $\cos$ is even.
+    </div>
+    <div class="math-example">
+        Use the even-odd properties to find \[\sin\left(-\frac{\pi}{6}\right) \qquad \qquad \cos\left(-\frac{\pi}{4}\right)\]
+    </div>
+    <h4>Fundamental Trigonometric Identities</h4>
+    <div class="math-notxt">
+       <b>Reciprocal identities:</b>
+        \[\csc t = \frac{1}{\sin t} \qquad\qquad \sec t = \frac{1}{\cos t} \qquad\qquad \cot t = \frac{1}{\tan t} \qquad\qquad \tan t = \frac{\sin t}{\cos t} \qquad\qquad \cot t = \frac{\cos t}{\sin t}\]
+        <b>Pythagorean identities:</b>
+        \[\sin^2 t + \cos^2 t = 1 \qquad\qquad \tan^2t + 1 = \sec^2 t \qquad\qquad 1 + \cot^2 t = \csc^2 t\]
+    </div>
+    <p>Key ideas:
+        <ol>
+            <li>You only need to memorize $\sin, \cos, \tan$. The other three trigonometric functions are just reciprocals of these three.</li>
+            <li>You can derive the Pythagorean identities from the unit circle.</li>
+            <li>The notation $\sin^2t$ means $(\sin t)^2$. The entire entity  $\sin t$ must be squared.</li>
+            <li>If you are given one trigonometric function's value, you can find the rest.</li>
+        </ol>
+    </p>
+    <div class="math-example"> Derive the three Pythagorean identities, starting with $\sin^2 t + \cos^2 t= 1$.</div>
+    <!--<div class="math-example"> If $t$ is in Quadrant IV and $\cos t = \frac{3}{5}$, find $\sin t$ and $\tan t$.</div>-->
+</div>
+{% endblock %}

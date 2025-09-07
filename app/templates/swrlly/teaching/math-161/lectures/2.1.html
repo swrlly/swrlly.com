@@ -1,0 +1,142 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 161 - 2.1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 161 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="2.1: Limits of Sequences"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-161/lectures/2.1"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>2.1: Limits of Sequences</h1>
+
+    <p>Suppose you have a sequence $a_n$.</p>
+
+    <p>Previously we inspected the first few terms of a sequence.</p>
+
+    <p>But we can also look at what happens at "the end" of the sequence, also called the <b>tail</b> of a sequence.</p>
+
+    <h2>The Long-Term Behavior of a Sequence</h2><hr>
+
+    <div class="math-example"> What happens to the terms of the sequence when $n$ becomes large?
+        <ol>
+            <li class="lec-list-space">$a_n = \dfrac{1}{n}$</li>
+            <li class="lec-list-space">$b_n = (-1)^n$</li>
+        </ol>
+    </div>
+
+    <p>The symbol $\infty$ is not a number. Certainly not a real number.</p>
+
+    <p>This is why in interval notation you always see $(-\infty, 3)$ or $(0, \infty)$, but never $(0, \infty]$.</p>
+
+    <p>Mathematicians use the symbol $\infty$ to represent the idea that a quantity grows forever.</p>
+
+    <div class="math-def">
+        A sequence $\{a_n\}$ has the <b>limit</b> $L$ and we write \[\lim_{n\rightarrow \infty} a_n = L\] if we can make the terms $a_n$ as close to $L$ as we like by taking $n$ sufficiently large.
+    </div>
+
+    <ul>
+        <li class="lec-list-space">If $\displaystyle\lim_{n\rightarrow \infty}a_n$ exists, we say the sequence <b>converges</b> (or is <b>convergent</b>)</li>
+        <li class="lec-list-space">Otherwise, we say the sequence <b>diverges</b> (or is <b>divergent</b>)</li>
+    </ul>
+
+    <p><b>Note</b>: $L$ must be a number. Otherwise the sequence is divergent.</p>
+
+    <div class="math-example"> 
+    Find what the sequence $a_n = \dfrac{1}{n}$ converges to.
+    </div>
+
+    <div class="math-example"> 
+        Find what the sequence $a_n = 1$ converges to.
+    </div>
+
+    <div class="math-example"> 
+        Is the sequence $a_n = \sqrt{n}$ convergent or divergent?
+    </div>
+
+
+    <h2>Limit Laws for Sequences</h2><hr>
+
+    <p>Making a table can be unwieldy and time consuming. Let's see how limits interact with operations.</p>
+
+    <div class="math-fact">
+        If $\{a_n\}, \{b_n\}$ are convergent sequences and $c$ is a constant, then
+        <ol>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n + b_n) = \displaystyle\lim_{n\rightarrow \infty}a_n + \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n - b_n) = \displaystyle\lim_{n\rightarrow \infty}a_n - \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}ca_n = c\displaystyle\lim_{n\rightarrow \infty}a_n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_nb_n) = \displaystyle\lim_{n\rightarrow \infty}a_n \cdot \displaystyle\lim_{n\rightarrow \infty}b_n$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}\dfrac{a_n}{b_n} =\dfrac{\displaystyle\lim_{n\rightarrow \infty}a_n}{\displaystyle\lim_{n\rightarrow \infty}b_n} \qquad$ if $\displaystyle\lim_{n\rightarrow \infty}b_n \neq 0$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}c = c$</li>
+            <li class="lec-list-space">$\displaystyle\lim_{n\rightarrow \infty}(a_n)^p = \left[\displaystyle\lim_{n\rightarrow \infty}a_n\right]^p$ for any number $p > 0$</li>
+        </ol>
+    </div>
+
+    <p>Law 1 + 2 says the limit can be distributed among <b>terms</b>.</p>
+
+    <p>Law 4 says the limit can be distributed among <b>factors</b>.</p>
+
+    <div class="math-example"> 
+        Find $\displaystyle\lim_{n\rightarrow \infty}\left[2 + \dfrac{2}{n}\right]$ using limit laws.
+    </div>
+
+    <p>From the previous example and limit law 7, we can deduce that </p>
+
+    <div class="math-theorem"> 
+        For all $p > 0$, we have \[\lim_{n\rightarrow \infty} \dfrac{1}{n^p} = 0 \] if $\frac{1}{n^p}$ is defined.
+    </div>
+
+    For example, the following limits are all equal to zero by the theorem:
+
+    \[\lim_{n\rightarrow \infty} \dfrac{1}{n^2} = \lim_{n\rightarrow \infty} \dfrac{1}{\sqrt[3]{n^2}} = \lim_{n\rightarrow \infty} \dfrac{1}{\sqrt{n^3}} = 0 \]
+
+    <div class="math-example">
+        Find \[\lim_{n\rightarrow \infty}\dfrac{1 + 2n^2}{5 + 3n + 4n^2}\]
+    </div>
+
+    <div class="math-example">
+        Find \[\lim_{n\rightarrow \infty}\dfrac{n^3 + n - 1}{n^4 + n^2 + 3n}\]
+    </div>
+
+    <div class="math-example">
+        Find \[a_n = \dfrac{n^2}{\sqrt{n^3 + 4n}}\]
+    </div>
+
+    <h2>Geometric Sequences</h2><hr>
+
+    <p>A <b>geometric sequence</b> is a sequence of the form $b_n = ar^n$. The sequence looks like \[a, \ ar, \ ar^2, \ ar^3, \ \dots \]
+    
+    The value of $r$ tells us if these sequences converge or not.
+    
+    </p>
+
+    <div class="math-fact"> \[\lim_{n\rightarrow \infty} r^n = \begin{cases} 0 & 0 < r < 1 \\ 1 & r = 1 \\ \infty & r > 1 \end{cases}\]
+    
+        <p>
+            <img src="/static/swrlly/images/teaching/2.1-1.PNG" style="max-width:350px; margin:0 auto; display:flex; border-radius:10px; margin-top:1em;"/>
+        </p>
+
+    </div>
+
+    <p><b>Note:</b> We use $\displaystyle\lim_{n\rightarrow \infty} r^n = \infty$ to denote the case where the terms $r^n$ grows without bound.</p>
+
+    <p>$\infty$ is not a number. All it means is $r^n$ grows without bound.</p>
+
+    <div class="math-example">
+    Find what $a_n = 1 - (0.2)^n$ converges to.
+    </div>
+
+    <div class="math-example">
+    Find \[\lim_{n\rightarrow \infty} \dfrac{2^n - 1}{6^n}\]
+    </div>
+
+    <div class="math-example">
+    Find \[\lim_{n\rightarrow \infty} \dfrac{e^n + e^{-n}}{e^{2n} - 1}\]
+    </div>
+
+</div>
+{% endblock %}
