@@ -9,7 +9,7 @@ import json
 import re
 import os
 
-main_blueprint = Blueprint("swrlly", __name__)
+main_blueprint = Blueprint("swrlly", __name__, static_folder = "static/swrlly/", static_url_path = "/static/swrlly/")
 paths, last_modified = get_site_pages(main_blueprint.name)
 
 @main_blueprint.route("/sitemap.xml")
@@ -38,7 +38,7 @@ def teaching():
 
 @main_blueprint.route("/robots.txt")
 def robots():
-    return main_blueprint.send_static_file("swrlly/robots.txt")
+    return main_blueprint.send_static_file("robots.txt")
 
 @sitemapper.include(url_variables={"path": paths}, lastmod = last_modified)
 @main_blueprint.route("/<path:path>")

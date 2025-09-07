@@ -6,8 +6,8 @@ def init():
     app = Flask(__name__, subdomain_matching = True)
 
 
-    #app.config["SERVER_NAME"] = "localhost:8000"
-    app.config["SERVER_NAME"] = "swrlly.com"
+    app.config["SERVER_NAME"] = "localhost:8000"
+    #app.config["SERVER_NAME"] = "swrlly.com"
 
     with app.app_context():
 

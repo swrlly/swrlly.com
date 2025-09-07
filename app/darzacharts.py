@@ -7,7 +7,7 @@ import json
 import sqlite3
 
 DATABASE = "darzadata/data/playerdata.db"
-darzacharts_blueprint = Blueprint(name = "darzacharts", import_name = __name__, static_folder = "static/darzacharts", static_url_path = "/static/darzacharts", subdomain = "darzacharts")
+darzacharts_blueprint = Blueprint(name = "darzacharts", import_name = __name__, static_folder = "static/darzacharts/", static_url_path = "/static/darzacharts/", subdomain = "darzacharts")
 darzaPaths, darzaLastMod = get_site_pages(darzacharts_blueprint.name)
 
 @darzacharts_blueprint.route("/api/playercount")
@@ -25,7 +25,7 @@ def dindex():
 
 @darzacharts_blueprint.route("/robots.txt")
 def drobots():
-    return app.send_static_file("darzacharts/robots.txt")
+    return darzacharts_blueprint.send_static_file("robots.txt")
 
 @darzacharts_blueprint.errorhandler(404)
 def dpage_not_found(e):
