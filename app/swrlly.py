@@ -36,6 +36,10 @@ def music():
 def teaching():
     return render_template("swrlly/teaching.html", cssVersion = css_version)
 
+@main_blueprint.route("/projects/comprehensive-time-series-analysis")
+def time_series_project():
+    return stream_template("swrlly/projects/comprehensive-time-series-analysis.html", cssVersion = css_version)
+
 @main_blueprint.route("/robots.txt")
 def robots():
     return main_blueprint.send_static_file("robots.txt")
@@ -47,12 +51,18 @@ def catch_all(path):
     print(path)
     try:
         #safe = "/templates/swrlly/"
+        # disallow multiple identical pages
         if path.endswith(".html"): 
             return render_template("swrlly/errors/404.html", cssVersion = css_version)
-        lastEdited = time.asctime(time.gmtime(os.path.getmtime("app/templates/swrlly/" + path + ".html")))
-        lastEdited = re.split("\\s+", lastEdited)
-        lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
-        return stream_template("swrlly/" + path + ".html", cssVersion = css_version, lastEdited = lastEdited)
+        # only get time for blog posts
+        if path.startswith("blog/"):
+            lastEdited = time.asctime(time.gmtime(os.path.getmtime("app/templates/swrlly/" + path + ".html")))
+            lastEdited = re.split("\\s+", lastEdited)
+            lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
+            return stream_template("swrlly/" + path + ".html", cssVersion = css_version, lastEdited = lastEdited)
+        else:
+            return stream_template("swrlly/" + path + ".html", cssVersion = css_version)
+
     except Exception as e:
         import traceback
         traceback.print_exc()
