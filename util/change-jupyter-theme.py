@@ -107,6 +107,7 @@ replace = {
     "--jp-content-font-size3: 1.44em;":  "--jp-content-font-size3: var(--h3-size);",
     "--jp-content-font-size4: 1.728em;": "--jp-content-font-size4: var(--h2-size);",
     "--jp-content-font-size5: 2.0736em;" :  "--jp-content-font-size5: var(--h1-size);",
+    "--jp-content-heading-line-height: 1;": "--jp-content-heading-line-height: 1.5;",
     # remove outer padding on content
     ".jp-Notebook {\n.+?padding.+": ".jp-Notebook {\n\tpadding: 0;",
     # restore hr style
