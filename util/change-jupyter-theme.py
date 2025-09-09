@@ -112,6 +112,9 @@ replace = {
     ".jp-Notebook {\n.+?padding.+": ".jp-Notebook {\n\tpadding: 0;",
     # restore hr style
     ".jp-RenderedHTMLCommon hr {\n.+\n.+\n.+\n.+\n}" : "",
+    # restore header margin
+    "--jp-content-heading-margin-top: 1.2em;":  "--jp-content-heading-margin-top: 0;",
+    "--jp-content-heading-margin-bottom: 0.8em;": "--jp-content-heading-margin-bottom: 0;",
     # tried to let mathjax overflow works poorly
     #""".jp-RenderedHTMLCommon p {\n.+\n.+\n.+\n}""": """.jp-RenderedHTMLCommon p {
   #text-align: left;
