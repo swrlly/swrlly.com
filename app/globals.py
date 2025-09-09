@@ -8,13 +8,18 @@ import os
 sitemapper = Sitemapper()
 css_version = str(round(time.time()))
 
-def get_site_pages(file) -> List[List]:
-    remove = "app/templates/" + file
+def get_site_pages(filename) -> List[List]:
+    remove = "app/templates/" + filename
 
     paths = []
     last_modified = []
     ignore = set(i.strip() for i in open(".gitignore", "r").read().split("\n") if i.strip() != "")
     for subdir, dirs, files in os.walk("app/templates/"):
+        
+        # ignore unembedded jupyter notebook
+        if "jupyter-nb-output" in subdir:
+            continue
+            
         for file in files:
 
             if file in ignore or file == "404.html":
