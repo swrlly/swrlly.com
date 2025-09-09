@@ -108,6 +108,9 @@ html {
     --lecl-event-color: #0d3276;
     --quizl-event-color: rgb(69, 10, 88);
 
+    --scrollbar-color: #303030;
+    --scrollbar-bg-color: var(--card-color);
+
     /* Jupyter - code block font colors */
     --vscode-yellow: #CFD9AF; /* function names, base funcs */
     --vscode-darkyellow: #EDC952; /* bracket, paren*/
@@ -811,6 +814,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-top: 2em;
     overflow: auto;
     background-color: var(--card-color);
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-def:before {
@@ -870,6 +874,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     /*box-shadow: 0px 0px 10px #414141;*/   
     overflow: auto;
     background-color: var(--card-color);
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-example:before {
@@ -903,6 +908,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     overflow: auto;
     border-radius: 0px 10px 10px 0px;
     background-color: var(--card-color);
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-fact:before {
@@ -918,6 +924,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-top: 2em;
     border-radius: 0px 10px 10px 0px;
     overflow: auto;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-theorem:before {
@@ -933,6 +940,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-top: 2em;   
     overflow: auto;
     border-radius: 0px 10px 10px 0px;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-fact-notxt {
@@ -941,6 +949,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-bottom: 2em;
     margin-top: 2em;   
     overflow: auto;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-method {
@@ -949,6 +958,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-bottom: 2em;
     margin-top: 2em;
     overflow: auto;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
 .math-method:before {

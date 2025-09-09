@@ -9,10 +9,11 @@ r = """.highlight .nb { color: var(--vscode-lightgreen); }
     background-color: var(--card-color); 
     color: var(--text-color); 
     padding: 10px; 
-    overflow: scroll; 
+    overflow: auto; 
     font-family: "Source Code Pro, monospace"; 
     font-size: 10px; 
     letter-spacing: -0.2px;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 .pre { color: var(--text-color); }
 .modifyImg { margin: 1.5rem auto; 
@@ -22,7 +23,11 @@ r = """.highlight .nb { color: var(--vscode-lightgreen); }
     padding: 0.5rem;
     border-radius: 15px;
 }
-.modifyPrintText {color: var(--text-color); overflow: auto; }
+.modifyPrintText {
+    color: var(--text-color); 
+    overflow: auto; 
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
+}
 .ol, ul {
     line-height: var(--list-line-height);
 }
@@ -69,6 +74,7 @@ replace = {
     "<div class=\"jp-OutputPrompt jp-OutputArea-prompt\"></div>": "",
     #don't do this it screws up svgs which screws up mathjax
     #".jp-RenderedSVG svg {": ".jp-RenderedSVG svg {width: 80%; margin: 0 auto; display: flex;",
+    # change image width
     """.jp-RenderedHTMLCommon img,\n.*.jp-RenderedImage img,\n.*.jp-RenderedHTMLCommon svg,\n.*.jp-RenderedSVG svg {\n.*max-width: 100%;\n.*height: auto;\n}""": """jp-RenderedHTMLCommon svg, .jp-RenderedSVG svg {max-width: 100%; height: auto;}\n .jp-RenderedHTMLCommon img, .jp-RenderedImage img {max-width: 90%; height: auto;}""",
     #inline code
     "--jp-content-font-color1: rgba\(0, 0, 0, 0.87\);": "--jp-content-font-color1: var(--text-color);",
@@ -79,21 +85,18 @@ replace = {
     # embedded in markdown code background
     """.jp-RenderedHTMLCommon :not\(pre\) > code {\n.*background-color: var\(--jp-layout-color2\);\n.*padding: 1px 5px;\n}""" : """.jp-RenderedHTMLCommon :not(pre) > code {background-color: var(--lighter-card-color); padding: 2px 2px; border-radius: 2.5px;}""",
     # mobile allow overflow for print statements
-    """.jp-OutputArea-output pre {\n.*border: none;\n.*margin: 0;\n.*padding: 0;\n.*overflow-x: auto;\n.*overflow-y: auto;\n.*word-break: break-all;\n.*word-wrap: break-word;\n.*white-space: pre-wrap;\n} """ : """.jp-OutputArea-output pre {
+    """.jp-OutputArea-output pre {\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n}""" : """.jp-OutputArea-output pre {
   border: none;
   margin: 0;
   padding: 0;
   overflow-x: auto;
   overflow-y: auto;
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }""",
-    # allow overflow on mobile
-    "word-break: break-all;": "",
-    "word-wrap: break-word;": "",
-    "white-space: pre-wrap;": "",
     # center overflow mjax
     "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"": "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"overflow: auto;",
     # allow dataframe to overflow
-    "<div>\n.*<style scoped=\"\">": "<div style=\"overflow: auto;\">\n<style scoped=\"\" >",
+    "<div>\n.*<style scoped=\"\">": "<div style=\"overflow: auto; scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);\">\n<style scoped=\"\" >",
     # remove padding when embedded on website
     "padding: var(--jp-notebook-padding);": "padding: 0;",
     # time to change headers and paragraph decls
@@ -105,10 +108,24 @@ replace = {
     "--jp-content-font-size4: 1.728em;": "--jp-content-font-size4: var(--h2-size);",
     "--jp-content-font-size5: 2.0736em;" :  "--jp-content-font-size5: var(--h1-size);",
     # remove outer padding on content
-    ".jp-Notebook {\n.+?padding.+": ".jp-Notebook {\n\tpadding: 0;"
+    ".jp-Notebook {\n.+?padding.+": ".jp-Notebook {\n\tpadding: 0;",
     # restore hr style
-    ".jp-RenderedHTMLCommon hr {\n.+\n.+\n.+\n.+\n}" : "";
+    ".jp-RenderedHTMLCommon hr {\n.+\n.+\n.+\n.+\n}" : "",
+    # tried to let mathjax overflow works poorly
+    #""".jp-RenderedHTMLCommon p {\n.+\n.+\n.+\n}""": """.jp-RenderedHTMLCommon p {
+  #text-align: left;
+  #margin: 0;
+  #margin-bottom: 1em;
+  #overflow-x: auto;
+  #scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
+#}""",
+}
 
+replaceLast = {
+    # allow overflow on mobile
+    "word-break: break-all;": "",
+    "word-wrap: break-word;": "",
+    "white-space: pre-wrap;": "",
 }
 
 numbers= "var\(--jp-mirror-editor-number-color\)"
@@ -119,9 +136,13 @@ codeBorder = "var\(--jp-cell-editor-border-color\)"
 comment = "var\(--jp-mirror-editor-comment-color\).+" #get rid of italics
 code = "var\(--jp-code-font-family\)"
 
-a = open("../app/templates/swrlly/projects/Comprehensive Time Series Analysis.html", "r", encoding = "utf-8").read()
+link = "../app/templates/swrlly/jupyter-nb-output/Comprehensive Time Series Analysis.html"
+
+a = open(link, "r", encoding = "utf-8").read()
 for i in replace:
     a = re.sub(i, replace[i], a)
+for i in replaceLast:
+    a = re.sub(i, replaceLast[i], a)
 a = re.sub(numbers, "var(--vscode-lightgreen);", a)
 a = re.sub(strings, "var(--vscode-orange);", a)
 a = re.sub(keywords, "var(--vscode-pink);}", a)
@@ -130,6 +151,6 @@ a = re.sub(comment, "var(--vscode-darkgreen);}", a)
 a = re.sub(codeBorder, "var(--card-color);", a)
 #a = re.sub(code, "\"Source Code Pro, monospace\"", a)
 
-b = open("../app/templates/swrlly/projects/Comprehensive Time Series Analysis.html", "wb")
+b = open(link, "wb")
 b.write(a.encode("utf-8"))
 b.close()
