@@ -8,7 +8,7 @@ def init():
 
     #app.config["SERVER_NAME"] = "localhost:8000"
     app.config["SERVER_NAME"] = "swrlly.com"
-
+    #print(app.config)
     with app.app_context():
 
         from .swrlly import main_blueprint
