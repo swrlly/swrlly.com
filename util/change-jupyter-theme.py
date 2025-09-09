@@ -1,5 +1,5 @@
 # this file changes jupyter theme to match my website + look like default vscode blocks
-# jupyter nbconvert --execute --format basic --to html runes-domain.ipynb
+# jupyter nbconvert --execute --format basic --to html "Comprehensive Time Series Analysis.ipynb"
 import re
 
 # .modifyImg {width: 80%; margin: 0 auto; display: flex;}
@@ -59,7 +59,7 @@ replace = {
     "var\(--jp-layout-color0\)": "var(--card-color)",
     # md font color
     ".jp-MarkdownOutput {": ".jp-MarkdownOutput {color: var(--text-color);\n",
-    #"a {\n.+\n.+\n}" : "a {text-decoration: unset; color: var(--link-color);}",
+    "a {\n.*\n.*\n}" : "a {text-decoration: unset; color: var(--link-color);}",
     "a:hover {\n.+\n.+\n}" : "a:hover {text-decoration: unset; color: var(--link-hover-color);}",
     "--jp-content-link-color: var\(--md-blue-900\);" : "--jp-content-link-color: var(--link-color);",
     # remove code blocks
@@ -94,6 +94,8 @@ replace = {
     "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"": "<mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"SVG\" display=\"true\" style=\"position: relative;\"overflow: auto;",
     # allow dataframe to overflow
     "<div>\n.*<style scoped=\"\">": "<div style=\"overflow: auto;\">\n<style scoped=\"\" >",
+    # remove padding when embedded on website
+    "padding: var(--jp-notebook-padding);": "padding: 0;",
     # time to change headers and paragraph decls
     #"--jp-content-heading-line-height: 1;": 
     # Base font size 
@@ -101,7 +103,11 @@ replace = {
     "--jp-content-font-size2: 1.2em;": "--jp-content-font-size2: var(--h4-size);",
     "--jp-content-font-size3: 1.44em;":  "--jp-content-font-size3: var(--h3-size);",
     "--jp-content-font-size4: 1.728em;": "--jp-content-font-size4: var(--h2-size);",
-    "--jp-content-font-size5: 2.0736em;" :  "--jp-content-font-size5: var(--h1-size);"
+    "--jp-content-font-size5: 2.0736em;" :  "--jp-content-font-size5: var(--h1-size);",
+    # remove outer padding on content
+    ".jp-Notebook {\n.+?padding.+": ".jp-Notebook {\n\tpadding: 0;"
+    # restore hr style
+    ".jp-RenderedHTMLCommon hr {\n.+\n.+\n.+\n.+\n}" : "";
 
 }
 
@@ -113,7 +119,7 @@ codeBorder = "var\(--jp-cell-editor-border-color\)"
 comment = "var\(--jp-mirror-editor-comment-color\).+" #get rid of italics
 code = "var\(--jp-code-font-family\)"
 
-a = open("../templates/swrlly/runes-domain.html", "r", encoding = "utf-8").read()
+a = open("../app/templates/swrlly/projects/Comprehensive Time Series Analysis.html", "r", encoding = "utf-8").read()
 for i in replace:
     a = re.sub(i, replace[i], a)
 a = re.sub(numbers, "var(--vscode-lightgreen);", a)
@@ -124,6 +130,6 @@ a = re.sub(comment, "var(--vscode-darkgreen);}", a)
 a = re.sub(codeBorder, "var(--card-color);", a)
 #a = re.sub(code, "\"Source Code Pro, monospace\"", a)
 
-b = open("../templates/swrlly/runes-domain.html", "wb")
+b = open("../app/templates/swrlly/projects/Comprehensive Time Series Analysis.html", "wb")
 b.write(a.encode("utf-8"))
 b.close()

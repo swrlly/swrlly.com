@@ -1,0 +1,49 @@
+{% extends "swrlly/blog.html" %}
+
+{% block title %}
+<title>Comprehensive Time Series Analysis: Data Cleaning/Imputation, Exploratory Analysis, and Forecasting</title>
+{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content=""/>
+<meta name="theme-color" content="transparent"/>
+<meta property="description" content="In this project I perform a thorough end-to-end time series analysis: gathering player data for two months, dealing with 16.1% missing data, and forecasting future player counts. I utilize deep exploratory analysis and insightful visualizations to uncover player behavioral insights and motivate decisions for statistical modeling through hypothesis testing."/>
+<meta property="og:description" content="In this project I perform a thorough end-to-end time series analysis: gathering player data for two months, dealing with 16.1% missing data, and forecasting future player counts. I utilize deep exploratory analysis and insightful visualizations to uncover player behavioral insights and motivate decisions for statistical modeling through hypothesis testing."/>
+<meta name="keywords" content="time series analysis, time series forecasting, linear mixed model, unonbservable components, SARIMA, likelihood ratio test, MSTL decomposition, how to test if data is MCAR, Kalman filter for time series, time series python, time series examples, autocorrelation examples, how to use autocorrelation, how to use unobservable components, example of unobservable components, linear mixed model in time series, time series exploratory analysis, missing data in time series, how to test if MAR, isolated missing value time series, continuous missing sample time series"/>
+<meta property="og:url" content="https://swrlly.com/projects/comprehensive-time-series-analysis"/>
+{% endblock %}
+
+
+{% block content %}
+<div class = "container fade-in-text text-padding blog-post-container">
+
+    <h1 class="blog-title">Comprehensive Time Series Analysis: Data Cleaning/Imputation, Exploratory Analysis, and Forecasting</h1>
+    <div class="blog-subtitle" style="font-size: var(--jp-content-font-size1);">Discovering core player insights in an online game I developed for.</div>
+    <div class="blog-date">
+        <svg xmlns="http://www.w3.org/2000/svg" class="blog-date-icon" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"></path>
+            <path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"></path>
+            <circle cx="18" cy="18" r="4"></circle>
+            <path d="M15 3v4"></path>
+            <path d="M7 3v4"></path>
+            <path d="M3 11h16"></path>
+            <path d="M18 16.496V18l1 1"></path>
+        </svg>
+        <time>September 8, 2025</time> <span style="margin-left: 0.5rem; margin-right: 0.5rem;">•</span> <a href="/">Charlie Liou</a>
+    </div>
+
+
+    <p style="line-height: var(--line-height); font-size: var(--jp-content-font-size1);">In this project I perform a thorough end-to-end time series analysis: gathering player data for two months, dealing with 16.1% missing data, and forecasting future player counts. I utilize deep exploratory analysis and insightful visualizations to uncover player behavioral insights and motivate decisions for statistical modeling through hypothesis testing.</p>
+
+    <p style="line-height: var(--line-height); font-size: var(--jp-content-font-size1);">This project used <a href="https://www.python.org/">Python</a> and <a href="https://sqlite.org/index.html">SQLite</a> to automate data collection, <a href="https://pandas.pydata.org/">pandas</a>, <a href="https://www.statsmodels.org/stable/">statsmodels</a> and <a href="https://github.com/pykalman/pykalman">pykalman</a> for modeling, <a href="https://matplotlib.org/">matplotib</a> for visuals, and an <a href="https://jupyter.org/">Jupyter</a> notebook embedded on this page. The data is <a href="/static/swrlly/files/data/playersOnline.csv">available here</a>.</p>
+        
+    <p style="line-height: var(--line-height); font-size: var(--jp-content-font-size1);">Let's dive in!</p>
+
+    {% include "swrlly/projects/Comprehensive Time Series Analysis.html" %}
+
+
+
+
+</div>
+{% endblock %}
+
