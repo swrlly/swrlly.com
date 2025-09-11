@@ -141,10 +141,7 @@ req.onload = function() {
                 dashStyle: 'ShortDash',
                 color: selectorColor,
             },
-            tickPixelInterval: 120,
-            min: Date.now() - (48 * 60 * 60 * 1000),
-            max: Date.now()
-
+            tickPixelInterval: 120
         },
         yAxis: {
             gridLineColor: yAxisLineColor,
