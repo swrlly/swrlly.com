@@ -185,7 +185,7 @@ h3 {
 }
 
 h4 {
-    font-size: calc(1.275rem + .3w);
+    font-size: calc(1.275rem + .3vw);
     padding-top: 0.5em;
 }
 
