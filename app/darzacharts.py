@@ -30,7 +30,7 @@ def drobots():
 @darzacharts_blueprint.errorhandler(404)
 def dpage_not_found(e):
     print(e)
-    return render_template("darzacharts/errors/404.html", cssVersion = css_version)
+    return render_template("darzacharts/errors/404.html", cssVersion = css_version), 404
 
 def get_db():
     db = getattr(g, '_database', None)

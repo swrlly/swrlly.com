@@ -115,7 +115,9 @@ replace = {
     # restore header margin
     "--jp-content-heading-margin-top: 1.2em;":  "--jp-content-heading-margin-top: 0;",
     "--jp-content-heading-margin-bottom: 0.8em;": "--jp-content-heading-margin-bottom: 0;",
-    # tried to let mathjax overflow works poorly
+    # change font family
+    "--jp-ui-font-family:.+\n.+\n.+;" : "--jp-ui-font-family: 'Open Sans';"
+    # tried to let mathjax overflow works poorly, just do manually
     #""".jp-RenderedHTMLCommon p {\n.+\n.+\n.+\n}""": """.jp-RenderedHTMLCommon p {
   #text-align: left;
   #margin: 0;

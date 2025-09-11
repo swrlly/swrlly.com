@@ -16,6 +16,10 @@ paths, last_modified = get_site_pages(main_blueprint.name)
 def sitemap():
    return sitemapper.generate()
 
+@main_blueprint.route("/index")
+def index_404():
+    return page_not_found();
+
 @main_blueprint.route("/")
 def index():
     return render_template("swrlly/index.html", cssVersion = css_version)
@@ -53,7 +57,8 @@ def catch_all(path):
         #safe = "/templates/swrlly/"
         # disallow multiple identical pages
         if path.endswith(".html"): 
-            return render_template("swrlly/errors/404.html", cssVersion = css_version)
+            return page_not_found()
+
         # only get time for blog posts
         if path.startswith("blog/"):
             lastEdited = time.asctime(time.gmtime(os.path.getmtime("app/templates/swrlly/" + path + ".html")))
@@ -66,9 +71,8 @@ def catch_all(path):
     except Exception as e:
         import traceback
         traceback.print_exc()
-        print(e)
-        return render_template("swrlly/errors/404.html", cssVersion = css_version)
+        return page_not_found()
 
 @main_blueprint.errorhandler(404)
-def page_not_found(e):
-    return render_template("swrlly/errors/404.html", cssVersion = css_version)
+def page_not_found():
+    return render_template("swrlly/errors/404.html", cssVersion = css_version), 404

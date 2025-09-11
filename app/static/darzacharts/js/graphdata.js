@@ -33,6 +33,7 @@ req.onload = function() {
     });
     Highcharts.seriesTypes.scatter.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
     Highcharts.stockChart('chart-container', {
+
         navigator: {
             // slider opacity + color
             maskFill : "rgba(102,133,194,0.08)",
@@ -141,7 +142,9 @@ req.onload = function() {
                 color: selectorColor,
             },
             tickPixelInterval: 120,
-            
+            min: Date.now() - (48 * 60 * 60 * 1000),
+            max: Date.now()
+
         },
         yAxis: {
             gridLineColor: yAxisLineColor,

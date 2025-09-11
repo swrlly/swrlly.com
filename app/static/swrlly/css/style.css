@@ -614,8 +614,8 @@ put delay first, then use delay anim to put blue border at bottom right corner
     }
 }
 
-.title {
-    font-size: 12vh;
+.title-404 {
+    font-size: 9rem;
 }
 
 .albumicon {
