@@ -1537,14 +1537,6 @@ put delay first, then use delay anim to put blue border at bottom right corner
         margin: 0 auto;
     }
 
-    .musicicons {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 3vw;
-        row-gap: 4vh;
-        margin: 0 auto;
-    }  
-
     .teachingicon {
         border-radius: 15px; 
         background: var(--mobile-card-color);
@@ -1579,6 +1571,15 @@ put delay first, then use delay anim to put blue border at bottom right corner
 
 
 @media screen and (max-width: 600px) {
+
+    .musicicons {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3vw;
+        row-gap: 4vh;
+        margin: 0 auto;
+    }  
+
     .music-service-icons {
         display: grid;
         grid-template-columns: repeat(3,1fr);

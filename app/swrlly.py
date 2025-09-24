@@ -18,7 +18,7 @@ def sitemap():
 
 @main_blueprint.route("/index")
 def index_404():
-    return page_not_found();
+    return page_not_found()
 
 @main_blueprint.route("/")
 def index():
@@ -52,7 +52,7 @@ def robots():
 @main_blueprint.route("/<path:path>")
 def catch_all(path):
     # render_template escapes strings
-    print(path)
+    #print(path)
     try:
         #safe = "/templates/swrlly/"
         # disallow multiple identical pages
