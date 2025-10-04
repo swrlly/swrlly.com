@@ -1,6 +1,7 @@
 from flask import Flask, Blueprint, g, request, render_template, stream_template, abort
 from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.exceptions import NotFound
+from pathlib import Path
 from .globals import *
 
 import sqlite3
@@ -52,16 +53,26 @@ def robots():
 @main_blueprint.route("/<path:path>")
 def catch_all(path):
     # render_template escapes strings
-    #print(path)
     try:
-        #safe = "/templates/swrlly/"
         # disallow multiple identical pages
         if path.endswith(".html"): 
             return page_not_found()
 
+        base_dir = Path("app/templates/swrlly").resolve()
+        requested_file = (base_dir / (path + ".html")).resolve()
+
+        # check if attempted traversal
+        if not str(requested_file).startswith(str(base_dir)):
+            return page_not_found()
+        
+        # check if file exists
+        if not requested_file.is_file():
+            print("oops")
+            return page_not_found()
+
         # only get time for blog posts
         if path.startswith("blog/"):
-            lastEdited = time.asctime(time.gmtime(os.path.getmtime("app/templates/swrlly/" + path + ".html")))
+            lastEdited = time.asctime(time.gmtime(requested_file.stat().st_mtime))
             lastEdited = re.split("\\s+", lastEdited)
             lastEdited = lastEdited[1] + " " + lastEdited[2] + ", " + lastEdited[4] 
             return stream_template("swrlly/" + path + ".html", cssVersion = css_version, lastEdited = lastEdited)
