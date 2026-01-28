@@ -1,0 +1,358 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 141 - Homework 1</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 141 - Homework 1"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="Homework 1"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-141/homework/hw1"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding">
+    <h1>Homework 1</h1><hr>
+    <p><b>Directions:</b>         
+        <ol>
+        <li class="hw-space">Show each step of your work and fully simplify each expression.</li>
+        <li class="hw-space">Turn in your answers in class on a physical piece of paper. </li>
+        <li class="hw-space"><b>Staple multiple sheets together.</b></li>
+        <li class="hw-space">Feel free to use Desmos for graphing.</li>
+    </ol>  
+    </p><hr>
+    <p>Answer the following:</p>
+    <ol>
+
+        <li class="hw-space">What is the definition of a term? How about a factor?</li>
+
+        <li class="hw-space">When using the word "term" or "factor", what do you need to specify alongside the word?</li>
+        
+        <li class="hw-space">In the expression \[-42(x^2 + 3)(x+3)^2 + 5(x+4)^4(x-3)^2\] in what context is the expression $(x^2 + 3)$ <b>not</b> considered a factor, even though it is visually next to a multiplication?</li>
+        
+        <li class="hw-space">In fraction property #5, which says \[\dfrac{ac}{bc} = \dfrac{a}{b}\] what does $c$ need to be in order to be cancelled out?</li>
+        
+        <li class="hw-space">Can I cross out the $x^2$ in \[\dfrac{x^2 + 1}{x^2 + 2}\] to get $\dfrac{1}{2}$? Give the reason why or why not.</li>
+        
+        <li class="hw-space">Can I cross out the $x - 1$ in \[\dfrac{(x-1)(x+2)}{(x-1)(x+3)}\] to get $\dfrac{x+2}{x+3}$? Give the reason why or why not.</li>
+        
+        <li class="hw-space">Can I cross out the $x - 1$ and $x + 3$ in \[\dfrac{(x-1)(x+2) + 4(x+3)}{(x-1)(x+3)}\] to get $\dfrac{x+2 + 4}{1}$? Give the reason why or why not.</li>
+        
+        <li class="hw-space">Your friend tries to simplify $(x + 3)(x + 2)$ by using the Distributive law. They treat $(x + 3)$ as a factor and distribute to $x$ and $2$: \[(x + 3)(x + 2) = x + 3 \cdot x + x + 3 \cdot 2\] What did they do incorrectly?</li>
+
+        <li class="hw-space">In the global context, is the expression \[-x(x-2)(x+3) + 5y\] comprised of terms or factors?</li>
+
+        <li class="hw-space">Write down <b>one</b> fractional expression which satisfies the following:
+            <ul type="a">
+                <li class="hw-space">Global context of numerator comprises of three terms</li>
+                <li class="hw-space">Global context of denominator comprises of two terms</li>
+                <li class="hw-space">Each term in the numerator contains two factors</li>
+                <li class="hw-space">Each term in the denominator contains three factors</li>
+            </ul>
+        </li>
+        
+        <li class="hw-space">For each of the following sets, draw their real line representation. 
+            <br>See <a href="/teaching/math-141/lectures/I">Lecture Note I for examples.</a>
+            <ol type="a">
+                <li class="hw-space">$(-\infty, 1) \cup (1, 2) \cup (2, \infty)$</li>
+                <li class="hw-space">$(-\infty, -6]\cup (2, 10)$</li>
+                <li class="hw-space">$(-10, -4]\cup (4, \infty)$</li>
+            </ol>
+        </li>
+        
+        <!--<li class="hw-space">A student tries to simplify \[\dfrac{x^{-1} + y^{-1}}{4} = \dfrac{1}{4xy}\] Why are you not allowed to do this?</li>-->
+        
+        <li class="hw-space">A student tries to simplify \[\dfrac{x+3}{x + 2} \cdot 4 = \dfrac{x+3\cdot 4}{x+2} = \dfrac{x+12}{x+2}\] Why is this incorrect?
+        </li>
+
+           <!--< <ol type="a">
+                <li class="hw-space">$x^4 \cdot x^7$</li>
+                <li class="hw-space">$\left(\dfrac{1}{2}\right)^{-1}$</li>
+                <li class="hw-space">$(x^2y)^3$</li>
+                <li class="hw-space">$\left[\dfrac{(x^3y^5)^4}{z^{-4}}\right]^0$</li>
+                <li class="hw-space">$\left(\dfrac{x}{y}\right)^2 \cdot \left(\dfrac{y^2}{z}\right)^3$</li>
+                <li class="hw-space">$\dfrac{xy^{-3}z}{(2x)^{-1}y^2z^{-2}}$</li>
+                <li class="hw-space">$\dfrac{(x+1)(x+2)}{(x+1)^{-2}(x+2)^2(x+3)}$</li>
+                <li class="hw-space">$\dfrac{\sqrt[3]{x^2}}{x^{2/3}}$</li>
+                <li class="hw-space">$\dfrac{(-3)^4\sqrt{x}}{3^2\sqrt[3]{x}}$</li>
+                <li class="hw-space">$-2^4$</li>
+                <li class="hw-space">$(-2)^4$</li>
+                <li class="hw-space">$(2x-1)^{\frac{2}{3}}(2x-1)^{-\frac{1}{3}}$</li>
+                <li class="hw-space">$(-3x)^2(-4x(x-1))^2$</li>
+                <li class="hw-space">$\left(\dfrac{x^8y^{-2}}{(x-1)(x+2)^2}\right)^{-1/2}$</li>
+            </ol>-->
+        </li>
+        
+        <li class="hw-space">A student tries to simplify $x^2 + x^3$ by applying exponent laws. They write \[x^2 + x^3 = x^{2+3} = x^5\] Why is this incorrect?</li>
+        
+        <li class="hw-space">A student tries to simplify $x^2 \cdot x^3$ by applying exponent laws. They write \[x^2 \cdot x^3 = x^{2\cdot3} = x^6\] Why is this incorrect?</li>
+        
+        <li class="hw-space">A student tries to simplify $(a + b)^2$ by applying exponent laws. They write \[(a + b)^2 = a^2 + b^2\] Why is this incorrect?</li>
+
+        <li class="hw-space">A student tries to simplify $(2x + \sqrt{x})^2$ by applying exponent laws. They write \[(2x + \sqrt{x})^2 = 2x^2 + x\] State the two errors they made and why they are incorrect.</li>
+        
+        <li class="hw-space">True or false: Like terms are expressions which share the same factors, except possibly for the coefficient (the number).</li>
+        
+        <li class="hw-space">State whether each pair of expressions are like terms or not.
+            <ol type="a">
+                <li class="hw-space">$3x^2$ and $4y$</li>
+                <li class="hw-space">$3x^2$ and $4x$</li>
+                <li class="hw-space">$x^3y$ and $4x^3y$</li>
+                <li class="hw-space">$5(x+1)(x+2)$ and $-(x+1)(x+2)$</li>
+                <li class="hw-space">$-100(3x-2)(4x^2+3)^2$ and $4(4x^2+3)^2(3x-2)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Expand and simplify each expression by using the distributive law (or FOIL) and combining like terms.
+        </br>See <a href="/teaching/math-141/lectures/III">Lecture Note III for expanding examples.</a>
+            <ol type="a">
+                <li class="hw-space">$(2x^2 + 3x) + (3x^3 + 2x)$</li>
+                <li class="hw-space">$(x+1)(x-2)$</li>
+                <li class="hw-space">$(x^2 + 2x + 1)(x-2)$</li>
+                <li class="hw-space">$(1 - x)^2$</li>
+                <li class="hw-space">$(x^6 - x^5) -2(x^4 - x^3) - x(x^2 - x)$</li>
+                <li class="hw-space">$3(x+h)^2 - 1 - (3x^2 - 1)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Factor the following expressions.
+        </br>See <a href="/teaching/math-141/lectures/III">Lecture Note III for factoring examples.</a>
+            <ol type="a">
+                <li class="hw-space">$-2x^3 - x^2$</li>
+                <li class="hw-space">$(x+3)^2(x-2) + (x+3)(x-2)^2$</li>
+                <li class="hw-space">$x^2 - 1$</li>
+                <li class="hw-space">$x^2 + 5x + 6$</li>
+                <li class="hw-space">$x^2 + 13x + 12$</li>
+                <li class="hw-space">$2x^2 + 7x + 3$</li>
+                <li class="hw-space">$2x^2(x-1) + 7x(x-1) + 3(x-1)$</li>
+                <li class="hw-space">$4a^2 - 9b^2$</li>
+                <li class="hw-space">$(x^2 + 1)^2 - 7(x^2 + 1) + 10$</li>
+                <li class="hw-space">$x^3 + 4x^2 + x + 4$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Rationalize (examples in <a href="/teaching/math-141/lectures/IV">Lecture Note IV</a>) the numerator for the expression
+
+            \[\dfrac{\sqrt{x + h} - \sqrt{x}}{h}\]
+
+        </li>
+        <li class="hw-space">Rationalize the denominator for the expression
+
+            \[\dfrac{16x - x^2}{4 - \sqrt{x}}\]
+
+        </li>
+        <li class="hw-space">Rationalize the denominator for the expression
+
+            \[\dfrac{x^2}{\sqrt{x^2 + 9} - 3}\]
+
+        </li>
+        <!--<li class="hw-space">Rationalize the numerator for the expression
+
+            \[\dfrac{\sqrt{x} - \sqrt{x+h}}{\sqrt{x}\sqrt{x+h}}\]
+
+        </li>-->
+        <li class="hw-space">Suppose your professor tells you to simplify the expression \[\dfrac{\dfrac{2}{x-2} - \dfrac{3}{x - 3}}{1 + \dfrac{1}{x + 4}}\]
+            <ol type="a">
+                <li class="hw-space">What type of expression is this called?</li>
+                <li class="hw-space">How should you think about approaching this type of expression?</li>
+            </ol>
+        </li>
+        <li class="hw-space">Perform the indicated operation and fully simplify (meaning write as one fraction only, get rid of negative exponents, remove all compound fractions). 
+            <br>See <a href="/teaching/math-141/lectures/IV">Lecture Note IV for fraction manipulation examples and compound fractions.</a>
+            <ol type="a">
+                <li class="hw-space">$\dfrac{3}{10} + \dfrac{4}{15}$</li>
+                <li class="hw-space">$\dfrac{\sqrt{x^5}}{x^{-1/5}}$</li>
+                <li class="hw-space">$\dfrac{1}{x + 1} - \dfrac{1}{x - 1}$</li>
+                <li class="hw-space">$\dfrac{1 + \dfrac{1}{x}}{\dfrac{1}{x} - 2}$</li>
+                <li class="hw-space">$\dfrac{x}{x + 3} - \dfrac{18}{x^2 - 9}$</li>
+                <li class="hw-space">$\dfrac{1}{x-1} + \dfrac{1}{x} - \dfrac{1}{x-1}$</li>
+                <!--<li class="hw-space">$\dfrac{x^{-1} + y^{-1}}{4} \ \ $ 
+                    <br>Hint: Use definition of negative exponent to see this is a compound fraction.
+                </li>
+                <li class="hw-space">$\dfrac{\dfrac{1}{\sqrt{x+h}} - \dfrac{1}{\sqrt{x}}}{h} \ \ $
+                    <br>
+                    Hint: This is a compound fraction. Focusing on the numerator as a subproblem:
+                    <ul>
+                        <li>Subtract the fractions (another hint: Problem 4).</li>
+                        <li>Rationalize the numerator.</li>
+                        <li>Divide.</li>
+                        <li>Cancel the global factor $h$.</li>
+                    </ul>
+                </li>-->
+                <li class="hw-space">$\dfrac{4(x+3)(x-1)}{2(x-1)}$</li>
+                <li class="hw-space">$\dfrac{x^2 + 2x + 1}{x^2 - 1}$</li>
+                <li class="hw-space">$\dfrac{x^2h + 2xh + h}{h}$</li>
+                <li class="hw-space">$2 + \dfrac{1}{x + 3}$</li>
+                <li class="hw-space">$\dfrac{(x+h)^2 - x^2}{h}$</li>
+                <!--<li class="hw-space">$\dfrac{x^2 + 7x + 12}{x^2 + 3x + 2} \cdot \dfrac{x^2 + 5x + 6}{x^2 + 6x + 9}$</li>-->
+                <li class="hw-space">$\dfrac{\dfrac{1}{x + h} - \dfrac{1}{x}}{h}$</li>
+                
+            </ol>
+        </li>
+
+        <li class="hw-space">Draw a coordinate plane and graph the points $(1,2), (2, -1), (-3, -4)$ and $(4, -3)$.</li>
+
+        <li class="hw-space">Suppose I have an expression $f(x)$ and I find one input which gives two different evaluations. In particular, I find that $x = 2$ spits out $f(2) = 5$ and $f(2) = 3$. Is $f$ a function?</li>
+
+        <li class="hw-space">Describe two examples of functions which you encounter in your daily life.</li>
+
+        <li class="hw-space">Let $f(x) = x^2 - x + 1$. Evaluate and <b>simplify</b> the following:
+            <ol type="a">
+                <li class="hw-space">$f(1)$</li>
+                <li class="hw-space">$f(-a)$</li>
+                <li class="hw-space">$f(x + h)$</li>
+                <li class="hw-space">$f(x + h) - f(x)$</li>
+                <li class="hw-space">$f(-x^2)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Let $f(x) = \dfrac{1}{x + 1}$ Evaluate and <b>simplify</b> the following:
+            <ol type="a">
+                <li class="hw-space">$f(-1)$</li>
+                <li class="hw-space">$f(x + h)$</li>
+                <li class="hw-space">$f(x + h) - f(x)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Consider the expression $f(x)g(x)$.
+            <ol type="a">
+                <li class="hw-space">Suppose $g(x) = x^2 + x + 2$. Substitute $g(x)$ into the above expression correctly.</li>
+                <li class="hw-space">Now suppose \[f(x) = -x+2 \qquad g(x) = x^2 - 3\] Substitute $f(x)$ and $g(x)$ into the above expression correctly and fully simplify.</li>
+                <li class="hw-space">When substituting two or more terms into a (local/global) factor, what do you need to not forget?</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Let \[f(x) = \begin{cases} 3x + 2 & x \geq 2 \\ x^2 - x & x < 2\end{cases}\] Evaluate the following:
+            <ol type="a">
+                <li class="hw-space">$f(0)$</li>
+                <li class="hw-space">$f(1)$</li>
+                <li class="hw-space">$f(2)$</li>
+                <li class="hw-space">$f(3)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Draw a rough sketch of the previous graph by hand. You may verify your graph in Desmos.<br/>
+            Hint: To graph a piecewise function in Desmos, you need to specify a domain restriction. 
+            
+            <br>You can graph $3x + 2, x \geq 2$ by typing the symbols \[3x + 2 \{x \geq 2\}\] into Desmos, where the $\geq$ sign is created by first typing $>$ then $=$.</li>
+
+        <li class="hw-space">
+            Graph the function by hand: \[f(x) = \begin{cases} -x^2  & x > 0 \\ -x - 1 & x \leq 0 \end{cases}\]
+        </li>
+
+        <li class="hw-space">
+            Graph the function by hand: \[g(x) = \begin{cases} 2x & x > 0 \\ x & x < 0 \\ 3 & x = 0\end{cases}\]
+        </li>
+
+        <li class="hw-space">Draw one curve in the plane that isn't the graph of a function.</li>
+
+        <li class="hw-space">Suppose $f(x)$ and $g(x)$ are two different functions. In the expression $f(x)g(x)$, is $f(x)$ a term or a factor in the global context?</li>
+
+        <!--<li
+
+        <li class="hw-space">Suppose \[f(x) = x^2 - x \qquad g(x) = x^3 - x^2 + 1\]
+            Evaluate (and always remember to simplify) the following:
+            <ol type="a">
+                <li class="hw-space">$f(x)g(x)$</li>
+                <li class="hw-space">$f(x)g(x) - [f(x)]^2$</li>
+                <li class="hw-space">$\dfrac{f(x)[g(x)]^3}{[g(x)]^2}$
+                    <br>Hint: Could you use the previous problem's idea to perhaps simplify your calculation?
+                </li>
+            </ol>
+        </li>-->
+
+        <li class="hw-space">
+            Suppose $f(x) = mx + b$ where $m$ and $b$ are real numbers. Draw a rough sketch of $f(x)$ for each of the following cases:
+            <ol type="a">
+                <li class="hw-space">$m = 0$</li>
+                <li class="hw-space">$m > 0$</li>
+                <li class="hw-space">$m < 0$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">
+            Suppose you have a function $f(x)$. What is the tangent problem?
+        </li>
+
+        <li class="hw-space">
+            Suppose $y = mx + b$ is the equation of the tangent line of the function $f(x)$. Numerically speaking, what is the derivative?
+        </li>
+
+        <li class="hw-space">How are the tangent problem and the instantaneous velocity problem related?</li>
+
+        <li class="hw-space">In the tangent problem, when the secant line's point moves closer and closer to the point of tangency, what happens to the secant line?</li>
+
+        <!--<li>Suppose that a ball is dropped from the upper observation deck of the CN Tower in Toronto, 450 m above the ground. Estimate the instantaneous velocity of the ball after 4 seconds with the technique shown in class.</li>-->
+
+        <hr>
+        <p>The following problems will appear in a future homework assignment, even though they are precalculus. <b>They are not due for Homework 1.</b></p>
+        
+        <p>I didn't want the homework to be too long.</p>
+
+        <p>Try these out for practice if you have the time.</p>
+        <hr>
+
+        <li class="hw-space">Redefine the following rational functions with their domain exclusions (holes):
+            <ol type="a">
+                <li class="hw-space">$f(x) = \dfrac{x^2 - 1}{x-1}$</li>
+                <li class="hw-space">$f(x) = \dfrac{2x^2 + 3x - 2}{x + 2}$</li>
+                <li class="hw-space">$f(x) = \dfrac{x^3 - 3x^2 - 4x}{x}$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">You are given a function $F(x)$. Decompose $F(x)$ into two functions $f, g$ where $F = f \circ g$.
+            <ol type="a">
+                <li class="hw-space">$F(x) = \sin(\cos x)$</li>
+                <li class="hw-space">$F(x) = \sin^2(x)$</li>
+                <li class="hw-space">$F(x) = \sin(x^2)$</li>
+                <li class="hw-space">$F(x) = (x^3 - x^2 - 1)^{2/3}$</li>
+                <li class="hw-space">$F(x) = (x^2 - x)^2$</li>
+                <li class="hw-space">$F(x) = \sqrt[5]{(x + 1)^3}$</li>
+                <li class="hw-space">$F(x) = \sec(\tan(x))$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Find the domain of the following functions:
+            <ol type="a">
+                <li class="hw-space">$f(x) = \dfrac{1}{x^2 - 1}$</li>
+                <li class="hw-space">$f(x) = \sqrt{x} + \dfrac{1}{x}$</li>
+                <li class="hw-space">$f(x) = \sin(x)$</li>
+                <li class="hw-space">$f(x) = \dfrac{1}{\sqrt{x}}$
+                    <br>Hint: Both problems are present.
+                </li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Read these two lecture notes on trigonometric functions: <a href="https://swrlly.com/teaching/math-119/lectures/5.1">5.1: Unit Circle</a> and <a href="https://swrlly.com/teaching/math-119/lectures/5.2">5.2: Trigonometric Functions</a>. This is mandatory reading if you do not remember trigonometric functions. <br/>Draw a checkmark to get credit for this problem.</li>
+            
+        <!--<li class="hw-space">For what inputs $x$ does the function $f(x) = \cos(x)$ output $0$? (Hint: 5.1 + 5.2 Lecture notes. In other words, which radian value results in an $x$-coordinate of 0 on the unit circle?). </li>-->
+
+        <li class="hw-space">Using the unit circle, explain why $\tan\left(\frac{\pi}{2}\right)$ is undefined.</li>
+    
+        <li class="hw-space">Find the six trigonometric functions of $t = \frac{2\pi}{3}$.</li>
+        
+        <li class="hw-space">Find the six trigonometric functions of $t = -\frac{5\pi}{6}$.</li>
+
+        <li class="hw-space">Suppose \[f(x) = \sin(x) + \cos(x) \qquad g(x) = \tan(x)\]
+            Evaluate and simplify the following expressions without a calculator/the internet:
+            <ol type="a">
+                <li class="hw-space">$f(0)$</li>
+                <li class="hw-space">$g(0)$</li>
+                <li class="hw-space">$f\left(\frac{\pi}{2}\right) + g(\pi)$</li>
+                <li class="hw-space">$f(x)\cdot g(x)$</li>
+                <li class="hw-space">$f(x) - g(x)$</li>
+            </ol>
+        </li>
+
+        <li class="hw-space">Suppose \[f(x) = \sin(x) \qquad g(x) = x^2 - x \qquad h(x) = f(x)g(x)\] Evaluate the following:
+            <ol type="a">
+                <li class="hw-space">$f\circ g$</li>
+                <li class="hw-space">$g \circ f$</li>
+                <li class="hw-space">$h \circ f$</li>
+            </ol>
+        </li>
+
+    </ol>
+
+</div>
+{% endblock %}

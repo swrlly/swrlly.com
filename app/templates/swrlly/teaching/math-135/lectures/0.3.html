@@ -1,0 +1,612 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 135 - 0.3</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 135 - lectures"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="0.3: Expanding and Factoring"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-135/lectures/0.3"/>
+
+{% endblock %}
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>0.3: Expanding and Factoring</h1>
+
+    <p>Goals:</p>
+    <ul>
+        <li>Revisit like terms and how to combine them</li>
+        <li>Revisit how to use the distributive law to expand</li>
+        <li>Revisit the special product formulas to expand</li>
+        <li>Learn the four basic ways of factoring</li>
+        <ul>
+            <li>Revisit the GCF method of factoring</li>
+            <li>Learn an intuitive method to factor $ax^2 + bx + c$</li>
+            <li>Revisit the three special factoring formulas</li>
+            <li>Discuss the grouping method of factoring</li>
+        </ul>
+        <li>Determine how the number of terms informs the factoring method to try</li>
+    </ul>
+
+    <h2>Algebraic Expressions</h2><hr>
+
+    <p>Algebraic expressions are just operations, numbers, and variables mixed together. For example \[2x^2 - 3x + 4 \qquad \sqrt{x} + 10 \qquad (x + 1)(x + 2) \qquad (a + b + c)^2(x^2y + 3)\] are all algebraic expressions.</p>
+
+    <h2>Adding and Subtracting</h2><hr>
+
+    <p>To add and subtract algebraic expressions, look for <b>like terms</b>.</p>
+
+    <div class="math-def"> <b>Like terms</b><br>
+        <b>Like terms</b> are terms with the same factors except for the numerical factor (called the <b>coefficient</b>).
+    </div>
+
+    <div class="math-example">
+        Which are like terms?
+        <ul>
+            <li class="lec-list-space">$x^3$ and $3x^3$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    These are like terms; they have the same factors $x^3$.
+                </div>
+            </li>
+            <li class="lec-list-space">$-4x^2y^3$ and $3y^2x^2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    These are not like terms; left term has $y^3$ while right term has $y^2$.
+                </div>
+            </li>
+            <li class="lec-list-space">$-(x+2)(x+1)$ and $3(x+1)(x+2)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    These are like terms; they have the same factors $(x+2)(x+1)$.
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p>Remember: identify the factors. This is your guiding light.</p>
+
+    <p>To add like terms, we undo the distributive law: \[x^3 + 2x^3 = 1\cdot x^3 + 2\cdot x^3 = x^3(1 + 2) = 3x^3\]</p>
+
+    <p>In essence, add together the coefficients for like terms.</p>
+
+    <div class="math-example">
+        Add and subtract the following:
+        <ul>
+            <li class="lec-list-space">$x^3 + 2x^2 + 3x^3$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Combining like terms: \[x^3 + 2x^2 + 3x^3 = \boxed{4x^3 + 2x^2}\]
+                </div>
+            </li>
+            <li class="lec-list-space">$(4x^2y + 3xy^2) - (3x^2y^2 - 2xy^2)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Distribute the $-$ and combine like terms:
+                    \begin{align}
+                        (4x^2y + 3xy^2) - (3x^2y^2 - 2xy^2) &= 4x^2y + 3xy^2 - 3x^2y^2 + 2xy^2
+                        \\&= \boxed{4x^2y+5xy^2 - 3x^2y^2}
+                    \end{align}
+                </div>
+            </li>
+            <li class="lec-list-space">Suppose \[a = 4x^3 - x^2 \qquad b = - 2x^2 + x^3 - x\]
+                Calculate $a - b$.
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    $-b$ is subtracting three terms. Remember the parentheses.
+                    \begin{align}
+                    a - b &= 4x^3 - x^2 - (-2x^2 + x^3 - x)
+                    \\&= 4x^3 - x^2 + 2x^2 - x^3 + x
+                    \\&= \boxed{3x^3 + x^2 + x}
+                    \end{align}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Expanding (Multiplying)</h2><hr>
+
+    <p><b>Expanding</b>> is just multiplying algebraic expressions. You will apply the distributive law multiple times.</p>
+
+    <p>In expanding problems, you convert <b>factors</b> into <b>terms</b>.</p>
+
+    <p>Look at the Distibutive Property: \[a\cdot(b + c) = a\cdot b + a \cdot c\]</p>
+
+    <p>The Property is saying for the <b>factor</b> $a$ outside the parenthesis, distribute it to each <b>term</b> within the parenthesis.</p>
+
+    <div class="math-example">
+        Expand the following:
+        <ul>
+            <li class="lec-list-space">$(2x + 1)(3x - 5)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Using the distributive law twice:
+                    \begin{align*}
+                    \underbrace{(2x + 1)}_{a}(\underbrace{3x}_b - \underbrace{5}_c) &= (2x+1)3x - (2x+1)5
+                    \\&= 6x^2 + 3x - 10x - 5
+                    \\&= \boxed{6x^2 - 7x - 5}
+                    \end{align*}
+                    Don't forget parentheses!!
+                </div>
+            </li>
+            <li class="lec-list-space">$(x^2 + 2x + 1)(x + 1)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Using the distributive law twice:
+                    \begin{align*}
+                    (x^2 + 2x + 1)(x + 1) &= (x^2 + 2x + 1)x + (x^2 + 2x + 1)1
+                    \\&= x^3 + 2x^2 + x + x^2 + 2x + 1
+                    \\&= \boxed{x^3 + 3x^2 + 3x + 1}
+                    \end{align*}
+                </div>
+            </li>
+            <li class="lec-list-space">Simplify the following: $3(x+1)^2 - (x - 2)x$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Structure is a little more complex than previous problems. Identify terms to break down a bigger problem into two smaller problems.
+                    </br>
+                    $3(x+1)^2$ is one problem, while $-(x-2)x$ is another problem. On each term, apply distributive law.
+                    \begin{align*}
+                    3(x+1)^2 - (x - 2)x &= 3(x+1)(x+1) - (x-2)x && \text{rewriting for clarity}
+                    \\&= (3x+3)(x+1)-x^2+2x && \text{Dist. Prop. three times}
+                    \\&= (3x+3)x + (3x+3)1 - x^2 + 2x && \text{Dist. Prop.}
+                    \\&= 3x^2 + 3x + 3x + 3 - x^2 + 2x 
+                    \\&= \boxed{2x^2 + 8x + 3}
+                    \end{align*}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p>This last problem was a lot of work. Fortunately, we have special formulas for dealing with $(x+1)^2$ quickly, instead of having to use distributive property twice.</p>
+
+    <h2>Special Product Formulas</h2><hr>
+
+    <p>Here are three special factor structures that quickly expand.</p>
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">$(A + B)(A - B) = A^2 - B^2$</li>
+            <li class="lec-list-space">$(A + B)^2 = A^2 + 2AB + B^2$</li>
+            <li class="lec-list-space">$(A - B)^2 = A^2 - 2AB + B^2$</li>
+        </ol>
+    </div>
+
+    <p>Make sure to identify the local terms $A$ and $B$.</p>
+
+    <div class="math-example"> Expand the following using the formulas:
+        <ul>
+            <li class="lec-list-space">$(2x - 3)(2x + 3)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Local terms $A = 2x$ and $B = 3$. Following formula 1:
+                    
+                    \[(2x-3)(2x+3) = (2x)^2 - 3^2 = \boxed{4x^2 - 9}\]
+                </div>
+            </li>
+            <li class="lec-list-space">$2(2x + 1)^2$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Local terms $A = 2x$ and $B = 1$. Following formula 2:
+                    
+                    \begin{align*}
+                    2(2x+1)^2 &= 2((2x)^2 + 2(2x)1 + 1^2) && \text{don't forget parentheses (multiplying into 3 terms)}
+                    \\&= 2(4x^2 + 4x + 1) && \text{Laws of Exponents}
+                    \\&= \boxed{8x^2 + 8x + 2}
+                    \end{align*}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="math-beware"> This is incorrect: $(2x + 1)^2 = (2x)^2 + 1^2$ </br>
+        Exponents <b style="color: var(--bewarecolor);">do not</b> interact with terms.
+    </div>
+
+    <h2>Factoring</h2><hr>
+
+    <p>Consider this expanding problem: \[(x+4)(x+3) = x^2 + 7x + 12\] The expression structure on the left is all factors.</p>
+
+    <p>On the right, it is all terms.</p>
+
+    <p>If we start from the right and move leftwards instead, this process is called <b>factoring</b>.</p>
+
+    <p>Factoring converts terms into factors and is the reverse process of expanding.</p>
+
+    <h3>Method 1: Greatest Common Factor (among terms)</h3><hr>
+
+    <p>GCF factoring works on two or more terms.</p>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">GCF Factoring</b>
+        <ol>
+            <li>Identify all the terms (usually global).</li>
+            <li>Identify the factors the terms have in common (the GCF).</li>
+            <li>Factor out the common factor and write in the factor structure of the distributive property.</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Factor each expression:
+
+        <ul>
+            <li class="lec-list-space">$3x^2 - 6x$
+
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Global terms are $3x^2 = 3\cdot x \cdot x$ and $6x = 3 \cdot 2 \cdot x$.</br>
+                    
+                    The GCF is $3x$.</br> Factoring out $3x$ and writing in distributive property form: \[3x^2 - 6x = \boxed{3x(x - 2)}\]
+                </div>
+            </li>
+            <li class="lec-list-space">$x^6 - 3x^4 + 20x^2$
+
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Global terms are $x^6$, $3x^4$ and $20x^2$.</br>
+                    
+                    The GCF is $x^2$ because $20x^2$ doesn't have any more $x$'s to give.</br> Factoring out $x^2$ and writing in distributive property form: \[x^6 - 3x^4 + 20x^2 = \boxed{x^2(x^4 - 3x^2 + 20)}\]
+                </div>
+            </li>
+            <li class="lec-list-space">$(2x + 4)(x-3) - 5(x-3)$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Global terms are $(2x+4)(x-3)$ and $5(x-3)$.</br>
+                    
+                    The GCF is $(x-3)$.</br> Factoring out $(x-3)$ and writing in distributive property form: \[(2x+4)(x-3)-5(x-3) = (x-3)((2x+4) - 5) = \boxed{(x-3)(2x-1)}\]
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <p>Once you do enough of these problems, you'll understand it's all about the fundamentals. The distributive law is key to understanding expanding/factoring.</p>
+
+    <!--<p>If you plan to take Calculus, the following type of factoring problem is common after you use what's called the <b>Product Rule</b>.</p>
+
+    <div class="math-example">
+        Factor: \[3(2x+1)^2(3x^2-4)^2 + 12x(3x^2 - 4)(2x+1)^3\]
+    </div>-->
+
+    <h3 id="newx">Method 2: Factoring the form $ax^2 + bx + c$.</h3><hr>
+
+    <p>This method works on three terms. Some examples include \begin{align}
+        &x^2 + 4x + 3 \\&x^2 - 4 \\&2(x+1)^2 - 7(x+1) + 3\end{align}</p>
+
+    <h4 style="text-decoration: underline;">Intuition</h4>
+
+    <!---->
+
+    <p>Consider this expansion problem \begin{align}\definecolor{lavender}{RGB}{179,154,240} \definecolor{lightyellow}{RGB}{236, 231, 141} \definecolor{lightblue}{RGB}{142, 181, 227} (2x + 1)(3x - 5) &= {\color{lavender} 6 }x^2 \ {\color{lightblue}-} \ {\color{lightblue}10}x \ {\color{lightblue}+} \ {\color{lightblue}3}x \ {\color{lightyellow}
+    -} \ {\color{lightyellow} 5} \\&= {\color{lavender}6}x^2  \ {\color{lightblue}-} \ {\color{lightblue}7}x \ {\color{lightyellow}-} \ {\color{lightyellow} 5}\end{align}</p>
+
+    <p>Here, ${\color{lavender} a = 6}, {\color{lightblue}b = -7}, {\color{lightyellow} c = -5}$.</p>
+
+    <p>Arrange the factors vertically and erase the $x$: \begin{align}(2 \ \ & \ + 1) \\ (3 \ \ & \ - 5) \end{align}</p>
+
+    <p>Insights:
+        <ol>
+            <li>First column product is
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
+                    <li style="flex-grow: 1;">\[2 \cdot 3 = 6 = {\color{lavender}a}\]</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\ \downarrow \ & \ \ \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+                
+            </li>
+            <li>Second column product is 
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
+                    <li style="flex-grow: 1;">\[1 \cdot (-5) = -5 = {\color{lightyellow}c}\]</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ \ & \ \ \ \ \downarrow  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+            </li>
+            <li>Cross product and sum 
+                <ul style="display: flex; list-style: none; max-width: 400px; margin: 0 auto; align-items: center; padding: 0;">
+                    <li style="flex-grow: 1;"> \begin{align}2 \cdot (-5) + 3 \cdot 1 &= {\color{lightblue}-10 + 3} \\&= -7 \\&= {\color{lightblue}b}\end{align}</li>
+                    <li style="flex-grow: 1;">\begin{align}(2 \ \ & \ + 1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (3 \ \ & \ - 5) \end{align}</li>
+                </ul>
+
+            </li>
+        </ol>
+    </p>
+
+    <p>But we are trying to factor. Given $\color{lavender} a = 6$, you do not know beforehand that it must be $2\cdot 3$. It could be $1\cdot 6$!</p>
+
+    <p>Therefore you need to generate candidates for ${\color{lavender} a}$ and ${\color{lightyellow} c}$!</p>
+
+    <p><a href="/static/swrlly/files/xmethod.pdf">See this handout for more examples.</a></p>
+
+    <h4 style="text-decoration: underline;">Method: "new" X method</h4>
+
+    <p>Given $ax^2 + bx + c$:</p>
+
+    <p>First, write the coefficient structure: 
+        \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+        Then:
+        <ol>
+            <li>Generate candidates for $a$ (left column product, all possibilities of two numbers that multiply to $a$).</li>
+            <li>Generate candidates for $c$ (right column product, all possibilities of two numbers that multiply to $c$).</li>
+            <li>Choose the right candidates by checking the cross-product and sum against $b$.</li>
+        </ol>
+    </p>
+
+    <div class="math-example"> 
+        Factor: \[x^2 + 7x + 12\] 
+        
+        <p>Solution:</p>
+        
+        <ul style="display: flex; list-style: none; max-width: 800px; margin: 0 auto; align-items: stretch; box-sizing: border-box;">
+            <li style="flex: 1; border: 1px solid black; padding: 0.75em;">
+
+            <p>We first identify ${\color{lavender} a = 1}, {\color{lightblue}b = 7}, {\color{lightyellow}c = 12}$. </p>
+              
+            <p>Make your coefficient structure</p>
+              
+            \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+            </li>
+            <ul class="xmethod" style="display: flex; list-style:none; flex-direction: column; flex: 3;">
+              
+                <li style="border: 1px solid black; padding: 0.75em; align-items: center;"> Candidates for ${\color{lavender} a = 1}$ (left column):
+                \begin{array}{c}
+                1\\1
+                \end{array}
+                </li>
+                
+                <li style="border: 1px solid black; border-top:0; padding: 0.75em; align-items: center;"> Candidates for ${\color{lightyellow}c = 12}$ (right column):
+                \begin{array}{c|c|c|c|c|c}
+                1 & 12 & 2 & 6 & 3 & 4\\
+                12 & 1 & 6 & 2 & 4 & 3
+                \end{array}
+                </li>
+                
+                <li style="border: 1px solid black; border-top:0; padding: 0.75em;">
+                Now check candidates against ${\color{lightblue}b = 7}$ until cross-product is ${\color{lightblue}7}$:
+
+                \begin{align}(1 \ \ & \ \ \ \ \ \ 1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (1 \ \ &\ \ \ \ 12) \end{align} 
+                <span style="font-size: 0.8rem;">$ 1 \cdot 12 + 1 \cdot 1 = 13$. Wrong choice, try another candidate.</span>
+
+                \begin{align}(1 \ \ & \ \ \ \ \ 4) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (1 \ \ &\ \ \ \ \ 3) \end{align}
+                <span style="font-size: 0.8rem;">$1\cdot 3 + 1 \cdot 4 = {\color{lightblue} 7}$. Matches with ${\color{lightblue} b}!$</span>
+                </br> Put $x$'s back into first column and signs in second column
+
+                \begin{align}(1x \ \ & \ + \ 4) \\  \ & \ \ \  \ \  \\ (1x \ \ &\ + \ 3) \end{align}
+
+                and write in one line: $\boxed{(x+4)(x+3)}$
+              </li>
+            </ul>
+        </ul>
+    </div>
+
+    <p>If $a \neq 1$, you only need to check the "flipped" candidates <b>only</b> for left column or only for right column. If you check flipped candidates for both right/left column, you'll be checking repeated candidates. Two examples follow.</p>
+
+    <div class="math-example"> 
+        Factor: \[2x^2 - 5x + 2\]  
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ul style="display: flex; list-style: none; max-width: 800px; margin: 0 auto; align-items: stretch; box-sizing: border-box;">
+                <li style="flex: 1; border: 1px solid black; padding: 0.75em;">
+
+                <p>We first identify ${\color{lavender} a = 2}, {\color{lightblue}b = -5}, {\color{lightyellow}c = 2}$. </p>
+                
+                <p>Make your coefficient structure</p>
+                
+                \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+                </li>
+                <ul class="xmethod" style="display: flex; list-style:none; flex-direction: column; flex: 3;">
+                
+                    <li style="border: 1px solid black; padding: 0.75em; align-items: center;"> Candidates for ${\color{lavender} a = 2}$ (left column):
+                    \begin{array}{c|c}
+                    2 & 1 \\
+                    1 & 2 
+                    \end{array}
+
+                    <span style="font-size: 0.8rem;">Keep the flipped candidates.</span>
+                    </li>
+                    
+                    <li style="border: 1px solid black; border-top:0; padding: 0.75em; align-items: center;"> Candidates for ${\color{lightyellow}c = 2}$ (right column):
+                    \begin{array}{c|c|c|c}
+                    {\color{grey}2} & -2 & {\color{grey}1} &{\color{grey}-2} \\
+                    {\color{grey}1} & -1 & {\color{grey}2} & {\color{grey}-1}
+                    \end{array}
+
+                    <ul style="font-size: 0.8rem;">
+                        <li>Because ${\color{lightblue}b = -5}$ is negative, you'll need to account for the product ${\color{lightyellow}c = 2} = (-2)(-1)$ in order for the cross-product to be negative.</li>
+                        <li>Ignore the right column's flipped candidates (the last two greyed out candidates). Only the left column candidates or right candidates need to be flipped (in our case, left is flipped alread). </li>
+                        <li>The first candidate is greyed out because ${\color{lightblue}b}$ must be negative. Only the second candidate could generate a negative ${\color{lightblue}b}$. </li>
+                    </ul>
+                    </li>
+                    
+                    <li style="border: 1px solid black; border-top:0; padding: 0.75em;">
+                    Now check candidates against ${\color{lightblue}b = -5}$ until cross-product is ${\color{lightblue}5}$:
+
+                    \begin{align}(2 \ \ & \  \ -2) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (1 \ \ &\ \ -1) \end{align} 
+                    <span style="font-size: 0.8rem;">$ 2 \cdot (-1) + 1 \cdot (-2) = 4$. Wrong choice, try another candidate.</span>
+
+                    \begin{align}(1 \ \ & \ \ -2) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (2 \ \ &\ \ -1) \end{align}
+                    <span style="font-size: 0.8rem;">$1 \cdot (-1) + 2\cdot (-2) = {\color{lightblue}-5}$. Matches with ${\color{lightblue} b}$!</span></br>
+
+                    Put $x$'s back into first column and signs in second column
+
+                    \begin{align}(1x \ \ & \ - \ 2) \\  \ & \ \ \  \ \  \\ (2x \ \ &\ - \ 1) \end{align}
+
+                    and write in one line: $\boxed{(x-2)(2x-1)}$
+                </li>
+                </ul>
+            </ul>
+        </div>  
+    </div>
+
+    <div class="math-example"> 
+        Factor: \[6x^2 + 7x - 5\]
+
+        <br/><button class="math-btn">Show Solution</button>
+        <div class="math-solution">
+            <ul style="display: flex; list-style: none; max-width: 800px; margin: 0 auto; align-items: stretch; box-sizing: border-box;">
+                <li style="flex: 1; border: 1px solid black; padding: 0.75em;">
+
+                <p>We first identify ${\color{lavender} a = 6}, {\color{lightblue}b = 7}, {\color{lightyellow}c = -5}$. </p>
+                
+                <p>Make your coefficient structure</p>
+                
+                \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+                </li>
+                <ul class="xmethod" style="display: flex; list-style:none; flex-direction: column; flex: 3;">
+                
+                    <li style="border: 1px solid black; padding: 0.75em; align-items: center;"> Candidates for ${\color{lavender} a = 6}$ (left column):
+                    \begin{array}{c|c|c|c}
+                    6 & 3 & 2 & 1 \\
+                    1 & 2 & 3 & 6
+                    \end{array}
+                    <span style="font-size: 0.8rem;">Keep the flipped candidates.</span>
+                    </li>
+                    
+                    <li style="border: 1px solid black; border-top:0; padding: 0.75em; align-items: center;"> Candidates for ${\color{lightyellow}c = -5}$ (right column):
+                    \begin{array}{c|c|c|c}
+                    -5 & -1 & {\color{grey} 5} & {\color{grey} 1} \\
+                    1 & 5 & {\color{grey} -1} & {\color{grey} -5}
+                    \end{array}
+
+                        <p style="font-size: 0.8rem;">Here, the last two candidates are greyed out because we don't have to check them. They are flipped from the first two.</br>
+                        <b>Advice</b>: If ${\color{lightyellow}c}$ is negative (in our case), then you should look at ${\color{lightblue}b}$ before checking candidates. Here, ${\color{lightblue}b = 7}$. So we should not pick the candidate \begin{align}-5 \\ 1\end{align} first when checking ecause $-5$ is far from our required result of ${\color{lightblue}b = 7}$. That leaves one good candidate for the right column.
+                        </p>
+                    </li>
+                    
+                    <li style="border: 1px solid black; border-top:0; padding: 0.75em;">
+                    Now check candidates against ${\color{lightblue}b = 7}$ until cross-product is ${\color{lightblue}7}$:
+
+                    \begin{align}(6 \ \ & \ \ -1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (1 \ \ &\ \hphantom{+} \ 5) \end{align} 
+                    <span style="font-size: 0.8rem;">$ 6 \cdot 5 + 1 \cdot (-1) = 29$. Wrong choice, try another candidate.</span>
+
+                    \begin{align}(3 \ \ & \ \ -1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (2 \ \ &\ \hphantom{+} \ 5) \end{align}
+                    <span style="font-size: 0.8rem;">$3 \cdot 5 + 2\cdot (-1) = 13$. Getting close to 7. Try again:</span>
+
+                    \begin{align}(2 \ \ & \ \ -1) \\  \ & \hspace{-0.38em}{\LARGE\diagup} \hspace{-1.45em}{\LARGE\diagdown}\ \ \  \ \  \\ (3 \ \ &\ \hphantom{+} \ 5) \end{align}
+                    <span style="font-size: 0.8rem;">$2 \cdot 5 + 3\cdot (-1) = {\color{lightblue} 7}$. Matches with ${\color{lightblue} b}$!</span></br>
+                    Put $x$'s back into first column and signs in second column
+
+                    \begin{align}(2x \ \ & \ - \ 1) \\  \ & \ \ \  \ \  \\ (3x \ \ &\ + \ 5) \end{align}
+
+                    and write in one line: $\boxed{(2x-1)(3x+5)}$
+                </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <p>I highly recommend this method. It handles all cases of $ax^2 + bx + c$, even when $b$ or $c$ is negative. It is also quick to check cross-products, so you can find the factors quickly.</p>
+
+    <h3>Method 3: Special Factoring Formulas</h3><hr>
+
+    <p>The three special product formulas reversed give the special factoring formulas.</p>
+
+    <div class="math-fact">
+        <ol>
+            <li class="lec-list-space">$A^2 - B^2 = (A-B)(A+B)$</li>
+            <li class="lec-list-space">$A^2 + 2AB + B^2 = (A+B)^2$</li>
+            <li class="lec-list-space">$A^2 - 2AB + B^2 = (A-B)^2$</li>
+        </ol>
+    </div>
+
+    <div class="math-example"> Factor:
+        <ul>
+            <li class="lec-list-space">$4x^2 - 25$
+                
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    We have two terms, so we will use $A^2 - B^2$. Our task is to determine $A$ and $B$.</br>Line the terms up, giving $A^2 = 4x^2$, and $B^2 = 25$.</br>
+                    We need to write $4x^2$ as $(\text{factor})^2$. But currently, only the $x$ is squared. By the exponent laws, we can write \[A^2 = 4x^2 = 2^2x^2 = (2x)^2\] and now it is one factor squared, giving $A = 2x$.</br>
+                    Now $B^2 = 25 = 5^2$ so $B = 25$. Using the factoring formula: \[4x^2 - 25 = \boxed{(2x - 5)(2x + 5)}\]
+                </div>
+            </li>
+            <li class="lec-list-space">$x^2 + 6x + 9$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    Three terms with middle term positive, try the second formula. Our task is to determine $A$ and $B$, and check against $2AB$.</br>Line the terms up, giving $A^2 = x^2$, and $B^2 = 9 = 3^2$. Therefore $A = x$ and $B = 3$.</br>
+                    Now check if $2AB = 6x$: \[2AB = 2\cdot x \cdot 3 = 6x \checkmark\] 
+                    We're good to use the formula: \[x^2 + 6x + 9 = \boxed{(x + 3)^2}\]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h3>Method 4: Grouping</h3><hr>
+
+    <p>This method works on four terms. First order terms in descending powers.</p>
+
+    <p>We group first two/last two terms together, then use GCF on both groups.</p>
+
+    <div class="math-example"> Factor:
+        <ul>
+            <li class="lec-list-space">$x^3  + x^2 + 4x + 4$
+                <br/><button class="math-btn">Show Solution</button>
+                <div class="math-solution">
+                    \begin{align}
+                    x^3  + x^2 + 4x + 4 &= (x^3  + x^2) + (4x + 4) && \text{Group first/last two terms} \\
+                    &= x^2(x+1) + 4(x+1) && \text{GCF factoring on both groups}
+                    \\&= \boxed{(x+1)(x^2 + 4)} && \text{GCF factoring on global terms}
+                    \end{align}
+                </div>
+            </li>
+            <li class="lec-list-space">$x^3 - 2x^2 - 9x + 18$
+                <br/><button class="math-btn">Show Solution</button>
+                    <div class="math-solution">
+                    \begin{align}
+                    x^3 - 2x^2 - 9x + 18 &= (x^3 - 2x^2) +  (- 9x + 18) && \text{Group first/last two terms} \\
+                    &= x^2(x-2) -9(x-2) && \text{GCF factoring on both groups (note the $-9$)}
+                    \\&= (x-2)(\underbrace{x^2}_{A^2} - \underbrace{9}_{B^2}) && \text{GCF factoring on global terms}
+                    \\&= \boxed{(x-2)(x-3)(x+3)} && \text{Special Factoring Formula 1}
+                    \end{align}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p>The last example shows even though we did have all factors, we sometimes can keep factoring a factor. We may need to use multiple methods.</p>
+
+    <h3>Multiple Methods</h3><hr>
+
+    <p>Remember, before even starting a factoring problem, <b>identify the terms and how many there are.</b></p>
+
+    <p>Doing so helps you to choose a correct strategy. Here's what I use (in order from left to right):</p>
+
+    <div class="math-fact">
+        <table class="table" style="max-width: 600px; margin: 1em auto; border-collapse: collapse;">
+            <thead>
+            <tr>
+                <th scope="col" style="border-right: 1px solid;">Number of Terms</th>
+                <th scope="col">Factoring Methods to Try (in order)</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+            <tr>
+                <td style="border-right: 1px solid; border-top: 1px solid;">2 terms</td>
+                <td style="border-top: 1px solid;">GCF, $A^2 - B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">3 terms</td>
+                <td>GCF, $\text{"new" X method}, A^2 + 2AB + B^2, A^2 - 2AB + B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">4 terms</td>
+                <td>GCF, grouping</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\geq$ 5 terms</td>
+                <td>GCF</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>GCF factoring is the most ubiquitous factoring method; always try it first!  </p>
+
+    <div class="math-example"> Factor:
+        <ul>
+            <li class="lec-list-space">$2x^4 - 8x^2$</li>
+            <li class="lec-list-space">$3x^2(x-1) - 16x(x-1) + 5(x-1)$</li>
+        </ul>
+    </div>
+
+
+    
+</div>
+{% endblock %}
