@@ -1,0 +1,487 @@
+{% extends "swrlly/teaching.html" %}
+
+{% block title %}<title>Math 135 - Toolbox</title>{% endblock %}
+
+{% block discord %}
+<meta property="og:title" content="Math 135"/>
+<meta name="theme-color" content="transparent"/>
+<meta property="og:description" content="calculus with applications"/>
+<meta property="og:url" content="https://swrlly.com/teaching/math-135/toolbox"/>
+
+{% endblock %}
+
+<!--{% block extraimports %}
+<script async src="/static/swrlly/js/centertext.js"></script>
+{% endblock %}-->
+
+
+{% block content %}
+<div class="container fade-in-text text-padding teaching-container">
+    <h1>Math 135: Toolbox</h1>
+
+    <!--<p>A compendium is a <a href="https://www.merriam-webster.com/dictionary/compendium">"a brief summary of a larger work or of a field of knowledge."</a></p>-->
+
+    <p>This toolkit contains all of the definitions, properties, laws and theorems you need to <b>memorize</b> all on one webpage.</p>
+    
+    <p>These are your tools.</p>
+
+    <div id="toc_container">
+        <p class="toc_title">Table of Contents</p>
+        <ul class="toc_list_no_bullet">
+            <li style="margin-top:0.25rem;" >
+                <a href="#chapter-0">Chapter 0</a>
+                <ol class="toc_ol">
+                    <li><a href="#0.1">0.1: Be Aware</a></li>
+                    <li><a href="#0.2">0.2: Be Precise</a></li>
+                    <li><a href="#0.3">0.3: Expanding and Factoring</a></li>
+                </ol>
+            </li>
+            <li style="margin-top:0.25rem;" >
+                <a href="#chapter-1">Chapter 1</a>
+                <ol class="toc_ol">
+                    <li><a href="#1.1">1.1: Functions</a></li>
+                    <li><a href="#1.2">1.2: Operations on Functions</a></li>
+                    <li><a href="#1.3">1.3: Linear Functions and Average Rate of Change</a></li>
+                    <li><a href="#1.4">1.4: Exponents</a></li>
+                    <li><a href="#1.5">1.5-1.6: Polynomials and Rational Functions</a></li>
+                    <li><a href="#1.7">1.7-1.8: Exponential and Logarithmic Functions</a></li>
+                </ol>
+            </li>
+            <li style="margin-top:0.25rem;" >
+                <a href="#chapter-2">Chapter 2</a>
+                <ol class="toc_ol">
+                    <li><a href="#2.0">2.0: The Tangent Line</a></li>
+                    <li><a href="#2.1">2.1: Limits and Continuity</a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    
+    <h2 id="chapter-0">Chapter 0: Fundamentals</h2><hr>
+
+    <h4 id="0.1">0.1: Be Aware</h4>
+
+    <div class="math-def"> term, factor <br>
+        <p class="block-txt"><b>Terms</b> are expressions separated by subtraction and addition.</p>
+        <p class="block-txt"><b>Factors</b> are expressions separated by multiplication.</p>
+    </div>
+
+    <div class="math-def">
+        Global context, local context<br>
+        <p class="block-txt"><b>Global context</b> refers to the context of the entire expression.</p>
+        <p class="block-txt"><b>Local context</b> refers to a context smaller than the entire expression.</p>
+    </div>
+
+    <h4 id="0.2">0.2: Be Precise</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Properties of Fractions</b></br>
+
+        <ol>
+
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\cdot \dfrac{c}{d} = \dfrac{ac}{bd}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>English</b> Multiplying fractions requires multiplying <b>global</b> context of the numerators and <b>global</b> context of the denominators.</div>
+            </li>
+            
+            <li class="lec-list-space">
+                $\dfrac{a}{b}\div \dfrac{c}{d} = \dfrac{a}{b}\cdot \dfrac{d}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>English</b> Dividing fractions requires taking the reciprocal of the right fraction, then multiplying.</div>
+            </li>
+
+            <li class="lec-list-space">
+                $\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}$
+                <br>
+                <div style="padding-top: 0.75rem;"><b>English</b> Adding fractions with the same denominator requires adding the <b>global</b> context of the numerators together.</div>
+            </li>
+
+            <li class="lec-list-space">$\dfrac{a}{b} + \dfrac{c}{d}\qquad $ Find the LCD (getting the same denominator), then use Property 3.</li>
+
+            <li class="lec-list-space">
+                $\dfrac{ac}{bc} = \dfrac{a}{b}$
+                <div style="padding-top: 0.75rem;"><b>English</b> Cancelling an expression $c$ requires the expression to be a <b>global</b> factor in <b>both</b> the numerator and denominator.</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Properties of Real Numbers</b></br>
+        <p class="block-txt">Let $a, b, c$ be real numbers.</p>
+        <ul>
+            <li class="lec-list-space">Commutative Properties
+                <ul>
+                    <li>$a + b = b + a$</li>
+                    <li>$ab = ba$</li>
+                </ul>
+                <div style="padding-top: 0.75rem;"><b>English</b> Can swap terms with terms and factors with factors.
+            </li>
+            <li class="lec-list-space">Associative Properties
+                <ul>
+                    <li>$(a + b) + c = a + (b + c)$</li>
+                    <li>$(ab)c = a(bc)$</li>
+                </ul>
+            </li>
+            <div style="padding-top: 0.75rem;"><b>English</b> Can swap evaluation priority among all terms or among all factors.
+            <li class="lec-list-space">Distributive Property
+                <ul>
+                    <li>$a(b + c) = ab + ac$</li>
+                    <li>$(b+c)a = ab + ac$</li>
+                </ul>
+            </li>
+            <div style="padding-top: 0.75rem;"><b>English</b> The only way factors and terms interact.
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Properties of Negatives</b></br>
+        <ol>
+            <li class="lec-list-space">$-a = (-1)a$</li>
+            <li class="lec-list-space">$-(-a) = a$
+                <div style="padding-top: 0.75rem;"><b>Tip</b> Even number of negatives is positive.
+            </li>
+        </ol>
+    </div>
+
+    <h4 id="0.3">0.3: Expanding and Factoring</h4><hr>
+
+    <a href="/teaching/math-135/lectures/0.3">See Section 0.3 for full details.</a>
+
+    <div class="math-def"> like terms <br>
+        <p class="block-txt"><b>Like terms</b> are terms with the same factors except for the numerical factor (called the <b>coefficient</b>).</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Special Product Formulas</b></br>
+        <ol>
+            <li class="lec-list-space">$(A + B)(A - B) = A^2 - B^2$</li>
+            <li class="lec-list-space">$(A + B)^2 = A^2 + 2AB + B^2$</li>
+            <li class="lec-list-space">$(A - B)^2 = A^2 - 2AB + B^2$</li>
+        </ol>
+    </div>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">GCF Factoring</b>
+        <ol>
+            <li>Identify all the terms (usually global).</li>
+            <li>Identify the factors the terms have in common (the GCF).</li>
+            <li>Factor out the common factor and write in the factor structure of the distributive property.</li>
+        </ol>
+    </div>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">"new" X method</b>
+        <p class="block-txt">Given $ax^2 + bx + c$:</p>
+
+        <p>First, write the coefficient structure: 
+            \begin{align} ( \ \_  \  &\ \  \_ \ ) \\ (\ \_  \ &\ \ \_ \ ) \end{align}
+            Then:
+            <ol>
+                <li>Generate candidates for $a$ (left column product, all possibilities of two numbers that multiply to $a$).</li>
+                <li>Generate candidates for $c$ (right column product, all possibilities of two numbers that multiply to $c$).</li>
+                <li>Choose the right candidates by checking the cross-product and sum against $b$.</li>
+            </ol>
+        </p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Special Factoring Formulas</b>
+        <ol>
+            <li class="lec-list-space">$A^2 - B^2 = (A-B)(A+B)$</li>
+            <li class="lec-list-space">$A^2 + 2AB + B^2 = (A+B)^2$</li>
+            <li class="lec-list-space">$A^2 - 2AB + B^2 = (A-B)^2$</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Choosing a factoring method</b>
+        <table class="table" style="max-width: 600px; margin: 1em auto; border-collapse: collapse;">
+            <thead>
+            <tr>
+                <th scope="col" style="border-right: 1px solid;">Number of Terms</th>
+                <th scope="col">Factoring Methods to Try (in order)</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+            <tr>
+                <td style="border-right: 1px solid; border-top: 1px solid;">2 terms</td>
+                <td style="border-top: 1px solid;">GCF, $A^2 - B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">3 terms</td>
+                <td>GCF, $\text{"new" X method}, A^2 + 2AB + B^2, A^2 - 2AB + B^2$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">4 terms</td>
+                <td>GCF, grouping</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\geq$ 5 terms</td>
+                <td>GCF</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="chapter-1">Chapter 1: Review</h2><hr>
+
+    <h4 id="1.1">1.1: Functions</h4>
+
+    <div class="math-def"> function<br>
+        
+    <p class="block-txt">A rule between an input (independent) quantity and an output (dependent) quantity. Must satisfy \[\require{enclose}\begin{align}1 \text{ input} &\to  1 \text{ output  } {\color{green}\enclose{box}{\unicode{x2714}}} \\ \geq 2 \text{ inputs} &\to  1 \text{ output  } {\color{green}\enclose{box}{\unicode{x2714}}} \\1 \text{ input} &\to  2 \text{ outputs  } {\color{red}\enclose{box}[mathcolor="red"]{\unicode{x2718}}} \end{align}\]</p></div>
+
+    <img src="/static/swrlly/images/teaching/118-2.1-1.svg" style="max-width:400px; margin:3rem auto; padding:3rem; display:flex; border-radius: 20px; box-shadow: 2px 2px 40px #151515, -2px -2px 40px #171717;"/>
+
+    <div class="math-def"> graph of a function 
+        <p class="block-txt">The <b>graph</b> of a function $y = f(x)$ is all points $(x, f(x))$ in the coordinate plane.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor)">Vertical Line Test</b><br>
+        <p class="block-txt">A curve in the plane is the <b>graph</b> of a function if no vertical line intersects the curve more than once.</p>
+    </div>
+
+    <div class="math-def"> <b>domain, range</b><br>
+        <p class="block-txt">The <b>domain</b> is the set of all possible inputs to a function.</p>
+
+        <p class="block-txt">The <b>range</b> is the set of all possible outputs of a function.</p>
+    </div>
+
+    <div class="math-method"> <b style="color: var(--factcolor)">Finding domain</b> 
+        <ol>
+            <li>Find exclusions. Exclusions are:
+                <ol>
+                    <li>Taking the square root of an expression that is negative.</li>
+                    <li>Dividing by an expression equal to zero.</li>
+                </ol>
+            <li>Remove exclusions: Solve the equations/inequalities in step 1, and remove the solutions from all real numbers. Write in interval notation.</li>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor);">Domain from a graph</b>
+        <p>Imagine squishing the graph towards the $x$-axis:</p>
+            
+        <img class="img-shadow" src="/static/swrlly/images/teaching/118-2.3-1.svg" style="max-width:500px; max-height:400px;"/>
+
+    </div>
+
+    <div class="math-def"> demand function
+        <p class="block-txt">A <b>demand function</b> is a relationship between the price $p$ and the quantity $q$ of a good that can be sold (that is demanded). We have seen $q = f(p)$ but later we will see $p = f(q)$.</p>
+    </div>
+
+    <div class="math-def"> $x$-intercept, $y$-intercept
+        <p class="block-txt">The <b>$x$-intercept</b> of a graph is the $x$-coordinate where the graph intersects the $x$-axis.</p>
+        <p class="block-txt">The <b>$y$-intercept</b> of a graph is the $y$-coordinate where the graph intersects the $y$-axis.</p>
+    </div>
+
+    <div class="math-fact"> Solving $f(x) = 0$
+        <p class="block-txt">To solve $f(x) = 0$, find the $x$-intercepts.</p>
+    </div>
+
+    <h4 id="1.2">1.2: Operations on Functions</h4><hr>
+
+    <div class="math-def"> composition
+        <p class="block-txt">Given two functions $f(x)$ and $g(x)$, the composite function is $(f\circ g)(x) = f(g(x))$.</p>
+    </div>
+
+    <h4 id="1.3">1.3: Linear Functions and Average Rate of Change</h4><hr>
+
+    <div class="math-def"> linear function
+        <p class="block-txt">The function $f(x) = mx + b$ is a <b>linear function</b> whose graph produces a line.</p>
+        <p class="block-txt">$m$ is the slope and $b$ is the $y$-intercept.</p>
+    </div>
+
+    <div class="math-def"> point-slope form of a line
+        <p class="block-txt">The equation of a line with slope $m$ passing through the point $(x_1, y_1)$ is \[y - y_1 = m(x - x_1)\]</p>
+    </div>
+
+    <div class="math-def"> average rate of change
+        <p class="block-txt">The average rate of change (AROC) of $y = f(x)$ on the interval $[a, b]$ is \[\text{ARoC} = \dfrac{\text{change in } y}{\text{change in } x} = \dfrac{f(b) - f(a)}{b - a}\]
+        <p class="block-txt">The ARoC is the slope of the secant line through $(a, f(a))$ and $(b, f(b))$.</p>
+    </div>
+
+    <div class="math-def"> difference quotient
+        <p class="block-txt">The difference quotient of a function $y = f(x)$ is the expression \[\dfrac{f(x+h) - f(x)}{h}\]
+        <p class="block-txt">The difference quotient is the AROC on the interval $[x, x+h]$.</p>
+    </div>
+
+    <div class="math-fact-notxt"><b style="color: var(--factcolor)">Advice</b>
+        <p class="block-txt">When finding the difference quotient, the global structure will (after some algebra) be global factors \[\dfrac{h\cdot (\text{stuff})}{h}\] where the $h$ cancels.
+    </div>
+
+    <h4 id="1.4">1.4: Exponents</h4><hr>
+
+    <div class="math-def"> nth power
+        <p class="block-txt">The <b>$n$th power</b> of $a$ is \[a^n = a\cdot a \cdot \cdots a\]</p>
+        <p class="block-txt">Exponents are shorthand for multiplication (factors).</p>
+    </div>
+
+    <div class="math-def"> zero and negative exponents
+        <p class="block-txt"><b>Zero</b> and <b>negative</b> exponents are defined as
+        \[a^0 = 1 \qquad \qquad a^{-n} = \dfrac{1}{a^n}\]</p>
+    </div>
+
+    <div class="math-def"> fractional exponent
+        \[a^{m/n} = \left(\sqrt[n]{a}\right)^m = \sqrt[n]{a^m}\]
+    </div>
+
+    <div class="math-fact"> <b style="color: var(--factcolor)">Laws of Exponents</b><br>
+        
+        <ol>
+            <li class="lec-list-space">$x^ax^b = x^{a+b}$</li>
+            <li class="lec-list-space">$\dfrac{x^a}{x^b} = x^{a-b}$</li>
+            <li class="lec-list-space">$(x^a)^b = x^{a\cdot b}$</li>
+            <li class="lec-list-space">$(xy)^a = x^ay^a$</li>
+            <li class="lec-list-space">$\left(\dfrac{x}{y}\right)^a = \dfrac{x^a}{y^a}$</li>
+        </ol>
+    </div>
+
+    <h4 id="1.5">1.5-1.6: Polynomial and Rational Functions</h4><hr>
+
+    <div class="math-def"> quadratic function
+        <p class="block-txt">A <b>quadratic function</b> has the form $f(x) = ax^2 + bx + c$ with $a \neq 0$.</p>
+    </div>
+
+    <div class="math-def"> polynomial function<br>
+        <p class="block-txt">A polynomial function of degree $n$ has the form \[f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \qquad a_n \neq 0\] where $n$ is an integer.</p>
+        <ul>
+            <li>$a_n, a_{n-1}, \dots, a_1, a_0$ are called the <b>coefficients</b></li>
+            <li><b>degree</b>: largest power of the independent variable</li>
+            <li>$a_nx^n$ is called the <b>leading term</b></li>
+            <li>$a_n$ is called the <b>leading coefficient</b></li>
+        </ul>
+    </div>
+
+    <div class="math-informal-def"> continuity
+        <p class="block-txt">A graph is continuous if you can draw it without lifting your pencil.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor)">Facts about Polynomials</b>
+        <ul>
+            <li>Domain $\mathbb{R}$</li>
+            <li>Range: depends (on the degree).</li>
+            <li>Graph is smooth (no corners or sharp corners) and continuous (no breaks or holes).</li>
+        </ul>
+
+    </div>
+
+    <div class="math-def"> vertical/horizontal asymptotes
+        <p class="block-txt">A vertical asymptote is a vertical line $x = a$ where the heights $f(x)$ approaches $\pm\infty$ as the inputs approach $a$.</p>
+        <p class="block-txt">A <b>horizontal asymptote</b> is a horizontal line $y = b$ where the heights $f(x)$ approaches $b$ as the inputs approach $\pm\infty$.</p>
+    </div>
+
+    <div class="math-def"> rational function
+        <p class="block-txt">
+            A rational function is a function that is a ratio of two polynomials $P(x)$ and $Q(x)$:
+            \[f(x) = \dfrac{P(x)}{Q(x)} = \dfrac{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0}{b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x + b_0}\]
+        </p>
+    </div>
+
+    <div class="math-fact"> Finding vertical asymptotes for a rational function
+        <p class="block-txt">For a rational function $f(x) = \dfrac{P(x)}{Q(x)}$, the vertical asymptotes occur at the solutions of $Q(x) = 0$.</p>
+    </div>
+
+    <h4 id="1.7">1.7: Exponential/Logarithmic Functions</h4><hr>
+
+    <div class="math-def"> exponential function
+        <p class="block-txt">An exponential function has the form \[f(x) = a\cdot b^x\] where $a\neq0, b> 0$ and $b \neq 1$.</p>
+    </div>
+
+    <div class="math-def"> $e$
+        <p class="block-txt">$e \approx 2.718281828$</p>
+        <p class="block-txt">$e$ is Euler's number; used as the base of exponential functions frequently.</p>
+    </div>
+
+    <div class="math-fact"> Key features of $f(x) = ab^x$ (when $b > 1$):
+        <ul>
+            <li>Domain $\mathbb{R}$</li>
+            <li>Range $(0, \infty)$</li>
+            <li>$y$-intercept: $y = 1$</li>
+            <li>As $x\to \infty, f(x) \to \infty$</li>
+            <li>As $x\to -\infty, f(x) \to 0$</li>
+            <li>Horizontal asymptote: $y = 0$</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> growth formula
+        \[P(t) = P_0(1+r)^t\]
+        where
+        <ul>
+            <li>$P_0 = $ initial amount</li>
+            <li>$r = $ growth rate (as a decimal)</li>
+            <li>$t = $ time</li>
+            <li>$P(t) = $ amount after time $t$</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> continuous growth formula
+        \[P(t) = P_0e^{rt}\]
+        where
+        <ul>
+            <li>$P_0 = $ initial amount</li>
+            <li>$r = $ continuous growth rate (as a decimal)</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> logarithmic function
+        <p class="block-txt">The <b>logarithmic function</b> with base $b$, written $y = \log_b(x)$ is defined \[\log_b(x) = y \qquad \text{means} \qquad b^y = x\]
+        where
+        <ul>
+            <li>$P_0 = $ initial amount</li>
+            <li>$r = $ continuous growth rate (as a decimal)</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color: var(--factcolor)">Special logarithms</b>
+        <ul>
+            <li><b>Common logarithm </b> (base 10): $\log(x) = \log_{10}(x)$ </li>
+            <li><b>Natural logarithm </b> (base $e$): $\ln (x) = \log_e(x)$ </li>
+        </ul>
+    </div>
+
+    <div class="math-fact"> Key features of $f(x) = \log_b(x)$ (when $b > 1$):
+        <ul>
+            <li>Domain $(0, \infty)$ </li>
+            <li>Range $\mathbb{R}$</li>
+            <li>Vertical asymptote: $x = 0$</li>
+            <li>$x$-intercept: $x = 1$</li>
+            <li>As $x\to 0^+, f(x) \to -\infty$</li>
+            <li>As $x\to \infty, f(x) \to \infty$</li>
+
+        </ul>
+    </div>
+
+    <h2 id="chapter-2">Chapter 2: The Derivative</h2><hr>
+
+    <h4 id="2.0">2.0: The Tangent Line</h4>
+
+    <div class="math-informal-def"> tangent line
+        <p class="block-txt">The <b>tangent line</b> at a point on a curve is the line that just "touches" the curve at that point.</p>
+    </div>
+
+    <h4 id="2.1">2.1: Limits and Continuity</h4><hr>
+
+    <div class="math-def"> limit
+        <p class="block-txt">The notation \[\lim_{x\to a} f(x) = L\]
+        means we can make $f(x)$ as close as we want to $L$ by taking $x$ sufficiently close to $a$ but never $a$ itself.
+        </p>
+    </div>
+
+    <div class="math-def"> left-hand limit
+        <p class="block-txt">The notation \[\lim_{x\to a^-} f(x) = L\]
+        means we can make $f(x)$ as close as we want to $L$ by taking $x$ sufficiently close to $a$ and to the left of $a$ but never $a$ itself.
+        </p>
+    </div>
+
+    <div class="math-def"> right-hand limit
+        <p class="block-txt">The notation \[\lim_{x\to a^+} f(x) = L\]
+        means we can make $f(x)$ as close as we want to $L$ by taking $x$ sufficiently close to $a$ and to the right of $a$ but never $a$ itself.
+        </p>
+    </div>
+
+    <div class="math-fact"> existence of limits
+        <p class="block-txt">Given a function $f(x)$, a limit $\displaystyle \lim_{x\to a}f(x) = L$ if and only if \[\lim_{x\rightarrow a^-} f(x) = L = \lim_{x\rightarrow a^+}f(x)\]
+        </p>
+    </div>
+
+    <div class="math-def"> continuity at a point
+        <p class="block-txt">A function $f(x)$ is continuous at $x = a$ if and only if \[\lim_{x\to a} f(x) = f(a)\]
+        </p>
+    </div>
+</div>
+{% endblock %}

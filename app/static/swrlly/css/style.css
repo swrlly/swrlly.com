@@ -210,7 +210,7 @@ ol, ul {
 
 hr {
     margin: 1rem 0;
-    color: inherit;
+    color: var(--text-color);
     border: 0;
     border-top: 1px solid;
     opacity: .25;
@@ -818,11 +818,31 @@ put delay first, then use delay anim to put blue border at bottom right corner
     scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 
+.math-informal-def {
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color: var(--darklavender);
+    padding: 0.75rem;
+    margin-bottom: 2em;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 2em;
+    overflow: auto;
+    background-color: var(--card-color);
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
+}
+
 .math-def:before {
     content: "Definition:";
     color: var(--lavender);
     font-weight: var(--bold-weight);
 }
+
+.math-informal-def:before {
+    content: "Informal Definition:";
+    color: var(--lavender);
+    font-weight: var(--bold-weight);
+}
+
 
 .math-beware {
     border-left-style: solid;
@@ -948,12 +968,20 @@ put delay first, then use delay anim to put blue border at bottom right corner
 }
 
 .math-fact-notxt {
-    border-left: 2px solid var(--factcolor-t);
+    border-left: 4px solid var(--factcolor-t);
     padding: 0.75rem;
     margin-bottom: 2em;
     margin-top: 2em;   
     overflow: auto;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--card-color);
     scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
+}
+
+.block-txt {
+    padding-top: 0.1em;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
 }
 
 .math-method {
