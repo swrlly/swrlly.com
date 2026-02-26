@@ -21,13 +21,21 @@
 
     <!--<p>A compendium is a <a href="https://www.merriam-webster.com/dictionary/compendium">"a brief summary of a larger work or of a field of knowledge."</a></p>-->
 
-    <p>This toolkit contains all of the definitions, properties, laws and theorems you need to <b>memorize</b> all on one webpage.</p>
-    
-    <p>These are your tools on quizzes and exams.</p>
+    <p>This toolkit contains all of the definitions, properties, laws and theorems you need to <b>memorize</b> all on one webpage. These are your tools on quizzes and exams.</p>
+
+    <p>It also contains the Desmos animations we have seen in class!</p>
 
     <div id="toc_container">
         <p class="toc_title">Table of Contents</p>
         <ul class="toc_list_no_bullet">
+            <li style="margin-top:0.25rem;" >
+                <a href="#desmos-animations">Desmos Animations</a>
+                <ol class="toc_ol">
+                    <li><a href="#how-to-interact">How to Interact With Animations</a></li>
+                    <li><a href="#2.0anim">2.0: The Tangent Line</a></li>
+                    <li><a href="#2.2anim">2.2: The Derivative</a></li>
+                </ol>
+            </li>
             <li style="margin-top:0.25rem;" >
                 <a href="#chapter-0">Chapter 0</a>
                 <ol class="toc_ol">
@@ -52,18 +60,41 @@
                 <ol class="toc_ol">
                     <li><a href="#2.0">2.0: The Tangent Line</a></li>
                     <li><a href="#2.1">2.1: Limits and Continuity</a></li>
-                </ol>
-            </li>
-            <li style="margin-top:0.25rem;" >
-                <a href="#desmos-animations">Desmos Animations</a>
-                <ol class="toc_ol">
-                    <li><a href="#secant-to-tangent">2.0: Secant to Tangent Intuition</a></li>
-                    <li><a href="#2.1">2.1: Limits and Continuity</a></li>
+                    <li><a href="#2.2">2.2: The Derivative</a></li>
                 </ol>
             </li>
         </ul>
     </div>
-    
+
+    <h2 id="desmos-animations">Desmos Animations</h2><hr>
+
+    <h4 id="how-to-interact">How to Interact with Animations</h4>
+
+    <ul style="padding-bottom:1em;">
+        <li>Drag sliders around to see animations!</li>
+        <li>Click on folders/squiggly lines to the left of each block to turn off/on each block.</li>
+        <li>If you are curious, you can expand each folder to see how each animation was created!</li>
+        <li>If you do change a slider/graph, when leaving the webpage, you'll be prompted with "do you want to leave this page?" You can just leave; closing Desmos will ask you this everytime.
+    </ul>
+
+    <h4 id="2.0anim">2.0: The Tangent Line</h4><hr>
+
+    <p>In 2.0: The Tangent Line, we saw the secant to tangent intuition by letting $h$ get as close as we want to $0$.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/ynuz0hyrym"></iframe></div>
+
+    <h4 id="2.2anim">2.2: The Derivative</h4><hr>
+
+    <p>In 2.2: The Derivative, we saw the slopes of tangent lines tracing out the graph of the derivative.</p>
+
+    <p>For $f(x) = x^3 - 4x^2$:</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/zcoxlmj1of"></iframe></div>
+
+    <p>For $f(x) = \dfrac{1}{x}$:</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/cbi1qx6kkn"></iframe></div>
+
     <h2 id="chapter-0">Chapter 0: Fundamentals</h2><hr>
 
     <h4 id="0.1">0.1: Be Aware</h4>
@@ -491,35 +522,17 @@
         </p>
     </div>
 
-    <h2 id="chapter-0">Desmos Animations</h2><hr>
+    <h4 id="2.2">2.2: The Derivative</h4><hr>
 
-    <h4 id="2.0anim">How to Interact with Animations</h4>
+    <div class="math-def"> derivative
+        <p class="block-txt">The derivative of a function $f(x)$ at a number $x$ is \[f'(x) = \lim_{h\to 0} \dfrac{f(x+h) - f(x)}{h}\]
+        </p>
+    </div>
 
-    <ul style="padding-bottom:1em;">
-        <li>Drag sliders around to see animations!</li>
-        <li>Click on folders/squiggly lines to the left of each block to turn off/on each block.</li>
-        <li>If you are curious, you can expand each folder to see how each animation was created!</li>
-    </ul>
-
-    <h4 id="2.0anim">2.0: The Tangent Line</h4>
-
-    <p>In 2.0: The Tangent Line, we saw the secant to tangent intuition by letting $h$ get as close as we want to $0$.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/ynuz0hyrym"></iframe></div>
-
-    <h4 id="2.2anim">2.2: The Derivative</h4>
-
-    <p>In 2.2: The Derivative, we saw the slopes of tangent lines tracing out the graph of the derivative.</p>
-
-    <p>For $f(x) = x^3 - 4x^2$:</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/zcoxlmj1of"></iframe></div>
-
-    <p>For $f(x) = \dfrac{1}{x}$:</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/cbi1qx6kkn"></iframe></div>
-
-
+        <div class="math-def"> tangent line
+        <p class="block-txt">Given a function $f(x)$, the equation of the tangent line at the point $(a, f(a))$ is \[y - f(a) = f'(a)(x-a)\]
+        </p>
+    </div>
     
 </div>
 {% endblock %}
