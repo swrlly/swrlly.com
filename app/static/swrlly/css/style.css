@@ -918,6 +918,7 @@ put delay first, then use delay anim to put blue border at bottom right corner
     min-height: 600px;
     padding-top: 1em;
     padding-bottom: 1em;
+    border: none;
 }
 
 #hide-desmos {
