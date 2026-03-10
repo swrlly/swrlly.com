@@ -61,6 +61,8 @@
                     <li><a href="#2.0">2.0: The Tangent Line</a></li>
                     <li><a href="#2.1">2.1: Limits and Continuity</a></li>
                     <li><a href="#2.2">2.2: The Derivative</a></li>
+                    <li><a href="#2.3">2.3: Sum and Power Rules</a></li>
+                    <li><a href="#2.4">2.4: Product and Quotient Rules</a></li>
                 </ol>
             </li>
         </ul>
@@ -527,6 +529,49 @@
         <div class="math-def"> tangent line
         <p class="block-txt">Given a function $f(x)$, the equation of the tangent line at the point $(a, f(a))$ is \[y - f(a) = f'(a)(x-a)\]
         </p>
+    </div>
+
+    <h4 id="2.3">2.3: Sum and Power Rules</h4><hr>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Basic Differentiation Formulas</b></br>
+
+        <p class="block-txt">Suppose $a, c$ and $n$ are real numbers and $f(x), g(x)$ are differentiable functions. Then:</p>
+        <ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Constant Multiple Rule</b>: $\dfrac{d}{dx}(c \cdot f(x)) = c\cdot \dfrac{d}{dx}(f(x))$</li>
+            <div style="padding-top: 0.75rem;">Pull out constants and focus on the function.</div>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Sum/Difference Rule</b>: $\dfrac{d}{dx}(f(x) + g(x)) = \dfrac{d}{dx}(f(x)) + \dfrac{d}{dx}(g(x))$</li>
+            <div style="padding-top: 0.75rem;">Also true for $f(x) - g(x)$. Derivative splits across <b>terms</b>.</div>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Power Rule</b>: $\dfrac{d}{dx}(x^n) = n\cdot x^{n-1}$</li>
+            <ul>
+                <li class="lec-list-space">Special Case: $\dfrac{d}{dx}(c) = 0$</li>
+                <li class="lec-list-space">Special Case: $\dfrac{d}{dx}(x) = 1$</li>
+            </ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Exponential Functions</b></li>
+            <ul>
+                <li class="lec-list-space">$\dfrac{d}{dx}(e^x) = e^x$</li>
+                <li class="lec-list-space">$\dfrac{d}{dx}(a^x) = a^x\cdot \ln(a)$</li>
+            </ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Natural Logarithm</b>: $\dfrac{d}{dx}(\ln(x)) = \dfrac{1}{x}$</li>
+        </ul>
+        
+    </div>
+
+    <h4 id="2.4">2.4: Product and Quotient Rules</h4><hr>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Product Rule</b></br>
+
+        <p class="block-txt">Suppose $f(x), g(x)$ are differentiable functions of $x$. Then \[\dfrac{d}{dx}\left(f(x)g(x)\right) = f'(x)g(x) + f(x)g'(x)\]
+
+        Differentiating a factor structure results in two terms; each factor takes turns receiving the derivative.</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Quotient Rule</b></br>
+
+        <p class="block-txt">Suppose $f(x), g(x)$ are differentiable functions of $x$. Then \[\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) = \dfrac{g(x)f'(x) - f(x) g'(x)}{(g(x))^2}\]
+
+        Differentiating a fraction structure requires the quotient rule.</p>
+        
+        <p class="block-txt">Use the mnemonic to remember the quotient rule: Low D high minus high D low, square the bottom, away you go!</p>
     </div>
     
 </div>
