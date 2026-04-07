@@ -66,6 +66,7 @@
                     <li><a href="#2.45">2.4$\frac{1}{2}$: Business and Economics Applications of the Derivative</a></li>
                     <li><a href="#2.5">2.5: The Chain Rule</a></li>
                     <li><a href="#2.55">2.5$\frac{1}{2}$: Higher Order Derivatives</a></li>
+                    <li><a href="#2.6">2.6: Increasing/Decreasing Functions and Concavity</a></li>
                 </ol>
             </li>
         </ul>
@@ -650,6 +651,81 @@
 
     </div>
 
+    <h4 id="2.6">2.6: Increasing/Decreasing Functions and Concavity</h4><hr>
+
+    <div class="math-def"> increasing/decreasing function
+        <p class="block-txt">A function $f(x)$ is <b>increasing</b> on an interval when, for any two numbers $x_1$ and $x_2$ in the interval, $x_2 > x_1$ implies $f(x_2) > f(x_1)$.</p>
+        <p class="block-txt">A function $f(x)$ is <b>decreasing</b> on an interval when, for any two numbers $x_1$ and $x_2$ in the interval, $x_2 > x_1$ implies $f(x_2) < f(x_1)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Increasing/Decreasing Test</b> (I/D Test)</br>
+
+        <p class="block-txt">Let $f(x)$ be differentiable on the interval $(a, b)$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If $f'(x) > 0$ for all $x$ in $(a, b)$, then $f(x)$ is increasing on $(a, b)$.</li>
+            <li>If $f'(x) < 0$ for all $x$ in $(a, b)$, then $f(x)$ is decreasing on $(a, b)$.</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> critical number
+
+        <p class="block-txt">Suppose that $f(c)$ exists, meaning $c$ is in the domain of $f(x)$.</p>
+        <p class="block-txt">Then $c$ is a <b>critical number</b> of $f(x)$ when $f'(c) = 0$ or when $f'(c)$ is undefined (DNE).</p>
+    </div>
+
+    <div class="math-def"> zero product property
+        <p class="block-txt"> To solve an equation with $(\text{factors}) = 0$, set each factor to $0$ and solve each equation.</p>
+
+        <p class="block-txt">For example, if $A\cdot B = 0$, set $A = 0$ and $B = 0$ and solve each equation.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Guidelines for the Increasing/Decreasing Test</b></br>
+        <p class="block-txt"> Given a function $f(x)$, follow these steps to determine the intervals on which $f(x)$ is increasing or decreasing:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>Find the derivative of $f(x)$.</li>
+            <li>Find the critical numbers of $f(x)$, meaning:
+                <ul>
+                    <li>Find the $x$-coordinates where $f'(x) = 0$ or $f'(x)$ is undefined (DNE)</li>
+                </ul>
+            </li>
+            <li>Draw a sign diagram of $f'(x)$, and determine the sign of $f'(x)$ at one test value in each of the intervals created by critical numbers.</li>
+            <li>Use the Increasing/Decreasing Test to decide what intervals $f(x)$ is increasing/decreasing on.</li>
+        </ol>
+    </div>
+
+    <div class="math-def"> concavity
+        <p class="block-txt">Suppose $f(x)$ is differentiable on $(a, b)$.</p>
+        <p class="block-txt">The graph of $f(x)$ is <b>concave upward</b> if $f'(x)$ is increasing on $(a, b)$.</p>
+        <p class="block-txt">The graph of $f(x)$ is <b>concave downward</b> if $f'(x)$ is decreasing on $(a, b)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Concavity Test</b></br>
+        <p class="block-txt">Let $f(x)$ be a function where $f''(x)$ exists on $(a, b)$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If $f''(x) > 0$ for all $x$ in $(a, b)$, then the graph of $f(x)$ is concave upward on $(a, b)$.</li>
+            <li>If $f''(x) < 0$ for all $x$ in $(a, b)$, then the graph of $f(x)$ is concave downward on $(a, b)$.</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> inflection point
+        <p class="block-txt">Let $f(x)$ be a continuous function.</p>
+        <p class="block-txt">Then $(c, f(c))$ is an <b>inflection point</b> when $f''(c) = 0$ or when $f''(c)$ is undefined (DNE).</p>
+    </div>
+
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Guidelines for the Concavity Test</b></br>
+        <p class="block-txt"> Given a function $f(x)$, follow these steps to determine the intervals of concavity:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>Find the second derivative of $f(x)$.</li>
+            <li>Find the inflection points of $f(x)$, meaning:
+                <ul>
+                    <li>Find the $x$-coordinates where $f''(x) = 0$ or $f''(x)$ is undefined (DNE)</li>
+                </ul>
+            </li>
+            <li>Draw a sign diagram of $f''(x)$, and determine the sign of $f''(x)$ at one test value in each of the intervals created by $x$-coordinates of inflection points.</li>
+            <li>Use the Concavity Test to determine the intervals of concavity for $f(x)$.</li>
+        </ol>
+    </div>
     
 </div>
 {% endblock %}
