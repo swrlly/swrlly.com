@@ -67,6 +67,7 @@
                     <li><a href="#2.5">2.5: The Chain Rule</a></li>
                     <li><a href="#2.55">2.5$\frac{1}{2}$: Higher Order Derivatives</a></li>
                     <li><a href="#2.6">2.6: Increasing/Decreasing Functions and Concavity</a></li>
+                    <li><a href="#2.7">2.7: Optimization</a></li>
                 </ol>
             </li>
         </ul>
@@ -726,6 +727,63 @@
             <li>Use the Concavity Test to determine the intervals of concavity for $f(x)$.</li>
         </ol>
     </div>
+
+    <h4 id="2.7">2.7: Optimization</h4><hr>
+
+    <div class="math-def"> local maximum, local minimum
+        <p class="block-txt">Let $f$ be defined at $c$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$f(c)$ is a <b>local maximum</b> of $f$ when there exists an interval $(a, b)$ containing $c$ such that $f(c) \geq f(x)$ for all $x$ in $(a, b)$.</li>
+            <li>$f(c)$ is a <b>local minimum</b> of $f$ when there exists an interval $(a, b)$ containing $c$ such that $f(c) \leq f(x)$ for all $x$ in $(a, b)$.</li>
+        </ul>
+    </div>
+
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">First Derivative Test</b></br>
+        <p class="block-txt"> Given a function $f(x)$, use this test to find the local extrema of $f(x)$:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>Find the derivative of $f(x)$.</li>
+            <li>Find the critical numbers of $f(x)$.</li>
+            <li>For each critical number, examine the sign of $f'(x)$ to the left and right of $c$:
+            <ol>
+                <li>If $f'(x)$ changes from positive to negative at $x = c$, then $f(x)$ has a local maximum at $(c, f(c))$.</li>
+                <li>If $f'(x)$ changes from negative to positive at $x = c$, then $f(x)$ has a local minimum at $(c, f(c))$.</li>
+                <li>If $f'(x)$ does not change sign at $x = c$, then $(c, f(c))$ is neither a local minimum nor maximum.</li>
+            </ol>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Second Derivative Test</b></br>
+        <p class="block-txt"> Suppose that $f'(c) = 0$, and $f''(x)$ exists on an interval containing $c$.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>If $f''(c) > 0$, then $f(c)$ is a local minimum.</li>
+            <li>If $f''(c) < 0$, then $f(c)$ is a local maximum.</li>
+            <li>If $f''(c) = 0$, then the test fails. In this case, use the First Derivative Test on the critical number $c$.</li>
+        </ol>
+    </div>
+
+    <div class="math-def"> global maximum, global minimum
+        <p class="block-txt">Let $f$ be defined at $c$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$f(c)$ is a <b>global maximum</b> of $f$ if $f(c) \geq f(x)$ for all $x$ in the domain of $f$.</li>
+            <li>$f(c)$ is a <b>global minimum</b> of $f$ if $f(c) \leq f(x)$ for all $x$ in the domain of $f$.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Extreme Value Theorem</b></br>
+        <p class="block-txt"> Suppose $f$ is a continuous function defined on a closed interval $[a, b]$. Then $f$ is guaranteed to attain a global maximum and global minimum.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Closed Interval Method (CI Test/Candidates Test)</b></br>
+        <p class="block-txt"> Given a continuous function $f$ defined on a closed interval $[a, b]$, use this method to find global extrema.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>Find the critical numbers of $f$ in the open interval $(a, b)$.</li>
+            <li>Evaluate $f$ at each of the critical numbers.</li>
+            <li>Evaluate $f$ at each endpoint (meaning, find $f(a)$ and $f(b)$).</li>
+            <li>The <b>least</b> of these is the global minimum, and the <b>greatest</b> is the global maximum.</li>
+        </ol>
+    </div>
+
     
 </div>
 {% endblock %}
