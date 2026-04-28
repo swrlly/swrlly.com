@@ -70,6 +70,13 @@
                     <li><a href="#2.7">2.7: Optimization</a></li>
                 </ol>
             </li>
+            <li style="margin-top:0.25rem;" >
+                <a href="#chapter-3">Chapter 3</a>
+                <ol class="toc_ol">
+                    <li><a href="#3.1">3.1: The Definite Integral</a></li>
+                    <li><a href="#3.15">3.1$\frac{1}{2}$: Antiderivatives</a></li>
+                </ol>
+            </li>
         </ul>
     </div>
 
@@ -782,6 +789,62 @@
             <li>Evaluate $f$ at each endpoint (meaning, find $f(a)$ and $f(b)$).</li>
             <li>The <b>least</b> of these is the global minimum, and the <b>greatest</b> is the global maximum.</li>
         </ol>
+    </div>
+
+    <h2 id="chapter-3">Chapter 3: The Integral</h2><hr>
+
+    <h4 id="3.1">3.1: The Definite Integral</h4>
+
+    <div class="math-def"> sigma notation
+        <p class="block-txt">The sum \[\sum_{i=1}^{n} a_i = a_1 + a_2 + \cdots + a_n\] where $i$ is the <b>index</b>, which starts at the number below the sigma and increases by 1 until it equals the number above the sigma.</p>
+    </div>
+
+    <div class="math-def"> Riemann sum
+        <p class="block-txt">Using $n$ rectangles, the approximate area between the graph of $f(x)$ and the horizontal axis on $[a, b]$ is the <b>Riemann sum</b> \[\sum_{i=1}^{n} f(x_i) \cdot \Delta x\] where</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$\Delta x = \dfrac{b - a}{n}$ is the <b>width</b> of one rectangle.</li>
+            <li>$x_i$ is any number in the subinterval $[x_{i-1}, x_i]$ (typically a left or right endpoint).</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> definite integral
+        <p class="block-txt">The <b>definite integral</b> of $f(x)$ from $a$ to $b$ is the limit of the Riemann sum: \[\int_a^b f(x)\, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i)\, \Delta x\] where</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$\Delta x = \dfrac{b - a}{n}$ is the width of one rectangle.</li>
+            <li>$x_i = a + i \cdot \Delta x$ is the right endpoint of the $i$th rectangle.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Symbolic Meaning of the Definite Integral</b></br>
+        <p class="block-txt">Each symbol in $\displaystyle\int_a^b f(x)\, dx$ represents an idea from the Riemann sum:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$\displaystyle\int$ means "add up smaller and smaller width rectangles"</li>
+            <li>$f(x)$ is the <b>height</b> of one rectangle</li>
+            <li>$dx$ is the <b>width</b> of one rectangle</li>
+            <li>$a$ and $b$ are the bounds of the interval $[a, b]$</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Signed Area</b></br>
+        <p class="block-txt">The definite integral $\displaystyle\int_a^b f(x)\, dx$ computes <b>signed area</b> between the curve of $f(x)$ and the horizontal axis:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If $f(x)$ is <b>above</b> the horizontal axis, the area is <b>positive</b>.</li>
+            <li>If $f(x)$ is <b>below</b> the horizontal axis, the area is <b>negative</b>.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea: Rates and Totals</b></br>
+        <p class="block-txt">If $f(x)$ represents a <b>rate of change</b>, then the area underneath the curve (the definite integral) represents the <b>total amount</b> of something.</p>
+    </div>
+
+    <h4 id="3.15">3.1$\frac{1}{2}$: Antiderivatives</h4><hr>
+
+    <div class="math-def"> antiderivative
+        <p class="block-txt">Given a function $f(x)$, the function $F(x)$ is called an <b>antiderivative</b> of $f(x)$ if \[F'(x) = f(x)\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">General Antiderivative</b></br>
+        <p class="block-txt">All particular antiderivatives of $f(x)$ differ only by a constant. The <b>general antiderivative</b> of $f(x)$ is \[F(x) + C\] where $C$ is an arbitrary constant.</p>
     </div>
 
     
