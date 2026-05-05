@@ -75,6 +75,8 @@
                 <ol class="toc_ol">
                     <li><a href="#3.1">3.1: The Definite Integral</a></li>
                     <li><a href="#3.15">3.1$\frac{1}{2}$: Antiderivatives</a></li>
+                    <li><a href="#3.2">3.2$: Fundamental Theorem of Calculus and Indefinite Integrals</a></li>
+                    <li><a href="#3.4">3.4$: Integration By Substitution</a></li>
                 </ol>
             </li>
         </ul>
@@ -845,6 +847,78 @@
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">General Antiderivative</b></br>
         <p class="block-txt">All particular antiderivatives of $f(x)$ differ only by a constant. The <b>general antiderivative</b> of $f(x)$ is \[F(x) + C\] where $C$ is an arbitrary constant.</p>
+    </div>
+
+    <h4 id="3.2">3.2: Fundamental Theorem of Calculus and Indefinite Integrals</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Fundamental Theorem of Calculus, Part 1 (FTC Part 1)</b></br>
+        <p class="block-txt">If $f(t)$ is continuous on $[a, b]$, then the function \[g(x) = \int^x_a f(t) \ dt, \qquad a \leq x \leq b\] is also continuous on $[a, b]$, differentiable on $(a, b), and $g'(x) = f(x)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Core Insights from FTC Part 1</b></br>
+        <p class="block-txt"><ul>
+            <li>The integral and derivative are inverse processes; each undoes what the other has done.</li>
+            <li>The rate of change of the area underneath the curve $f(t)$ with respect to the right bound of i ntegration is the value of the function at the right boundary.</li>
+            <li>This theorem guarantees the existence of an antiderivative of $f(t)$, which is $g(x)$.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Fundamental Theorem of Calculus, Part 2 (FTC Part 2)</b></br>
+
+        <p class="block-txt">
+            If $f(x)$ is continuous on $[a, b]$, then \[\int^b_a f(x) \ dx = F(b) - F(a)\] where $F(x)$ is any antiderivative of $f(x)$.
+        </p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Net Change Theorem</b></br>
+
+        <p class="block-txt">
+            If $F'(x)$ is a rate of change, then \[\int^b_a F'(x) = F(b) - F(a)\]
+            gives the net change of $F(x)$ on $[a, b]$.
+        </p>
+    </div>
+
+    <div class="math-def"> indefinite integral
+        <p class="block-txt">Given a function $f(x)$, the indefinite integral of $f(x)$ is the general antiderivative of $f(x)$: \[\int f(x) \ dx = F(x) + C\] where $F'(x) = f(x)$.</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Antiderivative Rules</b></br>
+
+        <p class="block-txt">Suppose $a, c$ and $n$ are real numbers and $f(x), g(x)$ are differentiable functions. Then:</p>
+        <ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Constant Multiple Rule</b>: $\displaystyle\int c\cdot f(x) \ dx = c\int f(x) \ dx$
+            <div style="padding-top: 0.75rem;">Pull out constants when integrating.</div></li>
+            
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Sum/Difference Rule</b>: $\displaystyle\int\left(f(x)\pm g(x)\right) \ dx = \int f(x) \ dx \pm \int g(x) \ dx$<div style="padding-top: 0.75rem;">The integral (definite/indefinite) splits across <b>terms</b>.</div></li>
+            
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Power Rule</b>: $\displaystyle\int x^n \ dx = \dfrac{x^{n+1}}{n+1} + C$</li>
+            <ul>
+                <li class="lec-list-space">Special Case: $\displaystyle\int 0 \ dx = C$</li>
+                <li class="lec-list-space">Special Case: $\displaystyle\int 1 \ dx = x + C$</li>
+            </ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Exponential Functions</b></li>
+            <ul>
+                <li class="lec-list-space">$\displaystyle\int e^x \ dx = e^x + C$</li>
+                <li class="lec-list-space">$\displaystyle\int a^x \ dx = \dfrac{a^x}{\ln(a)} + C$</li>
+            </ul>
+            <li class="lec-list-space"><b style="color:var(--factcolor)">Natural Logarithm</b>: $\displaystyle\int \dfrac{1}{x} \ dx = \ln\lvert x \rvert + C$</li>
+        </ul>
+        
+    </div>
+
+    <h4 id="3.4">3.4: Integration By Substitution</h4><hr>
+
+    <div class="math-def"> differential
+        <p class="block-txt">Suppose $u = f(x)$ is a differentiable function. The <b>differential of $x$</b> (denoted by $dx$) is any nonzero number. The <b>differential of $u$</b> (denoted $du$) is $du = f'(x) \ dx$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Integration By Substitution</b></br>
+
+        <p class="block-txt">
+            When integrating a function that involves a composition $f(g(x))$, set $u = g(x)$, or the inside of the composition. The differential of $u$ is $du = g'(x) \ dx$. We substitute:
+            \[\int f'(g(x))\cdot g'(x)\ dx = \int f'(u)\ du\]
+        </p>
     </div>
 
     
