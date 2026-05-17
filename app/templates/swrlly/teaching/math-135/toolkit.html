@@ -34,6 +34,7 @@
                     <li><a href="#how-to-interact">How to Interact With Animations</a></li>
                     <li><a href="#2.0anim">2.0: The Tangent Line</a></li>
                     <li><a href="#2.2anim">2.2: The Derivative</a></li>
+                    <li><a href="#3.1anim">3.1: The Definite Integral</a></li>
                 </ol>
             </li>
             <li style="margin-top:0.25rem;" >
@@ -68,6 +69,8 @@
                     <li><a href="#2.55">2.5$\frac{1}{2}$: Higher Order Derivatives</a></li>
                     <li><a href="#2.6">2.6: Increasing/Decreasing Functions and Concavity</a></li>
                     <li><a href="#2.7">2.7: Optimization</a></li>
+                    <li><a href="#2.9">2.9: Applied Optimization and Elasticity</a></li>
+                    <li><a href="#2.11">2.11: Implicit Differentiation and Related Rates</a></li>
                 </ol>
             </li>
             <li style="margin-top:0.25rem;" >
@@ -75,8 +78,11 @@
                 <ol class="toc_ol">
                     <li><a href="#3.1">3.1: The Definite Integral</a></li>
                     <li><a href="#3.15">3.1$\frac{1}{2}$: Antiderivatives</a></li>
-                    <li><a href="#3.2">3.2$: Fundamental Theorem of Calculus and Indefinite Integrals</a></li>
-                    <li><a href="#3.4">3.4$: Integration By Substitution</a></li>
+                    <li><a href="#3.2">3.2: Fundamental Theorem of Calculus and Indefinite Integrals</a></li>
+                    <li><a href="#3.4">3.4: Integration By Substitution</a></li>
+                    <li><a href="#3.5">3.5: Integration By Parts</a></li>
+                    <li><a href="#3.6">3.6: Area and Average Value</a></li>
+                    <li><a href="#3.7">3.7: Business Applications of the Integral</a></li>
                 </ol>
             </li>
         </ul>
@@ -110,6 +116,15 @@
     <p>For $f(x) = \dfrac{1}{x}$:</p>
 
     <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/cbi1qx6kkn"></iframe></div>
+
+    <h4 id="3.1anim">3.1: The Definite Integral</h4><hr>
+
+    <p>In 3.1, we saw how to calculate the exact area between the curve $f(x) = x^2$ and the horizontal axis on $[0, 1]$. The following animation uses left endpoints for rectangles and lets the number of rectangles grow without bound:
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="    https://www.desmos.com/calculator/c95e3f68a9"></iframe></div>
+
+    <p>Letting $n\to\infty$, it seems $\displaystyle\int^1_0 x^2 \ dx = \dfrac{1}{3}$.</p>
+
 
     <h2 id="chapter-0">Chapter 0: Fundamentals</h2><hr>
 
@@ -793,6 +808,75 @@
         </ol>
     </div>
 
+    <h4 id="2.9">2.9: Applied Optimization and Elasticity</h4><hr>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">Guidelines for Solving Optimization Problems</b>
+        <ol>
+            <li>Translate the English into a picture. Identify all given quantities and all unknowns.</li>
+            <li>Write a <b>primary equation</b> for the quantity that is to be maximized or minimized.</li>
+            <li>Reduce the primary equation to an equation with <b>one</b> independent variable. You may need to use a secondary equation, then substitute.</li>
+            <li>Identify the <b>feasible domain</b> of the primary equation in the context of the problem.</li>
+            <li>Find the maximum/minimum value using techniques from 2.6.</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Local &rarr; Global Extrema Using Concavity</b><br>
+        <p class="block-txt">Suppose that $c$ is the only critical number of $f(x)$.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>If $f''(x) > 0$ on the domain of $f(x)$, then $f(c)$ is both a local and <b>global minimum</b>.</li>
+            <li>If $f''(x) < 0$ on the domain of $f(x)$, then $f(c)$ is both a local and <b>global maximum</b>.</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Profit Maximization</b><br>
+        <p class="block-txt">Since $P = R - C$, differentiating gives $P' = R' - C'$. Setting $P' = 0$ gives \[R'(q) = C'(q)\] Profit is maximized when <b>marginal revenue equals marginal cost</b>.</p>
+    </div>
+
+    <div class="math-def"> elasticity of demand
+        <p class="block-txt">Given a differentiable demand function $q = f(p)$, the <b>elasticity of demand</b> is \[E = -\dfrac{p}{q} \cdot f'(p)\]</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If $E < 1$, demand is <b>inelastic</b>. Raising prices <b>increases</b> revenue.</li>
+            <li>If $E > 1$, demand is <b>elastic</b>. Raising prices <b>decreases</b> revenue.</li>
+            <li>If $E = 1$, demand is <b>unit elastic</b>. Revenue is at a <b>maximum</b>.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Interpretation of Elasticity</b><br>
+        <p class="block-txt">If the price increases by 1%, the demand will decrease by $E$%.</p>
+        <p class="block-txt"><b>Note:</b> The demand function must be written as $q = f(p)$ (quantity as a function of price) to calculate elasticity.</p>
+        <p class="block-txt">$E$ is a dimensionless quantity: \[E = -\dfrac{p}{q} \cdot \underbrace{\dfrac{dq}{dp}}_{\text{units/\$}} = \dfrac{\%\text{ change in quantity demanded}}{\%\text{ change in price}}\]</p>
+    </div>
+
+    <h4 id="2.11">2.11: Implicit Differentiation and Related Rates</h4><hr>
+
+    <div class="math-def"> implicit form
+        <p class="block-txt">An equation is in <b>implicit form</b> when $y$ is not isolated. For example: \[xy = 1 \qquad y^3 + y^2 - 5y - x^2 = -4 \qquad x^2 + 4y^2 = 4\]</p>
+    </div>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">Implicit Differentiation</b>
+        <p class="block-txt">To find $\dfrac{dy}{dx}$ for an equation in implicit form:</p>
+        <ol>
+            <li>Assume $y = f(x)$ (that is, $y$ is a differentiable function of $x$).</li>
+            <li><b>Differentiate</b> both sides with respect to $x$. Use the Chain Rule: every time you differentiate a term involving $y$, multiply by $y'$.
+            <li><b>Isolate $y'$</b>: collect all $y'$ terms on one side, GCF factor out $y'$, then divide.</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Implicit Derivatives Are Tangent Slopes</b><br>
+        <p class="block-txt">The derivative $y'$ from implicit differentiation gives the slope of the tangent line at a point $(a, b)$ on the curve. Plug in both $x = a$ and $y = b$ to evaluate the slope.</p>
+    </div>
+
+    <div class="math-method"> <b style="color:var(--factcolor);">Related Rates</b>
+        <p>When two or more quantities change over time and are related by an equation, their rates of change are also related.</p>
+        <ol>
+            <li>Identify all quantities that <b>change over time</b>, and the <b>rate</b> you're trying to solve for.</li>
+            <li>Find an <b>equation</b> relating the quantities in Step 1 (usually given).</li>
+            <li><b>Differentiate</b> both sides with respect to <b>time</b> $t$ (use the Chain Rule).</li>
+            <li>After completing Step 3, <b>plug in</b> all given information. Then <b>solve</b> for the desired rate of change.</li>
+        </ol>
+        <p class="block-txt"><b>Important:</b> Do not plug in numbers before Step 3!</p>
+    </div>
+
     <h2 id="chapter-3">Chapter 3: The Integral</h2><hr>
 
     <h4 id="3.1">3.1: The Definite Integral</h4>
@@ -852,7 +936,7 @@
     <h4 id="3.2">3.2: Fundamental Theorem of Calculus and Indefinite Integrals</h4><hr>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Fundamental Theorem of Calculus, Part 1 (FTC Part 1)</b></br>
-        <p class="block-txt">If $f(t)$ is continuous on $[a, b]$, then the function \[g(x) = \int^x_a f(t) \ dt, \qquad a \leq x \leq b\] is also continuous on $[a, b]$, differentiable on $(a, b), and $g'(x) = f(x)$.</p>
+        <p class="block-txt">If $f(t)$ is continuous on $[a, b]$, then the function \[g(x) = \int^x_a f(t) \ dt, \qquad a \leq x \leq b\] is also continuous on $[a, b]$, differentiable on $(a, b)$, and $g'(x) = f(x)$.</p>
     </div>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Core Insights from FTC Part 1</b></br>
@@ -920,6 +1004,153 @@
             \[\int f'(g(x))\cdot g'(x)\ dx = \int f'(u)\ du\]
         </p>
     </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">$u$-Substitution on Definite Integrals</b><br>
+        <p class="block-txt">When using $u$-substitution on a definite integral, convert the <b>bounds of integration</b> from $x$-values to $u$-values. No back-substitution is needed: \[\int^b_a f'(g(x)) \cdot g'(x) \, dx = \int^{g(b)}_{g(a)} f'(u) \, du\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Advice for Using the Substitution Method</b><br>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">Generally, $u$ is the <b>inside of the composition</b>. If you can identify any composition, try picking $u$ to be the inside function first.</li>
+            <li class="lec-list-space">With a fraction, try the <b>denominator</b> as $u$ and check if $du$ matches the numerator.</li>
+            <li class="lec-list-space"><b>Try multiple $u$'s.</b> You will know you picked the right $u$ when you can replace $x$ and $dx$ entirely with $u$'s.</li>
+        </ol>
+    </div>
+
+    <h4 id="3.5">3.5: Integration By Parts</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Integration By Parts (IBP)</b><br>
+        <p class="block-txt">Given an integrand with two factors, choose $u$ and $dv$. Then: \[\int u \, dv = uv - \int v \, du\]
+        For definite integrals: \[\int^b_a u \, dv = uv \bigg\rvert^b_a - \int^b_a v \, du\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Guidelines for Choosing $u$ and $dv$</b><br>
+        <p class="block-txt">From your choice of $u$, you find $du$ (differentiate). From your choice of $dv$, you find $v$ (integrate).</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>Try to choose $u$ that <b>simplifies when differentiated</b>.</li>
+            <li>Try to choose $dv$ where either:
+                <ul>
+                    <li>$dv$ has a basic integration rule when integrated, or</li>
+                    <li>$dv$ simplifies when integrated.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Table of Integral Formulas</b><br>
+        <ol>
+            <li class="lec-list-space">$\displaystyle\int \dfrac{1}{x^2 - a^2} \, dx = \dfrac{1}{2a} \ln\left\lvert \dfrac{x - a}{x + a} \right\rvert + C$</li>
+            <li class="lec-list-space">$\displaystyle\int \dfrac{1}{\sqrt{x^2 + a^2}} \, dx = \ln\left\lvert x + \sqrt{x^2 + a^2} \right\rvert + C$</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Integration Is Pattern Recognition</b><br>
+        <p class="block-txt">Let $n$ be an integer. Use this table to identify which method is appropriate.</p>
+        <table class="table" style="max-width: 650px; margin: 1em auto; border-collapse: collapse;">
+            <thead>
+            <tr>
+                <th scope="col" style="border-right: 1px solid;">Integral</th>
+                <th scope="col" style="border-right: 1px solid;">Method</th>
+                <th scope="col">Why</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="border-right: 1px solid; border-top: 1px solid;">$\displaystyle\int \ln(nx) \, dx$</td>
+                <td style="border-right: 1px solid; border-top: 1px solid;">$u$-sub</td>
+                <td style="border-top: 1px solid;">Set $u = nx$, isolate $dx$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\displaystyle\int x^n \ln(x) \, dx$</td>
+                <td style="border-right: 1px solid;">IBP</td>
+                <td>$u = \ln(x)$, $dv = x^n \, dx$</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\displaystyle\int \dfrac{\ln(x)}{x} \, dx$</td>
+                <td style="border-right: 1px solid;">$u$-sub</td>
+                <td>Set $u = \ln(x)$, $du = \frac{1}{x}\,dx$ matches</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\displaystyle\int \dfrac{1}{x\ln(x)} \, dx$</td>
+                <td style="border-right: 1px solid;">$u$-sub</td>
+                <td>Set $u = \ln(x)$, $du = \frac{1}{x}\,dx$ matches</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid;">$\displaystyle\int x^n e^x \, dx$</td>
+                <td style="border-right: 1px solid;">IBP</td>
+                <td>$u = x^n$, $dv = e^x \, dx$</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p class="block-txt"><b>General advice:</b></p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If $x^n$ and $\ln(x)$ are present as <b>factors</b>, use IBP with $u = \ln(x)$.</li>
+            <li>If $x^n$ and $e^x$ are present as <b>factors</b>, use IBP with $u = x^n$.</li>
+            <li>If the integrand is a <b>composition</b> (inside/outside structure), try $u$-sub first.</li>
+        </ul>
+    </div>
+
+    <h4 id="3.6">3.6: Area and Average Value</h4><hr>
+
+    <div class="math-def"> area of a region bounded by two graphs
+        <p class="block-txt">If $f$ and $g$ are continuous on $[a, b]$ and $f(x) \geq g(x)$ for all $x$ in $[a, b]$, then the area of the region bounded by $f(x)$, $g(x)$, $x = a$ and $x = b$ is \[A = \int^b_a \left[f(x) - g(x)\right] dx\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Intuition</b><br>
+        <p class="block-txt">Always set up the integral as $\displaystyle\int (\text{top} - \text{bottom}) \, dx$. Look at the graph to determine which function is on top.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">This area is <b>never negative</b>, even if both $f(x)$, $g(x)$ are below the $x$-axis.</li>
+            <li class="lec-list-space">If the curves cross on $[a, b]$, split the integral at the crossing point(s), and set up each piece with the correct top and bottom.</li>
+            <li class="lec-list-space">This computes net <b>geometric area</b> (always $\geq 0$). In contrast, $\int^b_a f(x)\ dx$ computes net <b>signed area</b> between the curve and the $x$-axis.</li>
+        </ul>
+    </div>
+
+    <div class="math-def"> average value of a function
+        <p class="block-txt">If $f(x)$ is continuous on $[a, b]$, then the <b>average value</b> of $f$ on $[a, b]$ is \[\dfrac{1}{b - a}\int^b_a f(x) \, dx\]</p>
+        <p class="block-txt">$\displaystyle\int^b_a f(x) \, dx$ is a sum of infinite rectangular areas (height $\times$ width). Dividing total area by total width $b - a$ gives <b>average height</b>.</p>
+    </div>
+
+    <h4 id="3.7">3.7: Business Applications of the Integral</h4><hr>
+
+    <div class="math-def"> equilibrium point
+        <p class="block-txt">The <b>equilibrium point</b> $(q^*, p^*)$ is where the demand and supply curves intersect. To find it, solve $D(q) = S(q)$.</p>
+        <p class="block-txt">$p^*$ is the <b>equilibrium price</b>: where the plans of consumers and producers agree, meaning the amount of product consumers want to buy equals the amount producers want to sell. $q^*$ is the <b>equilibrium quantity</b>.</p>
+    </div>
+
+    <div class="math-def"> consumer and producer surplus
+        <p class="block-txt">Given a demand function $p = D(q)$, supply function $p = S(q)$, and equilibrium point $(q^*, p^*)$:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space"><b>Consumer surplus</b> measures how much consumers saved by purchasing at the equilibrium price: \[CS = \int^{q^*}_0 \left(D(q) - p^*\right) dq\]
+                <div style="padding-top: 0.75rem;">Consumers to the left of $q^*$ would have been willing to pay a <b>higher</b> price than $p^*$.</div>
+            </li>
+            <li class="lec-list-space"><b>Producer surplus</b> measures how much producers gained by supplying at the equilibrium price: \[PS = \int^{q^*}_0 \left(p^* - S(q)\right) dq\]
+                <div style="padding-top: 0.75rem;">Producers to the left of $q^*$ would have been willing to accept a <b>lower</b> price than $p^*$.</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Intuition of CS and PS</b><br>
+        <p class="block-txt">Consumer surplus measures "how much of a deal you got" at the aggregate level. Both CS and PS are areas between two curves on $[0, q^*]$, computed as $\displaystyle\int (\text{top} - \text{bottom}) \, dq$.</p>
+    </div>
+
+    <div class="math-def"> present value of a continuous income stream
+        <p class="block-txt">If $F(t)$ represents a continuous income function (in dollars per year), and the nominal interest rate is $r$ (in decimal form), then over $T$ years:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space"><b>Total income</b>: $\displaystyle\int^T_0 F(t) \, dt$
+                <div style="padding-top: 0.75rem;">Adds up all income received without accounting for the time value of money.</div>
+            </li>
+            <li class="lec-list-space"><b>Present value</b>: $\displaystyle\int^T_0 F(t) \cdot e^{-rt} \, dt$
+                <div style="padding-top: 0.75rem;">How much the future income stream is worth <b>right now</b> (why it is called <b>present</b> value).</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Time Value of Money</b><br>
+        <p class="block-txt">A dollar today is worth <b>more</b> than a dollar in the future, because today's dollar could be invested and grow.</p>
+        <p class="block-txt">Present value answers: What is the <b>lump sum payment required right now</b> to match the value of the income stream over $T$ years?</p>
+    </div>
+
 
     
 </div>

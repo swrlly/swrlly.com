@@ -86,9 +86,10 @@ html {
 
     /* specific font colors */
     /*--lavender: #b39af0;*/
-    --lavender: #BE90F7;
+    --lavender: #cdb5ff;
     --lavender-t: rgba(190, 144, 247, 0.5);
-    --lightblue: #9cdcfe;/*#A8DADC;*/
+    --lightblue: #acc8ff;/*#A8DADC;*/
+    --lightblue-t: #acc8ff80;
     --darklavender: #9b6dd3;
     --pink: #FFC1CC;
     --yellow: rgb(236, 241, 141);
@@ -97,8 +98,8 @@ html {
     --pink-t: rgba(255, 193, 204, 0.5);
     --examplecolor: var(--pink);
     --exampleboxcolor: rgba(255, 193, 204, 0.7);
-    --factcolor: var(--yellow);
-    --factcolor-t: rgba(236, 241, 141, 0.5);
+    --factcolor: var(--lightblue);
+    --factcolor-t: var(--lightblue-t);/*rgba(236, 241, 141, 0.5);*/
     --methodcolor: #ece78d;
     --bewarecolor: #e74c3c;
     --link-color: #9cdcfe;
