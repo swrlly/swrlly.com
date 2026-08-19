@@ -5,7 +5,7 @@
 {% block discord %}
 <meta property="og:title" content="Math 183"/>
 <meta name="theme-color" content="transparent"/>
-<meta property="og:description" content="multivariable calculus toolkit"/>
+<meta property="og:description" content="multivariable calculus"/>
 <meta property="og:url" content="https://swrlly.com/teaching/math-183/toolkit"/>
 
 {% endblock %}
@@ -19,74 +19,35 @@
 <div class="container fade-in-text text-padding teaching-container">
     <h1>Math 183: Toolkit 🧰</h1>
 
-    <p>This toolkit contains all of the definitions, properties, laws and theorems you need to <b>memorize</b> all on one webpage. These are your tools on quizzes and exams.</p>
+    <p>This toolkit contains all of the definitions, properties, facts and theorems you need to <b>memorize</b> all on one webpage. These are your tools on quizzes and exams.</p>
 
     <p>It also contains the Desmos animations we have seen in class!</p>
 
-    <!--<div id="toc_container">
+    <div id="toc_container">
         <p class="toc_title">Table of Contents</p>
         <ul class="toc_list_no_bullet">
-            <li style="margin-top:0.25rem;" >
+            <!--<li style="margin-top:0.25rem;" >
                 <a href="#desmos-animations">Desmos Animations</a>
                 <ol class="toc_ol">
                     <li><a href="#how-to-interact">How to Interact With Animations</a></li>
-                    <li><a href="#2.0anim">2.0: The Tangent Line</a></li>
-                    <li><a href="#2.2anim">2.2: The Derivative</a></li>
-                    <li><a href="#3.1anim">3.1: The Definite Integral</a></li>
+                    <li><a href="#12.1anim">12.3: The Dot Product</a></li>
+                    <li><a href="#12.4anim">12.4: The Cross Product</a></li>
                 </ol>
-            </li>
+            </li>-->
             <li style="margin-top:0.25rem;" >
-                <a href="#chapter-0">Chapter 0</a>
+                <a href="#chapter-12">Chapter 12</a>
                 <ol class="toc_ol">
-                    <li><a href="#0.1">0.1: Be Aware</a></li>
-                    <li><a href="#0.2">0.2: Be Precise</a></li>
-                    <li><a href="#0.3">0.3: Expanding and Factoring</a></li>
-                </ol>
-            </li>
-            <li style="margin-top:0.25rem;" >
-                <a href="#chapter-1">Chapter 1</a>
-                <ol class="toc_ol">
-                    <li><a href="#1.1">1.1: Functions</a></li>
-                    <li><a href="#1.2">1.2: Operations on Functions</a></li>
-                    <li><a href="#1.3">1.3: Linear Functions and Average Rate of Change</a></li>
-                    <li><a href="#1.4">1.4: Exponents</a></li>
-                    <li><a href="#1.5">1.5-1.6: Polynomials and Rational Functions</a></li>
-                    <li><a href="#1.7">1.7-1.8: Exponential and Logarithmic Functions</a></li>
-                </ol>
-            </li>
-            <li style="margin-top:0.25rem;" >
-                <a href="#chapter-2">Chapter 2</a>
-                <ol class="toc_ol">
-                    <li><a href="#2.0">2.0: The Tangent Line</a></li>
-                    <li><a href="#2.1">2.1: Limits and Continuity</a></li>
-                    <li><a href="#2.2">2.2: The Derivative</a></li>
-                    <li><a href="#2.3">2.3: Sum and Power Rules</a></li>
-                    <li><a href="#2.4">2.4: Product and Quotient Rules</a></li>
-                    <li><a href="#2.45">2.4$\frac{1}{2}$: Business and Economics Applications of the Derivative</a></li>
-                    <li><a href="#2.5">2.5: The Chain Rule</a></li>
-                    <li><a href="#2.55">2.5$\frac{1}{2}$: Higher Order Derivatives</a></li>
-                    <li><a href="#2.6">2.6: Increasing/Decreasing Functions and Concavity</a></li>
-                    <li><a href="#2.7">2.7: Optimization</a></li>
-                    <li><a href="#2.9">2.9: Applied Optimization and Elasticity</a></li>
-                    <li><a href="#2.11">2.11: Implicit Differentiation and Related Rates</a></li>
-                </ol>
-            </li>
-            <li style="margin-top:0.25rem;" >
-                <a href="#chapter-3">Chapter 3</a>
-                <ol class="toc_ol">
-                    <li><a href="#3.1">3.1: The Definite Integral</a></li>
-                    <li><a href="#3.15">3.1$\frac{1}{2}$: Antiderivatives</a></li>
-                    <li><a href="#3.2">3.2: Fundamental Theorem of Calculus and Indefinite Integrals</a></li>
-                    <li><a href="#3.4">3.4: Integration By Substitution</a></li>
-                    <li><a href="#3.5">3.5: Integration By Parts</a></li>
-                    <li><a href="#3.6">3.6: Area and Average Value</a></li>
-                    <li><a href="#3.7">3.7: Business Applications of the Integral</a></li>
+                    <li><a href="#12.1">12.1: Three-Dimensional Coordinate Systems</a></li>
+                    <li><a href="#12.2">12.2: Vectors</a></li>
+                    <li><a href="#12.3">12.3: The Dot Product</a></li>
+                    <!--<li><a href="#12.4">12.4: The Cross Product</a></li>
+                    <li><a href="#12.5">12.5: Equations of Lines and Planes</a></li>-->
                 </ol>
             </li>
         </ul>
     </div>
 
-    <h2 id="desmos-animations">Desmos Animations</h2><hr>
+    <!--<h2 id="desmos-animations">Desmos Animations</h2><hr>
 
     <h4 id="how-to-interact">How to Interact with Animations</h4>
 
@@ -97,7 +58,340 @@
         <li>If you do change a slider/graph, when leaving the webpage, you'll be prompted with "do you want to leave this page?" You can just leave; closing Desmos will ask you this everytime.</li>
     </ul>
 
-    -->
+    <h4 id="12.3anim">12.3: The Dot Product</h4><hr>
+
+
+
+    <p>
+
+    </p>
+    
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk"></iframe></div>
+    
+    <h4 id="12.4anim">12.4: The Cross Product</h4><hr>
+
+    <p>In 12.4: The Cross Product, we saw that $\vec{a}\times\vec{b}$ is orthogonal to both $\vec{a}$ and $\vec{b}$, and that its length is the area of the parallelogram determined by $\vec{a}$ and $\vec{b}$.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/oh4fewemep"></iframe></div>
+
+    <p>When visualizing 3D surfaces on your own, I recommend checking your work with <a href="https://www.desmos.com/3d">https://www.desmos.com/3d</a>.</p>-->
+
+
+    <h2 id="chapter-12">Chapter 12: Vectors and the Geometry of Space</h2><hr>
+
+    <h4 id="12.1">12.1: Three-Dimensional Coordinate Systems</h4>
+
+    <div class="math-def"> set
+        <p class="block-txt">A <b>set</b> is a collection of objects, along with a condition of membership. We write \[A = \{\text{objects} : \text{membership condition}\}\]</p>
+        <p class="block-txt">If $a$ is an element of the set $S$, we write $a \in S$.</p>
+    </div>
+
+    <div class="math-def"> $\mathbb{R}^2$, $\mathbb{R}^3$
+        <p class="block-txt">$\mathbb{R}$ denotes the set of all real numbers. The familiar $xy$-plane is \[\mathbb{R}^2 = \{(x, y) : x, y \in \mathbb{R}\}\]</p>
+        <p class="block-txt">The <b>3D rectangular coordinate system</b> is \[\mathbb{R}^3 = \{(x, y, z) : x, y, z \in \mathbb{R}\}\]</p>
+        <p class="block-txt">Movement in each coordinate $a, b, c$ of the point $(a, b, c)$ is <b>parallel</b> to the $x$-, $y$-, and $z$-axis, respectively.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Right Hand Rule</b><br>
+        <p class="block-txt">There are two directions the positive $z$-axis could point. Mathematicians decided on the <b>right hand rule</b>: flatten your hand and point your four fingers along the $x$-axis. Curl your fingers in the <b>shortest rotation</b> from the $x$-axis to the $y$-axis. Then your <b>thumb</b> points in the direction of the positive $z$-axis.</p>
+    </div>
+
+    <div class="math-def"> Distance Formula in 3D
+        <p class="block-txt">The distance between the points $P_1(x_1, y_1, z_1)$ and $P_2(x_2, y_2, z_2)$, denoted $|P_1P_2|$, is \[|P_1P_2| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}\]</p>
+    </div>
+
+    <div class="math-def"> equation of a sphere
+        <p class="block-txt">A <b>sphere</b> is the set of all points $P(x, y, z)$ at distance $r$ away from the center $C(h, k, \ell)$. Its equation is \[(x - h)^2 + (y - k)^2 + (z - \ell)^2 = r^2\]</p>
+        <p class="block-txt">If the center is $O(0,0,0)$, then the equation is \[x^2 + y^2 + z^2 = r^2\]</p>
+    </div>
+
+    <h4 id="12.2">12.2: Vectors</h4><hr>
+
+    <div class="math-def"> vector
+        <p class="block-txt">A <b>vector</b> is a mathematical quantity with both direction and magnitude. Vectors carry no information about <b>position</b>.</p>
+    </div>
+
+    <div class="math-def"> displacement vector, equivalent vectors, zero vector
+        <p class="block-txt">A <b>displacement vector</b> $\ray{AB}$ is a vector that takes you from a point $A$ to a point $B$.</p>
+        <p class="block-txt">Two vectors are <b>equivalent</b> (we write $\ray{AB} = \ray{CD}$) if they have the same direction and magnitude. Their initial points may be different, yet the vectors are equivalent.</p>
+        <p class="block-txt">The <b>zero vector</b>, denoted $\vec{0}$, is the vector with magnitude $0$. It is the one exception to the definition above: it has no assigned direction.</p>
+    </div>
+
+    <div class="math-def"> geometric addition of vectors
+        <p class="block-txt">Given two vectors $\vec{u}$ and $\vec{v}$, position the tail of $\vec{v}$ on the tip of $\vec{u}$. Then $\vec{u} + \vec{v}$ is the vector from the tail of $\vec{u}$ to the tip of $\vec{v}$.</p>
+    </div>
+
+    <div class="math-def"> scalar multiplication
+        <p class="block-txt">Let $c$ be a scalar and $\vec{v}$ a vector. The <b>scalar multiple</b> $c\vec{v}$ is the vector whose magnitude is $|c|$ times the magnitude of $\vec{v}$ and whose direction is the same as $\vec{v}$ if $c > 0$ and opposite to $\vec{v}$ if $c < 0$.</p>
+        <p class="block-txt">If $c = 0$ or $\vec{v} = \vec{0}$, then $c\vec{v} = \vec{0}$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Scaling and Lines</b><br>
+        <p class="block-txt">Scaling changes magnitude and either preserves or reverses direction. Every scalar multiple of $\vec{v}$ lies along the same <b>line</b>. Collecting all of them at once, the set \[\left\{c\,\vec{v} : c \in \mathbb{R}\right\}\] is a line in the direction of $\vec{v}$.</p>
+    </div>
+
+    <div class="math-def"> subtraction of vectors
+        <p class="block-txt">The difference of two vectors is defined as \[\vec{u} - \vec{v} = \vec{u} + (-\vec{v})\]</p>
+        <p class="block-txt"><b>Think</b> Reverse the direction of $\vec{v}$, then add normally.</p>
+        <p class="block-txt">If the initial points of both vectors are the same, $\vec{u} - \vec{v}$ is simply the vector <b>from</b> the tip of $\vec{v}$ <b>to</b> the tip of $\vec{u}$.</p>
+    </div>
+
+    <div class="math-def"> position vector
+        <p class="block-txt">If we let the initial point of a vector $\vec{a}$ be the <b>origin</b>, then the terminal point has coordinates $(a_1, a_2)$ or $(a_1, a_2, a_3)$, and we write \[\vec{a} = \vc{a_1, a_2} \qquad \text{or} \qquad \vec{a} = \vc{a_1, a_2, a_3}\]</p>
+        <p class="block-txt">Angled brackets distinguish a vector from a coordinate $(a_1, a_2)$. These vectors are called <b>position vectors</b>.</p>
+    </div>
+
+    <div class="math-def"> finding a position vector from two points
+        <p class="block-txt">Given points $A(a_1, a_2, a_3)$ and $B(b_1, b_2, b_3)$, the (position) vector $\vec{v}$ with representation $\ray{AB}$ is \[\vec{v} = \vc{b_1 - a_1,\ b_2 - a_2,\ b_3 - a_3}\]
+            A vector is a <b>difference</b> of points (<b>destination minus start</b>). This is why a vector has no information about <b>position</b>: the difference forgets where the vector started.
+        </p>
+    </div>
+
+    <div class="math-def"> vector algebra and magnitude
+        <p class="block-txt">Let $\vec{a} = \vc{a_1, a_2, a_3}$, $\vec{b} = \vc{b_1, b_2, b_3}$ and $c \in \mathbb{R}$.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">The magnitude (or length) of $\vec{a}$, denoted $|\vec{a}|$, is $|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$</li>
+            <li class="lec-list-space">$\vec{a} + \vec{b} = \vc{a_1, a_2, a_3} + \vc{b_1, b_2, b_3} = \vc{a_1 + b_1,\ a_2 + b_2,\ a_3 + b_3}$</li>
+            <li class="lec-list-space">$\vec{a} - \vec{b} = \vc{a_1, a_2, a_3} - \vc{b_1, b_2, b_3} = \vc{a_1 - b_1,\ a_2 - b_2,\ a_3 - b_3}$</li>
+            <li class="lec-list-space">$c\vc{a_1, a_2, a_3} = \vc{ca_1,\ ca_2,\ ca_3}$
+                <div style="padding-top: 0.75rem;"><b>English</b> To add/subtract vectors, add/subtract their corresponding components. To multiply a vector by a scalar, multiply each component by that scalar.</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-def"> $V_n$, vector space
+        <p class="block-txt">The set of all $n$-dimensional vectors is \[V_n = \left\{\vc{a_1, a_2, \dots, a_n} : a_i \in \mathbb{R}\right\}\]</p>
+        <p class="block-txt">$V_n$ is called a <b>vector space</b>: a set of vectors, together with addition and scalar multiplication, <b>required</b> to satisfy the 8 properties below (the vector space axioms, for those in Calculus IV).</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Properties of Vectors</b><br>
+        <p class="block-txt">Let $\vec{a}, \vec{b}, \vec{c} \in V_n$ and $c, d \in \mathbb{R}$.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">$\vec{a} + \vec{b} = \vec{b} + \vec{a}$</li>
+            <li class="lec-list-space">$\vec{a} + \vec{0} = \vec{a}$</li>
+            <li class="lec-list-space">$c(\vec{a} + \vec{b}) = c\vec{a} + c\vec{b}$</li>
+            <li class="lec-list-space">$(cd)\vec{a} = c(d\vec{a})$</li>
+            <li class="lec-list-space">$\vec{a} + (\vec{b} + \vec{c}) = (\vec{a} + \vec{b}) + \vec{c}$</li>
+            <li class="lec-list-space">$\vec{a} + (-\vec{a}) = \vec{0}$</li>
+            <li class="lec-list-space">$(c + d)\vec{a} = c\vec{a} + d\vec{a}$</li>
+            <li class="lec-list-space">$1\vec{a} = \vec{a}$</li>
+        </ol>
+    </div>
+
+    <div class="math-def"> unit vector
+        <p class="block-txt">A <b>unit vector</b> is a vector with magnitude 1. Given $\vec{a} \neq \vec{0}$, the corresponding unit vector is \[\vec{u} = \dfrac{\vec{a}}{|\vec{a}|}\]</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)"></b><br>
+        <p class="block-txt">Any vector $\vec{a} \neq \vec{0}$ can be decomposed into a product of its length and its unit direction: \[\vec{a} = \underbrace{\abs{\vec{a}}}_{\text{length}} \cdot \underbrace{\dfrac{\vec{a}}{|\vec{a}|}}_{\text{unit direction}}\]</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)"></b><br>
+        <p class="block-txt">An arbitrary vector $\vec{a} = \vc{a_1, a_2, a_3}$ can be broken up into vectors in each dimension:
+        \begin{align} \vec{a} &= \vc{a_1, a_2, a_3} \\ &= \vc{a_1, 0, 0} + \vc{0, a_2, 0} + \vc{0, 0, a_3} \\ &= a_1\vc{1,0,0} + a_2\vc{0,1,0} + a_3\vc{0,0,1} \\ &= a_1\iv + a_2\jv + a_3\kv \end{align}
+        where $\iv = \vc{1,0,0}$, $\jv = \vc{0,1,0}$, $\kv = \vc{0,0,1}$ are the <b>standard basis vectors</b>.</p>
+    </div>
+
+
+
+    <h4 id="12.3">12.3: The Dot Product</h4><hr>
+
+    <p>In $\mathbb{R}^3$, two nonzero vectors $\vec{a}$ and $\vec{b}$ span a plane. The angle $\theta$ between $\vec{a}$ and $\vec{b}$ means the same thing in $\mathbb{R}^2$ as it does in $\mathbb{R}^3$: place them tail to tail and measure the angle inside the plane, taking $0 \leq \theta \leq \pi$.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw"></iframe></div>
+
+    <!--<p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk"></iframe></div>-->
+
+    <!--<div class="math-fact-notxt"> <b style="color:var(--factcolor)">Big Question</b><br>
+        <p class="block-txt"><b>Q</b> Can we multiply two vectors and have a meaningful result?</p>
+        <p class="block-txt"><b>A</b> Yes. The dot product is one way, which does this: <b>it takes in two vectors and returns a scalar</b>.</p>
+    </div>
+
+    <div class="math-def"> dot product
+        <p class="block-txt">Given two vectors $\vec{a} = \vc{a_1, a_2, a_3}$ and $\vec{b} = \vc{b_1, b_2, b_3}$, the dot product $\vec{a}\cdot\vec{b}$ is defined \[\vec{a}\cdot\vec{b} = a_1b_1 + a_2b_2 + a_3b_3\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Dot Product Properties</b><br>
+        <p class="block-txt">Let $\vec{a}, \vec{b}, \vec{c} \in V_3$ and $c \in \mathbb{R}$. Then</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">$\vec{a} \cdot \vec{a} = |\vec{a}|^2$
+                <div style="padding-top: 0.75rem;"><b>English</b> Equivalently $|\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}}$: the dot product extracts the length of $\vec{a}$.</div>
+            </li>
+            <li class="lec-list-space">$\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}$</li>
+            <li class="lec-list-space">$\vec{a} \cdot \left(\vec{b} + \vec{c}\right) = \vec{a}\cdot \vec{b} + \vec{a} \cdot \vec{c}$</li>
+            <li class="lec-list-space">$\left(c\vec{a}\right) \cdot \vec{b} = c\left(\vec{a}\cdot \vec{b}\right) = \vec{a} \cdot \left(c\vec{b}\right)$</li>
+            <li class="lec-list-space">$\vec{0} \cdot \vec{a} = 0$</li>
+            <li class="lec-list-space">If $\vec{a} \cdot \vec{a} = 0$, then $\vec{a} = \vec{0}$.
+                <div style="padding-top: 0.75rem;">The sum $a_1^2 + a_2^2 + \cdots + a_n^2$ is zero precisely when <b>every</b> $a_i = 0$.</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Geometric Meaning of the Dot Product)</b><br>
+        <p class="block-txt">If $\theta$ is the angle between $\vec{a}$ and $\vec{b}$, then \[\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta\]</p>
+        <p class="block-txt"><b>Key Idea</b> $\vec{a}\cdot\vec{b}$ is the Pythagorean defect: how far off $\vec{a}$ and $\vec{b}$ are from forming a <b>right angle</b>.</p>
+    </div>
+
+
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Corollary (Angle Between Two Vectors)</b><br>
+        <p class="block-txt">If $\vec{a}, \vec{b} \neq \vec{0}$, then the angle $\theta$ between $\vec{a}$ and $\vec{b}$ satisfies \[\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}\]</p>
+    </div>
+
+    <div class="math-def"> orthogonal
+        <p class="block-txt">Two vectors are <b>orthogonal</b> (perpendicular) precisely when the angle between them is $\theta = 90^\circ$.</p>
+        <p class="block-txt"><b>Fact</b> $\vec{a}$ and $\vec{b}$ are orthogonal if and only if \[\vec{a}\cdot\vec{b} = 0\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Orientation from the Dot Product</b><br>
+        <p class="block-txt">The angle $\theta$, and in turn the dot product, tells us how two nonzero vectors are oriented:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">$\vec{a}\cdot\vec{b} > 0$ means $\theta$ is acute (the vectors point "the same way").</li>
+            <li class="lec-list-space">$\vec{a}\cdot\vec{b} = 0$ means $\theta = 90^\circ$ (orthogonal).</li>
+            <li class="lec-list-space">$\vec{a}\cdot\vec{b} < 0$ means $\theta$ is obtuse (the vectors point "opposite ways").</li>
+        </ul>
+        <p class="block-txt">Vectors are <b>parallel</b> when $\theta = 0^\circ$ or $180^\circ$, or equivalently when $\vec{b} = c\vec{a}$ for some scalar $c$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Projections)</b><br>
+        <p class="block-txt">$\vec{a}\cdot\vec{b}$ really measures "how much" $\vec{b}$ is pointing in $\vec{a}$'s direction, relative to $|\vec{a}|$.</p>
+        <p class="block-txt">When $|\vec{a}| = 1$, $\vec{a}\cdot\vec{b}$ answers the question "How much of $\vec{b}$ points along $\vec{a}$, measured in $\vec{a}$-lengths?" In general $\vec{a}$ is not a unit vector, but \[\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta \qquad \text{implies} \qquad |\vec{b}|\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|} = \dfr ac{\vec{a}}{|\vec{a}|}\cdot \vec{b}\] which is exactly the dot product of $\vec{b}$ with the <b>unit vector</b> in the direction of $\vec{a}$.</p>
+    </div>
+
+    <div class="math-def"> scalar projection, vector projection
+        <p class="block-txt">The <b>scalar projection</b> of $\vec{b}$ onto $\vec{a}$ (also called the component of $\vec{b}$ along $\vec{a}$) is the signed length of the shadow of $\vec{b}$ in the direction of $\vec{a}$: \[\text{comp}_{\vec{a}}\vec{b} = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|}\]</p>
+        <p class="block-txt">The <b>vector projection</b> of $\vec{b}$ onto $\vec{a}$ is that shadow as a vector (scalar projection times the unit vector in the direction of $\vec{a}$): \[\text{proj}_{\vec{a}}\vec{b} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|}\right)\dfrac{\vec{a}}{|\vec{a}|} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|^2}\right)\vec{a}\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Thales's Theorem</b><br>
+        <p class="block-txt">If $A, B, C$ are distinct points on circle $O$ where $\overline{AB}$ is a diameter, then $\angle ACB$ is a <b>right angle</b>.</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Alternate Equation of a Circle</b><br>
+        <p class="block-txt">If $A(x_1, y_1)$ and $B(x_2, y_2)$ are the endpoints of a diameter, then the circle is the set of points $C(x, y)$ with $\ray{CA}\cdot\ray{CB} = 0$, giving \[(x - x_1)(x - x_2) + (y - y_1)(y - y_2) = 0\]</p>
+    </div>-->
+
+    <!--<h4 id="12.4">12.4: The Cross Product</h4><hr>
+
+    <div class="math-def"> determinant of order 2
+        <p class="block-txt">A <b>determinant of order 2</b> is defined by \[\begin{vmatrix} a & b \\ c & d\end{vmatrix} = ad - bc\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Determinants and Signed Area</b><br>
+        <p class="block-txt">Insert the coordinates of $\vec{a}$ and $\vec{b}$ into the determinant column-wise, $\vec{a}$ first. The result is the <b>signed area</b> of the parallelogram determined by $\vec{a}$ and $\vec{b}$.</p>
+        <p class="block-txt">The sign comes from the <b>right hand rule</b>, with the left column vector rotated onto the right column vector:</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">If your thumb points into the page (away from you), the area is <b>negative</b>.</li>
+            <li class="lec-list-space">If your thumb points out of the page (towards you), the area is <b>positive</b>.</li>
+        </ul>
+        <p class="block-txt">Swapping the order of the columns (rotating $\vec{b}$ onto $\vec{a}$ instead) flips the sign.</p>
+    </div>
+
+    <div class="math-def"> cross product
+        <p class="block-txt">Let $\vec{a} = \vc{a_1, a_2, a_3}$ and $\vec{b} = \vc{b_1, b_2, b_3}$. The <b>cross product</b> of $\vec{a}$ and $\vec{b}$ is the vector \[\vec{a}\times\vec{b} = \vc{a_2b_3 - a_3b_2,\ a_3b_1 - a_1b_3,\ a_1b_2 - a_2b_1}\]</p>
+    </div>
+
+    <div class="math-def"> determinant of order 3
+        <p class="block-txt">A <b>determinant of order 3</b> is defined by expansion along the first row: \[\begin{vmatrix} a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3\end{vmatrix} = a_1\begin{vmatrix} b_2 & b_3 \\ c_2 & c_3\end{vmatrix} - a_2\begin{vmatrix} b_1 & b_3 \\ c_1 & c_3\end{vmatrix} + a_3\begin{vmatrix} b_1 & b_2 \\ c_1 & c_2\end{vmatrix}\]</p>
+        <p class="block-txt"><b>Careful</b> Note the alternating signs $+, -, +$.</p>
+    </div>
+
+    <div class="math-def"> cross product (determinant form)
+        <p class="block-txt">Let $\vec{a} = \vc{a_1, a_2, a_3}$ and $\vec{b} = \vc{b_1, b_2, b_3}$. The cross product $\vec{a}\times\vec{b}$ is \[\vec{a}\times\vec{b} = \begin{vmatrix} \iv & \jv & \kv \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3\end{vmatrix} = \begin{vmatrix} a_2 & a_3 \\ b_2 & b_3\end{vmatrix}\iv - \begin{vmatrix} a_1 & a_3 \\ b_1 & b_3\end{vmatrix}\jv + \begin{vmatrix} a_1 & a_2 \\ b_1 & b_2\end{vmatrix}\kv\]</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Direction of the Cross Product)</b><br>
+        <p class="block-txt">The vector $\vec{a}\times\vec{b}$ is <b>orthogonal</b> to both $\vec{a}$ and $\vec{b}$; that is, \[(\vec{a}\times\vec{b})\cdot\vec{a} = 0 \qquad \text{and} \qquad (\vec{a}\times\vec{b})\cdot\vec{b} = 0\]</p>
+        <p class="block-txt">Among the two directions orthogonal to both, the direction of $\vec{a}\times\vec{b}$ is given by the <b>right hand rule</b>.</p>
+        <p class="block-txt"><b>Careful</b> Always curl your fingers from the vector left of $\times$ towards the vector on the right.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Length of the Cross Product)</b><br>
+        <p class="block-txt">If $\theta$ is the angle between $\vec{a}$ and $\vec{b}$ with $\theta \in [0, \pi]$, then \[|\vec{a}\times\vec{b}| = |\vec{a}||\vec{b}|\sin\theta\]</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Fact (Cross Product as Area)</b><br>
+        <p class="block-txt">The length of the cross product $\vec{a}\times\vec{b}$ is equal to the area of the <b>parallelogram</b> determined by $\vec{a}$ and $\vec{b}$.</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Fact (Components are Shadow Areas)</b><br>
+        <p class="block-txt">Let $\vec{a}, \vec{b} \in V_3$ be nonzero. Then \[\vec{a}\times\vec{b} = \vc{A_{yz},\ A_{zx},\ A_{xy}}\] where $A_{yz}$ is the signed area of the parallelogram determined by $\vec{a}, \vec{b}$ after projecting onto the $yz$-plane, and likewise for $A_{zx}$ and $A_{xy}$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Ideas (Signed Shadow Areas)</b><br>
+        <p class="block-txt">Given $\vec{a}\times\vec{b}$, after you apply the right hand rule, look down the positive axis normal to that plane (toward the origin).</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">If rotating $\vec{a}\to\vec{b}$ is counterclockwise, the area is <b>positive</b>.</li>
+            <li class="lec-list-space">If rotating $\vec{a}\to\vec{b}$ is clockwise, the area is <b>negative</b>.</li>
+        </ul>
+        <p class="block-txt">Projecting a surface onto a coordinate plane: set the coordinate along the plane's <b>normal</b> to 0.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">Example: the $+x$-axis is normal to the $yz$-plane; projecting onto $yz$ sends $(x, y, z) \mapsto (0, y, z)$.</li>
+        </ul>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Cross Product Properties</b><br>
+        <p class="block-txt">Let $\vec{a}, \vec{b}, \vec{c} \in V_3$ and $c \in \mathbb{R}$. Then</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">$\vec{a}\times\vec{b} = -\left(\vec{b}\times\vec{a}\right)$
+                <div style="padding-top: 0.75rem;"><b>English</b> The cross product is <b>anticommutative</b>: swapping the order reverses the direction.</div>
+            </li>
+            <li class="lec-list-space">$(c\vec{a})\times\vec{b} = c\left(\vec{a}\times\vec{b}\right) = \vec{a}\times(c\vec{b})$</li>
+            <li class="lec-list-space">$\vec{a}\times(\vec{b} + \vec{c}) = \vec{a}\times\vec{b} + \vec{a}\times\vec{c}$</li>
+            <li class="lec-list-space">$(\vec{a} + \vec{b})\times\vec{c} = \vec{a}\times\vec{c} + \vec{b}\times\vec{c}$</li>
+            <li class="lec-list-space">$\vec{a}\cdot(\vec{b}\times\vec{c}) = (\vec{a}\times\vec{b})\cdot\vec{c}$</li>
+            <li class="lec-list-space">$\vec{a}\times(\vec{b}\times\vec{c}) = (\vec{a}\cdot\vec{c})\vec{b} - (\vec{a}\cdot\vec{b})\vec{c}$</li>
+        </ol>
+        <p class="block-txt">In particular, $\vec{a}\times\vec{a} = \vec{0}$ for every $\vec{a} \in V_3$.</p>
+    </div>
+
+    <div class="math-def"> scalar triple product
+        <p class="block-txt">The product $\vec{a}\cdot(\vec{b}\times\vec{c})$ is called the <b>scalar triple product</b>. Writing it out, \[\vec{a}\cdot(\vec{b}\times\vec{c}) = \begin{vmatrix} a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3\end{vmatrix}\]</p>
+    </div>
+
+    <div class="math-fact"> <b style="color:var(--factcolor)">Fact (Volume of a Parallelepiped)</b><br>
+        <p class="block-txt">The volume of the parallelepiped determined by the vectors $\vec{a}, \vec{b}$ and $\vec{c}$ is the absolute value of their scalar triple product: \[V = \left|\vec{a}\cdot(\vec{b}\times\vec{c})\right|\]</p>
+        <p class="block-txt">In particular, $\vec{a}, \vec{b}, \vec{c}$ lie in the same plane (are <b>coplanar</b>) if and only if $\vec{a}\cdot(\vec{b}\times\vec{c}) = 0$.</p>
+    </div>
+
+    <h4 id="12.5">12.5: Equations of Lines and Planes</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">What Determines a Line</b><br>
+        <p class="block-txt">A line $L$ in $\mathbb{R}^3$ is completely determined if we know two things: a <b>point</b> on the line and a <b>direction vector</b> for $L$, which is a vector $\vec{v}$ <b>parallel</b> to the line.</p>
+    </div>
+
+    <div class="math-def"> vector equation of a line
+        <p class="block-txt">The vector equation of a line through a point $P_0(x_0, y_0, z_0)$ with position vector $\vec{r}_0$ and parallel to the vector $\vec{v}$ is \[\vec{r} = \vec{r}_0 + t\vec{v}, \qquad t \in \mathbb{R}\]</p>
+        <p class="block-txt">Letting $\vec{v} = \vc{a, b, c}$, $\vec{r} = \vc{x, y, z}$ and $\vec{r}_0 = \vc{x_0, y_0, z_0}$, this becomes \[\vc{x, y, z} = \vc{x_0 + ta,\ y_0 + tb,\ z_0 + tc}\]</p>
+    </div>
+
+    <div class="math-def"> parametric equations of a line
+        <p class="block-txt">Parametric equations for a line through the point $(x_0, y_0, z_0)$ and parallel to the vector $\vec{v} = \vc{a, b, c}$ are \[x = x_0 + at, \qquad y = y_0 + bt, \qquad z = z_0 + ct\]</p>
+    </div>
+
+    <div class="math-def"> linear interpolation
+        <p class="block-txt">The line segment from $\vec{r}_0$ to $\vec{r}_1$ is given by the vector equation \[\vec{r}(t) = (1 - t)\vec{r}_0 + t\vec{r}_1, \qquad 0 \leq t \leq 1\]</p>
+        <p class="block-txt">At $t = 0$ you are at $\vec{r}_0$, at $t = 1$ you are at $\vec{r}_1$, and the weights always sum to 1.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">What Determines a Plane</b><br>
+        <p class="block-txt">A plane in $\mathbb{R}^3$ is completely determined if we know two things:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">A <b>point</b> on the plane, and</li>
+            <li class="lec-list-space">a <b>normal vector</b> to the plane.</li>
+        </ol>
+    </div>
+
+    <div class="math-def"> vector equation of a plane
+        <p class="block-txt">The vector equation of a plane through a point $P_0(x_0, y_0, z_0)$ with position vector $\vec{r}_0$, normal vector $\vec{n}$, and arbitrary point $P(x, y, z)$ with position vector $\vec{r}$ is \[\vec{n}\cdot\left(\vec{r} - \vec{r}_0\right) = 0 \qquad \text{or} \qquad \vec{n}\cdot\vec{r} = \vec{n}\cdot\vec{r}_0\]</p>
+    </div>
+
+    <div class="math-def"> scalar equation of a plane
+        <p class="block-txt">A scalar equation of the plane through the point $P_0(x_0, y_0, z_0)$ with normal vector $\vec{n} = \vc{a, b, c}$ is \[a(x - x_0) + b(y - y_0) + c(z - z_0) = 0\]</p>
+        <p class="block-txt">Expanding gives the <b>linear equation</b> $ax + by + cz = d$, where $d = ax_0 + by_0 + cz_0$.</p>
+    </div>-->
 
 
     

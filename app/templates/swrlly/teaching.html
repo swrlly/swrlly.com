@@ -17,17 +17,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <script src="/static/swrlly/js/starfield.js"></script>
         <link rel="stylesheet" href="/static/swrlly/css/style.css?v={{cssVersion}}">
+        {% raw %}
         <script>
             MathJax = {
                 tex: {
-                  inlineMath: [['$', '$'], ['\\(', '\\)']]
+                  inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    macros: {
+                        iv: "{\\hat{\\imath}}",
+                        jv: "{\\hat{\\jmath}}",
+                        kv: "{\\hat{k}}",
+                        vc:  ["{\\left\\langle #1 \\right\\rangle}", 1],
+                        ray: ["{\\overrightarrow{#1}}", 1],
+                        abs: ["{\\left| #1 \\right|}", 1]
+                    }
                 },
                 svg: {
                   fontCache: 'global'
                 }
               };
-
         </script>
+        {% endraw %}
         <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
         {% block mathimports %}
         <script rel="preload" src="/static/swrlly/js/teaching.js" async></script>
