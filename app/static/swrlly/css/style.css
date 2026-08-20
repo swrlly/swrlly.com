@@ -68,7 +68,7 @@ p {
 }
 
 html {
-    font-size: 0.9em;
+    font-size: 0.75em; /*0.9em*/
 
     /* basic font colors */
     --text-color: #c9c9c9;

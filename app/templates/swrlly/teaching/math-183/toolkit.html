@@ -92,6 +92,10 @@
         <p class="block-txt">Movement in each coordinate $a, b, c$ of the point $(a, b, c)$ is <b>parallel</b> to the $x$-, $y$-, and $z$-axis, respectively.</p>
     </div>
 
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/5ewkbyfzhg?invertedColors&translucentSurfaces"></iframe></div>
+
+    
+
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Right Hand Rule</b><br>
         <p class="block-txt">There are two directions the positive $z$-axis could point. Mathematicians decided on the <b>right hand rule</b>: flatten your hand and point your four fingers along the $x$-axis. Curl your fingers in the <b>shortest rotation</b> from the $x$-axis to the $y$-axis. Then your <b>thumb</b> points in the direction of the positive $z$-axis.</p>
     </div>
@@ -196,19 +200,6 @@
 
     <h4 id="12.3">12.3: The Dot Product</h4><hr>
 
-    <p>In $\mathbb{R}^3$, two nonzero vectors $\vec{a}$ and $\vec{b}$ span a plane. The angle $\theta$ between $\vec{a}$ and $\vec{b}$ means the same thing in $\mathbb{R}^2$ as it does in $\mathbb{R}^3$: place them tail to tail and measure the angle inside the plane, taking $0 \leq \theta \leq \pi$.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw"></iframe></div>
-
-    <!--<p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk"></iframe></div>-->
-
-    <!--<div class="math-fact-notxt"> <b style="color:var(--factcolor)">Big Question</b><br>
-        <p class="block-txt"><b>Q</b> Can we multiply two vectors and have a meaningful result?</p>
-        <p class="block-txt"><b>A</b> Yes. The dot product is one way, which does this: <b>it takes in two vectors and returns a scalar</b>.</p>
-    </div>
-
     <div class="math-def"> dot product
         <p class="block-txt">Given two vectors $\vec{a} = \vc{a_1, a_2, a_3}$ and $\vec{b} = \vc{b_1, b_2, b_3}$, the dot product $\vec{a}\cdot\vec{b}$ is defined \[\vec{a}\cdot\vec{b} = a_1b_1 + a_2b_2 + a_3b_3\]</p>
     </div>
@@ -224,7 +215,6 @@
             <li class="lec-list-space">$\left(c\vec{a}\right) \cdot \vec{b} = c\left(\vec{a}\cdot \vec{b}\right) = \vec{a} \cdot \left(c\vec{b}\right)$</li>
             <li class="lec-list-space">$\vec{0} \cdot \vec{a} = 0$</li>
             <li class="lec-list-space">If $\vec{a} \cdot \vec{a} = 0$, then $\vec{a} = \vec{0}$.
-                <div style="padding-top: 0.75rem;">The sum $a_1^2 + a_2^2 + \cdots + a_n^2$ is zero precisely when <b>every</b> $a_i = 0$.</div>
             </li>
         </ol>
     </div>
@@ -234,11 +224,13 @@
         <p class="block-txt"><b>Key Idea</b> $\vec{a}\cdot\vec{b}$ is the Pythagorean defect: how far off $\vec{a}$ and $\vec{b}$ are from forming a <b>right angle</b>.</p>
     </div>
 
-
-
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Corollary (Angle Between Two Vectors)</b><br>
         <p class="block-txt">If $\vec{a}, \vec{b} \neq \vec{0}$, then the angle $\theta$ between $\vec{a}$ and $\vec{b}$ satisfies \[\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}\]</p>
     </div>
+
+    <p>In $\mathbb{R}^3$, two nonzero vectors $\vec{a}$ and $\vec{b}$ span a plane. The angle $\theta$ between $\vec{a}$ and $\vec{b}$ means the same thing in $\mathbb{R}^2$ as it does in $\mathbb{R}^3$: place them tail to tail and measure the angle inside the plane, taking $0 \leq \theta \leq \pi$.</p>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw?invertedColors&translucentSurfaces"></iframe></div>
 
     <div class="math-def"> orthogonal
         <p class="block-txt">Two vectors are <b>orthogonal</b> (perpendicular) precisely when the angle between them is $\theta = 90^\circ$.</p>
@@ -257,7 +249,7 @@
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Projections)</b><br>
         <p class="block-txt">$\vec{a}\cdot\vec{b}$ really measures "how much" $\vec{b}$ is pointing in $\vec{a}$'s direction, relative to $|\vec{a}|$.</p>
-        <p class="block-txt">When $|\vec{a}| = 1$, $\vec{a}\cdot\vec{b}$ answers the question "How much of $\vec{b}$ points along $\vec{a}$, measured in $\vec{a}$-lengths?" In general $\vec{a}$ is not a unit vector, but \[\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta \qquad \text{implies} \qquad |\vec{b}|\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|} = \dfr ac{\vec{a}}{|\vec{a}|}\cdot \vec{b}\] which is exactly the dot product of $\vec{b}$ with the <b>unit vector</b> in the direction of $\vec{a}$.</p>
+        <p class="block-txt">When $|\vec{a}| = 1$, $\vec{a}\cdot\vec{b}$ answers the question "How much of $\vec{b}$ points along $\vec{a}$, measured in $\vec{a}$-lengths?" In general $\vec{a}$ is not a unit vector, but \[\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta \qquad \text{implies} \qquad |\vec{b}|\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|} = \dfrac{\vec{a}}{|\vec{a}|}\cdot \vec{b}\] which is exactly the dot product of $\vec{b}$ with the <b>unit vector</b> in the direction of $\vec{a}$.</p>
     </div>
 
     <div class="math-def"> scalar projection, vector projection
@@ -265,13 +257,22 @@
         <p class="block-txt">The <b>vector projection</b> of $\vec{b}$ onto $\vec{a}$ is that shadow as a vector (scalar projection times the unit vector in the direction of $\vec{a}$): \[\text{proj}_{\vec{a}}\vec{b} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|}\right)\dfrac{\vec{a}}{|\vec{a}|} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|^2}\right)\vec{a}\]</p>
     </div>
 
+
+    <p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector. The scalar projection is the length of the dark purple vector.
+    </p>
+    <!---->
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk?invertedColors&translucentSurfaces"></iframe></div>
+
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Thales's Theorem</b><br>
         <p class="block-txt">If $A, B, C$ are distinct points on circle $O$ where $\overline{AB}$ is a diameter, then $\angle ACB$ is a <b>right angle</b>.</p>
     </div>
 
-    <div class="math-fact"> <b style="color:var(--factcolor)">Alternate Equation of a Circle</b><br>
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/2qcrc9xax7?invertedColors"></iframe></div>
+
+    
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Alternate Equation of a Circle</b><br>
         <p class="block-txt">If $A(x_1, y_1)$ and $B(x_2, y_2)$ are the endpoints of a diameter, then the circle is the set of points $C(x, y)$ with $\ray{CA}\cdot\ray{CB} = 0$, giving \[(x - x_1)(x - x_2) + (y - y_1)(y - y_2) = 0\]</p>
-    </div>-->
+    </div>
 
     <!--<h4 id="12.4">12.4: The Cross Product</h4><hr>
 
