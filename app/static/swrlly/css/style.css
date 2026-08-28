@@ -1228,7 +1228,36 @@ put delay first, then use delay anim to put blue border at bottom right corner
     margin-bottom: 2em;
 }
 
-
+.conic-table {
+    width: auto;                /* shrink to content, not full width */
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1em;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+.conic-table th,
+.conic-table td {
+    border: 1px solid #c8ccd2;
+    padding: 0.6rem 1.1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.conic-table thead th {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.conic-table tbody th {
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+.conic-table .domain {
+    display: inline-block;
+    margin-left: 0.6em;
+}
+/* horizontal scroll instead of overflow on narrow screens */
+.conic-table-wrap { overflow-x: auto; }
 
 
 

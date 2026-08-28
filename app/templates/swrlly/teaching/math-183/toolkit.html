@@ -368,12 +368,12 @@
 
     <div class="math-fact"> <b style="color:var(--factcolor)">Volume of a Parallelepiped</b><br>
         <p class="block-txt">The volume of the parallelepiped determined by the vectors $\vec{a}, \vec{b}$ and $\vec{c}$ is the absolute value of their scalar triple product: \[V = \left|\vec{a}\cdot(\vec{b}\times\vec{c})\right|\]</p>
-        <!--<p class="block-txt">In particular, $\vec{a}, \vec{b}, \vec{c}$ lie in the same plane (are <b>coplanar</b>) if and only if $\vec{a}\cdot(\vec{b}\times\vec{c}) = 0$.</p>-->
+        <p class="block-txt">In particular, $\vec{a}, \vec{b}, \vec{c}$ lie in the same plane (are <b>coplanar</b>) if and only if $\vec{a}\cdot(\vec{b}\times\vec{c}) = 0$.</p>
     </div>
 
     <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/diqous70ej?translucentSurfaces&invertedColors"></iframe></div>
 
-    <!--<h4 id="12.5">12.5: Equations of Lines and Planes</h4><hr>
+    <h4 id="12.5">12.5: Equations of Lines and Planes</h4><hr>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">What Determines a Line</b><br>
         <p class="block-txt">A line $L$ in $\mathbb{R}^3$ is completely determined if we know two things: a <b>point</b> on the line and a <b>direction vector</b> for $L$, which is a vector $\vec{v}$ <b>parallel</b> to the line.</p>
@@ -384,33 +384,107 @@
         <p class="block-txt">Letting $\vec{v} = \vc{a, b, c}$, $\vec{r} = \vc{x, y, z}$ and $\vec{r}_0 = \vc{x_0, y_0, z_0}$, this becomes \[\vc{x, y, z} = \vc{x_0 + ta,\ y_0 + tb,\ z_0 + tc}\]</p>
     </div>
 
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/kvcb0yepka?translucentSurfaces&invertedColors"></iframe></div>
+
     <div class="math-def"> parametric equations of a line
         <p class="block-txt">Parametric equations for a line through the point $(x_0, y_0, z_0)$ and parallel to the vector $\vec{v} = \vc{a, b, c}$ are \[x = x_0 + at, \qquad y = y_0 + bt, \qquad z = z_0 + ct\]</p>
     </div>
 
     <div class="math-def"> linear interpolation
         <p class="block-txt">The line segment from $\vec{r}_0$ to $\vec{r}_1$ is given by the vector equation \[\vec{r}(t) = (1 - t)\vec{r}_0 + t\vec{r}_1, \qquad 0 \leq t \leq 1\]</p>
-        <p class="block-txt">At $t = 0$ you are at $\vec{r}_0$, at $t = 1$ you are at $\vec{r}_1$, and the weights always sum to 1.</p>
     </div>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">What Determines a Plane</b><br>
         <p class="block-txt">A plane in $\mathbb{R}^3$ is completely determined if we know two things:</p>
         <ol style="margin-bottom: 0.5rem">
-            <li class="lec-list-space">A <b>point</b> on the plane, and</li>
-            <li class="lec-list-space">a <b>normal vector</b> to the plane.</li>
+            <li>A <b>point</b> on the plane, and</li>
+            <li>a <b>normal vector</b> to the plane.</li>
         </ol>
     </div>
 
     <div class="math-def"> vector equation of a plane
-        <p class="block-txt">The vector equation of a plane through a point $P_0(x_0, y_0, z_0)$ with position vector $\vec{r}_0$, normal vector $\vec{n}$, and arbitrary point $P(x, y, z)$ with position vector $\vec{r}$ is \[\vec{n}\cdot\left(\vec{r} - \vec{r}_0\right) = 0 \qquad \text{or} \qquad \vec{n}\cdot\vec{r} = \vec{n}\cdot\vec{r}_0\]</p>
+        <p class="block-txt">The vector equation of a plane through a point $P_0(x_0, y_0, z_0)$ with position vector $\vec{r}_0$, normal vector $\vec{n}$, and arbitrary point $P(x, y, z)$ with position vector $\vec{r}$ is \[\vec{n}\cdot\left(\vec{r} - \vec{r}_0\right) = 0\]
+
+        $\vec{r} - \vec{r}_0$ sweeps out every point in the plane.
+        </p>
     </div>
 
     <div class="math-def"> scalar equation of a plane
         <p class="block-txt">A scalar equation of the plane through the point $P_0(x_0, y_0, z_0)$ with normal vector $\vec{n} = \vc{a, b, c}$ is \[a(x - x_0) + b(y - y_0) + c(z - z_0) = 0\]</p>
-        <p class="block-txt">Expanding gives the <b>linear equation</b> $ax + by + cz = d$, where $d = ax_0 + by_0 + cz_0$.</p>
-    </div>-->
+    </div>
 
+    <h2 id="chapter-13">Chapter 13: Vector Functions</h2><hr>
 
+    <h4 id="13.0">13.0: Preliminaries</h4><hr>
+
+    <div class="math-fact-notxt">
+        <b style="color:var(--factcolor)">Main Idea Behind Parametrics</b><br>
+        <p class="block-txt">Think of parameter $t$ as time, and $(x(t), y(t))$ as the location of a moving point. This allows us to trace curves which do not pass the vertical line test.</p>
+        <p class="block-txt">Vector $\vc{x(t), y(t)}$ is a position vector with tip tracing out the curve.</p>
+    </div>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/fbkvvqarfz?translucentSurfaces&invertedColors"></iframe></div>
+
+    <div class="math-def"> conic section
+        <p class="block-txt">A conic section is an intersection of a double cone and a plane in $\mathbb{R}^3$.</p>
+    </div>
+
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/ajkwz8z4no?translucentSurfaces&invertedColors"></iframe></div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Conic Parametrizations</b><br>
+    <div class="conic-table-wrap">
+    <table class="conic-table">
+    <thead>
+        <tr>
+        <th scope="col">Conic</th>
+        <th scope="col">Rectangular Equation</th>
+        <th scope="col">Parametric Equations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">Circle</th>
+        <td>\( (x-h)^2 + (y-k)^2 = r^2 \)</td>
+        <td>
+            \( \begin{aligned} x &= h + r\cos t \\ y &= k + r\sin t \end{aligned} \)
+            <span class="domain">\( t \in [0, 2\pi) \)</span>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Ellipse</th>
+        <td>\( \dfrac{(x-h)^2}{a^2} + \dfrac{(y-k)^2}{b^2} = 1 \)</td>
+        <td>
+            \( \begin{aligned} x &= h + a\cos t \\ y &= k + b\sin t \end{aligned} \)
+            <span class="domain">\( t \in [0, 2\pi) \)</span>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Hyperbola</th>
+        <td>\( \dfrac{(x-h)^2}{a^2} - \dfrac{(y-k)^2}{b^2} = 1 \)</td>
+        <td>
+            \( \begin{aligned} x &= h + a\sec t \\ y &= k + b\tan t \end{aligned} \)
+            <span class="domain">\( t \in \left(-\tfrac{\pi}{2}, \tfrac{\pi}{2}\right) \cup \left(\tfrac{\pi}{2}, \tfrac{3\pi}{2}\right) \)</span>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+
+    <div class="math-fact-notxt">
+    <b style="color:var(--factcolor)">Three Ways to Parametrize a Curve from Its Rectangular Equation</b><br>
+    <ol>
+        <li class="lec-list-space">Look for the form \(Ax^2 + Cy^2 + Dx + Ey + F = 0\). This is a conic section. Complete the square to reach standard form, then use above table.</li>
+        <li class="lec-list-space">Isolate one variable and set the other equal to $t$. Then $t$ ranges over the domain of the resulting expression, usually $\mathbb{R}$.
+            
+            <ul>
+                <li>If isolating produces a $\pm$, you will need two parametrics. Try to avoid, unless you are in case 3.</li>
+            </ul>
+            </li>
+        <li class="lec-list-space">If the curve is a closed loop, try periodic motion:
+            \(x = a\cos t,\ y = b\sin t,\ t\in[0,2\pi)\).</li>
+    </ol>
+    </div>
     
 </div>
 {% endblock %}
