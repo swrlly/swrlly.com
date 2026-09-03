@@ -17,11 +17,9 @@
 
 {% block content %}
 <div class="container fade-in-text text-padding teaching-container">
-    <h1>Math 183: Toolkit 🧰</h1>
+    <h1>Math 183: Toolkit 🧰 (no animations)</h1>
 
     <p>This toolkit contains all of the definitions, properties, facts and theorems you need to <b>memorize</b> all on one webpage. These are your tools on quizzes and exams.</p>
-
-    <p>It also contains the Desmos animations we have seen in class!</p>
 
     <div id="toc_container">
         <p class="toc_title">Table of Contents</p>
@@ -92,10 +90,7 @@
         <p class="block-txt">Movement in each coordinate $a, b, c$ of the point $(a, b, c)$ is <b>parallel</b> to the $x$-, $y$-, and $z$-axis, respectively.</p>
     </div>
 
-    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/5ewkbyfzhg?invertedColors&translucentSurfaces"></iframe></div>-->
-
     
-
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Right Hand Rule</b><br>
         <p class="block-txt">There are two directions the positive $z$-axis could point. Mathematicians decided on the <b>right hand rule</b>: flatten your hand and point your four fingers along the $x$-axis. Curl your fingers in the <b>shortest rotation</b> from the $x$-axis to the $y$-axis. Then your <b>thumb</b> points in the direction of the positive $z$-axis.</p>
     </div>
@@ -228,10 +223,6 @@
         <p class="block-txt">If $\vec{a}, \vec{b} \neq \vec{0}$, then the angle $\theta$ between $\vec{a}$ and $\vec{b}$ satisfies \[\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}\]</p>
     </div>
 
-    <p>In $\mathbb{R}^3$, two nonzero vectors $\vec{a}$ and $\vec{b}$ span a plane. The angle $\theta$ between $\vec{a}$ and $\vec{b}$ means the same thing in $\mathbb{R}^2$ as it does in $\mathbb{R}^3$: place them tail to tail and measure the angle inside the plane, taking $0 \leq \theta \leq \pi$.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw?invertedColors&translucentSurfaces"></iframe></div>
-
     <div class="math-def"> orthogonal
         <p class="block-txt">Two vectors are <b>orthogonal</b> (perpendicular) precisely when the angle between them is $\theta = 90^\circ$.</p>
         <p class="block-txt"><b>Fact</b> $\vec{a}$ and $\vec{b}$ are orthogonal if and only if $\vec{a}\cdot\vec{b} = 0$.</p>
@@ -259,18 +250,9 @@
         <p class="block-txt">The <b>vector projection</b> of $\vec{b}$ onto $\vec{a}$ is that shadow as a vector (scalar projection times the unit vector in the direction of $\vec{a}$): \[\text{proj}_{\vec{a}}\vec{b} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|}\right)\dfrac{\vec{a}}{|\vec{a}|} = \left(\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|^2}\right)\vec{a}\]</p>
     </div>
 
-
-    <p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector. The scalar projection is the length of the dark purple vector.
-    </p>
-    <!---->
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk?invertedColors&translucentSurfaces"></iframe></div>
-
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Thales's Theorem</b><br>
         <p class="block-txt">If $A, B, C$ are distinct points on circle $O$ where $\overline{AB}$ is a diameter, then $\angle ACB$ is a <b>right angle</b>.</p>
     </div>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/2qcrc9xax7?invertedColors"></iframe></div>
-
     
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Alternate Equation of a Circle</b><br>
         <p class="block-txt">If $A(x_1, y_1)$ and $B(x_2, y_2)$ are the endpoints of a diameter, then the circle is the set of points $C(x, y)$ with $\ray{CA}\cdot\ray{CB} = 0$, giving \[(x - x_1)(x - x_2) + (y - y_1)(y - y_2) = 0\]</p>
@@ -323,8 +305,6 @@
         <p class="block-txt">The length of the cross product $\vec{a}\times\vec{b}$ is equal to the area of the <b>parallelogram</b> determined by $\vec{a}$ and $\vec{b}$.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/oh4fewemep?translucentSurfaces&invertedColors"></iframe></div>
-
     <div class="math-fact"> <b style="color:var(--factcolor)">Components are Shadow Areas</b><br>
         <p class="block-txt">Let $\vec{a}, \vec{b} \in V_3$ be nonzero. Then \[\vec{a}\times\vec{b} = \vc{A_{yz},\ A_{zx},\ A_{xy}}\] where $A_{yz}$ is the signed area of the parallelogram determined by $\vec{a}, \vec{b}$ after projecting onto the $yz$-plane, and likewise for $A_{zx}$ and $A_{xy}$.</p>
     </div>
@@ -341,11 +321,6 @@
             <li>Example: the $+x$-axis is normal to the $yz$-plane; projecting onto $yz$ sends $(x, y, z) \mapsto (0, y, z)$.</li>
         </ul>
     </div>
-
-    <p>Here, the blue vector is $\vec{a} = \vc{1,3,2}$, the purple vector is $\vec{b} = \vc{2,1,2}$, and $\vec{a} \times \vec{b} = \vc{4, 2, -5}$. The signed shadow areas are $A_{yz} = 4, A_{zx} = 2, A_{xy} = -5$. </p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/jwzqkl8ybq?translucentSurfaces&invertedColors"></iframe></div>
-
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Cross Product Properties</b><br>
         <p class="block-txt">Let $\vec{a}, \vec{b}, \vec{c} \in V_3$ and $c \in \mathbb{R}$. Then</p>
@@ -371,8 +346,6 @@
         <p class="block-txt">In particular, $\vec{a}, \vec{b}, \vec{c}$ lie in the same plane (are <b>coplanar</b>) if and only if $\vec{a}\cdot(\vec{b}\times\vec{c}) = 0$.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/diqous70ej?translucentSurfaces&invertedColors"></iframe></div>
-
     <h4 id="12.5">12.5: Equations of Lines and Planes</h4><hr>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">What Determines a Line</b><br>
@@ -383,8 +356,6 @@
         <p class="block-txt">The vector equation of a line through a point $P_0(x_0, y_0, z_0)$ with position vector $\vec{r}_0$ and parallel to the vector $\vec{v}$ is \[\vec{r} = \vec{r}_0 + t\vec{v}, \qquad t \in \mathbb{R}\]</p>
         <p class="block-txt">Letting $\vec{v} = \vc{a, b, c}$, $\vec{r} = \vc{x, y, z}$ and $\vec{r}_0 = \vc{x_0, y_0, z_0}$, this becomes \[\vc{x, y, z} = \vc{x_0 + ta,\ y_0 + tb,\ z_0 + tc}\]</p>
     </div>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/kvcb0yepka?translucentSurfaces&invertedColors"></iframe></div>
 
     <div class="math-def"> parametric equations of a line
         <p class="block-txt">Parametric equations for a line through the point $(x_0, y_0, z_0)$ and parallel to the vector $\vec{v} = \vc{a, b, c}$ are \[x = x_0 + at, \qquad y = y_0 + bt, \qquad z = z_0 + ct\]</p>
@@ -423,13 +394,9 @@
         <p class="block-txt">Vector $\vc{x(t), y(t)}$ is a position vector with tip tracing out the curve.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/fbkvvqarfz?translucentSurfaces&invertedColors"></iframe></div>
-
     <div class="math-def"> conic section
         <p class="block-txt">A conic section is an intersection of a double cone and a plane in $\mathbb{R}^3$.</p>
     </div>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/ajkwz8z4no?translucentSurfaces&invertedColors"></iframe></div>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Conic Parametrizations</b><br>
     <div class="conic-table-wrap">
@@ -519,14 +486,6 @@
         <p class="block-txt"><b>Think</b> If $\vec{r}(t)$ is the track of a rollercoaster and you are sitting at the tip of $\vec{r}(t)$, then the direction of $\vec{r}\,'(t)$ is your line of sight.</p>
     </div>
 
-    <p>Here's an example of the limiting process of a secant vector.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/txnk1a4doe?translucentSurfaces&invertedColors"></iframe></div>
-
-    <p>The tangent vector always points towards where the curve will be traced next.</p>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/5zkxol07gg?translucentSurfaces&invertedColors"></iframe></div>
-
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Differentiate Componentwise)</b><br>
         <p class="block-txt">If $\vec{r}(t) = \vc{f(t), g(t), h(t)} = f(t)\iv + g(t)\jv + h(t)\kv$ where $f, g$ and $h$ are differentiable functions, then \[\vec{r}\,'(t) = \vc{f'(t), g'(t), h'(t)} = f'(t)\iv + g'(t)\jv + h'(t)\kv\]</p>
     </div>
@@ -562,9 +521,6 @@
             <li>If $\vec{a}$ is <b>antiparallel</b> to $\vec{v}$, there is no sideways acceleration. The particle brakes to a full stop and then reverses direction along $\vec{r}(t)$.</li>
         </ul>
     </div>
-
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/fgp9ijnmr9?translucentSurfaces&invertedColors"></iframe></div>
-    
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Differentiation Rules)</b><br>
         <p class="block-txt">Suppose $\vec{u}$ and $\vec{v}$ are differentiable vector functions, $c \in \mathbb{R}$ and $f$ is a real-valued function.</p>
