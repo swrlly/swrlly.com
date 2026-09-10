@@ -556,7 +556,7 @@
         <p class="block-txt">By the Fundamental Theorem of Calculus, \[\dfrac{ds}{dt} = \left|\vec{r}\,'(t)\right|\] which says "the rate of change of arc length with respect to $t$ is exactly the <b>speed</b> of $\vec{r}(t)$."</p>
     </div>
  
-    <!--<div class="math-def"> unit speed parametrization
+    <div class="math-def"> unit speed parametrization
         <p class="block-txt">A parametrization $\vec{r}(s)$ is a <b>unit speed parametrization</b> (or a parametrization with respect to arc length) if \[\left|\vec{r}\,'(s)\right| = 1\] for every $s$ in the domain. Plugging in $s$ then gets you exactly $s$ units of arc length along the curve.</p>
         <p class="block-txt"><b>Note</b> A curve's parametrization is <b>not unique</b>. Velocity, speed and acceleration all depend on the parametrization, but <b>arc length does not</b>: it is a geometric property of the curve itself.</p>
     </div>
@@ -568,9 +568,10 @@
     </div>
  
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Computing Curvature</b><br>
-        <p class="block-txt">Differentiating with respect to arc length is difficult, but the chain rule gives $\dfrac{d\vec{T}}{dt} = \dfrac{d\vec{T}}{ds}\dfrac{ds}{dt}$, and therefore \[\kappa(t) = \dfrac{\left|\vec{T}\,'(t)\right|}{\left|\vec{r}\,'(t)\right|}\]</p>
-        <p class="block-txt">There is a second form, depending only on velocity and acceleration: \[\kappa(t) = \dfrac{\left|\vec{r}\,'(t)\times\vec{r}\,''(t)\right|}{\left|\vec{r}\,'(t)\right|^3}\]</p>
+        <p class="block-txt">There are two ways: \[\kappa(t) = \dfrac{\left|\vec{T}\,'(t)\right|}{\left|\vec{r}\,'(t)\right|} \qquad \text{ or } \qquad \kappa(t) = \dfrac{\left|\vec{r}\,'(t)\times\vec{r}\,''(t)\right|}{\left|\vec{r}\,'(t)\right|^3}\]</p>
+
         <p class="block-txt"><b>Fact</b> A circle of radius $a$ has curvature $\kappa = \dfrac{1}{a}$. Small circles are sharply curved; large circles are nearly straight.</p>
+        <p class="block-txt">Another way to see this: at unit speed, a particle's velocity vector turns at $\dfrac{1}{a}$ radians per unit time. The turning is slow for large circles but fast for small circles.</p>
     </div>
  
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Constant Length Forces Orthogonality)</b><br>
@@ -586,12 +587,12 @@
         <p class="block-txt">The vector \[\vec{B}(t) = \vec{T}(t)\times\vec{N}(t)\] is the <b>binormal vector</b>. It is a unit vector orthogonal to both $\vec{T}$ and $\vec{N}$.</p>
     </div>
  
-    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Direction of $\vec{N}$)</b><br>
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Directions of $\vec{N}$ and $\vec{T}$)</b><br>
         <p class="block-txt">The direction of $\vec{N}$ always points in the direction the curve is <b>turning</b>.</p>
         <p class="block-txt">The direction of $\vec{a}_{\text{normal}}$ is $\vec{N}$, and the direction of $\vec{a}_{\text{tangential}}$ is $\vec{T}$.</p>
     </div>
  
-    <div class="math-def"> linear combination
+   <!--<div class="math-def"> linear combination
         <p class="block-txt">Given vectors $\vec{v}_1$ and $\vec{v}_2$, a <b>linear combination</b> is any vector \[c_1\vec{v}_1 + c_2\vec{v}_2\] where $c_1, c_2 \in \mathbb{R}$.</p>
         <p class="block-txt">The coefficient $c_i$ tells you how many copies of $\vec{v}_i$ to walk along. If $\vec{v}_i$ is a <b>unit</b> vector, then $c_i$ is how far you walk in $\vec{v}_i$'s direction.</p>
     </div>
