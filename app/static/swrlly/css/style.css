@@ -1259,8 +1259,33 @@ put delay first, then use delay anim to put blue border at bottom right corner
 /* horizontal scroll instead of overflow on narrow screens */
 .conic-table-wrap { overflow-x: auto; }
 
+.desmos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    row-gap: 1.5em;
+}
 
+.desmos-item {
+    flex: 0 0 calc((100% - 4 * 2vw) / 4);
+    text-align: center;
+}
 
+.desmos-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.desmos-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.desmos-caption {
+    margin-top: 0.5em;
+}
 
 
 
