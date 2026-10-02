@@ -21,7 +21,7 @@
 
     <p>This toolkit contains all of the definitions, properties, facts and theorems you need to <b>memorize</b> all on one webpage. These are your tools on quizzes and exams.</p>
 
-    <p>It also contains the Desmos animations we have seen in class!</p>
+    <!--<p>It also contains the Desmos animations we have seen in class!</p>-->
 
     <div id="toc_container">
         <p class="toc_title">Table of Contents</p>
@@ -42,6 +42,16 @@
                     <li><a href="#13.1">13.1: Vector Functions and Space Curves</a></li>
                     <li><a href="#13.2">13.2 + 13.4: Derivatives and Integrals of Vector Functions</a></li>
                     <li><a href="#13.3">13.3: Arc Length and Curvature</a></li>
+                </ol>
+            </li>
+            <li style="margin-top:0.25rem;" >
+                <a href="#chapter-14">Chapter 14</a>
+                <ol class="toc_ol">
+                    <li><a href="#14.1">14.1: Functions of Several Variables</a></li>
+                    <li><a href="#14.2">14.2: Limits and Continuity</a></li>
+                    <li><a href="#14.3">14.3: Partial Derivatives</a></li>
+                    <li><a href="#14.5">14.5: The Chain Rule</a></li>
+                    <li><a href="#14.6">14.6: Directional Derivatives and the Gradient Vector</a></li>
                 </ol>
             </li>
         </ul>
@@ -230,7 +240,7 @@
 
     <p>In $\mathbb{R}^3$, two nonzero vectors $\vec{a}$ and $\vec{b}$ span a plane. The angle $\theta$ between $\vec{a}$ and $\vec{b}$ means the same thing in $\mathbb{R}^2$ as it does in $\mathbb{R}^3$: place them tail to tail and measure the angle inside the plane, taking $0 \leq \theta \leq \pi$.</p>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw?invertedColors&translucentSurfaces"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/9j39fifakw?invertedColors&translucentSurfaces"></iframe></div>-->
 
     <div class="math-def"> orthogonal
         <p class="block-txt">Two vectors are <b>orthogonal</b> (perpendicular) precisely when the angle between them is $\theta = 90^\circ$.</p>
@@ -260,16 +270,15 @@
     </div>
 
 
-    <p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector. The scalar projection is the length of the dark purple vector.
+    <!--<p>In the following, the light purple vector is projected onto the blue vector. The vector projection is the dark purple vector. The scalar projection is the length of the dark purple vector.
     </p>
-    <!---->
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk?invertedColors&translucentSurfaces"></iframe></div>
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/1h4j2ufxzk?invertedColors&translucentSurfaces"></iframe></div>-->
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Thales's Theorem</b><br>
         <p class="block-txt">If $A, B, C$ are distinct points on circle $O$ where $\overline{AB}$ is a diameter, then $\angle ACB$ is a <b>right angle</b>.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/2qcrc9xax7?invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/2qcrc9xax7?invertedColors"></iframe></div>-->
 
     
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Alternate Equation of a Circle</b><br>
@@ -323,7 +332,7 @@
         <p class="block-txt">The length of the cross product $\vec{a}\times\vec{b}$ is equal to the area of the <b>parallelogram</b> determined by $\vec{a}$ and $\vec{b}$.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/oh4fewemep?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/oh4fewemep?translucentSurfaces&invertedColors"></iframe></div>-->
 
     <div class="math-fact"> <b style="color:var(--factcolor)">Components are Shadow Areas</b><br>
         <p class="block-txt">Let $\vec{a}, \vec{b} \in V_3$ be nonzero. Then \[\vec{a}\times\vec{b} = \vc{A_{yz},\ A_{zx},\ A_{xy}}\] where $A_{yz}$ is the signed area of the parallelogram determined by $\vec{a}, \vec{b}$ after projecting onto the $yz$-plane, and likewise for $A_{zx}$ and $A_{xy}$.</p>
@@ -342,9 +351,9 @@
         </ul>
     </div>
 
-    <p>Here, the blue vector is $\vec{a} = \vc{1,3,2}$, the purple vector is $\vec{b} = \vc{2,1,2}$, and $\vec{a} \times \vec{b} = \vc{4, 2, -5}$. The signed shadow areas are $A_{yz} = 4, A_{zx} = 2, A_{xy} = -5$. </p>
+    <!--<p>Here, the blue vector is $\vec{a} = \vc{1,3,2}$, the purple vector is $\vec{b} = \vc{2,1,2}$, and $\vec{a} \times \vec{b} = \vc{4, 2, -5}$. The signed shadow areas are $A_{yz} = 4, A_{zx} = 2, A_{xy} = -5$. </p>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/jwzqkl8ybq?translucentSurfaces&invertedColors"></iframe></div>
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/jwzqkl8ybq?translucentSurfaces&invertedColors"></iframe></div>-->
 
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Cross Product Properties</b><br>
@@ -371,7 +380,7 @@
         <p class="block-txt">In particular, $\vec{a}, \vec{b}, \vec{c}$ lie in the same plane (are <b>coplanar</b>) if and only if $\vec{a}\cdot(\vec{b}\times\vec{c}) = 0$.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/diqous70ej?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/diqous70ej?translucentSurfaces&invertedColors"></iframe></div>-->
 
     <h4 id="12.5">12.5: Equations of Lines and Planes</h4><hr>
 
@@ -384,7 +393,7 @@
         <p class="block-txt">Letting $\vec{v} = \vc{a, b, c}$, $\vec{r} = \vc{x, y, z}$ and $\vec{r}_0 = \vc{x_0, y_0, z_0}$, this becomes \[\vc{x, y, z} = \vc{x_0 + ta,\ y_0 + tb,\ z_0 + tc}\]</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/kvcb0yepka?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/kvcb0yepka?translucentSurfaces&invertedColors"></iframe></div>-->
 
     <div class="math-def"> parametric equations of a line
         <p class="block-txt">Parametric equations for a line through the point $(x_0, y_0, z_0)$ and parallel to the vector $\vec{v} = \vc{a, b, c}$ are \[x = x_0 + at, \qquad y = y_0 + bt, \qquad z = z_0 + ct\]</p>
@@ -423,13 +432,13 @@
         <p class="block-txt">Vector $\vc{x(t), y(t)}$ is a position vector with tip tracing out the curve.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/fbkvvqarfz?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/calculator/fbkvvqarfz?translucentSurfaces&invertedColors"></iframe></div>-->
 
     <div class="math-def"> conic section
         <p class="block-txt">A conic section is an intersection of a double cone and a plane in $\mathbb{R}^3$.</p>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/ajkwz8z4no?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/ajkwz8z4no?translucentSurfaces&invertedColors"></iframe></div>-->
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Conic Parametrizations</b><br>
     <div class="conic-table-wrap">
@@ -519,15 +528,15 @@
         <p class="block-txt"><b>Think</b> If $\vec{r}(t)$ is the track of a rollercoaster and you are sitting at the tip of $\vec{r}(t)$, then the direction of $\vec{r}\,'(t)$ is your line of sight.</p>
     </div>
 
-    <p>Here's an example of the limiting process of a secant vector.</p>
+    <!--<p>Here's an example of the limiting process of a secant vector.</p>
 
     <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/txnk1a4doe?translucentSurfaces&invertedColors"></iframe></div>
 
     <p>The tangent vector always points towards where the curve will be traced next.</p>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/5zkxol07gg?translucentSurfaces&invertedColors"></iframe></div>
+    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/5zkxol07gg?translucentSurfaces&invertedColors"></iframe></div>-->
 
-    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Differentiate Componentwise)</b><br>
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem</b><br>
         <p class="block-txt">If $\vec{r}(t) = \vc{f(t), g(t), h(t)} = f(t)\iv + g(t)\jv + h(t)\kv$ where $f, g$ and $h$ are differentiable functions, then \[\vec{r}\,'(t) = \vc{f'(t), g'(t), h'(t)} = f'(t)\iv + g'(t)\jv + h'(t)\kv\]</p>
     </div>
  
@@ -563,7 +572,7 @@
         </ul>
     </div>
 
-    <div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/fgp9ijnmr9?translucentSurfaces&invertedColors"></iframe></div>
+    <!--<div id="hide-desmos"><iframe id="desmos-example" style="min-height: 800px;" src="https://www.desmos.com/3d/fgp9ijnmr9?translucentSurfaces&invertedColors"></iframe></div>-->
     
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Differentiation Rules)</b><br>
@@ -602,7 +611,6 @@
  
     <div class="math-def"> unit speed parametrization
         <p class="block-txt">A parametrization $\vec{r}(s)$ is a <b>unit speed parametrization</b> (or a parametrization with respect to arc length) if \[\left|\vec{r}\,'(s)\right| = 1\] for every $s$ in the domain. Plugging in $s$ then gets you exactly $s$ units of arc length along the curve.</p>
-        <p class="block-txt"><b>Note</b> A curve's parametrization is <b>not unique</b>. Velocity, speed and acceleration all depend on the parametrization, but <b>arc length does not</b>: it is a geometric property of the curve itself.</p>
     </div>
  
     <div class="math-def"> curvature
@@ -614,11 +622,10 @@
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Computing Curvature</b><br>
         <p class="block-txt">There are two ways: \[\kappa(t) = \dfrac{\left|\vec{T}\,'(t)\right|}{\left|\vec{r}\,'(t)\right|} \qquad \text{ or } \qquad \kappa(t) = \dfrac{\left|\vec{r}\,'(t)\times\vec{r}\,''(t)\right|}{\left|\vec{r}\,'(t)\right|^3}\]</p>
 
-        <p class="block-txt"><b>Fact</b> A circle of radius $a$ has curvature $\kappa = \dfrac{1}{a}$. Small circles are sharply curved; large circles are nearly straight.</p>
-        <p class="block-txt">Another way to see this: at unit speed, a particle's velocity vector turns at $\dfrac{1}{a}$ radians per unit time. The turning is slow for large circles but fast for small circles.</p>
+        <p class="block-txt"><b>Fact</b> A circle of radius $a$ has curvature $\kappa = \frac{1}{a}$.At unit speed, a particle's velocity vector turns at $\frac{1}{a}$ radians per unit time. The turning is slow for large circles but fast for small circles (since the speed of the particle is the same).</p>
     </div>
  
-    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Constant Length Forces Orthogonality)</b><br>
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem</b><br>
         <p class="block-txt">If $|\vec{r}(t)| = c$ is constant, then $\vec{r}\,'(t)$ is orthogonal to $\vec{r}(t)$ for all $t$: \[\vec{r}(t)\cdot\vec{r}\,'(t) = 0\]</p>
         <p class="block-txt">In particular, this applies to the <b>unit</b> tangent vector: $\vec{T}\,'(t)$ is orthogonal to $\vec{T}(t)$.</p>
     </div>
@@ -628,7 +635,7 @@
     </div>
  
     <div class="math-def"> binormal vector
-        <p class="block-txt">The vector \[\vec{B}(t) = \vec{T}(t)\times\vec{N}(t)\] is the <b>binormal vector</b>. It is a unit vector orthogonal to both $\vec{T}$ and $\vec{N}$.</p>
+        <p class="block-txt">The vector $\vec{B}(t) = \vec{T}(t)\times\vec{N}(t)$ is the <b>binormal vector</b>. It is a unit vector orthogonal to both $\vec{T}$ and $\vec{N}$.</p>
     </div>
  
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Directions of $\vec{N}$ and $\vec{T}$)</b><br>
@@ -636,25 +643,241 @@
         <p class="block-txt">The direction of $\vec{a}_{\text{normal}}$ is $\vec{N}$, and the direction of $\vec{a}_{\text{tangential}}$ is $\vec{T}$.</p>
     </div>
  
-    <!--<div class="math-def"> linear combination
-        <p class="block-txt">Given vectors $\vec{v}_1$ and $\vec{v}_2$, a <b>linear combination</b> is any vector \[c_1\vec{v}_1 + c_2\vec{v}_2\] where $c_1, c_2 \in \mathbb{R}$.</p>
+    <div class="math-def"> linear combination
+        <p class="block-txt">Given vectors $\vec{v}_1$ and $\vec{v}_2$, a <b>linear combination</b> is any vector $c_1\vec{v}_1 + c_2\vec{v}_2$ where $c_1, c_2 \in \mathbb{R}$.</p>
         <p class="block-txt">The coefficient $c_i$ tells you how many copies of $\vec{v}_i$ to walk along. If $\vec{v}_i$ is a <b>unit</b> vector, then $c_i$ is how far you walk in $\vec{v}_i$'s direction.</p>
     </div>
  
     <div class="math-def"> tangential and normal components of acceleration
-        <p class="block-txt">The acceleration vector $\vec{a}(t)$ is a linear combination \[\vec{a} = a_T\vec{T} + a_N\vec{N}\] where, writing $v = |\vec{r}\,'(t)|$ for the speed, \[a_T = v' = \dfrac{\vec{r}\,'(t)\cdot\vec{r}\,''(t)}{\left|\vec{r}\,'(t)\right|} \qquad \text{and} \qquad a_N = \kappa v^2 = \dfrac{\left|\vec{r}\,'(t)\times\vec{r}\,''(t)\right|}{\left|\vec{r}\,'(t)\right|}\]</p>
-        <p class="block-txt">Because $\vec{T}$ and $\vec{N}$ are <b>orthogonal</b> unit vectors, no system of equations is needed to find these coefficients.</p>
+        <p class="block-txt">The acceleration vector $\vec{a}(t)$ is a linear combination \[\vec{a} = a_T\vec{T} + a_N\vec{N}\] where \[a_T = \text{comp}_{\vec{v}}\vec{a} = \dfrac{\vec{v} \cdot \vec{a}}{\left|\vec{v}\right|} = \dfrac{\vec{r}\,'(t)\cdot\vec{r}\,''(t)}{\left|\vec{r}\,'(t)\right|} \qquad \text{and} \qquad a_N = \kappa \left|\vec{v}\right|^2 = \dfrac{\left|\vec{v} \times \vec{a}\right|}{\left|\vec{v}\right|} = \dfrac{\left|\vec{r}\,'(t)\times\vec{r}\,''(t)\right|}{\left|\vec{r}\,'(t)\right|}\]</p>
     </div>
  
-    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Meaning of $a_T$ and $a_N$)</b><br>
-        <p class="block-txt">Acceleration is felt in two ways:</p>
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Meaning of $a_T$ and $a_N$</b><br>
+        <p class="block-txt">Imagine you are driving. Acceleration is felt in two ways:</p>
         <ul style="margin-bottom: 0.5rem">
-            <li class="lec-list-space">$a_T$ is the <b>gas pedal and brake</b>: it is the rate of change of speed. If $a_T > 0$ the object is speeding up; if $a_T < 0$ it is slowing down.</li>
-            <li class="lec-list-space">$a_N$ is the <b>steering wheel</b>: it is what throws you sideways. Since $\kappa \geq 0$ and $v^2 \geq 0$, we always have $a_N \geq 0$. If $a_N = 0$ the object is travelling in a straight line; the larger $a_N$ is, the harder the turn.</li>
+            <li class="lec-list-space">Think of $a_T$ as the gas pedal/brake: it is the rate of change of speed.</li>
+            <li class="lec-list-space">Think of $a_N$ as the steering wheel: it is what throws you sideways. If $a_N = 0$ the object is travelling in a straight line (momentarily). Since $a_N = \kappa \left|\vec{v}\right|^2$, the sideways acceleration scales quadratically with your speed. This is why we intuitively know to slow down when turning.</li>
+
         </ul>
-        <p class="block-txt">Note $\vec{a}$ has <b>no</b> $\vec{B}$ component: acceleration always lies in the plane spanned by $\vec{T}$ and $\vec{N}$.</p>
+        <p class="block-txt">Also, $a_N =\dfrac{\left|\vec{v} \times \vec{a}\right|}{\left|\vec{v}\right|} = \dfrac{\text{Area}}{\text{base}}$ of the parallelogram determined by $\vec{v}$ and $\vec{a}$.</p>
+    </div>
+
+    <h2 id="chapter-14">Chapter 14: Partial Derivatives</h2><hr>
+
+    <h4 id="14.1">14.1: Functions of Several Variables</h4><hr>
+
+    <div class="math-def"> function of several variables
+        <p class="block-txt">A <b>function of two variables</b> is a function $f : \mathbb{R}^2 \to \mathbb{R}$, written $z = f(x, y)$. A <b>function of three variables</b> is a function $g : \mathbb{R}^3 \to \mathbb{R}$, written $w = g(x, y, z)$.</p>
+    </div>
+
+    <div class="math-def"> domain
+        <p class="block-txt">The <b>domain</b> $D$ of $f(x, y)$ is the set of all points you can plug in and get a real number out. $D = \{(x, y) : \text{conditions}\}$</p>
+    </div>
+
+    <!--<div class="math-fact-notxt"> <b style="color:var(--factcolor)">Finding and Sketching a Domain</b><br>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">Collect the restrictions: arguments of $\ln$ must be $> 0$, arguments of $\sqrt{\phantom{x}}$ must be $\geq 0$, denominators must be $\neq 0$, and arguments of $\sin^{-1}$ must lie in $[-1, 1]$.</li>
+            <li class="lec-list-space">Set each condition to $=$ to find the boundary. Draw it <b>dotted</b> if it is excluded ($<, >, \neq$) and <b>solid</b> if it is included ($\leq, \geq$).</li>
+            <li class="lec-list-space"><b>Test a point</b> not on the boundary to decide which side of the boundary is in $D$.</li>
+        </ol>
     </div>-->
+
+    <div class="math-def"> graph
+        <p class="block-txt">The <b>graph</b> of $f(x, y)$ is the surface $\{(x, y, f(x, y)) : (x, y) \in D\}$. f(x, y)$ is the <b>height</b> of the surface above or below each point $(x, y, 0)$.</p>
+    </div>
+
+    <div class="math-def"> traces
+        <p class="block-txt"><b>Traces</b> are the curves of intersection of a surface with planes parallel to the coordinate planes ($x = k$, $y = k$ or $z = k$).</p>
+        <p class="block-txt"><b>Technique</b> To sketch a surface, sketch several traces in each direction and assemble them.</p>
+    </div>
+
+    <div class="math-def"> level curves, contour plot
+        <p class="block-txt"><b>Level curves</b> of $f(x, y)$ are the traces $z = k$ projected onto the $xy$-plane. A collection of level curves for several values of $k$ is a <b>contour plot</b>.</p>
+        <p class="block-txt"><b>Think</b> A level curve is the set of all points where the surface has the same height $k$.</p>
+    </div>
+
+    <div class="math-def"> level surfaces
+        <p class="block-txt">For $w = f(x, y, z)$, the same technique gives <b>level surfaces</b> $f(x, y, z) = k$ which live in $\mathbb{R}^3$.</p>
+    </div>
+
+    <h4 id="14.2">14.2: Limits and Continuity</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Infinitely Many Paths</b><br>
+        <p class="block-txt">For a single variable limit $\displaystyle\lim_{x\to a} f(x)$, there are only <b>two</b> ways for $x$ to approach $a$: from the left and from the right. 
+            
+        <p class="block-txt">For a multivariable limit $\displaystyle\lim_{(x,y)\to(a,b)} f(x, y)$, there are <b>infinitely</b> many paths for $(x, y)$ to approach $(a, b)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Technique (Showing a Limit Does Not Exist)</b><br>
+        <p class="block-txt">If $f(x, y) \to L_1$ as $(x, y) \to (a, b)$ along a path $C_1$, and $f(x, y) \to L_2$ as $(x, y) \to (a, b)$ along a path $C_2$, where $L_1 \neq L_2$, then $\displaystyle\lim_{(x,y)\to(a,b)} f(x, y)$ does not exist.</p>
+        <p class="block-txt"><b>Think</b> Approaching along a path turns the problem into a one-variable (Calculus I) limit. Always try first: $y = 0$ (the $x$-axis), $x = 0$ (the $y$-axis), and all lines $y = mx$ at once.</p>
+        <p class="block-txt"><b>Careful</b> Paths that <b>agree</b> prove nothing. Even if every line $y = mx$ gives the same limit, the limit may still not exist. Try curves such as $x = y^2, y = -x + x^3$, etc. Look at the graph for ideas, or try to engineer cancellations of indeterminate form $0/0$.</p>
+    </div>
+
+    <div class="math-def"> continuity
+        <p class="block-txt">A function $f(x, y)$ is <b>continuous</b> at $(a, b)$ if $\lim_{(x,y)\to(a,b)} f(x, y) = f(a, b)$</p>
+        <p class="block-txt"><b>Think</b> Continuous means the limit is found by plugging in.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Limits Using Continuity</b><br>
+        <p class="block-txt">Elementary functions (polynomials, rational functions, $e^x$, $\ln x$, trig functions, and their compositions) are continuous on their domains. If $(a, b)$ is in the domain, the limit is just $f(a, b)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Squeeze Theorem</b><br>
+        <p class="block-txt">If $g(x, y) \leq f(x, y) \leq h(x, y)$ near $(a, b)$ and \[\lim_{(x,y)\to(a,b)} g(x, y) = \lim_{(x,y)\to(a,b)} h(x, y) = L\] then $\displaystyle\lim_{(x,y)\to(a,b)} f(x, y) = L$.</p>
+        <p class="block-txt"><b>Technique</b> Bound $|f(x, y)|$. If $|f(x, y)| \leq g(x, y)$, then $-g(x, y) \leq f(x, y) \leq g(x, y)$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Useful Bounds</b><br>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">$\dfrac{x^2}{x^2 + y^2} \leq 1$, since $y^2 \geq 0$.</li>
+            <li class="lec-list-space">$|\sin(\text{anything})| \leq 1$ and $|\cos(\text{anything})| \leq 1$.</li>
+            <li class="lec-list-space">$|ab| = |a||b|$: absolute value splits products.</li>
+            <li class="lec-list-space">Triangle inequality: $|a + b| \leq |a| + |b|$: absolute value splits sums into an upper bound.
+                <div style="padding-top: 0.75rem;"><b>Careful</b> $|a - b| \neq |a| - |b|$ in general.</div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Polar Substitution</b><br>
+        <p class="block-txt">Given $\displaystyle\lim_{(x,y)\to(0,0)} f(x, y)$, substitute $x = r\cos\theta$, $y = r\sin\theta$, where $r = \sqrt{x^2 + y^2}$. Then $(x, y) \to (0, 0)$ exactly when $r \to 0^+$: \[\lim_{(x,y)\to(0,0)} f(x, y) = \lim_{r\to 0^+} f(r\cos\theta, r\sin\theta)\]</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>If the result depends on $\theta$, the limit depends on the direction of approach, so it <b>does not exist</b>.</li>
+            <li>To show the limit exists, bound the $\theta$ terms using $|\cos\theta| \leq 1$ and $|\sin\theta| \leq 1$ by something depending only on $r$, then use the Squeeze Theorem.</li>
+        </ul>
+        <p class="block-txt"><b>Think</b> Polar substitution either creates an easier limit, or checks all lines $y = mx$ at once.</p>
+    </div>
+
+    <h4 id="14.3">14.3: Partial Derivatives</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Local Linearity</b><br>
+        <p class="block-txt">As you zoom in on a point on the curve of $f(x)$, the curve becomes indistinguishable from its <b>tangent line</b>. The tangent line is the best linear approximation of $f$ near each point.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Key Idea (Geometry of Partial Derivatives)</b><br>
+        <p class="block-txt">At any point $(a, b)$, tracing $f(x, y)$ with the plane $y = b$ or $x = a$ gives a curve, on which we can find tangent lines.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>The tangent line living in the plane $y = b$ has slope $f_x(a, b)$. It tells us <b>nothing</b> about how $f$ changes with respect to $y$, only with respect to $x$.</li>
+            <li>The tangent line living in the plane $x = a$ has slope $f_y(a, b)$. It only tells us how $f$ changes with respect to $y$.</li>
+        </ul>
+        <p class="block-txt">We take these derivatives by holding one variable <b>constant</b>.</p>
+    </div>
+
+    <div class="math-def"> partial derivative
+        <p class="block-txt">If $f(x, y)$ is a function of two variables, its <b>partial derivatives</b> are the functions $f_x$ and $f_y$ defined by \[f_x(x, y) = \lim_{h\to 0}\dfrac{f(x + h, y) - f(x, y)}{h} \qquad f_y(x, y) = \lim_{h\to 0}\dfrac{f(x, y + h) - f(x, y)}{h}\]</p>
+        <p class="block-txt">If $z = f(x, y)$, we also write \[f_x = \dfrac{\partial f}{\partial x} = \dfrac{\partial z}{\partial x} = \dfrac{\partial}{\partial x}f(x, y) \qquad f_y = \dfrac{\partial f}{\partial y} = \dfrac{\partial z}{\partial y} = \dfrac{\partial}{\partial y}f(x, y)\]</p>
+        <p class="block-txt">To find $f_x$, treat $y$ like a constant. To find $f_y$, treat $x$ like a constant.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Differentiation Rules Still Hold</b><br>
+        <p class="block-txt">Partial derivatives are slopes of tangent lines in a 2D trace, so the sum, product, quotient and chain rules all hold for partial differentiation.</p>
+        <p class="block-txt">For $w = f(x, y, z)$, finding $\dfrac{\partial w}{\partial x}$ means holding <b>both</b> $y$ and $z$ constant. Similarly for $w_y$ and $w_z$.</p>
+    </div>
+
+    <div class="math-def"> higher order derivatives
+        <p class="block-txt">The partial derivatives $f_x$, $f_y$ are functions, so we can take their partial derivatives too: \[f_{xx} = \dfrac{\partial^2 f}{\partial x^2} \qquad f_{xy} = (f_x)_y = \dfrac{\partial^2 f}{\partial y\,\partial x} \qquad f_{yx} = (f_y)_x = \dfrac{\partial^2 f}{\partial x\,\partial y} \qquad f_{yy} = \dfrac{\partial^2 f}{\partial y^2}\]</p>
+        <p class="block-txt"><b>Think</b> In subscript notation, differentiate left to right. In $\partial$ notation, differentiate right to left (in the denominator).</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Clairaut's Theorem</b><br>
+        <p class="block-txt">Suppose $f$ is defined on a disk $D$ that contains the point $(a, b)$. If $f_{xy}$ and $f_{yx}$ are both continuous on $D$, then $f_{xy}(a, b) = f_{yx}(a, b)$.</p>
+    </div>
+
+    <div class="math-def"> partial differential equation
+        <p class="block-txt">A <b>partial differential equation</b> (PDE) is an equation involving partial derivatives. For example, the one dimensional <b>wave equation</b> is $u_{tt} = a^2 u_{xx}$ where $u(x, t)$ is the displacement of a vibrating string at distance $x$ from one end at time $t$.</p>
+    </div>
+
+    <h4 id="14.5">14.5: The Chain Rule</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Technique (Tree Diagrams)</b><br>
+        <p class="block-txt">Draw the dependent variable at the top, the variables it depends on below it, and so on. Do this for each function, down to the independent variables. To differentiate the top variable with respect to a bottom variable:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li><b>Multiply</b> the derivatives along each path from the top down to that variable.</li>
+            <li><b>Add</b> the results from different branches.</li>
+        </ol>
+    </div>
+
+    <!--<div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (The Chain Rule)</b><br>
+        <p class="block-txt"><b>Case 1</b> If $z = f(x, y)$ where $x = x(t)$ and $y = y(t)$, then \[\dfrac{dz}{dt} = \dfrac{\partial z}{\partial x}\dfrac{dx}{dt} + \dfrac{\partial z}{\partial y}\dfrac{dy}{dt}\]</p>
+        <p class="block-txt"><b>Case 2</b> If $z = f(x, y)$ where $x = x(s, t)$ and $y = y(s, t)$, then \[\dfrac{\partial z}{\partial s} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s} \qquad \dfrac{\partial z}{\partial t} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial t} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial t}\]</p>
+        <p class="block-txt">Tree diagram pathing holds for <b>any</b> composition: one term per path.</p>
+        <p class="block-txt"><b>Note</b> It is fine to leave the answer in terms of $x$ and $y$. To evaluate at a point, first find the values of $x$ and $y$ there.</p>
+    </div>-->
+
+    <div class="math-def"> explicit and implicit form
+        <p class="block-txt">A function is in <b>explicit form</b> when the dependent variable is isolated: $y = f(x)$ or $z = f(x, y)$.</p>
+        <p class="block-txt">A function is in <b>implicit form</b> when variables are moved to one side: $F(x, y) = 0$ or $F(x, y, z) = 0$.</p>
+        <p class="block-txt"><b>Think</b> $y = f(x)$ lives on the level curve $F(x, y) = 0$, and $z = f(x, y)$ lives on the level surface $F(x, y, z) = 0$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Implicit Differentiation)</b><br>
+        <p class="block-txt">If $F(x, y) = 0$ defines $y$ implicitly as a function of $x$, then \[\dfrac{dy}{dx} = -\dfrac{F_x}{F_y} \qquad (F_y \neq 0)\]</p>
+        <p class="block-txt">If $F(x, y, z) = 0$ defines $z$ implicitly as a function of $x$ and $y$, then \[\dfrac{\partial z}{\partial x} = -\dfrac{F_x}{F_z} \qquad \dfrac{\partial z}{\partial y} = -\dfrac{F_y}{F_z} \qquad (F_z \neq 0)\]</p>
+    </div>
+
+    <h4 id="14.6">14.6: Directional Derivatives and the Gradient Vector</h4><hr>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Main Idea Behind Directional Derivatives</b><br>
+        <p class="block-txt">$f_x$ and $f_y$ only tell us the rate of change of $z$ in the $x$ or $y$ directions: they are slopes of the traces with the planes $y = y_0$ and $x = x_0$. Now allow the vertical plane to <b>rotate</b> around $(x_0, y_0)$. Each rotated plane creates a trace, and its tangent slope is the rate of change of $z$ in that direction. We use a <b>unit vector</b> $\vec{u}$ to describe the direction.</p>
+    </div>
+
+    <div class="math-def"> directional derivative
+        <p class="block-txt">The <b>directional derivative</b> of $f$ at $(x_0, y_0)$ in the direction of a <b>unit vector</b> $\vec{u} = \vc{a, b}$ is \[D_{\vec{u}}f(x_0, y_0) = \lim_{h\to 0}\dfrac{f(x_0 + ah, y_0 + bh) - f(x_0, y_0)}{h}\] if this limit exists.</p>
+        <p class="block-txt"><b>Note</b> $f_x$ and $f_y$ are the special cases $\vec{u} = \iv$ and $\vec{u} = \jv$, respectively.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Why a Unit Vector?</b><br>
+        <p class="block-txt"><b>Algebraically</b> The step from $(x_0, y_0)$ to $(x_0 + ah, y_0 + bh)$ has length $h\sqrt{a^2 + b^2}$. Since we divide by $h$ in $D_{\vec{u}}f, we need $\sqrt{a^2 + b^2} = |\vec{u}| = 1$.</p>
+        <p class="block-txt"><b>Geometrically</b> $f_x(x_0, y_0)$ is a slope: for every <b>one</b> unit increase in $x$, $z$ changes by $f_x(x_0, y_0)$. A unit vector maintains this one unit step in the direction of $\vec{u}$, so $D_{\vec{u}}f$ is an actual number that represents slope.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem </b><br>
+        <p class="block-txt">If $f$ is a differentiable function of $x$ and $y$, then $f$ has a directional derivative in the direction of any unit vector $\vec{u} = \vc{a, b}$, given by \[D_{\vec{u}}f(x, y) = f_x(x, y)\,a + f_y(x, y)\,b\]</p>
+        <p class="block-txt"><b>Think</b> In the $xy$-plane, walk along the line $\vc{x_0 + at,\ y_0 + bt}$, so the curve on the surface is $\vec{r}(t) = \vc{x_0 + at,\ y_0 + bt,\ f(x_0 + at, y_0 + bt)}$. Its tangent vector at $t = 0$ gives \[D_{\vec{u}}f(x_0, y_0) = \left.\dfrac{d}{dt}\left[f(x_0 + at, y_0 + bt)\right]\right|_{t = 0}\] which the chain rule turns into the formula above.</p>
+    </div>
+
+    <div class="math-def"> gradient
+        <p class="block-txt">Given $f(x, y)$, the <b>gradient</b> of $f$ (read "del $f$") is the vector function $\nabla f : \mathbb{R}^2 \to \mathbb{R}^2$ defined by \[\nabla f(x, y) = \vc{f_x(x, y),\ f_y(x, y)}\]</p>
+        <p class="block-txt">If $f(x, y, z)$ is a function of three variables, the gradient of $f$ is the vector function $\nabla f : \mathbb{R}^3 \to \mathbb{R}^3$ defined by \[\nabla f(x, y, z) = \vc{f_x(x, y, z),\ f_y(x, y, z),\ f_z(x, y, z)}\]</p>
+        <p class="block-txt"><b>Note</b> For $z = f(x, y)$, $\nabla f$ lives in the $xy$-plane. $\nabla f$ has <b>no</b> $z$-component.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Lemma (Directional Derivative via the Gradient)</b><br>
+        <p class="block-txt">If $f : \mathbb{R}^n \to \mathbb{R}$ and $\vec{u} \in \mathbb{R}^n$ is a unit vector, then \[D_{\vec{u}}f = \nabla f \cdot \vec{u}\]</p>
+        <p class="block-txt"><b>Careful</b> $\vec{u}$ <b>must</b> be a unit vector. If it is not, <b>normalize</b> it first: $\vec{u} = \dfrac{\vec{v}}{|\vec{v}|}$.</p>
+        <p class="block-txt"><b>Think</b> $D_{\vec{u}}f = \text{comp}_{\vec{u}}\nabla f$ is the scalar projection of $\nabla f$ onto $\vec{u}$ (since $\vec{u}$ is a unit vector).</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Maximizing the Directional Derivative)</b><br>
+        <p class="block-txt">Let $f$ be a differentiable function of two or three variables. The maximum value of $D_{\vec{u}}f(\vec{x})$ is $|\nabla f(\vec{x})|$, and it is attained when $\vec{u}$ has the same direction as $\nabla f(\vec{x})$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>$D_{\vec{u}}f$ is <b>maximized</b> when $\theta = 0^\circ$ ($\vec{u}$ points along $\nabla f$), with value $|\nabla f|$.</li>
+            <li>$D_{\vec{u}}f$ is <b>minimized</b> when $\theta = 180^\circ$ ($\vec{u}$ points along $-\nabla f$), with value $-|\nabla f|$.</li>
+            <li>$D_{\vec{u}}f = 0$ when $\theta = 90^\circ$ ($\vec{u}$ is orthogonal to $\nabla f$).</li>
+        </ul>
+        <p class="block-txt"><b>Key Idea</b> Walking in the direction of $\nabla f$ is the <b>fastest uphill</b> direction. Walking in the direction of $-\nabla f$ is the <b>fastest downhill</b> direction.</p>
+        <p class="block-txt"><b>Note</b> $D_{\vec{u}}f(\vec{x})$ and $D_{\vec{u}}f(x, y)$ mean the same thing (overloaded notation).</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem (Gradient is Orthogonal to Level Curves)</b><br>
+        <p class="block-txt">Suppose $\vec{u}$ is orthogonal to $\nabla f(\vec{x})$. Then $D_{\vec{u}}f(\vec{x}) = 0$.</p>
+        <p class="block-txt">Geometrically, $\vec{u}$ is <b>tangent</b> to the level curves of $f$, and $\nabla f$ is <b>orthogonal</b> to the level curves of $f$.</p>
+        <ul style="margin-bottom: 0.5rem">
+            <li>Moving in the direction of $\vec{u}$ keeps you at the same height $f(x, y)$.</li>
+            <li>Moving along $\nabla f$ is uphill with the maximum rate of change of $f$.</li>
+        </ul>
+        <p class="block-txt"><b>Think</b> In the plane, rotate $\nabla f = \vc{x, y}$ by $90^\circ$ clockwise to get a direction of no change: $\vc{y, -x}$.
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Gradient is Orthogonal to Level Surfaces</b><br>
+        <p class="block-txt">If $F(x, y, z)$ is a function of three variables, then $\nabla F$ is orthogonal to the level surfaces $F(x, y, z) = k$.</p>
+        <p class="block-txt"><b>Why</b> Let $\vec{r}(t) = \vc{x(t), y(t), z(t)}$ be <b>any</b> curve on the surface with $\vec{r}(t_0) = \vc{x_0, y_0, z_0}$. Since $F(x(t), y(t), z(t)) = k$, the chain rule gives \[\dfrac{\partial F}{\partial x}\dfrac{dx}{dt} + \dfrac{\partial F}{\partial y}\dfrac{dy}{dt} + \dfrac{\partial F}{\partial z}\dfrac{dz}{dt} = 0 \qquad \text{so} \qquad \nabla F(x_0, y_0, z_0) \cdot \vec{r}\,'(t_0) = 0\] So $\nabla F$ is orthogonal to the tangent vector of every curve on the surface through that point.</p>
+    </div>
+
+    <div class="math-def"> equation of tangent plane for $F(x, y, z) = k$
+        <p class="block-txt">The <b>tangent plane</b> to the surface $F(x, y, z) = k$ at the point $P(x_0, y_0, z_0)$ is \[F_x(P)(x - x_0) + F_y(P)(y - y_0) + F_z(P)(z - z_0) = 0\] The normal vector of the plane is $\nabla F(P)$.</p>
+        <p class="block-txt"><b>Note</b> If you have $z = f(x, y)$, first convert to implicit form $F(x, y, z) = z - f(x, y) = 0$. Then you can use the equation.</p>
+    </div>
     
 </div>
 {% endblock %}
-
