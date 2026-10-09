@@ -52,6 +52,8 @@
                     <li><a href="#14.3">14.3: Partial Derivatives</a></li>
                     <li><a href="#14.5">14.5: The Chain Rule</a></li>
                     <li><a href="#14.6">14.6: Directional Derivatives and the Gradient Vector</a></li>
+                    <li><a href="#14.4">14.4: Tangent Planes and Linear Approximations</a></li>
+                    <li><a href="#14.7">14.7: Maximum and Minimum Values</a></li>
                 </ol>
             </li>
         </ul>
@@ -827,13 +829,13 @@
     </div>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Why a Unit Vector?</b><br>
-        <p class="block-txt"><b>Algebraically</b> The step from $(x_0, y_0)$ to $(x_0 + ah, y_0 + bh)$ has length $h\sqrt{a^2 + b^2}$. Since we divide by $h$ in $D_{\vec{u}}f, we need $\sqrt{a^2 + b^2} = |\vec{u}| = 1$.</p>
+        <p class="block-txt"><b>Algebraically</b> The step from $(x_0, y_0)$ to $(x_0 + ah, y_0 + bh)$ has length $h\sqrt{a^2 + b^2}$. Since we divide by $h$ in $D_{\vec{u}}f$, we need $\sqrt{a^2 + b^2} = |\vec{u}| = 1$.</p>
         <p class="block-txt"><b>Geometrically</b> $f_x(x_0, y_0)$ is a slope: for every <b>one</b> unit increase in $x$, $z$ changes by $f_x(x_0, y_0)$. A unit vector maintains this one unit step in the direction of $\vec{u}$, so $D_{\vec{u}}f$ is an actual number that represents slope.</p>
     </div>
 
     <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem </b><br>
         <p class="block-txt">If $f$ is a differentiable function of $x$ and $y$, then $f$ has a directional derivative in the direction of any unit vector $\vec{u} = \vc{a, b}$, given by \[D_{\vec{u}}f(x, y) = f_x(x, y)\,a + f_y(x, y)\,b\]</p>
-        <p class="block-txt"><b>Think</b> In the $xy$-plane, walk along the line $\vc{x_0 + at,\ y_0 + bt}$, so the curve on the surface is $\vec{r}(t) = \vc{x_0 + at,\ y_0 + bt,\ f(x_0 + at, y_0 + bt)}$. Its tangent vector at $t = 0$ gives \[D_{\vec{u}}f(x_0, y_0) = \left.\dfrac{d}{dt}\left[f(x_0 + at, y_0 + bt)\right]\right|_{t = 0}\] which the chain rule turns into the formula above.</p>
+        <!--<p class="block-txt"><b>Think</b> In the $xy$-plane, walk along the line $\vc{x_0 + at,\ y_0 + bt}$, so the curve on the surface is $\vec{r}(t) = \vc{x_0 + at,\ y_0 + bt,\ f(x_0 + at, y_0 + bt)}$. Its tangent vector at $t = 0$ gives \[D_{\vec{u}}f(x_0, y_0) = \left.\dfrac{d}{dt}\left[f(x_0 + at, y_0 + bt)\right]\right|_{t = 0}\] which the chain rule turns into the formula above.</p>-->
     </div>
 
     <div class="math-def"> gradient
@@ -878,6 +880,128 @@
         <p class="block-txt">The <b>tangent plane</b> to the surface $F(x, y, z) = k$ at the point $P(x_0, y_0, z_0)$ is \[F_x(P)(x - x_0) + F_y(P)(y - y_0) + F_z(P)(z - z_0) = 0\] The normal vector of the plane is $\nabla F(P)$.</p>
         <p class="block-txt"><b>Note</b> If you have $z = f(x, y)$, first convert to implicit form $F(x, y, z) = z - f(x, y) = 0$. Then you can use the equation.</p>
     </div>
+
+    <h4 id="14.4">14.4: Tangent Planes and Linear Approximations</h4><hr>
+
+    <div class="math-def"> equation of tangent plane for $z = f(x, y)$
+        <p class="block-txt">The <b>tangent plane</b> at $P(x_0, y_0, z_0)$ is the plane containing the tangent lines to the $x$- and $y$-traces with slopes $f_x$ and $f_y$.</p>
+        <p class="block-txt">An equation of the tangent plane to the surface $z = f(x, y)$ at the point $P(x_0, y_0, z_0)$ is \[z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)\]</p>
+        <p class="block-txt"><b>Assumes</b> $f$ is differentiable at $(x_0, y_0)$.</p>
+    </div>
+
+    <div class="math-def"> linear approximation
+        <p class="block-txt">The <b>linear approximation</b> $L : \mathbb{R}^2 \to \mathbb{R}$ of $z = f(x, y)$ at $P(x_0, y_0, z_0)$ is \[L(x, y) = z_0 + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)\]</p>
+    </div>
+
+    <div class="math-def"> sufficient and necessary condition
+
+        <p class="block-txt">If the implication $P \implies Q$ is true, then $Q$ is a <b>necessary</b> condition for $P$ (if $P$ is true). On the other hand, $P$ is a sufficient condition for $Q$ (if $Q$ is true).</b>
+    </div>
+
+    <div class="math-def"> differentiability
+        <p class="block-txt">$f(x, y)$ is <b>differentiable</b> at $(x_0, y_0)$ if and only if the graph of $f$ becomes indistinguishable from a non-vertical <b>plane</b> with respect to a dilation at $(x_0, y_0, f(x_0, y_0))$ as the zoom factor $\lambda \to \infty$.</p>
+        <p class="block-txt">A <b>homothety</b> or <b>dilation</b>: an equal scaling expansion or contraction in all dimensions $x, y, z$ with respect to a point.</p>
+    </div>
+
+    <div class="math-def"> secant cone, tangent cone
+        <p class="block-txt">The <b>secant cone</b> is the surface created by sweeping out secant <b>rays</b> in all directions $\vec{u} = \vc{\cos\theta, \sin\theta}$ at $(x_0, y_0)$, as $\theta$ goes from $0$ to $2\pi$. It uses the one-sided directional derivative \[D^+_{\vec{u}}f(x_0, y_0) = \lim_{h\to 0^+}\dfrac{f(x_0 + h\cos\theta, y_0 + h\sin\theta) - f(x_0, y_0)}{h}\]</p>
+        <p class="block-txt">As $h \to 0^+$, the secant cone converges to the <b>tangent cone</b>. If $f$ is differentiable at $P$, then the tangent cone is the tangent plane.</p>
+        <p class="block-txt"><b>Think</b> Tangent lines in all directions $\vec{u}$ live in the tangent plane. If the secant cone doesn't converge to a plane, then $f$ is not differentiable.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Where Differentiability Lives</b><br>
+        <p class="block-txt">\[\text{continuous partials} \implies \text{differentiable (locally linear)} \implies \text{secant cone converges to tangent plane}\]</p>
+        <p class="block-txt">Continuity of partials is a sufficient condition for differentiability. Convergence of the secant cone to a plane is a necessary condition for differentiability.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Theorem </b><br>
+        <p class="block-txt">If $f_x$ and $f_y$ exist near $(a, b)$ and are continuous at $(a, b)$, then $f$ is differentiable at $(a, b)$.</p>
+    </div>
+
+    <div class="math-def"> differential (Calculus 1)
+        <p class="block-txt">Suppose $y = f(x)$ is a differentiable function. The <b>differential</b> of $x$, denoted $dx$, is any nonzero number. The differential of $y$, denoted $dy$, is \[dy = f'(x)\,dx\]</p>
+        <p class="block-txt">$\Delta y$ is the actual change in $f$ from $x$ to $x + \Delta x$.
+        <br><b>Think</b> $dy$ is the rise. $dy = $ slope $\cdot$ (run of $dx$).
+        </p>
+    </div>
+
+    <div class="math-def"> total differential
+        <p class="block-txt">Suppose $z = f(x, y)$ is differentiable. Define $dx$ and $dy$ to be independent variables. Then the <b>total differential</b> $dz$ is defined by \[dz = f_x(x, y)\,dx + f_y(x, y)\,dy\]</p>
+        <p class="block-txt"><b>Key Ideas</b> $dz$ is the sum of independent linear changes in $x$ and $y$.
+        </p>
+        <p class="block-txt">$\Delta z \approx f_x(a, b)\,dx + f_y(a, b)\,dy$, where $\Delta z = f(a + \Delta x, b + \Delta y) - f(a, b)$.</p>
+    </div>
+
+    <div class="math-def"> total differential in a direction
+        <p class="block-txt">Suppose $f : \mathbb{R}^n \to \mathbb{R}$ is differentiable and $\vec{u} \in \mathbb{R}^n$ is a unit vector. Define $ds$ to be an independent variable representing the distance moved in the direction of $\vec{u}$. Then the <b>total differential</b> $df$ in the direction of $\vec{u}$ is \[df = D_{\vec{u}}f\,ds = \left(\nabla f \cdot \vec{u}\right)ds\]</p>
+    </div>
+
+    <h4 id="14.7">14.7: Maximum and Minimum Values</h4><hr>
+
+    <div class="math-def"> critical point
+        <p class="block-txt">Let $f(x, y)$ be a function of two variables. A <b>critical point</b> $P$ of $f$ is a point $P$ in the domain of $f$ where $\nabla f(P) = \vec{0}$ or $\nabla f(P)$ is undefined.</p>
+        <p class="block-txt"><b>Intuition</b> Generally speaking, the tangent plane at critical points is either horizontal or does not exist.</p>
+    </div>
+
+    <div class="math-def"> open ball
+        <p class="block-txt">The <b>open ball</b> of radius $r$ centered at $(a, b)$ is $B\left((a, b), r\right) = \left\{(x, y) : (x - a)^2 + (y - b)^2 < r^2\right\}$.</p>
+    </div>
+
+    <div class="math-def"> extrema
+        <p class="block-txt">Let $f(x, y)$ be a function of two variables and $(a, b)$ a point in its domain.</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li>$f$ has a <b>local maximum</b> at $(a, b)$ if for some $r > 0$, $f(a, b) \geq f(x, y)$ for all points $(x, y) \in B\left((a, b), r\right)$.</li>
+            <li>$f$ has a <b>local minimum</b> at $(a, b)$ if for some $r > 0$, $f(a, b) \leq f(x, y)$ for all points $(x, y) \in B\left((a, b), r\right)$.</li>
+            <li>$f$ has a <b>global maximum</b> at $(a, b)$ if $f(a, b) \geq f(x, y)$ for all points $(x, y)$ in the domain of $f$.</li>
+            <li>$f$ has a <b>global minimum</b> at $(a, b)$ if $f(a, b) \leq f(x, y)$ for all points $(x, y)$ in the domain of $f$.</li>
+        </ol>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Fermat's Theorem</b><br>
+        <p class="block-txt">If $f$ has a local maximum or minimum at $(a, b)$, then $(a, b)$ is a <b>critical point</b> of $f$.</p>
+    </div>
+
+    <div class="math-def"> saddle point
+        <p class="block-txt">A <b>saddle point</b> is a critical point where the concavity chanes depending on the direction.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Second Derivatives Test</b><br>
+        <p class="block-txt">Suppose the second partial derivatives of $f$ are continuous on a ball with center $(a, b)$, and suppose that $f_x(a, b) = 0$ and $f_y(a, b) = 0$ [so $(a, b)$ is a critical point of $f$]. Let \[D = \begin{vmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{vmatrix}_{(a, b)} = f_{xx}(a, b)\,f_{yy}(a, b) - \left[f_{xy}(a, b)\right]^2\]</p>
+        <ol type="a" style="margin-bottom: 0.5rem">
+            <li>If $D > 0$ and $f_{xx}(a, b) > 0$ (or $f_{yy}(a, b) > 0$), then $f(a, b)$ is a local minimum.</li>
+            <li>If $D > 0$ and $f_{xx}(a, b) < 0$ (or $f_{yy}(a, b) < 0$), then $f(a, b)$ is a local maximum.</li>
+            <li>If $D < 0$, then $(a, b)$ is a saddle point of $f$.</li>
+            <li>If $D = 0$, then the test is inconclusive.</li>
+        </ol>
+        <p class="block-txt"><b>Think</b> $f_{xx}$ and $f_{yy}$ only measure concavity in the $\iv$ and $\jv$ directions. The mixed partial $f_{xy}$ accounts for every other direction $\vec{u}$.</p>
+    </div>
+
+    <!--<div class="math-def"> bounded set
+        <p class="block-txt">A set $S \subseteq \mathbb{R}^2$ is <b>bounded</b> if it is contained in some ball centered at the origin.</p>
+    </div>
+
+    <div class="math-def"> boundary point, boundary of a set
+        <p class="block-txt">A point $(a, b)$ is a <b>boundary point</b> of $S \subseteq \mathbb{R}^2$ if every ball $B\left((a, b), r\right)$ with $r > 0$ contains at least one point in $S$ and at least one point not in $S$. The <b>boundary</b> of $S$, denoted $\partial S$, is the set of all boundary points of $S$.</p>
+        <p class="block-txt"><b>Note</b> A boundary point of $S$ does not need to be in $S$.</p>
+    </div>
+
+    <div class="math-def"> closed set, compact set
+        <p class="block-txt">A set $S \subseteq \mathbb{R}^2$ is <b>closed</b> if it contains all of its boundary points, i.e., $\partial S \subseteq S$.</p>
+        <p class="block-txt">A set $S \subseteq \mathbb{R}^2$ is <b>compact</b> if it is closed and bounded.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Extreme Value Theorem</b><br>
+        <p class="block-txt">Let $D$ be a compact set and $f : D \to \mathbb{R}$. Then $f$ attains a global maximum and global minimum on $D$.</p>
+    </div>
+
+    <div class="math-fact-notxt"> <b style="color:var(--factcolor)">Closed Interval Method</b><br>
+        <p class="block-txt">To find the global extrema of a continuous function $f$ on a compact set $D$:</p>
+        <ol style="margin-bottom: 0.5rem">
+            <li class="lec-list-space">Find the values of $f$ at the critical points of $f$ inside $D$.</li>
+            <li class="lec-list-space">Find the extreme values of $f$ on the boundary $\partial D$. If $\partial D$ is made of pieces, include the endpoints of each piece.</li>
+            <li class="lec-list-space">The largest value from steps 1 and 2 is the global maximum, and the smallest is the global minimum.</li>
+        </ol>
+    </div>-->
     
 </div>
 {% endblock %}
